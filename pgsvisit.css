@@ -1,0 +1,798 @@
+@charset "UTF-8";
+
+/* SpryMenuBarHorizontal.css - version 0.6 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/*******************************************************************************
+
+ LAYOUT INFORMATION: describes box model, positioning, z-order
+
+ *******************************************************************************/
+
+/* The outermost container of the Menu Bar, an auto width box with no margin or padding */
+body {
+	font-family: "Luxi Sans", Arial, sans-serif;
+	background-color: #fff;
+	margin-left: 0px;
+	margin-top: 50px;
+	margin-right: 0px;
+	margin-bottom: 80px;
+	padding: 0;
+	color: #000;
+		}
+
+/* ~~ Sélecteurs d'éléments/balises ~~ */
+ul, ol, dl { /* En raison des variations entre les navigateurs, il est conseillé d'attribuer une valeur de zéro aux marges intérieures et aux marges des listes. A des fins de cohérence, vous pouvez définir les valeurs désirées dans cette zone ou dans les éléments de liste (LI, DT, DD) qu'elle contient. N'oubliez pas que les paramètres que vous définissez ici se répercuteront sur la liste .nav, sauf si vous rédigez un sélecteur plus spécifique. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la suppression de la marge supérieure résout un problème où les marges sortent de leur div conteneur. La marge inférieure restante l'éloignera de tout élément qui suit. */
+	padding-right: 15px;
+	padding-left: 15px; /* l'ajout de la marge intérieure aux côtés des éléments à l'intérieur des divs, et non aux divs proprement dit, évite le recours à des calculs de modèle de boîte. Une autre méthode consiste à employer une div imbriquée avec marge intérieure latérale. */
+}
+a img { /* ce sélecteur élimine la bordure bleue par défaut affichée dans certains navigateurs autour d'une image lorsque celle-ci est entourée d'un lien. */
+	border: none;
+}
+/* ~~ La définition du style des liens de votre site doit respecter cet ordre, y compris le groupe de sélecteurs qui créent l'effet de survol. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* à moins que vous ne définissiez un style particulièrement exclusif pour vos liens, mieux vaut prévoir un soulignement, qui garantit une identification visuelle rapide. */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* ce groupe de sélecteurs offrira à un navigateur au clavier la même expérience de survol que celle d'une personne employant la souris. */
+	text-decoration: none;
+}
+
+/* ~~ ce conteneur à largeur fixe entoure tous les autres éléments ~~ */
+.container {
+	width: 1024px;
+	margin: 0 auto; /* la valeur automatique sur les côtés, associée à la largeur, permet de centrer la mise en page */
+	border-top-width: 0px;
+	border-right-width: thin;
+	border-bottom-width: 0px;
+	border-left-width: thin;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #bfbfbf;
+	border-left-color: #bfbfbf;	
+	}
+
+/* ~~ Informations de mise en page. ~~ 
+
+1) La marge intérieure n'est placée qu'en haut et/ou en bas de la div. Les éléments à l'intérieur de cette div posséderont une marge intérieure sur les côtés. Vous évitez ainsi de devoir recourir à des « calculs de modèle de boîte ». N'oubliez pas que si vous ajoutez une marge intérieure latérale ou une bordure à la div proprement dite, elle sera ajoutée à la largeur que vous définissez pour créer la largeur totale. Vous pouvez également supprimer la marge intérieure de l'élément dans la div et placer une seconde div à l'intérieur, sans largeur et possédant une marge intérieure appropriée pour votre concept.
+
+
+.content {
+	padding: 0;
+}
+*/
+
+/* ~~ classes flottant/effacement diverses ~~ */
+.fltrt { /*  cette classe peut servir à faire flotter un élément depuis la droite sur votre page. L'élément flottant doit précéder l'élément à côté duquel il doit apparaître sur la page. */
+	float: right;
+	
+}
+.fltlft {  /*cette classe peut servir à faire flotter un élément depuis la gauche sur votre page. L'élément flottant doit précéder l'élément à côté duquel il doit apparaître sur la page. */
+	float: left;
+	
+}
+.clearfloat { /* cette classe peut être placée sur une div <br /> ou vide, en tant qu'élément final suivant la dernière div flottante (dans le #container) si le paramètre overflow:hidden du .container est supprimé */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.titrpg {
+	width: 1024px;
+	height: 70px;
+	margin-top:0px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+	background-image: url(img/fdtitrpg.jpg);	
+}
+
+.titrpg h1{
+	font-size: 25px;
+	color: #010080;
+	text-align: center;
+	font-variant: small-caps;
+	margin-top: 65px;
+}
+
+
+
+
+/*________________________________________________________________________________________________________________________________________*/
+
+
+/*__HEADER________________________________________________________________________________________________________________________________*/
+/*__HEADER________________________________________________________________________________________________________________________________*/
+.header {
+	width: 1024px;
+	height: 100px;
+	background-image: url(img/header5visit.jpg);
+	text-align: center;
+	}
+
+/*__FIN DE HEADER__*/
+
+
+/*__ONGLETS-HAUT__________________________________________________________________________________________________________________________*/
+/*__ONGLETS-HAUT__________________________________________________________________________________________________________________________*/
+
+
+#menu, #menu ul /* Liste */     
+{
+        padding: 0; /* pas de marge intérieure */
+        margin: 0; /* ni extérieure */
+        list-style: none; /* on supprime le style par défaut de la liste */
+        line-height: 25px; /* on définit une hauteur pour chaque élément */
+        text-align: center; /* on centre le texte qui se trouve dans la liste */
+}
+
+#menu /* Ensemble du menu */
+{
+	/*font-weight: bold;  on met le texte en gras */
+	font-family: Arial; /* on utilise Arial, c'est plus beau ^^ */
+	font-size: 11px; /* hauteur du texte : 11 pixels */
+	font-variant: small-caps;
+}
+
+#menu a /* Contenu des listes */
+{
+        display: block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding: 0; /* aucune marge intérieure */
+        background: transparent url("img/fdonglet.jpg") repeat;        
+        color: #010080; /* couleur du texte */
+        text-decoration: none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width: 145px; /* largeur */
+		border-radius: 2px;
+}
+
+#menu a:hover 
+{
+        border-radius: 2px;
+		color : #010080; /* Blc */
+        background: transparent url("img/fdonglet.jpg") repeat;
+}
+
+#menu li /* Elements des listes */      
+{ 
+        float: left; 
+        /* pour IE qui ne reconnaît pas "transparent" */
+        border-right: 1px solid #fff; /* on met une bordure blanche à droite de chaque élément */
+		border-radius: 10px;
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li
+{
+        border-right: 1px solid transparent; /* on met une bordure transparente à droite de chaque élément */
+}
+
+#menu li ul /* Sous-listes */
+{ 
+        position: absolute; /* Position absolue */
+        width: 145px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+#menu li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        
+		border-radius: 2px;
+		line-height: 21px;
+}
+
+#menu li ul li a /* Éléments de "onglet niv 2" */
+{
+	text-decoration: none;
+	border-radius: 2px;
+	background: transparent url("img/fdonglet2.jpg") repeat; /* img de fond */
+	color: #010080;		 
+}
+
+#menu li ul li a:hover /* Éléments de "onglet niv 2" */
+{
+	text-decoration: none;
+	background: transparent url("img/fdonglet2hover.jpg") repeat; /* img de fond */
+	color: #010080;	
+}
+
+#menu li ul ul /* Éléments de "onglet niv 2" */
+{
+	text-align: left;
+	line-height: 21px; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+	/* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+	border-left: 1px solid #fff; /* Petite bordure à gauche pour ne pas coller ... */
+	
+	margin-top: -21px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 145px;
+}
+
+#menu li ul li ul li /* Conteneur de "onglet niv 3" */
+{
+	width: 130px;
+	height: 17px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+#menu li ul li ul li a /* Éléments de "onglet niv 3" */
+{
+	padding-left: 3px;
+	text-decoration: none;
+	width: 130px; /* img de fond */
+	color: #010080;
+	background: transparent url("img/fdonglet3.jpg") repeat; /* img de fond */
+}
+
+#menu li ul li ul li a:hover /* Éléments de "onglet niv 3" */
+{
+	padding-left: 3px;
+	text-decoration: none;
+	width: 130px; /* largeur */
+	background: transparent url("img/fdonglet3hover.jpg") repeat; /* img de fond */
+	color: #010080;		 
+}
+
+#menu li ul ul ul    /* Éléments de "onglet niv 3" */
+{
+	text-align: left;
+	line-height: 17px; /* Petite bordure à gauche pour ne pas coller ... */
+	margin-top: -21px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 133px;
+	border-left: 1px solid #fff;
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu li ul ul                
+{
+        border-left: 1px solid transparent; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu li:hover ul ul, #menu li:hover ul ul ul, #menu li.sfhover ul ul, #menu li.sfhover ul ul ul {
+	left: -999em;
+}
+
+#menu li:hover ul, #menu li li:hover ul, #menu li li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul, #menu 
+
+li li li.sfhover ul {
+	left: auto;	
+    min-height: 0; /* Corrige un bug sous IE */
+}
+
+.boubouk{
+	text-align: right;
+	background: transparent url("img/fdonglet.jpg") repeat; /* img de fond */
+	padding-top: 2px;
+	padding-right: 5px;
+	text-decoration: none;
+	list-style-type: none;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+/*__FIN-DE-ONGLETS-HAUT____________________________________________________________________________________________________________________*/
+
+
+/*__EN DEVELOPPEMENT______________________________________________________________________________________________________________________*/
+/*__EN DEVELOPPEMENT______________________________________________________________________________________________________________________*/
+.endeveloppement {
+	width: 600px;
+	margin-left: auto;
+	margin-top: 80px;
+	margin-right: auto;
+	}
+
+/*__FIN DE EN DEVELOPPEMENT__*/
+
+
+
+/*__INDEX__________________________________________________________________________________________________________________________________*/
+/*__INDEX__________________________________________________________________________________________________________________________________*/
+
+
+.pgindex {
+	font-family: "Luxi Sans", Arial, sans-serif;
+	width:1024px;
+	min-height: 400px;
+	margin-top: 0px;
+	color: #000000;
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.pgindex h1{
+	font-size: 22px;
+	margin-bottom: 50px;
+}
+
+.pgindex h2{
+	margin-top: 50px;
+	font-size: 18px;
+}
+
+.pgindex p{
+	font-size: 14px;
+}
+
+.pgindex a img{
+	margin-bottom: 50px;
+}
+
+.mnfacebook{
+	float: right;
+	margin-top: -50px;
+}
+/*__FIN-DE INDEX__________________________________________________________________________________________________________________________*/
+
+
+
+/*__GENERAL: CADRE DES LIENS______________________________________________________________________________________________________________*/
+/*__GENERAL: CADRE DES LIENS______________________________________________________________________________________________________________*/
+
+.cadrelink{
+	margin-left: 0px;
+	margin-top: 50px;
+}
+
+
+.cadrelink table{
+	background-color: #eae9fb;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 3px;
+	border-radius: 15px;
+	border: medium solid #d1d0fc;
+}
+
+
+.cadrelink .img a{
+	display: block;
+	width: 75px;
+	height: 100px;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 0px;
+	text-align: center;
+	text-decoration: none;
+	}
+
+.cadrelink a img {
+	margin-left: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.cadrelink .txt a{
+	width: 255px;
+	display: block;
+	text-decoration: none;
+}
+
+.cadrelink td a:hover{
+	color: #010080;	
+}
+/*__FIN-GENERAL: CADRE DES LIENS__________________________________________________________________________________________________________*/
+
+
+/*__DISPATCH HAUT_________________________________________________________________________________________________________________________*/
+/*__DISPATCH HAUT_________________________________________________________________________________________________________________________*/
+.dispatchHt{
+	text-align: center;
+	width: 874px;
+	height:22px;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-right: auto;
+}
+
+.dispatchHt a{
+	text-decoration: none;
+	padding-right: 10px;
+	font-size: 12px;
+	font-variant: small-caps;
+}
+
+.dispatchHt a:hover{
+	text-decoration: none;
+	background-color: #eae9fb;
+	color: #010080;
+}	
+
+.retourhtpgcasclin {
+	margin-left: 750px;
+	margin-bottom: 100px;
+	text-align: right;
+	width: 150px;
+	height: 35px;
+}
+/*__FIN DE DISPATCH HAUT______________________________________________________________________________________________________*/
+
+
+/*__PAGE: 01a_METH-PRISE EN CHARGE________________________________________________________________________________________________________*/
+/*__PAGE: 01a_METH-PRISE EN CHARGE________________________________________________________________________________________________________*/
+
+.pg01a-prisecharge {
+	width:874px;
+	margin-left: 75px;
+	margin-top: 80px;
+	margin-bottom: 30px;
+	margin-right: 75px;
+	font-family: "Luxi Sans", Arial, sans-serif;
+}
+
+.pg01a-prisecharge table{
+	margin-left: 150px;
+	background-color: #eae9fb;
+}
+
+
+.pg01a-prisecharge h2{
+	font-size: 16px;
+	color: #000000;
+	text-align: center;
+	background-color: #d1d0fc;/*__#deddfc*/
+}
+
+.pg01a-prisecharge h3{
+	margin-top: 50px;
+	font-size: 13px;
+	color: #000000;
+	text-align: center;
+}
+
+.pg01a-prisecharge h4{
+	margin-left: 0px;
+	font-size: 13px;
+	text-align: left;
+	color: #444;
+}
+
+.pg01a-prisecharge h5{
+	font-size: 14px;
+	text-align: center;
+}
+
+.pg01a-prisecharge p{
+	margin-left: 0px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.pg01a-prisecharge li{
+	padding: 0;
+	font-size: 14px;
+	margin-left: 20px;
+	margin-top: 0px;
+}
+
+.pg01a-prisecharge .liste2{/*__decallage à dte de la liste DANS la liste__*/
+	padding: 0;
+	font-size: 14px;
+	margin-left: 150px;
+	margin-top: 0px;
+}
+
+.seances {
+	margin-top: 50px;
+}
+
+.seances h2{
+	font-family: "Luxi Sans", Arial, sans-serif;
+	margin-bottom: 30px;
+}
+
+.seances h4{
+	margin-left: 0px;
+	font-size: 12px;
+	text-align: left;
+	color: #444;
+	text-decoration: none;
+}
+
+.seances table{
+	margin-top: 30px;
+	margin-bottom:50px;	
+}
+
+.seances li{
+	font-weight: normal;
+	text-decoration: none;	
+}
+
+.seances .coussin1 {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	background-color: #FFF;
+}
+
+.essential{
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+/*__FIN DE PAGE: 01a_METH-PRISE EN CHARGE_________________________________________________________________________________________________*/
+
+
+/*__01b_METH-FAQ__________________________________________________________________________________________________________________________*/
+/*__01b_METH-FAQ__________________________________________________________________________________________________________________________*/
+
+.marge50px {
+	height: 60px;
+}
+/*__FIN DE PAGE: 01b_METH-FAQ_____________________________________________________________________________________________________________*/
+
+
+/*__01c_METH-FORMATION____________________________________________________________________________________________________________________*/
+/*__01c_METH-FORMATION____________________________________________________________________________________________________________________*/
+
+.docformation{
+	margin-left: 0px;
+	margin-top: 50px;
+}
+
+
+.docformation table{
+	background-color: #eae9fb;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 3px;
+	border-radius: 15px;
+	border: medium solid #d1d0fc;
+}
+
+
+.docformation .img a{
+	display: block;
+	width: 75px;
+	height: 100px;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 0px;
+	text-align: center;
+	text-decoration: none;
+	}
+
+.docformation a img {
+	margin-left: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.docformation .txt a{
+	width: 255px;
+	display: block;
+	text-decoration: none;
+}
+
+.docformation td a:hover{
+	color: #010080;	
+}
+
+/*__FIN DE PAGE:01c_METH-FORMATION________________________________________________________________________________________________________*/
+
+
+/*__01d_METH-REFERENCES___________________________________________________________________________________________________________________*/
+/*__01d_METH-REFERENCES___________________________________________________________________________________________________________________*/
+
+.listereferences {
+	margin-top: 30px;
+	margin-right: 50px;
+	margin-bottom: 30px;
+	margin-left: 50px;	
+}
+
+.listereferences li{
+	margin-bottom: 20px;	
+}
+/*__FIN DE PAGE:01d_METH-REFERENCES_______________________________________________________________________________________________________*/
+
+
+/*__02b_METH-CHARTE_______________________________________________________________________________________________________________________*/
+/*__02b_METH-CHARTE_______________________________________________________________________________________________________________________*/
+
+.pg01a-prisecharge img{
+	float:left;
+	margin-top:60px;
+	margin-right:50px;
+}
+
+.pg01a-prisecharge .liste3{/*__espacement des elements de la liste__*/
+	margin-top: 20px;
+}
+
+/*__FIN DE PAGE:02b_METH-CHARTE___________________________________________________________________________________________________________*/
+
+
+/*__03a_PRATICIENS________________________________________________________________________________________________________________________*/
+/*__03a_PRATICIENS________________________________________________________________________________________________________________________*/
+.introcarte {
+	width: 700px;
+	margin-left: auto;
+	margin-top: 50px;
+	margin-right: auto;
+	
+}
+
+.introcarte a{
+	text-decoration: none;
+	font-variant: small-caps;	
+}
+
+.introcarte p{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.introcarte h3{
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.carte {
+	width: 600px;
+	margin-left: auto;
+	margin-top: 50px;
+	margin-right: auto;
+	text-align:center;
+}
+
+
+/*__FIN DE PAGE:03a_PRATICIENS___________________________________________________________________________________________________________*/
+
+
+/*__PAGE: 04a_LIENS______________________________________________________________________________________________________________________*/
+/*__PAGE: 04a_LIENS______________________________________________________________________________________________________________________*/
+
+.pg04a-liens {
+	width:874px;
+	margin-left: 75px;
+	margin-top: 80px;
+	margin-bottom: 30px;
+	margin-right: 75px;
+	font-family: "Luxi Sans", Arial, sans-serif;
+}
+
+.pg04a-liens h2{
+	font-size: 16px;
+	color: #000000;
+	text-align: center;
+	background-color: #d1d0fc;/*__#deddfc*/
+}
+
+.pg04a-liens h3{
+	margin-top:50px;
+	font-size: 16px;
+	color: #000000;
+	text-align: center;
+	background-color: #d1d0fc;/*__#deddfc*/
+}
+}
+
+.pg04a-liens h4{
+	margin-left: 0px;
+	font-size: 13px;
+	text-align: left;
+	color: #444;
+}
+
+.pg04a-liens h5{
+	font-size: 14px;
+	text-align: center;
+}
+
+.pg04a-liens p{
+	margin-left: 0px;
+	font-size: 13px;
+	text-align: center;
+}
+
+
+/*__FIN DE PAGE: 04a_LIENS________________________________________________________________________________________________________________*/
+
+
+
+
+
+
+
+/*__FOOTER________________________________________________________________________________________________________________________________*/
+/*__FOOTER________________________________________________________________________________________________________________________________*/
+
+.footer {  /*__div .footer__*/
+	background-image: url(img/footerdef.jpg);
+	height: 200px;
+	width: 1024px;
+	border-top: thin solid #fff;
+}
+
+.footext { /*__table__*/
+	width: 990px;
+	margin-left: 30px;
+	margin-top: 90px;
+	text-align: left;
+}
+
+.footext td { /*__cellules__*/
+	line-height: 3px;
+}
+
+.footext td h1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	font-variant: small-caps;
+	margin-bottom: 15px;
+	}
+	
+.footext td a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-variant: normal;
+	text-decoration: none;
+	}	
+	
+.footext td a:hover {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #010080;
+	}	
+		
+.footext td h2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-variant: normal;
+	}
+	
+.footext td h3{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-variant: normal;
+	}
+	
+.footext td p {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 12px;
+}
+
+.facebook{
+	text-align: center;
+}
+
+/*__FIN-DE-FOOTER__________________________________________________________________________________________________________________________*/

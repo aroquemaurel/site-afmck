@@ -1,0 +1,4 @@
+AuthName "Pour acceder aux pages LYON 2014, merci de saisir les log in et mot de passe qui vous ont été fournis"
+AuthType Basic
+AuthUserFile "/homez.441/afmck/www/pgadh/pgjourneeprotect/.htpasswd"
+Require valid-user

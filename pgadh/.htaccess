@@ -1,0 +1,6 @@
+
+
+AuthName "Pour acceder aux pages adhérent, veuillez saisir vos log in et mot de passe"
+AuthType Basic
+AuthUserFile "/homez.441/afmck/www/pgadh/.htpasswd"
+Require valid-user
