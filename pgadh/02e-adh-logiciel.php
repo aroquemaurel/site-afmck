@@ -46,16 +46,24 @@
 <h3>Au programme :</h3>
 <ul><li>Bilan Lombaire</li>
     <li>Bilan Cervical</li>
+	<li>Bilan thoraciques</li>
+	<li>Bilans membres supérieurs</li>
+	<li>Bilans membres inférieurs</li>
     <li>Fiches de suivis</li>
+	<li>Envoi de documents par e-mail</li>
     <li>Editions de PDF des bilans et des fiches de suivis</li></ul>
 
 
 
-<h3>La version du logiciel change !</h3>
-
-<ul class="liste1"><li>La nouvelle version (V1.4.9) du logiciel de bilan MDT est disponible pour les utilisateur de PC</li>
-                   <li>L'ancienne version (1.3.4) est toujours disponible pour les utilisateurs de Mac, en attendant la nouvelle !</li></ul>
-
+<h3>La version du logiciel change ! Les nouveautés :</h3>
+<ul class="liste1">
+<li>Toutes les fiches bilan MDT dont le périphérique</li>
+<li>Les fiches de liaisons médecin ajustées</li>
+<li>La possibilité d'envoyer des documents par mail</li>
+<li>L'adresse de contact en cas de problème d'installation ou d'utilisation: maintenance@afmck.fr.</li>
+</ul>
+<ul class="liste1"><li>La nouvelle version (V1.6.7) du logiciel de bilan MDT est disponible pour les utilisateur de PC</li>
+                   <li>L'ancienne version (1.5.6) est toujours disponible pour les utilisateurs de Mac, en attendant la nouvelle !</li></ul>
 <h3>Cette version permet de créer une fiche de liaison pour le médecin, ou le médecin conseil pour accompagner la DAP:</h3>
     <ul class="liste1"><li>Initiale, si le patient vient vous voir pour la première fois et qu’il a déjà épuisé le référentiel (15 séances pour lombalgie et cervicalgie) chez un autre kiné. Cette fiche est pré remplie à partir du bilan initial MDT et vous pouvez ajuster ce qui manque.</li>
         <li>Intermédiaire ou finale, si le patient a besoin de plus de séances et que vous avez épuisé le référentiel ou les séances prescrites = 
@@ -65,26 +73,10 @@ elle récupère le diagnostic provisoire du bilan initial et vous laisse la poss
  
 
 <h3>Bon test et donnez nous votre avis.</h3>
-
- 
-
 <h3>A venir: les fiches périphériques et la transmission par mail directement du logiciel !</h3>
-
- 
-
 <h3>En espérant satisfaire vos besoins</h3>
-
-
-
-
-
+<h3>En cas de problème avec le logiciel, veuillez envoyer un e-mail à l'adresse suivante : maintenance@afmck.fr
 </p>
-
-
-
-
-
-
 
 
 </div><!-- fin de .logiciel -->
@@ -124,10 +116,8 @@ elle récupère le diagnostic provisoire du bilan initial et vous laisse la poss
 <h2 id="evol">Evolutions prévues:</h2>
 
 <div class="logiciel">
-<ul><li>Bilan Thoracique</li>
-    <li>Fiche de synthèses médecins au format "référentiels"</li>
-    <li>Bilan membres inférieurs</li>
-    <li>Bilan membres supérieurs</li></ul>    
+<li>Une version pour les cabinets multi-praticien</li>
+<li>Analyse des données récoltées</li>
   </div><!-- fin de .logiciel -->
 <div class="retourhtpgcasclin">
     <a href="#rethaut"><img src="img/retourhtpg2b.jpg" width="150" height="35" alt="ret ht pg" /></a></div><!-- fin de .hautpagecasclin -->
