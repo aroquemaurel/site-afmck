@@ -40,8 +40,8 @@
  <div class="dossier">
     
     <table class="dossierspe">
-    <tr><th><h2>MDT World Press Newsletter<br />Vol.3 N°3 (en anglais)</h2></th></tr>
-    <tr><td colspan="5"><a href="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 3-gb_AFMcK.pdf" target="_blank" id="autrparu"><img src="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 3-gb_AFMcK.jpg"></a></td></tr></table>
+    <tr><th><h2>MDT World Press Newsletter<br />Vol.3 N°3 (en Français)</h2></th></tr>
+    <tr><td colspan="5"><a href="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 3-fr_AFMcK.pdf" target="_blank" id="autrparu"><img src="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 3-gb_AFMcK.jpg"></a></td></tr></table>
     
 </div><!-- fin de .dossier -->
        
@@ -49,6 +49,11 @@
  
 <h3>>> AUTRES PARUTIONS</h3> 
 
+     <table class="fltlft"> 
+          <tr>
+           <td class="img"><a href="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 2-fr_AFMcK.pdf" target="_blank"><img src="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 2-gb_AFMcK.jpg"></a></td>
+           <td class="txt"><a href="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 2-fr_AFMcK.pdf" target="_blank"><p>MDT World Press Newsletter<br />Vol.3 N°2 (Français)</p></a></td></tr>
+    </table>
      <table class="fltlft"> 
           <tr>
            <td class="img"><a href="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 2-gb_AFMcK.pdf" target="_blank"><img src="docdwld/03b-mdtnews/MDT Newsletter_Vol 3 No 2-gb_AFMcK.jpg"></a></td>
