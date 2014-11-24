@@ -15,7 +15,7 @@
 
 <body>
 <!-- TAG CRAWLPROTECT -->
-<?php require_once("/home/afmck/www/crawlprotect/include/cppf.php"); ?>
+<?php //require_once("/home/afmck/www/crawlprotect/include/cppf.php"); ?>
 
 <!-- Code Js Facebook -->
 <div id="fb-root"></div>

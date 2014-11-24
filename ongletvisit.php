@@ -1,5 +1,5 @@
 <!-- TAG CRAWLPROTECT -->
-<?php require_once("/home/afmck/www/crawlprotect/include/cppf.php"); ?>
+<?php //require_once("/home/afmck/www/crawlprotect/include/cppf.php"); ?>
 <ul id="menu">
 
 <!-- ONGLET TITRE 1 -->
