@@ -33,12 +33,8 @@
         
 <div class="docformation">
 
-<!-- TRADUITS AFMcK ----------------------------------------------------------------------------------------------------------------------------------------------- --> 
+<!-- Traduit afmck -->
  <h2 id="lastparu">MDT World Press Newsletters</h2>
- 
- 
- 
- 
  
 <h3>>> DERNIERE PARUTION</h3>
  <div class="dossier">
