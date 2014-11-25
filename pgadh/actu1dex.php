@@ -1,5 +1,5 @@
 <!-- TAG CRAWLPROTECT -->
-<?php //require_once("/home/afmck/www/crawlprotect/include/cppf.php"); ?>
+<?php require_once("/home/afmck/www/crawlprotect/include/cppf.php"); ?>
 
 <!-- ~~ Bouton Facebook ~~ --> 
  <div class="fb-like" data-href="http://www.afmck.fr" data-width="90" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -8,11 +8,6 @@
 <div class="txtactu">
 
 <table>
-                     <!-- ~~ ACTU 1 ~~ -->
-                     <tr><td class="bordbleu"><a href="03b-adh-mdtnews.php"><img src="newsletters/_NEWSLETTER N11 2014.jpg"></a></td></tr>
-                     <tr><td class="bordbleu"><a href="newsletters/_NEWSLETTER N11 2014.pdf">Newsletter AFMcK<br />N°11 2014</a></td></tr>
-                     <tr><td><img src="img/separateur1.jpg" width="100" height="30" alt="separateur" /></td></tr>
-
                       <!-- ~~ ACTU 4 ~~ -->
                       <tr><td class="bordbleu"><a href="02e-adh-logiciel.php">LE LOGICIEL<br />DE BILAN MDT EVOLUE :<br />V1.6<br />Bilan Lombaire, Bilan Cervical, Bilan membres, Fiches de suivis, synthèses<br />Editions en PDF des bilans<br />et des fiches de suivis.</a></td></tr>
 
