@@ -7,5 +7,32 @@
  */
 
 class Visitor {
+    private $member;
+    private static $instance;
+
+    private function __construct() {
+
+    }
+
+    public static function getInstance() {
+        if(Visitor::$instance == null) {
+            if($_SESSION['visitor'] != null) {
+                Visitor::$instance = $_SESSION['visitor'];
+            } else {
+                Visitor::$instance = new Visitor();
+                $_SESSION['visitor'] = Visitor::$instance;
+            }
+        }
+
+        return Visitor::$instance;
+    }
+
+    public function displayMenu() {
+        if($this->member == null) {
+            include('views/includes/menus/visitors.php');
+        } else {
+            include('views/includes/menus/members.php');
+        }
+    }
 
 } 
