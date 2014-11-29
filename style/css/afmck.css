@@ -2,29 +2,92 @@
 	background-image: linear-gradient(to bottom,#273f64 0,#3e659f 80%);
 }
 
+body a {
+	color: #0173A6;
+}
+
+
+body a:visited {
+	color: #7483AE;
+}
 .yamm .navbar-nav>li>a {
 	color: #fff;
 }
 
 .yamm .navbar-nav>li>a:hover {
-	color: #000;
+	color: #d7c562;
 }
 
 footer {
 	background-image: linear-gradient(to bottom,#3e659f 0,#273f64 80%);
 	height: 120px;
 	color: #fff;
+	border-top: 4px solid #F1A260;
 }
 
 body {
-	background-color: #eee;
+	background-color: #fdfdf1;
+	font-family: 'Lato';
 }
 
-
+.navbar-default {
+	font-family: 'Roboto';
+	font-size: 12pt;
+	border-bottom: 4px solid #F1A260;
+}
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.active>a {
 	background-image: linear-gradient(to bottom,#2f4d79 0,#2f4d79 100%);
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-	color: #ccc;
+	color: #d7c562;
+}
+
+@media ( min-width: 767px ) {
+  .panel-group { width: 400px; }
+  .thumbnail { margin: 0; }
+
+.list-unstyled,
+.list-unstyled ul { min-width: 150px }
+
+.megamenu .dropdown-menu {
+	margin-left: -500px;
+}
+
+
+h1 {
+	color: #081743;
+}
+}
+
+.breadcrumb {
+	padding: 7px 14px;
+	margin: 0 0 18px;
+	background-color: #fbfbfb;
+	background-image: -moz-linear-gradient(top, #ffffff, #f5f5f5);
+	background-image: -ms-linear-gradient(top, #ffffff, #f5f5f5);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f5f5f5));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f5f5f5);
+	background-image: -o-linear-gradient(top, #ffffff, #f5f5f5);
+	background-image: linear-gradient(to bottom, #ffffff, #f5f5f5);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0);
+	border: 1px solid #ddd;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 0 #ffffff;
+	-moz-box-shadow: inset 0 1px 0 #ffffff;
+	box-shadow: inset 0 1px 0 #ffffff;
+}
+.breadcrumb li {
+	display: inline-block;
+	text-shadow: 0 1px 0 #ffffff;
+}
+.breadcrumb .divider {
+	padding: 0 5px;
+	color: #999999;
+}
+.breadcrumb .active a {
+	color: #333333;
 }

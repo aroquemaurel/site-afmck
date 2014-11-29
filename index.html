@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Yet another megamenu for Bootstrap 3">
     <meta name="author" content="@geedmo">
-    <title>Yamm!3 Megamenu for Bootstrap3</title>
+
+    <title>Association française Mc Kenzie</title>
     <!-- Bootstrap and demo CSS -->
     <link href="style/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link href="style/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="style/css/afmck.css" rel="stylesheet">
     <!-- Yamm styles-->
     <link href="style/yamm3/yamm/yamm.css" rel="stylesheet">
+
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--if lt IE 9
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
@@ -35,8 +40,15 @@
         </div>
         <div id="navbar-collapse-1" class="navbar-collapse collapse" style="margin-top: 60px; margin-left: 100px;">
           <ul class="nav navbar-nav">
+            <!-- Classic dropdown -->
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Accueil<b class="caret"></b></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a tabindex="-1" href="#"> Visiteurs</a></li>
+                <li><a tabindex="-1" href="#"> Adhérents</a></li>
+              </ul>
+            </li>
             <!-- Classic list -->
-            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">List<b class="caret"></b></a>
+            <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Travaux de l'association<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
                   <!-- Content container to add padding -->
@@ -44,230 +56,262 @@
                     <div class="row">
                       <ul class="col-sm-2 list-unstyled">
                         <li>
-                          <p><strong>Section Title</strong></p>
+                          <p><strong>Cas cliniques</strong></p>
                         </li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
+						<li><a href="#">Tendinite Rotulienne</a></li>
+						<li><a href="#">Traitement d'un genou</a></li>
+						<li><a href="#">Traitement d'une épaule</a></li>
                       </ul>
                       <ul class="col-sm-2 list-unstyled">
                         <li>
-                          <p><strong>Links Title</strong></p>
+                          <p><strong>Chroniques scientifiques</strong></p>
                         </li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
+                        <li><a href="#"> Chronique N°1</a></li>
+                        <li><a href="#"> Chronique N°2</a></li>
+                        <li><a href="#"> Chronique N°3</a></li>
+                        <li><a href="#"> Chronique N°4</a></li>
+                        <li><a href="#"> Chronique N°5</a></li>
+                        <li><a href="#"> Chronique N°6</a></li>
                       </ul>
                       <ul class="col-sm-2 list-unstyled">
                         <li>
-                          <p><strong>Section Title</strong></p>
+                          <p><strong>Trucs et astuces en MDT</strong></p>
                         </li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
+						<li><a href="#">Trucs et astuces 1</a></li>
+						<li><a href="#">Trucs et astuces 2</a></li>
+						<li><a href="#">Trucs et astuces 3</a></li>
+						<li><a href="#">Trucs et astuces 4</a></li>
                       </ul>
                       <ul class="col-sm-2 list-unstyled">
                         <li>
-                          <p><strong>Section Title</strong></p>
+                          <p><strong>Études</strong></p>
                         </li>
-                        <li>List Item</li>
-                        <li>List Item</li>
+						<li><a href="#">Rachis prévalence des syndromes McKenzie</a></li>
+                      </ul>
+                      <ul class="col-sm-2 list-unstyled">
                         <li>
-                          <ul>
-                            <li><a href="#"> Link Item </a></li>
-                            <li><a href="#"> Link Item </a></li>
-                            <li><a href="#"> Link Item </a></li>
-                          </ul>
+                          <p><strong>Journées de l'association</strong></p>
                         </li>
+						<li><a href="#">Lyon 2013</a></li>
+						<li><a href="#">Brest 2012</a></li>
                       </ul>
                     </div>
                   </div>
                 </li>
               </ul>
             </li>
-            <!-- Accordion demo -->
-            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Accordion<b class="caret"></b></a>
+            <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Outils de travail<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
+                  <!-- Content container to add padding -->
                   <div class="yamm-content">
                     <div class="row">
-                      <div id="accordion" class="panel-group">
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible Group Item #1</a></h4>
-                          </div>
-                          <div id="collapseOne" class="panel-collapse collapse in">
-                            <div class="panel-body">Ut consectetur ullamcorper purus a rutrum. Etiam dui nisi, hendrerit feugiat scelerisque et, cursus eu magna. </div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible Group Item #2</a></h4>
-                          </div>
-                          <div id="collapseTwo" class="panel-collapse collapse">
-                            <div class="panel-body">Nullam pretium fermentum sapien ut convallis. Suspendisse vehicula, magna non tristique tincidunt, massa nisi luctus tellus, vel laoreet sem lectus ut nibh. </div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible Group Item #3</a></h4>
-                          </div>
-                          <div id="collapseThree" class="panel-collapse collapse">
-                            <div class="panel-body">Praesent leo quam, faucibus at facilisis id, rhoncus sit amet metus. Sed vitae ipsum non nibh mattis congue eget id augue. </div>
-                          </div>
-                        </div>
-                      </div>
+                      <ul class="col-sm-2 list-unstyled">
+                        <li>
+                          <p><strong>Les docs</strong></p>
+                        </li>
+						<li><a href="#">Tendinite Rotulienne</a></li>
+						<li><a href="#">Traitement d'un genou</a></li>
+						<li><a href="#">Traitement d'une épaule</a></li>
+                      </ul>
+                      <ul class="col-sm-2 list-unstyled">
+                        <li>
+                          <p><strong>Matériel</strong></p>
+                        </li>
+                        <li><a href="#"> Chronique N°1</a></li>
+                        <li><a href="#"> Chronique N°2</a></li>
+                        <li><a href="#"> Chronique N°3</a></li>
+                        <li><a href="#"> Chronique N°4</a></li>
+                        <li><a href="#"> Chronique N°5</a></li>
+                        <li><a href="#"> Chronique N°6</a></li>
+                      </ul>
+                      <ul class="col-sm-2 list-unstyled">
+                        <li>
+                          <p><strong>Logiciels</strong></p>
+                        </li>
+						<li><a href="#">Trucs et astuces 1</a></li>
+						<li><a href="#">Trucs et astuces 2</a></li>
+						<li><a href="#">Trucs et astuces 3</a></li>
+						<li><a href="#">Trucs et astuces 4</a></li>
+                      </ul>
                     </div>
                   </div>
                 </li>
               </ul>
             </li>
-            <!-- Classic dropdown -->
-            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Classic<b class="caret"></b></a>
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Le kiosque</a>
+            </li>
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">La certification</a></li>
+			<!--
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Les actualités en région<b class="caret"></b></a>
               <ul role="menu" class="dropdown-menu">
-                <li><a tabindex="-1" href="#"> Action </a></li>
-                <li><a tabindex="-1" href="#"> Another action </a></li>
-                <li><a tabindex="-1" href="#"> Something else here </a></li>
-                <li class="divider"></li>
-                <li><a tabindex="-1" href="#"> Separated link </a></li>
+                <li><a tabindex="-1" href="#"> APMK</a></li>
+            <li><a tabindex="-1" href="#"> Colaborations en Locales</a></li>
+				<ul>
+					<li><a href="#">Rhône Alpes</a></li>
+					<li><a href="#">Traduits par l'AFMcK</a></li>
+					<li><a href="#">Interviews</a></li>
+				</ul>
+		
+                <li><a tabindex="-1" href="#"> MDT World Press</a></li>
+				<ul>
+					<li> <a href="#">Institu McKenzie</a></li>
+					<li> <a href="#">Newsletters</a></li>
+				</ul>
+              </ul>
+			  </li>
+			  -->			  
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Divers<b class="caret"></b></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a tabindex="-1" href="#"> Charge AFMcK</a></li>
+                <li><a tabindex="-1" href="#"> Forums</a></li>
+                <li><a tabindex="-1" href="#"> Communication Interne</a></li>
+                <li><a tabindex="-1" href="#"> Partenaires</a></li>
+                <li><a tabindex="-1" href="#"> Nous contacter</a></li>
               </ul>
             </li>
-            <!-- Pictures -->
-            <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Pictures<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <div class="yamm-content">
-                    <div class="row">
-                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
-    <div class="container" style="margin-top: 110px">
-		<h1>test</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin diam at nisi tristique fermentum consequat in libero. Etiam dui
-		velit, bibendum eu scelerisque sit amet, elementum et augue. Nullam elit dui, tempus non tempus vitae, viverra quis sapien. Sed quis diam aliquet risus
-		mollis tempor vitae vel lectus. In rutrum, lacus a porta imperdiet, odio ipsum porta ipsum, ac fringilla nisl dui et dui. Vivamus ut dapibus lacus. Donec
-		fermentum tellus ut urna laoreet ultrices. Etiam aliquet eleifend mi vitae fermentum. Curabitur nibh quam, varius in leo eu, condimentum fringilla nibh.
-		Nullam urna nisi, tincidunt in dui ac, convallis iaculis mauris. Aliquam ultricies arcu ac mauris molestie fermentum. Ut scelerisque est ut rhoncus
-		pulvinar. Morbi ut tincidunt lorem, sit amet dignissim nisi. Maecenas eget nisi sit amet arcu lobortis imperdiet nec vitae lorem. Aenean eu orci diam.
-		</p>
-		<p>
-		Nam id est nec elit eleifend laoreet. Proin congue lobortis nunc, vel interdum massa consequat sit amet. Cras tempus maximus nunc a posuere. Aliquam
-		molestie lobortis eros. Curabitur sem tellus, porttitor ac justo at, euismod scelerisque libero. Aenean eget pulvinar nunc. Duis convallis congue
-		efficitur. Donec in lacus iaculis neque fermentum lacinia sit amet non nisi. Aenean blandit mi a dui tempor ullamcorper. Phasellus mattis tempor ligula,
-		posuere dapibus tortor vulputate vel. Donec ultricies tempor diam nec sollicitudin.
-		</p>
-		<p>
-		Nam ut eros neque. Vestibulum a lorem sodales, vestibulum sapien vel, ornare arcu. In hac habitasse platea dictumst. Donec in urna dignissim, ultricies
-		quam non, pellentesque sem. Praesent molestie mollis neque sed bibendum. Integer euismod, nisi vel porttitor consequat, magna ex tempus metus, ut
-		vehicula sapien ligula at mauris. Morbi vel dui scelerisque, interdum nunc in, dictum purus. Integer eu tincidunt leo, eu aliquam dui. Integer luctus
-		vitae nisl vel lacinia. Vivamus vitae dignissim felis. Praesent euismod ligula ac vehicula lacinia. Phasellus pharetra aliquam lacinia. Quisque arcu
-		mauris, rutrum eu sagittis eget, vestibulum sit amet orci. Vivamus orci nulla, congue et mattis a, vehicula sit amet nisi.
-		</p>
-		<p>
-		Phasellus accumsan, enim at malesuada vehicula, eros augue volutpat libero, at dignissim lorem sem at neque. Vivamus euismod venenatis tellus, ut tempus
-		dolor. Duis cursus orci non cursus varius. Duis ut lorem non nunc placerat dictum. Etiam ligula libero, posuere porttitor mi eget, semper dictum dui.
-		Integer viverra mauris dolor, in convallis tellus laoreet eget. Vestibulum venenatis arcu vel placerat convallis. Nunc maximus nisl vitae quam tristique,
-		auctor vulputate quam euismod. Sed ac massa lacus. Donec lacinia nulla vitae nisl vehicula fringilla.
-		</p>
-		<p>
-		Aenean sit amet ornare velit. Integer dignissim mi metus, nec viverra leo tempus luctus. Aliquam at pharetra neque, a faucibus ligula. Donec feugiat,
-		eros ut fringilla mollis, neque sem interdum ipsum, id sollicitudin urna odio ut nulla. Vestibulum vestibulum vulputate erat, nec vulputate felis
-		vehicula a. Sed eget augue porta, fermentum dui ac, euismod lectus. Mauris gravida dolor id erat laoreet, sed bibendum justo posuere. Praesent pretium
-		nisi sed dapibus tristique. Aenean nibh enim, ullamcorper id luctus eu, varius nec risus. Proin eget ex nibh. Morbi volutpat nulla non erat mollis
-		volutpat. Ut nec nunc suscipit, convallis magna ut, ullamcorper enim. Proin mi libero, dapibus quis lectus in, faucibus suscipit nulla.
-		</p>
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat purus, congue eu risus sit amet, elementum vulputate neque. Etiam feugiat erat et
-		hendrerit iaculis. Nunc non erat sit amet urna bibendum bibendum non ac leo. Nam fringilla arcu arcu, eu ultricies lacus ultricies at. Pellentesque eget
-		nunc ut ligula pharetra rhoncus vel ac lacus. Phasellus pharetra augue lectus, at porta sem iaculis a. Curabitur suscipit arcu vitae aliquam accumsan.
-		Pellentesque eget tincidunt purus.
-		</p>
-		<p>
-		Fusce sed tortor erat. Aliquam eget metus nec metus aliquam molestie sit amet ut risus. Sed sollicitudin porta maximus. Praesent pretium sem dui, et
-		elementum metus mollis sed. Etiam lobortis lorem vel est pulvinar tristique. Proin in nibh euismod, lobortis eros non, scelerisque ex. In scelerisque
-		viverra ligula, iaculis vulputate nulla. Morbi felis sapien, auctor id rutrum ac, posuere sit amet nibh. Integer convallis dolor in velit iaculis,
-		placerat tempor dolor commodo. Vestibulum nec feugiat elit. Etiam ultricies vehicula justo nec porttitor. Pellentesque sollicitudin convallis odio, in
-		malesuada tellus vestibulum sed. Quisque ut pellentesque felis.
-		</p>
-		<p>
-		Maecenas auctor aliquet varius. Pellentesque ac elementum justo. Ut faucibus malesuada volutpat. In sit amet nisl arcu. Duis suscipit vel nibh ac tempus.
-		Suspendisse placerat elit nec libero feugiat sollicitudin. Donec pretium sem in consequat rhoncus. Curabitur nec maximus diam, blandit faucibus lorem.
-		</p>
-		<p>
-		In sollicitudin, arcu sed dignissim interdum, tortor nisl scelerisque magna, ultricies elementum libero odio id sem. In sollicitudin auctor ornare.
-		Vestibulum turpis nulla, fringilla non turpis auctor, convallis pretium tortor. Fusce in metus ac lacus lacinia lobortis. Duis faucibus, augue nec
-		efficitur tempor, nibh ante faucibus nunc, eu faucibus massa ante vitae est. Vivamus commodo libero felis, et malesuada libero convallis vitae. Nullam et
-		nunc non justo vehicula dignissim. Sed lacinia mauris sit amet auctor facilisis. Sed et eros lacus. Vivamus aliquet nibh arcu, nec scelerisque ex ornare
-		ut. Cras condimentum felis sed tincidunt maximus. Suspendisse congue, odio in tristique rutrum, lorem augue pellentesque ante, ut aliquet elit dui at
-		purus.
-		</p>
-		<p>
-		Integer euismod, est id condimentum semper, metus nisl aliquam arcu, pretium lacinia diam nunc ac lacus. Donec rutrum risus nec felis volutpat
-		condimentum. Aenean dignissim rhoncus metus, sit amet fringilla nisi viverra ac. Sed diam dui, accumsan non tortor eu, vehicula accumsan magna.
-		Pellentesque et neque luctus, varius nisl quis, vehicula ligula. Cras convallis metus sed nibh tempor, ut dapibus risus ornare. Cras in orci elit. Donec
-		rhoncus porta libero in sodales. Suspendisse ligula libero, gravida quis mauris ut, elementum vestibulum magna. Nam quis neque hendrerit velit venenatis
-		posuere. Proin imperdiet nulla sed ligula maximus, ac facilisis velit consectetur. Integer consequat nunc sed tellus tincidunt volutpat. Suspendisse ex
-		nisi, iaculis in porta quis, imperdiet vel lacus. Ut quis vulputate felis, vitae vehicula libero.
-		</p>
+	<div class="container" style="margin-top: 150px">
+		<div class="container">
+			<div class="container">
+				<ul class="breadcrumb">
+					<li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+					<li><a href="#">Travaux de l'association</a></li>
+					<li><a href="#">Cas cliniques</a></li>
+					<li class="active">Tendinite rotulienne</li>
+				</ul>
+			</div>
+			<h1>Super titre de la mort</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin diam at <a href="truc.bidule">nisi tristique fermentum </a>consequat in libero. Etiam dui
+			velit, bibendum eu scelerisque sit amet, elementum et augue. Nullam elit dui, tempus non tempus vitae, viverra quis sapien. Sed quis diam aliquet risus
+			mollis tempor vitae vel lectus. In rutrum, lacus a porta imperdiet, odio ipsum porta ipsum, ac fringilla nisl dui et dui. Vivamus ut dapibus lacus. Donec
+			fermentum tellus ut urna laoreet ultrices. Etiam aliquet eleifend mi vitae fermentum. Curabitur nibh quam, varius in leo eu, condimentum fringilla nibh.
+			Nullam urna nisi, tincidunt in dui ac, convallis iaculis mauris. Aliquam ultricies arcu ac mauris molestie fermentum. Ut scelerisque est ut rhoncus
+			pulvinar. Morbi ut tincidunt lorem, sit amet dignissim nisi. <a href="http://google.fr">Maecenas eget nisi </a>sit amet arcu lobortis imperdiet nec vitae lorem. Aenean eu orci diam.
+			</p>
+			<p>
+			Nam id est nec elit eleifend laoreet. Proin congue lobortis nunc, vel interdum massa consequat sit amet. Cras tempus maximus nunc a posuere. Aliquam
+			molestie lobortis eros. Curabitur sem tellus, porttitor ac justo at, euismod scelerisque libero. Aenean eget pulvinar nunc. Duis convallis congue
+			efficitur. Donec in lacus iaculis neque fermentum lacinia sit amet non nisi. Aenean blandit mi a dui tempor ullamcorper. Phasellus mattis tempor ligula,
+			posuere dapibus tortor vulputate vel. Donec ultricies tempor diam nec sollicitudin.
+			</p>
+			<p>
+			Nam ut eros neque. Vestibulum a lorem sodales, vestibulum sapien vel, ornare arcu. In hac habitasse platea dictumst. Donec in urna dignissim, ultricies
+			quam non, pellentesque sem. <a href="#">Praesent molestie mollis </a>neque sed bibendum. Integer euismod, nisi vel porttitor consequat, magna ex tempus metus, ut
+			vehicula sapien ligula at mauris. Morbi vel dui scelerisque, interdum nunc in, dictum purus. Integer eu tincidunt leo, <a href="#">eu aliquam dui</a>. Integer luctus
+			vitae nisl vel lacinia. Vivamus vitae dignissim felis. Praesent euismod ligula ac vehicula lacinia. Phasellus pharetra aliquam lacinia. Quisque arcu
+			mauris, rutrum eu sagittis eget, vestibulum sit amet orci. Vivamus orci nulla, congue et mattis a, vehicula sit amet nisi.
+			</p>
+			<p>
+			Phasellus accumsan, enim at malesuada vehicula, eros augue volutpat libero, at dignissim lorem sem at neque. Vivamus euismod venenatis tellus, ut tempus
+			dolor. Duis cursus orci non cursus varius. Duis ut lorem non nunc placerat dictum. Etiam ligula libero, posuere porttitor mi eget, semper dictum dui.
+			Integer viverra mauris dolor, in convallis tellus laoreet eget. Vestibulum venenatis arcu vel placerat convallis. Nunc maximus nisl vitae quam tristique,
+			auctor vulputate quam euismod. Sed ac massa lacus. Donec lacinia nulla vitae nisl vehicula fringilla.
+			</p>
+			<p>
+			Aenean sit amet ornare velit. Integer dignissim mi metus, nec viverra leo tempus luctus. Aliquam at pharetra neque, a faucibus ligula. Donec feugiat,
+			eros ut fringilla mollis, neque sem interdum ipsum, id sollicitudin urna odio ut nulla. Vestibulum vestibulum vulputate erat, nec vulputate felis
+			vehicula a. Sed eget augue porta, <a href="#">fermentum dui ac</a>, euismod lectus. Mauris gravida dolor id erat laoreet, sed bibendum justo posuere. Praesent pretium
+			nisi sed dapibus tristique. Aenean nibh enim, ullamcorper id luctus eu, varius nec risus. Proin eget ex nibh. Morbi volutpat nulla non erat mollis
+			volutpat. Ut nec nunc suscipit, convallis magna ut, ullamcorper enim. Proin mi libero, dapibus quis lectus in, faucibus suscipit nulla.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat purus, congue eu risus sit amet, elementum vulputate neque. Etiam feugiat erat et
+			hendrerit iaculis. Nunc non erat sit amet urna bibendum bibendum non ac leo. Nam fringilla arcu arcu, eu ultricies lacus ultricies at. Pellentesque eget
+			nunc ut ligula pharetra rhoncus vel ac lacus. Phasellus pharetra augue lectus, at porta sem iaculis a. Curabitur suscipit arcu vitae aliquam accumsan.
+			Pellentesque eget tincidunt purus.
+			</p>
+			<p>
+			Fusce sed tortor erat. Aliquam eget metus nec metus aliquam molestie sit amet ut risus. Sed sollicitudin porta maximus. Praesent pretium sem dui, et
+			elementum metus mollis sed. Etiam lobortis lorem vel est pulvinar tristique. Proin in nibh euismod, lobortis eros non, scelerisque ex. In scelerisque
+			viverra ligula, iaculis vulputate nulla. Morbi felis sapien, auctor id rutrum ac, posuere sit amet nibh. Integer convallis dolor in velit iaculis,
+			placerat tempor dolor commodo. Vestibulum nec feugiat elit. Etiam ultricies vehicula justo nec porttitor. Pellentesque sollicitudin convallis odio, in
+			malesuada tellus vestibulum sed. Quisque ut pellentesque felis.
+			</p>
+			<p>
+			Maecenas auctor aliquet varius. Pellentesque ac elementum justo. Ut faucibus malesuada volutpat. In sit amet nisl arcu. Duis suscipit vel nibh ac tempus.
+			Suspendisse placerat elit nec libero feugiat sollicitudin. Donec pretium sem in consequat rhoncus. Curabitur nec maximus diam, blandit faucibus lorem.
+			</p>
+			<p>
+			In sollicitudin, arcu sed dignissim interdum, tortor nisl scelerisque magna, ultricies elementum libero odio id sem. In sollicitudin auctor ornare.
+			Vestibulum turpis nulla, fringilla non turpis auctor, convallis pretium tortor. Fusce in metus ac lacus lacinia lobortis. Duis faucibus, augue nec
+			efficitur tempor, nibh ante faucibus nunc, eu faucibus massa ante vitae est. Vivamus commodo libero felis, et malesuada libero convallis vitae. Nullam et
+			nunc non justo vehicula dignissim. Sed lacinia mauris sit amet auctor facilisis. Sed et eros lacus. Vivamus aliquet nibh arcu, nec scelerisque ex ornare
+			ut. Cras condimentum felis sed tincidunt maximus. Suspendisse congue, odio in tristique rutrum, lorem augue pellentesque ante, ut aliquet elit dui at
+			purus.
+			</p>
+			<p>
+			Integer euismod, est id condimentum semper, metus nisl aliquam arcu, pretium lacinia diam nunc ac lacus. Donec rutrum risus nec felis volutpat
+			condimentum. Aenean dignissim rhoncus metus, sit amet fringilla nisi viverra ac. Sed diam dui, accumsan non tortor eu, vehicula accumsan magna.
+			Pellentesque et neque luctus, varius nisl quis, vehicula ligula. Cras convallis metus sed nibh tempor, ut dapibus risus ornare. Cras in orci elit. Donec
+			rhoncus porta libero in sodales. Suspendisse ligula libero, gravida quis mauris ut, elementum vestibulum magna. Nam quis neque hendrerit velit venenatis
+			posuere. Proin imperdiet nulla sed ligula maximus, ac facilisis velit consectetur. Integer consequat nunc sed tellus tincidunt volutpat. Suspendisse ex
+			nisi, iaculis in porta quis, imperdiet vel lacus. Ut quis vulputate felis, vitae vehicula libero.
+			</p>
 
-      </div>
-      <footer>
-        <hr>
-        <div class="row">
-          <div class="col-sm-4">
-            <p>MIT &copy; Geedmo 2014</p>
-          </div>
-          <div class="col-sm-8">
-            <div class="social">
-              <ul class="list-inline text-right">
-                <li>
-                  <iframe src="http://ghbtns.com/github-btn.html?user=geedmo&amp;repo=yamm3&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" class="github-btn"></iframe>
-                </li>
-                <li>
-                  <iframe src="http://ghbtns.com/github-btn.html?user=geedmo&amp;repo=yamm3&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px" class="github-btn"></iframe>
-                </li>
-                <li><a href="https://twitter.com/share" data-lang="en" class="twitter-share-button">Tweet</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <!-- /container -->
-    <!-- Bootstrap core JavaScript-->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="style/js/bootstrap.min.js"></script>
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>
-    <script>
-      $(function() {
-        window.prettyPrint && prettyPrint()
-        $(document).on('click', '.yamm .dropdown-menu', function(e) {
-          e.stopPropagation()
-        })
-      })
-    </script>
-    <!-- tweet and share :)-->
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </body>
+		</div>
+		<footer>
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-3">
+				<p><b>Nous contacter</b><br/>
+				AFMcK<br/>
+				2 rue Charles PIOT<br/>
+				38320 EYBENS<br/>
+				contact@afmck.fr
+				</p>
+			</div>
+			<div class="col-sm-3">
+				<p><b>Inscriptions</b><br/>
+				Anne-Marie GASTELLU-ETCHEGORRY<br/>
+				27 av. du 10ème Dragon<br/>
+				82000 Montauban<br/>
+				tresorerie@afmck.fr
+				</p>
+			</div>
+			<div class="col-sm-3">
+				<p>
+				… Et retrouvez nous aussi sur Facebook !
+				</p>
+				<!-- ~~ Bouton Facebook ~~ --> 
+				<div style="text-align: center;"class="fb-like fb_iframe_widget" data-href="http://www.afmck.fr" data-width="90" data-layout="button_count" data-action="like"
+					data-show-faces="true" data-share="true" fb-xfbml-state="rendered"
+					fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2Fwww.afmck.fr%2F&amp;layout=button_count&amp;locale=fr_FR&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=90"><span
+						style="vertical-align: bottom; width: 151px; height: 20px;"><iframe name="f3811aca8" width="90px" height="1000px" frameborder="0"
+							allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin"
+							src="http://www.facebook.com/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df378fdf0e%26domain%3Dafmck.fr%26origin%3Dhttp%253A%252F%252Fafmck.fr%252Ff38a42555%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.afmck.fr%2F&amp;layout=button_count&amp;locale=fr_FR&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=90"
+							style="border: none; visibility: visible; width: 151px; height: 20px;" class=""></iframe></span></div>
+			</div>
+		</div>
+		</footer>
+	</div>
+	<!-- /container -->
+	<!-- Bootstrap core JavaScript-->
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="style/js/bootstrap.min.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>
+	<script>
+		$(function() {
+			window.prettyPrint && prettyPrint()
+			$(document).on('click', '.yamm .dropdown-menu', function(e) {
+				e.stopPropagation()
+			})
+		})
+		$(document).ready(function(){
+			$(window).resize(function() {
+
+				ellipses1 = $("#bc1 :nth-child(2)")
+				if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
+
+				ellipses2 = $("#bc2 :nth-child(2)")
+				if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
+
+			})
+		});
+	</script>
+	<!-- tweet and share :)-->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</body>
 </html>
