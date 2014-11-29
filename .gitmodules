@@ -1,0 +1,3 @@
+[submodule "style/yamm3"]
+	path = style/yamm3
+	url = git@github.com:aroquemaurel/yamm3.git
