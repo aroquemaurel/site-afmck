@@ -1,0 +1,30 @@
+.yamm {
+	background-image: linear-gradient(to bottom,#273f64 0,#3e659f 80%);
+}
+
+.yamm .navbar-nav>li>a {
+	color: #fff;
+}
+
+.yamm .navbar-nav>li>a:hover {
+	color: #000;
+}
+
+footer {
+	background-image: linear-gradient(to bottom,#3e659f 0,#273f64 80%);
+	height: 120px;
+	color: #fff;
+}
+
+body {
+	background-color: #eee;
+}
+
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.active>a {
+	background-image: linear-gradient(to bottom,#2f4d79 0,#2f4d79 100%);
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+	color: #ccc;
+}
