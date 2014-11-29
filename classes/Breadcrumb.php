@@ -19,7 +19,8 @@ class Breadcrumb {
 		echo ' 	<ul class="breadcrumb">';
 
         foreach($this->links as $link) {
-            echo '<li><a href="#">'.($link != 'home' ? $link : '<i class="glyphicon glyphicon-home"></i>').'</a></li>';
+            echo '<li>'.($link->hasUrl() ? '<a href="'.$link->getUrl().'">' :
+                    '').$link->getLink().($link->hasUrl() ? '</a>' : '').'</li>';
         }
         echo '</ul></div>';
     }

@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yet another megamenu for Bootstrap 3">
-    <meta name="author" content="@geedmo">
+    <meta name="author" content="Antoine de Roquemaurel">
 
     <title><?php echo $title; ?> — Association française Mc Kenzie</title>
     <!-- Bootstrap and demo CSS -->
@@ -16,6 +15,8 @@
     <link href="style/css/afmck.css" rel="stylesheet">
     <!-- Yamm styles-->
     <link href="style/yamm3/yamm/yamm.css" rel="stylesheet">
+    <link rel="shortcut icon" href="afmck-icone.ico" />
+
 </head>
 <body>
 <?php Visitor::getInstance()->displayMenu(); ?><
