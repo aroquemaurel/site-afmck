@@ -3,10 +3,12 @@
     <div class="container">
     <h1>Methode MDT: La prise en charge</h1>
     <div class="dispatchHt">
-        <a href="#bilan">>> Le Bilan</a><a href="#seances">>> Les séances</a><a href="#aidesergo">>> Les Aides Ergonomiques</a>
+        <a href="#bilan">>> Le Bilan</a><a href="#seances">>> Les séances</a><a href="#aidesErgos">>> Les Aides Ergonomiques</a>
     </div><!-- fin de .dispatchHt -->
 
     <div class="pg01a-prisecharge">
+        <div class="anchor" id="bilan"></div>
+
         <h2>Le bilan</h2>
         <h5><strong></strong></h5>
         <div class="bs-callout bs-callout-warning">
@@ -59,6 +61,8 @@
                 <li>de repérer d’éventuels « drapeaux rouges » qui seraient des contre-indications à cette prise en charge et pourraient constituer des urgences médicales.</li>
             </ul>
 </div>
+        <div class="anchor" id="seances"></div>
+
         <div class="seances">
             <h2>Les séances</h2>
             <p>Le traitement McKenzie/MDT privilégie les techniques d’auto-traitement. Vous serez ainsi amené à effectuer de façon pluriquotidienne des exercices courts, précis, issus du bilan réalisé préalablement.</p>
@@ -73,9 +77,10 @@
             </div>
         </div><!-- Fin de .seances -->
 
-        <div class="seances">
+        <div class="anchor" id="aidesErgos"></div>
+        <div>
             <h2>Les aides ergonomiques</h2>
-            <h5>Dans l'approche McKenzie/MDT, l'utilisation de coussin ergonomique fait souvent partie intégrante du traitement.</h5>
+            <p>Dans l'approche McKenzie/MDT, l'utilisation de coussin ergonomique fait souvent partie intégrante du traitement.</p>
             <p>En effet, comment concilier traitement au cabinet sans prendre en compte ce que le patient peut imposer à sa colonne au cours de la journée chez lui ou lors de son activité professionnelle?</p>
             <p>Dans cette optique et si le bilan initial révèle une prédisposition du patient à la station assise avachie il peut être particulièrement pertinent de corriger cette attitude au quotidien. </p>
             <p>Tous les moyens que le thérapeute jugera nécessaires peuvent être entrepris pour lutter contre une telle attitude:</p>
@@ -99,24 +104,33 @@
             <p>Ce savoir faire est accessible à tous au travers d'un maillage international de producteurs de produits ergonomiques adaptés répondant à ces normes.</p>
             <h5>N'oubliez pas que ces aides ergonomiques accessibles en ligne seront surtout efficaces si vous suivez les conseils de votre thérapeute quant à leur utilisation et à leur positionnement !</h5>
 
-
-
-
-            <table class="coussin1"><tr><td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin1_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin5_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin3_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin4_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin2_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin9_AFMcK.jpg"></a></td></tr>
-                <tr><td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin6_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin7_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin8_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin10_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin11_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin12_AFMcK.jpg"></a></td></tr>
+            <table class="coussin1" style="margin: auto"><tr><td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin1_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin5_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin3_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin4_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin2_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin9_AFMcK.jpg"></a></td></tr>
+                   <tr><td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin6_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin7_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin8_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin10_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin11_AFMcK.jpg"></a></td>
+                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="docdwld/01a_meth-prisecharge/coussin12_AFMcK.jpg"></a></td></tr>
             </table>
+            </div>
 
-            <div class="essential">
+            <div class="essential" style="margin:auto;text-align: center">
                 <a href="http://www.essentiel-med.fr" target="_blank"><img src="docdwld/01a_meth-prisecharge/logo_essential.jpg"></a></div>
             <p>&nbsp;</p>
             <div class="alert alert-warning">
@@ -124,7 +138,7 @@
             </div>
             <p>&nbsp;</p>            <p>&nbsp;</p>
 
-        </div><!-- Fin de .seances -->
+        </div>
 
 
 
