@@ -43,9 +43,9 @@
 <script>
     $(function() {
         var toc = $("#toc").tocify({
-            selectors: "h2,h3,h4,h5"
+            selectors: "h2"
         }).data("toc-tocify");
-        toc.setOptions({ showEffect: "fadeIn", scrollTo: 110, smoothScroll: true, highlightOffset: -400 });
+        toc.setOptions({ showEffect: "fadeIn", scrollTo: 110 });
 
         prettyPrint();
         $(".optionName").popover({ trigger: "hover", hightlight:"true" });

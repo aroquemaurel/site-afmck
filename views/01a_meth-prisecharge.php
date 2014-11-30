@@ -2,9 +2,8 @@
     <?php $breadcrumb->display()?>
     <div class="container">
     <h1>Methode MDT: La prise en charge</h1>
-    <div class="dispatchHt">
-        <a href="#bilan">>> Le Bilan</a><a href="#seances">>> Les séances</a><a href="#aidesErgos">>> Les Aides Ergonomiques</a>
-    </div><!-- fin de .dispatchHt -->
+        <div id="toc" class="toc">
+        </div><!--/.well -->
 
     <div class="pg01a-prisecharge">
 
@@ -60,7 +59,6 @@
                 <li>de repérer d’éventuels « drapeaux rouges » qui seraient des contre-indications à cette prise en charge et pourraient constituer des urgences médicales.</li>
             </ul>
 </div>
-        <div class="seances">
             <h2>Les séances</h2>
             <p>Le traitement McKenzie/MDT privilégie les techniques d’auto-traitement. Vous serez ainsi amené à effectuer de façon pluriquotidienne des exercices courts, précis, issus du bilan réalisé préalablement.</p>
             <p>Selon le syndrome que vous présentez, vous aurez à effectuer vos exercices sur une durée allant de quelques jours (syndrome de dérangement) à quelques semaines (syndrome de dysfonction).</p>
@@ -72,9 +70,7 @@
             <div class="bs-callout bs-callout-warning">
                 <p>Grâce à cette prise en charge, vous deviendrez l’acteur principal de votre traitement, vous saurez comprendre les contraintes appliquées à votre dos et  vous serez à même de gérer d’éventuelles récidives, afin d’obtenir des résultats durables.</p>
             </div>
-        </div><!-- Fin de .seances -->
 
-        <div>
             <h2>Les aides ergonomiques</h2>
             <p>Dans l'approche McKenzie/MDT, l'utilisation de coussin ergonomique fait souvent partie intégrante du traitement.</p>
             <p>En effet, comment concilier traitement au cabinet sans prendre en compte ce que le patient peut imposer à sa colonne au cours de la journée chez lui ou lors de son activité professionnelle?</p>
@@ -94,7 +90,7 @@
                             <li>modifier la posture assise avachie souvent à l'origine de douleurs,</li>
                             <li>éviter les récidives.</li>
                         </ul>
-</div>
+
             <p>Il existe de nombreux modèles de coussins lombaires ou cervicaux. De nombreuses marques proposent ces coussins, aussi bien pour la voiture que pour le bureau. Les prix sont souvent assez élevés (entre 50 et 80 euros) et bien souvent  l'acquéreur ne bénéficie pas de conseils pertinents pour leur utilisation.</p>
             <p>L'institut McKenzie International a donc établi un cahier des charges particulièrement pointu concernant ces différentes aides ergonomiques. Son savoir-faire en la matière a intéressé de nombreux industriels : de la conception de véhicules de grande marque avec coussins lombaire conducteur réglables jusqu'à des fabricants de sièges ergonomiques de bureau.</p>
             <p>Ce savoir faire est accessible à tous au travers d'un maillage international de producteurs de produits ergonomiques adaptés répondant à ces normes.</p>
