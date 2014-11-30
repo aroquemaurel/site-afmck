@@ -16,7 +16,7 @@ class Visitor {
 
     public static function getInstance() {
         if(Visitor::$instance == null) {
-            if($_SESSION['visitor'] != null) {
+            if(isset($_SESSION['visitor']) && $_SESSION['visitor'] != null) {
                 Visitor::$instance = $_SESSION['visitor'];
             } else {
                 Visitor::$instance = new Visitor();

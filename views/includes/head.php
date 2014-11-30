@@ -16,7 +16,25 @@
     <!-- Yamm styles-->
     <link href="style/yamm3/yamm/yamm.css" rel="stylesheet">
     <link rel="shortcut icon" href="afmck-icone.ico" />
-
+    <link href="style/tocify/src/stylesheets/jquery.tocify.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .headerDoc {
+            color: #005580;
+        }
+        @media (max-width: 767px) {
+            #toc {
+                position: relative;
+                width: 100%;
+                margin: 0px 0px 20px 0px;
+            }
+        }
+        </style>
 </head>
 <body>
 <?php Visitor::getInstance()->displayMenu(); ?><

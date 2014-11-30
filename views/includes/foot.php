@@ -37,8 +37,20 @@
 <!-- Bootstrap core JavaScript-->
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="style/js/bootstrap.min.js"></script>
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>
+<script src="style/tocify/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
+<script src="style/tocify/src/javascripts/jquery.tocify.js"></script>
+
 <script>
+    $(function() {
+        var toc = $("#toc").tocify({
+            selectors: "h2,h3,h4,h5"
+        }).data("toc-tocify");
+        toc.setOptions({ showEffect: "fadeIn", scrollTo: 110, smoothScroll: true, highlightOffset: -400 });
+
+        prettyPrint();
+        $(".optionName").popover({ trigger: "hover", hightlight:"true" });
+    });
+
     $(function() {
         window.prettyPrint && prettyPrint()
         $(document).on('click', '.yamm .dropdown-menu', function(e) {
@@ -46,18 +58,6 @@
         })
     })
     $(document).ready(function(){
-        $(window).resize(function() {
-
-            ellipses1 = $("#bc1 :nth-child(2)")
-            if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
-
-            ellipses2 = $("#bc2 :nth-child(2)")
-            if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
-
-        })
-    });
-
-    jQuery(document).ready(function() {
         var offset = 220;
         var duration = 500;
         jQuery(window).scroll(function() {
@@ -81,7 +81,8 @@
             return false;
         });
 
-    });
+
+	});
 </script>
 <!-- tweet and share :)-->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

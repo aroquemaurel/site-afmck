@@ -7,7 +7,6 @@
     </div><!-- fin de .dispatchHt -->
 
     <div class="pg01a-prisecharge">
-        <div class="anchor" id="bilan"></div>
 
         <h2>Le bilan</h2>
         <h5><strong></strong></h5>
@@ -61,8 +60,6 @@
                 <li>de repérer d’éventuels « drapeaux rouges » qui seraient des contre-indications à cette prise en charge et pourraient constituer des urgences médicales.</li>
             </ul>
 </div>
-        <div class="anchor" id="seances"></div>
-
         <div class="seances">
             <h2>Les séances</h2>
             <p>Le traitement McKenzie/MDT privilégie les techniques d’auto-traitement. Vous serez ainsi amené à effectuer de façon pluriquotidienne des exercices courts, précis, issus du bilan réalisé préalablement.</p>
@@ -77,7 +74,6 @@
             </div>
         </div><!-- Fin de .seances -->
 
-        <div class="anchor" id="aidesErgos"></div>
         <div>
             <h2>Les aides ergonomiques</h2>
             <p>Dans l'approche McKenzie/MDT, l'utilisation de coussin ergonomique fait souvent partie intégrante du traitement.</p>

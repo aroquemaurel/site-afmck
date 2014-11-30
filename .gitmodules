@@ -1,3 +1,6 @@
 [submodule "style/yamm3"]
 	path = style/yamm3
 	url = git@github.com:aroquemaurel/yamm3.git
+[submodule "style/tocify"]
+	path = style/tocify
+	url = https://github.com/gfranko/jquery.tocify.js.git
