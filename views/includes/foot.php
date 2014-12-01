@@ -43,11 +43,10 @@
 <script>
     $(function() {
         var toc = $("#toc").tocify({
-            selectors: "h2"
+            selectors: "h2,h3"
         }).data("toc-tocify");
         toc.setOptions({ showEffect: "fadeIn", scrollTo: 110 });
 
-        prettyPrint();
         $(".optionName").popover({ trigger: "hover", hightlight:"true" });
     });
 

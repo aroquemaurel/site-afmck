@@ -22,7 +22,7 @@
             </ul>
         </div>
 
-        <h3>1/ L'interrogatoire</h3>
+        <h3>L'interrogatoire</h3>
         <p>Il permet de définir:</p>
         <div class="bs-callout bs-callout-info">
                     <ul>
@@ -41,8 +41,9 @@
 
 
 
-        <h3>2/ L'examen postural <small>Éventuellement bilan neurologique selon la pathologie évaluée</small></h3>
-        <h3>3/ L'examen des mouvments répétés</h3>
+        <h3>L'examen postural</h3>
+        <p>Éventuellement bilan neurologique selon la pathologie évaluée</p>
+        <h3>L'examen des mouvements répétés</h3>
         <p>Il servira à rechercher la préférence directionnelle, et s’il y a lieu, la centralisation de la douleur.</p>
 
         <p>Ce bilan permet:</p>
@@ -91,7 +92,7 @@
                             <li>éviter les récidives.</li>
                         </ul>
 
-            <p>Il existe de nombreux modèles de coussins lombaires ou cervicaux. De nombreuses marques proposent ces coussins, aussi bien pour la voiture que pour le bureau. Les prix sont souvent assez élevés (entre 50 et 80 euros) et bien souvent  l'acquéreur ne bénéficie pas de conseils pertinents pour leur utilisation.</p>
+chroaf            <p>Il existe de nombreux modèles de coussins lombaires ou cervicaux. De nombreuses marques proposent ces coussins, aussi bien pour la voiture que pour le bureau. Les prix sont souvent assez élevés (entre 50 et 80 euros) et bien souvent  l'acquéreur ne bénéficie pas de conseils pertinents pour leur utilisation.</p>
             <p>L'institut McKenzie International a donc établi un cahier des charges particulièrement pointu concernant ces différentes aides ergonomiques. Son savoir-faire en la matière a intéressé de nombreux industriels : de la conception de véhicules de grande marque avec coussins lombaire conducteur réglables jusqu'à des fabricants de sièges ergonomiques de bureau.</p>
             <p>Ce savoir faire est accessible à tous au travers d'un maillage international de producteurs de produits ergonomiques adaptés répondant à ces normes.</p>
             <h5>N'oubliez pas que ces aides ergonomiques accessibles en ligne seront surtout efficaces si vous suivez les conseils de votre thérapeute quant à leur utilisation et à leur positionnement !</h5>

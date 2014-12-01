@@ -23,7 +23,7 @@ if (!isset($urlExec)) {
 <script src="<?php echo $mapChemin; ?>js/AC_RunActiveContent.js" language="javascript"></script>
 <script language="javascript">
 	if (AC_FL_RunContent == 0) {
-		alert("Cette page nécessite le fichier AC_RunActiveContent.js.");
+		alert("Cette page nï¿½cessite le fichier AC_RunActiveContent.js.");
 	} else {
 		AC_FL_RunContent(
 			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',

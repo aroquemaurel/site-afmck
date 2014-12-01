@@ -2,8 +2,7 @@
     <?php $breadcrumb->display()?>
     <div class="container">
         <h1>Foire Aux Questions</h1>
-        <div id="toc" class="toc">
-        </div><!--/.well -->
+        <div id="toc" class="toc"></div>
 
         <h2>FAQ pour les Kinés</h2>
 
