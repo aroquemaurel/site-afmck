@@ -16,7 +16,7 @@
                 <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Accueil<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a tabindex="-1" href="index.php"> Visiteurs</a></li>
-                        <li><a tabindex="-1" href=""> Adhérents</a></li>
+                        <li><a tabindex="-1" href="#"> Adhérents</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Méthode MDT<b class="caret"></b></a>

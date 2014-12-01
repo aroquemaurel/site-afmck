@@ -1,7 +1,7 @@
 <footer>
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-3">
+    <div class="container-fluid">
+        <div class="col-md-1 col-sm-1"></div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
             <p><b>Nous contacter</b><br/>
                 AFMcK<br/>
                 2 rue Charles PIOT<br/>
@@ -9,7 +9,7 @@
                 contact@afmck.fr
             </p>
         </div>
-        <div class="col-sm-3">
+        <div class="col-md-4 col-sm-4 col-xs-4">
             <p><b>Inscriptions</b><br/>
                 Anne-Marie GASTELLU-ETCHEGORRY<br/>
                 27 av. du 10ème Dragon<br/>
@@ -17,7 +17,7 @@
                 tresorerie@afmck.fr
             </p>
         </div>
-        <div class="col-sm-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <p>
                 … Et retrouvez nous aussi sur Facebook !
             </p>

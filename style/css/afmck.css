@@ -6,7 +6,6 @@ body a {
 	color: #0173A6;
 }
 
-
 body a:visited {
 	color: #7483AE;
 }
@@ -48,7 +47,18 @@ body {
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
 	color: #d7c562;
 }
-
+@media(max-width: 768px) {
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        background-image: linear-gradient(to bottom,#222 0,#273f64 60%);
+    }
+    .main {
+        padding: 0;
+        margin: 0;
+    }
+    #footer {
+        height: 500px;
+    }
+}
 @media ( min-width: 767px ) {
   .panel-group { width: 400px; }
   .thumbnail { margin: 0; }
@@ -96,13 +106,16 @@ h1 {
 .breadcrumb .active a {
 	color: #333333;
 }
-
+.main .container {
+    margin-top: 100px;
+}
 .main {
-    margin-top: 150px;
     text-align: justify;
     overflow:auto;
     padding-bottom: 50px;
-    padding-right: 110px;
+    padding-right: 150px;
+    margin: auto;
+    width: 80%;
 }
 
 .back-to-top {
@@ -125,7 +138,25 @@ h1 {
     right: 15px;
     text-decoration: none;
 }
+@media(max-width: 1030px) {
+    #toc {
+        display:none;
+    }
+}
+@media(min-width: 750px) {
+    @media(max-width: 1300px) {
+        .main {
+            padding-right: 150px;
+        }
+    }
+}
 
+@media(max-width: 1030px) {
+    .main {
+        width: 95%;
+        padding-right: 5px;
+    }
+}
 .back-to-top:hover {
     background-color: rgba(135, 135, 135, 0.50);
 }
@@ -198,10 +229,5 @@ h1 {
 }
 
 table .img img {
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
 
-table .img a {
-    margin-left: 20px;
 }

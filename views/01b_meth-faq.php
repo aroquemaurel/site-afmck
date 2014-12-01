@@ -1,6 +1,6 @@
 <div class="main">
     <?php $breadcrumb->display()?>
-    <div class="container">
+    <div class="container-fluid">
         <h1>Foire Aux Questions</h1>
         <div id="toc" class="toc"></div>
 

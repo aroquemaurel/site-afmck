@@ -1,6 +1,6 @@
 <div class="main">
     <?php $breadcrumb->display()?>
-    <div class="container">
+    <div class="container-fluid">
         <div id="toc" class="toc"></div>
         <h1>AFMcK: Adhésions</h1>
         <div class="alert alert-warning alert-dismissible" role="alert">
@@ -65,3 +65,4 @@
         <p>&nbsp;<br/>&nbsp;</p>
 
     </div><!-- Fin de .pg01a-prisecharge -->
+</div>

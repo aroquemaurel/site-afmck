@@ -1,6 +1,8 @@
 <div class="main">
-    <?php $breadcrumb->display()?>
-    <div class="container">
+
+<?php $breadcrumb->display()?>
+
+    <div class="container-fluid">
         <h1>Methode MDT: Références</h1>
         <div id="toc" class="toc"></div>
     <!------------------- ARTICLES EN FRANCAIS ----------------->
@@ -75,5 +77,5 @@
 
 </div><!-- Fin de .docformation -->
 
-
+</div>
 </div>

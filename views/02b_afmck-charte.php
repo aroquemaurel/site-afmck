@@ -1,6 +1,6 @@
 <div class="main">
     <?php $breadcrumb->display()?>
-    <div class="container">
+    <div class="container-fluid">
         <h1>AFMcK: La Charte de l'Association</h1>
 
     <div class="pg01a-prisecharge">
@@ -33,4 +33,5 @@
         <p>&nbsp;<br/>&nbsp;</p>
 
     </div>
+</div>
 </div>

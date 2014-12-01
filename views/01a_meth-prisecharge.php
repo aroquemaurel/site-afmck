@@ -1,6 +1,6 @@
 <div class="main">
     <?php $breadcrumb->display()?>
-    <div class="container">
+    <div class="container-fluid">
     <h1>Methode MDT: La prise en charge</h1>
         <div id="toc" class="toc">
         </div><!--/.well -->
@@ -134,7 +134,5 @@ chroaf            <p>Il existe de nombreux modèles de coussins lombaires ou cer
         </div>
 
 
-
-    </div><!-- Fin de .pg01a-prisecharge -->
-
+</div></div>
 </div>
