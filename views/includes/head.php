@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Antoine de Roquemaurel">
 
+	<meta content="True" name="HandheldFriendly">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport" content="width=device-width">
+
+
     <title><?php echo $title; ?> — Association française Mc Kenzie</title>
     <!-- Bootstrap and demo CSS -->
     <link href="style/css/bootstrap.min.css" rel="stylesheet">

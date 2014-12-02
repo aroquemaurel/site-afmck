@@ -1,5 +1,5 @@
 <!-- Demo navbar -->
-<div class="navbar yamm navbar-default navbar-fixed-top" style="height:120px;">
+<div class="navbar yamm navbar-default navbar-fixed-top" style="height:110px;background-color: red;">
     <div class="container">
         <div class="navbar-header" style="float:left">
             <button type="button" data-toggle="collapse"
@@ -7,7 +7,7 @@
                     class="navbar-toggle">
 		<span
             class="icon-bar"></span></button><a href="index.php"
-                                                class="navbar-brand"><img src="style/img/logo.png" height="100px"
+                                                class="navbar-brand"><img style="margin-top: -10px"src="style/img/logo.png" height="100px"
                                                                           alt="AFMcK" /></a>
         </div>
         <div id="navbar-collapse-1" class="navbar-collapse collapse" style="margin-top: 60px; margin-left: 100px;">
