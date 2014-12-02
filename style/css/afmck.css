@@ -19,7 +19,10 @@ body a:visited {
 	color: #d7c562;
 }
 #facebookhome {
-    float: right;
+    position: absolute;
+    right: 15px;
+    text-decoration: none;
+
 }
 footer {
 	background-image: url('../img/footBackground.jpg');
@@ -28,6 +31,20 @@ footer {
 	border-top: 4px solid #F1A260;
     position: relative;
     margin-top: -60px;
+
+}
+
+.home .carousel-indicators li {
+    border-color: #2f4d79;
+}
+
+.home .carousel-indicators .active {
+    background-color: #2f4d79;
+}
+.home {
+    width: 450px;
+    padding-left: 75px;
+    margin:auto;
 }
 
 body {
@@ -60,6 +77,11 @@ body {
     #footer {
         height: 500px;
     }
+    .home {
+        width: 300px;
+        padding-left: 0px;
+    }
+
 }
 @media ( min-width: 767px ) {
   .panel-group { width: 400px; }
@@ -132,6 +154,8 @@ h1 {
      display: none;
     margin-top: 150px;
  }
+
+
 #toc {
     width: 250px;
 }
@@ -143,6 +167,9 @@ h1 {
 @media(max-width: 1030px) {
     #toc {
         display:none;
+    }
+    #facebookhome {
+        display: none;
     }
 }
 @media(min-width: 750px) {

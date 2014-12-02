@@ -45,9 +45,10 @@
         var toc = $("#toc").tocify({
             selectors: "h2,h3"
         }).data("toc-tocify");
-        toc.setOptions({ showEffect: "fadeIn", scrollTo: 110 });
-
-        $(".optionName").popover({ trigger: "hover", hightlight:"true" });
+        if (toc) {
+            toc.setOptions({showEffect: "fadeIn", scrollTo: 110});
+        }
+        $(".optionName").popover({trigger: "hover", hightlight: "true"});
     });
 
     $(function() {
@@ -72,18 +73,13 @@
             jQuery('html, body').animate({scrollTop: 0}, duration);
             return false;
         })
-        $('a[href^="#"]').click(function() {
-            var target = $(this.hash);
-            if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
-            if (target.length == 0) target = $('html');
-            $('html, body').animate({ scrollTop: target.offset().top }, 500);
-            return false;
-        });
-
-
 	});
+
+    if($('.carousel')) {
+        $('.carousel').carousel({
+            interval: 3000
+        })
+    }
 </script>
-<!-- tweet and share :)-->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>

@@ -4,9 +4,8 @@
         <div class="navbar-header" style="float:left">
             <button type="button" data-toggle="collapse"
                     data-target="#navbar-collapse-1"
-                    class="navbar-toggle">
-		<span
-            class="icon-bar"></span></button><a href="index.php"
+                    class="navbar-toggle" style="margin-top: 30px">
+		<img src="style/img/mobile-btn.png" width="30px"/></button><a href="index.php"
                                                 class="navbar-brand"><img style="margin-top: -10px"src="style/img/logo.png" height="100px"
                                                                           alt="AFMcK" /></a>
         </div>
