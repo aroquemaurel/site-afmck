@@ -35,4 +35,8 @@ class Visitor {
         }
     }
 
+    public function isConnected() {
+        return false;
+    }
+
 } 
