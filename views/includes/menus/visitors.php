@@ -1,5 +1,5 @@
 <!-- Demo navbar -->
-<div class="navbar yamm navbar-default navbar-fixed-top" style="height:110px;background-color: red;">
+<div class="navbar yamm navbar-default navbar-fixed-top" style="height:110px;background-color: #273f64;">
     <div class="container">
         <div class="navbar-header" style="float:left">
             <button type="button" data-toggle="collapse"
