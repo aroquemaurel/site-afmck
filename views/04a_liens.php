@@ -1,4 +1,3 @@
-<div class="main">
     <?php $breadcrumb->display()?>
     <div class="container-fluid">
         <div id="toc" class="toc"></div>
@@ -46,4 +45,3 @@
 
     </div><!-- Fin de .pg04a-liens -->
 
-</div>

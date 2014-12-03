@@ -1,4 +1,3 @@
-<div class="main" style="margin-top: 80px">
     <div class="container-fluid">
         <h1>Bienvenue sur le site de l'Association Française McKenzie !</h1>
 
@@ -24,4 +23,3 @@
             <p style="font-size: 18pt;text-align: center">Bonne navigation à tous !</p>
     <p style="height: 70px;"></p>
     </div>
-</div>

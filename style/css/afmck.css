@@ -131,7 +131,6 @@ h1 {
 	color: #333333;
 }
 .main .container {
-    margin-top: 100px;
 }
 .main {
     text-align: justify;
@@ -140,6 +139,8 @@ h1 {
     padding-right: 150px;
     margin: auto;
     width: 80%;
+    margin-top: 100px;
+
 }
 
 .back-to-top {

@@ -1,4 +1,3 @@
-<div class="main">
     <?php $breadcrumb->display()?>
     <div class="container-fluid">
         <h1>Foire Aux Questions</h1>
@@ -126,4 +125,3 @@
         <p>&nbsp;<br/>&nbsp;</p>
     </div><!-- Fin de .pg01a-prisecharge -->
 
-</div>
