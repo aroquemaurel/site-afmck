@@ -45,5 +45,8 @@
 <?php Visitor::getInstance()->displayMenu(); ?>
 <div class="main">
 <?php
-Visitor::getInstance()->displayConnectionPopup();
+if(isset($_SESSION['lastMessage'])) {
+    echo $_SESSION['lastMessage'];
+    unset($_SESSION['lastMessage']);
+}
 ?>
