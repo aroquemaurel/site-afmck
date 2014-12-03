@@ -3,12 +3,15 @@
 require_once('classes/Visitor.php');
 require_once('classes/Breadcrumb.php');
 require_once('classes/Link.php');
+require_once('views/Popup.php');
 session_start();
 
 $title = 'Connexion';
-$breadcrumb = new Breadcrumb(array(new Link('home', 'index.php'), new Link('Connexion en cours', '#')));
 
-Visitor::getInstance()->connect("13234", "456");
-$_SESSION['connect'] = Visitor::getInstance()->isConnected();
-header('Location: '.Visitor::getInstance()->getLastPage());
+if(!Visitor::getInstance()->isConnected()) {
+    Visitor::getInstance()->connect("1234", "456");
+} else {
+    $_SESSION['lastMessage'] = Popup::alreadyConnection();
+}
+header('Location: ' . Visitor::getInstance()->getLastPage());
 ?>
