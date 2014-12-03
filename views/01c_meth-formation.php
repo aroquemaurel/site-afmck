@@ -1,4 +1,3 @@
-<div class="main">
     <?php $breadcrumb->display()?>
     <div class="container-fluid">
     <h1>Methode MDT: La formation</h1>
@@ -84,4 +83,3 @@
         <p>&nbsp;<br/>&nbsp;</p>
 
     </div><!-- Fin de .pg01a-prisecharge -->
-    </div>

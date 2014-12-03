@@ -36,7 +36,7 @@
                 <li><a href="03a_praticiens.php">Praticiens</a></li>
                 <li><a href="04a_liens.php">Liens</a></li>
                 <?php
-                if(Visitor::getInstance()->isConnected()) {
+                if(!Visitor::getInstance()->isConnected()) {
                     include("connectionMenu.php");
                 }
                 ?>

@@ -42,4 +42,8 @@
         </style>
 </head>
 <body>
-<?php Visitor::getInstance()->displayMenu(); ?><
+<?php Visitor::getInstance()->displayMenu(); ?>
+<div class="main">
+<?php
+Visitor::getInstance()->displayConnectionPopup();
+?>

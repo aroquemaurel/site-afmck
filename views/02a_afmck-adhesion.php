@@ -1,4 +1,3 @@
-<div class="main">
     <?php $breadcrumb->display()?>
     <div class="container-fluid">
         <div id="toc" class="toc"></div>
@@ -65,4 +64,3 @@
         <p>&nbsp;<br/>&nbsp;</p>
 
     </div><!-- Fin de .pg01a-prisecharge -->
-</div>

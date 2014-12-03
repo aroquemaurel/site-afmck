@@ -1,5 +1,3 @@
-<div class="main">
-
 <?php $breadcrumb->display()?>
 
     <div class="container-fluid">
@@ -77,5 +75,4 @@
 
 </div><!-- Fin de .docformation -->
 
-</div>
 </div>
