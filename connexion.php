@@ -1,15 +1,14 @@
 <?php
 //require_once("/home/afmck/www/crawlprotect/include/cppf.php");
-require_once('classes/Visitor.php');
-require_once('classes/Breadcrumb.php');
-require_once('classes/Link.php');
-require_once('views/Popup.php');
+require_once('autoload.php');
 session_start();
 
 $title = 'Connexion';
+$adeliNumber = $_POST['inputAdeli'];
+$password = $_POST['inputPassword'];
 
 if(!Visitor::getInstance()->isConnected()) {
-    Visitor::getInstance()->connect("1234", "456");
+    Visitor::getInstance()->connect($adeliNumber, $password);
 } else {
     $_SESSION['lastMessage'] = Popup::alreadyConnection();
 }
