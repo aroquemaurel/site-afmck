@@ -4,11 +4,11 @@ require_once('../autoload.php');
 session_start();
 
 if(Visitor::getInstance()->isConnected()) {
-    $title = 'Accueil membres';
+    $title = 'Autres cas cliniques';
     $breadcrumb = new Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', '#'),
-        new Link('Accueil membres','members/index.php')));
+        new Link('Cas clinique','#'), new Link('Autres cas cliniques', '#')));
     include('../views/includes/head.php');
-    include('../views/members/index.php');
+    include('../views/members/casclinique_autres.php');
     include('../views/includes/foot.php');
 }
 ?>

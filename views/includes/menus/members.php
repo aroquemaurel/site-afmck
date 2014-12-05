@@ -18,9 +18,10 @@
                                         <li>
                                             <p><strong>Cas cliniques</strong></p>
                                         </li>
-                                        <li><a href="#">Tendinite Rotulienne</a></li>
-                                        <li><a href="#">Traitement d'un genou</a></li>
-                                        <li><a href="#">Traitement d'une épaule</a></li>
+                                        <li><a href="casclinique_rotulienne.php">Tendinite Rotulienne</a></li>
+                                        <li><a href="casclinique_genou.php">Traitement d'un genou</a></li>
+                                        <li><a href="casclinique_epaule.php">Traitement d'une épaule</a></li>
+                                        <li><a href="casclinique_autres.php">Autres cas</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
