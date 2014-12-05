@@ -27,12 +27,12 @@
                                         <li>
                                             <p><strong>Chroniques scientifiques</strong></p>
                                         </li>
-                                        <li><a href="#"> Chronique N°1</a></li>
-                                        <li><a href="#"> Chronique N°2</a></li>
-                                        <li><a href="#"> Chronique N°3</a></li>
-                                        <li><a href="#"> Chronique N°4</a></li>
-                                        <li><a href="#"> Chronique N°5</a></li>
-                                        <li><a href="#"> Chronique N°6</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°1_AFMcK.pdf" target="_blank">Chronique N°1</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°2_AFMcK.pdf" target="_blank">Chronique N°2</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°3_AFMcK.pdf" target="_blank">Chronique N°3</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°4_AFMcK.pdf" target="_blank">Chronique N°4</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°5_AFMcK.pdf" target="_blank">Chronique N°5</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°6_AFMcK.pdf" target="_blank">Chronique N°6</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
