@@ -5,15 +5,15 @@
  * Date: 29/11/14
  * Time: 23:16
  */
-require_once('db/DatabaseConnection.php');
-require_once('User.php');
-require_once('views/Popup.php');
+
 class Visitor {
     private $user;
     private static $instance;
     private $lastPage;
+    private $currentPath;
 
     private function __construct() {
+        $this->currentPath = '.';
     }
 
     public static function getInstance() {
@@ -24,16 +24,25 @@ class Visitor {
                 Visitor::$instance = new Visitor();
                 $_SESSION['visitor'] = Visitor::$instance;
             }
+
         }
 
         return Visitor::$instance;
     }
 
     public function displayMenu() {
-        if(!$this->isConnected()) {
+        if(!$this->isConnected() || getcwd() != 'members') {
             include('views/includes/menus/visitors.php');
         } else {
-            include('views/includes/menus/members.php');
+            include('../views/includes/menus/members.php');
+        }
+    }
+
+    public function getRootPage() {
+        if(getcwd() == 'members') {
+            return '..';
+        } else {
+            return '.';
         }
     }
     public function getLastPage() {
@@ -43,7 +52,13 @@ class Visitor {
     public function isConnected() {
         return $this->user != null;
     }
+    public function getCurrentPath() {
+        return $this->currentPath;
+    }
 
+    public function setCurrentPath($currentPath) {
+        $this->currentPath = $currentPath;
+    }
     public function connect($user, $password) {
         $this->user = new User($user, $password);
         if(!$this->user->connect()) {

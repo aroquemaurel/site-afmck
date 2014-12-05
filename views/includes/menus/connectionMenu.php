@@ -1,14 +1,14 @@
 <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Connexion<b class="caret"></b></a>
     <ul role="menu" class="dropdown-menu" style="padding: 10px">
         <li>
-            <form>
+            <form action="connexion.php" method="post">
                 <div class="form-group">
-                    <label for="inputEmail">Numéro ADELI</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Numéro ADELI">
+                    <label for="inputAdeli">Numéro ADELI</label>
+                    <input type="string" name="inputAdeli" class="form-control" id="inputAdeli" placeholder="Numéro ADELI">
                 </div>
                 <div class="form-group">
                     <label for="inputPassword">Mot de passe</label>
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
+                    <input type="password" name="inputPassword" class="form-control" id="inputPassword" placeholder="Mot de passe">
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox">Se souvenir de moi</label>
@@ -21,3 +21,4 @@
         </li>
     </ul>
 </li>
+

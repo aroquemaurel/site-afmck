@@ -37,9 +37,9 @@
 <!-- /container -->
 <!-- Bootstrap core JavaScript-->
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="style/js/bootstrap.min.js"></script>
-<script src="style/tocify/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
-<script src="style/tocify/src/javascripts/jquery.tocify.js"></script>
+<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/js/bootstrap.min.js"></script>
+<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
+<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/src/javascripts/jquery.tocify.js"></script>
 
 <script>
     $(function() {
