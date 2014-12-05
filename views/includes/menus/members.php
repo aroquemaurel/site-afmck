@@ -47,7 +47,7 @@
                                         <li>
                                             <p><strong>Études</strong></p>
                                         </li>
-                                        <li><a href="#">Rachis prévalence des syndromes McKenzie</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadh/docdwld/01c-etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf">Rachis prévalence des syndromes McKenzie</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
