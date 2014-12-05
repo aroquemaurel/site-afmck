@@ -31,7 +31,7 @@ class Visitor {
     }
 
     public function displayMenu() {
-        if(!$this->isConnected() || getcwd() != 'members') {
+        if(!$this->isConnected() || basename(getcwd()) != 'members') {
             include('views/includes/menus/visitors.php');
         } else {
             include('../views/includes/menus/members.php');
@@ -39,7 +39,7 @@ class Visitor {
     }
 
     public function getRootPage() {
-        if(getcwd() == 'members') {
+        if(basename(getcwd()) == 'members') {
             return '..';
         } else {
             return '.';
