@@ -8,7 +8,7 @@ if(Visitor::getInstance()->isConnected()) {
     $breadcrumb = new Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', '#'),
         new Link('Accueil membres','members/index.php')));
     include('../views/includes/head.php');
-    include('../views/01a_meth-prisecharge.php');
+    include('../views/members/index.php');
     include('../views/includes/foot.php');
 }
 ?>
