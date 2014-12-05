@@ -98,6 +98,10 @@ body {
 h1 {
     color: #081743;
     padding-bottom: 20px;
+    font-size: 22pt;
+}
+h2 {
+    font-size: 19pt;
 }
 .breadcrumb {
 	padding: 7px 14px;

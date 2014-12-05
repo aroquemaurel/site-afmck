@@ -1,8 +1,6 @@
 <?php
 //require_once("/home/afmck/www/crawlprotect/include/cppf.php");
-require_once('classes/Visitor.php');
-require_once('classes/Breadcrumb.php');
-require_once('classes/Link.php');
+require_once('autoload.php');
 session_start();
 
 $title = 'Adhésions';

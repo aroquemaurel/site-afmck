@@ -1,21 +1,10 @@
-<!-- Demo navbar -->
-<div class="navbar yamm navbar-default navbar-fixed-top" style="height:110px;background-color: #273f64;">
-    <div class="container">
-        <div class="navbar-header" style="float:left">
-            <button type="button" data-toggle="collapse"
-                    data-target="#navbar-collapse-1"
-                    class="navbar-toggle" style="margin-top: 30px">
-		<img src="style/img/mobile-btn.png" width="30px"/></button><a href="index.php"
-                                                class="navbar-brand"><img style="margin-top: -10px"src="style/img/logo.png" height="100px"
-                                                                          alt="AFMcK" /></a>
-        </div>
-        <div id="navbar-collapse-1" class="navbar-collapse collapse" style="margin-top: 60px; margin-left: 100px;">
+<?php include('menu.php') ?>
             <ul class="nav navbar-nav">
                 <!-- Classic dropdown -->
                 <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Accueil<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a tabindex="-1" href="index.php"> Visiteurs</a></li>
-                        <li><a tabindex="-1" href="#"> Adhérents</a></li>
+                        <li><a tabindex="-1" href="members/index.php"> Adhérents</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Méthode MDT<b class="caret"></b></a>
@@ -38,6 +27,8 @@
                 <?php
                 if(!Visitor::getInstance()->isConnected()) {
                     include("connectionMenu.php");
+                } else {
+                    echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
                 }
                 ?>
             </ul>

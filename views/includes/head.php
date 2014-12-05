@@ -13,15 +13,15 @@
 
     <title><?php echo $title; ?> — Association française Mc Kenzie</title>
     <!-- Bootstrap and demo CSS -->
-    <link href="style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-    <link href="style/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="style/css/afmck.css" rel="stylesheet">
+    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/afmck.css" rel="stylesheet">
     <!-- Yamm styles-->
-    <link href="style/yamm3/yamm/yamm.css" rel="stylesheet">
-    <link rel="shortcut icon" href="afmck-icone.ico" />
-    <link href="style/tocify/src/stylesheets/jquery.tocify.css" rel="stylesheet">
+    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/yamm3/yamm/yamm.css" rel="stylesheet">
+    <link rel="shortcut icon" href="<?php echo Visitor::getInstance()->getRootPage() ?>/afmck-icone.ico" />
+    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/src/stylesheets/jquery.tocify.css" rel="stylesheet">
     <style>
         body {
             padding-top: 20px;

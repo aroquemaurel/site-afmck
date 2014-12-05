@@ -1,5 +1,5 @@
 <?php
-require_once('classes/Visitor.php');
+include_once('autoload.php');
 
 session_start();
 if(Visitor::getInstance()->isConnected()) {
