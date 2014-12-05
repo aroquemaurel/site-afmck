@@ -38,11 +38,11 @@
                                         <li>
                                             <p><strong>Trucs et astuces en MDT</strong></p>
                                         </li>
-                                        <li><a href="#">Trucs et astuces 1</a></li>
-                                        <li><a href="#">Trucs et astuces 2</a></li>
-                                        <li><a href="#">Trucs et astuces 3</a></li>
-                                        <li><a href="#">Trucs et astuces 4</a></li>
-                                    </ul>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°1_AFMcK.pdf" target="_blank">Trucs et Astuces N°1</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°2_AFMcK.pdf" target="_blank">Trucs et Astuces N°2</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°3_AFMcK.pdf" target="_blank">Trucs et Astuces N°3</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">Trucs et Astuces N°4</a></li>
+                                        </li>                                    </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Études</strong></p>
