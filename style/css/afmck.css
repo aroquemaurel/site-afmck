@@ -263,3 +263,7 @@ h2 {
 table .img img {
 
 }
+
+table td {
+    padding-right: 15px;
+}
