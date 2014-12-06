@@ -147,10 +147,22 @@
     <a href="#rethaut"><img src="img/retourhtpg2b.jpg" width="150" height="35" alt="ret ht pg" /></a></div><!-- fin de .hautpagecasclin -->
     
 
-<!-- ARTICLES EN FRANCAIS ----------------------------------------------------------------------------------------------------------------------------------------------- --> 
+<!-- ARTICLES EN FRANCAIS ---------------------------------------------------------------------------------------------------------------------------------------- --> 
  <h2 id="artfr">Articles parus en Français</h2> 
  
  
+ <table class="fltlft"> 
+          <tr>
+           <td class="img"><a href="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.jpg"></a></td>
+           <td class="txt"><a href="docdwld/03a-kiosque/02fr/modic et IRM.pdf" target="_blank"><p>
+La discopathie de type Modic 1<br/>J. Beaudreuil, P. Orcel</br>2009(.pdf)</p></a></td></tr>
+    </table>
+ <table class="fltlft"> 
+          <tr>
+           <td class="img"><a href="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.jpg"></a></td>
+           <td class="txt"><a href="docdwld/03a-kiosque/02fr/stade modic-2.pdf" target="_blank"><p>
+Analyse IRM selon Modic : intérêt dans les lombalgies<br/>B. Bordet, J. Borne, O. Fantino, J.C. Bousquet, S. Coilard<br/>(.pdf)</p></a></td></tr>
+    </table>
  <table class="fltlft"> 
           <tr>
            <td class="img"><a href="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.jpg"></a></td>
@@ -162,15 +174,13 @@ et des extrémités.<br />G. SAGI, P. BOUDOT et D. VANDEPUT<br />in EMC fev 2011
            <td class="img"><a href="docdwld/03a-kiosque/02fr/IJMDT vol 5 mars 2010 page 33_AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/IJMDT vol 5 mars 2010 page 33_AFMcK.jpg"></a></td>
            <td class="txt"><a href="docdwld/03a-kiosque/02fr/IJMDT vol 5 mars 2010 page 33_AFMcK.pdf" target="_blank"><p>Pertinence d'une hypersensibilité du sinus carotidien dans la prise en charge MDT.<br />G. SAGI<br />International Journal of MDT vol.5, mars 2010 (.pdf)</p></a></td></tr>
     </table>
-    <table class="fltlft"> 
+    <table> 
           <tr>
            <td class="img"><a href="docdwld/03a-kiosque/02fr/ANAES Lombosciatique fev 2000_AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/ANAES Lombosciatique fev 2000_AFMcK.jpg"></a></td>
            <td class="txt"><a href="docdwld/03a-kiosque/02fr/ANAES Lombosciatique fev 2000_AFMcK.pdf" target="_blank"><p>Prise en charge diagnostique et thérapeutique des lombalgies et lombosciatiques communes de moins de trois mois d'évolution.<br />Recommandations ANAES<br />Février 2000 (.pdf)</p></a></td></tr>
     </table>
     
-    
-    
-    <table>
+    <table class="">
           <tr>
            <td class="img"><a href="docdwld/03a-kiosque/02fr/Contribution de la methode McKenzie à l'evaluation et au traitement des patients lombalgique_AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/Contribution de la methode McKenzie à l'evaluation et au traitement des patients lombalgique_AFMcK.jpg"></a></td>
            <td class="txt"><a href="docdwld/03a-kiosque/02fr/Contribution de la methode McKenzie à l'evaluation et au traitement des patients lombalgique_AFMcK.pdf" target="_blank"><p>Contribution de la méthode McKenzie à l'évaluation et au traitement des patients lombalgique.<br />G. SAGI, J. OTERO<br />Kinésitherapie Scientifique 2012 (.pdf)</p></a></td></tr>
@@ -187,6 +197,7 @@ et des extrémités.<br />G. SAGI, P. BOUDOT et D. VANDEPUT<br />in EMC fev 2011
     </table>
     <div class="retourhtpgcasclin" id="hanche">
     <a href="#rethaut"><img src="img/retourhtpg2b.jpg" width="150" height="35" alt="ret ht pg" /></a></div><!-- fin de .hautpagecasclin -->
+
     
     
     
