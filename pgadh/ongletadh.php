@@ -97,14 +97,6 @@
                 <ul>
                         <li><a href="05a-adh-apmk.php">APMK</a></li>
                         <li><a href="05b-adh-collabolocales.php">Collaborations locales</a>
-                           <ul><li><a href="00-adh-accueil.php">>> Rhone-Alpes</a></li>
-                               <li><a href="00-adh-accueil.php">>> Bretagne</a></li>
-                               <li><a href="00-adh-accueil.php">>> Nantes</a></li>
-                               <li><a href="00-adh-accueil.php">>> Montpellier</a></li>
-                               <li><a href="00-adh-accueil.php">>> Paris</a></li></ul>
-                        
-                        
-                        
                         </li> 
                         <li><a href="05c-adh-divers.php">Divers</a></li>   
                                 
