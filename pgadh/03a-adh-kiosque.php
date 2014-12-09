@@ -153,14 +153,14 @@
  
  <table class="fltlft"> 
           <tr>
-           <td class="img"><a href="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.jpg"></a></td>
+           <td class="img"><a href="docdwld/03a-kiosque/02fr/modic et IRM.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/modic et IRM.jpg"></a></td>
            <td class="txt"><a href="docdwld/03a-kiosque/02fr/modic et IRM.pdf" target="_blank"><p>
 La discopathie de type Modic 1<br/>J. Beaudreuil, P. Orcel</br>2009(.pdf)</p></a></td></tr>
     </table>
  <table class="fltlft"> 
           <tr>
-           <td class="img"><a href="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/EMC fev 2011 _AFMcK.jpg"></a></td>
-           <td class="txt"><a href="docdwld/03a-kiosque/02fr/stade modic-2.pdf" target="_blank"><p>
+           <td class="img"><a href="docdwld/03a-kiosque/02fr/stade modic.pdf" target="_blank"><img src="docdwld/03a-kiosque/02fr/stade modic.jpg"></a></td>
+           <td class="txt"><a href="docdwld/03a-kiosque/02fr/stade modic.pdf" target="_blank"><p>
 Analyse IRM selon Modic : intérêt dans les lombalgies<br/>B. Bordet, J. Borne, O. Fantino, J.C. Bousquet, S. Coilard<br/>(.pdf)</p></a></td></tr>
     </table>
  <table class="fltlft"> 

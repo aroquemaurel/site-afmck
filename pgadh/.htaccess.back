@@ -1,0 +1,4 @@
+AuthName "Pour acceder à la pré-production, veuillez saisir vos log in et mot de passe"
+AuthType Basic
+AuthUserFile "/homez.441/afmck/www/preprod/.htpasswd"
+Require valid-user
