@@ -5,7 +5,6 @@
         <div class="retourhtpgcasclin" id="lombaire"></div><!-- fin de .hautpagecasclin -->
 
         <div class="docformation">
-            <!-- POURQUOI FAIRE ----------------------------------------------------------------------------------------------------------------------------------------------- -->
             <h2 id="pourquoi">Pourquoi faire ?</h2>
 
             <h3>Les intérêts de passer l'épreuve</h3>
@@ -79,7 +78,9 @@
             <table class="fltlft">
                 <tr>
                     <td class="img"><a href="docdwld/04a-certif/Correction Quizz Manuel Partie A_AFMcK.pdf" target="_blank"><img src="docdwld/04a-certif/Correction Quizz Manuel Partie A_AFMcK.jpg"></a></td>
-                    <td class="txt"><a href="docdwld/04a-certif/Correction Quizz Manuel Partie A_AFMcK.pdf" target="_blank"><p>Correction Quizz Manuel<br />Partie A</p></a></td></tr>
+                    <td class="txt"><a href="docdwld/04a-certif/Correction Quizz Manuel Partie A_AFMcK.pdf" target="_blank">
+                            <p>Correction Quizz Manuel<br />Partie A</p></a>
+                    </td></tr>
             </table>
 
             <table>

@@ -124,11 +124,11 @@
                   -->
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Divers<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a tabindex="-1" href="#"> Charge AFMcK</a></li>
-                        <li><a tabindex="-1" href="#"> Forums</a></li>
-                        <li><a tabindex="-1" href="#"> Communication Interne</a></li>
-                        <li><a tabindex="-1" href="#"> Partenaires</a></li>
-                        <li><a tabindex="-1" href="#"> Nous contacter</a></li>
+                        <li><a tabindex="-1" href="charte.php"> Charte AFMcK</a></li>
+                        <li><a tabindex="-1" href="http://afmck.forumactif.org/login"> Forum</a></li>
+                        <li><a tabindex="-1" href="cominterne.php"> Communication Interne</a></li>
+                        <li><a tabindex="-1" href="partenaires.php"> Partenaires</a></li>
+                        <li><a tabindex="-1" href="contact.php"> Nous contacter</a></li>
                     </ul>
                 </li>
                 <li><a href="../deconnexion.php">Déconnexion</a></li>
