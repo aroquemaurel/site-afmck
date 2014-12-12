@@ -71,9 +71,9 @@
                                         <li>
                                             <p><strong>Les docs</strong></p>
                                         </li>
-                                        <li><a href="#">Tendinite Rotulienne</a></li>
-                                        <li><a href="#">Traitement d'un genou</a></li>
-                                        <li><a href="#">Traitement d'une épaule</a></li>
+                                        <li><a href="fichesbilan.php">Fiches Bilan</a></li>
+                                        <li><a href="fichesexercices.php">Fiches d'exerices</a></li>
+                                        <li><a href="com.php">La com'</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
