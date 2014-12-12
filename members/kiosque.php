@@ -4,11 +4,11 @@ require_once('../autoload.php');
 session_start();
 
 if(Visitor::getInstance()->isConnected()) {
-    $title = 'La com\'';
+    $title = 'La certification';
     $breadcrumb = new Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', '#'),
-        new Link('Outils de travail','#'), new Link('Les docs', '#'), new Link('La com\'', '#')));
+        new Link('Le kiosque','#')));
     include('../views/includes/head.php');
-    include('../views/members/com.php');
+    include('../views/members/kiosque.php');
     include('../views/includes/foot.php');
 }
 ?>
