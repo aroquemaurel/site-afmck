@@ -206,11 +206,11 @@
 
 
     <!-- FACTURATION HN ----------------------------------------------------------------------------------------------------------------------------------------------- -->
-    <h2 id="factuhn">La facturation HN (Hors Nomenclature)</h2>
+    <h2 id="factuhn">La facturation HN</h2>
     <div class="factuhn">
 
         <div class="bs-callout bs-callout-warning">
-        La facturation hors-nomenclature (HN) est une question récurrente lors des cours et des échanges avec les thérapeutes qui pratiquent l'approche McKenzie au quotidien. L'association a cherché à trouver un moyen de répondre à cette question.</h2>
+        La facturation Hors-Nomenclature (HN) est une question récurrente lors des cours et des échanges avec les thérapeutes qui pratiquent l'approche McKenzie au quotidien. L'association a cherché à trouver un moyen de répondre à cette question.</h2>
         </div>
 
         <div class="bs-callout bs-callout-warning">

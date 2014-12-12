@@ -100,9 +100,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Le kiosque</a>
+                <li class="dropdown"><a href="kiosque.php">Le kiosque</a>
                 </li>
-                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">La certification</a></li>
+                <li class="dropdown"><a href="certification.php">La certification</a></li>
                 <!--
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Les actualités en région<b class="caret"></b></a>
                   <ul role="menu" class="dropdown-menu">
