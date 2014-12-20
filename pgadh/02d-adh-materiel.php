@@ -77,7 +77,8 @@
 </div><!-- fin de .coussins -->
  
  <div class ="essential">  
-   <table><tr><td rowspan="2"><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/logo_essential.jpg"></a></td> 
+   <table><tr><td rowspan="3"><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/logo_essential.jpg"></a></td> 
+              <td><a href="docdwld/02d-materiel/Offre_super_Roll_1.pdf" target="_blank">Offre spécial Super Roll</a></td></tr>
               <td><a href="docdwld/02d-materiel/BON DE COMMANDE - OFFRE INTERNET 2014_AFMcK.pdf" target="_blank">Bon de commande "Offre Internet"</a></td></tr>
           <tr><td><a href="docdwld/02d-materiel/BON DE COMMANDE - OFFRE PATIENT 2014_AFMcK.pdf" target="_blank">Bon de commande "Offre Patient"</a></td></tr>
           </table>

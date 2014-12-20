@@ -28,6 +28,8 @@
                             <ul><li><a href="docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°1_AFMcK.pdf" target="_blank">>> Trucs et Astuces 1</a></li>
                                 <li><a href="docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°2_AFMcK.pdf" target="_blank">>> Trucs et Astuces 2</a></li>
                                 <li><a href="docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°3_AFMcK.pdf" target="_blank">>> Trucs et Astuces 3</a></li>
+                                <li><a href="docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">>> Trucs et Astuces 4</a></li>
+                                <li><a href="docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°5_AFMcK.pdf" target="_blank">>> Trucs et Astuces 5</a></li>
                             </ul></li>
                         <li><a href="docdwld/01c-etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf" target="_blank">Etudes</a></li>
                         <li><a href="#">Journées de l'Association</a><ul>

@@ -34,15 +34,14 @@
 <div class="docformation">
 
 <!-- INTREVIEWS --------------------------------------------------------------------------------------------------------------------------------------------- --> 
+
  <h2 id="interv">Interviews</h2>
-<div class="dossier">
- <table class="dossierspe">
-    <tr><th><h2>Interview de Frédéric STEIMER, diplômé en juin 2014,<br />qui nous livre ses impressions.</h2></th></tr>
+ <table class="fltlft">
+    <tr><td><p>Interview de Frédéric STEIMER, diplômé en juin 2014,<br />qui nous livre ses impressions.</p></td></tr>
     <tr><td colspan="5"><a href="docdwld/03a-kiosque/00interview/Interview Diplomes - Fred Steimer_AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/00interview/Interview Diplomes - Fred Steimer_AFMcK.jpg"></a></td></tr></table>
- <table class="dossierspe">
-    <tr><th><h2>Interview de Jérôme OSTALIER, diplômé en 2014</h2></th></tr>
+ <table class="">
+    <tr><td><p>Interview de Jérôme OSTALIER, diplômé en 2014</p></td></tr>
     <tr><td colspan="5"><a href="docdwld/03a-kiosque/00interview/Interview Diplomes - Ostalier.pdf" target="_blank"><img src="docdwld/03a-kiosque/00interview/Interview Diplomes - Ostalier.jpg"></a></td></tr></table>
-    </div>
 
 
 <!-- TRADUITS AFMcK --------------------------------------------------------------------------------------------------------------------------------------------- --> 
@@ -204,7 +203,7 @@ et des extrémités.<br />G. SAGI, P. BOUDOT et D. VANDEPUT<br />in EMC fev 2011
     
     
     
- <!-- ARTICLES EN ANGLAIS ------------------------------------------------------------------------------------------------------------------------------------------ --> 
+ <!-- ARTICLES EN ANGLAIS ---------------------------------------------------------------------------------------------------------------------------------------- --> 
     
 <h2 id="artgb">Articles parus en Anglais</h2>
 
