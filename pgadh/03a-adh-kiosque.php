@@ -33,16 +33,19 @@
         
 <div class="docformation">
 
-<!-- INTREVIEWS ----------------------------------------------------------------------------------------------------------------------------------------------- --> 
+<!-- INTREVIEWS --------------------------------------------------------------------------------------------------------------------------------------------- --> 
  <h2 id="interv">Interviews</h2>
 <div class="dossier">
  <table class="dossierspe">
     <tr><th><h2>Interview de Frédéric STEIMER, diplômé en juin 2014,<br />qui nous livre ses impressions.</h2></th></tr>
     <tr><td colspan="5"><a href="docdwld/03a-kiosque/00interview/Interview Diplomes - Fred Steimer_AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/00interview/Interview Diplomes - Fred Steimer_AFMcK.jpg"></a></td></tr></table>
+ <table class="dossierspe">
+    <tr><th><h2>Interview de Jérôme OSTALIER, diplômé en 2014</h2></th></tr>
+    <tr><td colspan="5"><a href="docdwld/03a-kiosque/00interview/Interview Diplomes - Ostalier.pdf" target="_blank"><img src="docdwld/03a-kiosque/00interview/Interview Diplomes - Ostalier.jpg"></a></td></tr></table>
     </div>
 
 
-<!-- TRADUITS AFMcK ----------------------------------------------------------------------------------------------------------------------------------------------- --> 
+<!-- TRADUITS AFMcK --------------------------------------------------------------------------------------------------------------------------------------------- --> 
  <h2 id="traduits">Articles traduits par L'AFMcK</h2>
  
  <h3>>> DERNIER ARTICLE TRADUIT</h3>
