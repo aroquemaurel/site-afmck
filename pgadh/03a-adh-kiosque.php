@@ -40,6 +40,9 @@
     <tr><td><p>Interview de Frédéric STEIMER, diplômé en juin 2014,<br />qui nous livre ses impressions.</p></td></tr>
     <tr><td colspan="5"><a href="docdwld/03a-kiosque/00interview/Interview Diplomes - Fred Steimer_AFMcK.pdf" target="_blank"><img src="docdwld/03a-kiosque/00interview/Interview Diplomes - Fred Steimer_AFMcK.jpg"></a></td></tr></table>
  <table class="">
+    <tr><td><p>Interview de Jean-Philippe DENEUVILLE, diplômé en juin 2014.</p></td></tr>
+    <tr><td colspan="5"><a href="docdwld/03a-kiosque/00interview/Interview Diplomes - Deneuville.pdf" target="_blank"><img src="docdwld/03a-kiosque/00interview/Interview Diplomes - Deneuville.jpg"></a></td></tr></table>
+ <table class="">
     <tr><td><p>Interview de Jérôme OSTALIER, diplômé en 2014</p></td></tr>
     <tr><td colspan="5"><a href="docdwld/03a-kiosque/00interview/Interview Diplomes - Ostalier.pdf" target="_blank"><img src="docdwld/03a-kiosque/00interview/Interview Diplomes - Ostalier.jpg"></a></td></tr></table>
 
