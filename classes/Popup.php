@@ -40,4 +40,11 @@ class Popup {
         <strong>Erreur</strong> Vous n\'êtes pas connecté
         </div>';
     }
+
+    public static function forbidden() {
+        return '<div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <strong>Erreur</strong> Vous n\'avez pas le droit d\'accéder à cette page
+        </div>';
+    }
 } 

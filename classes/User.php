@@ -152,6 +152,7 @@ class User {
 
         return false;
     }
+
     /**
      * @return mixed
      */
