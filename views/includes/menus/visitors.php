@@ -4,7 +4,11 @@
                 <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Accueil<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a tabindex="-1" href="index.php"> Visiteurs</a></li>
-                        <li><a tabindex="-1" href="members/index.php"> Adhérents</a></li>
+                        <?php
+                        if(Visitor::getInstance()->isConnected()) {
+                            echo '<li><a tabindex="-1" href="members/index.php"> Adhérents</a></li>';
+                        }
+                        ?>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Méthode MDT<b class="caret"></b></a>
