@@ -80,15 +80,38 @@ class Visitor {
     }
 
 
-    public function hasRights($pageFilename) {
+    public function hasRights($pageFilename, $groups=array()) {
         $splits = explode('/', $pageFilename);
-        if(false) { // pagefilename is in database
-            // TODO… Later.
+        if($groups != array()) { // particular rights
+            foreach($groups as $group) {
+                if($this->user->isInGroup($group)) {
+                    return true;
+                }
+            }
+            return false;
         } else if($splits['0'] == 'members') { // not in database, but begin with members
             return $this->isConnected();
         } else { // Every body can see
             return true;
         }
+    }
+
+    public function getCurrentDir() {
+        $currentDir = '';
+        if(basename(getcwd()) == 'members') {
+            $currentDir = 'members/';
+        }
+
+        return $currentDir;
+    }
+
+    public function getCurrentFile() {
+        $currentFile = '';
+        if(basename(getcwd()) == 'members') {
+            $currentFile .= 'members/';
+        }
+        $currentFile .= basename($_SERVER['PHP_SELF']);
+        return $currentFile;
     }
 
 } 

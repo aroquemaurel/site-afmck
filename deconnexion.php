@@ -8,4 +8,4 @@ if(Visitor::getInstance()->isConnected()) {
 } else {
     $_SESSION['lastMessage'] = Popup::notConnected();
 }
-header('Location: ' . Visitor::getInstance()->getLastPage());
+header('Location: ' . ($currentDir == 'members/' ? '../index.php' : 'index.php'));
