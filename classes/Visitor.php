@@ -30,6 +30,10 @@ class Visitor {
         return Visitor::$instance;
     }
 
+    public function getUser() {
+        return $this->user;
+    }
+
     public function displayMenu() {
         if(!$this->isConnected() || basename(getcwd()) != 'members') {
             include('views/includes/menus/visitors.php');
