@@ -82,5 +82,8 @@
         })
     }
 </script>
+<?php
+echo $script;
+?>
 </body>
 </html>
