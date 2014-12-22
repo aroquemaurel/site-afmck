@@ -12,6 +12,7 @@ class User {
     private $firstName;
     private $lastName;
     private $mail;
+    private $groups;
 
     public function __construct($adeliNumber, $password) {
         $this->adeliNumber = $adeliNumber;
@@ -20,8 +21,22 @@ class User {
 
     public function connect()
     {
-        $db = new DatabaseConnection();
-        return $db->connect($this);
+        $db = new DatabaseUser();
+        $data = $db->getUser($this->adeliNumber, $this->password);
+        if(!$data == null) {
+            return false;
+        }
+
+        $this->hydrat($data);
+        return true;
+    }
+
+    public function hydrat($data) {
+        $this->lastName = $data->lastname;
+        $this->firstName = $data->firstname;
+        $this->mail = $data->mail;
+
+        // TODO getGroups
     }
 
     /**
@@ -104,6 +119,32 @@ class User {
         $this->mail = $mail;
     }
 
+    /**
+     * @param $group
+     */
+     public function addGroup($group) {
+        // TODO
+     }
 
+    /**
+     * @param $group
+     */
+    public function removeGroup($group) {
+        // TODO
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGroups() {
+        return $this->groups;
+    }
+
+    /**
+     * @param $group
+     */
+    public function setGroups($group) {
+        $this->groups = $group;
+    }
 
 }
