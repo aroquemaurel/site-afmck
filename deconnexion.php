@@ -1,7 +1,6 @@
 <?php
-include_once('autoload.php');
+include('begin.php');
 
-session_start();
 if(Visitor::getInstance()->isConnected()) {
     session_destroy();
     session_start();

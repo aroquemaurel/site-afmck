@@ -1,9 +1,6 @@
 <?php
-//require_once("/home/afmck/www/crawlprotect/include/cppf.php");
+include('../begin.php');
 use utils\Link;
-require_once('../autoload.php');
-
-session_start();
 
 if(Visitor::getInstance()->isConnected()) {
     $title = 'Accueil membres';
