@@ -1,7 +1,5 @@
 <?php
-//require_once("/home/afmck/www/crawlprotect/include/cppf.php");
-require_once('classes/Visitor.php');
-session_start();
+include('begin.php');
 
 $title = 'Accueil';
 include('views/includes/head.php');

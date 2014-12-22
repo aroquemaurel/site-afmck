@@ -50,8 +50,15 @@ class Visitor {
         }
     }
     public function getLastPage() {
-        return "index.php";
         return $this->lastPage;
+    }
+
+    public function setLastPage($lastpage) {
+        if($lastpage == $this->lastPage) {
+            $this->lastPage = '../index.php';
+        } else {
+            $this->lastPage = $lastpage;
+        }
     }
     public function isConnected() {
         return $this->user != null;
@@ -70,6 +77,18 @@ class Visitor {
         }
 
         $_SESSION['lastMessage'] = $this->isConnected() ? Popup::connectionOk() : Popup::connectionKo();
+    }
+
+
+    public function hasRights($pageFilename) {
+        $splits = explode('/', $pageFilename);
+        if(false) { // pagefilename is in database
+            // TODO… Later.
+        } else if($splits['0'] == 'members') { // not in database, but begin with members
+            return $this->isConnected();
+        } else { // Every body can see
+            return true;
+        }
     }
 
 } 
