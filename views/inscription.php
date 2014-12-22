@@ -8,7 +8,7 @@
                 <strong>Attention!</strong> Votre inscription n'est possible que si vous êtes adhérent à l'association. <br/>
                 Votre inscription sera validée manuellement par un membre du CA. Une fois validée, cette inscription sera valable pendant un an.
             </div>
-            <form role="form">
+            <form role="form" method="post">
                 <h2>Inscrivez-vous ! <small>Pour pouvoir profiter du site</small></h2>
                 <hr class="colorgraph">
                 <div class="row">
@@ -24,6 +24,10 @@
                                    class="form-control input-lg" placeholder="Nom de famille" tabindex="2">
                         </div>
                     </div>
+                </div>
+                <div class="form-group">
+                    <input required="required" type="text" name="adeliNumber" id="adeliNumber"
+                           class="form-control input-lg" placeholder="Numéro ADELI" tabindex="4">
                 </div>
                 <div class="form-group">
                     <input required="required" type="email" name="email" id="email"
