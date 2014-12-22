@@ -1,4 +1,6 @@
 <?php
+use models\Group;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -7,6 +9,7 @@
  */
 
 class User {
+    private $id;
     private $adeliNumber;
     private $password;
     private $firstName;
@@ -17,13 +20,14 @@ class User {
     public function __construct($adeliNumber, $password) {
         $this->adeliNumber = $adeliNumber;
         $this->password = $password;
+        $this->groups = array();
     }
 
     public function connect()
     {
         $db = new DatabaseUser();
         $data = $db->getUser($this->adeliNumber, $this->password);
-        if(!$data == null) {
+        if($data == null) {
             return false;
         }
 
@@ -35,8 +39,14 @@ class User {
         $this->lastName = $data->lastname;
         $this->firstName = $data->firstname;
         $this->mail = $data->mail;
+        $this->id = $data->id;
 
-        // TODO getGroups
+        $db = new DatabaseUser();
+        $data = $db->getGroups($this->id);
+        $this->groups = array();
+        foreach($data as $group) {
+            $this->groups[] = new Group($group['idGroup'], $group['nom']);
+        }
     }
 
     /**
@@ -120,20 +130,6 @@ class User {
     }
 
     /**
-     * @param $group
-     */
-     public function addGroup($group) {
-        // TODO
-     }
-
-    /**
-     * @param $group
-     */
-    public function removeGroup($group) {
-        // TODO
-    }
-
-    /**
      * @return mixed
      */
     public function getGroups() {
@@ -146,5 +142,22 @@ class User {
     public function setGroups($group) {
         $this->groups = $group;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
 
 }
