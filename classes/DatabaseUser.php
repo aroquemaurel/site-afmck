@@ -26,4 +26,21 @@ class DatabaseUser extends Database {
         return $query->fetchAll(PDO::FETCH_ASSOC);
 
     }
+
+    public function addUser(User $user) {
+        $adeli = $user->getAdeliNumber();
+        $firstname = $user->getFirstName();
+        $lastname = $user->getLastName();
+        $password = $user->getPassword();
+        $mail = $user->getMail();
+
+        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :adeliNumber, :firstname, :lastname, :password, :mail)");
+        $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
+        $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
+        $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
+        $query->bindParam(":password", $password, PDO::PARAM_STR);
+        $query->bindParam(":mail", $mail, PDO::PARAM_STR);
+        $query->execute();
+
+    }
 } 
