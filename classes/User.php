@@ -143,6 +143,15 @@ class User {
         $this->groups = $group;
     }
 
+    public function isInGroup($group) {
+        foreach($this->groups as $gr) {
+            if($gr->getName() == $group) {
+                return true;
+            }
+        }
+
+        return false;
+    }
     /**
      * @return mixed
      */
