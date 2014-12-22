@@ -14,7 +14,7 @@
                     <label><input type="checkbox">Se souvenir de moi</label>
                 </div>
                 <div class="form-group" style="margin: auto;text-align: center">
-                    <button type="submit" class="btn btn-primary"">Se connecter</button>
+                    <button type="submit" class="btn btn-primary""><i class="glyphicon glyphicon-user"></i>&nbsp; Se connecter</button>
                 </div>
             </form>
 
