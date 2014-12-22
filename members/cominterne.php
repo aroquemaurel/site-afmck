@@ -5,7 +5,7 @@ session_start();
 
 if(Visitor::getInstance()->isConnected()) {
     $title = 'La comunication interne';
-    $breadcrumb = new Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', '#'),
+    $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', '#'),
         new Link('Divers', '#'), new Link('Communication Interne','#')));
     include('../views/includes/head.php');
     include('../views/members/cominterne.php');
