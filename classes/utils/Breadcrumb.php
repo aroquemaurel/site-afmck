@@ -5,6 +5,7 @@
  * Date: 29/11/14
  * Time: 23:05
  */
+namespace utils;
 
 class Breadcrumb {
     private $links;

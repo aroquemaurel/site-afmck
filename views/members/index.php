@@ -1,4 +1,5 @@
 <?php $breadcrumb->display()?>
+
 <div class="container-fluid">
     <h1>Accueil espace membres</h1>
     <div id="toc" class="toc">

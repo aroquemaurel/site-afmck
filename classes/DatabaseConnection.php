@@ -5,26 +5,19 @@
  * Date: 03/12/14
  * Time: 22:18
  */
+
 require_once('Database.php');
 
 class DatabaseConnection extends Database {
     public function connect(User& $user) {
         $adeliNumber = $user->getAdeliNumber();
         $password = $user->getPassword();
-        $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number AND password=:password");
+        $query = $this->dbAccess->prepare("SELECT adeliNumber from user WHERE adeliNumber = :number AND password=:password");
         $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
         $query->bindParam(":password", $password, PDO::PARAM_STR);
         $query->execute();
 
-        $data = $query->fetchObject();
-
-        if($data != null) {
-            $user->setLastName($data->lastname);
-            $user->setFirstName($data->firstname);
-            $user->setMail($data->mail);
-        }
-
-        return $data != null;
+        return $query->fetchObject() != null;
     }
 
     public function disconnect() {

@@ -1,7 +1,6 @@
 <?php
-include_once('autoload.php');
+include('begin.php');
 
-session_start();
 if(Visitor::getInstance()->isConnected()) {
     session_destroy();
     session_start();
@@ -9,4 +8,4 @@ if(Visitor::getInstance()->isConnected()) {
 } else {
     $_SESSION['lastMessage'] = Popup::notConnected();
 }
-header('Location: ' . Visitor::getInstance()->getLastPage());
+header('Location: ' . ($currentDir == 'members/' ? '../index.php' : 'index.php'));
