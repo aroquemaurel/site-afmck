@@ -1,7 +1,6 @@
 <?php
-//require_once("/home/afmck/www/crawlprotect/include/cppf.php");
-require_once('autoload.php');
-session_start();
+include('begin.php');
+use utils\Link;
 
 $title = 'Connexion';
 $adeliNumber = $_POST['inputAdeli'];
@@ -12,5 +11,6 @@ if(!Visitor::getInstance()->isConnected()) {
 } else {
     $_SESSION['lastMessage'] = Popup::alreadyConnection();
 }
-header('Location: ' . Visitor::getInstance()->getLastPage());
+
+header('Location: ' . 'members/index.php');
 ?>

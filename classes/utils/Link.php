@@ -1,4 +1,6 @@
 <?php
+
+namespace utils;
 class Link {
     private $link;
     private $url;

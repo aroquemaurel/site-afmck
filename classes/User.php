@@ -1,4 +1,6 @@
 <?php
+use models\Group;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -7,21 +9,44 @@
  */
 
 class User {
+    private $id;
     private $adeliNumber;
     private $password;
     private $firstName;
     private $lastName;
     private $mail;
+    private $groups;
 
     public function __construct($adeliNumber, $password) {
         $this->adeliNumber = $adeliNumber;
         $this->password = $password;
+        $this->groups = array();
     }
 
     public function connect()
     {
-        $db = new DatabaseConnection();
-        return $db->connect($this);
+        $db = new DatabaseUser();
+        $data = $db->getUser($this->adeliNumber, $this->password);
+        if($data == null) {
+            return false;
+        }
+
+        $this->hydrat($data);
+        return true;
+    }
+
+    public function hydrat($data) {
+        $this->lastName = $data->lastname;
+        $this->firstName = $data->firstname;
+        $this->mail = $data->mail;
+        $this->id = $data->id;
+
+        $db = new DatabaseUser();
+        $data = $db->getGroups($this->id);
+        $this->groups = array();
+        foreach($data as $group) {
+            $this->groups[] = new Group($group['idGroup'], $group['nom']);
+        }
     }
 
     /**
@@ -104,6 +129,45 @@ class User {
         $this->mail = $mail;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getGroups() {
+        return $this->groups;
+    }
+
+    /**
+     * @param $group
+     */
+    public function setGroups($group) {
+        $this->groups = $group;
+    }
+
+    public function isInGroup($group) {
+        foreach($this->groups as $gr) {
+            if($gr->getName() == $group) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
 
 }
