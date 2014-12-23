@@ -82,5 +82,10 @@
         })
     }
 </script>
+<?php
+if(isset($script)) {
+    echo $script;
+}
+?>
 </body>
 </html>
