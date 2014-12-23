@@ -35,6 +35,12 @@ class User {
         return true;
     }
 
+    public function insert()
+    {
+        $db = new DatabaseUser();
+        $db->addUser($this);
+    }
+
     public function hydrat($data) {
         $this->lastName = $data->lastname;
         $this->firstName = $data->firstname;
