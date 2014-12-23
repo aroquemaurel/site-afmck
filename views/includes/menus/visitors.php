@@ -28,6 +28,10 @@
                 </li>
                 <li><a href="03a_praticiens.php">Praticiens</a></li>
                 <li><a href="04a_liens.php">Liens</a></li>
+                <li class="members visible-xs"><a href="connexion.php">Connexion</a></li>
+                <li class="members visible-xs"><a href="connexion.php">Inscription</a></li>
+                </ul>
+                <ul class="hidden-xs members nav navbar-nav ">
                 <?php
                 if(!Visitor::getInstance()->isConnected()) {
                     include("connectionMenu.php");
@@ -36,6 +40,9 @@
                 }
                 ?>
             </ul>
+
         </div>
+
     </div>
 </div>
+

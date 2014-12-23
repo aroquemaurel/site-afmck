@@ -1,4 +1,4 @@
-<li class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">Connexion<b class="caret"></b></a>
+<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle">Connexion<b class="caret"></b></a>
     <ul role="menu" class="dropdown-menu" style="padding: 10px">
         <li>
             <form action="connexion.php" method="post">
@@ -17,8 +17,8 @@
                     <button type="submit" class="btn btn-primary""><i class="glyphicon glyphicon-user"></i>&nbsp; Se connecter</button>
                 </div>
             </form>
-
         </li>
     </ul>
 </li>
+<li><a href="inscription.php" style="color: #ccc">S'inscrire</a></li>
 
