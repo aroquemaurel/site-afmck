@@ -18,6 +18,8 @@ body a:visited {
 .yamm .navbar-nav>li>a:hover {
 	color: #d7c562;
 }
+
+
 #facebookhome {
     position: absolute;
     right: 15px;
@@ -66,10 +68,16 @@ body {
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
 	color: #d7c562;
 }
+
+
 @media(max-width: 768px) {
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         background-image: linear-gradient(to bottom,#222 0,#273f64 60%);
+        width: 100%;
+        margin-left: 0;
+        position: absolute;;
     }
+
     .main {
         padding: 0;
         margin: 0;
@@ -80,6 +88,14 @@ body {
     .home {
         width: 300px;
         padding-left: 0px;
+    }
+
+    .members {
+        background-color: #2b4368;
+        height: 45px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
     }
 
 }
@@ -93,6 +109,16 @@ body {
     .megamenu .dropdown-menu {
         margin-left: -500px;
     }
+
+    .members {
+        background-color: #273f64;
+        height: 45px;
+        margin-left: 40px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+
 }
 
 h1 {
@@ -173,6 +199,22 @@ h2 {
     }
     #facebookhome {
         display: none;
+    }
+
+    @media(min-width: 750px) {
+        .members {
+            background-color: #273f64;
+            height: 45px;
+            margin-left: 270px;
+            margin-top: -90px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+        }
+
+        .members .dropdown-menu {
+            margin-top: -90px;
+        }
     }
 }
 @media(min-width: 750px) {
