@@ -52,8 +52,10 @@
 
 
   <div class="pgindex">
-    <h1>Bienvenue sur le site de l'Association Française McKenzie !</h1>
+<h1>La Société Française de Physiothérapie organise les <br /><a href="docdwld/jfk.pdf"><b>5èmes Journées Francophones De Kinésithérapie</b></a>.</h1>
+<h3 style="margin-top: -30px">Plus d'information sur <a href="http://jfk2015.web-events.net/">http://jfk2015.web-events.net/</a></h3>
     
+    <h1>Bienvenue sur le site de l'Association Française McKenzie !</h1>
     <h3>INFORMATION</h3>
 <ul>
 <li>Sur la page Facebook de l'AFMcK vous retrouverez une version AUDIO de la dernière
