@@ -16,6 +16,7 @@ class User {
     private $lastName;
     private $mail;
     private $groups;
+    private $validDate;
 
     public function __construct($adeliNumber, $password) {
         $this->adeliNumber = $adeliNumber;
@@ -27,11 +28,17 @@ class User {
     {
         $db = new DatabaseUser();
         $data = $db->getUser($this->adeliNumber, $this->password);
-        if($data == null) {
+        if($data == null ) {
+            $_SESSION['lastMessage'] = Popup::connectionKo();
             return false;
         }
 
         $this->hydrat($data);
+        if(strtotime($data->validDate) < time()) {
+            $_SESSION['lastMessage'] = Popup::disableAccount();
+            return false;
+        }
+        $_SESSION['lastMessage'] = Popup::connectionOk();
         return true;
     }
 
@@ -46,6 +53,7 @@ class User {
         $this->firstName = $data->firstname;
         $this->mail = $data->mail;
         $this->id = $data->id;
+        $this->validDate = $data->validDate;
 
         $db = new DatabaseUser();
         $data = $db->getGroups($this->id);

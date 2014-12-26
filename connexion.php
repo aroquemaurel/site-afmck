@@ -12,5 +12,9 @@ if(!Visitor::getInstance()->isConnected()) {
     $_SESSION['lastMessage'] = Popup::alreadyConnection();
 }
 
-header('Location: ' . 'members/index.php');
+if(Visitor::getInstance()->isConnected()) {
+    header('Location: ' . 'members/index.php');
+} else {
+    header('Location: ' . 'index.php');
+}
 ?>

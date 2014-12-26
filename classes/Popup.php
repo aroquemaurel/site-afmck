@@ -57,4 +57,9 @@ class Popup {
         return self::successMessage("Vous êtes maintenant inscrit sur le site. <br/>Afin de pouvoir vous connecter, vous devez attendre qu'un
         membre du CA valide votre inscription.");
     }
+
+    public static function disableAccount()
+    {
+        return self::errorMessage("Votre compte est désactivé, vous devez renouveler votre adhésion à l'association.");
+    }
 } 
