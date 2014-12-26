@@ -35,7 +35,11 @@ class Visitor {
     }
 
     public function displayMenu() {
-        include($this->getRootPage().'/views/includes/menus/visitors.php');
+        if(basename(getcwd()) == 'members' || basename(getcwd()) == 'admin') {
+            include($this->getRootPage() . '/views/includes/menus/members.php');
+        } else {
+            include($this->getRootPage() . '/views/includes/menus/visitors.php');
+        }
     }
 
     public function getRootPage() {
