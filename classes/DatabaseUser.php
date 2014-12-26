@@ -17,7 +17,14 @@ class DatabaseUser extends Database {
 
         return $query->fetchObject();
     }
-
+    public function getUserById($id) {
+        $query = $this->dbAccess->prepare("SELECT * from user WHERE id=:id");
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+        $user = new User();
+        $user->hydrat($query->fetchObject());
+        return $user;
+    }
     public function getGroups($id) {
         $query = $this->dbAccess->prepare("SELECT idGroup, nom from `user_group`, `group`
                                            WHERE idUser = :id and group.id=`user_group`.idGroup");
@@ -58,5 +65,30 @@ class DatabaseUser extends Database {
             $ret[] = $user;
         }
         return $ret;
+    }
+
+    public function editUser(User $user)
+    {
+        $id = $user->getId();
+        $askValidation = $user->getAskValidation();
+        $lastname = $user->getLastName();
+        $firstname = $user->getFirstName();
+        $validDate = $user->getValidDate()->format("Y-m-d");
+        $adeli = $user->getAdeliNumber();
+        $mail = $user->getMail();
+
+        $query = $this->dbAccess->prepare("UPDATE `user`
+                                          set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
+                                          mail=:mail,validDate=:validDate,askValidation=:askValidation
+                                           WHERE id=:id");
+        $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
+        $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
+        $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
+        $query->bindParam(":mail", $mail, PDO::PARAM_STR);
+        $query->bindParam(":validDate", $validDate, PDO::PARAM_STR);
+        $query->bindParam(":askValidation", $askValidation, PDO::PARAM_STR);
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+
     }
 } 
