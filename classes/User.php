@@ -18,7 +18,7 @@ class User {
     private $groups;
     private $validDate;
 
-    public function __construct($adeliNumber, $password) {
+    public function __construct($adeliNumber='', $password='') {
         $this->adeliNumber = $adeliNumber;
         $this->password = $password;
         $this->groups = array();
@@ -54,7 +54,8 @@ class User {
         $this->mail = $data->mail;
         $this->id = $data->id;
         $this->validDate = $data->validDate;
-
+        $this->password = $data->password;
+        $this->adeliNumber = $data->adeliNumber;
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();

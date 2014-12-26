@@ -44,4 +44,19 @@ class DatabaseUser extends Database {
         $query->execute();
 
     }
+
+    public function getUsersToValid() {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT * from `user`
+                                           WHERE validDate < CURDATE()");
+        $query->execute();
+
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $ret[] = $user;
+        }
+        return $ret;
+    }
 } 
