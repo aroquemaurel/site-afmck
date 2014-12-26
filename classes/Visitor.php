@@ -75,8 +75,6 @@ class Visitor {
         if(!$this->user->connect()) {
             unset($this->user);
         }
-
-        $_SESSION['lastMessage'] = $this->isConnected() ? Popup::connectionOk() : Popup::connectionKo();
     }
 
 
