@@ -131,7 +131,9 @@
                         <li><a tabindex="-1" href="contact.php"> Nous contacter</a></li>
                     </ul>
                 </li>
-                <li><a href="../deconnexion.php">Déconnexion</a></li>
+                <?php
+                include("connectionMenu.php");
+                ?>
         </div>
     </div>
 </div>

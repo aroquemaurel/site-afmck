@@ -31,13 +31,8 @@
                 <li class="members visible-xs"><a href="connexion.php">Connexion</a></li>
                 <li class="members visible-xs"><a href="connexion.php">Inscription</a></li>
                 </ul>
-                <ul class="hidden-xs members nav navbar-nav ">
                 <?php
-                if(!Visitor::getInstance()->isConnected()) {
                     include("connectionMenu.php");
-                } else {
-                    echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
-                }
                 ?>
             </ul>
 

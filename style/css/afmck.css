@@ -26,6 +26,7 @@ body a:visited {
     text-decoration: none;
 
 }
+
 footer {
 	background-image: url('../img/footBackground.jpg');
 	height: 120px;
@@ -68,7 +69,6 @@ body {
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
 	color: #d7c562;
 }
-
 
 @media(max-width: 768px) {
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {

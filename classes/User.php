@@ -56,9 +56,9 @@ class User {
         $this->validDate = $data->validDate;
 
         $db = new DatabaseUser();
-        $data = $db->getGroups($this->id);
+        $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
-        foreach($data as $group) {
+        foreach($dataGroups as $group) {
             $this->groups[] = new Group($group['idGroup'], $group['nom']);
         }
     }

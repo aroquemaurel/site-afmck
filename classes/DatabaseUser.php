@@ -19,7 +19,8 @@ class DatabaseUser extends Database {
     }
 
     public function getGroups($id) {
-        $query = $this->dbAccess->prepare("SELECT idGroup, nom from `user_group`, `group` WHERE idUser = :id AND id = idUser");
+        $query = $this->dbAccess->prepare("SELECT idGroup, nom from `user_group`, `group`
+                                           WHERE idUser = :id and group.id=`user_group`.idGroup");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
 
