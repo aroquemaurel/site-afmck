@@ -33,7 +33,7 @@ if(!Visitor::getInstance()->isConnected()) {
         <ul role="menu" class="dropdown-menu" style="padding: 10px">';
 
     if(Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
-        echo '<li><a href="admin.php">Administration <span class="badge">42</span></a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/validRegister.php">Validations inscriptions <span class="badge">42</span></a></li>';
         // TODO Add number of validation
     }
     echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/deconnexion.php">Déconnexion</a></li>';
