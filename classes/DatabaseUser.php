@@ -56,7 +56,7 @@ class DatabaseUser extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
-                                           WHERE validDate < CURDATE() order by lastname");
+                                           WHERE validDate < CURDATE() AND validDate != 'NULL' order by lastname");
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
@@ -67,13 +67,22 @@ class DatabaseUser extends Database {
         return $ret;
     }
 
+    public function countUsersToValid() {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
+                                           WHERE validDate < CURDATE() AND validDate != 'NULL'");
+        $query->execute();
+        return $query->fetchObject()->countid;
+
+    }
     public function editUser(User $user)
     {
         $id = $user->getId();
         $askValidation = $user->getAskValidation();
         $lastname = $user->getLastName();
         $firstname = $user->getFirstName();
-        $validDate = $user->getValidDate()->format("Y-m-d");
+        $validDate = $user->getValidDate() != NULL ? $user->getValidDate()->format("Y-m-d") : "NULL";
         $adeli = $user->getAdeliNumber();
         $mail = $user->getMail();
 
