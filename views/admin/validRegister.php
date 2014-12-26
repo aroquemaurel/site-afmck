@@ -3,12 +3,12 @@
     <h1>Validation des inscriptions</h1>
     <table class="table table-striped">
         <tr>
-            <th>Numéro ADELI</th>
+            <th>N° ADELI</th>
             <th>Nom</th>
             <th>Prénom</th>
-            <th>Mail</th>
+            <th>Courriel</th>
             <th>Date attente validation</th>
-            <th></th>
+            <th colspan="2">Valider</th>
         </tr>
         <?php
         foreach($users as $user) {
@@ -18,6 +18,8 @@
                 echo '<td>'.$user->getFirstName().'</td>';
                 echo '<td  style="font-size: 8pt; font-family: courrier;">'.$user->getMail().'</td>';
                 echo '<td>'.$user->getAskValidation().'</td>';
+                echo '<td><a href="?valid='.$user->getId().'"><i style="color: green;" class="glyphicon glyphicon-ok"></i></a></td>';
+                echo '<td><a href="?unvalid='.$user->getId().'"><i style="color: red;" class="glyphicon glyphicon-remove"></i></a></td>';
 
             echo '</tr>';
         }

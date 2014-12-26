@@ -48,7 +48,27 @@ class User {
         $db = new DatabaseUser();
         $db->addUser($this);
     }
+    public function valid() {
+        date_default_timezone_set('UTC');
+        $currentDate = new DateTime();
+        $year = $currentDate->format("Y");
+        if($currentDate->format("M") != 11 && $currentDate->format("M") != 12) {
+            $newDate = new DateTime(($year+1).'-12-31');
+        } else {
+            $newDate = new DateTime(($year+2).'-12-31');
+        }
+        $this->validDate = $newDate;
+    }
 
+    public function unvalid()
+    {
+        $this->validDate = NULL;
+    }
+
+    public function commit() {
+        $db = new DatabaseUser();
+        $db->editUser($this);
+    }
     public function hydrat($data) {
         $this->lastName = $data->lastname;
         $this->firstName = $data->firstname;
