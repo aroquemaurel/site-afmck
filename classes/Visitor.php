@@ -35,15 +35,11 @@ class Visitor {
     }
 
     public function displayMenu() {
-        if(!$this->isConnected() || basename(getcwd()) != 'members') {
-            include('views/includes/menus/visitors.php');
-        } else {
-            include('../views/includes/menus/members.php');
-        }
+        include($this->getRootPage().'/views/includes/menus/visitors.php');
     }
 
     public function getRootPage() {
-        if(basename(getcwd()) == 'members') {
+        if(basename(getcwd()) == 'members' || basename(getcwd()) == 'admin') {
             return '..';
         } else {
             return '.';
@@ -80,7 +76,7 @@ class Visitor {
 
     public function hasRights($pageFilename, $groups=array()) {
         $splits = explode('/', $pageFilename);
-        if($groups != array()) { // particular rights
+        if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
                 if($this->user->isInGroup($group)) {
                     return true;
@@ -89,6 +85,8 @@ class Visitor {
             return false;
         } else if($splits['0'] == 'members') { // not in database, but begin with members
             return $this->isConnected();
+        } else if($splits['0'] == 'admin') {
+            return $this->isConnected() && $this->user->isInGroup("ADMINISTRATEUR");
         } else { // Every body can see
             return true;
         }
@@ -98,6 +96,8 @@ class Visitor {
         $currentDir = '';
         if(basename(getcwd()) == 'members') {
             $currentDir = 'members/';
+        } else if(basename(getcwd() == 'admin')) {
+            $currentDir = 'admin';
         }
 
         return $currentDir;
@@ -107,8 +107,11 @@ class Visitor {
         $currentFile = '';
         if(basename(getcwd()) == 'members') {
             $currentFile .= 'members/';
+        } else if(basename(getcwd()) == 'admin') {
+            $currentFile .= 'admin/';
         }
         $currentFile .= basename($_SERVER['PHP_SELF']);
+
         return $currentFile;
     }
 
