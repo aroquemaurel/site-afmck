@@ -17,6 +17,7 @@ class User {
     private $mail;
     private $groups;
     private $validDate;
+    private $askValidation;
 
     public function __construct($adeliNumber='', $password='') {
         $this->adeliNumber = $adeliNumber;
@@ -56,6 +57,7 @@ class User {
         $this->validDate = $data->validDate;
         $this->password = $data->password;
         $this->adeliNumber = $data->adeliNumber;
+        $this->askValidation = $data->askValidation;
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
@@ -183,6 +185,39 @@ class User {
     {
         $this->id = $id;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAskValidation()
+    {
+        return $this->askValidation;
+    }
+
+    /**
+     * @param mixed $askValidation
+     */
+    public function setAskValidation($askValidation)
+    {
+        $this->askValidation = $askValidation;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getValidDate()
+    {
+        return $this->validDate;
+    }
+
+    /**
+     * @param mixed $validDate
+     */
+    public function setValidDate($validDate)
+    {
+        $this->validDate = $validDate;
+    }
+
 
 
 }
