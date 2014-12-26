@@ -11,10 +11,12 @@ if(isset($_GET['valid'])) {
     $user = $db->getUserById($_GET['valid']);
     $user->valid();
     $user->commit();
+    $_SESSION['lastMessage'] = Popup::validAccount();
 } else if(isset($_GET['unvalid'])) {
     $user = $db->getUserById($_GET['unvalid']);
     $user->unvalid();
     $user->commit();
+    $_SESSION['lastMessage'] = Popup::unvalidAccount();
 }
 
 $users = $db->getUsersToValid();

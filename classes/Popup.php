@@ -62,4 +62,12 @@ class Popup {
     {
         return self::errorMessage("Votre compte est désactivé, vous devez renouveler votre adhésion à l'association.");
     }
+
+    public static function validAccount() {
+        return self::successMessage("Le compte à été correctement validé.");
+    }
+
+    public static function unvalidAccount() {
+        return self::successMessage("Le compte a été non validé. Il n'apparaitra plus dans la listes des comptes à valider.");
+    }
 } 
