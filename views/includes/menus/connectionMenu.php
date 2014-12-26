@@ -28,15 +28,15 @@ if(!Visitor::getInstance()->isConnected()) {
 <li><a href="inscription.php" style="color: #ccc">S'inscrire</a></li>
 <?php
 } else {
-    ?><li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle">Antoine de Roquemaurel<b class="caret"></b></a>
-        <ul role="menu" class="dropdown-menu" style="padding: 10px">
+    echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle">'.
+        Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .Visitor::getInstance()->getUser()->getLastName().' <span class="badge">42</span><b class="caret"></b></a>
+        <ul role="menu" class="dropdown-menu" style="padding: 10px">';
 
-        <?php
-        if(Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
+    if(Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
         echo '<li><a href="admin.php">Administration <span class="badge">42</span></a></li>';
         // TODO Add number of validation
     }
-    echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
+    echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/deconnexion.php">Déconnexion</a></li>';
         echo '</ul>';
 }
 ?>
