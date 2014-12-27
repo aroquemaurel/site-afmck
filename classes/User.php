@@ -17,8 +17,11 @@ class User {
     private $mail;
     private $groups;
     private $validDate;
+    private $askValidation;
 
-    public function __construct($adeliNumber, $password) {
+    public function __construct($adeliNumber='', $password='') {
+        date_default_timezone_set('UTC');
+
         $this->adeliNumber = $adeliNumber;
         $this->password = $password;
         $this->groups = array();
@@ -38,6 +41,13 @@ class User {
             $_SESSION['lastMessage'] = Popup::disableAccount();
             return false;
         }
+
+        if(strtotime($data->validDate) - time() < 1080000) {
+            $buff = explode(' ', $data->validDate);
+            $strDate = (new DateTime($buff[0]))->format('d/m/Y');
+            $_SESSION['lastMessage'] = Popup::connectionOk().Popup::warningActivation($strDate);
+            return true;
+        }
         $_SESSION['lastMessage'] = Popup::connectionOk();
         return true;
     }
@@ -47,14 +57,35 @@ class User {
         $db = new DatabaseUser();
         $db->addUser($this);
     }
+    public function valid() {
+        $currentDate = new DateTime();
+        $year = $currentDate->format("Y");
+        if($currentDate->format("M") != 11 && $currentDate->format("M") != 12) {
+            $newDate = new DateTime(($year+1).'-12-31');
+        } else {
+            $newDate = new DateTime(($year+2).'-12-31');
+        }
+        $this->validDate = $newDate;
+    }
 
+    public function unvalid()
+    {
+        $this->validDate = NULL;
+    }
+
+    public function commit() {
+        $db = new DatabaseUser();
+        $db->editUser($this);
+    }
     public function hydrat($data) {
         $this->lastName = $data->lastname;
         $this->firstName = $data->firstname;
         $this->mail = $data->mail;
         $this->id = $data->id;
         $this->validDate = $data->validDate;
-
+        $this->password = $data->password;
+        $this->adeliNumber = $data->adeliNumber;
+        $this->askValidation = $data->askValidation;
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
@@ -182,6 +213,39 @@ class User {
     {
         $this->id = $id;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAskValidation()
+    {
+        return $this->askValidation;
+    }
+
+    /**
+     * @param mixed $askValidation
+     */
+    public function setAskValidation($askValidation)
+    {
+        $this->askValidation = $askValidation;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getValidDate()
+    {
+        return $this->validDate;
+    }
+
+    /**
+     * @param mixed $validDate
+     */
+    public function setValidDate($validDate)
+    {
+        $this->validDate = $validDate;
+    }
+
 
 
 }

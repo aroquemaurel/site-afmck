@@ -1,4 +1,3 @@
-<?php $prefix = (Visitor::getInstance()->getCurrentPath() == 'members' ? '..' : '.') ?>
 
 <div class="navbar yamm navbar-default navbar-fixed-top" style="height:110px;background-color: #273f64;">
     <div class="container">
