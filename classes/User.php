@@ -20,6 +20,8 @@ class User {
     private $askValidation;
 
     public function __construct($adeliNumber='', $password='') {
+        date_default_timezone_set('UTC');
+
         $this->adeliNumber = $adeliNumber;
         $this->password = $password;
         $this->groups = array();
@@ -39,6 +41,13 @@ class User {
             $_SESSION['lastMessage'] = Popup::disableAccount();
             return false;
         }
+
+        if(strtotime($data->validDate) - time() < 1080000) {
+            $buff = explode(' ', $data->validDate);
+            $strDate = (new DateTime($buff[0]))->format('d/m/Y');
+            $_SESSION['lastMessage'] = Popup::connectionOk().Popup::warningActivation($strDate);
+            return true;
+        }
         $_SESSION['lastMessage'] = Popup::connectionOk();
         return true;
     }
@@ -49,7 +58,6 @@ class User {
         $db->addUser($this);
     }
     public function valid() {
-        date_default_timezone_set('UTC');
         $currentDate = new DateTime();
         $year = $currentDate->format("Y");
         if($currentDate->format("M") != 11 && $currentDate->format("M") != 12) {

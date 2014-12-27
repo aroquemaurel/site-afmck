@@ -15,6 +15,10 @@ class Popup {
     }
 
     public static function warningMessage($string) {
+        return '<div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <strong>Attention</strong> '.$string.'
+        </div>';
 
     }
 
@@ -69,5 +73,10 @@ class Popup {
 
     public static function unvalidAccount() {
         return self::successMessage("Le compte a été non validé. Il n'apparaitra plus dans la listes des comptes à valider.");
+    }
+
+    public static function warningActivation($dateString)
+    {
+        return self::warningMessage("Votre compte arrive à expiration le $dateString. Pensez à renouveller votre adhésion.");
     }
 } 
