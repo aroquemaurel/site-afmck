@@ -3,8 +3,8 @@
                 <!-- Classic dropdown -->
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Accueil<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a tabindex="-1" href="../index.php"> Visiteurs</a></li>
-                        <li><a tabindex="-1" href="index.php"> Adhérents</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/index.php"> Visiteurs</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/index.php"> Adhérents</a></li>
                     </ul>
                 </li>
                 <!-- Classic list -->
@@ -18,36 +18,36 @@
                                         <li>
                                             <p><strong>Cas cliniques</strong></p>
                                         </li>
-                                        <li><a href="casclinique_rotulienne.php">Tendinite Rotulienne</a></li>
-                                        <li><a href="casclinique_genou.php">Traitement d'un genou</a></li>
-                                        <li><a href="casclinique_epaule.php">Traitement d'une épaule</a></li>
-                                        <li><a href="casclinique_autres.php">Autres cas</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/casclinique_rotulienne.php">Tendinite Rotulienne</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/casclinique_genou.php">Traitement d'un genou</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/casclinique_epaule.php">Traitement d'une épaule</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/casclinique_autres.php">Autres cas</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Chroniques scientifiques</strong></p>
                                         </li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°1_AFMcK.pdf" target="_blank">Chronique N°1</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°2_AFMcK.pdf" target="_blank">Chronique N°2</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°3_AFMcK.pdf" target="_blank">Chronique N°3</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°4_AFMcK.pdf" target="_blank">Chronique N°4</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°5_AFMcK.pdf" target="_blank">Chronique N°5</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°6_AFMcK.pdf" target="_blank">Chronique N°6</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°1_AFMcK.pdf" target="_blank">Chronique N°1</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°2_AFMcK.pdf" target="_blank">Chronique N°2</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°3_AFMcK.pdf" target="_blank">Chronique N°3</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°4_AFMcK.pdf" target="_blank">Chronique N°4</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°5_AFMcK.pdf" target="_blank">Chronique N°5</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°6_AFMcK.pdf" target="_blank">Chronique N°6</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Trucs et astuces en MDT</strong></p>
                                         </li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°1_AFMcK.pdf" target="_blank">Trucs et Astuces N°1</a></li>
-                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°2_AFMcK.pdf" target="_blank">Trucs et Astuces N°2</a></li>
-                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°3_AFMcK.pdf" target="_blank">Trucs et Astuces N°3</a></li>
-                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">Trucs et Astuces N°4</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°1_AFMcK.pdf" target="_blank">Trucs et Astuces N°1</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°2_AFMcK.pdf" target="_blank">Trucs et Astuces N°2</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°3_AFMcK.pdf" target="_blank">Trucs et Astuces N°3</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadg/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">Trucs et Astuces N°4</a></li>
                                         </li>                                    </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Études</strong></p>
                                         </li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="../pgadh/docdwld/01c-etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf">Rachis prévalence des syndromes McKenzie</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/../pgadh/docdwld/01c-etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf">Rachis prévalence des syndromes McKenzie</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
@@ -71,9 +71,9 @@
                                         <li>
                                             <p><strong>Les docs</strong></p>
                                         </li>
-                                        <li><a href="fichesbilan.php">Fiches Bilan</a></li>
-                                        <li><a href="fichesexercices.php">Fiches d'exerices</a></li>
-                                        <li><a href="com.php">La com'</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/fichesbilan.php">Fiches Bilan</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/fichesexercices.php">Fiches d'exerices</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/com.php">La com'</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
