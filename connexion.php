@@ -7,7 +7,7 @@ $adeliNumber = $_POST['inputAdeli'];
 $password = $_POST['inputPassword'];
 
 if(!Visitor::getInstance()->isConnected()) {
-    Visitor::getInstance()->connect($adeliNumber, $password);
+    Visitor::getInstance()->connect($adeliNumber, $password, $_POST['remember']);
 } else {
     $_SESSION['lastMessage'] = Popup::alreadyConnection();
 }
