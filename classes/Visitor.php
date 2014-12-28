@@ -70,10 +70,22 @@ class Visitor {
     public function setCurrentPath($currentPath) {
         $this->currentPath = $currentPath;
     }
-    public function connect($user, $password) {
+    public function autoconnect() {
+        if(!$this->isConnected()) {
+            $this->user = new User();
+            if (!$this->user->autoConnect()) {
+                $this->user = null;
+            }
+        }
+    }
+    public function connect($user, $password, $remember=false) {
         $this->user = new User($user, $password);
+        if($remember) {
+            $this->user->setCookie();
+        }
         if(!$this->user->connect()) {
             unset($this->user);
+            $this->user->clearCookie();
         }
     }
 
@@ -117,6 +129,10 @@ class Visitor {
         $currentFile .= basename($_SERVER['PHP_SELF']);
 
         return $currentFile;
+    }
+
+    public function removeUser() {
+        $this->user = null;
     }
 
 } 
