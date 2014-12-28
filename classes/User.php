@@ -26,26 +26,55 @@ class User {
         $this->password = $password;
         $this->groups = array();
     }
+    public function setCookie() {
+        setcookie("user", "123/-/456", time()+3600*24*30*6); // expire in 6 month
+    }
 
-    public function connect()
+    public function clearCookie() {
+        if(isset($_COOKIE['user'])) {
+            unset($_COOKIE['user']);
+            setcookie('user', '', time()-300);
+        }
+    }
+
+    public function autoConnect() {
+        if(isset($_COOKIE['user'])) {
+            $info = explode('/-/', $_COOKIE['user']);
+            $this->adeliNumber = $info[0];
+            $this->password = $info[1];
+            return $this->connect(true);
+        }
+        return false;
+    }
+
+    public function connect($auto=false)
     {
         $db = new DatabaseUser();
         $data = $db->getUser($this->adeliNumber, $this->password);
         if($data == null ) {
-            $_SESSION['lastMessage'] = Popup::connectionKo();
+            if(!$this->auto) {
+                $_SESSION['lastMessage'] = Popup::connectionKo();
+            } else {
+                $this->clearCookie();
+            }
             return false;
         }
 
         $this->hydrat($data);
         if(strtotime($data->validDate) < time()) {
             $_SESSION['lastMessage'] = Popup::disableAccount();
+            if(auto) {
+               $this->clearCookie();
+            }
             return false;
         }
 
         if(strtotime($data->validDate) - time() < 1080000) {
             $buff = explode(' ', $data->validDate);
             $strDate = (new DateTime($buff[0]))->format('d/m/Y');
-            $_SESSION['lastMessage'] = Popup::connectionOk().Popup::warningActivation($strDate);
+            $_SESSION['lastMessage'] = Popup::connectionOk();
+
+            $_SESSION['lastMessage'] .= Popup::warningActivation($strDate);
             return true;
         }
         $_SESSION['lastMessage'] = Popup::connectionOk();
@@ -245,7 +274,4 @@ class User {
     {
         $this->validDate = $validDate;
     }
-
-
-
 }
