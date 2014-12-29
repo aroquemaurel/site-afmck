@@ -124,11 +124,15 @@ body {
 h1 {
     color: #081743;
     padding-bottom: 20px;
-    font-size: 22pt;
+    font-size: 24pt;
 }
 h2 {
-    font-size: 19pt;
+    font-size: 20pt;
 }
+h3 {
+    font-size: 15pt;
+}
+
 .breadcrumb {
 	padding: 7px 14px;
 	margin: 0 0 18px;

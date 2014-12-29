@@ -53,8 +53,8 @@
                                         <li>
                                             <p><strong>Journées de l'association</strong></p>
                                         </li>
-                                        <li><a href="journees_lyon.php">Lyon 2013</a></li>
                                         <li><a href="journees_brest.php">Brest 2012</a></li>
+                                        <li><a href="journees_lyon.php">Lyon 2013</a></li>
                                     </ul>
                                 </div>
                             </div>
