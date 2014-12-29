@@ -2,14 +2,22 @@
 <div class="container-fluid">
     <h1>Outils de travail : Fiches bilan</h1>
     <div id="toc" class="toc"></div><!--/.well -->
-    <ul>
-        <li><a href="../pgadh/docdwld/02a-fichbilan/Bilan-Evaluation Membres Superieurs_AFMcK.pdf"><i class="glyphicon glyphicon-download-alt"></i> <b>Fiche Bilan</b> Membre supérieurs</a></li>
-        <li><a href="../pgadh/docdwld/02a-fichbilan/Bilan_Evaluation Rachis Lombaire_AFMcK.pdf"><i class="glyphicon glyphicon-download-alt"></i> <b>Fiche Bilan</b> Evaluation rachis lombaire</a></li>
-        <li><a href="../pgadh/docdwld/02a-fichbilan/Bilan_Evaluation Rachis Dorsal_AFMcK.pdf"><i class="glyphicon glyphicon-download-alt"></i> <b>Fiche Bilan</b> Evaluation rachis Dorsal</a></li>
-        <li><a href="../pgadh/docdwld/02a-fichbilan/Bilan-Evaluation Membres Inferieurs_AFMcK.pdf"><i class="glyphicon glyphicon-download-alt"></i> <b>Fiche Bilan</b> Membres inférieurs</a></li>
-        <li><a href="../pgadh/docdwld/02a-fichbilan/Bilan_Evaluation Rachis Cervical_AFMcK.pdf"><i class="glyphicon glyphicon-download-alt"></i> <b>Fiche Bilan</b> Evaluation rachis cervical</a></li>
-        <li><a href="../pgadh/docdwld/02a-fichbilan/Formulaire de suivi McKenzie_AFMcK.pdf"><i class="glyphicon glyphicon-download-alt"></i> Fiche de suivi</a></li>
+    <ul  style="float:left">
+    <?php
+        $folder = '../pgadh/docdwld/02a-fichbilan/';
+        Image::miniLink($folder, 'Bilan_Evaluation Rachis Lombaire_AFMcK', '<b>Fiche Bilan</b> Evaluation rachis lombaire');
+        Image::miniLink($folder, 'Bilan_Evaluation Rachis Dorsal_AFMcK', '<b>Fiche Bilan</b> Evaluation rachis Dorsal');
+        Image::miniLink($folder, 'Bilan-Evaluation Membres Inferieurs_AFMcK', '<b>Fiche Bilan</b> Membres inférieurs');
+        Image::miniLink($folder, 'Bilan_Evaluation Rachis Cervical_AFMcK', '<b>Fiche Bilan</b> Evaluation rachis cervical');
+        Image::miniLink($folder, 'Formulaire de suivi McKenzie_AFMcK', 'Fiche de suivi');
+?>
     </ul>
+    <div class="thumbnail with-caption toc" id="toc"' style="margin-right: 100px">
+        <img id="mini" alt="" style="text-align: center;margin:auto">
+        <p id="description" style="font-size: 10pt"></p>
+        </div>
+    </div>
+
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -18,3 +26,12 @@
     <p>&nbsp;</p>
     </div><!-- fin de .docformation -->
 </div><!-- Fin de .casclinic -->
+<?php
+$script = "<script>
+$('.miniLink').bind('mouseenter', function() {
+        img = $(this).attr('target');
+        $('#mini').attr('src', img);
+        $('#description').empty();
+        $('#description').append($(this).attr('name'));
+});
+</script>";

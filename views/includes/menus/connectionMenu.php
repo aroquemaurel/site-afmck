@@ -1,9 +1,9 @@
-<ul class="hidden-xs members nav navbar-nav ">
+<ul class="hidden-xs members nav navbar-nav " style="font-size: 9pt;">
 
 <?php
 if(!Visitor::getInstance()->isConnected()) {
 ?>
-<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle">Connexion<b class="caret"></b></a>
+<li class="dropdown"><a href="" data-toggle="dropdown"color: #ccc;"class="dropdown-toggle">Connexion<b class="caret"></b></a>
     <ul role="menu" class="dropdown-menu" style="padding: 10px">
         <li>
             <form action="connexion.php" method="post">

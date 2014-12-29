@@ -67,61 +67,41 @@
                             <!-- Content container to add padding -->
                             <div class="yamm-content">
                                 <div class="row">
-                                    <ul class="col-sm-2 list-unstyled">
+                                    <ul class="col-sm-offset-2 col-sm-4 list-unstyled">
                                         <li>
-                                            <p><strong>Les docs</strong></p>
+                                            <p><strong>Les documentations</strong></p>
                                         </li>
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/fichesbilan.php">Fiches Bilan</a></li>
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/fichesexercices.php">Fiches d'exerices</a></li>
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/com.php">La com'</a></li>
                                     </ul>
-                                    <ul class="col-sm-2 list-unstyled">
+                                    <ul class="col-sm-3 list-unstyled">
                                         <li>
-                                            <p><strong>Matériel</strong></p>
+                                            <p><strong>Autres outils</strong></p>
                                         </li>
-                                        <li><a href="#"> Chronique N°1</a></li>
-                                        <li><a href="#"> Chronique N°2</a></li>
-                                        <li><a href="#"> Chronique N°3</a></li>
-                                        <li><a href="#"> Chronique N°4</a></li>
-                                        <li><a href="#"> Chronique N°5</a></li>
-                                        <li><a href="#"> Chronique N°6</a></li>
-                                    </ul>
-                                    <ul class="col-sm-2 list-unstyled">
-                                        <li>
-                                            <p><strong>Logiciels</strong></p>
-                                        </li>
-                                        <li><a href="#">Trucs et astuces 1</a></li>
-                                        <li><a href="#">Trucs et astuces 2</a></li>
-                                        <li><a href="#">Trucs et astuces 3</a></li>
-                                        <li><a href="#">Trucs et astuces 4</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/materiel.php">Matériel</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/logiciels.php">Logiciels</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="kiosque.php">Le kiosque</a>
+                <li class="dropdown"><a href="kiosque.php">Kiosque</a>
                 </li>
-                <li class="dropdown"><a href="certification.php">La certification</a></li>
-                <!--
-                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Les actualités en région<b class="caret"></b></a>
-                  <ul role="menu" class="dropdown-menu">
-                    <li><a tabindex="-1" href="#"> APMK</a></li>
-                <li><a tabindex="-1" href="#"> Colaborations en Locales</a></li>
-                    <ul>
-                        <li><a href="#">Rhône Alpes</a></li>
-                        <li><a href="#">Traduits par l'AFMcK</a></li>
-                        <li><a href="#">Interviews</a></li>
-                    </ul>
+                <li class="dropdown"><a href="certification.php">Certification</a></li>
 
-                    <li><a tabindex="-1" href="#"> MDT World Press</a></li>
-                    <ul>
-                        <li> <a href="#">Institu McKenzie</a></li>
-                        <li> <a href="#">Newsletters</a></li>
+                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Actualités en région
+                        <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a tabindex="-1" href="/members/charte.php"> Charte AFMcK</a></li>
+                        <li><a tabindex="-1" href="http://afmck.forumactif.org/login"> Forum</a></li>
+                        <li><a tabindex="-1" href="/members/cominterne.php"> Communication Interne</a></li>
+                        <li><a tabindex="-1" href="/members/partenaires.php"> Partenaires</a></li>
+                        <li><a tabindex="-1" href="/members/contact.php"> Nous contacter</a></li>
                     </ul>
-                  </ul>
-                  </li>
-                  -->
+                </li>
+
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Divers<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a tabindex="-1" href="/members/charte.php"> Charte AFMcK</a></li>
