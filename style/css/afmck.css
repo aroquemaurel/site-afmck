@@ -197,7 +197,7 @@ h3 {
     right: 15px;
     text-decoration: none;
 }
-@media(max-width: 1030px) {
+@media(max-width: 1200px) {
     #toc {
         display:none;
     }
@@ -210,7 +210,7 @@ h3 {
             background-color: #273f64;
             height: 45px;
             margin-left: 270px;
-            margin-top: -90px;
+            margin-top: -110px;
             -webkit-border-radius: 8px;
             -moz-border-radius: 8px;
             border-radius: 8px;
@@ -219,8 +219,27 @@ h3 {
         .members .dropdown-menu {
             margin-top: -90px;
         }
+        .dropdown-toggle {
+            max-width: 100px;
+            height: 70px;
+            margin-top:-10px;
+        }
+
+        .members .dropdown-toggle {
+            max-width: 999px;
+            margin-top:0px;
+            height: 50px;
+        }
+        .members .dropdown .dropdown-menu {
+            margin-top: -70px;
+            position: absolute;
+        }
+        .navbar-collapse {
+            min-width: 800px;
+        }
     }
 }
+
 @media(min-width: 750px) {
     @media(max-width: 1300px) {
         .main {
