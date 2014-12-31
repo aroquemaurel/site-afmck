@@ -19,12 +19,15 @@ class User {
     private $validDate;
     private $askValidation;
 
+    private $mailer;
+
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
 
         $this->adeliNumber = $adeliNumber;
         $this->password = $password;
         $this->groups = array();
+        $this->mailer = array();
     }
     public function setCookie() {
         setcookie("user", "123/-/456", time()+3600*24*30*6); // expire in 6 month
@@ -95,6 +98,11 @@ class User {
             $newDate = new DateTime(($year+2).'-12-31');
         }
         $this->validDate = $newDate;
+
+        $this->mailer[] = new Mailer();
+        end($this->mailer)->isHTML(true);                                  // Set email format to HTML
+        end($this->mailer)->Body = "JE SUIS UN SUPER TEST <b>AHAHAHA</b>"; // TODO CHANGE ME
+        end($this->mailer)->addAddress('trash.dev.zero@gmail.com', 'Trash Dev'); // TODO CHANGE ME
     }
 
     public function unvalid()
@@ -105,6 +113,17 @@ class User {
     public function commit() {
         $db = new DatabaseUser();
         $db->editUser($this);
+        if($this->mailer != null) {
+            foreach($this->mailer as $mailer) {
+                if(!$mailer->send()) {
+                    $_SESSION['lastMessage'] = Popup::warningMessage("
+                    Problème dans l'envoie du mail de confirmation, le compte à tout de même été validé.");
+                    return false;
+                }
+            }
+        }
+        return true;
+
     }
     public function hydrat($data) {
         $this->lastName = $data->lastname;
