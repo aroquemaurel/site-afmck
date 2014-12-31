@@ -55,6 +55,9 @@
     <h1>Bienvenue sur le site de l'Association Française McKenzie !</h1>
 <p><img src="http://afmck.fr/img/noel.png" width="300"/></p>
 	<h1 style="color: red">JOYEUX NOËL À TOUS!!</H1> 
+<h1>La Société Française de Physiothérapie organise les <br /><a href="docdwld/jfk.pdf"><b>5èmes Journées Francophones De Kinésithérapie</b></a>.</h1>
+<h3 style="margin-top: -30px">Plus d'information sur <a href="http://jfk2015.web-events.net/">http://jfk2015.web-events.net/</a></h3>
+    
     <h3>INFORMATION</h3>
 <p>
  Pour finir 2015 et les interviews de nos nouveaux diplômés 2014, vous trouverez sur le site celle de <b>Jean-Philippe DENEUVILLE</b>. (<a href="http://afmck.fr/pgadh/03a-adh-kiosque.php#interv">http://afmck.fr/pgadh/03a-adh-kiosque.php#interv</a>).

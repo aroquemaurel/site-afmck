@@ -49,8 +49,8 @@
 
 
   <div class="pgindex">
-  
     <h1>Bienvenue sur le site de l'Association Française McKenzie !</h1>
+<img src="./img/noel.png" width="250px" alt="Joyeux noël !" style="text-align: center" />
     
     <a href="docdwld/Presentation association AFMcK 2014_AFMcK.pdf" target="_blank"><img src="img/bandeau560x60.jpg" width="560" height="60" alt="bandeau presentation" /></a>
     
