@@ -5,7 +5,7 @@ $(document).ready(function() {
         var ucase = new RegExp("[A-Z]+");
         var disable = false;
         disable = false;
-        if ($("#password").val().length >= 8) {
+        if ($("#password").val().length >= 6) {
             $("#8char").removeClass("glyphicon-remove");
             $("#8char").addClass("glyphicon-ok");
             $("#8char").css("color", "#00A41E");
@@ -42,7 +42,8 @@ $(document).ready(function() {
             $('#submit').attr('disabled', 'disabled');
             disable = true;
         }
-        if (!$('#lastName').val() || !$('#firstName').val() || !$('#email').val() || disable) {
+        if (!$('#lastName').val() || !$('#firstName').val() || !$('#email').val()||  !$('#address').val()
+                || !$('#cp').val() | !$('#town').val() || disable) {
             $('#submit').attr('disabled', 'disabled');
         } else {
             $('#submit').removeAttr('disabled');

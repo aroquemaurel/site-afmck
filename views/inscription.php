@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <input required="required" type="text" name="adeliNumber" id="adeliNumber"
-                           class="form-control input-lg" placeholder="Numéro ADELI" tabindex="4">
+                           class="form-control input-lg" placeholder="Numéro ADELI" tabindex="3">
                 </div>
                 <div class="form-group">
                     <input required="required" type="email" name="email" id="email"
@@ -39,7 +39,7 @@
                             <input required="required" type="password" name="password" id="password" autocomplete="off" class="form-control input-lg"
                                    placeholder="Mot de passe" tabindex="5">
                         </div>
-                        <span id="8char" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Longueur 8 caractères<br>
+                        <span id="8char" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Longueur 6 caractères<br>
                         <span id="ucase" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Une lettre majuscule
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
@@ -50,9 +50,26 @@
                         <span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Les deux mots de passes sont différents<br>
                     </div>
                 </div>
-
+                <div class="form-group" style="margin-top: 15px">
+                    <input required="required" type="email" name="address" id="address"
+                           class="form-control input-lg" placeholder="Adresse" tabindex="7">
+                </div>
+                                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input required="required" type="text" name="cp" id="cp"
+                                   class="form-control input-lg" placeholder="Code postal" tabindex="8">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input required="required" type="text" name="town" id="town"
+                                   class="form-control input-lg" placeholder="Ville" tabindex="9">
+                        </div>
+                    </div>
+                </div>
                 <hr class="colorgraph">
-                    <button id="submit" type="submit" style="margin: auto; width: 200px; "class="btn btn-primary btn-block btn-lg">
+                    <button id="submit" type="submit" style="margin: auto; width: 200px; "class="btn btn-primary btn-block btn-lg" >
                         <i class="glyphicon glyphicon-ok-sign"></i> Je m'inscris
                     </button>
             </form>
