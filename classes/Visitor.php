@@ -84,8 +84,8 @@ class Visitor {
             $this->user->setCookie();
         }
         if(!$this->user->connect()) {
-            unset($this->user);
             $this->user->clearCookie();
+            unset($this->user);
         }
     }
 

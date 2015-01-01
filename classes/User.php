@@ -101,8 +101,9 @@ class User {
 
         $this->mailer[] = new Mailer();
         end($this->mailer)->isHTML(true);                                  // Set email format to HTML
-        end($this->mailer)->Body = "JE SUIS UN SUPER TEST <b>AHAHAHA</b>"; // TODO CHANGE ME
-        end($this->mailer)->addAddress('trash.dev.zero@gmail.com', 'Trash Dev'); // TODO CHANGE ME
+        end($this->mailer)->Subject .= "Validation inscription";
+        end($this->mailer)->Body = utf8_decode(Mail::getValidationRegistrationMail($this->firstName." ".$this->lastName, $newDate->format("d/m/Y")));
+        end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
     }
 
     public function unvalid()
