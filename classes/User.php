@@ -19,6 +19,10 @@ class User {
     private $validDate;
     private $askValidation;
 
+    private $address;
+    private $town;
+    private $cp;
+
     private $mailer;
 
     public function __construct($adeliNumber='', $password='') {
@@ -135,6 +139,11 @@ class User {
         $this->password = $data->password;
         $this->adeliNumber = $data->adeliNumber;
         $this->askValidation = $data->askValidation;
+
+        $this->address = $data->address;
+        $this->town = $data->town;
+        $this->cp = $data->cp;
+
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
@@ -294,4 +303,53 @@ class User {
     {
         $this->validDate = $validDate;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param mixed $address
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTown()
+    {
+        return $this->town;
+    }
+
+    /**
+     * @param mixed $town
+     */
+    public function setTown($town)
+    {
+        $this->town = $town;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCp()
+    {
+        return $this->cp;
+    }
+
+    /**
+     * @param mixed $cp
+     */
+    public function setCp($cp)
+    {
+        $this->cp = $cp;
+    }
+
 }

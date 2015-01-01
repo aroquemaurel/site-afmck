@@ -16,6 +16,9 @@ if(isset($_POST['firstName'])) {
         $user->setMail($_POST['email']);
         $user->setFirstName($_POST['firstName']);
         $user->setLastName($_POST['lastName']);
+        $user->setAddress($_POST['address']);
+        $user->setCp($_POST['cp']);
+        $user->setTown($_POST['town']);
         $user->insert();
         $_SESSION['lastMessage'] = Popup::inscriptionOk();
         header('Location: ' . 'index.php');

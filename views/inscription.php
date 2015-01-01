@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="form-group" style="margin-top: 15px">
-                    <input required="required" type="email" name="address" id="address"
+                    <input required="required" type="text" name="address" id="address"
                            class="form-control input-lg" placeholder="Adresse" tabindex="7">
                 </div>
                                 <div class="row">
