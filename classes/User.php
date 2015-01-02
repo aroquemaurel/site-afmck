@@ -1,6 +1,5 @@
 <?php
 use models\Group;
-require_once('../libs/password_compat/lib/password.php');
 
 /**
  * Created by PhpStorm.
