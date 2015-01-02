@@ -1,5 +1,6 @@
 <?php
 use models\Group;
+require_once('../libs/password_compat/lib/password.php');
 
 /**
  * Created by PhpStorm.
@@ -34,7 +35,7 @@ class User {
         $this->mailer = array();
     }
     public function setCookie() {
-        setcookie("user", "123/-/456", time()+3600*24*30*6); // expire in 6 month
+        setcookie("user", $this->adeliNumber.'/-!!-/'.$this->password, time()+3600*24*30*6); // expire in 6 month
     }
 
     public function clearCookie() {
@@ -46,7 +47,7 @@ class User {
 
     public function autoConnect() {
         if(isset($_COOKIE['user'])) {
-            $info = explode('/-/', $_COOKIE['user']);
+            $info = explode('/-!!-/', $_COOKIE['user']);
             $this->adeliNumber = $info[0];
             $this->password = $info[1];
             return $this->connect(true);
