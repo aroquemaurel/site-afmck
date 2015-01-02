@@ -27,27 +27,28 @@
                                         <li>
                                             <p><strong>Chroniques scientifiques</strong></p>
                                         </li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°1_AFMcK.pdf" target="_blank">Chronique N°1</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°2_AFMcK.pdf" target="_blank">Chronique N°2</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°3_AFMcK.pdf" target="_blank">Chronique N°3</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°4_AFMcK.pdf" target="_blank">Chronique N°4</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°5_AFMcK.pdf" target="_blank">Chronique N°5</a></li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01b-chroniscientif/La Chronique Scientifique de l'AFMcK N°6_AFMcK.pdf" target="_blank">Chronique N°6</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°1_AFMcK.pdf" target="_blank">Chronique N°1</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°2_AFMcK.pdf" target="_blank">Chronique N°2</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK n°3_AFMck.pdf" target="_blank">Chronique N°3</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°4_AFMcK.pdf" target="_blank">Chronique N°4</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°5_AFMcK.pdf" target="_blank">Chronique N°5</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°6_AFMcK.pdf" target="_blank">Chronique N°6</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Trucs et astuces en MDT</strong></p>
                                         </li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°1_AFMcK.pdf" target="_blank">Trucs et Astuces N°1</a></li>
-                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°2_AFMcK.pdf" target="_blank">Trucs et Astuces N°2</a></li>
-                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°3_AFMcK.pdf" target="_blank">Trucs et Astuces N°3</a></li>
-                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01e-trucastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">Trucs et Astuces N°4</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/trucsastuces/TRUCS et ASTUCES en MDT N°1_AFMcK.pdf" target="_blank">Trucs et Astuces N°1</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/trucsastuces/TRUCS et ASTUCES en MDT N°2_AFMcK.pdf" target="_blank">Trucs et Astuces N°2</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/trucsastuces/TRUCS et ASTUCES en MDT N°3_AFMcK.pdf" target="_blank">Trucs et Astuces N°3</a></li>
+                                            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/trucsastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">Trucs et Astuces N°4</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/trucsastuces/TRUCS et ASTUCES en MDT N°5_AFMcK.pdf" target="_blank">Trucs et Astuces N°5</a></li>
                                         </li>                                    </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Études</strong></p>
                                         </li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/pgadh/docdwld/01c-etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf">Rachis prévalence des syndromes McKenzie</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf">Rachis prévalence des syndromes McKenzie</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
