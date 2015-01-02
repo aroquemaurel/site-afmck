@@ -72,10 +72,11 @@ body {
 
 @media(max-width: 768px) {
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-        background-image: linear-gradient(to bottom,#222 0,#273f64 60%);
+        background-color: #273f64;
         width: 100%;
         margin-left: 0;
-        position: absolute;;
+        position: absolute;
+        color: #efefef;
     }
 
     .main {

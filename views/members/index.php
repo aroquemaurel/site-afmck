@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
     <h1>Accueil espace membres</h1>
-    <div id="news" class="thumbnail with-caption toc" style="margin-right: 50px;margin-top: -80px; width: 220px">
+    <div id="news" class="hidden-xs hidden-md thumbnail with-caption toc" style="margin-right: 50px;margin-top: -80px; width: 220px">
         <h2>Actualités</h2>
             <h3>Le logiciel Bilan MDT évolue : V1.6</h3>
             <p>Bilan Lombaire, Bilan Cervical, Bilan membres, Fiches de suivis, synthèses
