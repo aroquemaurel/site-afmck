@@ -104,6 +104,14 @@ class User {
         $db = new DatabaseUser();
         $db->addUser($this);
     }
+    public function sendForgetPassword() {
+        $mailer = new Mailer();
+        $mailer->isHTML(true);                                  // Set email format to HTML
+        $mailer->Subject .= "Mot de passe oublié";
+        $mailer->Body = utf8_decode(Mail::getForgetPassword($this->firstName." ".$this->lastName, "u=".$this->getId()."&s=".$this->getHash()));
+        $mailer->addAddress($this->mail, $this->firstName." ".$this->lastName);
+        $mailer->send();
+    }
     public function valid() {
         $currentDate = new DateTime();
         $year = $currentDate->format("Y");
@@ -163,6 +171,9 @@ class User {
         }
     }
 
+    public function getHash() {
+        return sha1(md5($this->getMail()." Oups ×D ".$this->getAdeliNumber()." Dommage =þ ".$this->getLastName(). " !"));
+    }
     /**
      * @return mixed
      */

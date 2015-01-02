@@ -15,4 +15,13 @@ class Mail {
 
                 Le bureau de l'AFMcK";
     }
+
+    public static function getForgetPassword($name, $param) {
+        return "Bonjour $name,<br/>
+                Vous avez demandé un changement de mot de passe, vous pouvez changer de mot de passe à l'adresse suivante : <br/>
+                <a href=\"http://afmck.fr/setpassword.php?$param\">
+                http://afmck.fr/setpassword.php?$param
+                </a><br/><br/>
+                Le bureau de l'AFMcK";
+    }
 }
