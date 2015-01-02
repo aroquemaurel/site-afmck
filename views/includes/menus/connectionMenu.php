@@ -17,7 +17,7 @@ if(!Visitor::getInstance()->isConnected()) {
     $nbAdmin = $db->countUsersToValid();
     echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
         Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .Visitor::getInstance()->getUser()->getLastName();
-        if($nbAdmin > 0) {
+        if($nbAdmin > 0 && Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
             echo '&nbsp;<span class="badge">'.$nbAdmin.'</span>';
         }
         echo '<b class="caret"></b></a>
