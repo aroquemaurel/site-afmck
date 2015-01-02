@@ -3,12 +3,7 @@
     <h1>Évaluation et traitement d'une épaule <small>Étude du cas de M. J.</small></h1>
     <div id="toc" class="toc">
     </div><!--/.well -->
-
-    <table>
-        <tr>
-            <td class="solo"><a href="#mrJ" id="mrT"><p>ETUDE DU CAS CLINIQUE DE Mr J.<br />Evaluation et traitement d’une épaule via la methode McKENZIE<br /><i>Par Romain-Brice LOMER</i></p></a></td>
-        </tr>
-    </table>
+    <p>Par Romain-Brice LOMER</p>
 
     <h2>Interrogatoire</h2>
     <p>Mr J 32 ans, chauffeur routier en reconversion professionnel, vient consulter pour des douleurs à  l’épaule droite présentes depuis 2 mois qui se sont aggravées en 15 jours. Il est en arrêt de travail car il ne peut plus se servir de son épaule et a stoppé toute activité de loisirs. L’EVA est de 8/10 lors des mouvements et 3/10 au repos. Rien ne semble être à l’origine de la douleur qui progressivement s’est accentuée devenant constante au cours de la journée et l’empêchant de dormir, ne trouvant pas de position indolore.</p>

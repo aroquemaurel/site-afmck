@@ -1,13 +1,10 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid">
     <h1>Évaluation et traitement d'un genou <small>Etude du cas de Mme A.</small></h1>
+    <p>Par Romain-Brice LOMER</p>
     <div id="toc" class="toc">
     </div><!--/.well -->
 
-    <table>
-        <tr>
-            <td class="solo"><a href="#mmeA"><p>ETUDE DU CAS CLINIQUE DE MME A.<br />Evaluation et traitement d’un genou via la methode McKENZIE<br /><i>Par Romain-Brice LOMER</i></p></a></td></tr>
-    </table>
     <h2>Interrogatoire</h2>
     <p>Madame  A, 40 ans est envoyée par son généraliste pour des douleurs du genou droit. Il s’agit d’une femme de ménage qui travaille de 5 à 8h le matin avec des douleurs dans le genou (5/10 sur l’EVA). Puis elle emmène ses enfants à l’école en marchant avec des douleurs qui persistent durant la marche. Durant le reste de la journée les douleurs disparaissent  et ont tendance à réapparaitre la nuit (8/10 sur l’EVA) la réveillant plusieurs fois.</p>
     <p>Les douleurs au niveau du genou droit sont présentes depuis 1 mois sans raison apparente et restent stationnaires autour du genou de façon diffuse.</p>

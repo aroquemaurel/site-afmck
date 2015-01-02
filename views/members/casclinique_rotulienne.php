@@ -2,14 +2,9 @@
 <div class="container-fluid">
     <h1>Tendinite Rotulienne <small>Étude du cas clinique de M. T</small></h1>
     <div id="toc" class="toc"></div><!--/.well -->
-    <!-- TODO -->
-    <table class="fltlft">
-        <tr>
-            <td class="img"><a href="docdwld/01a-casclinic/Bilan Mr T_AFMcK.pdf" target="_blank"><img src="docdwld/01a-casclinic/Bilan Mr T_AFMcK.jpg"></a></td>
-            <td class="txt"><a href="docdwld/01a-casclinic/Bilan Mr T_AFMcK.pdf" target="_blank"><p>ETUDE DU CAS CLINIQUE<br />DE Mr T.<br /><i>(.pdf à télécharger)</i></p></a></td></tr>
-    </table>
-
-
+<p><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage().'/docs/cascliniques/Bilan Mr T_AFMcK.pdf'; ?>">
+        Étude du cas clinique de M. T. (.pdf)
+    </a></p>
 <h2>Interrogatoire</h2>
 <p>Monsieur  T 44 ans est envoyé par son généraliste pour une tendinite rotulienne à droite. Il s’agit d’un chaudronnier-tôlier qui travaille devant une machine avec le pied gauche sur la pédale pour faire défiler les plaques de tôle ; il est fléchi en avant afin de travailler le métal. Monsieur T est plutôt sédentaire en dehors du travail : canapé, un peu de bricolage qu’il a dû arrêter à cause de l’épisode douloureux coté à 4/10 sur l’EVA de façon constante et 7/10 au travail.</p>
 <p>Les douleurs au niveau de la face latérale du genou droit sont présentes depuis 3 semaines sans raison apparente et restent stationnaires.</p>

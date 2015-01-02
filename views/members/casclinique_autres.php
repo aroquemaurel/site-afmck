@@ -3,27 +3,33 @@
     <h1>Cas clinique: Autres cas</h1>
     <div id="toc" class="toc">
     </div><!--/.well -->
+    <div class="thumbnail with-caption toc" id="toc"' style="margin-right: 100px; margin-top: -80px;">
+        <img id="mini" alt="" style="text-align: center;margin:auto">
+        <p id="description" style="font-size: 10pt"></p>
+        </div>
+    </div>
 
-    <table class="fltlft">
-        <tr>
-            <td class="img"><a href="pgadh/docdwld/01a-casclinic/Mlle T - Derangement thoracique superieur_AFMcK.pdf" target="_blank"><img src="pgadh/docdwld/01a-casclinic/Mlle T - Derangement thoracique superieur_AFMcK.jpg"></a></td>
-            <td class="txt"><a href="pgadh/docdwld/01a-casclinic/Mlle T - Derangement thoracique superieur_AFMcK.pdf" target="_blank"><p>ETUDE DU CAS CLINIQUE DE Mlle T (1/2)<br />Dérangement thoracique supérieur<br /><i>par Frédéric STEIMER</i></p></a></td></tr>
-    </table>
+    <ul>
+        <?php
+        $folder = Visitor::getInstance()->getRootPage().'/docs/cascliniques/';
+        Image::miniLink($folder, 'Mlle T - Derangement thoracique superieur_AFMcK',
+            'Étude du cas clinique de Mlle T, dérangement thoracique supérieur <small>Par Frédéric STEIMER</small>');
+        Image::miniLink($folder, 'Bilan de Melle T_AFMcK',
+            'Étude du cas clinique de Mlle T(2/2) <small>Par Frédéric STEIMER</small>');
+        Image::miniLink($folder, 'Etude de cas World Presse VOL1 N°2_AFMcK',
+            'Étude de cas World Press Vol.1N°2');
+        ?>
+    </ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-    <table class="fltlft">
-        <tr>
-            <td class="img"><a href="docdwld/01a-casclinic/Etude de cas World Presse VOL1 N°2_AFMcK.pdf" target="_blank"><img src="docdwld/01a-casclinic/Etude de cas World Presse VOL1 N°2_AFMcK.jpg"></a></td>
-            <td class="txt"><a href="docdwld/01a-casclinic/Etude de cas World Presse VOL1 N°2_AFMcK.pdf" target="_blank"><p>ETUDE DE CAS<br />WORLD PRESS VOL.1 N°2<br /><i>(.pdf à télécharger)</i></p></a></td></tr>
-    </table>
-
-
-    <table>
-        <tr>
-            <td class="img"><a href="docdwld/01a-casclinic/Bilan de Melle T_AFMcK.pdf" target="_blank"><img src="docdwld/01a-casclinic/Bilan de Melle T_AFMcK.jpg"></a></td>
-            <td class="txt"><a href="docdwld/01a-casclinic/Bilan de Melle T_AFMcK.pdf" target="_blank"><p>ETUDE DU CAS CLINIQUE DE Mlle T (2/2)<br />Bilan<br /><i>par Frédéric STEIMER</i></p></a></td></tr>
-    </table>
-
-
-
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 </div>
+<?php
+$script = Image::miniLinkJs();
