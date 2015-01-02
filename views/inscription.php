@@ -44,6 +44,7 @@ if(!$editing) {
                            class="form-control input-lg" placeholder="Numéro ADELI" tabindex="3"
                            value="<?php echo $user->getAdeliNumber();?>"
                            >
+                           <span id="adeli" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Numéro valide
                 </div>
                 <div class="form-group">
                     <input required="required" type="email" name="email" id="email"

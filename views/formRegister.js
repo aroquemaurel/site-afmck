@@ -42,12 +42,25 @@ $(document).ready(function() {
             $('#submit').attr('disabled', 'disabled');
             disable = true;
         }
+
+        if($('#adeliNumber').val().match("^[0-9]{9}$")) {
+            $("#adeli").removeClass("glyphicon-remove");
+            $("#adeli").addClass("glyphicon-ok");
+            $("#adeli").css("color", "#00A41E");
+            $('#submit').removeAttr('disabled');
+        } else {
+            $("#adeli").removeClass("glyphicon-ok");
+            $("#adeli").addClass("glyphicon-remove");
+            $("#adeli").css("color", "#FF0004");
+            $('#submit').attr('disabled', 'disabled');
+            disable = true;
+
+        }
         if (!$('#lastName').val() || !$('#firstName').val() || !$('#email').val()||  !$('#address').val()
-                || !$('#cp').val() | !$('#town').val() || disable) {
+                || !$('#cp').val() | !$('#town').val() || !$('#adeliNumber').val().match("^[0-9]{9}$") || disable) {
             $('#submit').attr('disabled', 'disabled');
         } else {
             $('#submit').removeAttr('disabled');
         }
-
     });
 });
