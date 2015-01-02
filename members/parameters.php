@@ -18,6 +18,7 @@ if(isset($_POST['firstName'])) {
     $user->setCp($_POST['cp']);
     $user->setTown($_POST['town']);
     $user->commit();
+    $_SESSION['lastMessage'] = Popup::successMessage("Les informations ont été correctement modifiées");
 }
 include('../views/includes/head.php');
 include('../views/members/parameters.php');

@@ -138,10 +138,10 @@ class DatabaseUser extends Database {
         $validDate = $user->getValidDate() != NULL ? $user->getValidDate()->format("Y-m-d") : "NULL";
         $adeli = $user->getAdeliNumber();
         $mail = $user->getMail();
-
+        $password = $user->getPassword();
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
-                                          mail=:mail,validDate=:validDate,askValidation=:askValidation
+                                          mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
@@ -150,6 +150,7 @@ class DatabaseUser extends Database {
         $query->bindParam(":validDate", $validDate, PDO::PARAM_STR);
         $query->bindParam(":askValidation", $askValidation, PDO::PARAM_STR);
         $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->bindParam(":password", $password, PDO::PARAM_STR);
         $query->execute();
 
     }

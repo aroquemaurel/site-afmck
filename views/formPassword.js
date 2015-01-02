@@ -42,12 +42,6 @@ $(document).ready(function() {
             $('#submit').attr('disabled', 'disabled');
             disable = true;
         }
-        if (!$('#lastName').val() || !$('#firstName').val() || !$('#email').val()||  !$('#address').val()
-                || !$('#cp').val() | !$('#town').val() || disable) {
-            $('#submit').attr('disabled', 'disabled');
-        } else {
-            $('#submit').removeAttr('disabled');
-        }
 
     });
 });
