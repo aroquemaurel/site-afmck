@@ -56,9 +56,21 @@ class User {
 
     public function connect($auto=false)
     {
+        $ret = true;
         $db = new DatabaseUser();
+
         $data = $db->getUser($this->adeliNumber, $this->password);
-        if($data == null ) {
+
+        if($data == null) {
+            $ret = false;
+        }
+        if($data != null ) {
+            if (!password_verify($this->password, $data->password)) {
+                $ret = false;
+            }
+        }
+
+        if(!$ret) {
             if(!$this->auto) {
                 $_SESSION['lastMessage'] = Popup::connectionKo();
             } else {
@@ -66,7 +78,6 @@ class User {
             }
             return false;
         }
-
         $this->hydrat($data);
         if(strtotime($data->validDate) < time()) {
             $_SESSION['lastMessage'] = Popup::disableAccount();

@@ -7,3 +7,6 @@
 [submodule "libs/PHPMailer"]
 	path = libs/PHPMailer
 	url = https://github.com/PHPMailer/PHPMailer.git
+[submodule "libs/password_compat"]
+	path = libs/password_compat
+	url = git@github.com:ircmaxell/password_compat.git

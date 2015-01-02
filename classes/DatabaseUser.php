@@ -10,9 +10,8 @@ require_once('Database.php');
 
 class DatabaseUser extends Database {
     public function getUser($adeliNumber, $password) {
-        $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number AND password=:password");
+        $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number");
         $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
-        $query->bindParam(":password", $password, PDO::PARAM_STR);
         $query->execute();
 
         return $query->fetchObject();
