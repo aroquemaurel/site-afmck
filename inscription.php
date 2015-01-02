@@ -5,7 +5,7 @@ use utils\Link;
 require_once('libs/password_compat/lib/password.php');
 $title = 'Inscription';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Inscription', '#')));
-
+$editing = false;
 
 if(isset($_POST['firstName'])) {
     if($_POST['password'] != $_POST['passwordConfirmation']) {
