@@ -2,7 +2,23 @@
 
 <div class="container-fluid">
     <h1>Accueil espace membres</h1>
-    <div id="toc" class="toc">
+    <div id="news" class="thumbnail with-caption toc" style="margin-right: 50px;margin-top: -80px; width: 220px">
+        <h2>Actualités</h2>
+            <h3>Le logiciel Bilan MDT évolue : V1.6</h3>
+            <p>Bilan Lombaire, Bilan Cervical, Bilan membres, Fiches de suivis, synthèses
+            Editions en PDF des bilans
+            et des fiches de suivis.
+            </p>
+        <h3>MDT World Press</h3>
+        <p>Newsletter Vol3.N°2</p>
+        <h3>Rapport d'étude</h3>
+        <p>Cervicalgies,
+            association entre centralisation et préférence directionnelle
+            Traduction AFMcK</p>
+        <h3>Article</h3>
+        <p>Recovery of Motor Deficit
+            Accompanying Sciatica
+            (en anglais)</p>
     </div><!--/.well -->
 
     <h2>Information</h2>

@@ -37,48 +37,12 @@
         <h2>Documents à télécharger</h2>
         <p>Résumés d'articles à consulter avant de suivre le cours Mc Kenzie Partie A:</p>
 
-            <table style="margin: auto;">
-                <tr>
-                    <td class="img"><a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc">
-                            <img src="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.jpg"
-                                 class="img-thumbnail">
-                        </a>
-                    </td>
-                    <td class="txt">
-                        <a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc">
-                            <p><i class="glyphicon glyphicon-download-alt"></i> <i>Traductions résumées<br/>préalables aux cours McKenzie.</i><br/>
-                                (.doc)</p>
-                        </a>
-                    </td>
-                    <td class="img"><a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc">
-                            <img src="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.jpg"
-                                 class="img-thumbnail">
-                        </a>
-                    </td>
-                    <td class="txt"><a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc">
-                            <p><i class="glyphicon glyphicon-download-alt"></i> <i>Traductions résumées<br/>préalables aux cours McKenzie.</i><br/>
-                                (.doc)</p></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="img"><a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc">
-                            <img src="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.jpg"
-                                 class="img-thumbnail">
+        <ul>
+            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage().
+                    "/docs/formation/";?>">Kuslich trad resum prealables cours McKenzie_AFMcK.pdf</a>
+            </li>
+        </ul>
 
-                        </a></td>
-                    <td class="txt"><a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc"
-                                       ><p><i class="glyphicon glyphicon-download-alt"></i> <i>aaaaaaaaaaaaaaaaaaaaa</i><br/>(.doc)</p></a>
-                    </td>
-                    <td class="img"><a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc"
-                                       ><img src="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.jpg"
-                                     class="img-thumbnail">
-                        </a>
-                    </td>
-                    <td class="txt"><a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc"
-                                       ><p><i class="glyphicon glyphicon-download-alt"></i> <i>bbbbbbbbbbbbbbbbbbb</i><br/>
-                                (.doc)</p></a></td>
-                </tr>
-            </table>
         <p>&nbsp;<br/>&nbsp;</p>
         <p>&nbsp;<br/>&nbsp;</p>
 

@@ -11,7 +11,7 @@
 
     <ul>
         <?php
-        $folder = Visitor::getInstance()->getRootPage().'/docs/cascliniques/';
+        $folder = Visitor::getInstance()->getRootPage().'/docs/members/cascliniques/';
         Image::miniLink($folder, 'Mlle T - Derangement thoracique superieur_AFMcK',
             'Étude du cas clinique de Mlle T, dérangement thoracique supérieur <small>Par Frédéric STEIMER</small>');
         Image::miniLink($folder, 'Bilan de Melle T_AFMcK',
@@ -24,7 +24,6 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-cd
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

@@ -18,6 +18,23 @@ class Image {
                 '.$title.'</a></li>';
     }
 
+    public static function miniTooltipLink($folder, $filename, $title) {
+        if(!file_exists($folder.'/mini/'.$filename.'.jpg')) {
+            self::createPdfMini($folder.'/'.$filename.'.pdf', $folder.'/mini/'.$filename.'.jpg');
+        }
+        echo '<li><i class="glyphicon glyphicon-download-alt"></i>
+                <a class="tooltip2"
+                href="'.$folder.'/'.$filename.'.pdf">
+                '.$title.'
+                <span>
+                <img id="mini" width="200" src="'.$folder.'/mini/'.$filename.'.jpg" style="text-align: center;margin:auto"/>
+                <p id="description" style="font-size: 10pt">'.$title.'</p>
+            </span>
+                </a>
+                </li>';
+
+    }
+
     public static function createPdfMini($in, $out) {
         exec("/usr/bin/gs -o \"$out\" -sDEVICE=jpeg -r70 \"$in\"");
     }

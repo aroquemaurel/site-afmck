@@ -75,22 +75,13 @@
                 pertinence de ces réponses avec la correction. Cette démarche peut paraître évidente mais si on lit
                 les questions puis les réponses dans la foulée tout semble toujours très simple....</p>
 
-            <table class="fltlft">
-                <tr>
-                    <td class="img"><a href="docdwld/04a-certif/Correction Quizz Manuel Partie A_AFMcK.pdf" target="_blank"><img src="docdwld/04a-certif/Correction Quizz Manuel Partie A_AFMcK.jpg"></a></td>
-                    <td class="txt"><a href="docdwld/04a-certif/Correction Quizz Manuel Partie A_AFMcK.pdf" target="_blank">
-                            <p>Correction Quizz Manuel<br />Partie A</p></a>
-                    </td></tr>
-            </table>
-
-            <table>
-                <tr>
-                    <td class="img"><a href="docdwld/04a-certif/Correction Quizz Manuel Partie B_AFMcK.pdf" target="_blank"><img src="docdwld/04a-certif/Correction Quizz Manuel Partie B_AFMcK.jpg"></a></td>
-                    <td class="txt"><a href="docdwld/04a-certif/Correction Quizz Manuel Partie B_AFMcK.pdf" target="_blank"><p>Correction Quizz Manuel<br />Partie B</p></a></td></tr>
-            </table>
-
-            <div class="retourhtpgcasclin" id="hanche">
-                <a href="#rethaut"><img src="img/retourhtpg2b.jpg" width="150" height="35" alt="ret ht pg" /></a></div><!-- fin de .hautpagecasclin -->
+            <ul>
+                <?php
+                $folder = Visitor::getInstance()->getRootPage()."/docs/members/certification";
+                Image::miniTooltipLink($folder, "Correction Quizz Manuel Partie A_AFMcK", "Correction Quizz Manuel Partie A");
+                Image::miniTooltipLink($folder, "Correction Quizz Manuel Partie B_AFMcK", "Correction Quizz Manuel Partie B");
+                ?>
+            </ul>
 
             <h2 id="conseils">Conseils pour le jour J</h2>
             <h3>L'épreuve du matin (3h)</h3>

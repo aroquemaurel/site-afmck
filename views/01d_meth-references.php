@@ -53,23 +53,15 @@
     </p>
 
     <h2>Articles de presse divers</h2>
-        <table>
-        <tr>
-            <td class="img"><a href="docdwld/01c-meth-formation/McKenzie france Dimanche.pdf">
-                    <img src="docdwld/01c-meth-formation/McKenzie france Dimanche.jpg"
-                         class="img-thumbnail">
-                </a>
-            </td>
-            <td class="txt">
-                <a href="docdwld/01c-meth-formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc">
-                    <p><i class="glyphicon glyphicon-download-alt"></i>
-                        Article paru dans France Dimanche évoquant la méthode McKenzie. <br/>
-                        Il s'agit bien sûr d'un article de vulgarisation mais qui cependant présente l'avantage d'évoquer l'approche MDT dans ses pages.
-                    </p>
-                </a>
-            </td>
-        </tr>
-        </table>
+        <ul>
+            <?php
+            $folder = Visitor::getInstance()->getRootPage()."/docs/references";
+            Image::miniTooltipLink($folder, "McKenzie france Dimanche",
+                " Article paru dans France Dimanche évoquant la méthode McKenzie.");
+            ?>
+            <div class="bs-callout bs-callout-info">Il s'agit bien sûr d'un article de vulgarisation mais qui cependant présente l'avantage d'évoquer l'approche MDT dans ses pages.
+</div>
+        </ul>
         <p>&nbsp;<br/>&nbsp;</p>
         <p>&nbsp;<br/>&nbsp;</p>
 

@@ -43,22 +43,12 @@
         <div class="marge50px"></div>
 
         <h3>Formulaire d'adhésion</h3>
-        <div class="docformation">
-            <table>
-                <tr>
-                    <td class="img"><a href="docdwld/02a_meth-adhesion/formulaire adhesion 2013_AFMcK.pdf">
-                            <img src="docdwld/02a_meth-adhesion/formulaire adhesion 2013_AFMcK.jpg"
-                                 class="img-thumbnail">
-                        </a>
-                    </td>
-                    <td class="txt">
-                        <a href="docdwld/02a_meth-adhesion/formulaire adhesion 2013_AFMcK.pdf">
-                            <p><i class="glyphicon glyphicon-download-alt"></i>
-                                Formulaire d'adhésion à l'<b>A</b>ssociation <b>F</b>rançaise <b>McK</b>enzie.</p>
-                        </a>
-                    </td>
-                </tr>
-            </table>
+        <ul>
+            <?php
+            $folder = Visitor::getInstance()->getRootPage()."/docs/adhesions";
+            Image::miniTooltipLink($folder, "formulaire adhesion 2013_AFMcK", "Formulaire d'adhésion à l'<b>A</b>ssociation <b>F</b>rançaise <b>McK</b>enzie");
+            ?>
+        </ul>
 
         </div><!-- Fin de .docformation -->
         <p>&nbsp;<br/>&nbsp;</p>

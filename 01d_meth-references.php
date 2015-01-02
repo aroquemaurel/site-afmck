@@ -1,4 +1,4 @@
-<?php
+<<?php
 include('begin.php');
 use utils\Link;
 
