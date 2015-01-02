@@ -98,7 +98,6 @@ body {
         -moz-border-radius: 8px;
         border-radius: 8px;
     }
-
 }
 @media ( min-width: 767px ) {
   .panel-group { width: 400px; }
