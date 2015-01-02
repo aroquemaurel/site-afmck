@@ -30,7 +30,7 @@ if(!Visitor::getInstance()->isConnected()) {
 } else {
     $db = new DatabaseUser();
     $nbAdmin = $db->countUsersToValid();
-    echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle">'.
+    echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
         Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .Visitor::getInstance()->getUser()->getLastName();
         if($nbAdmin > 0) {
             echo '&nbsp;<span class="badge">'.$nbAdmin.'</span>';
@@ -44,7 +44,8 @@ if(!Visitor::getInstance()->isConnected()) {
             echo '&nbsp;<span class="badge">'.$nbAdmin.'</span>';
         }
         echo '</a></li>';
-        // TODO Add number of validation
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/members.php">Liste des membres';
+
     }
     echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/deconnexion.php">Déconnexion</a></li>';
         echo '</ul>';

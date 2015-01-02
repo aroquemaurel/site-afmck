@@ -60,11 +60,57 @@ class DatabaseUser extends Database {
 
     }
 
+    public function getUsersValides () {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate >= CURDATE()
+                                           order by lastname");
+        $query->execute();
+
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $ret[] = $user;
+        }
+        return $ret;
+    }
+    public function getUsersHS() {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate < CURDATE()
+                                           order by lastname");
+        $query->execute();
+
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $ret[] = $user;
+        }
+        return $ret;
+    }
+
+
+
     public function getUsersToValid() {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
                                            WHERE validDate < CURDATE() AND validDate != 'NULL' order by lastname");
+        $query->execute();
+
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $ret[] = $user;
+        }
+        return $ret;
+    }
+    public function getUsersDisableSoon() {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT * from `user`
+                                           WHERE (validDate between CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 3 MONTH))
+                                           order by lastname");
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {

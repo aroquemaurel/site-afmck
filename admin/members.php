@@ -2,11 +2,10 @@
 include('../begin.php');
 
 use utils\Link;
-$title = 'Validation des incriptions';
+$title = 'Liste des membres';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', '#'),
-    new Link('Administration','#'), new Link('Validation des inscriptions', '#')));
+    new Link('Administration','#'), new Link('Liste des membres', '#')));
 $db = new DatabaseUser();
-
 if(isset($_GET['valid'])) {
     $user = $db->getUserById($_GET['valid']);
     $user->valid();
@@ -20,9 +19,11 @@ if(isset($_GET['valid'])) {
     $_SESSION['lastMessage'] = Popup::unvalidAccount();
 }
 
-$usersDisable = $db->getUsersToValid();
-$users = $db->getUsersDisableSoon();
+
+$usersOk = $db->getUsersValides();
+$usersNotOk = $db->getUsersHS();
 include('../views/includes/head.php');
-include('../views/admin/validRegister.php');
+include('../views/admin/members.php');
 include('../views/includes/foot.php');
+
 ?>
