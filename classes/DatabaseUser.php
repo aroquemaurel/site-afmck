@@ -132,7 +132,7 @@ class DatabaseUser extends Database {
     public function editUser(User $user)
     {
         $id = $user->getId();
-        $askValidation = $user->getAskValidation();
+        $askValidation = $user->getAskValidation() != NULL ? $user->getAskValidation()->format("Y-m-d") : "NULL";
         $lastname = $user->getLastName();
         $firstname = $user->getFirstName();
         $validDate = $user->getValidDate() != NULL ? $user->getValidDate()->format("Y-m-d") : "NULL";

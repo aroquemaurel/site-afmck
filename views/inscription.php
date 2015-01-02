@@ -104,8 +104,10 @@ if(!$editing) {
                     </div>
                 </div>
                 <hr class="colorgraph">
-                    <button id="submit" type="submit" style="margin: auto; width: 250px; "class="btn btn-primary btn-block btn-lg" >
-                        <i class="glyphicon glyphicon-ok-sign"></i> <?php echo (!$editing ? "Je m'inscris" : "Modifier mes informations")?>
+                    <button id="submit" type="submit" style="margin: auto; width: 250px; "
+                    class="btn btn-primary btn-block btn-lg">
+                        <i class="glyphicon glyphicon-ok-sign"></i>
+                        <?php echo (!$editing ? "Je m'inscris" : "Modifier mes informations")?>
                     </button>
             </form>
             <p></p>
@@ -114,4 +116,6 @@ if(!$editing) {
 </div>
 </div>
 <?php
-$script = '<script src="'.Visitor::getInstance()->getRootPage().'/views/formRegister.js"></script>';
+if(!$editing) {
+    $script = '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formRegister.js"></script>';
+}

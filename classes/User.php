@@ -146,10 +146,10 @@ class User {
         $this->firstName = $data->firstname;
         $this->mail = $data->mail;
         $this->id = $data->id;
-        $this->validDate = $data->validDate;
+        $this->validDate = new DateTime($data->validDate);
         $this->password = $data->password;
         $this->adeliNumber = $data->adeliNumber;
-        $this->askValidation = $data->askValidation;
+        $this->askValidation = new DateTime($data->askValidation);
 
         $this->address = $data->address;
         $this->town = $data->town;

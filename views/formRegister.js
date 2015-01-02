@@ -17,6 +17,7 @@ $(document).ready(function() {
             disable = true;
         }
 
+        if($("#password")) {
         if (ucase.test($("#password").val())) {
             $("#ucase").removeClass("glyphicon-remove");
             $("#ucase").addClass("glyphicon-ok");
@@ -42,6 +43,7 @@ $(document).ready(function() {
             $('#submit').attr('disabled', 'disabled');
             disable = true;
         }
+
         if (!$('#lastName').val() || !$('#firstName').val() || !$('#email').val()||  !$('#address').val()
                 || !$('#cp').val() | !$('#town').val() || disable) {
             $('#submit').attr('disabled', 'disabled');

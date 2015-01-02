@@ -18,7 +18,7 @@
                 echo '<td>'.$user->getLastName().'</td>';
                 echo '<td>'.$user->getFirstName().'</td>';
                 echo '<td  style="font-size: 8pt; font-family: courrier;">'.$user->getMail().'</td>';
-                echo '<td>'.$user->getAskValidation().'</td>';
+                echo '<td>'.$user->getAskValidation()->format("Y-m-d").'</td>';
                 echo '<td><a href="?valid='.$user->getId().'"><i style="color: green;" class="glyphicon glyphicon-ok"></i></a></td>';
                 echo '<td><a href="?unvalid='.$user->getId().'"><i style="color: red;" class="glyphicon glyphicon-remove"></i></a></td>';
 
@@ -44,7 +44,7 @@
             echo '<td>'.$user->getLastName().'</td>';
             echo '<td>'.$user->getFirstName().'</td>';
             echo '<td  style="font-size: 8pt; font-family: courrier;">'.$user->getMail().'</td>';
-            echo '<td>'.$user->getAskValidation().'</td>';
+            echo '<td>'.$user->getAskValidation()->format("Y-m-d").'</td>';
             echo '<td><a href="?valid='.$user->getId().'"><i style="color: green;" class="glyphicon glyphicon-ok"></i></a></td>';
             echo '<td><a href="?unvalid='.$user->getId().'"><i style="color: red;" class="glyphicon glyphicon-remove"></i></a></td>';
 
