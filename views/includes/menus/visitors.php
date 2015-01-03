@@ -28,8 +28,9 @@
                 </li>
                 <li><a href="03a_praticiens.php">Praticiens</a></li>
                 <li><a href="04a_liens.php">Liens</a></li>
-                <li class="members visible-xs"><a href="<?php echo Visitor::getInstance()->getRootPage();?>/connexion.php">Connexion</a></li>
+               <!-- <li class="members visible-xs"><a href="<?php echo Visitor::getInstance()->getRootPage();?>/connexion.php">Connexion</a></li>
                 <li class="members visible-xs"><a href="<?php echo Visitor::getInstance()->getRootPage();?>/inscription.php">Inscription</a></li>
+                -->
                 </ul>
                 <?php
                     include("connectionMenu.php");

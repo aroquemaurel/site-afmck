@@ -1,7 +1,7 @@
 
 <div class="navbar yamm navbar-default navbar-fixed-top" style="height:110px;background-color: #273f64;">
     <div class="container">
-        <div class="navbar-header" style="float:left">
+        <div class="navbar-header" style="float:left;">
             <button type="button" data-toggle="collapse"
                     data-target="#navbar-collapse-1"
                     class="navbar-toggle" style="margin-top: 30px; margin-left: -30px;">

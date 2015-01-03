@@ -78,7 +78,9 @@ body {
         position: absolute;
         color: #efefef;
     }
-
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #DBDBDB;
+    }
     .main {
         padding: 0;
         margin: 0;

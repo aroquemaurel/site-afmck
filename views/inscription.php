@@ -75,7 +75,7 @@ if(!$editing) {
                 <div class="form-group">
                     <div required="required" class='input-group date' id="formationDate">
                         <input tabindex="8" type='text'  id='formationDate1' name='formationDate' placeholder="Date de validation" class="form-control input-lg"
-                        value="<?php echo $user->getFormationDate()->format("d/m/Y");?>"
+                        value="<?php echo ($user->getFormationDate() != NULL ? $user->getFormationDate()->format("d/m/Y") : "");?>"
                         />
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                         </span>

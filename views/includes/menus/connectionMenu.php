@@ -3,14 +3,17 @@
 <?php
 if(!Visitor::getInstance()->isConnected()) {
 ?>
-<li class="dropdown"><a href="" data-toggle="dropdown"color: #ccc;"class="dropdown-toggle">Connexion<b class="caret"></b></a>
+<li class="hidden-xs dropdown"><a href="" data-toggle="dropdown"color: #ccc;"class="dropdown-toggle">Connexion<b class="caret"></b></a>
     <ul role="menu" class="dropdown-menu" style="padding: 10px">
         <li>
             <?php include(Visitor::getInstance()->getRootPage().'/views/includes/formConnexion.php'); ?>
         </li>
     </ul>
 </li>
-<li><a href="inscription.php" style="color: #ccc">S'inscrire</a></li>
+<li class="visible-xs"><a href="connexion.php" style="color: #ccc">Connexion</a></li>
+<li class=""><a href="inscription.php" style="color: #ccc">S'inscrire</a></li>
+
+
 <?php
 } else {
     $db = new DatabaseUser();
