@@ -82,10 +82,10 @@
                     <li>enregistrez votre clé lorsqu'il vous le demande.</li>
                     <li>lisez le document d’utilisation joint</li>
                 </ul>
-                    <table class="cadre"><tr>
-                            <td class="img"><a href="docdwld/02e-logiciel/installationEtMiseAJour_bilanMDT_AFMcK.PDF" target="_blank"><img src="docdwld/02e-logiciel/installationEtMiseAJour_bilanMDT_AFMcK.jpg" width="65" height="83" /></a></td>
-                            <td class="txt"><a href="docdwld/02e-logiciel/installationEtMiseAJour_bilanMDT_AFMcK.PDF" target="_blank"><i>Installation et configuration du logiciel<br />permettant la gestion des bilans McKenzie</i></a></td></tr></table>
-
+                    <?php
+                    Image::miniTooltipLink(Visitor::getInstance()->getRootPage()."/docs/logiciels/", "installationEtMiseAJour_bilanMDT_AFMcK",
+                                                                                    "Installation et configuration du logiciel permettant la gestion des bilans McKenzie", false);
+                    ?>
                 </li>
                 <li>Faites vous plaisir !</li>
                 <li>Donnez nous votre avis</li>

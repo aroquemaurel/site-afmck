@@ -4,7 +4,6 @@
         <h1>Liens utiles</h1>
         <h2>Institut McKenzie International</h2>
         <div class="cadrelink">
-
             <table>
                 <tr><td class="img">
                         <a href="http://www.mckenziemdt.org"><img class="img-thumbnail" src="img/logointer.gif"></a></td>

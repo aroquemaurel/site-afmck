@@ -16,76 +16,79 @@
         <h2>Les Sangles</h2>
         <h3>Sangle americaine</h3>
         <div class="bs-callout bs-callout-info">longueur 8 pieds soit 2,44 mètres</div>
-        <img src="docdwld/02d-materiel/BON DE COMMANDE - SANGLE AMERICAINE 2014_AFMcK.jpg" width="350" height="178" alt="img sangle" />
-
-        <div class ="essential">
-            <table><tr><td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/logo_essential.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - SANGLE AMERICAINE 2014_AFMcK.pdf" target="_blank">Bon de commande Sangle Américaine</a></td></tr></table></div><!-- fin de .essential -->
-
-
-
+        <div style="text-align: center">
+        <?php
+        $folder = Visitor::getInstance()->getRootPage()."/docs/members/materiel";
+        Image::thumbnailsWithCaption($folder, "BON DE COMMANDE - SANGLE AMERICAINE 2014_AFMcK",
+            "Bon de commande Sangle américaine", "<a href=\"http://www.essentiel-med.fr\">Essentiel Medical. <br/>http://www.essentiel-med.fr</a>");
+        ?>
+        </div>
         <!-- COUSSINS ----------------------------------------------------------------------------------------------------------------------------------------------- -->
         <h2>Les Coussins</h2>
         <h3>Coussins au détail</h3>
-        <div class="coussins">
-            <table><tr><td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin1_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin5_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin3_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin4_AFMcK.jpg"></a></td></tr>
-                <tr><td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin2_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin9_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin6_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin7_AFMcK.jpg"></a></td></tr>
-                <tr><td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin8_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin10_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin11_AFMcK.jpg"></a></td>
-                    <td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/coussin12_AFMcK.jpg"></a></td></tr>
-            </table>
-        </div><!-- fin de .coussins -->
+            <?php
+            Image::thumbnails($folder.'/coussin1_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin5_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin4_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin2_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin9_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin6_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin7_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin8_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin10_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin11_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin12_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            ?>
 
-        <div class ="essential">
-            <table><tr><td rowspan="3"><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/logo_essential.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/Offre_super_Roll_1.pdf" target="_blank">Offre spécial Super Roll</a></td></tr>
-                <td><a href="docdwld/02d-materiel/BON DE COMMANDE - OFFRE INTERNET 2014_AFMcK.pdf" target="_blank">Bon de commande "Offre Internet"</a></td></tr>
-                <tr><td><a href="docdwld/02d-materiel/BON DE COMMANDE - OFFRE PATIENT 2014_AFMcK.pdf" target="_blank">Bon de commande "Offre Patient"</a></td></tr>
-            </table>
-        </div><!-- fin de .essential -->
+        <div class="bs-callout bs-callout-info">
+            <ul>
+                <?php
+                Image::miniTooltipLink($folder, "Offre_super_Roll_1", "Offre spécial Super Roll");
+                Image::miniTooltipLink($folder, "BON DE COMMANDE - OFFRE INTERNET 2014_AFMcK", "Bon de commande « Offre Internet »");
+                Image::miniTooltipLink($folder, "BON DE COMMANDE - OFFRE PATIENT 2014_AFMcK", "Bon de commande « Offre Patient» ");
+                ?>
+            </ul>
+        </div>
 
         <h3>Le pack 2013</h3>
-        <div class="coussins">
-            <table><tr><td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK 2013_AFMcK.pdf" target="_blank"><img src="img/matos/coussin3_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK 2013_AFMcK.pdf" target="_blank"><img src="img/matos/coussin3_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK 2013_AFMcK.pdf" target="_blank"><img src="img/matos/coussin3_AFMcK.jpg"></a></td></tr>
-                <tr><td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK 2013_AFMcK.pdf" target="_blank"><img src="img/matos/coussin1_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK 2013_AFMcK.pdf" target="_blank"><img src="img/matos/coussin4_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK 2013_AFMcK.pdf" target="_blank"><img src="img/matos/coussin5_AFMcK.jpg"></a></td></tr>
-            </table>
-        </div><!-- fin de .coussins -->
-
-        <div class ="essential">
-            <table><tr><td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/logo_essential.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK 2013_AFMcK.pdf" target="_blank">Bon de commande "Pack 2013"</a></td></tr>
-            </table>
-        </div><!-- fin de .essential -->
+        <div style="text-align : center;">
+        <?php
+        Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
+        Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
+        Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');echo '<br/>';
+        Image::thumbnails($folder.'/coussin1_AFMcK.jpg', 'http://www.essentiel-med.fr');
+        Image::thumbnails($folder.'/coussin4_AFMcK.jpg', 'http://www.essentiel-med.fr');
+        Image::thumbnails($folder.'/coussin5_AFMcK.jpg', 'http://www.essentiel-med.fr');
+        ?>
+        </div>
+        <div class="bs-callout bs-callout-info">
+            <ul>
+                <?php
+                Image::miniTooltipLink($folder, "BON DE COMMANDE - PACK 2013_AFMcK", "Bon de commande « Pack 2013 »");
+                ?>
+            </ul>
+        </div>
 
 
         <h3>Le pack découverte</h3>
-        <div class="coussins">
-            <table><tr><td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK.pdf" target="_blank"><img src="img/matos/coussin1_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK.pdf" target="_blank"><img src="img/matos/coussin3_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK.pdf" target="_blank"><img src="img/matos/coussin4_AFMcK.jpg"></a></td></tr>
-                <tr><td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK.pdf" target="_blank"><img src="img/matos/coussin2_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK.pdf" target="_blank"><img src="img/matos/coussin5_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK.pdf" target="_blank"><img src="img/matos/coussin13_AFMcK.jpg"></a></td></tr>
-            </table>
-        </div><!-- fin de .coussins -->
-
-        <div class ="essential">
-            <table><tr><td><a href="http://www.essentiel-med.fr" target="_blank"><img src="img/matos/logo_essential.jpg"></a></td>
-                    <td><a href="docdwld/02d-materiel/BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK.pdf" target="_blank">Bon de commande "Pack Découverte"</a></td></tr>
-            </table>
-        </div><!-- fin de .essential -->
-
+        <div style="text-align : center;">
+        <?php
+            Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin4_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin5_AFMcK.jpg', 'http://www.essentiel-med.fr');echo '<br/>';
+            Image::thumbnails($folder.'/coussin2_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin1_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin13_AFMcK.jpg', 'http://www.essentiel-med.fr');
+        ?>
+        </div>
+        <div class="bs-callout bs-callout-info">
+            <ul>
+                <?php
+                Image::miniTooltipLink($folder, "BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK", "Bon de commande « Pack Découverte »");
+                ?>
+            </ul>
+        </div>
         <!-- MON SITE KINE ----------------------------------------------------------------------------------------------------------------------------------------------- -->
         <h2>Mon <i>« sitekine.com »</i></h2>
         <p>L’AFMcK souhaite vous faire profiter de trois mois d’essai gratuits et sans engagement à
