@@ -13,4 +13,5 @@
     <div class="form-group" style="margin: auto;text-align: center">
         <button type="submit" class="btn btn-primary""><i class="glyphicon glyphicon-user"></i>&nbsp; Se connecter</button>
     </div>
+    <p style="text-align: center"><a href="forgetpassword.php">J'ai oublié mon mot de passe</a></p>
 </form>
