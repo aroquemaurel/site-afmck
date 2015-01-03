@@ -139,9 +139,10 @@ class DatabaseUser extends Database {
         $adeli = $user->getAdeliNumber();
         $mail = $user->getMail();
         $password = $user->getPassword();
+        $forget = $user->getHash();
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
-                                          mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password
+                                          mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
@@ -151,6 +152,7 @@ class DatabaseUser extends Database {
         $query->bindParam(":askValidation", $askValidation, PDO::PARAM_STR);
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->bindParam(":password", $password, PDO::PARAM_STR);
+        $query->bindParam(":forget", $forget, PDO::PARAM_STR);
         $query->execute();
 
     }

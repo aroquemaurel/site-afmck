@@ -25,6 +25,7 @@ class User {
 
     private $mailer;
 
+    private $hash;
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
 
@@ -108,9 +109,14 @@ class User {
         $mailer = new Mailer();
         $mailer->isHTML(true);                                  // Set email format to HTML
         $mailer->Subject .= "Mot de passe oublié";
-        $mailer->Body = utf8_decode(Mail::getForgetPassword($this->firstName." ".$this->lastName, "u=".$this->getId()."&s=".$this->getHash()));
+
+        $this->setHash(sha1(md5($this->getMail()." Oups ×D ".$this->getAdeliNumber()." Dommage =þ ".$this->getLastName(). " !". time())));
+        $this->commit();
+        $mailer->Body = utf8_decode(Mail::getForgetPassword($this->firstName." ".$this->lastName, "u=".$this->getId()."&s=".
+            $this->getHash()));
         $mailer->addAddress($this->mail, $this->firstName." ".$this->lastName);
         $mailer->send();
+
     }
     public function valid() {
         $currentDate = new DateTime();
@@ -158,10 +164,11 @@ class User {
         $this->password = $data->password;
         $this->adeliNumber = $data->adeliNumber;
         $this->askValidation = new DateTime($data->askValidation);
-
+        $this->hash = $data->forget;
         $this->address = $data->address;
         $this->town = $data->town;
         $this->cp = $data->cp;
+        $this->hash = $data->forget;
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -172,7 +179,11 @@ class User {
     }
 
     public function getHash() {
-        return sha1(md5($this->getMail()." Oups ×D ".$this->getAdeliNumber()." Dommage =þ ".$this->getLastName(). " !"));
+        return $this->hash;
+    }
+
+    public function setHash($h) {
+        $this->hash = $h;
     }
     /**
      * @return mixed

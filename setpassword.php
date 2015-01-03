@@ -12,6 +12,7 @@ if(isset($_POST['password']) && isset($_POST['passwordConfirmation'])) {
     if($_POST['password'] == $_POST['passwordConfirmation']) {
         $user = $db->getUserById($_POST['user']);
         $user->setPassword(password_hash($_POST['password'], PASSWORD_BCRYPT, array("cost" => utils\Utils::getOptimalCost(0.3))));
+        $user->setHash("");
         $user->commit();
         $_SESSION['lastMessage'] = Popup::successMessage("Le mot de passe à bien été changé, vous pouvez vous connecter");
         header('Location: ' . 'index.php');
