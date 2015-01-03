@@ -131,7 +131,7 @@ class User {
         $this->mailer[] = new Mailer();
         end($this->mailer)->isHTML(true);                                  // Set email format to HTML
         end($this->mailer)->Subject .= "Validation inscription";
-        end($this->mailer)->Body = utf8_decode(Mail::getValidationRegistrationMail($this->firstName." ".$this->lastName, $newDate->format("d/m/Y")));
+        end($this->mailer)->Body = utf8_decode(Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
         end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
     }
 

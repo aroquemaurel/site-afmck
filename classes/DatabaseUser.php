@@ -44,7 +44,7 @@ class DatabaseUser extends Database {
         $cp = $user->getCp();
         $town = $user->getTown();
 
-        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :adeliNumber, :firstname, :lastname, :password, :mail, CURDATE(), 0, :address, :cp, :town)");
+        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :adeliNumber, :firstname, :lastname, :password, :mail, CURDATE(), 0, :address, :cp, :town, '')");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
