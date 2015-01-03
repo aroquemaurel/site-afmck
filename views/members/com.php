@@ -188,9 +188,12 @@
         </div>
 
         <p>La première chose à faire dans un cabinet libéral est d'informer le patient. <strong>C'est une obligation</strong>.</p>
-        <p><a href="../pgadh/<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/facturhn/affiche cabinet HN_AFMcK.pdf">
-                <i class="glyphicon glyphicon-download-alt"></i> Honoraires à afficher en salle d'attente</a></p>
-
+        <div class="bs-callout bs-callout-info">
+            <?php
+            Image::miniTooltipLink(Visitor::getInstance()->getRootPage()."/docs/members/com/facturehn/",
+                "affiche cabinet HN_AFMcK", "Honoraires à afficher en salle d'attente", false);
+            ?>
+        </div>
         <p>Concrètement il faut en informer le patient dès la prise de RDV bien sûr mais cela doit aussi être consultable par écrit dans votre cabinet.</p>
         <p>Sur le lien ci-contre, un texte vous est proposé : (à afficher dans votre salle d'attente, typiquement  sur le panneau information de votre cabinet)</p>
         <p>A nouveau, il ne s'agit que d'une propositon de formulation. Vous êtes libres de l'utiliser en intégralité ou seulement en partie selon vos besoins et le type d'activité que vous pratiquez au cabinet.</p>
@@ -198,7 +201,12 @@
         <p>Entre 20 et 50 euros pour la réalisation du bilan McKenzie International et du traitement avec la méthode McKenzie semble actuellement être la fourchette standard de tarification pour les certifiés en France.</p>
 
         <p>L'association vous propose ci-dessous un modèle de facturation HN à remettre à vos patients à la fin de la première séance bilan McKenzie:</p>
-        <p><a href="../pgadh/<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/facturhn/Facture HN_AFMcK.pdf"><i class="glyphicon glyphicon-download-alt"></i> Modèle de facture HN</a></p>
+        <div class="bs-callout bs-callout-info">
+        <?php
+            Image::miniTooltipLink(Visitor::getInstance()->getRootPage()."/docs/members/com/facturehn/",
+                "Facture HN_AFMcK", "Modèle de Facture HN", false);
+        ?>
+        </div>
 
         <p>Ce tarif vient en supplément des honoraires conventionnés. Il s'intègre dans notre comptabilité professionnelle  à la ligne « Honoraires » et est donc soumis au calcul de l'URSSAF (voir avec votre comptable pour les détails).</p>
         <p>En fonction du type de contrat souscrit par le patient auprès de sa mutuelle tout ou partie de ce montant HN peut être pris en charge par cette dernière.</p>

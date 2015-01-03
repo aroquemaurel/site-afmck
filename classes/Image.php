@@ -11,7 +11,7 @@ class Image {
         if(!file_exists($folder.'/mini/'.$filename.'.jpg')) {
             self::createPdfMini($folder.'/'.$filename.'.pdf', $folder.'/mini/'.$filename.'.jpg');
         }
-        echo '<li><a target="'.$folder.'/mini/'.$filename.'.jpg"
+        echo '<li><a  target="'.$folder.'/mini/'.$filename.'.jpg"
                 class="miniLink" name="'.$title.'"
                 href="'.$folder.'/'.$filename.'.pdf">
                 <i class="glyphicon glyphicon-download-alt"></i>
@@ -59,6 +59,18 @@ class Image {
                     </a>
                 </div>';
     }
+    public static function thumbnailsPdf($folder, $filename, $width="120px") {
+        if(!file_exists($folder.'/mini/'.$filename.'.jpg')) {
+            self::createPdfMini($folder.'/'.$filename.'.pdf', $folder.'/mini/'.$filename.'.jpg');
+        }
+
+        echo '<div class="thumbnail with-caption" style="width: '.$width.';margin: 5px;padding:auto;text-align: center">
+                    <a href="'.$folder.'/'.$filename.'.pdf">
+                        <img src="'.$folder.'/mini/'.$filename.'.jpg"  alt="'.$filename.'"/>
+                    </a>
+                </div>';
+    }
+
     public static function miniLinkJs() {
         return "<script>
 $('.miniLink').bind('mouseenter', function() {

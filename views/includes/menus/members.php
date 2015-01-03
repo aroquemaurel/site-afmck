@@ -88,7 +88,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#">Kiosque</a>
+                <li class="dropdown"><a href="kiosque.php">Kiosque</a>
                 </li>
                 <li class="dropdown"><a href="certification.php">Certification</a></li>
 
