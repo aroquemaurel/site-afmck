@@ -17,6 +17,8 @@ if(isset($_POST['firstName'])) {
     $user->setAddress($_POST['address']);
     $user->setCp($_POST['cp']);
     $user->setTown($_POST['town']);
+    $user->setFormationDate(new DateTime($_POST['formationDate']));
+    $user->setLevelFormation($_POST['levelFormation']);
     $user->commit();
     $_SESSION['lastMessage'] = Popup::successMessage("Les informations ont été correctement modifiées");
 }

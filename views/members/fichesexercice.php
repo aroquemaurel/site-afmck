@@ -43,7 +43,7 @@
                 "<b>Rachis Lombaire</b> Extension en « Demi Grenouille » Gauche");
         ?>
     </ul>
-    <h3>Principe de glisement</h3>
+    <h3>Principe de glissement</h3>
     <ul>
         <?php
         Image::miniLink($folder."/lombalgie/", "LOMBALGIE principe de Glissement DROIT Mur AFMcK",

@@ -43,8 +43,10 @@ class DatabaseUser extends Database {
         $address = $user->getAddress();
         $cp = $user->getCp();
         $town = $user->getTown();
+        $formationDate = $user->getFormationDate()->format("Y-m-d");
+        $levelFormation = $user->getLevelFormation();
 
-        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :adeliNumber, :firstname, :lastname, :password, :mail, CURDATE(), 0, :address, :cp, :town, '')");
+        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :adeliNumber, :firstname, :lastname, :password, :mail, CURDATE(), 0, :address, :cp, :town, '', :formationDate, :levelFormation)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
@@ -54,6 +56,9 @@ class DatabaseUser extends Database {
         $query->bindParam(":address", $address, PDO::PARAM_STR);
         $query->bindParam(":cp", $cp, PDO::PARAM_STR);
         $query->bindParam(":town", $town, PDO::PARAM_STR);
+
+        $query->bindParam(":formationDate", $formationDate, PDO::PARAM_STR);
+        $query->bindParam(":levelFormation", $levelFormation, PDO::PARAM_INT);
 
         $query->execute();
 
@@ -140,9 +145,13 @@ class DatabaseUser extends Database {
         $mail = $user->getMail();
         $password = $user->getPassword();
         $forget = $user->getHash();
+        $levelFormation = $user->getLevelFormation();
+        $formationDate = $user->getFormationDate()->format("Y-m-d");
+
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
-                                          mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget
+                                          mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
+                                          formationDate=:formationDate, levelFormation=:levelFormation
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
@@ -153,7 +162,9 @@ class DatabaseUser extends Database {
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->bindParam(":password", $password, PDO::PARAM_STR);
         $query->bindParam(":forget", $forget, PDO::PARAM_STR);
+        $query->bindParam(":levelFormation", $levelFormation, PDO::PARAM_INT);
+        $query->bindParam(":formationDate", $formationDate, PDO::PARAM_STR);
         $query->execute();
 
     }
-} 
+}

@@ -26,6 +26,9 @@ class User {
     private $mailer;
 
     private $hash;
+
+    private $levelFormation;
+    private $formationDate;
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
 
@@ -169,6 +172,8 @@ class User {
         $this->town = $data->town;
         $this->cp = $data->cp;
         $this->hash = $data->forget;
+        $this->formationDate = new DateTime($data->formationDate);
+        $this->levelFormation = $data->levelFormation;
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -384,5 +389,38 @@ class User {
     {
         $this->cp = $cp;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getLevelFormation()
+    {
+        return $this->levelFormation;
+    }
+
+    /**
+     * @param mixed $levelFormation
+     */
+    public function setLevelFormation($levelFormation)
+    {
+        $this->levelFormation = $levelFormation;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFormationDate()
+    {
+        return $this->formationDate;
+    }
+
+    /**
+     * @param mixed $formationDate
+     */
+    public function setFormationDate($formationDate)
+    {
+        $this->formationDate = $formationDate;
+    }
+
 
 }
