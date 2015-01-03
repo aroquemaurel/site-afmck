@@ -95,19 +95,19 @@
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Actualités en région
                         <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a tabindex="-1" href="#"> APMK</a></li>
-                        <li><a tabindex="-1" href="#"> Collaborations locales</a></li>
-                        <li><a tabindex="-1" href="#"> Divers</a></li>
+                       <!-- <li><a tabindex="-1" href="#"> APMK</a></li>-->
+                        <li><a tabindex="-1" href="collaborationslocales.php"> Collaborations locales</a></li>
+                        <!--<li><a tabindex="-1" href="#"> Divers</a></li>-->
                     </ul>
                 </li>
 
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Divers<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a tabindex="-1" href="#"> Charte AFMcK</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/charte des praticiens adherents AFMcK.pdf"> Charte AFMcK</a></li>
                         <li><a tabindex="-1" href="http://afmck.forumactif.org/login"> Forum</a></li>
-                        <li><a tabindex="-1" href="#"> Communication Interne</a></li>
-                        <li><a tabindex="-1" href="#"> Partenaires</a></li>
-                        <li><a tabindex="-1" href="#"> Nous contacter</a></li>
+                        <li><a tabindex="-1" href="cominterne.php"> Communication Interne</a></li>
+                        <!--<li><a tabindex="-1" href="#"> Partenaires</a></li>
+                        <li><a tabindex="-1" href="#"> Nous contacter</a></li>-->
                     </ul>
                 </li>
                 <?php
