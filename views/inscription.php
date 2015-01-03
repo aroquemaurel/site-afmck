@@ -122,14 +122,15 @@ if(!$editing) {
 <?php
 $script = '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/moment.js"></script>';
 $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-datetimepicker.js"></script>';
-if(!$editing) {
-
-    $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formRegister.js"></script>';
-    $script .= "        <script type=\"text/javascript\">
+$script .= "        <script type=\"text/javascript\">
             $(function () {
                 $('#formationDate').datetimepicker({
                 					pickTime: false
                 });
             });
 </script>";
+
+if(!$editing) {
+
+    $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formRegister.js"></script>';
 }
