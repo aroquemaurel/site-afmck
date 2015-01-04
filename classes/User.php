@@ -20,6 +20,8 @@ class User {
     private $askValidation;
 
     private $address;
+    private $complementAddress;
+
     private $town;
     private $cp;
 
@@ -29,6 +31,11 @@ class User {
 
     private $levelFormation;
     private $formationDate;
+
+    private $phonePro;
+    private $phoneMobile;
+    private $newsletter;
+
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
 
@@ -169,11 +176,15 @@ class User {
         $this->askValidation = new DateTime($data->askValidation);
         $this->hash = $data->forget;
         $this->address = $data->address;
+        $this->complementAddress = $data->complementAddress;
         $this->town = $data->town;
         $this->cp = $data->cp;
         $this->hash = $data->forget;
         $this->formationDate = new DateTime($data->formationDate);
         $this->levelFormation = $data->levelFormation;
+        $this->phoneMobile = $data->phoneMobile;
+        $this->phonePro = $data->phonePro;
+        $this->newsletter = $data->newsletter;
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -420,6 +431,70 @@ class User {
     public function setFormationDate($formationDate)
     {
         $this->formationDate = $formationDate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhonePro()
+    {
+        return $this->phonePro;
+    }
+
+    /**
+     * @param mixed $phonePro
+     */
+    public function setPhonePro($phonePro)
+    {
+        $this->phonePro = $phonePro;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoneMobile()
+    {
+        return $this->phoneMobile;
+    }
+
+    /**
+     * @param mixed $phoneMobile
+     */
+    public function setPhoneMobile($phoneMobile)
+    {
+        $this->phoneMobile = $phoneMobile;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNewsletter()
+    {
+        return $this->newsletter;
+    }
+
+    /**
+     * @param mixed $newsletter
+     */
+    public function setNewsletter($newsletter)
+    {
+        $this->newsletter = $newsletter;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getComplementAddress()
+    {
+        return $this->complementAddress;
+    }
+
+    /**
+     * @param mixed $complementAddress
+     */
+    public function setComplementAddress($complementAddress)
+    {
+        $this->complementAddress = $complementAddress;
     }
 
 

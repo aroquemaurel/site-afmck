@@ -18,10 +18,15 @@ if(isset($_POST['firstName'])) {
         $user->setFirstName($_POST['firstName']);
         $user->setLastName($_POST['lastName']);
         $user->setAddress($_POST['address']);
+        $user->setComplementAddress($_POST['complementAddress']);
         $user->setCp($_POST['cp']);
         $user->setTown($_POST['town']);
         $user->setFormationDate(new DateTime("01/".$_POST['formationDate']));
         $user->setLevelFormation($_POST['levelFormation']);
+
+        $user->setPhoneMobile($_POST['phoneMobile']);
+        $user->setPhonePro($_POST['phonePro']);
+        $user->setNewsletter(!isset($_POST['newsletter']));
         $user->insert();
         $_SESSION['lastMessage'] = Popup::inscriptionOk();
         header('Location: ' . 'index.php');

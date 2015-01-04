@@ -36,17 +36,24 @@ class DatabaseUser extends Database {
 
     public function addUser(User $user) {
         $adeli = $user->getAdeliNumber();
-        $firstname = $user->getFirstName();
-        $lastname = $user->getLastName();
+        $firstname = utf8_decode($user->getFirstName());
+        $lastname = utf8_decode($user->getLastName());
         $password = $user->getPassword();
         $mail = $user->getMail();
-        $address = $user->getAddress();
+        $address = utf8_decode($user->getAddress());
         $cp = $user->getCp();
-        $town = $user->getTown();
+        $town = utf8_decode($user->getTown());
+        $complementAddress = utf8_decode($user->getComplementAddress());
         $formationDate = $user->getFormationDate()->format("Y-m-d");
         $levelFormation = $user->getLevelFormation();
+        $phonePro = $user->getPhonePro();
+        $phoneMobile = $user->getPhoneMobile();
+        $newsletter = $user->getNewsletter();
 
-        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :adeliNumber, :firstname, :lastname, :password, :mail, CURDATE(), 0, :address, :cp, :town, '', :formationDate, :levelFormation)");
+        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :adeliNumber, :firstname, :lastname, :password,
+                                                                :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
+                                                              :formationDate, :levelFormation, :phonePro,
+                                                              :phoneMobile, :newsletter)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
@@ -54,11 +61,16 @@ class DatabaseUser extends Database {
         $query->bindParam(":mail", $mail, PDO::PARAM_STR);
 
         $query->bindParam(":address", $address, PDO::PARAM_STR);
+        $query->bindParam(":complementAddress", $complementAddress, PDO::PARAM_STR);
         $query->bindParam(":cp", $cp, PDO::PARAM_STR);
         $query->bindParam(":town", $town, PDO::PARAM_STR);
 
         $query->bindParam(":formationDate", $formationDate, PDO::PARAM_STR);
         $query->bindParam(":levelFormation", $levelFormation, PDO::PARAM_INT);
+        $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
+        $query->bindParam(":phoneMobile", $phoneMobile, PDO::PARAM_STR);
+        $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
+
 
         $query->execute();
 
@@ -138,22 +150,36 @@ class DatabaseUser extends Database {
     {
         $id = $user->getId();
         $askValidation = $user->getAskValidation() != NULL ? $user->getAskValidation()->format("Y-m-d") : "NULL";
-        $lastname = $user->getLastName();
-        $firstname = $user->getFirstName();
+        $lastname = utf8_decode($user->getLastName());
+        $firstname = utf8_decode($user->getFirstName());
         $validDate = $user->getValidDate() != NULL ? $user->getValidDate()->format("Y-m-d") : "NULL";
         $adeli = $user->getAdeliNumber();
+
+        $address = utf8_decode($user->getAddress());
+        $complementAddress = utf8_decode($user->getComplementAddress());
+        $cp = $user->getCp();
+        $town = utf8_decode($user->getTown());
+
         $mail = $user->getMail();
         $password = $user->getPassword();
         $forget = $user->getHash();
         $levelFormation = $user->getLevelFormation();
         $formationDate = $user->getFormationDate()->format("Y-m-d");
+        $phonePro = $user->getPhonePro();
+        $phoneMobile = $user->getPhonePro();
+        $newsletter = $user->getNewsletter();
 
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
                                           mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
-                                          formationDate=:formationDate, levelFormation=:levelFormation
+                                          formationDate=:formationDate, levelFormation=:levelFormation, phonePro=:phonePro, phoneMobile=:phoneMobile,
+                                          newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
+        $query->bindParam(":address", $address, PDO::PARAM_STR);
+        $query->bindParam(":complementAddress", $complementAddress, PDO::PARAM_STR);
+        $query->bindParam(":cp", $cp, PDO::PARAM_STR);
+        $query->bindParam(":town", $town, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
         $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
         $query->bindParam(":mail", $mail, PDO::PARAM_STR);
@@ -164,6 +190,9 @@ class DatabaseUser extends Database {
         $query->bindParam(":forget", $forget, PDO::PARAM_STR);
         $query->bindParam(":levelFormation", $levelFormation, PDO::PARAM_INT);
         $query->bindParam(":formationDate", $formationDate, PDO::PARAM_STR);
+        $query->bindParam(":phoneMobile", $phoneMobile, PDO::PARAM_STR);
+        $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
+        $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
         $query->execute();
 
     }

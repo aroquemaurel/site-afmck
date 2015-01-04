@@ -63,9 +63,9 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                             <div class="input-group input-group-lg">
-                    <input required="required" type="text" name="cp" id="cp"
+                    <input required="required" type="text" name="phonePro" id="phonePro"
                            class="form-control input-lg" placeholder="Téléphone professionnel" tabindex="10"
-                           value="<?php echo$user->getCp();?>"
+                           value="<?php echo$user->getPhonePro();?>"
                            >
                          <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-earphone"></i></span>
 
@@ -75,9 +75,9 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                             <div class="input-group input-group-lg">
-                    <input required="required" type="text" name="town" id="town"
+                    <input required="required" type="text" name="phoneMobile" id="phoneMobile"
                            class="form-control input-lg" placeholder="Téléphone mobile" tabindex="11"
-                           value="<?php echo $user->getTown();?>"
+                           value="<?php echo $user->getPhoneMobile();?>"
                            >
                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-phone"></i></span>
@@ -102,9 +102,9 @@ if(!$editing) {
         </div>
                 <div class="form-group">
                             <div class="input-group input-group-lg">
-            <input type="text" name="complementAddresse" id="complementAddresse"
+            <input type="text" name="complementAddress" id="complementAddress"
                    class="form-control input-lg" placeholder="Complément d'adresse (Bâtiment, Appartement, …)" tabindex="9"
-                   value="<?php echo $user->getAddress();?>">
+                   value="<?php echo $user->getComplementAddress();?>">
                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-envelope"></i></span>
                    </div>
@@ -170,7 +170,8 @@ if(!$editing) {
         <fieldset>
             <legend>Newsletter</legend>
             <div class="form-group">
-                    <input type="checkbox"> Je ne souhaite pas recevoir la newsletter
+                     <label><input type="checkbox" <?php if(!$user->getNewsletter()) echo "checked=checked";?>
+                     name="newsletter" id="newsletter"> &nbsp;Je ne souhaite pas recevoir la newsletter</label>
             </div>
         </fieldset>
         <hr class="colorgraph">
