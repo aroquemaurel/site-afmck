@@ -3,7 +3,9 @@
     background-image: url('../img/headBackground.jpg');
     padding: 0;
 }
-
+html {
+    height: 100%
+}
 body a {
 	color: #0173A6;
 }
@@ -32,9 +34,8 @@ footer {
 	height: 120px;
 	color: #fff;
 	border-top: 4px solid #F1A260;
-    position: relative;
-    margin-top: -60px;
-
+    position:relative;
+    margin-top: -7.5em;
 }
 
 .home .carousel-indicators li {
@@ -56,7 +57,9 @@ body {
     font-size: 12pt;
     height: 100%;
     width: 100%;
+    padding-bottom: 80px;
 }
+
 .navbar-default {
 	font-family: 'Roboto';
 	font-size: 13px;
@@ -166,8 +169,13 @@ h3 {
 .breadcrumb .active a {
 	color: #333333;
 }
+* html .main {
+    height: 100%;
+}
 
 .main {
+    position:relative;
+    min-height: 100%;
     text-align: justify;
     overflow:auto;
     padding-bottom: 50px;

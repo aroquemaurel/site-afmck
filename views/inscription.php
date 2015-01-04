@@ -170,7 +170,7 @@ if(!$editing) {
         <fieldset>
             <legend>Newsletter</legend>
             <div class="form-group">
-                     <label><input tabindex="15" type="checkbox" <?php if(!$user->getNewsletter()) echo "checked=checked";?>
+                     <label><input tabindex="15" type="checkbox" <?php if(!$user->getNewsletter() && $editing) echo "checked=checked";?>
                      name="newsletter" id="newsletter"> &nbsp;Je ne souhaite pas recevoir la newsletter</label>
             </div>
         </fieldset>
