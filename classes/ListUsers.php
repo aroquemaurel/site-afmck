@@ -39,10 +39,10 @@ class ListUsers {
         foreach($this->users as $user) {
             $ret .= '<tr href="'.Visitor::getInstance()->getRootPage().'/admin/user.php?id='.$user->getId().'">'.
              '<td>'.$user->getAdeliNumber().'</td>'.
-            '<td>'.utf8_encode($user->getLastName()).'</td>'.
-            '<td>'.utf8_encode($user->getFirstName()).'</td>'.
+            '<td>'.($user->getLastName()).'</td>'.
+            '<td>'.($user->getFirstName()).'</td>'.
             '<td  style="font-size: 8pt; font-family: courrier;">'.$user->getMail().'</td>'.
-            '<td>'.utf8_encode($user->getTown()).'</td>';
+            '<td>'.($user->getTown()).'</td>';
             //echo '<td>'.$user->getAskValidation().'</td>';
             //echo '<td><a href="?valid='.$user->getId().'"><i style="color: green;" class="glyphicon glyphicon-ok"></i></a></td>';
             if($activate) {

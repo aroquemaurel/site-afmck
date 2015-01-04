@@ -208,7 +208,7 @@ class User {
         $ret .= '<i class="glyphicon glyphicon-earphone"></i>&nbsp;<b>Téléphone professionnel: </b>'.$this->getPhonePro().'</br>';
         $ret .= '<i class="glyphicon glyphicon-phone"></i>&nbsp;<b>Téléphone portable: </b>'.$this->getPhoneMobile().'</br>';
         $ret .= '<h2>Adresse</h2>';
-        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.$this->address.'<br/>'.$this->complementAddress.'<br/>'.$this->cp.' '.$this->town;
+        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.$this->address.'<br/>'.($this->complementAddress!=""?$this->complementAddress.'<br/>':"").$this->cp.' '.$this->town;
         $ret .= '<h2>Formation MDT</h2>';
         $ret .= '<b>Niveau de formation</b>: '.$this->levelFormation.'<br/>';
         $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->validDate->format("m / Y");
