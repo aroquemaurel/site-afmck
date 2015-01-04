@@ -63,8 +63,8 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                             <div class="input-group input-group-lg">
-                    <input required="required" type="text" name="phonePro" id="phonePro"
-                           class="form-control input-lg" placeholder="Téléphone professionnel" tabindex="5"
+                    <input required="required" type="text" name="phonePro" id="phonePro" data-format="0d dd dd dd dd"
+                           class="form-control input-lg bfh-phone" placeholder="Téléphone professionnel" tabindex="5"
                            value="<?php echo$user->getPhonePro();?>"
                            >
                          <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -75,8 +75,8 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                             <div class="input-group input-group-lg">
-                    <input type="text" name="phoneMobile" id="phoneMobile"
-                           class="form-control input-lg" placeholder="Téléphone mobile" tabindex="6"
+                    <input type="text" name="phoneMobile" id="phoneMobile" data-format="0d dd dd dd dd"
+                           class="form-control input-lg bfh-phone" placeholder="Téléphone mobile" tabindex="6"
                            value="<?php echo $user->getPhoneMobile();?>"
                            >
                                          <span class="input-group-addon" id="sizing-addon1">
@@ -190,6 +190,8 @@ if(!$editing) {
 $script = '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/moment.js"></script>';
 $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-select.min.js"></script>';
 $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-datetimepicker.js"></script>';
+$script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-formhelpers.min.js"></script>';
+
 $script .= "        <script type=\"text/javascript\">
             $(function () {
                 $('#formationDate').datetimepicker({
