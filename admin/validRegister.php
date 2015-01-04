@@ -3,7 +3,7 @@ include('../begin.php');
 
 use utils\Link;
 $title = 'Validation des incriptions';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', '#'),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
     new Link('Administration','#'), new Link('Validation des inscriptions', '#')));
 $db = new DatabaseUser();
 

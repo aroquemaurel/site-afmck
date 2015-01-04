@@ -35,7 +35,7 @@ footer {
 	color: #fff;
 	border-top: 4px solid #F1A260;
     position:relative;
-    margin-top: -7.5em;
+    margin-top: -50px;
 }
 
 .home .carousel-indicators li {
@@ -371,3 +371,6 @@ a.tooltip2 span
 #news h3 {
     font-size: 11pt;
 }
+
+
+.selected { background-color: #ddd !important; }

@@ -10,6 +10,8 @@ use models\Group;
 
 class User {
     private $id;
+    private $disable;
+
     private $adeliNumber;
     private $password;
     private $firstName;
@@ -122,7 +124,7 @@ class User {
 
         $this->setHash(sha1(md5($this->getMail()." Oups ×D ".$this->getAdeliNumber()." Dommage =þ ".$this->getLastName(). " !". time())));
         $this->commit();
-        $mailer->Body = utf8_decode(Mail::getForgetPassword($this->firstName." ".$this->lastName, "u=".$this->getId()."&s=".
+        $mailer->Body = (Mail::getForgetPassword($this->firstName." ".$this->lastName, "u=".$this->getId()."&s=".
             $this->getHash()));
         $mailer->addAddress($this->mail, $this->firstName." ".$this->lastName);
         $mailer->send();
@@ -130,24 +132,26 @@ class User {
     }
     public function valid() {
         $currentDate = new DateTime();
+        $this->disable = 0;
         $year = $currentDate->format("Y");
-        if($currentDate->format("M") != 11 && $currentDate->format("M") != 12) {
-            $newDate = new DateTime(($year+1).'-12-31');
+        if($currentDate->format("M") != 1 && $currentDate->format("M") != 2) {
+            $newDate = new DateTime(($year+1).'-2-28');
         } else {
-            $newDate = new DateTime(($year+2).'-12-31');
+            $newDate = new DateTime(($year+2).'-2-28');
         }
         $this->validDate = $newDate;
 
         $this->mailer[] = new Mailer();
         end($this->mailer)->isHTML(true);                                  // Set email format to HTML
         end($this->mailer)->Subject .= "Validation inscription";
-        end($this->mailer)->Body = utf8_decode(Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
+        end($this->mailer)->Body = (Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
         end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
     }
 
     public function unvalid()
     {
         $this->validDate = NULL;
+        $this->disable = 1;
     }
 
     public function commit() {
@@ -185,6 +189,7 @@ class User {
         $this->phoneMobile = $data->phoneMobile;
         $this->phonePro = $data->phonePro;
         $this->newsletter = $data->newsletter;
+        $this->disable = $data->disable;
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -192,6 +197,24 @@ class User {
         foreach($dataGroups as $group) {
             $this->groups[] = new Group($group['idGroup'], $group['nom']);
         }
+    }
+
+    public function toHtml() {
+        $ret = '';
+        $ret .= 'Numéro ADELI <b>'.$this->getAdeliNumber().'</b>';
+
+        $ret .= '<h2>Contact</h2>';
+        $ret .= $this->getMail().'</br>';
+        $ret .= '<i class="glyphicon glyphicon-earphone"></i>&nbsp;<b>Téléphone professionnel: </b>'.$this->getPhonePro().'</br>';
+        $ret .= '<i class="glyphicon glyphicon-phone"></i>&nbsp;<b>Téléphone portable: </b>'.$this->getPhoneMobile().'</br>';
+        $ret .= '<h2>Adresse</h2>';
+        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.$this->address.'<br/>'.$this->complementAddress.'<br/>'.$this->cp.' '.$this->town;
+        $ret .= '<h2>Formation MDT</h2>';
+        $ret .= '<b>Niveau de formation</b>: '.$this->levelFormation.'<br/>';
+        $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->validDate->format("m / Y");
+        $ret .= '<H2>Newsletter</H2>';
+        $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
+        return $ret;
     }
 
     public function getHash() {
@@ -238,7 +261,7 @@ class User {
      */
     public function getFirstName()
     {
-        return $this->firstName;
+        return utf8_encode($this->firstName);
     }
 
     /**
@@ -246,7 +269,7 @@ class User {
      */
     public function setFirstName($firstName)
     {
-        $this->firstName = $firstName;
+        $this->firstName = ($firstName);
     }
 
     /**
@@ -254,7 +277,7 @@ class User {
      */
     public function getLastName()
     {
-        return $this->lastName;
+        return utf8_encode($this->lastName);
     }
 
     /**
@@ -262,7 +285,7 @@ class User {
      */
     public function setLastName($lastName)
     {
-        $this->lastName = $lastName;
+        $this->lastName = ($lastName);
     }
 
     /**
@@ -358,7 +381,7 @@ class User {
      */
     public function getAddress()
     {
-        return $this->address;
+        return ($this->address);
     }
 
     /**
@@ -366,7 +389,7 @@ class User {
      */
     public function setAddress($address)
     {
-        $this->address = $address;
+        $this->address = ($address);
     }
 
     /**
@@ -374,7 +397,7 @@ class User {
      */
     public function getTown()
     {
-        return $this->town;
+        return ($this->town);
     }
 
     /**
@@ -382,7 +405,7 @@ class User {
      */
     public function setTown($town)
     {
-        $this->town = $town;
+        $this->town = ($town);
     }
 
     /**
@@ -486,7 +509,7 @@ class User {
      */
     public function getComplementAddress()
     {
-        return $this->complementAddress;
+        return ($this->complementAddress);
     }
 
     /**
@@ -494,7 +517,23 @@ class User {
      */
     public function setComplementAddress($complementAddress)
     {
-        $this->complementAddress = $complementAddress;
+        $this->complementAddress = ($complementAddress);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDisable()
+    {
+        return $this->disable;
+    }
+
+    /**
+     * @param mixed $disable
+     */
+    public function setDisable($disable)
+    {
+        $this->disable = $disable;
     }
 
 

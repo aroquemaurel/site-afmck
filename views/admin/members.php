@@ -1,58 +1,40 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid">
     <h1>Liste des adhérents</h1>
-    <h2>Comptes validés</h2>
-    <table class="table table-striped">
-        <tr>
-            <th>N° ADELI</th>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Courriel</th>
-            <th>Ville</th>
-            <th>Désativer</th>
-        </tr>
-        <?php
-        foreach($usersOk as $user) {
-            echo '<tr>';
-            echo '<td>'.$user->getAdeliNumber().'</td>';
-            echo '<td>'.$user->getLastName().'</td>';
-            echo '<td>'.$user->getFirstName().'</td>';
-            echo '<td  style="font-size: 8pt; font-family: courrier;">'.$user->getMail().'</td>';
-            echo '<td>'.$user->getTown().'</td>';
-            //echo '<td>'.$user->getAskValidation().'</td>';
-            //echo '<td><a href="?valid='.$user->getId().'"><i style="color: green;" class="glyphicon glyphicon-ok"></i></a></td>';
-            echo '<td><a href="?unvalid='.$user->getId().'"><i style="color: red;" class="glyphicon glyphicon-remove"></i></a></td>';
+    <?php
+    if($usersOk->getUsers() != array()) {
+        echo '<h2>Comptes actifs</h2>';
+        echo $usersOk->usersToString(true);
+    }
 
-            echo '</tr>';
-        }
-        ?>
-    </table>
+    if($usersToActivate->getUsers() != array()) {
+        echo '<h2>Comptes à activer</h2>';
+        echo $usersToActivate->usersToString(false);
+    }
 
-    <h2>Comptes hors-service</h2>
-    <table class="table table-striped">
-        <tr>
-            <th>N° ADELI</th>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Courriel</th>
-            <th>Ville</th>
-            <th>Activer</th>
-        </tr>
-        <?php
-        foreach($usersNotOk as $user) {
-            echo '<tr>';
-            echo '<td>'.$user->getAdeliNumber().'</td>';
-            echo '<td>'.$user->getLastName().'</td>';
-            echo '<td>'.$user->getFirstName().'</td>';
-            echo '<td  style="font-size: 8pt; font-family: courrier;">'.$user->getMail().'</td>';
-            echo '<td>'.$user->getTown().'</td>';
-            //echo '<td>'.$user->getAskValidation().'</td>';
-            echo '<td><a href="?valid='.$user->getId().'"><i style="color: green;" class="glyphicon glyphicon-ok"></i></a></td>';
-            //echo '<td><a href="?unvalid='.$user->getId().'"><i style="color: red;" class="glyphicon glyphicon-remove"></i></a></td>';
-
-            echo '</tr>';
-        }
-        ?>
-    </table>
-
+    if($usersNotOk->getUsers() != array()) {
+        echo '<h2>Comptes désactivés manuellement</h2>';
+        echo $usersNotOk->usersToString(false);
+    }
+    ?>
 </div>
+
+<?php
+$script = '<script>
+$(document).ready(function(){
+$("tr").hover(function() {
+if($(this).closest(\'thead\').length == 0) {
+    $("tr").removeClass("info");
+    $(this).addClass("info");
+    $("tr").css("cursor", "pointer" );
+} else {
+$("tr").css("cursor", "default" );
+}
+});
+$("tr").click(function() {
+if($(this).closest(\'thead\').length == 0) {
+    window.location.href = $(this).attr("href");
+    }
+});
+ });
+</script>';

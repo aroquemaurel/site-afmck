@@ -3,7 +3,7 @@ include('../begin.php');
 
 use utils\Link;
 $title = 'Liste des membres';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', '#'),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
     new Link('Administration','#'), new Link('Liste des membres', '#')));
 $db = new DatabaseUser();
 if(isset($_GET['valid'])) {
@@ -20,8 +20,10 @@ if(isset($_GET['valid'])) {
 }
 
 
-$usersOk = $db->getUsersValides();
-$usersNotOk = $db->getUsersHS();
+$usersOk = new ListUsers($db->getUsersValides());
+$usersNotOk = new ListUsers($db->getUsersDisable());
+$usersToActivate = new ListUsers($db->getUsersToValid());
+
 include('../views/includes/head.php');
 include('../views/admin/members.php');
 include('../views/includes/foot.php');

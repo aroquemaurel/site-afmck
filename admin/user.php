@@ -1,12 +1,16 @@
 <?php
 include('../begin.php');
-use utils\Link;
 
-$title = 'Journées de l\'AFMcK — Lyon 2013';
+use utils\Link;
+$db = new DatabaseUser();
+$user = $db->getUserById($_GET['id']);
+$title = 'Utilisateur '.$user->getFirstName()." ".$user->getLastName();
+
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
-    new Link('Journées de l\'association','#'), new Link('Lyon 2013', '#')));
+    new Link('Administration','#'), new Link('Membre '.$user->getFirstName()." ".$user->getLastName(),  '#')));
+
 include('../views/includes/head.php');
-include('../views/members/journees_lyon.php');
+include('../views/admin/user.php');
 include('../views/includes/foot.php');
 
 ?>

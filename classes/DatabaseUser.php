@@ -36,21 +36,22 @@ class DatabaseUser extends Database {
 
     public function addUser(User $user) {
         $adeli = $user->getAdeliNumber();
-        $firstname = utf8_decode($user->getFirstName());
-        $lastname = utf8_decode($user->getLastName());
+        $firstname = $user->getFirstName();
+        $lastname = $user->getLastName();
         $password = $user->getPassword();
         $mail = $user->getMail();
-        $address = utf8_decode($user->getAddress());
+        $address = $user->getAddress();
         $cp = $user->getCp();
-        $town = utf8_decode($user->getTown());
-        $complementAddress = utf8_decode($user->getComplementAddress());
+        $town = $user->getTown();
+        $complementAddress = $user->getComplementAddress();
         $formationDate = $user->getFormationDate()->format("Y-m-d");
         $levelFormation = $user->getLevelFormation();
         $phonePro = $user->getPhonePro();
         $phoneMobile = $user->getPhoneMobile();
         $newsletter = $user->getNewsletter();
+        $disable = $user->getDisable();
 
-        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :adeliNumber, :firstname, :lastname, :password,
+        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :disable, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
                                                               :phoneMobile, :newsletter)");
@@ -70,7 +71,7 @@ class DatabaseUser extends Database {
         $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
         $query->bindParam(":phoneMobile", $phoneMobile, PDO::PARAM_STR);
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
-
+        $query->bindParam(":disable", $disable, PDO::PARAM_INT);
 
         $query->execute();
 
@@ -111,7 +112,7 @@ class DatabaseUser extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
-                                           WHERE validDate < CURDATE() AND validDate != 'NULL' order by lastname");
+                                           WHERE validDate < CURDATE() AND validDate != 'NULL' AND disable != 1 order by lastname");
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
@@ -138,10 +139,8 @@ class DatabaseUser extends Database {
     }
 
     public function countUsersToValid() {
-        $ret = array();
-
         $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
-                                           WHERE validDate < CURDATE() AND validDate != 'NULL'");
+                                           WHERE validDate < CURDATE() AND validDate != 'NULL' AND disable=0");
         $query->execute();
         return $query->fetchObject()->countid;
 
@@ -150,15 +149,15 @@ class DatabaseUser extends Database {
     {
         $id = $user->getId();
         $askValidation = $user->getAskValidation() != NULL ? $user->getAskValidation()->format("Y-m-d") : "NULL";
-        $lastname = utf8_decode($user->getLastName());
-        $firstname = utf8_decode($user->getFirstName());
+        $lastname = $user->getLastName();
+        $firstname = $user->getFirstName();
         $validDate = $user->getValidDate() != NULL ? $user->getValidDate()->format("Y-m-d") : "NULL";
         $adeli = $user->getAdeliNumber();
 
-        $address = utf8_decode($user->getAddress());
-        $complementAddress = utf8_decode($user->getComplementAddress());
+        $address = $user->getAddress();
+        $complementAddress = $user->getComplementAddress();
         $cp = $user->getCp();
-        $town = utf8_decode($user->getTown());
+        $town = ($user->getTown());
 
         $mail = $user->getMail();
         $password = $user->getPassword();
@@ -168,14 +167,17 @@ class DatabaseUser extends Database {
         $phonePro = $user->getPhonePro();
         $phoneMobile = $user->getPhonePro();
         $newsletter = $user->getNewsletter();
+        $disable = $user->getDisable();
 
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
                                           mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
                                           formationDate=:formationDate, levelFormation=:levelFormation, phonePro=:phonePro, phoneMobile=:phoneMobile,
-                                          newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress
+                                          newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress,
+                                          disable=:disable
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
+        $query->bindParam(":disable", $disable, PDO::PARAM_INT);
         $query->bindParam(":address", $address, PDO::PARAM_STR);
         $query->bindParam(":complementAddress", $complementAddress, PDO::PARAM_STR);
         $query->bindParam(":cp", $cp, PDO::PARAM_STR);
@@ -194,6 +196,24 @@ class DatabaseUser extends Database {
         $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
         $query->execute();
+
+    }
+
+    public function getUsersDisable()
+    {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT * from `user`
+                                           WHERE disable=1
+                                           order by lastname");
+        $query->execute();
+
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $ret[] = $user;
+        }
+        return $ret;
 
     }
 }
