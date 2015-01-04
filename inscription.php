@@ -20,7 +20,7 @@ if(isset($_POST['firstName'])) {
         $user->setAddress($_POST['address']);
         $user->setCp($_POST['cp']);
         $user->setTown($_POST['town']);
-        $user->setFormationDate(new DateTime($_POST['formationDate']));
+        $user->setFormationDate(new DateTime("01/".$_POST['formationDate']));
         $user->setLevelFormation($_POST['levelFormation']);
         $user->insert();
         $_SESSION['lastMessage'] = Popup::inscriptionOk();

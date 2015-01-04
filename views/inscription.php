@@ -74,8 +74,8 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                     <div required="required" class='input-group date' id="formationDate">
-                        <input tabindex="8" type='text'  id='formationDate1' name='formationDate' placeholder="Date de validation" class="form-control input-lg"
-                        value="<?php echo ($user->getFormationDate() != NULL ? $user->getFormationDate()->format("d/m/Y") : "");?>"
+                        <input data-date-format="MM/YYYY" tabindex="8" type='text'  id='formationDate1' name='formationDate' placeholder="Date de validation" class="form-control input-lg"
+                        value="<?php echo ($user->getFormationDate() != NULL ? $user->getFormationDate()->format("m/Y") : "");?>"
                         />
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -125,7 +125,9 @@ $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/
 $script .= "        <script type=\"text/javascript\">
             $(function () {
                 $('#formationDate').datetimepicker({
-                					pickTime: false
+                					pickTime: false,
+                					viewMode: 'months',
+                					minViewMode: 'months'
                 });
             });
 </script>";
