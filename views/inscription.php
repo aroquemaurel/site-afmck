@@ -143,7 +143,7 @@ if(!$editing) {
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
-                    <select tabindex="7" class="form-control input-lg" required="required" id="levelFormation" name="levelFormation">
+                    <select tabindex="7" class="selectpicker form-control input-lg" required="required" id="levelFormation" name="levelFormation">
                         <option disabled selected>Niveau de formation MDT</option>
                         <option <?php if($user->getLevelFormation() == 1) echo "selected"?> value="1">A</option>
                         <option <?php if($user->getLevelFormation() == 2) echo "selected"?> value="2">B</option>
@@ -187,6 +187,7 @@ if(!$editing) {
 </div>
 <?php
 $script = '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/moment.js"></script>';
+$script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-select.min.js"></script>';
 $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-datetimepicker.js"></script>';
 $script .= "        <script type=\"text/javascript\">
             $(function () {
@@ -196,9 +197,9 @@ $script .= "        <script type=\"text/javascript\">
                 					minViewMode: 'months'
                 });
             });
+                 $('.selectpicker').selectpicker();
 </script>";
 
 if(!$editing) {
-
     $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formRegister.js"></script>';
 }

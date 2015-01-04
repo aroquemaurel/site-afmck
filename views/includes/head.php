@@ -19,6 +19,7 @@
     <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/afmck.css" rel="stylesheet">
     <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap-select.min.css" rel="stylesheet">
 
     <!-- Yamm styles-->
     <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/yamm3/yamm/yamm.css" rel="stylesheet">
