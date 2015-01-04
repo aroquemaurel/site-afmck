@@ -4,7 +4,7 @@
             <div class="input-group input-group-lg">
             <input required="required" type="password" name="password" id="password"
                    autocomplete="off" class="form-control input-lg"
-                   placeholder="Mot de passe" tabindex="5">
+                   placeholder="Mot de passe" tabindex="11">
                                                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-lock"></i></span>
 
@@ -22,7 +22,7 @@
             <input required="required" type="password" name="passwordConfirmation"
                    autocomplete="off" id="passwordConfirmation"
                    class="form-control input-lg" placeholder="Confirmation du mot de passe"
-                   tabindex="6">
+                   tabindex="12">
                                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-lock"></i></span>
 

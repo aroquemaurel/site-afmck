@@ -64,7 +64,7 @@ if(!$editing) {
                 <div class="form-group">
                             <div class="input-group input-group-lg">
                     <input required="required" type="text" name="phonePro" id="phonePro"
-                           class="form-control input-lg" placeholder="Téléphone professionnel" tabindex="10"
+                           class="form-control input-lg" placeholder="Téléphone professionnel" tabindex="5"
                            value="<?php echo$user->getPhonePro();?>"
                            >
                          <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -75,8 +75,8 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                             <div class="input-group input-group-lg">
-                    <input required="required" type="text" name="phoneMobile" id="phoneMobile"
-                           class="form-control input-lg" placeholder="Téléphone mobile" tabindex="11"
+                    <input type="text" name="phoneMobile" id="phoneMobile"
+                           class="form-control input-lg" placeholder="Téléphone mobile" tabindex="6"
                            value="<?php echo $user->getPhoneMobile();?>"
                            >
                                          <span class="input-group-addon" id="sizing-addon1">
@@ -94,7 +94,7 @@ if(!$editing) {
         <div class="form-group">
                             <div class="input-group input-group-lg">
             <input required="required" type="text" name="address" id="address"
-                   class="form-control input-lg" placeholder="Adresse (Rue et numéro de rue)" tabindex="9"
+                   class="form-control input-lg" placeholder="Adresse (Rue et numéro de rue)" tabindex="7"
                    value="<?php echo $user->getAddress();?>">
                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-envelope"></i></span>
@@ -103,7 +103,7 @@ if(!$editing) {
                 <div class="form-group">
                             <div class="input-group input-group-lg">
             <input type="text" name="complementAddress" id="complementAddress"
-                   class="form-control input-lg" placeholder="Complément d'adresse (Bâtiment, Appartement, …)" tabindex="9"
+                   class="form-control input-lg" placeholder="Complément d'adresse (Bâtiment, Appartement, …)" tabindex="8"
                    value="<?php echo $user->getComplementAddress();?>">
                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-envelope"></i></span>
@@ -114,7 +114,7 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                     <input required="required" type="text" name="cp" id="cp"
-                           class="form-control input-lg" placeholder="Code postal" tabindex="10"
+                           class="form-control input-lg" placeholder="Code postal" tabindex="9"
                            value="<?php echo$user->getCp();?>"
                            >
                 </div>
@@ -122,7 +122,7 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                     <input required="required" type="text" name="town" id="town"
-                           class="form-control input-lg" placeholder="Ville" tabindex="11"
+                           class="form-control input-lg" placeholder="Ville" tabindex="10"
                            value="<?php echo $user->getTown();?>"
                            >
                 </div>
@@ -143,7 +143,7 @@ if(!$editing) {
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
-                    <select tabindex="7" class="selectpicker form-control input-lg" required="required" id="levelFormation" name="levelFormation">
+                    <select tabindex="13" class="selectpicker form-control input-lg" required="required" id="levelFormation" name="levelFormation">
                         <option disabled selected>Niveau de formation MDT</option>
                         <option <?php if($user->getLevelFormation() == 1) echo "selected"?> value="1">A</option>
                         <option <?php if($user->getLevelFormation() == 2) echo "selected"?> value="2">B</option>
@@ -157,7 +157,7 @@ if(!$editing) {
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                     <div required="required" class='input-group date input-group-lg' id="formationDate">
-                        <input data-date-format="MM/YYYY" tabindex="8" type='text'  id='formationDate1' name='formationDate' placeholder="Date de validation" class="form-control input-lg"
+                        <input data-date-format="MM/YYYY" tabindex="14" type='text'  id='formationDate1' name='formationDate' placeholder="Date de validation" class="form-control input-lg"
                         value="<?php echo ($user->getFormationDate() != NULL ? $user->getFormationDate()->format("m/Y") : "");?>"
                         />
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
@@ -170,7 +170,7 @@ if(!$editing) {
         <fieldset>
             <legend>Newsletter</legend>
             <div class="form-group">
-                     <label><input type="checkbox" <?php if(!$user->getNewsletter()) echo "checked=checked";?>
+                     <label><input tabindex="15" type="checkbox" <?php if(!$user->getNewsletter()) echo "checked=checked";?>
                      name="newsletter" id="newsletter"> &nbsp;Je ne souhaite pas recevoir la newsletter</label>
             </div>
         </fieldset>
