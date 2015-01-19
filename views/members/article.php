@@ -1,6 +1,6 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid" style="padding-right: 300px">
-    <h1>Le kiosque</h1>
+    <h1>Articles scientifiques</h1>
     <div id="toc" class="toc"></div><!--/.well -->
     <div class="thumbnail with-caption toc" id="toc"' style="text-align: left;margin-right: 300px; margin-top: -100px;">
         <img id="mini" alt="" style="text-align: center;margin:auto">

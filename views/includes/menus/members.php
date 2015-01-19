@@ -88,9 +88,15 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="kiosque.php">Kiosque</a>
+                <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Kiosque
+                        <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                    <li><a href="articles.php">Articles scientifiques</a></li>
+                    <li><a href="http://www.mckenziemdt.org/MDTWorldPress/" target="_blank"><i span class="glyphicon glyphicon-globe"></i> Institut McKenzie</a></li>
+                    <li><a href="newsletters.php">Newsletters de McKenzie International</a></li>
+                    </ul>
                 </li>
-                <li class="dropdown"><a href="certification.php">Certification</a></li>
+        <li class="dropdown"><a href="certification.php">Certification</a></li>
 
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Actualités en région
                         <b class="caret"></b></a>
