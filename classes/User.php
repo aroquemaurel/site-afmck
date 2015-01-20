@@ -217,6 +217,7 @@ class User {
         return $ret;
     }
 
+    public function
     public function getHash() {
         return $this->hash;
     }
