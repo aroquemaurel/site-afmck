@@ -58,8 +58,11 @@ class Popup {
 
     public static function inscriptionOk()
     {
-        return self::successMessage("Vous êtes maintenant inscrit sur le site. <br/>Afin de pouvoir vous connecter, vous devez attendre qu'un
-        membre du CA valide votre inscription.");
+        return self::successMessage("Vous êtes maintenant inscrit sur le site.
+        <br/>Afin de pouvoir vous connecter, votre compte doit être validé.<br/><br/>
+        Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>
+        De plus, vous devez envoyer ce document signé par mail ou par courrier.
+        ");
     }
 
     public static function disableAccount()

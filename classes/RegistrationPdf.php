@@ -1,5 +1,9 @@
 <?php
-public class RegistrationPdf {
+class RegistrationPdf extends PdfFile {
+    private $user;
+    public function __construct(User $user) {
+        $this->user = $user;
+    }
     public function toHtml() {
         $content = "    <p style=\"\">
             <img src=\"".Visitor::getInstance()->getRootPage()."/style/img/logo.jpg\"
@@ -38,13 +42,15 @@ public class RegistrationPdf {
         </p>
         <div style=\"height:2px;border-bottom:1px solid black;\"></div>
         ";
-
+        $content .= $this->user->toHtml(true);
         return $content;
     }
+
+    public function generatePdf($str='') {
+        parent::generatePdf(Visitor::getInstance()->getRootPage()."/docs/members/registration/"
+        .$this->user->getAdeliNumber().'.pdf');
+    }
+
+
 }
 
-/*
- * $html2pdf = new Pdf();
-$html2pdf->WriteHTML($content);
-$html2pdf->Output('exemple.pdf');
- */

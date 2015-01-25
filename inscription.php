@@ -27,7 +27,12 @@ if(isset($_POST['firstName'])) {
         $user->setPhoneMobile($_POST['phoneMobile']);
         $user->setPhonePro($_POST['phonePro']);
         $user->setNewsletter(!isset($_POST['newsletter']));
+        $user->setDisable(false);
         $user->insert();
+
+        $reg = new RegistrationPdf($user);
+        $reg->generatePdf();
+
         $_SESSION['lastMessage'] = Popup::inscriptionOk();
         header('Location: ' . 'index.php');
     }

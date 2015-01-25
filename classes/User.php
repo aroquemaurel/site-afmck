@@ -199,25 +199,33 @@ class User {
         }
     }
 
-    public function toHtml() {
+    public function toHtml($pdf=false) {
         $ret = '';
-        $ret .= 'Numéro ADELI <b>'.$this->getAdeliNumber().'</b>';
+        if($pdf) {
+            $ret .= '<h1 style="font-size: 18pt">' . $this->getFirstName() . ' ' . $this->getLastName() . '</h1>';
+        }
+        $ret .= '<b>Numéro ADELI</b> '.$this->getAdeliNumber().'<br/>';
 
-        $ret .= '<h2>Contact</h2>';
-        $ret .= $this->getMail().'</br>';
-        $ret .= '<i class="glyphicon glyphicon-earphone"></i>&nbsp;<b>Téléphone professionnel: </b>'.$this->getPhonePro().'</br>';
-        $ret .= '<i class="glyphicon glyphicon-phone"></i>&nbsp;<b>Téléphone portable: </b>'.$this->getPhoneMobile().'</br>';
-        $ret .= '<h2>Adresse</h2>';
+        $ret .= '<h2 style="font-size: 14pt">Contact</h2>';
+        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;<b>Email</b> <a href="mailto:'.$this->getMail().'">'.strtolower($this->getMail()).'</a><br/>';
+        $ret .= '<i class="glyphicon glyphicon-earphone"></i>&nbsp;<b>Téléphone professionnel: </b>'.$this->getPhonePro().'<br/>';
+        $ret .= '<i class="glyphicon glyphicon-phone"></i>&nbsp;<b>Téléphone portable: </b>'.$this->getPhoneMobile().'<br/>';
+
+        $ret .= '<h2 style="font-size: 14pt">Adresse</h2>';
         $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.$this->address.'<br/>'.($this->complementAddress!=""?$this->complementAddress.'<br/>':"").$this->cp.' '.$this->town;
-        $ret .= '<h2>Formation MDT</h2>';
+        $ret .= '<h2 style="font-size: 14pt">Formation MDT</h2>';
         $ret .= '<b>Niveau de formation</b>: '.$this->levelFormation.'<br/>';
-        $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->validDate->format("m / Y");
-        $ret .= '<H2>Newsletter</H2>';
+        $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->formationDate->format("m / Y");
+        $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
         $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
+        $ret .= '<span style=\"color:red;\">sdf</span>';
+
+        if($pdf) {
+            $ret .= '<p style="font-size: 11pt; margin-top: 100px;">Signature<br/><br/>Le .... / .... / 2015<br/><br/>À ........................</p>';
+        }
         return $ret;
     }
 
-    public function
     public function getHash() {
         return $this->hash;
     }
