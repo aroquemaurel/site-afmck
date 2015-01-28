@@ -218,7 +218,6 @@ class User {
         $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->formationDate->format("m / Y");
         $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
         $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
-        $ret .= '<span style=\"color:red;\">sdf</span>';
 
         if($pdf) {
             $ret .= '<p style="font-size: 11pt; margin-top: 100px;">Signature<br/><br/>Le .... / .... / 2015<br/><br/>À ........................</p>';
