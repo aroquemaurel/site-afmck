@@ -92,8 +92,8 @@ class Visitor {
 
 
     public function hasRights($pageFilename, $groups=array()) {
-        return true;
         $splits = explode('/', $pageFilename);
+        print_r($splits);
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
                 if($this->user->isInGroup($group)) {
@@ -101,9 +101,9 @@ class Visitor {
                 }
             }
             return false;
-        } else if($splits['0'] == 'members') { // not in database, but begin with members
+        } else if($splits['2'] == 'members') { // not in database, but begin with members
             return $this->isConnected();
-        } else if($splits['0'] == 'admin') {
+        } else if($splits['2'] == 'admin') {
             return $this->isConnected() && $this->user->isInGroup("ADMINISTRATEUR");
         } else { // Every body can see
             return true;
@@ -122,15 +122,7 @@ class Visitor {
     }
 
     public function getCurrentFile() {
-        $currentFile = '';
-        if(basename(getcwd()) == 'members') {
-            $currentFile .= 'members/';
-        } else if(basename(getcwd()) == 'admin') {
-            $currentFile .= 'admin/';
-        }
-        $currentFile .= basename($_SERVER['PHP_SELF']);
-
-        return $currentFile;
+        return $_SERVER['PHP_SELF'];
     }
 
     public function removeUser() {
