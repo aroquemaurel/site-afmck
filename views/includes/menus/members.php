@@ -72,16 +72,16 @@
                                         <li>
                                             <p><strong>Les documentations</strong></p>
                                         </li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/fichesbilan.php">Fiches Bilan</a></li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/fichesexercices.php">Fiches d'exerices</a></li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/com.php">La com'</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/documentations/fiches-bilan.php">Fiches Bilan</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/documentations/fiches-exercices.php">Fiches d'exerices</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/documentations/com.php">La com'</a></li>
                                     </ul>
                                     <ul class="col-sm-3 list-unstyled">
                                         <li>
                                             <p><strong>Autres outils</strong></p>
                                         </li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/materiel.php">Matériel</a></li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/logiciels.php">Logiciels</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/autres-outils/materiel.php">Matériel</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/autres-outils/logiciels.php">Logiciels</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -91,9 +91,9 @@
                 <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Kiosque
                         <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                    <li><a href="articles.php">Articles scientifiques</a></li>
+                    <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/articles.php">Articles scientifiques</a></li>
                     <li><a href="http://www.mckenziemdt.org/MDTWorldPress/" target="_blank"><i span class="glyphicon glyphicon-globe"></i> Institut McKenzie</a></li>
-                    <li><a href="newsletters.php">Newsletters de McKenzie International</a></li>
+                    <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/newsletters.php">Newsletters de McKenzie International</a></li>
                     </ul>
                 </li>
         <li class="dropdown"><a href="certification.php">Certification</a></li>
@@ -102,7 +102,7 @@
                         <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                        <!-- <li><a tabindex="-1" href="#"> APMK</a></li>-->
-                        <li><a tabindex="-1" href="collaborationslocales.php"> Collaborations locales</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/collaborationslocales.php"> Collaborations locales</a></li>
                         <!--<li><a tabindex="-1" href="#"> Divers</a></li>-->
                     </ul>
                 </li>
@@ -111,7 +111,7 @@
                     <ul role="menu" class="dropdown-menu">
                         <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/charte des praticiens adherents AFMcK.pdf"> Charte AFMcK</a></li>
                         <li><a tabindex="-1" href="http://afmck.forumactif.org/login"> Forum</a></li>
-                        <li><a tabindex="-1" href="cominterne.php"> Communication Interne</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/cominterne.php"> Communication Interne</a></li>
                         <!--<li><a tabindex="-1" href="#"> Partenaires</a></li>
                         <li><a tabindex="-1" href="#"> Nous contacter</a></li>-->
                     </ul>
