@@ -1,5 +1,5 @@
 <?php
-include(Visitor::getInstance()->getRootPage().'begin.php');
+include('begin.php');
 require_once('libs/password_compat/lib/password.php');
 
 use utils\Link;

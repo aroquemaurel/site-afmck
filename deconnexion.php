@@ -1,5 +1,5 @@
 <?php
-include(Visitor::getInstance()->getRootPage().'begin.php');
+include('begin.php');
 
 if(Visitor::getInstance()->isConnected()) {
     Visitor::getInstance()->getUser()->clearCookie();

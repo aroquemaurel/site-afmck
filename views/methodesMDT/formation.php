@@ -14,7 +14,7 @@
         <ul>
         <li><i class="glyphicon glyphicon-pushpin"></i> <a href="../02b_afmck-charte.php">Consulter la charte de bonne pratique</a></li>
         <li><i class="glyphicon
-        "></i> <a href="../03a_praticiens.php">Vérifier le niveau de formation de votre thérapeute</a></li>
+        "></i> <a href="../praticiens.php">Vérifier le niveau de formation de votre thérapeute</a></li>
         </ul>
 
         <h2>Comment se former ?</h2>
