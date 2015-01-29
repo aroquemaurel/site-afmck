@@ -93,7 +93,6 @@ class Visitor {
 
     public function hasRights($pageFilename, $groups=array()) {
         $splits = explode('/', $pageFilename);
-        print_r($splits);
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
                 if($this->user->isInGroup($group)) {
