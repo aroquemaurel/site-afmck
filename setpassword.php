@@ -1,5 +1,5 @@
 <?php
-include('begin.php');
+include(Visitor::getInstance()->getRootPage().'begin.php');
 use utils\Link;
 
 $title = 'J\'ai oublié mon mot de passe';
@@ -31,9 +31,9 @@ if($user == null || $_GET['s'] != $user->getHash()) {
 $title = 'Modifier le mot de passe';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Modifier le mot de passe', '#')));
 
-include('views/includes/head.php');
-include('views/setpassword.php');
-include('views/includes/foot.php');
+include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
+include(Visitor::getInstance()->getRootPath().'/views/setpassword.php');
+include(Visitor::getInstance()->getRootPath().'/views/includes/foot.php');
 ?>
 
 

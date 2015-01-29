@@ -36,19 +36,20 @@ class Visitor {
 
     public function displayMenu() {
         if(basename(getcwd()) == 'members' || basename(getcwd()) == 'admin') {
-            include($this->getRootPage() . '/views/includes/menus/members.php');
+            include($this->getRootPath() . '/views/includes/menus/members.php');
         } else {
-            include($this->getRootPage() . '/views/includes/menus/visitors.php');
+            include($this->getRootPath() . '/views/includes/menus/visitors.php');
         }
     }
 
     public function getRootPage() {
-        if(basename(getcwd()) == 'members' || basename(getcwd()) == 'admin') {
-            return '..';
-        } else {
-            return '.';
-        }
+        return ROOT_PAGE;
     }
+
+    public function getRootPath() {
+        return ROOT_PATH.'/'.ROOT_PAGE;
+    }
+
     public function getLastPage() {
         return $this->lastPage;
     }

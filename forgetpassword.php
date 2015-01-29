@@ -1,5 +1,5 @@
 <?php
-include('begin.php');
+include(Visitor::getInstance()->getRootPage().'begin.php');
 use utils\Link;
 
 $title = 'J\'ai oublié mon mot de passe';
@@ -17,7 +17,7 @@ if(isset($_POST['adeliNumber']) && isset($_POST['email'])) {
         $_SESSION['lastMessage'] = Popup::errorMessage("L'utilisateur n'a pas été trouvé");
     }
 }
-include('views/includes/head.php');
-include('views/forgetpassword.php');
-include('views/includes/foot.php');
+include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
+include(Visitor::getInstance()->getRootPath().'/views/forgetpassword.php');
+include(Visitor::getInstance()->getRootPath().'/views/includes/foot.php');
 ?>
