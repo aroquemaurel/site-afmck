@@ -91,18 +91,18 @@
                 <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Kiosque
                         <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                    <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/articles.php">Articles scientifiques</a></li>
+                    <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/kiosque/articles-scientifiques.php">Articles scientifiques</a></li>
                     <li><a href="http://www.mckenziemdt.org/MDTWorldPress/" target="_blank"><i span class="glyphicon glyphicon-globe"></i> Institut McKenzie</a></li>
-                    <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/newsletters.php">Newsletters de McKenzie International</a></li>
+                    <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/kiosque/newsletters-McKenzie.php">Newsletters de McKenzie International</a></li>
                     </ul>
                 </li>
-        <li class="dropdown"><a href="certification.php">Certification</a></li>
+        <li class="dropdown"><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/certification.php">Certification</a></li>
 
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Actualités en région
                         <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                        <!-- <li><a tabindex="-1" href="#"> APMK</a></li>-->
-                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/collaborationslocales.php"> Collaborations locales</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/members/actualites-en-region/collaborations-locales.php"> Collaborations locales</a></li>
                         <!--<li><a tabindex="-1" href="#"> Divers</a></li>-->
                     </ul>
                 </li>
@@ -111,7 +111,7 @@
                     <ul role="menu" class="dropdown-menu">
                         <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/charte des praticiens adherents AFMcK.pdf"> Charte AFMcK</a></li>
                         <li><a tabindex="-1" href="http://afmck.forumactif.org/login"> Forum</a></li>
-                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/cominterne.php"> Communication Interne</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/members/divers/com-interne.php"> Communication Interne</a></li>
                         <!--<li><a tabindex="-1" href="#"> Partenaires</a></li>
                         <li><a tabindex="-1" href="#"> Nous contacter</a></li>-->
                     </ul>

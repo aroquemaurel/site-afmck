@@ -8,9 +8,13 @@
 
 <ul>
         <?php
-        Image::miniLink(Visitor::getInstance()->getRootPage()."/docs/members/cominterne/", "Rapport moral 2014 du President_AFMcK",
+        Image::miniLink(Visitor::getInstance()->getRootPage()."/docs/members/cominterne",
+            "Rapport moral 2014 du President_AFMcK",
             "Rapport moral 2014 <small>Jacky OTERO (Président de l'AFMcK)</small>");
-        Image::miniLink(Visitor::getInstance()->getRootPage()."/docs/members/cominterne/", "Sondage de satisfaction-lyon 2014_AFMcK", "Sondage de satisfaction");
+        Image::miniLink(Visitor::getInstance()->getRootPage()."/docs/members/cominterne",
+            "Sondage de satisfaction-lyon 2014_AFMcK", "Sondage de satisfaction");
+        Image::miniLink(Visitor::getInstance()->getRootPage()."/docs/members/cominterne",
+            "Compta-2014-2015", "Compta-2014-2015");
         ?>
     </ul>
     <p>&nbsp;</p>

@@ -61,8 +61,12 @@
                 <li>Si vous avez déjà la version 2.5 faites une sauvedarde des données à un endroit de votre choix</li>
                 <li>Choisissez votre système d'exploitation et téléchargez le logiciel en cliquant sur le lien suivant
                     <table><tr>
-                            <td class="oslogo"><a href="http://downloads.joohoo.fr/bilanMDT_windows_telechargement.php" target="_blank"><img src="img/windows.jpg" width="90" height="58" alt="vers win" /></a></td>
-                            <td class="oslogo"><a href="http://downloads.joohoo.fr/bilanMDT_macOS_telechargement.php" target="_blank"><img src="img/mac.jpg" width="90" height="54" alt="mac" /></a></td></tr>
+                            <td class="oslogo"><a href="http://downloads.joohoo.fr/bilanMDT_windows_telechargement.php"
+                                                  target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage().
+                                        "/docs/members/logiciels/Windows.png"?>" height="80" alt="vers win" /></a></td>
+                            <td class="oslogo"><a href="http://downloads.joohoo.fr/bilanMDT_macOS_telechargement.php"
+                                                  target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage().
+                                        "/docs/members/logiciels/mac.jpg"?>" height="80" alt="mac" /></a></td></tr>
                     </table>
                 </li>
                 <li>Envoyez un mail à <a href="mailto:contact@afmck.fr">contact@afmck.fr</a> avec
@@ -83,7 +87,7 @@
                     <li>lisez le document d’utilisation joint</li>
                 </ul>
                     <?php
-                    Image::miniTooltipLink(Visitor::getInstance()->getRootPage()."/docs/logiciels/", "installationEtMiseAJour_bilanMDT_AFMcK",
+                    Image::miniTooltipLink(Visitor::getInstance()->getRootPage()."/docs/members/logiciels/", "installationEtMiseAJour_bilanMDT_AFMcK",
                                                                                     "Installation et configuration du logiciel permettant la gestion des bilans McKenzie", false);
                     ?>
                 </li>
