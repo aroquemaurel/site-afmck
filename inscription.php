@@ -23,7 +23,7 @@ if(isset($_POST['firstName'])) {
         $user->setTown($_POST['town']);
         $user->setFormationDate(new DateTime("01/".$_POST['formationDate']));
         $user->setLevelFormation($_POST['levelFormation']);
-
+        $user->setPayment($_POST['payment']);
         $user->setPhoneMobile($_POST['phoneMobile']);
         $user->setPhonePro($_POST['phonePro']);
         $user->setNewsletter(!isset($_POST['newsletter']));

@@ -168,9 +168,19 @@ if(!$editing) {
         </div>
         </fieldset>
         <fieldset>
+            <legend>Paiement</legend>
+            <div class="form-group">
+                <select tabindex="15" class="selectpicker form-control input-lg" required="required" id="payment" name="payment">
+                    <option disabled selected>Moyen de paiement</option>
+                    <option <?php if($user->getPayment() ==1) echo "selected"?> value="1">Chèque</option>
+                    <option <?php if($user->getPayment() ==2) echo "selected"?> value="2">Virement bancaire</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
             <legend>Newsletter</legend>
             <div class="form-group">
-                     <label><input tabindex="15" type="checkbox" <?php if(!$user->getNewsletter() && $editing) echo "checked=checked";?>
+                     <label><input tabindex="16" type="checkbox" <?php if(!$user->getNewsletter() && $editing) echo "checked=checked";?>
                      name="newsletter" id="newsletter"> &nbsp;Je ne souhaite pas recevoir la newsletter</label>
             </div>
         </fieldset>
