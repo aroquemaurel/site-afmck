@@ -33,13 +33,13 @@
         
         
 <!-- ONGLET TITRE 4 -->
-        <li><a href="03a_praticiens.php">Praticiens</a></li>
+        <li><a href="praticiens.php">Praticiens</a></li>
         
   
   
 <!-- ONGLET TITRE 5 -->   
 
-        <li><a href="04a_liens.php">Liens</a></li>
+        <li><a href="liens.php">Liens</a></li>
 
 
 </ul><!-- FIN DE LISTE 1 -->

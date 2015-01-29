@@ -6,11 +6,7 @@
  * Time: 22:08
  */
 
-if(file_exists("db/logins.php")) {
-    require_once("db/logins.php");
-} else {
-    require_once("../db/logins.php");
-}
+require_once(Visitor::getInstance()->getRootPath()."/db/logins.php");
 class Database {
     private $host;
     private $dbName;

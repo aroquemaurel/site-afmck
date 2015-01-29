@@ -58,7 +58,7 @@ $(document).ready(function() {
         }
         if (!$('#lastName').val() || !$('#firstName').val() || !$('#email').val()||  !$('#address').val()
                 || !$('#cp').val() || !$('#town').val() || !$('#adeliNumber').val().match("^[0-9]{9}$")
-            || $('#levelFormation').index() == -1 || !$('#formationDate1').val() || disable) {
+            || $('#levelFormation').index() == -1 || disable) {
             $('#submit').attr('disabled', 'disabled');
         } else {
             $('#submit').removeAttr('disabled');

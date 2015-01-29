@@ -10,8 +10,8 @@ $editing = false;
 if(isset($_POST['firstName'])) {
     if($_POST['password'] != $_POST['passwordConfirmation']) {
         $_SESSION['lastMessage'] = Popup::verificationPasswordError();
-        include('views/includes/head.php');
-        include('views/inscription.php');
+        include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
+        include(Visitor::getInstance()->getRootPath().'/views/inscription.php');
     } else {
         $user = new User($_POST['adeliNumber'], password_hash($_POST['password'], PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3))));
         $user->setMail($_POST['email']);
@@ -23,7 +23,7 @@ if(isset($_POST['firstName'])) {
         $user->setTown($_POST['town']);
         $user->setFormationDate(new DateTime("01/".$_POST['formationDate']));
         $user->setLevelFormation($_POST['levelFormation']);
-
+        $user->setPayment($_POST['payment']);
         $user->setPhoneMobile($_POST['phoneMobile']);
         $user->setPhonePro($_POST['phonePro']);
         $user->setNewsletter(!isset($_POST['newsletter']));
@@ -37,8 +37,8 @@ if(isset($_POST['firstName'])) {
         header('Location: ' . 'index.php');
     }
 } else {
-    include('views/includes/head.php');
-    include('views/inscription.php');
+    include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
+    include(Visitor::getInstance()->getRootPath().'/views/inscription.php');
 }
-include('views/includes/foot.php');
+include(Visitor::getInstance()->getRootPath().'/views/includes/foot.php');
 ?>
