@@ -50,11 +50,12 @@ class DatabaseUser extends Database {
         $phoneMobile = $user->getPhoneMobile();
         $newsletter = $user->getNewsletter();
         $disable = $user->getDisable();
+        $payment = $user->getPayment();
 
         $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :disable, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
-                                                              :phoneMobile, :newsletter)");
+                                                              :phoneMobile, :newsletter, :payment)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
@@ -72,7 +73,7 @@ class DatabaseUser extends Database {
         $query->bindParam(":phoneMobile", $phoneMobile, PDO::PARAM_STR);
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
         $query->bindParam(":disable", $disable, PDO::PARAM_INT);
-
+        $query->bindParam(":payment", $payment, PDO::PARAM_INT);
         $query->execute();
 
     }
