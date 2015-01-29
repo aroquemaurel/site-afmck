@@ -18,10 +18,10 @@
                                         <li>
                                             <p><strong>Cas cliniques</strong></p>
                                         </li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/casclinique_rotulienne.php">Tendinite Rotulienne</a></li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/casclinique_genou.php">Traitement d'un genou</a></li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/casclinique_epaule.php">Traitement d'une épaule</a></li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/casclinique_autres.php">Autres cas</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/cas-cliniques/rotulienne.php">Tendinite Rotulienne</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/cas-cliniques/genou.php">Traitement d'un genou</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/cas-cliniques/epaule.php">Traitement d'une épaule</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/cas-cliniques/autres.php">Autres cas</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
