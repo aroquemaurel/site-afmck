@@ -48,14 +48,14 @@
                                         <li>
                                             <p><strong>Études</strong></p>
                                         </li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf">Rachis prévalence des syndromes McKenzie</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf">Rachis prévalence des syndromes McKenzie</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Journées de l'association</strong></p>
                                         </li>
-                                        <li><a href="journees_brest.php">Brest 2012</a></li>
-                                        <li><a href="journees_lyon.php">Lyon 2013</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/brest.php">Brest 2012</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/lyon.php">Lyon 2013</a></li>
                                     </ul>
                                 </div>
                             </div>

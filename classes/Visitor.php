@@ -5,7 +5,6 @@
  * Date: 29/11/14
  * Time: 23:16
  */
-
 class Visitor {
     private $user;
     private static $instance;
@@ -35,7 +34,7 @@ class Visitor {
     }
 
     public function displayMenu() {
-        if(basename(getcwd()) == 'members' || basename(getcwd()) == 'admin') {
+        if($this->isConnected()) {
             include($this->getRootPath() . '/views/includes/menus/members.php');
         } else {
             include($this->getRootPath() . '/views/includes/menus/visitors.php');
