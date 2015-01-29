@@ -9,12 +9,19 @@
 require_once('Database.php');
 
 class DatabaseUser extends Database {
-    public function getUser($adeliNumber, $password) {
+    public function getUser($adeliNumber, $password="") {
         $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number");
         $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
         $query->execute();
-
+        print_r($query->rowCount());
         return $query->fetchObject();
+    }
+
+    public function adeliExists($adeli) {
+        $query = $this->dbAccess->prepare("SELECT count(*) as nb from user where adeliNumber = :number");
+        $query->bindParam(":number", $adeli, PDO::PARAM_INT);
+        $query->execute();
+        return $query->fetchObject()->nb ;
     }
     public function getUserById($id) {
         $query = $this->dbAccess->prepare("SELECT * from user WHERE id=:id");
