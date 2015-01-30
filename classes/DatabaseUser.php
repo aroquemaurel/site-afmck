@@ -51,7 +51,7 @@ class DatabaseUser extends Database {
         $newsletter = $user->getNewsletter();
         $disable = $user->getDisable();
 
-        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :disable, :adeliNumber, :firstname, :lastname, :password,
+        $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', 0, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
                                                               :phoneMobile, :newsletter)");
@@ -71,7 +71,6 @@ class DatabaseUser extends Database {
         $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
         $query->bindParam(":phoneMobile", $phoneMobile, PDO::PARAM_STR);
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
-        $query->bindParam(":disable", $disable, PDO::PARAM_INT);
 
         $query->execute();
 
