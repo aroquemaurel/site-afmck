@@ -91,7 +91,6 @@ class Visitor {
 
 
     public function hasRights($pageFilename, $groups=array()) {
-        $splits = explode('/', $pageFilename);
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
                 if($this->user->isInGroup($group)) {
@@ -99,9 +98,9 @@ class Visitor {
                 }
             }
             return false;
-        } else if($splits['0'] == 'members') { // not in database, but begin with members
+        } else if(strpos($pageFilename,'members')) { // not in database, but begin with members
             return $this->isConnected();
-        } else if($splits['0'] == 'admin') {
+        } else if(strpos($pageFilename,'admin')) {
             return $this->isConnected() && $this->user->isInGroup("ADMINISTRATEUR");
         } else { // Every body can see
             return true;
