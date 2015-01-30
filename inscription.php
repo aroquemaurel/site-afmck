@@ -59,8 +59,6 @@ if(isset($_POST['firstName'])) {
         $mailer->Body = utf8_decode(Mail::getValidationMail($user));
         $mailer->addAddress($user->getMail(), ($user->getFirstName())." ".($user->getLastName()));
         $mailer->send();
-        exit();
-
 
         $_SESSION['lastMessage'] = Popup::inscriptionOk();
         header('Location: ' . 'index.php');
