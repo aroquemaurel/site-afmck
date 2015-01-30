@@ -60,10 +60,11 @@ class DatabaseUser extends Database {
         $payment = utf8_decode($user->getPayment());
         $mailValidation = utf8_decode($user->getMailValidation());
         $hashMail = utf8_decode($user->getHashMail());
+        $valuePaid = utf8_decode($user->getValuePaid());
         $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :disable, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
-                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail)");
+                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", ($firstname), PDO::PARAM_STR);
         $query->bindParam(":lastname", ($lastname), PDO::PARAM_STR);
@@ -84,6 +85,8 @@ class DatabaseUser extends Database {
         $query->bindParam(":payment", $payment, PDO::PARAM_INT);
         $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
         $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
+        $query->bindParam(":valuePaid", $valuePaid, PDO::PARAM_INT);
+
         $query->execute();
 
     }
@@ -178,13 +181,14 @@ class DatabaseUser extends Database {
         $payment = utf8_decode($user->getPayment());
         $mailValidation = utf8_decode($user->getMailValidation());
         $hashMail = utf8_decode($user->getHashMail());
+        $valuePaid = utf8_decode($user->getValuePaid());
 
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
                                           mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
                                           formationDate=:formationDate, levelFormation=:levelFormation, phonePro=:phonePro, phoneMobile=:phoneMobile,
                                           newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress,
-                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail
+                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail, valuePaid=:valuePaid
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":disable", $disable, PDO::PARAM_INT);
@@ -206,6 +210,7 @@ class DatabaseUser extends Database {
         $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
         $query->bindParam(":payment", $payment, PDO::PARAM_INT);
+        $query->bindParam(":valuePaid", $valuePaid, PDO::PARAM_INT);
         $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
         $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
         $query->execute();

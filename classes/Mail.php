@@ -52,4 +52,25 @@ class Mail {
         Le bureau de l'AFMcK";
 
     }
+
+    public static function getNewAccount(User $user) {
+        $ret = "Bonjour,
+        Vous vous êtes correctement isncris à l'AFMcK : <br/>
+        Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
+        <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/>";
+        if($user->getPayment() == 1) {
+            $ret .= "Vous avez choisis de payer votre cotisation, d'un montant de ".$user->getValuePaid()."euros par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
+                Mme Anne-Marie GASTELLU-ETCHEGORRY,<br/>
+                27 avenue du10e Dragon,<br/>
+                82000 MONTAUBAN";
+        } else {
+            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>
+            Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
+        }
+        $ret .=
+            "<h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
+        En vous souhaitant une bonne journée,<br/>
+        Le bureau de l'AFMcK";
+        return $ret;
+    }
 }

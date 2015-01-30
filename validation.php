@@ -27,11 +27,18 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
             $mailer->isHTML(true);                                  // Set email format to HTML
             $mailer->Subject .= "Nouvelle inscription sur afmck.fr";
             $mailer->Body = (Mail::getNewAccountTresor($user));
-            $mailer->addAddress(TRESORERIE_MAIL, "Trésorerie");
+            $mailer->addAddress(TRESORERIE_MAIL, utf8_decode("Trésorerie"));
             $mailer->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/registration/tresor/".$user->getAdeliNumber().".pdf");
             $mailer->send();
 
             // Send email to user.
+            $mailer = new Mailer();
+            $mailer->isHTML(true);                                  // Set email format to HTML
+            $mailer->Subject .= "Votre inscription sur afmck.fr";
+            $mailer->Body = (Mail::getNewAccount($user));
+            $mailer->addAddress($user->getMail(), utf8_decode($user->getFirstName()." ".$user->getLastName()));
+            $mailer->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/registration/".$user->getAdeliNumber().".pdf");
+            $mailer->send();
         } else {
             $err = true;
         }
