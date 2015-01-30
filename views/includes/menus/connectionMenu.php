@@ -6,7 +6,7 @@ if(!Visitor::getInstance()->isConnected()) {
 <li class="hidden-xs dropdown"><a href="" data-toggle="dropdown"color: #ccc;"class="dropdown-toggle">Connexion<b class="caret"></b></a>
     <ul role="menu" class="dropdown-menu" style="padding: 10px">
         <li>
-            <?php include(Visitor::getInstance()->getRootPage().'/views/includes/formConnexion.php'); ?>
+            <?php include(Visitor::getInstance()->getRootPath().'/views/includes/formConnexion.php'); ?>
         </li>
     </ul>
 </li>

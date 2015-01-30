@@ -22,21 +22,24 @@ class Image {
         if(!file_exists($folder.'/mini/'.$filename.'.jpg')) {
             self::createPdfMini($folder.'/'.$filename.'.pdf', $folder.'/mini/'.$filename.'.jpg');
         }
+        echo '<div class="tooltip2">';
         if($li) {
             echo '<li>';
         }
         echo '<i class="glyphicon glyphicon-download-alt"></i>
-                <a class="tooltip2"
+                <a
                 href="'.$folder.'/'.$filename.'.pdf">
-                '.$title.'
-                <span>
+                '.$title;
+                /*<span>
                 <img id="mini" width="200" src="'.$folder.'/mini/'.$filename.'.jpg" style="text-align: center;margin:auto"/>
                 <p id="description" style="font-size: 10pt">'.$title.'</p>
-            </span>
+            </span>*/
+        echo '
                 </a>';
         if($li) {
             echo '</li>';
         }
+        echo '</div>';
     }
 
     public static function createPdfMini($in, $out) {
