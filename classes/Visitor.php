@@ -5,7 +5,6 @@
  * Date: 29/11/14
  * Time: 23:16
  */
-
 class Visitor {
     private $user;
     private static $instance;
@@ -35,20 +34,21 @@ class Visitor {
     }
 
     public function displayMenu() {
-        if(basename(getcwd()) == 'members' || basename(getcwd()) == 'admin') {
-            include($this->getRootPage() . '/views/includes/menus/members.php');
+        if($this->isConnected()) {
+            include($this->getRootPath() . '/views/includes/menus/members.php');
         } else {
-            include($this->getRootPage() . '/views/includes/menus/visitors.php');
+            include($this->getRootPath() . '/views/includes/menus/visitors.php');
         }
     }
 
     public function getRootPage() {
-        if(basename(getcwd()) == 'members' || basename(getcwd()) == 'admin') {
-            return '..';
-        } else {
-            return '.';
-        }
+        return ROOT_PAGE;
     }
+
+    public function getRootPath() {
+        return ROOT_PATH.'/'.ROOT_PAGE;
+    }
+
     public function getLastPage() {
         return $this->lastPage;
     }
@@ -119,15 +119,7 @@ class Visitor {
     }
 
     public function getCurrentFile() {
-        $currentFile = '';
-        if(basename(getcwd()) == 'members') {
-            $currentFile .= 'members/';
-        } else if(basename(getcwd()) == 'admin') {
-            $currentFile .= 'admin/';
-        }
-        $currentFile .= basename($_SERVER['PHP_SELF']);
-
-        return $currentFile;
+        return $_SERVER['PHP_SELF'];
     }
 
     public function removeUser() {

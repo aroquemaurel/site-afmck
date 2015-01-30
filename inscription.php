@@ -48,10 +48,20 @@ if(isset($_POST['firstName'])) {
         $user->setPhonePro($_POST['phonePro']);
         $user->setNewsletter(!isset($_POST['newsletter']));
         $user->setDisable(false);
+        $user->setMailValidation(0);
+        $user->setHashMail(password_hash($_POST['email'], PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3))));
         $user->insert();
 
         $reg = new RegistrationPdf($user);
         $reg->generatePdf();
+
+        $mailer = new Mailer();
+        $mailer->isHTML(true);                                  // Set email format to HTML
+        $mailer->Subject .= "Demande de validation de votre adresse email";
+        $mailer->Body = utf8_decode(Mail::getValidationMail($user));
+        $mailer->addAddress($user->getMail(), utf8_decode($user->getFirstName())." ".utf8_decode($user->getLastName()));
+        $mailer->send();
+
 
         $_SESSION['lastMessage'] = Popup::inscriptionOk();
         header('Location: ' . 'index.php');

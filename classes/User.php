@@ -38,7 +38,9 @@ class User {
     private $phoneMobile;
     private $newsletter;
 
+    private $mailValidation;
     private $payment;
+    private $hashMail;
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
 
@@ -93,7 +95,10 @@ class User {
             return false;
         }
         $this->hydrat($data);
-        if(strtotime($data->validDate) < time()) {
+        if(!$data->mailValidation) {
+            $_SESSION['lastMessage'] = Popup::errorMessage("Votre adresse email n'a pas été validée");
+            return false;
+        } else if(strtotime($data->validDate) < time()) {
             $_SESSION['lastMessage'] = Popup::disableAccount();
             if(auto) {
                $this->clearCookie();
@@ -192,6 +197,8 @@ class User {
         $this->newsletter = $data->newsletter;
         $this->disable = $data->disable;
         $this->payment = $data->payment;
+        $this->hashMail = $data->hashMail;
+        $this->mailValidation = $data->mailValidation;
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
@@ -224,7 +231,7 @@ class User {
         $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
 
         if($pdf) {
-            $ret .= '<p style="font-size: 11pt; margin-top: 100px;">Signature<br/><br/>Le .... / .... / 2015<br/><br/>À ........................</p>';
+            $ret .= '<p style="font-size: 11pt; margin-top: 50px;">Signature<br/><br/>Le .... / .... / 2015<br/><br/>À ........................</p>';
         }
         return $ret;
     }
@@ -236,6 +243,23 @@ class User {
     public function setHash($h) {
         $this->hash = $h;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getHashMail()
+    {
+        return $this->hashMail;
+    }
+
+    /**
+     * @param mixed $hashMail
+     */
+    public function setHashMail($hashMail)
+    {
+        $this->hashMail = $hashMail;
+    }
+
     /**
      * @return mixed
      */
@@ -259,6 +283,23 @@ class User {
     {
         $this->payment = $payment;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMailValidation()
+    {
+        return $this->mailValidation;
+    }
+
+    /**
+     * @param mixed $mailValidation
+     */
+    public function setMailValidation($mailValidation)
+    {
+        $this->mailValidation = $mailValidation;
+    }
+
 
     /**
      * @param mixed $adeliNumber
