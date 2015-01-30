@@ -18,6 +18,14 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
             // issue #43
 
             // Send email to tresorerie@afmck.fr
+            $mailer = new Mailer();
+            $mailer->isHTML(true);                                  // Set email format to HTML
+            $mailer->Subject .= "Nouvelle inscription sur afmck.fr";
+            $mailer->Body = (Mail::getNewAccountTresor($user));
+            $mailer->addAddress(TRESORERIE_MAIL, "Trésorerie");
+            $mailer->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/registration/tresor/".$user->getAdeliNumber().".pdf");
+            $mailer->send();
+
             // Send email to user.
         } else {
             $err = true;
