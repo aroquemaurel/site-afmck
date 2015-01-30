@@ -18,6 +18,11 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
             // issue #43
 
             // Send email to tresorerie@afmck.fr
+            $reg = new RegistrationPdf($user, true);
+            $reg->generatePdf();
+            $reg = new RegistrationPdf($user);
+            $reg->generatePdf();
+
             $mailer = new Mailer();
             $mailer->isHTML(true);                                  // Set email format to HTML
             $mailer->Subject .= "Nouvelle inscription sur afmck.fr";

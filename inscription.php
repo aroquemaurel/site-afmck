@@ -51,8 +51,6 @@ if(isset($_POST['firstName'])) {
         $user->setMailValidation(0);
         $user->setHashMail(password_hash($_POST['email'], PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3))));
         $user->insert();
-        $reg = new RegistrationPdf($user);
-        $reg->generatePdf();
 
         $mailer = new Mailer();
         $mailer->isHTML(true);                                  // Set email format to HTML
