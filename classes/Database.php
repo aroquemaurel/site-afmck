@@ -6,11 +6,7 @@
  * Time: 22:08
  */
 
-if(file_exists("db/logins.php")) {
-    require_once("db/logins.php");
-} else {
-    require_once("../db/logins.php");
-}
+require_once(Visitor::getInstance()->getRootPath()."/db/logins.php");
 class Database {
     private $host;
     private $dbName;
@@ -30,7 +26,8 @@ class Database {
         // Set options
         $options = array(
             PDO::ATTR_PERSISTENT => true,
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
         );
 
         try {

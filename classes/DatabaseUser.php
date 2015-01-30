@@ -9,12 +9,19 @@
 require_once('Database.php');
 
 class DatabaseUser extends Database {
-    public function getUser($adeliNumber, $password) {
+    public function getUser($adeliNumber, $password="") {
         $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number");
         $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
         $query->execute();
-
+        print_r($query->rowCount());
         return $query->fetchObject();
+    }
+
+    public function adeliExists($adeli) {
+        $query = $this->dbAccess->prepare("SELECT count(*) as nb from user where adeliNumber = :number");
+        $query->bindParam(":number", $adeli, PDO::PARAM_INT);
+        $query->execute();
+        return $query->fetchObject()->nb ;
     }
     public function getUserById($id) {
         $query = $this->dbAccess->prepare("SELECT * from user WHERE id=:id");
@@ -35,42 +42,48 @@ class DatabaseUser extends Database {
     }
 
     public function addUser(User $user) {
-        $adeli = $user->getAdeliNumber();
-        $firstname = $user->getFirstName();
-        $lastname = $user->getLastName();
-        $password = $user->getPassword();
-        $mail = $user->getMail();
-        $address = $user->getAddress();
-        $cp = $user->getCp();
-        $town = $user->getTown();
-        $complementAddress = $user->getComplementAddress();
-        $formationDate = $user->getFormationDate()->format("Y-m-d");
-        $levelFormation = $user->getLevelFormation();
-        $phonePro = $user->getPhonePro();
-        $phoneMobile = $user->getPhoneMobile();
-        $newsletter = $user->getNewsletter();
-        $disable = $user->getDisable();
-
+        $adeli = utf8_decode($user->getAdeliNumber());
+        $firstname = utf8_decode($user->getFirstName());
+        $lastname = utf8_decode($user->getLastName());
+        $password = utf8_decode($user->getPassword());
+        $mail = utf8_decode($user->getMail());
+        $address = utf8_decode($user->getAddress());
+        $cp = utf8_decode($user->getCp());
+        $town = utf8_decode($user->getTown());
+        $complementAddress = utf8_decode($user->getComplementAddress());
+        $formationDate = utf8_decode($user->getFormationDate()->format("Y-m-d"));
+        $levelFormation = utf8_decode($user->getLevelFormation());
+        $phonePro = utf8_decode($user->getPhonePro());
+        $phoneMobile = utf8_decode($user->getPhoneMobile());
+        $newsletter = utf8_decode($user->getNewsletter());
+        $payment = utf8_decode($user->getPayment());
+        $mailValidation = utf8_decode($user->getMailValidation());
+        $hashMail = utf8_decode($user->getHashMail());
+        $valuePaid = utf8_decode($user->getValuePaid());
         $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', 0, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
-                                                              :phoneMobile, :newsletter)");
+                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
-        $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
-        $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
+        $query->bindParam(":firstname", ($firstname), PDO::PARAM_STR);
+        $query->bindParam(":lastname", ($lastname), PDO::PARAM_STR);
         $query->bindParam(":password", $password, PDO::PARAM_STR);
         $query->bindParam(":mail", $mail, PDO::PARAM_STR);
 
-        $query->bindParam(":address", $address, PDO::PARAM_STR);
-        $query->bindParam(":complementAddress", $complementAddress, PDO::PARAM_STR);
+        $query->bindParam(":address", ($address), PDO::PARAM_STR);
+        $query->bindParam(":complementAddress", ($complementAddress), PDO::PARAM_STR);
         $query->bindParam(":cp", $cp, PDO::PARAM_STR);
-        $query->bindParam(":town", $town, PDO::PARAM_STR);
+        $query->bindParam(":town", ($town), PDO::PARAM_STR);
 
         $query->bindParam(":formationDate", $formationDate, PDO::PARAM_STR);
         $query->bindParam(":levelFormation", $levelFormation, PDO::PARAM_INT);
         $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
         $query->bindParam(":phoneMobile", $phoneMobile, PDO::PARAM_STR);
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
+        $query->bindParam(":payment", $payment, PDO::PARAM_INT);
+        $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
+        $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
+        $query->bindParam(":valuePaid", $valuePaid, PDO::PARAM_INT);
 
         $query->execute();
 
@@ -93,7 +106,7 @@ class DatabaseUser extends Database {
     public function getUsersHS() {
         $ret = array();
 
-        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate < CURDATE()
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate < CURDATE() AND mailValidation != 0
                                            order by lastname");
         $query->execute();
 
@@ -111,7 +124,7 @@ class DatabaseUser extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
-                                           WHERE validDate < CURDATE() AND validDate != 'NULL' AND disable != 1 order by lastname");
+                                           WHERE validDate < CURDATE()  AND mailValidation != 0 AND validDate != 'NULL' AND disable != 1 order by lastname");
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
@@ -125,7 +138,7 @@ class DatabaseUser extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
-                                           WHERE (validDate between CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 3 MONTH))
+                                           WHERE (validDate between CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 3 MONTH) AND mailValidation != 0 )
                                            order by lastname");
         $query->execute();
 
@@ -139,7 +152,7 @@ class DatabaseUser extends Database {
 
     public function countUsersToValid() {
         $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
-                                           WHERE validDate < CURDATE() AND validDate != 'NULL' AND disable=0");
+                                           WHERE validDate < CURDATE()  AND mailValidation != 0 AND validDate != 'NULL' AND disable=0");
         $query->execute();
         return $query->fetchObject()->countid;
 
@@ -148,32 +161,32 @@ class DatabaseUser extends Database {
     {
         $id = $user->getId();
         $askValidation = $user->getAskValidation() != NULL ? $user->getAskValidation()->format("Y-m-d") : "NULL";
-        $lastname = $user->getLastName();
-        $firstname = $user->getFirstName();
-        $validDate = $user->getValidDate() != NULL ? $user->getValidDate()->format("Y-m-d") : "NULL";
-        $adeli = $user->getAdeliNumber();
-
-        $address = $user->getAddress();
-        $complementAddress = $user->getComplementAddress();
-        $cp = $user->getCp();
-        $town = ($user->getTown());
-
-        $mail = $user->getMail();
-        $password = $user->getPassword();
-        $forget = $user->getHash();
-        $levelFormation = $user->getLevelFormation();
-        $formationDate = $user->getFormationDate()->format("Y-m-d");
-        $phonePro = $user->getPhonePro();
-        $phoneMobile = $user->getPhonePro();
-        $newsletter = $user->getNewsletter();
-        $disable = $user->getDisable();
+        $adeli = utf8_decode($user->getAdeliNumber());
+        $firstname = utf8_decode($user->getFirstName());
+        $lastname = utf8_decode($user->getLastName());
+        $password = utf8_decode($user->getPassword());
+        $mail = utf8_decode($user->getMail());
+        $address = utf8_decode($user->getAddress());
+        $cp = utf8_decode($user->getCp());
+        $town = utf8_decode($user->getTown());
+        $complementAddress = utf8_decode($user->getComplementAddress());
+        $formationDate = utf8_decode($user->getFormationDate()->format("Y-m-d"));
+        $levelFormation = utf8_decode($user->getLevelFormation());
+        $phonePro = utf8_decode($user->getPhonePro());
+        $phoneMobile = utf8_decode($user->getPhoneMobile());
+        $newsletter = utf8_decode($user->getNewsletter());
+        $disable = utf8_decode($user->getDisable());
+        $payment = utf8_decode($user->getPayment());
+        $mailValidation = utf8_decode($user->getMailValidation());
+        $hashMail = utf8_decode($user->getHashMail());
+        $valuePaid = utf8_decode($user->getValuePaid());
 
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
                                           mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
                                           formationDate=:formationDate, levelFormation=:levelFormation, phonePro=:phonePro, phoneMobile=:phoneMobile,
                                           newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress,
-                                          disable=:disable
+                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail, valuePaid=:valuePaid
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":disable", $disable, PDO::PARAM_INT);
@@ -194,6 +207,10 @@ class DatabaseUser extends Database {
         $query->bindParam(":phoneMobile", $phoneMobile, PDO::PARAM_STR);
         $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
+        $query->bindParam(":payment", $payment, PDO::PARAM_INT);
+        $query->bindParam(":valuePaid", $valuePaid, PDO::PARAM_INT);
+        $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
+        $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
         $query->execute();
 
     }

@@ -58,10 +58,23 @@ class Popup {
 
     public static function inscriptionOk()
     {
-        return self::successMessage("Vous êtes maintenant inscrit sur le site. <br/>Afin de pouvoir vous connecter, vous devez attendre qu'un
-        membre du CA valide votre inscription.");
+        // TODO Change me
+     /*   return self::successMessage("Vous êtes maintenant inscrit sur le site.
+        <br/>Afin de pouvoir vous connecter, votre compte doit être validé.<br/><br/>
+        Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>
+        De plus, vous devez envoyer ce document signé par mail ou par courrier.
+        ");
+     */
     }
-
+    public static function validationOk()
+    {
+        // TODO Change me
+        return self::successMessage("Vous êtes maintenant inscrit sur le site.
+           <br/>Afin de pouvoir vous connecter, votre compte doit être validé par un membre du CA.<br/><br/>
+           Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>
+           De plus, vous devez envoyer ce document signé par mail ou par courrier.
+           ");
+    }
     public static function disableAccount()
     {
         return self::errorMessage("Votre compte est désactivé, vous devez renouveler votre adhésion à l'association.");

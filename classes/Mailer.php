@@ -1,6 +1,6 @@
 <?php
-require_once(Visitor::getInstance()->getRootPage().'/libs/PHPMailer/class.phpmailer.php');
-require_once(Visitor::getInstance()->getRootPage().'/libs/PHPMailer/class.smtp.php');
+require_once(Visitor::getInstance()->getRootPath().'/libs/PHPMailer/class.phpmailer.php');
+require_once(Visitor::getInstance()->getRootPath().'/libs/PHPMailer/class.smtp.php');
 
 
 class Mailer extends PHPMailer {

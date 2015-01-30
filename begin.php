@@ -1,6 +1,8 @@
 <?php
 //require_once("/home/afmck/www/crawlprotect/include/cppf.php");
+header( 'content-type: text/html; charset=utf-8' );
 
+require_once('config.php');
 require_once('autoload.php');
 require_once('libs/password_compat/lib/password.php');
 

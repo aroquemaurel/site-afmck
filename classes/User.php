@@ -38,6 +38,11 @@ class User {
     private $phoneMobile;
     private $newsletter;
 
+    private $mailValidation;
+    private $payment;
+    private $hashMail;
+
+    private $valuePaid;
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
 
@@ -92,7 +97,10 @@ class User {
             return false;
         }
         $this->hydrat($data);
-        if(strtotime($data->validDate) < time()) {
+        if(!$data->mailValidation) {
+            $_SESSION['lastMessage'] = Popup::errorMessage("Votre adresse email n'a pas été validée");
+            return false;
+        } else if(strtotime($data->validDate) < time()) {
             $_SESSION['lastMessage'] = Popup::disableAccount();
             if(auto) {
                $this->clearCookie();
@@ -170,27 +178,30 @@ class User {
 
     }
     public function hydrat($data) {
-        $this->lastName = $data->lastname;
-        $this->firstName = $data->firstname;
-        $this->mail = $data->mail;
-        $this->id = $data->id;
+        $this->lastName = utf8_encode($data->lastname);
+        $this->firstName = utf8_encode($data->firstname);
+        $this->mail = utf8_encode($data->mail);
+        $this->id = utf8_encode($data->id);
         $this->validDate = new DateTime($data->validDate);
-        $this->password = $data->password;
-        $this->adeliNumber = $data->adeliNumber;
+        $this->password = utf8_encode($data->password);
+        $this->adeliNumber = utf8_encode($data->adeliNumber);
         $this->askValidation = new DateTime($data->askValidation);
-        $this->hash = $data->forget;
-        $this->address = $data->address;
-        $this->complementAddress = $data->complementAddress;
-        $this->town = $data->town;
-        $this->cp = $data->cp;
-        $this->hash = $data->forget;
+        $this->hash = utf8_encode($data->forget);
+        $this->address = utf8_encode($data->address);
+        $this->complementAddress = utf8_encode($data->complementAddress);
+        $this->town = utf8_encode($data->town);
+        $this->cp = utf8_encode($data->cp);
+        $this->hash = utf8_encode($data->forget);
         $this->formationDate = new DateTime($data->formationDate);
-        $this->levelFormation = $data->levelFormation;
-        $this->phoneMobile = $data->phoneMobile;
-        $this->phonePro = $data->phonePro;
-        $this->newsletter = $data->newsletter;
-        $this->disable = $data->disable;
-
+        $this->levelFormation = utf8_encode($data->levelFormation);
+        $this->phoneMobile = utf8_encode($data->phoneMobile);
+        $this->phonePro = utf8_encode($data->phonePro);
+        $this->newsletter = utf8_encode($data->newsletter);
+        $this->disable = utf8_encode($data->disable);
+        $this->payment = utf8_encode($data->payment);
+        $this->hashMail = utf8_encode($data->hashMail);
+        $this->mailValidation = utf8_encode($data->mailValidation);
+        $this->valuePaid = utf8_encode($data->valuePaid);
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
@@ -199,21 +210,32 @@ class User {
         }
     }
 
-    public function toHtml() {
+    public function toHtml($pdf=false) {
         $ret = '';
-        $ret .= 'Numéro ADELI <b>'.$this->getAdeliNumber().'</b>';
+        if($pdf) {
+            $ret .= '<h1 style="font-size: 18pt">' . ($this->getFirstName()) . ' ' . ($this->getLastName()) . '</h1>';
+        }
+        $ret .= '<b>Numéro ADELI</b> '.$this->getAdeliNumber().'<br/>';
 
-        $ret .= '<h2>Contact</h2>';
-        $ret .= $this->getMail().'</br>';
-        $ret .= '<i class="glyphicon glyphicon-earphone"></i>&nbsp;<b>Téléphone professionnel: </b>'.$this->getPhonePro().'</br>';
-        $ret .= '<i class="glyphicon glyphicon-phone"></i>&nbsp;<b>Téléphone portable: </b>'.$this->getPhoneMobile().'</br>';
-        $ret .= '<h2>Adresse</h2>';
-        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.$this->address.'<br/>'.($this->complementAddress!=""?$this->complementAddress.'<br/>':"").$this->cp.' '.$this->town;
-        $ret .= '<h2>Formation MDT</h2>';
+        $ret .= '<h2 style="font-size: 14pt">Contact</h2>';
+        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;<b>Email</b> <a href="mailto:'.$this->getMail().'">'.strtolower($this->getMail()).'</a><br/>';
+        $ret .= '<i class="glyphicon glyphicon-earphone"></i>&nbsp;<b>Téléphone professionnel: </b>'.$this->getPhonePro().'<br/>';
+        $ret .= '<i class="glyphicon glyphicon-phone"></i>&nbsp;<b>Téléphone portable: </b>'.$this->getPhoneMobile().'<br/>';
+
+        $ret .= '<h2 style="font-size: 14pt">Adresse</h2>';
+        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.($this->address).'<br/>'.($this->complementAddress!=""?($this->complementAddress).'<br/>':"").$this->cp.' '.($this->town);
+        $ret .= '<h2 style="font-size: 14pt">Formation MDT</h2>';
         $ret .= '<b>Niveau de formation</b>: '.$this->levelFormation.'<br/>';
-        $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->validDate->format("m / Y");
-        $ret .= '<H2>Newsletter</H2>';
+        $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->formationDate->format("m / Y");
+        $ret .= '<H2 style="font-size: 14pt">Paiement</H2>';
+        $ret .= 'Paiement par '.($this->payment == 1 ? "chèque":"virement bancaire") ."<br/> ";
+        $ret .= 'Montant de la cotisation: '.($this->getValuePaid() != 100 ? $this->getValuePaid()." euros" : "100 euros et plus");
+        $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
         $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
+
+        if($pdf) {
+            $ret .= '<p style="font-size: 11pt; margin-top: 50px;">Signature<br/><br/>Le .... / .... / 2015<br/><br/>À ........................</p>';
+        }
         return $ret;
     }
 
@@ -224,6 +246,39 @@ class User {
     public function setHash($h) {
         $this->hash = $h;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getValuePaid()
+    {
+        return $this->valuePaid;
+    }
+
+    /**
+     * @param mixed $valuePaid
+     */
+    public function setValuePaid($valuePaid)
+    {
+        $this->valuePaid = $valuePaid;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHashMail()
+    {
+        return $this->hashMail;
+    }
+
+    /**
+     * @param mixed $hashMail
+     */
+    public function setHashMail($hashMail)
+    {
+        $this->hashMail = $hashMail;
+    }
+
     /**
      * @return mixed
      */
@@ -231,6 +286,39 @@ class User {
     {
         return $this->adeliNumber;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPayment()
+    {
+        return $this->payment;
+    }
+
+    /**
+     * @param mixed $payment
+     */
+    public function setPayment($payment)
+    {
+        $this->payment = $payment;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMailValidation()
+    {
+        return $this->mailValidation;
+    }
+
+    /**
+     * @param mixed $mailValidation
+     */
+    public function setMailValidation($mailValidation)
+    {
+        $this->mailValidation = $mailValidation;
+    }
+
 
     /**
      * @param mixed $adeliNumber
@@ -261,7 +349,7 @@ class User {
      */
     public function getFirstName()
     {
-        return utf8_encode($this->firstName);
+        return ($this->firstName);
     }
 
     /**
@@ -277,7 +365,7 @@ class User {
      */
     public function getLastName()
     {
-        return utf8_encode($this->lastName);
+        return ($this->lastName);
     }
 
     /**

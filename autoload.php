@@ -1,15 +1,7 @@
 <?php
-function getRootPage() {
-    if(basename(getcwd()) == 'members' || basename(getcwd()) == 'admin') {
-        return '../';
-    } else {
-        return './';
-    }
-}
-
 function __autoload($className)
 {
-    $fileName = getRootPage();
+    $fileName = ROOT_PATH.'/'.ROOT_PAGE.'/';
 
     $fileName .= 'classes/';
 

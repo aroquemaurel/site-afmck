@@ -168,9 +168,28 @@ if(!$editing) {
         </div>
         </fieldset>
         <fieldset>
+            <legend>Paiement</legend>
+            <div class="form-group">
+                <select tabindex="15" class="selectpicker form-control input-lg" required="required" id="payment" name="payment">
+                    <option disabled selected>Moyen de paiement</option>
+                    <option <?php if($user->getPayment() ==1) echo "selected"?> value="1">Chèque</option>
+                    <option <?php if($user->getPayment() ==2) echo "selected"?> value="2">Virement bancaire</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select tabindex="16" class="selectpicker form-control input-lg" required="required" id="valuePaid" name="valuePaid">
+                    <option disabled selected>Montant de la cotisation</option>
+                    <option <?php if($user->getValuePaid() == 60) echo "selected"?> value="60">Libéral : 60€</option>
+                    <option <?php if($user->getValuePaid() == 40) echo "selected"?> value="40">Salarié : 40€</option>
+                    <option <?php if($user->getValuePaid() == 100) echo "selected"?> value="100">Membre bienfaiteur : 100€ et +</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
             <legend>Newsletter</legend>
             <div class="form-group">
-                     <label><input tabindex="15" type="checkbox" <?php if(!$user->getNewsletter() && $editing) echo "checked=checked";?>
+                     <label><input tabindex="17" type="checkbox" <?php if(!$user->getNewsletter() && $editing) echo "checked=checked";?>
                      name="newsletter" id="newsletter"> &nbsp;Je ne souhaite pas recevoir la newsletter</label>
             </div>
         </fieldset>

@@ -8,9 +8,9 @@ $title = 'Connexion';
 if(!isset($_POST['inputAdeli']) || !isset($_POST['inputPassword'])) {
     $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Connexion', '#')));
 
-    include('views/includes/head.php');
-    include('views/connexion.php');
-    include('views/includes/foot.php');
+    include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
+    include(Visitor::getInstance()->getRootPath().'/views/connexion.php');
+    include(Visitor::getInstance()->getRootPath().'/views/includes/foot.php');
     exit();
 }
 $adeliNumber = $_POST['inputAdeli'];
