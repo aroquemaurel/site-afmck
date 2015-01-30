@@ -10,13 +10,13 @@ $editing = false;
 if(isset($_POST['firstName'])) {
     $db = new DatabaseUser();
     print_r($db->adeliExists($_POST['adeliNumber']));
-    if($db->adeliExists($_POST['adeliNumber'])) {
+/*    if($db->adeliExists($_POST['adeliNumber'])) {
         $_SESSION['lastMessage'] = Popup::errorMessage("Le numéro ADELI ".$_POST['adeliNumber']." est déjà dans la base de données.<br/>
                     Vérifiez que vous avez bien renseigné ce numéro.<br/><br/> Si tel est le cas et que vous n'êtes pas déjà inscris,
                     veuillez contacter l'association, ou l'administrateur du site à maintenance@afmck.fr");
         include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
         include(Visitor::getInstance()->getRootPath().'/views/inscription.php');
-    } else if($_POST['password'] != $_POST['passwordConfirmation']) {
+    } else*/ if($_POST['password'] != $_POST['passwordConfirmation']) {
         $_SESSION['lastMessage'] = Popup::verificationPasswordError();
         include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
         include(Visitor::getInstance()->getRootPath().'/views/inscription.php');
@@ -50,17 +50,16 @@ if(isset($_POST['firstName'])) {
         $user->setDisable(false);
         $user->setMailValidation(0);
         $user->setHashMail(password_hash($_POST['email'], PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3))));
+        $user->setValuePaid($_POST['valuePaid']);
         $user->insert();
-
-        $reg = new RegistrationPdf($user);
-        $reg->generatePdf();
 
         $mailer = new Mailer();
         $mailer->isHTML(true);                                  // Set email format to HTML
         $mailer->Subject .= "Demande de validation de votre adresse email";
         $mailer->Body = utf8_decode(Mail::getValidationMail($user));
-        $mailer->addAddress($user->getMail(), utf8_decode($user->getFirstName())." ".utf8_decode($user->getLastName()));
+        $mailer->addAddress($user->getMail(), ($user->getFirstName())." ".($user->getLastName()));
         $mailer->send();
+        exit();
 
 
         $_SESSION['lastMessage'] = Popup::inscriptionOk();

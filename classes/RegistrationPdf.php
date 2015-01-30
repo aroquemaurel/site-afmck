@@ -1,16 +1,19 @@
 <?php
 class RegistrationPdf extends PdfFile {
     private $user;
-    public function __construct(User $user) {
+    private $tresor;
+    public function __construct(User $user, $tresor=false) {
         $this->user = $user;
+        $this->tresor = $tresor;
     }
     public function toHtml() {
         $content = "    <p style=\"\">
-            <img src=\"".Visitor::getInstance()->getRootPath()."/style/img/logo.jpg\"
-            style=\"position:absolute;margin-left:0px;margin-top:15px;width:100px\"/>
-            <div style=\"position:absolute;margin-top:50px;margin-left: 150px;font-weight: bold; font-size: 12pt;\"class=\"titlePdf\">FORMULAIRE D'INSCRIPTION À L'AFMCK</div>
-            </p>
-            <p style=\"margin-top: -20px\">Sous l’impulsion de kinésithérapeutes certifiés McKenzie, l’Association Française McKenzie (AFMcK) a vu le jour à Paris le 06 Novembre 2010.  </p>
+        <img src=\"" . Visitor::getInstance()->getRootPath() . "/style/img/logo.jpg\"
+        style=\"position:absolute;margin-left:0px;margin-top:15px;width:100px\"/>
+        <div style=\"position:absolute;margin-top:50px;margin-left: 150px;font-weight: bold; font-size: 12pt;\"class=\"titlePdf\">FORMULAIRE D'INSCRIPTION À L'AFMCK</div>
+        </p>";
+        if(!$this->tresor) {
+            $content .= "<p style=\"margin-top: -20px\">Sous l’impulsion de kinésithérapeutes certifiés McKenzie, l’Association Française McKenzie (AFMcK) a vu le jour à Paris le 06 Novembre 2010.  </p>
             Cette association a pour but:
             <ul style=\"list-style-type:none\">
             <li>— De faciliter les échanges et la pratique MDT : fiches d'exercices patients, logiciel de bilans,
@@ -42,12 +45,13 @@ class RegistrationPdf extends PdfFile {
         </p>
         <div style=\"height:2px;border-bottom:1px solid black;\"></div>
         ";
+        }
         $content .= $this->user->toHtml(true);
         return $content;
     }
 
     public function generatePdf($str='') {
-        parent::generatePdf(Visitor::getInstance()->getRootPath()."/docs/members/registration/"
+        parent::generatePdf(Visitor::getInstance()->getRootPath()."/docs/members/registration/".($this->tresor ? "tresor/":"")
         .$this->user->getAdeliNumber().'.pdf');
     }
 

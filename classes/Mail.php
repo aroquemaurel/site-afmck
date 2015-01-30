@@ -19,7 +19,7 @@ class Mail {
                 Le bureau de l'AFMcK";
     }
     public static function getValidationMail(User $user) {
-        return "Bonjour ".utf8_decode($user->getFirstName())." ".utf8_decode($user->getLastName()).",<br/>
+        return "Bonjour ".($user->getFirstName())." ".($user->getLastName()).",<br/>
                 Vous venez de vous inscrire sur <a href=\"http://afmck.fr\">http://afmck.fr</a>.<br/>
                 Afin de pouvoir vous connecter sur le site, votre compte devra être validée manuellement par un membre du CA,
                 une fois votre paiement récéptionné. <br/><br/>
@@ -31,7 +31,7 @@ class Mail {
                     Si vous ne vous êtes pas inscrit sur le site, veuillez ignorer ce message. En cas de problèmes, vous pouvez envoyer un email à maintenance@afmck.fr.<br/><br/>
 
                     En vous souhaitant une bonne journée,<br/>
-                    Le site afmck.fr";
+                    Le bureau de l'AFMcK";
     }
     public static function getForgetPassword($name, $param) {
         return "Bonjour $name,<br/>
@@ -40,5 +40,37 @@ class Mail {
                 http://afmck.fr/setpassword.php?$param
                 </a><br/><br/>
                 Le bureau de l'AFMcK";
+    }
+
+    public static function getNewAccountTresor(User $user) {
+        return "Bonjour,
+        Une nouvelle inscription a eu lieu sur www.afmck.fr : <br/>
+        Vous trouverez ci-joint sa fiche au format PDF. Une fois le paiement réceptionné, vous pourrez valider son compte
+        via le site web.<br/><br/>
+        <h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
+        En vous souhaitant une bonne journée,<br/>
+        Le bureau de l'AFMcK";
+
+    }
+
+    public static function getNewAccount(User $user) {
+        $ret = "Bonjour,
+        Vous vous êtes correctement inscris à l'AFMcK : <br/>
+        Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
+        <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
+        if($user->getPayment() == 1) {
+            $ret .= "Vous avez choisis de payer votre cotisation, d'un montant de<b> ".$user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
+                Mme Anne-Marie GASTELLU-ETCHEGORRY,<br/>
+                27 avenue du10e Dragon,<br/>
+                82000 MONTAUBAN";
+        } else {
+            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>
+            Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
+        }
+        $ret .=
+            "<h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
+        En vous souhaitant une bonne journée,<br/>
+        Le bureau de l'AFMcK";
+        return utf8_decode($ret);
     }
 }
