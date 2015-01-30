@@ -50,6 +50,7 @@ if(isset($_POST['firstName'])) {
         $user->setDisable(false);
         $user->setMailValidation(0);
         $user->setHashMail(password_hash($_POST['email'], PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3))));
+        $user->setValuePaid($_POST['valuePaid']);
         $user->insert();
 
         $mailer = new Mailer();
