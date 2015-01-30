@@ -58,11 +58,12 @@ class DatabaseUser extends Database {
         $newsletter = $user->getNewsletter();
         $disable = $user->getDisable();
         $payment = $user->getPayment();
-
+        $mailValidation = $user->getMailValidation();
+        $hashMail = $user->getHashMail();
         $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', :disable, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
-                                                              :phoneMobile, :newsletter, :payment)");
+                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
         $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
@@ -81,6 +82,8 @@ class DatabaseUser extends Database {
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
         $query->bindParam(":disable", $disable, PDO::PARAM_INT);
         $query->bindParam(":payment", $payment, PDO::PARAM_INT);
+        $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
+        $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
         $query->execute();
 
     }
@@ -102,7 +105,7 @@ class DatabaseUser extends Database {
     public function getUsersHS() {
         $ret = array();
 
-        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate < CURDATE()
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate < CURDATE() AND mailValidation != 0
                                            order by lastname");
         $query->execute();
 
@@ -120,7 +123,7 @@ class DatabaseUser extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
-                                           WHERE validDate < CURDATE() AND validDate != 'NULL' AND disable != 1 order by lastname");
+                                           WHERE validDate < CURDATE()  AND mailValidation != 0 AND validDate != 'NULL' AND disable != 1 order by lastname");
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
@@ -134,7 +137,7 @@ class DatabaseUser extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
-                                           WHERE (validDate between CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 3 MONTH))
+                                           WHERE (validDate between CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 3 MONTH) AND mailValidation != 0 )
                                            order by lastname");
         $query->execute();
 
@@ -148,7 +151,7 @@ class DatabaseUser extends Database {
 
     public function countUsersToValid() {
         $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
-                                           WHERE validDate < CURDATE() AND validDate != 'NULL' AND disable=0");
+                                           WHERE validDate < CURDATE()  AND mailValidation != 0 AND validDate != 'NULL' AND disable=0");
         $query->execute();
         return $query->fetchObject()->countid;
 
@@ -176,13 +179,15 @@ class DatabaseUser extends Database {
         $phoneMobile = $user->getPhonePro();
         $newsletter = $user->getNewsletter();
         $disable = $user->getDisable();
-
+        $payment = $user->getPayment();
+        $mailValidation = $user->getMailValidation();
+        $hashMail = $user->getHashMail();
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
                                           mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
                                           formationDate=:formationDate, levelFormation=:levelFormation, phonePro=:phonePro, phoneMobile=:phoneMobile,
                                           newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress,
-                                          disable=:disable
+                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":disable", $disable, PDO::PARAM_INT);
@@ -203,6 +208,9 @@ class DatabaseUser extends Database {
         $query->bindParam(":phoneMobile", $phoneMobile, PDO::PARAM_STR);
         $query->bindParam(":phonePro", $phonePro, PDO::PARAM_STR);
         $query->bindParam(":newsletter", $newsletter, PDO::PARAM_INT);
+        $query->bindParam(":payment", $payment, PDO::PARAM_INT);
+        $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
+        $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
         $query->execute();
 
     }

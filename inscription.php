@@ -48,11 +48,17 @@ if(isset($_POST['firstName'])) {
         $user->setPhonePro($_POST['phonePro']);
         $user->setNewsletter(!isset($_POST['newsletter']));
         $user->setDisable(false);
+        $user->setMailValidation(0);
+        $user->setHashMail(password_hash($_POST['email'], PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3))));
         $user->insert();
 
         $reg = new RegistrationPdf($user);
         $reg->generatePdf();
 
+        echo 'validation.php?account='.$_POST['adeliNumber'].'&validation='.$user->getHashMail();
+        exit();
+        // TODO send confirmation mail to user.
+        // Issue #24
         $_SESSION['lastMessage'] = Popup::inscriptionOk();
         header('Location: ' . 'index.php');
     }
