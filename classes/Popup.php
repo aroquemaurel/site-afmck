@@ -66,13 +66,12 @@ class Popup {
         ");
      */
     }
-    public static function validationOk()
+    public static function validationOk(User $user)
     {
-        // TODO Change me
         return self::successMessage("Vous êtes maintenant inscrit sur le site.
            <br/>Afin de pouvoir vous connecter, votre compte doit être validé par un membre du CA.<br/><br/>
            Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>
-           De plus, vous devez envoyer ce document signé par mail ou par courrier.
+           De plus, vous devez envoyer ce <a href=\"".Visitor::getInstance()->getRootPage()."/docs/members/registration/".$user->getAdeliNumber().".pdf\">document</a> signé par mail ou par courrier.
            ");
     }
     public static function disableAccount()

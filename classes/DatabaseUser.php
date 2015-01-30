@@ -161,6 +161,7 @@ class DatabaseUser extends Database {
     {
         $id = $user->getId();
         $askValidation = $user->getAskValidation() != NULL ? $user->getAskValidation()->format("Y-m-d") : "NULL";
+        $validDate = $user->getValidDate() != NULL ? $user->getValidDate()->format("Y-m-d") : "NULL";
         $adeli = utf8_decode($user->getAdeliNumber());
         $firstname = utf8_decode($user->getFirstName());
         $lastname = utf8_decode($user->getLastName());

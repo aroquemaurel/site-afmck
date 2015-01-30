@@ -13,9 +13,7 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
         if ($user->getHashMail() == $_GET['validation']) {
             $user->setMailValidation(1);
             $user->commit();
-            $_SESSION['lastMessage'] = Popup::validationOk();
-            // TODO send emails
-            // issue #43
+            $_SESSION['lastMessage'] = Popup::validationOk($user);
 
             // Send email to tresorerie@afmck.fr
             $reg = new RegistrationPdf($user, true);

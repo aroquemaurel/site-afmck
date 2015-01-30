@@ -23,6 +23,8 @@ if(isset($_POST['firstName'])) {
     $user->setPhoneMobile($_POST['phoneMobile']);
     $user->setPhonePro($_POST['phonePro']);
     $user->setNewsletter(!isset($_POST['newsletter']));
+    $user->setPayment($_POST['payment']);
+    $user->setValuePaid($_POST['valuePaid']);
 
     $user->commit();
     $_SESSION['lastMessage'] = Popup::successMessage("Les informations ont été correctement modifiées");

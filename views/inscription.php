@@ -129,15 +129,17 @@ if(!$editing) {
             </div>
         </div>
         </fieldset>
-        <fieldset>
-        <legend>Mot de passe</legend>
         <?php
         if(!$editing) {
+        echo '
+        <fieldset>
+        <legend>Mot de passe</legend>';
             include('includes/formPassword.php');
+        echo '
+        </fieldset>
+            ';
         }
         ?>
-        </fieldset>
-
         <fieldset style="margin-top: 15px;">
         <legend>Formation MDT</legend>
         <div class="row">
@@ -172,8 +174,8 @@ if(!$editing) {
             <div class="form-group">
                 <select tabindex="15" class="selectpicker form-control input-lg" required="required" id="payment" name="payment">
                     <option disabled selected>Moyen de paiement</option>
-                    <option <?php if($user->getPayment() ==1) echo "selected"?> value="1">Chèque</option>
-                    <option <?php if($user->getPayment() ==2) echo "selected"?> value="2">Virement bancaire</option>
+                    <option <?php if($user->getPayment() == 1) echo "selected"?> value="1">Chèque</option>
+                    <option <?php if($user->getPayment() == 2) echo "selected"?> value="2">Virement bancaire</option>
                 </select>
             </div>
 
