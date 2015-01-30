@@ -55,10 +55,14 @@ if(isset($_POST['firstName'])) {
         $reg = new RegistrationPdf($user);
         $reg->generatePdf();
 
-        echo 'validation.php?account='.$_POST['adeliNumber'].'&validation='.$user->getHashMail();
-        exit();
-        // TODO send confirmation mail to user.
-        // Issue #24
+        $mailer = new Mailer();
+        $mailer->isHTML(true);                                  // Set email format to HTML
+        $mailer->Subject .= "Demande de validation de votre adresse email";
+        $mailer->Body = utf8_decode(Mail::getValidationMail($user));
+        $mailer->addAddress($user->getMail(), utf8_decode($user->getFirstName())." ".utf8_decode($user->getLastName()));
+        $mailer->send();
+
+
         $_SESSION['lastMessage'] = Popup::inscriptionOk();
         header('Location: ' . 'index.php');
     }
