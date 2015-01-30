@@ -44,7 +44,7 @@ class Mail {
 
     public static function getNewAccountTresor(User $user) {
         return "Bonjour,
-        Une nouvelle inscription à eu lieu sur www.afmck.fr : <br/>
+        Une nouvelle inscription a eu lieu sur www.afmck.fr : <br/>
         Vous trouverez ci-joint sa fiche au format PDF. Une fois le paiement réceptionné, vous pourrez valider son compte
         via le site web.<br/><br/>
         <h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
@@ -55,11 +55,11 @@ class Mail {
 
     public static function getNewAccount(User $user) {
         $ret = "Bonjour,
-        Vous vous êtes correctement isncris à l'AFMcK : <br/>
+        Vous vous êtes correctement inscris à l'AFMcK : <br/>
         Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
-        <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/>";
+        <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
         if($user->getPayment() == 1) {
-            $ret .= "Vous avez choisis de payer votre cotisation, d'un montant de ".$user->getValuePaid()."euros par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
+            $ret .= "Vous avez choisis de payer votre cotisation, d'un montant de<b> ".$user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
                 Mme Anne-Marie GASTELLU-ETCHEGORRY,<br/>
                 27 avenue du10e Dragon,<br/>
                 82000 MONTAUBAN";
@@ -71,6 +71,6 @@ class Mail {
             "<h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
         En vous souhaitant une bonne journée,<br/>
         Le bureau de l'AFMcK";
-        return $ret;
+        return utf8_decode($ret);
     }
 }
