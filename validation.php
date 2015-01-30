@@ -14,6 +14,11 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
             $user->setMailValidation(1);
             $user->commit();
             $_SESSION['lastMessage'] = Popup::validationOk();
+            // TODO send emails
+            // issue #43
+
+            // Send email to tresorerie@afmck.fr
+            // Send email to user.
         } else {
             $err = true;
         }
