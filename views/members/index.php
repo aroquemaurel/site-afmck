@@ -36,7 +36,7 @@ Ce site étant tout jeune, il se peut que vous tombiez sur des problèmes, des b
       <p>Bonjour à tous,<br/>
       La date du 4èmes congrès de l’AFMcK approche !!!</p>
 
-      <p>Lors du congrès aura lieu l’Assemblée Générale, trouvez ci-joint l’ordre du jour. Dans les prochains jours sera aussi disponible sur le site (<a href="www.afmck.fr">www.afmck.fr</a>) le rapport de trésorerie.<br/>
+      <p>Lors du congrès aura lieu l’Assemblée Générale, trouvez ci-joint l’ordre du jour. Dans les prochains jours sera aussi disponible sur le site (<a href="http://www.afmck.fr">www.afmck.fr</a>) le rapport de trésorerie.<br/>
       Vous trouverez aussi une seconde pièce jointe avec une procuration pour le vote de l’Assemblée Générale. Les bulletins vierges ne seront pas pris en compte, ils doivent impérativement être remplis et envoyés avant le 2 février 2015 à l’adresse suivante :</p>
 
       <p>LOMER Romain-Brice<br/>

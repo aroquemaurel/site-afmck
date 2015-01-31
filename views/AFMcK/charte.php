@@ -4,10 +4,10 @@
 
     <div class="pg01a-prisecharge">
         <h2>Charte des praticiens de l'association Française McKenzie</h2>
-        <div style="float:left"><img src="docdwld/02b_meth-charte/charte des praticiens adherents AFMcK.jpg" alt="Charte AFMcK" /></div>
+        <div style="float:left"><img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/charte des praticiens adherents AFMcK.jpg" alt="Charte AFMcK" /></div>
 
         <p style="margin-top: 80px;">Un traitement par la méthode McKenzie, ou Diagnostic et Thérapie Mécanique (MDT), est une prise en charge spécifique. Cette prise en charge ne peut se confondre avec autre méthode de rééducation.</p>
-        <p>Tous les <a href="03a_praticiens.php">praticiens</a> dont les coordonnées figurent sur le site de l'Association
+        <p>Tous les <a href="<?php echo Visitor::getInstance()->getRootPage();?>/praticiens.php">praticiens</a> dont les coordonnées figurent sur le site de l'Association
             Française McKenzie s'engagent à respecter les règles suivantes et à
             afficher la Charte dans leur salle d'attente.</p>
             <p>La Charte est téléchargeable dans la partie réservée aux adhérents, sous l'onglet "Divers"</p>

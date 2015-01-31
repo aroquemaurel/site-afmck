@@ -96,34 +96,34 @@ chroaf            <p>Il existe de nombreux modèles de coussins lombaires ou cer
             <p>Ce savoir faire est accessible à tous au travers d'un maillage international de producteurs de produits ergonomiques adaptés répondant à ces normes.</p>
             <h5>N'oubliez pas que ces aides ergonomiques accessibles en ligne seront surtout efficaces si vous suivez les conseils de votre thérapeute quant à leur utilisation et à leur positionnement !</h5>
 
-            <table class="coussin1" style="margin: auto"><tr><td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="docdwld/01a_meth-prisecharge/coussin1_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin5_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin3_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin4_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin2_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin9_AFMcK.jpg"></a></td></tr>
-                   <tr><td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin6_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin7_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin8_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin10_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin11_AFMcK.jpg"></a></td>
-                    <td><a href="docdwld/01a_meth-prisecharge/Essentiel Medical_AFMcK.pdf" target="_blank">
-                            <img src="docdwld/01a_meth-prisecharge/coussin12_AFMcK.jpg"></a></td></tr>
+            <table class="coussin1" style="margin: auto"><tr><td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin1_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin5_AFMcK.jpg"></a></td>
+                   <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin3_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin4_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin2_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin9_AFMcK.jpg"></a></td></tr>
+                   <tr><td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin6_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin7_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin8_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin10_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin11_AFMcK.jpg"></a></td>
+                    <td><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/Essentiel Medical_AFMcK.pdf" target="_blank">
+                            <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/coussin12_AFMcK.jpg"></a></td></tr>
             </table>
             </div>
 
             <div class="essential" style="margin:auto;text-align: center">
-                <a href="http://www.essentiel-med.fr" target="_blank"><img src="docdwld/01a_meth-prisecharge/logo_essential.jpg"></a></div>
+                <a href="http://www.essentiel-med.fr" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/logo_essential.jpg"></a></div>
             <p>&nbsp;</p>
             <div class="alert alert-warning">
                 <p>Pour les membres adhérents un lien particulier est disponible après avoir entré votre login sur la page dédiée.</p>

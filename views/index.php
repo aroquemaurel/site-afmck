@@ -7,7 +7,7 @@
 
         <?php include(Visitor::getInstance()->getRootPath().'/views/includes/homeCarousel.php'); ?>
         <p class=""style="text-align: center;">
-            <a href="docdwld/Presentation association AFMcK 2014_AFMcK.pdf" target="_blank">
+            <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/Presentation association AFMcK 2014_AFMcK.pdf" target="_blank">
                 <i class="glyphicon glyphicon-download-alt"></i>Télécharger le document de présentation
             </a>
         </p>
