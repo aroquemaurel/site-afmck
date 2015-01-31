@@ -88,6 +88,8 @@ Image::thumbnailsPdf($folder.'/traduction', "Sciatique_Exercices Pour Eviter La 
         <h2>Articles parus en Français</h2>
         <ul>
         <?php
+            Image::miniLink($folder."/fr", "OTERO 2014 - Lombalgie prévalence des syndromes McKenzie - Kine la revue n 145",
+                "Lombalgie prévalence des syndromes McKenzie<br/>J. OTERO,</br>Kiné la revue N°145, 2014");
             Image::miniLink($folder."/fr", "modic et IRM",
                 "La discopathie de type Modic 1<br/>J. Beaudreuil, P. Orcel</br>2009");
             Image::miniLink($folder."/fr", "stade modic",

@@ -207,6 +207,13 @@ h3 {
     right: 15px;
     text-decoration: none;
 }
+.news {
+    position: absolute;
+    right: 15px;
+    text-decoration: none;
+    text-align: left;
+}
+
 @media(max-width: 1200px) {
     #toc {
         display:none;

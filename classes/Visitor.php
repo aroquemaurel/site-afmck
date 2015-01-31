@@ -34,7 +34,7 @@ class Visitor {
     }
 
     public function displayMenu() {
-        if($this->isConnected()) {
+        if(strpos($this->getCurrentFile(), 'members') || strpos($this->getCurrentFile(), 'admin')) {
             include($this->getRootPath() . '/views/includes/menus/members.php');
         } else {
             include($this->getRootPath() . '/views/includes/menus/visitors.php');

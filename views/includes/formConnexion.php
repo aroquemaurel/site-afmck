@@ -1,7 +1,7 @@
 <form action="connexion.php" method="post">
     <div class="form-group">
-        <label for="inputAdeli">Numéro ADELI</label>
-        <input type="string" name="inputAdeli" class="form-control" id="inputAdeli" placeholder="Numéro ADELI">
+        <label for="inputAdeli">Utilisateur</label>
+        <input type="string" name="inputAdeli" class="form-control" id="inputAdeli" placeholder="Utilisateur">
     </div>
     <div class="form-group">
         <label for="inputPassword">Mot de passe</label>

@@ -226,5 +226,5 @@ $script .= "
 </script>";
 
 if(!$editing) {
-    $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formRegister.js"></script>';
+//    $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formRegister.js"></script>';
 }

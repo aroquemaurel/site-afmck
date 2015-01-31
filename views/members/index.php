@@ -1,9 +1,16 @@
 <?php $breadcrumb->display()?>
 
 <div class="container-fluid">
-    <h1>Accueil espace membres</h1>
-    <div id="news" class="hidden-xs hidden-md thumbnail with-caption toc" style="margin-right: 50px;margin-top: -80px; width: 220px">
+    <h1>Bienvenue sur le site de l'Association Française McKenzie</h1>
+    <div id="news" class="hidden-xs hidden-md thumbnail with-caption news" style="margin-right: -10px;margin-top: -80px; width: 220px">
         <h2>Actualités</h2>
+<a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/fr/OTERO 2014 - Lombalgie prévalence des syndromes McKenzie - Kine la revue n 145.pdf"><img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/fr/mini/OTERO 2014 - Lombalgie prévalence des syndromes McKenzie - Kine la revue n 145.jpg" width="100" /></a>
+Lombalgie prévalence des syndromes McKenzie – Jacky OTERO<hr/>
+<a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/MDT Newsletter_Vol 3 No 4-gb_AFMcK.pdf">
+<img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/mini/MDT Newsletter_Vol 3 No 4-gb_AFMcK.jpg" width="100"/>
+</a>
+MDT WORLD PRESS Newsletter Vol 3 N°4
+<hr/>
             <h3>Le logiciel Bilan MDT évolue : V1.6</h3>
             <p>Bilan Lombaire, Bilan Cervical, Bilan membres, Fiches de suivis, synthèses
             Editions en PDF des bilans
@@ -20,73 +27,85 @@
             Accompanying Sciatica
             (en anglais)</p>
     </div><!--/.well -->
+<div style="padding-right: 80px;">
+<div class="alert alert-info">
+Bienvenue sur le nouveau site de l'Association Française McKenzie !!<br/>
+Ce site tout neuf vous permettra d'avoir de nouvelles fonctionnalités régulièrement vous permettant de vous aider dans votre travail.<br/><br/>
+Ce site étant tout jeune, il se peut que vous tombiez sur des problèmes, des bugs ou des incompréhensions…<br/> Si tel est le cas, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a></div> 
+<h3><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/SAGI 2015 - De l'héritage de Robin McKenzie - résumé.pdf">SAGI 2015 - de l'héritage de Robin Mckenzie - Résumé</a></h3>
+      <p>Bonjour à tous,<br/>
+      La date du 4èmes congrès de l’AFMcK approche !!!</p>
 
-    <h2>Information</h2>
-    <ul>
-        <li>Sur la page Facebook de l'AFMcK vous retrouverez une version AUDIO de la dernière
-            chronique scientifique de Flavio BONNET = une interview de Guillaume DEVILLE suite à
-            une formation sur les tendinopathies: <a href="https://www.facebook.com/AFMcK?ref=bookmarks">https://www.facebook.com/AFMcK?ref=bookmarks</a></li>
-        <li>N'oubliez pas de vous inscrire pour le congrès ! Les places sont limitées et partent très vite !
-            <a href="http://afmck.web-events.net/">http://afmck.web-events.net/</a></li>
-    </ul>
+      <p>Lors du congrès aura lieu l’Assemblée Générale, trouvez ci-joint l’ordre du jour. Dans les prochains jours sera aussi disponible sur le site (<a href="www.afmck.fr">www.afmck.fr</a>) le rapport de trésorerie.<br/>
+      Vous trouverez aussi une seconde pièce jointe avec une procuration pour le vote de l’Assemblée Générale. Les bulletins vierges ne seront pas pris en compte, ils doivent impérativement être remplis et envoyés avant le 2 février 2015 à l’adresse suivante :</p>
+
+      <p>LOMER Romain-Brice<br/>
+      Masseur-Kinésithérapeutes DE<br/>
+      Z.A Les Noës<br/>
+      35380 PLELAN LE GRAND</p>
+    <p>Il reste encore des places, si vous souhaitez vous inscrire c’est en <b>2 fois</b>:</p>
+      <ul style="text-align: left;margin-left: 150px">
+          <li>Pour les <b>JFK</b> via : <a href="http://www.congres-jfk.fr/">http://www.congres-jfk.fr/</a></li>
+          <li><b>ET</b> pour le congrès AFMcK du dimanche et de la soirée de Gala via : <a href="http://afmck.web-events.net/">http://afmck.web-events.net/</a> </li>
+      </ul>
+      <p>
+          N'hésitez pas à contacter: tresorerie@afmck.fr si problème à l'inscription.<br/>
+          A bientôt.</p><p>
+          <i>L'équipe de l’AFMcK</i>
+      </p>
+      <h2><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/Erratum_AG_2015.pdf">ERRATUM Ordre du jour de l'assemblée générale ordinaire</a></h2>
+      <hr/>
+    <h3>Information</h3>
+<p>
+ Pour finir 2015 et les interviews de nos nouveaux diplômés 2014, vous trouverez sur le site celle de <b>Jean-Philippe DENEUVILLE</b>. (<a href="http://afmck.fr/members/kiosque/articles-scientifiques.php#Interviews">http://afmck.fr/members/kiosque/articles-scientifiques.php#Interviews</a>).
+</p>
+<p>
+ Lorsque nous l’avons lu nous avons été impressionné par son enthousiasme et attendions ces fêtes de fin d’années avec impatience pour vous l’offrir : Histoire de finir en beauté et démarrer 2015 avec le plein de motivation.    
+</p>
 
     <h2>Sur le site</h2>
-    <p>La dernière news internationale traduite, sur le développement du MDT dans le monde,
-        l'importance d'un bilan MDT bien mené et l'association MDT / infiltrations épidurales.</p>
-    <p>Un nouvel article qui vient enrichir notre site : <b><i>Physical Therapists' Level of McKenzie
-                Education, Functional Outcomes, and Utilization in Patients with Low Back Pain</i></b>, de Daniel DEUTSCHER en 2014.</p>
+<p>
+En cadeau de Noel une nouvelle <b>newsletter internationale</b> traduite, qui nous fait voyager du Danemark au Japon, en sous-groupe ou pas  et  parfois semé de doutes. Et peut-être que l’avenir sera fait de consultation virtuelle de nos patients. ? (<a href="http://afmck.fr/members/kiosque/newsletters-McKenzie.php">http://afmck.fr/members/kiosque/newsletters-McKenzie.php</a>)
+</p>
+<p>Profitez aussi des offres Essentiel Médical, la mode à l’italienne en cette fin d’année !</p>
+<p><a href="http://www.afmck.fr/docs/members/materiel/Offre_super_Roll_1.pdf">http://www.afmck.fr/docs/members/materiel/Offre_super_Roll_1.pdf</a></p>
 
-    <p>La nouvelle version du logiciel de bilan MDT est en ligne = version 1.6.6</p>
-    <ul>
-        <li>liens de téléchargement sur le site, dans la partie « Accueil / adhérents / outils travail
-            / logiciels ».  </li>
-        <li>Au programme toutes les fiches bilan MDT (même les deux sur le périphériques !),
-            les fiches de liaisons médecin et une adresse mail dédiée pour les problèmes
-            techniques !
-        </li>
-    </ul>
-    <p>Pour toutes réclamations, remarques, un service de maintenance vient d'être ouvert. Vous
-        pouvez nous contacter via : maintenance@afmck.fr</p>
+<h2>Divers</h2>
+<p>
+Le mois de février approche et il reste moins de 30 places pour participer au congrès de l’AFMcK les 7 et 8 février lors des <b>JFK à Lille</b>. Bientôt les places seront ouvertes à tous, donc si vous souhaitez venir, dépêchez-vous !!!
+</p>
+<p>
+Pour vous inscrire :
+</p>
+<ul style="text-align: left;margin-left: 150px">
+<li>Pour le  repas de gala du samedi de l'AFMcK ET la matinée du dimanche : <a href="http://afmck.web-events.net/">http://afmck.web-events.net/</a></li>
+<li>Pour la journée du samedi (et les autres journées des JFK) : <a href="http://www.congres-jfk.fr/">http://www.congres-jfk.fr/</a></li>
+</ul>
+<p>
+L’AFMcK a obtenu des tarifs à <b>l’hôtel le Carlton</b> où aura lieu la soirée de Gala du Samedi soir :
+</p>
+<p>
+   <b>Hôtel CARLTON Lille, France</b>, Séjour autour du 7 Février 2015.
+<ul style="text-align: left;margin-left: 150px">
+    <li>Tarif en chambre single à 109 EUR au lieu de 195 EUR par nuit</li>
+    <li>Tarif en chambre double à 116 EUR au lieu de 215 EUR par nuit</li>
+    <li>Petit Déjeuner Buffet à 20 EUR par personne inclus</li>
+    <li>Taxe de séjour à 1.65 EUR par personne et par nuit en supplément</li>
+    <li>Internet en Wifi gratuit et illimité.</li>
+</ul>
+<p>Pour les contacter : HOTEL CARLTON LILLE France :  <b>f.heranval@carltonlille.com</b>  ou par téléphone:  <b>03 20 13 33 13</b></p>
+<h2>Logiciel</h2>
+<p>
+L’AFMcK propose un sondage pour savoir si vous seriez intéressés par la création d’une version I Pad du bilan informatique M.D.T ? Le coût de création du logiciel étant élevé, il est  important de savoir si cela vous serait utile.
+</p>
+<p>
+Merci de bien vouloir répondre au lien suivant : <a href="http://doodle.com/3zd5w2s865cazihi">http://doodle.com/3zd5w2s865cazihi</a>
+</p>
 
-    <h2>Divers</h2>
-    <p>
-        L'AFMcK apporte son soutien à la FNEK dans ses démarches concernant la réforme de la
-        formation initiale et à l'obtention du grade de Master. Ceci dans le but d'améliorer notre
-        profession et de développer la recherche en France et pouvoir mener à bien des études
-        scientifiques.
-    </p>
-    <p>
-        L'AFMcK vous rappelle qu'elle est dans cette démarche avec la réalisation, cette année,
-        d'une étude sur le traitement cervical pour des douleurs d'épaule en MDT. En début d'année
-        une étude sur les Préférence Directionnelle au niveau de la colonne lombaire était publiée
-        dans « Kinésithérapie la revue ». Le deuxième article, sur les cervicales est en cours de
-        finalisation.
-    </p>
-    <h2>Petites annonces</h2>
-    <p>
-        Une deuxième clinique McKenzie en France va voir le jour dans le Gard aux portes de Nîmes.
-        La clinique compte 3 kinés tous praticiens MDT, dont un Diplômé (Fred STEIMER). Elle
-        recherche activement un(e) assistant(e) motivée pour travailler en équipe. Le cabinet propose
-        aussi des cours Pilates et est attaché à plusieurs EHPAD et à un centre pour IMC.
-    </p>
-    <p>
-        Pour nous contacter : jerome.gumiel@orange.fr ou contacter Jérôme Gumiel au n°04 66 377
-        890
-    </p>
-    <h2>Action locale</h2>
-    <p>Le 6 décembre à la fac de Médecine de Nantes retrouvez Jonathan VIZZINI, Cert. MDT et
-        membre du bureau de l'AFMcK, pour s'inscrire c'est sur le site d' actualités thérapeutiques :
-        <a href="http://www.actualites-therapeutiques.com/">http://www.actualites-therapeutiques.com/ </a>
-    </p>
-    <p>
-        En Bretagne le 6 décembre dans l'Ile et Vilaine (à Cesson Sévigné) pour être plus exacte, une
-        journée d'échange sur le MDT est organisée, sous l'impulsion de Romain-Brice LOMER, Cert. MDT.
-    </p>
-
-
-    <h2>Forums</h2>
-    <p>N'oubliez cet outil d'échange entre praticien, qui permet à tous de progresser. Suivez le lien : <a href="http://afmck.forumactif.org/">http://afmck.forumactif.org/</a>
-        <br/><br/>
-        Le bureau de L'AFMcK
-    </p>
+<h2>Forum</h2>
+<p>N'oubliez cet outil d'échange entre praticien, qui permet à tous de progresser. Suivez le lien : <a href="http://afmck.forumactif.org/">http://afmck.forumactif.org/</a>
+<br/><br/>
+Le bureau de L'AFMcK
+</p>
+</div>
 </div>
