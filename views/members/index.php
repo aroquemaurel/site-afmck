@@ -30,8 +30,8 @@ MDT WORLD PRESS Newsletter Vol 3 N°4
 <div style="padding-right: 80px;">
 <div class="alert alert-info">
 Bienvenue sur le nouveau site de l'Association Française McKenzie !!<br/>
-Ce site tout neuf vous permettra d'avoir de nouvelles fonctionnalités régulièrement vous permettant de vous aider dans votre travail.<br/><br/>
-Ce site étant tout jeune, il se peut que vous tombiez sur des problèmes, des bugs ou des incompréhensions…<br/> Si tel est le cas, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a></div> 
+Ce site tout neuf vous permettra d'avoir prochainement de nouvelles fonctionnalités.<br/><br/>
+Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des bugs ou des incompréhensions…<br/> Si tel est le cas, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a>, votre aide nous est précieuse ! </div> 
 <h3><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/SAGI 2015 - De l'héritage de Robin McKenzie - résumé.pdf">SAGI 2015 - de l'héritage de Robin Mckenzie - Résumé</a></h3>
       <p>Bonjour à tous,<br/>
       La date du 4èmes congrès de l’AFMcK approche !!!</p>

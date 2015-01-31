@@ -29,14 +29,14 @@ class Popup {
         </div>';
     }
     public static function connectionOk() {
-        return self::successMessage("Vous êtes maintenant connectés");
+        return self::successMessage("Vous êtes maintenant connecté");
     }
 
     public static function connectionKo() {
         return self::errorMessage("Le numéro ADELI ou le mot de passe est incorrect");
     }
     public static function deconnectionOk() {
-        return self::successMessage("Vous êtes maintenant déconnectés");
+        return self::successMessage("Vous êtes maintenant déconnecté");
     }
 
     public static function alreadyConnection() {

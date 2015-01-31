@@ -135,7 +135,9 @@ class User {
         $mailer->Body = (Mail::getForgetPassword($this->firstName." ".$this->lastName, "u=".$this->getId()."&s=".
             $this->getHash()));
         $mailer->addAddress($this->mail, $this->firstName." ".$this->lastName);
-        $mailer->send();
+        if(!$mailer->send()) {
+            echo $mailer->ErrorInfo;
+        }
 
     }
     public function valid() {

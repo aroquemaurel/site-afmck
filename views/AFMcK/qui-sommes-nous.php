@@ -4,7 +4,7 @@
             <h1>AFMcK: Qui sommes nous ?</h1>
 
         <p>
-            L’AFMcK est né en 2010 sur l'inspiration de quelques kinés qui faisaient partie des premiers certifiés français. Motivés et désireux de faire avancer le MDT en France, ils ont décidés de se fédérer en association et de partir pour une belle aventure.
+            L’AFMcK est né en 2010 sur l'inspiration de quelques kinés qui faisaient partie des premiers certifiés français. Motivés et désireux de faire avancer le MDT en France, ils ont décidé de se fédérer en association et de partir pour une belle aventure.
         </p>
 
         <p>

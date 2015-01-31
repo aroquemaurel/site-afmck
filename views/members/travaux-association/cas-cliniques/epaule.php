@@ -6,7 +6,7 @@
     <p>Par Romain-Brice LOMER</p>
 
     <h2>Interrogatoire</h2>
-    <p>Mr J 32 ans, chauffeur routier en reconversion professionnel, vient consulter pour des douleurs à  l’épaule droite présentes depuis 2 mois qui se sont aggravées en 15 jours. Il est en arrêt de travail car il ne peut plus se servir de son épaule et a stoppé toute activité de loisirs. L’EVA est de 8/10 lors des mouvements et 3/10 au repos. Rien ne semble être à l’origine de la douleur qui progressivement s’est accentuée devenant constante au cours de la journée et l’empêchant de dormir, ne trouvant pas de position indolore.</p>
+    <p>Mr J 32 ans, chauffeur routier en reconversion professionnelle, vient consulter pour des douleurs à  l’épaule droite présentes depuis 2 mois qui se sont aggravées en 15 jours. Il est en arrêt de travail car il ne peut plus se servir de son épaule et a stoppé toute activité de loisirs. L’EVA est de 8/10 lors des mouvements et 3/10 au repos. Rien ne semble être à l’origine de la douleur qui progressivement s’est accentuée devenant constante au cours de la journée et l’empêchant de dormir, ne trouvant pas de position indolore.</p>
     <p>La seule chose qui soulage l’épaule de Mr J c’est le repos strict, assis.</p>
     <p>La radiographie ne montre rien de particulier, la prise d’antalgique et d’AINS semble soulager quelques heures. Pour pouvoir dormir le patient prend des somnifères. Aucun drapeau rouge n’est présent.</p>
 
