@@ -10,6 +10,7 @@ require_once('Database.php');
 
 class DatabaseUser extends Database {
     public function getUser($adeliNumber, $password="") {
+        parent::__construct();
         $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number");
         $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
         $query->execute();
