@@ -14,7 +14,16 @@
     <div class="docformation">
         <!-- SANGLES----------------------------------------------------------------------------------------------------------------------------------------------- -->
         <h2>Essentiel Medical</h2>
-            <p style="text-align: center;"><img src="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/materiel/logo3 essentiel.png";?>" /></p>
+        <div style="text-align: center">
+        <div class="thumbnail with-caption" style="text-align: center">
+            <a href="http://www.essentiel-med.fr/PrestaShop1/">
+                <img src="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/materiel/logo3 essentiel.png";?>" />
+            </a>
+            <p style="font-size: 10pt"><a href="http://www.essentiel-med.fr/PrestaShop1/">
+                    <i class="glyphicon glyphicon-globe"></i>&nbsp; Essentiel-med
+                    </a><small>http://www.essentiel-med.fr/PrestaShop1/</small></p>
+        </div>
+        </div>
         <h3>Les Sangles</h3>
         <h4>Sangle americaine</h4>
         <div class="bs-callout bs-callout-info">longueur 8 pieds soit 2,44 mètres</div>

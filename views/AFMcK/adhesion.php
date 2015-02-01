@@ -45,7 +45,7 @@
         <h3>Formulaire d'adhésion</h3>
         <ul>
             <?php
-            $folder = Visitor::getInstance()->getRootPage()."/docs/adhesions";
+            $folder = "/docs/adhesions";
             Image::miniTooltipLink($folder, "formulaire adhesion 2013_AFMcK", "Formulaire d'adhésion à l'<b>A</b>ssociation <b>F</b>rançaise <b>McK</b>enzie");
             ?>
         </ul>
