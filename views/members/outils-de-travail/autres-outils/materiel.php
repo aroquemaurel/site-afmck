@@ -19,7 +19,7 @@
         <div style="text-align: center">
         <?php
         $folder = Visitor::getInstance()->getRootPage()."/docs/members/materiel";
-        Image::thumbnailsWithCaption($folder, "BON DE COMMANDE - SANGLE AMERICAINE 2014_AFMcK",
+        Image::thumbnailsWithCaption($folder, "2015 Offre Sangle Américaine",
             "Bon de commande Sangle américaine", "<a href=\"http://www.essentiel-med.fr\">Essentiel Medical. <br/>http://www.essentiel-med.fr</a>");
         ?>
         </div>
