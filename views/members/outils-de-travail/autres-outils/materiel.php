@@ -12,20 +12,31 @@
     </div>
 
     <div class="docformation">
-        <!-- SANGLES----------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <h2>Les Sangles</h2>
-        <h3>Sangle americaine</h3>
+        <!-- SANGLES-->
+        <h2>Essentiel Medical</h2>
+        <div style="text-align: center">
+        <div class="thumbnail with-caption" style="text-align: center">
+            <a href="http://www.essentiel-med.fr/PrestaShop1/">
+                <img src="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/materiel/logo3 essentiel.png";?>" />
+            </a>
+            <p style="font-size: 10pt"><a href="http://www.essentiel-med.fr/PrestaShop1/">
+                    <i class="glyphicon glyphicon-globe"></i>&nbsp; Essentiel-med
+                    </a><small>http://www.essentiel-med.fr/PrestaShop1/</small></p>
+        </div>
+        </div>
+        <h3>Les Sangles</h3>
+        <h4>Sangle americaine</h4>
         <div class="bs-callout bs-callout-info">longueur 8 pieds soit 2,44 mètres</div>
         <div style="text-align: center">
         <?php
-        $folder = Visitor::getInstance()->getRootPage()."/docs/members/materiel";
+        $folder = "docs/members/materiel";
         Image::thumbnailsWithCaption($folder, "2015 Offre Sangle Américaine",
             "Bon de commande Sangle américaine", "<a href=\"http://www.essentiel-med.fr\">Essentiel Medical. <br/>http://www.essentiel-med.fr</a>");
         ?>
         </div>
         <!-- COUSSINS ----------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <h2>Les Coussins</h2>
-        <h3>Coussins au détail</h3>
+        <h3>Les Coussins</h3>
+        <h4>Coussins au détail</h4>
             <?php
             Image::thumbnails($folder.'/coussin1_AFMcK.jpg', 'http://www.essentiel-med.fr');
             Image::thumbnails($folder.'/coussin5_AFMcK.jpg', 'http://www.essentiel-med.fr');
@@ -44,14 +55,14 @@
         <div class="bs-callout bs-callout-info">
             <ul>
                 <?php
-                Image::miniTooltipLink($folder, "Offre_super_Roll_1", "Offre spécial Super Roll");
-                Image::miniTooltipLink($folder, "BON DE COMMANDE - OFFRE INTERNET 2014_AFMcK", "Bon de commande « Offre Internet »");
-                Image::miniTooltipLink($folder, "BON DE COMMANDE - OFFRE PATIENT 2014_AFMcK", "Bon de commande « Offre Patient» ");
+                Image::miniTooltipLink($folder, "2015 Offre Super Roll", "Offre spécial Super Roll");
+                Image::miniTooltipLink($folder, "2015 Offre INTERNET", "Bon de commande « Offre Internet »");
+                Image::miniTooltipLink($folder, "2015 Patient AFMcK", "Bon de commande « Offre Patient» ");
                 ?>
             </ul>
         </div>
 
-        <h3>Le pack 2013</h3>
+        <h4>Le pack 2013</h4>
         <div style="text-align : center;">
         <?php
         Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
@@ -71,7 +82,7 @@
         </div>
 
 
-        <h3>Le pack découverte</h3>
+        <h4>Le pack découverte</h4>
         <div style="text-align : center;">
         <?php
             Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');

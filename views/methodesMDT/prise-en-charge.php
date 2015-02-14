@@ -122,9 +122,18 @@ chroaf            <p>Il existe de nombreux modèles de coussins lombaires ou cer
             </table>
             </div>
 
-            <div class="essential" style="margin:auto;text-align: center">
-                <a href="http://www.essentiel-med.fr" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/methode-MDT/prise-en-charge/logo_essential.jpg"></a></div>
-            <p>&nbsp;</p>
+        <div style="text-align: center">
+            <div class="thumbnail with-caption" style="text-align: center">
+                <a href="http://www.essentiel-med.fr/PrestaShop1/">
+                    <img src="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/materiel/logo3 essentiel.png";?>" />
+                </a>
+                <p style="font-size: 10pt"><a href="http://www.essentiel-med.fr/PrestaShop1/">
+                        <i class="glyphicon glyphicon-globe"></i>&nbsp; Essentiel-med
+                    </a><small>http://www.essentiel-med.fr/PrestaShop1/</small></p>
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
             <div class="alert alert-warning">
                 <p>Pour les membres adhérents un lien particulier est disponible après avoir entré votre login sur la page dédiée.</p>
             </div>

@@ -77,7 +77,7 @@
 
             <ul>
                 <?php
-                $folder = Visitor::getInstance()->getRootPage()."/docs/members/certification";
+                $folder = "/docs/members/certification";
                 Image::miniTooltipLink($folder, "Correction Quizz Manuel Partie A_AFMcK", "Correction Quizz Manuel Partie A");
                 Image::miniTooltipLink($folder, "Correction Quizz Manuel Partie B_AFMcK", "Correction Quizz Manuel Partie B");
                 ?>

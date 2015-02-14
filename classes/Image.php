@@ -19,8 +19,8 @@ class Image {
     }
 
     public static function miniTooltipLink($folder, $filename, $title, $li=true) {
-        if(!file_exists($folder.'/mini/'.$filename.'.jpg')) {
-            self::createPdfMini($folder.'/'.$filename.'.pdf', $folder.'/mini/'.$filename.'.jpg');
+        if(!file_exists(Visitor::getInstance()->getRootPath().'/'.$folder.'/mini/'.$filename.'.jpg')) {
+            self::createPdfMini(Visitor::getInstance()->getRootPath().'/'.$folder.'/'.$filename.'.pdf', $folder.'/mini/'.$filename.'.jpg');
         }
         echo '<div class="tooltip2">';
         if($li) {
@@ -28,7 +28,7 @@ class Image {
         }
         echo '<i class="glyphicon glyphicon-download-alt"></i>
                 <a
-                href="'.$folder.'/'.$filename.'.pdf">
+                href="'.Visitor::getInstance()->getRootPage().'/'.$folder.'/'.$filename.'.pdf">
                 '.$title;
                 /*<span>
                 <img id="mini" width="200" src="'.$folder.'/mini/'.$filename.'.jpg" style="text-align: center;margin:auto"/>
@@ -47,18 +47,21 @@ class Image {
     }
 
     public static function thumbnailsWithCaption($folder, $filename, $description, $frs='') {
+        if(!file_exists(Visitor::getInstance()->getRootPath()."/".$folder.'/mini/'.$filename.'.jpg')) {
+            self::createPdfMini(Visitor::getInstance()->getRootPath()."/".$folder.'/'.$filename.'.pdf', Visitor::getInstance()->getRootPath()."/".$folder.'/mini/'.$filename.'.jpg');
+        }
         echo '<div class="thumbnail with-caption" style="width: 300px;text-align: center">
-                    <a href="'.$folder.'/'.$filename.'.pdf">
-                        <img src="'.$folder.'/'.$filename.'.jpg"  alt="'.$description.'"/>
+                    <a href="'.Visitor::getInstance()->getRootPage().'/'.$folder.'/'.$filename.'.pdf">
+                        <img src="'.Visitor::getInstance()->getRootPage().'/'.$folder.'/mini/'.$filename.'.jpg"  alt="'.$description.'"/>
                     </a>
-                    <p style="font-size: 10pt"><i class="glyphicon glyphicon-download-alt"></i>&nbsp<a>'.$description.
+                    <p style="font-size: 10pt"><a href="'.Visitor::getInstance()->getRootPage().'/'.$folder.'/'.$filename.'.pdf"><i class="glyphicon glyphicon-download-alt"></i>&nbsp'.$description.
                     '</a><small>'.$frs.'</small></p>
                 </div>';
     }
     public static function thumbnails($filename, $link, $width="200px", $height="120px") {
         echo '<div class="thumbnail with-caption" style="width: '.$width.';height:'.$height.';margin: 5px;padding:auto;text-align: center">
                     <a href="'.$link.'">
-                        <img src="'.$filename.'"  alt="'.$filename.'"/>
+                        <img src="'.Visitor::getInstance()->getRootPage().'/'.$filename.'"  alt="'.$filename.'"/>
                     </a>
                 </div>';
     }
