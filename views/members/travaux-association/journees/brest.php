@@ -1,6 +1,6 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid">
-    <h1>Journées de l'association — Brest 2012</h1>
+    <h1>Journées de l'association — Brest 2013</h1>
     </div><!--/.well -->
 <div style="text-align: center">
         <img src="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/photobrest1.jpg" width="261" height="196" alt="imgbrest1" />

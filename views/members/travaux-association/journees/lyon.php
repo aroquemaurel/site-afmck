@@ -1,6 +1,6 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid">
-    <h1>3èmes Journées de l'AFMcK — LYON 2013</h1>
+    <h1>3èmes Journées de l'AFMcK — LYON 2014</h1>
     </div><!--/.well -->
 
     <div style="text-align: center">
