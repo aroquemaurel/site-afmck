@@ -27,6 +27,7 @@
                                         <li>
                                             <p><strong>Chroniques scientifiques</strong></p>
                                         </li>
+<?php echo "<!-- /--------/  ".Visitor::getInstance()->getRootPage()."-->" ;?>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°1_AFMcK.pdf" target="_blank">Chronique N°1</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°2_AFMcK.pdf" target="_blank">Chronique N°2</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK n°3_AFMck.pdf" target="_blank">Chronique N°3</a></li>

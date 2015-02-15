@@ -12,7 +12,7 @@
     </div>
 
     <div class="docformation">
-        <!-- SANGLES----------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <!-- SANGLES-->
         <h2>Essentiel Medical</h2>
         <div style="text-align: center">
         <div class="thumbnail with-caption" style="text-align: center">
@@ -29,8 +29,8 @@
         <div class="bs-callout bs-callout-info">longueur 8 pieds soit 2,44 mètres</div>
         <div style="text-align: center">
         <?php
-        $folder = "/docs/members/materiel";
-        Image::thumbnailsWithCaption($folder, "2015_Offre_Sangle_Americaine",
+        $folder = "docs/members/materiel";
+        Image::thumbnailsWithCaption($folder, "2015 Offre Sangle Américaine",
             "Bon de commande Sangle américaine", "<a href=\"http://www.essentiel-med.fr\">Essentiel Medical. <br/>http://www.essentiel-med.fr</a>");
         ?>
         </div>
