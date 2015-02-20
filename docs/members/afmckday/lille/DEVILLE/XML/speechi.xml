@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>6-Présentation JFK 20min - Lille 2015.ppt</PPTNAME>
+  <GENERATED>09/02/2015 14:07:58</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>10576895</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME>C:\Users\Congres\Desktop\deville.jpg</PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr/</LINK>
+  <SPEAKER>Guillaume DEVILLE</SPEAKER>
+  <SPEAKER_EMAIL></SPEAKER_EMAIL>
+  <TITLE>Evolution des symptômes et signes d’épaule suite à une prise en charge du rachis cervical en McKenzie/MDT</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>1467</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="1">
+   <NUM pptslide="1">1</NUM>
+   <ID>256</ID>
+   <JPGFILE>slides/slide256.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1">Bonjour à tous, je suis très heureux de vous présenter les résultats de l’étude que j’ai conduite pour l’AFMcK.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="600" end_time="227939" duration="227339">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide256.txt</TEXTFILE>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">2</NUM>
+   <ID>257</ID>
+   <JPGFILE>slides/slide257.swf</JPGFILE>
+   <TITLE default="0">Photos</TITLE>
+   <COMMENTS default="1">J’ai bien conscience d’une chose : vous venez de manger, il est 14h et je vais vous parler de statistiques… J’espère vous garder avec moi jusqu’au bout.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="227939" end_time="235980" duration="8041">sounds/conference2.mp3</MP3>
+   <TEXTFILE>slides/slide257.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">228,08</ENTRY>
+    <ENTRY TIMER="4478" ACTION="next">232,558</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">3</NUM>
+   <ID>259</ID>
+   <JPGFILE>slides/slide259.swf</JPGFILE>
+   <TITLE default="0">Thème et objecif  de l'étude</TITLE>
+   <COMMENTS default="1">En pratique mdt, lorsqu’un patient se présente avec une plainte d’épaule, la consigne est d’éliminer en premier lieu une origine cervicale. Notre pratique nous confirme la pertinence de ce principe…</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="235980" end_time="261858" duration="25878">sounds/conference3.mp3</MP3>
+   <TEXTFILE>slides/slide259.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">236,214</ENTRY>
+    <ENTRY TIMER="23183" ACTION="next">259,397</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">4</NUM>
+   <ID>323</ID>
+   <JPGFILE>slides/slide323.swf</JPGFILE>
+   <TITLE default="0">Thème et objecif  de l'étude</TITLE>
+   <COMMENTS default="1">…, mais sommes-nous biaisés ? Cette étude est une toute première étape pour explorer la question suivante : perdons-nous du temps à évaluer le cou alors que le patient vient pour son épaule ?</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="261858" end_time="294239" duration="32381">sounds/conference4.mp3</MP3>
+   <TEXTFILE>slides/slide323.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">262,141</ENTRY>
+    <ENTRY TIMER="22091" ACTION="next">284,232</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">5</NUM>
+   <ID>260</ID>
+   <JPGFILE>slides/slide260.swf</JPGFILE>
+   <TITLE default="0">Examinteurs</TITLE>
+   <COMMENTS default="1">L’étude a été conduite en France, et 17 kinés au minimum certifiés ont pu participer et m’envoyer des données dans les temps. </COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="294239" end_time="303339" duration="9100">sounds/conference5.mp3</MP3>
+   <TEXTFILE>slides/slide260.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">294,543</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>261</ID>
+   <JPGFILE>slides/slide261.swf</JPGFILE>
+   <TITLE default="0">Liens d'intérêts</TITLE>
+   <COMMENTS default="1">La plainte majeure des patients inclus devait se situer dans la région de l’épaule délimitée en vert sur le diagramme.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="303339" end_time="316833" duration="13494">sounds/conference6.mp3</MP3>
+   <TEXTFILE>slides/slide261.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">303,784</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>262</ID>
+   <JPGFILE>slides/slide262.swf</JPGFILE>
+   <TITLE default="1">Non-inclusion</TITLE>
+   <COMMENTS default="1">Les critères de non-inclusion étaient les suivants : la présence de signes neurologiques dans la main, les patients mineurs ou âgés de plus de 80 ans, une pathologie rhumatoïde connue, un antécédent de fracture ou de chirurgie, ou une combinaison de drapeaux rouges contre-indiquant une prise en charge kiné.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="316833" end_time="338020" duration="21187">sounds/conference7.mp3</MP3>
+   <TEXTFILE>slides/slide262.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">317,278</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">8</NUM>
+   <ID>263</ID>
+   <JPGFILE>slides/slide263.swf</JPGFILE>
+   <TITLE default="1">Salle d'attente</TITLE>
+   <COMMENTS default="1">Pour l’étude, chaque patient a rempli un questionnaire d’incapacité validé pour l’épaule avant de débuter : le questionnaire SPADI</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="338020" end_time="348141" duration="10121">sounds/conference8.mp3</MP3>
+   <TEXTFILE>slides/slide263.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">338,49</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>264</ID>
+   <JPGFILE>slides/slide264.swf</JPGFILE>
+   <TITLE default="0">Salle de soins: interrogatoire</TITLE>
+   <COMMENTS default="1">Ensuite l’examinateur lui a posé quelques questions en documentant les réponses.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="348141" end_time="352988" duration="4847">sounds/conference9.mp3</MP3>
+   <TEXTFILE>slides/slide264.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">348,749</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>265</ID>
+   <JPGFILE>slides/slide265.swf</JPGFILE>
+   <TITLE default="0">Salle de soins: Examen physique de l'épaule</TITLE>
+   <COMMENTS default="1">Puis il a noté les résultats de certains tests d’épaule.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="352988" end_time="358572" duration="5584">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide265.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">353,475</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">11</NUM>
+   <ID>266</ID>
+   <JPGFILE>slides/slide266.swf</JPGFILE>
+   <TITLE default="0">Evaluation MDT du rachis cervicale</TITLE>
+   <COMMENTS default="1">Ensuite, conformément aux principes MDT, il a évalué le rachis cervical à la recherche d’un dérangement.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="358572" end_time="370240" duration="11668">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide266.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">359,238</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">12</NUM>
+   <ID>267</ID>
+   <JPGFILE>slides/slide267.swf</JPGFILE>
+   <TITLE default="0">Rédution du dérangement</TITLE>
+   <COMMENTS default="1">S’il ne pouvait pas l’exclure à la 1ère séance, il utilisait les procédures mécaniques cervicales pour obtenir la réduction du dérangement.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="370240" end_time="379081" duration="8841">sounds/conference12.mp3</MP3>
+   <TEXTFILE>slides/slide267.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">370,981</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>268</ID>
+   <JPGFILE>slides/slide268.swf</JPGFILE>
+   <TITLE default="0">Ré-évaluaion de l'épaule</TITLE>
+   <COMMENTS default="1">Une fois le dérangement réduit, ou la piste cervicale abandonnée, l’examinateur documentait à nouveau les réponses du patient à l’interrogatoire et aux tests d’épaule. Puis le patient remplissait à nouveau le questionnaire SPADI et donnait une évaluation subjective de l’évolution de sa plainte d’épaule.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="379081" end_time="397209" duration="18128">sounds/conference13.mp3</MP3>
+   <TEXTFILE>slides/slide268.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">379,82</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>269</ID>
+   <JPGFILE>slides/slide269.swf</JPGFILE>
+   <TITLE default="0">Combien de temps ?</TITLE>
+   <COMMENTS default="1">Globalement, les participants ont mis entre 1 semaine et 1 mois pour explorer et traiter le cou. Quelques valeurs extrêmes s’expliquent par la période de l’étude qui englobait les grandes vacances. Selon les différents guidelines, la chirurgie ne doit s’envisager qu’en cas d’échec du traitement conservateur conduit pendant au moins 3 voire 6 mois. D’autre part, la rééducation d’épaule est censée montrer une amélioration au bout de 6 à 8 semaines. Au final, avec 1 mois pour le cou et 6 à 8 semaines pour l’épaule, on respecte bien le délai des 3 moi pour évaluer la pertinence du traitement conservateur.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="397209" end_time="465226" duration="68017">sounds/conference14.mp3</MP3>
+   <TEXTFILE>slides/slide269.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">397,966</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>270</ID>
+   <JPGFILE>slides/slide270.swf</JPGFILE>
+   <TITLE default="0">Biais médicmenteux</TITLE>
+   <COMMENTS default="1">Les examinateurs ont suivi l’évolution de la médication antalgique au cours du traitement du cou, pour vérifier si les changements observés pouvaient s’expliquer par une prise de médicaments plus forts. Pour les patients suivis, 1 seul est passé de « pas de médicaments » à des antalgiques de palier 1 , la majorité n’a pas changé, et 41% ont diminué. Par conséquent, les résultats que je vais vous exposer ne peuvent pas s’expliquer par une augmentation de la médication.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="465226" end_time="510625" duration="45399">sounds/conference15.mp3</MP3>
+   <TEXTFILE>slides/slide270.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">466,082</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>272</ID>
+   <JPGFILE>slides/slide272.swf</JPGFILE>
+   <TITLE default="0">Poupées russes</TITLE>
+   <COMMENTS default="1">Les patients : 115 se sont présentés avec une plainte d’épaule, 88 rentraient dans les critères d’inclusion de l’étude. À la 1ère séance, la présence d’un dérangement cervical a été exclue pour 11 patients. Sur les 77 patients restants, 1 a été perdu de vue et les 76 autres ont pu être traités et réévalués ce qui représente 2/3 des patients sondés initialement.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="510625" end_time="543651" duration="33026">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide272.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">511,454</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>322</ID>
+   <JPGFILE>slides/slide322.swf</JPGFILE>
+   <TITLE default="0">Evaluation par le patient</TITLE>
+   <COMMENTS default="1">Parlons des résultats en commençant par les critères évalués par le patient lui-même.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="543651" end_time="551823" duration="8172">sounds/conference17.mp3</MP3>
+   <TEXTFILE>slides/slide322.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">544,735</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>314</ID>
+   <JPGFILE>slides/slide314.swf</JPGFILE>
+   <TITLE default="0">Résultats SPADI</TITLE>
+   <COMMENTS default="1">Le changement minimum détectable pour le SPADI qui est un score sur 100, est de 18 pts. J’ai une question pour les modérateurs : selon vous, sur les 76 patients suivis, quel pourcentage a diminué son score d’au moins 18 points ?
+Alors dans la salle maintenant, qui dit plus ? Levez la main. Et qui dit moins ?
+Voici le résultat : plus d’1 sur 2</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="551823" end_time="623403" duration="71580">sounds/conference18.mp3</MP3>
+   <TEXTFILE>slides/slide314.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">552,862</ENTRY>
+    <ENTRY TIMER="55795" ACTION="next">608,657</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">19</NUM>
+   <ID>315</ID>
+   <JPGFILE>slides/slide315.swf</JPGFILE>
+   <TITLE default="0">Evolution du SPADI</TITLE>
+   <COMMENTS default="1">Ce graphique vous montre la répartition de l’évolution du score entre le bilan initial et la fin du traitement des cervicales. Entre les traits vert et rouge, le changement n’est pas significatif, il faut regarder autour de cette zone. On voit qu’un seul patient a augmenté son score de 18 points, contre 41 qui ont connu une diminution de 18 points ou plus.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="623403" end_time="647276" duration="23873">sounds/conference19.mp3</MP3>
+   <TEXTFILE>slides/slide315.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">624,544</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">20</NUM>
+   <ID>316</ID>
+   <JPGFILE>slides/slide316.swf</JPGFILE>
+   <TITLE default="0">Evolution du SPADI</TITLE>
+   <COMMENTS default="1">Voici une autre représentation graphique qui montre la différence entre le score initial et celui après le traitement cervical. On observe une valeur de p hautement significative et je vous rappelle que seul le cou a été traité ! Lorsque la plainte n’avait pas totalement disparue, il restait encore des outils de traitement pour l’épaule pour continuer de diminuer la plainte du patient !</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="647276" end_time="669177" duration="21901">sounds/conference20.mp3</MP3>
+   <TEXTFILE>slides/slide316.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">648,403</ENTRY>
+    <ENTRY TIMER="6968" ACTION="next">655,371</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">21</NUM>
+   <ID>317</ID>
+   <JPGFILE>slides/slide317.swf</JPGFILE>
+   <TITLE default="0">Evolution du SPADI</TITLE>
+   <COMMENTS default="1">Dans ce tableau nous retrouvons les résultats obtenus par Yiasemides dans son essai clinique randomisé publié en 2011 comparant 2 interventions ciblant l’épaule. Cette étude a exclu les patients présentant une douleur référée sur la base d’un entretien téléphonique, puis d’un examen médical. Les patients inclus dans notre étude, ont donc été exclu dans la sienne. Vous pouvez voir que pour les patients dont la prise en charge cervicale a duré 1 mois ou moins, le SPADI final était très significativement inférieur à celui de l’étude de Yiasemides après 1 mois de traitement, alors qu’il était tout à fait comparable initialement. Il semblerait que lorsqu’on ne peut pas exclure un dérangement cervical à la 1ère séance, le pronostic à 1 mois soit meilleur.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="669177" end_time="746014" duration="76837">sounds/conference21.mp3</MP3>
+   <TEXTFILE>slides/slide317.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">670,324</ENTRY>
+    <ENTRY TIMER="39899" ACTION="next">710,223</ENTRY>
+    <ENTRY TIMER="53890" ACTION="next">724,2141</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">22</NUM>
+   <ID>318</ID>
+   <JPGFILE>slides/slide318.swf</JPGFILE>
+   <TITLE default="0">Résultats : Changement subjectif</TITLE>
+   <COMMENTS default="1">Le patient devait également reporter une valeur de changement subjective.
+À votre avis, quelle proportion des patients a déclaré une amélioration d’au moins 30% de son problème ?
+Dans l’assistance, qui pense plus ? Qui pense moins ?
+Voici le résultat !</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="746014" end_time="801671" duration="55657">sounds/conference22.mp3</MP3>
+   <TEXTFILE>slides/slide318.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">747,476</ENTRY>
+    <ENTRY TIMER="40115" ACTION="next">787,591</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">23</NUM>
+   <ID>319</ID>
+   <JPGFILE>slides/slide319.swf</JPGFILE>
+   <TITLE default="0">Résultats : Changement subjectif</TITLE>
+   <COMMENTS default="1">Pour aller plus loin, à votre avis, combien de patient ont déclaré une amélioration d’au moins 80% ? Ce qui laisserait supposer la présence d’une composante cervicale majeure dans leur plainte initiale d’épaule.
+Un chiffre…
+Qui dit plus ? Et qui dit moins ?
+Voici le résultat : </COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="801671" end_time="847442" duration="45771">sounds/conference23.mp3</MP3>
+   <TEXTFILE>slides/slide319.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">803,087</ENTRY>
+    <ENTRY TIMER="21952" ACTION="next">825,039</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">24</NUM>
+   <ID>321</ID>
+   <JPGFILE>slides/slide321.swf</JPGFILE>
+   <TITLE default="0">Explication des résultats</TITLE>
+   <COMMENTS default="1">Pour le sous-groupe de patients qui se plaignent de l’épaule et pour qui nous ne pouvons exclure la présence d’un dérangement cervical à la 1ère séance, ces données semblent apporter un début de justification de notre pratique. Le design ne permet pas de déterminer si les améliorations observées sont dues à l’utilisation des techniques cervicales, ou bien à la bonification de notre effet placebo générée par l’attention particulière que nous portons à nos patients, ou bien seulement au temps qui passe… Certains diront encore que notre système de classification permet juste de dépister les patients qui vont s’améliorer. Même si c’est le cas, nous avons un outil de triage fantastique pour aider à diminuer l’occurrence de potentielles chirurgies prématurées.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="847442" end_time="932390" duration="84948">sounds/conference24.mp3</MP3>
+   <TEXTFILE>slides/slide321.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">848,976</ENTRY>
+    <ENTRY TIMER="22590" ACTION="next">871,566</ENTRY>
+    <ENTRY TIMER="30857" ACTION="next">879,833</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">25</NUM>
+   <ID>273</ID>
+   <JPGFILE>slides/slide273.swf</JPGFILE>
+   <TITLE default="0">Tests de mobilité active</TITLE>
+   <COMMENTS default="1">Dans l’examen objectif de l’épaule, les examinateurs ont procédé à des tests de mobilité active choisis suite à une étude pilote que j’ai conduite il y a 2 ans; puis à des tests orthopédiques qui ont démontrés une bonne reproductibilité inter et intra-examinateurs.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="932390" end_time="1019742" duration="87352">sounds/conference25.mp3</MP3>
+   <TEXTFILE>slides/slide273.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">933,99</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">26</NUM>
+   <ID>324</ID>
+   <JPGFILE>slides/slide324.swf</JPGFILE>
+   <TITLE default="0">Tests de mobilité active</TITLE>
+   <COMMENTS default="1">Ce tableau récapitule l’évolution des tests de mobilité active. J’ai repris les couleurs des feux de la circulation que nous avons l’habitude d’utiliser en MDT. Et j’ai attribué la couleur bleu lorsque le mouvement était complet ou indolore au début et qu’il le restait. La partie haute concerne les changements d’amplitude des mouvements, et la partie basse le fait que le mouvement produise une douleur d’épaule.
+Si vous regarder les pourcentages, les mouvements non-douloureux ou non-limités initialement le sont rarement devenus. Par contre, l’amélioration des mouvements limités ou douloureux initialement s’est produite dans environ 50% des cas pour tous les tests !</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1019742" end_time="1092341" duration="72599">sounds/conference26.mp3</MP3>
+   <TEXTFILE>slides/slide324.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1021,49</ENTRY>
+    <ENTRY TIMER="36759" ACTION="next">1058,249</ENTRY>
+    <ENTRY TIMER="37263" ACTION="next">1058,753</ENTRY>
+    <ENTRY TIMER="40171" ACTION="next">1061,661</ENTRY>
+    <ENTRY TIMER="54631" ACTION="next">1076,121</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">27</NUM>
+   <ID>306</ID>
+   <JPGFILE>slides/slide306.swf</JPGFILE>
+   <TITLE default="0">Tests orthopédiques</TITLE>
+   <COMMENTS default="1">Vous retrouvez ici l’évolution des tests orthopédiques. Et les résultats sont à peu près semblables : peu d’aggravation lorsque le test était négatif initialement, et autour de 50% des patients ont vu leur test devenir négatif !</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1092341" end_time="1115384" duration="23043">sounds/conference27.mp3</MP3>
+   <TEXTFILE>slides/slide306.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1094,137</ENTRY>
+    <ENTRY TIMER="1702" ACTION="next">1095,839</ENTRY>
+    <ENTRY TIMER="8485" ACTION="next">1102,622</ENTRY>
+    <ENTRY TIMER="17840" ACTION="next">1111,977</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">28</NUM>
+   <ID>320</ID>
+   <JPGFILE>slides/slide320.swf</JPGFILE>
+   <TITLE default="0">Résultats : Examen objectif</TITLE>
+   <COMMENTS default="1">Encore une question ! Quel proportion des patients suivi a vu tous ces tests devenirs complet et indolores ou négatif ?
+Qui dit moins ?
+Qui dit plus ?
+18% ! Ce qui représente 1 cas tous les 5 ou 6 patients, pour qui l’épaule n’avait pas besoin de traitement !</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1115384" end_time="1177642" duration="62258">sounds/conference28.mp3</MP3>
+   <TEXTFILE>slides/slide320.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1117,248</ENTRY>
+    <ENTRY TIMER="26726" ACTION="next">1143,974</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">29</NUM>
+   <ID>292</ID>
+   <JPGFILE>slides/slide292.swf</JPGFILE>
+   <TITLE default="0">Facteur(s) prédicif(s) d'exclusion d'une amélioration possible</TITLE>
+   <COMMENTS default="1">J’ai effectué une analyse pour déterminer si des éléments de l’interrogatoire ou de l’examen physique pouvaient permettre de prédire que le patient n’allait pas s’améliorer significativement. Aucun facteur ne peut le prédire.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1177642" end_time="1198047" duration="20405">sounds/conference29.mp3</MP3>
+   <TEXTFILE>slides/slide292.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1179,68</ENTRY>
+    <ENTRY TIMER="11779" ACTION="next">1191,459</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">30</NUM>
+   <ID>293</ID>
+   <JPGFILE>slides/slide293.swf</JPGFILE>
+   <TITLE default="0">Exmen physique : facteur(s) prédicif(s) dune amélioration</TITLE>
+   <COMMENTS default="1">Ensuite j’ai cherché à déterminer s’il était possible de prédire une amélioration. J’ai torturé les données dans tous les sens, ce qui peut faire apparaître des résultats significatifs dus à la chance. Mais même comme ça, lorsque certains tests positifs, ou négatifs semblaient être corrélé à une amélioration, le résultat était soit du à un phénomène d’overfitting, …</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1198047" end_time="1219512" duration="21465">sounds/conference30.mp3</MP3>
+   <TEXTFILE>slides/slide293.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1200,015</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">31</NUM>
+   <ID>312</ID>
+   <JPGFILE>slides/slide312.swf</JPGFILE>
+   <TITLE default="0">Tableau</TITLE>
+   <COMMENTS default="1">…soit, comme ici, où la douleur produite par la manœuvre de Mazion semblait prometteuse, l’ajustement du modèle en fonction du genre, de l’âge, de la durée de l’épisode, du ressenti cervical et du niveau de la médication antalgique, faisait disparaître la corrélation.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1219512" end_time="1236209" duration="16697">sounds/conference31.mp3</MP3>
+   <TEXTFILE>slides/slide312.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1221,27</ENTRY>
+    <ENTRY TIMER="93" ACTION="next">1221,363</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">32</NUM>
+   <ID>296</ID>
+   <JPGFILE>slides/slide296.swf</JPGFILE>
+   <TITLE default="0">Facteur(s) prédictifs d'une amélioration suite à la prise en charge cervicale</TITLE>
+   <COMMENTS default="1">Au final, aucun élément ne permettait de prédire une amélioration. Sans évaluation du rachis cervical par le test des mouvements répétés, il est impossible de prédire s’il a une chance d’améliorer une plainte d’épaule dès le bilan initial.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1236209" end_time="1249206" duration="12997">sounds/conference32.mp3</MP3>
+   <TEXTFILE>slides/slide296.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1238,416</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">33</NUM>
+   <ID>298</ID>
+   <JPGFILE>slides/slide298.swf</JPGFILE>
+   <TITLE default="0">Forces de l'étude</TITLE>
+   <COMMENTS default="1">À propos des forces de l’étude : le design en multi-centrique permet de généraliser les résultats aux certifiés MDT; l’évaluation de la plainte d’épaule et de l’incapacité a été réalisée par le patient directement et est restée inconnue du thérapeute.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1249206" end_time="1266908" duration="17702">sounds/conference33.mp3</MP3>
+   <TEXTFILE>slides/slide298.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1251,461</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">34</NUM>
+   <ID>299</ID>
+   <JPGFILE>slides/slide299.swf</JPGFILE>
+   <TITLE default="0">Faiblesses</TITLE>
+   <COMMENTS default="1">D’un autre coté il est plus compliqué de contrôler le respect du protocole en multi-centrique. L’absence de groupe contrôle ne permet pas d’évaluer l’efficacité de la prise en charge proposée. L’évaluation des tests cliniques a été conduite par le thérapeute qui a traité le patient. Et le nombre de patients reste relativement petit.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1266908" end_time="1306364" duration="39456">sounds/conference34.mp3</MP3>
+   <TEXTFILE>slides/slide299.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1269,41</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">35</NUM>
+   <ID>301</ID>
+   <JPGFILE>slides/slide301.swf</JPGFILE>
+   <TITLE default="0">Pistes futures</TITLE>
+   <COMMENTS default="1">Comme les tests couramment utilisés ne nous aident pas dans notre prise de décision clinique, peut-être qu’il faut en explorer d’autres… Et afin de connaître la réelle influence du rachis cervical sur les douleurs d’épaule de nos patients, un essai contrôlé randomisé doit être mis en place.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1306364" end_time="1328575" duration="22211">sounds/conference35.mp3</MP3>
+   <TEXTFILE>slides/slide301.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1308,557</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">36</NUM>
+   <ID>300</ID>
+   <JPGFILE>slides/slide300.swf</JPGFILE>
+   <TITLE default="0">Communiction médecins</TITLE>
+   <COMMENTS default="1">Les messages à faire passer : pour les patients qui se sont présentés dans nos cabinets avec une douleur principale d’épaule, et dont nous ne pouvions pas exclure la présence d’un dérangement cervical à la 1ère séance, la prise en charge du rachis cervical par un kiné certifié a permis de diminuer la plainte d’épaule d’au moins 30% pour 8 patients sur 10, la diminuer de 80% pour 1 patient sur 3, diminuer le score d’incapacité pour 1 sur 2 et même restaurer une mobilité complète et indolore et rendre négatifs les tests orthopédiques pour près d’1 patient sur 5. Il a fallu autour de 2 à 3 semaines pour arriver à ce résultat. Aujourd’hui, même si aucun test isolé ne donne d’indication prédictive sur la possibilité d’amélioration, l’utilisation du test des mouvements répétés cervicaux apparaît très utile.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1328575" end_time="1402119" duration="73544">sounds/conference36.mp3</MP3>
+   <TEXTFILE>slides/slide300.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1331,097</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">37</NUM>
+   <ID>302</ID>
+   <JPGFILE>slides/slide302.swf</JPGFILE>
+   <TITLE default="0">Sie le  cou n'est pas (ou plus) en cause</TITLE>
+   <COMMENTS default="1">N’oublions pas qu’après les cervicales, lorsque des symptômes persistent, il faut aller voir l’épaule ! Et je laisse la place à Jean-Philippe pour vous en parler.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1402119" end_time="1418280" duration="16161">sounds/conference37.mp3</MP3>
+   <TEXTFILE>slides/slide302.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1404,66</ENTRY>
+    <ENTRY TIMER="8469" ACTION="next">1413,129</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">38</NUM>
+   <ID>303</ID>
+   <JPGFILE>slides/slide303.swf</JPGFILE>
+   <TITLE default="0">Remerciements</TITLE>
+   <COMMENTS default="1">Mais pour finir je tiens à remercier grandement tous les participants qui ont donné de leur temps à cette étude. Je voulais mettre leur photo, mais j’en ai récupéré trop peu. Bravo à eux ! Merci à l’AFMcK de m’avoir fait confiance. Et un merci spécial à Jeremy Lewis qui m’a bien aidé dans le design de l’étude. Et enfin, un dernier merci à vous pour m’avoir écouté !</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1418280" end_time="1467467" duration="49187">sounds/conference38.mp3</MP3>
+   <TEXTFILE>slides/slide303.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1420,999</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>
