@@ -87,4 +87,27 @@ $('.miniLink').bind('mouseenter', function() {
 });
 </script>";
     }
+
+    public static function modalIframe($iframeLink, $modalTitle) {
+        echo '<a href="#"
+   data-toggle="modal"
+   data-target="#basicModal"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;'.$modalTitle.'</a>';
+        echo '<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog" style="margin:auto;width: 95%; height: 95%; ">
+        <div class="modal-content" style="margin:auto;height:100%">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">'.$modalTitle.'</h4>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <iframe style="text-align: center;"onload="this.width=screen.width*0.75;this.height=screen.height*0.75;"
+                 src="'.$iframeLink.'" id="myFrame" />
+            </div>            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>';
+
+    }
 }
