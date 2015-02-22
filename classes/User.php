@@ -150,12 +150,15 @@ class User {
             $newDate = new DateTime(($year+2).'-2-28');
         }
         $this->validDate = $newDate;
+        $pdf = new BillingPdf($this);
+        $pdf->generatePdf();
 
         $this->mailer[] = new Mailer();
         end($this->mailer)->isHTML(true);                                  // Set email format to HTML
         end($this->mailer)->Subject .= "Validation inscription";
         end($this->mailer)->Body = (Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
         end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
+        end($this->mailer)->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/billing/".date("Y")."_".$this->getAdeliNumber().".pdf");
     }
 
     public function unvalid()

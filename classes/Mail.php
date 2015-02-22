@@ -50,7 +50,6 @@ class Mail {
         <h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
         En vous souhaitant une bonne journée,<br/>
         Le bureau de l'AFMcK";
-
     }
 
     public static function getNewAccount(User $user) {
@@ -65,6 +64,7 @@ class Mail {
                 82000 MONTAUBAN";
         } else {
             $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>
+            Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>
             Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
         }
         $ret .=
