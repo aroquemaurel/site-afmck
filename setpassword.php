@@ -12,7 +12,7 @@ if(isset($_POST['password']) && isset($_POST['passwordConfirmation'])) {
     if($_POST['password'] == $_POST['passwordConfirmation']) {
         $user = $db->getUserById($_POST['user']);
         $user->setPassword(password_hash($_POST['password'], PASSWORD_BCRYPT, array("cost" => utils\Utils::getOptimalCost(0.3))));
-        $user->setHash("");
+        $user->setHashPassword("");
         $user->commit();
         $_SESSION['lastMessage'] = Popup::successMessage("Le mot de passe à bien été changé, vous pouvez vous connecter");
         header('Location: ' . 'index.php');
@@ -23,7 +23,7 @@ if(isset($_POST['password']) && isset($_POST['passwordConfirmation'])) {
 
 
 $user = $db->getUserById($_GET['u']);
-if($user == null || $_GET['s'] != $user->getHash()) {
+if($user == null || $_GET['s'] != $user->getHashPassword()) {
     $_SESSION['lastMessage'] = Popup::errorMessage("Vous n'avez pas le droit d'être ici");
     header('Location: ' . 'index.php');
 }

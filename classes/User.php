@@ -29,7 +29,7 @@ class User {
 
     private $mailer;
 
-    private $hash;
+    private $hashPassword;
 
     private $levelFormation;
     private $formationDate;
@@ -129,11 +129,11 @@ class User {
         $mailer = new Mailer();
         $mailer->isHTML(true);                                  // Set email format to HTML
         $mailer->Subject .= "Mot de passe oublié";
+        $this->hashPassword = password_hash($this->mail.$this->adeliNumber, PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3)));
 
-        $this->setHash(sha1(md5($this->getMail()." Oups ×D ".$this->getAdeliNumber()." Dommage =þ ".$this->getLastName(). " !". time())));
         $this->commit();
         $mailer->Body = (Mail::getForgetPassword($this->firstName." ".$this->lastName, "u=".$this->getId()."&s=".
-            $this->getHash()));
+            $this->getHashPassword()));
         $mailer->addAddress($this->mail, $this->firstName." ".$this->lastName);
         if(!$mailer->send()) {
             echo $mailer->ErrorInfo;
@@ -207,6 +207,7 @@ class User {
         $this->hashMail = utf8_encode($data->hashMail);
         $this->mailValidation = utf8_encode($data->mailValidation);
         $this->valuePaid = utf8_encode($data->valuePaid);
+        $this->hashPassword = $data->hashPassword;
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
@@ -244,12 +245,12 @@ class User {
         return $ret;
     }
 
-    public function getHash() {
-        return $this->hash;
+    public function getHashPassword() {
+        return $this->hashPassword;
     }
 
-    public function setHash($h) {
-        $this->hash = $h;
+    public function setHashPassword($h) {
+        $this->hashPassword = $h;
     }
 
     /**
