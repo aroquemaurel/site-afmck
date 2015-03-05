@@ -16,6 +16,15 @@
     </div>
 
 <?php
+$arrayUsers = '[';
+foreach($users as $user) {
+    if ($user->getAddress() != "") {
+        $arrayUsers .= "\"".str_replace(',', '', $user->getAddress()." ".$user->getCp()." ".$user->getTown()) . '",';
+    }
+}
+$arrayUsers = rtrim($arrayUsers, ",");
+$arrayUsers .= ']';
+echo $arrayUsers;
     $script = '   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>';
     $script .= "<script>
  $(document).ready(function () {
@@ -28,7 +37,7 @@
     };
     map = new google.maps.Map($('#map-canvas')[0], myOptions);
 
-    var addresses = ['7 impasse andré lartigue toulouse', 'Africa', 'Asia','North America','South America'];
+    var addresses = ".$arrayUsers.";
 
     for (var x = 0; x < addresses.length; x++) {
         $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
