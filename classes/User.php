@@ -43,6 +43,11 @@ class User {
     private $hashMail;
 
     private $valuePaid;
+
+    private $longitude;
+    private $latitude;
+
+
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
 
@@ -208,6 +213,9 @@ class User {
         $this->mailValidation = utf8_encode($data->mailValidation);
         $this->valuePaid = utf8_encode($data->valuePaid);
         $this->hashPassword = $data->hashPassword;
+        $this->longitude = $data->longitude;
+        $this->latitude = $data->latitude;
+
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
@@ -307,6 +315,38 @@ class User {
     public function setPayment($payment)
     {
         $this->payment = $payment;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * @param mixed $longitude
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * @param mixed $latitude
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
     }
 
     /**

@@ -183,13 +183,15 @@ class DatabaseUser extends Database {
         $hashMail = utf8_decode($user->getHashMail());
         $valuePaid = utf8_decode($user->getValuePaid());
         $hashPassword = $user->getHashPassword();
+        $longitude = $user->getLongitude();
+        $latitude = $user->getLatitude();
 
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
                                           mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
                                           formationDate=:formationDate, levelFormation=:levelFormation, phonePro=:phonePro, phoneMobile=:phoneMobile,
                                           newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress,
-                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail, valuePaid=:valuePaid, hashPassword=:hashPassword
+                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail, valuePaid=:valuePaid, hashPassword=:hashPassword, longitude=:longitude, latitude=:latitude
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":disable", $disable, PDO::PARAM_INT);
@@ -215,6 +217,8 @@ class DatabaseUser extends Database {
         $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
         $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
         $query->bindParam(":hashPassword", $hashPassword, PDO::PARAM_STR);
+        $query->bindParam(":longitude", $longitude);
+        $query->bindParam(":latitude", $latitude);
 
         $query->execute();
 

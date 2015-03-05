@@ -34,7 +34,7 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
     var map;
     var elevator;
     var myOptions = {
-        zoom: 4,
+        zoom: 5,
         center: new google.maps.LatLng(46.5865209, 1.2814561),
         	          mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -44,24 +44,34 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
     var users = ".$arrayUser.";
     var infoWindow = new google.maps.InfoWindow;
     var markers = new Array();
-    var markerCluster;
-    var thereisAjax = false;";
+    var markerCluster;";
 
    // for (var x = 0; x < addresses.length; x++) {
+
    foreach($users as $user) {
        if ($user->getAddress() != "") {
-
-           $script .= "thereisAjax = true;$.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($user->getAddress()." ".$user->getCp()." ".$user->getTown()) . "&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location;
-            var latlng = new google.maps.LatLng(p.lat, p.lng);
+            if($user->getLatitude() == "" || $user->getLongitude() == "" ) {
+                $script .= "$.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($user->getAddress()." ".$user->getCp()." ".$user->getTown()) . "&sensor=false', null, function (data) {
+            var p = data.results[0].geometry.location;";
+                $key = md5($user->getId().' Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres. Des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l’interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n’est pas mon cas, comme je disais là, puisque moi au contraire ');
+                $script .= '$.ajax({url: "'.Visitor::getInstance()->getRootPage().'/change-coords.php?key='.$key.'&id='.$user->getId().'&lgt="+p.lng+"&lat="+p.lat,
+                                     context: document.body}).done(function(){})});';
+                $db = new DatabaseUser();
+                $u = $db->getUserById($user->getId());
+                $user->setLongitude($u->getLongitude());
+                $user->setLatitude($u->getLatitude());
+            }
+           if($user->getLatitude() != "" || $user->getLongitude() != "") {
+               $script .= "
+            var latlng = new google.maps.LatLng(" . $user->getLatitude() . ", " . $user->getLongitude() . ");
             thereisAjax = false;
             addMarker(new google.maps.Marker({
                 position : latlng,
 				map : map,
 				draggable: false,
-				content : '<b>".$user->getFirstName()."</b>'
-			}));
-        });";
+				content : '<b>" . $user->getFirstName() . "</b>'
+			}));";
+           }
        }
    }
 
@@ -75,9 +85,7 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
 			markers.push(marker);
 		}
 
-        setTimeout(function (){
-            markerCluster = new MarkerClusterer(map, markers);
-        }, 500); // How long do you want the delay to be (in milliseconds)?
+        markerCluster = new MarkerClusterer(map, markers);
 
 
 </script>";
