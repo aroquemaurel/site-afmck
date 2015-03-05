@@ -9,7 +9,7 @@
                 <p>Selon leur niveau ils sont en cours de formation (Niveau C ou D), formés (Certifiés) ou Instructeurs diplômés (DIP).</p>
             </div>
     </div><!-- fin de .introcarte -->
-        <div style="width: 600px; height: 500px" id="map-canvas"></div>
+        <div style="width: 700px; height: 500px" id="map-canvas"></div>
 
         <p>&nbsp;<br/>&nbsp;</p>
 
@@ -31,8 +31,8 @@ echo $arrayUsers;
     var map;
     var elevator;
     var myOptions = {
-        zoom: 1,
-        center: new google.maps.LatLng(0, 0),
+        zoom: 6,
+        center: new google.maps.LatLng(46.5865209, 1.2814561),
         mapTypeId: 'terrain'
     };
     map = new google.maps.Map($('#map-canvas')[0], myOptions);
