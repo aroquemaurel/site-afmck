@@ -9,14 +9,39 @@
                 <p>Selon leur niveau ils sont en cours de formation (Niveau C ou D), formés (Certifiés) ou Instructeurs diplômés (DIP).</p>
             </div>
     </div><!-- fin de .introcarte -->
-    <div class="carte">
-        <?php
-        $mapChemin = 'france_map_3.0/'; // Chemin du dossier FranceMap relatif au ficher dans lequel vous faites l'include
+        <div style="width: 600px; height: 500px" id="map-canvas"></div>
 
-        $urlExec = $_SERVER['PHP_SELF'];
-        include($mapChemin.'map.php');
-        ?>
-    </div><!-- fin de .carte -->
         <p>&nbsp;<br/>&nbsp;</p>
 
     </div>
+
+<?php
+    $script = '   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>';
+    $script .= "<script>
+ $(document).ready(function () {
+    var map;
+    var elevator;
+    var myOptions = {
+        zoom: 1,
+        center: new google.maps.LatLng(0, 0),
+        mapTypeId: 'terrain'
+    };
+    map = new google.maps.Map($('#map-canvas')[0], myOptions);
+
+    var addresses = ['7 impasse andré lartigue toulouse', 'Africa', 'Asia','North America','South America'];
+
+    for (var x = 0; x < addresses.length; x++) {
+        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
+            var p = data.results[0].geometry.location
+            var latlng = new google.maps.LatLng(p.lat, p.lng);
+            new google.maps.Marker({
+                position: latlng,
+                map: map
+            });
+
+        });
+    }
+
+});
+  </script>;";
+    ?>
