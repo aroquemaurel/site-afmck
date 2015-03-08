@@ -4,9 +4,11 @@
         <h1>Praticiens MDT</h1>
 
         <div class="introcarte">
-        <p>En cliquant sur le département de votre choix,<br />vous accéderez à une liste de praticiens adhérents à notre association<br />et ayant signé une <a href="<?php echo Visitor::getInstance()->getRootPage();?>/AFMcK/charte.php" target="_blank">charte de bonne pratique</a>.</p>
+        <p>
+            Sur cette carte, vous pouvez avoir accès à une liste de praticiens adhérents à notre association et ayant
+            signé une <a href="<?php echo Visitor::getInstance()->getRootPage();?>/AFMcK/charte.php" target="_blank">charte de bonne pratique</a>.
             <div class="bs-callout bs-callout-warning">
-                <p>Selon leur niveau ils sont en cours de formation (Niveau C ou D), formés (Certifiés) ou Instructeurs diplômés (DIP).</p>
+                <p>Seul les adhérents à l'association ayant une formation de niveau D ou supérieur sont affichés sur cette carte</p>
             </div>
     </div><!-- fin de .introcarte -->
         <div style="width: 700px; height: 500px" id="map-canvas"></div>
