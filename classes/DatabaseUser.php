@@ -104,6 +104,23 @@ class DatabaseUser extends Database {
         }
         return $ret;
     }
+
+    public function getUsersSigned($signed) {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed
+                                           order by lastname");
+        $query->bindParam(":signed", $signed, PDO::PARAM_INT);
+        $query->execute();
+
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $ret[] = $user;
+        }
+        return $ret;
+    }
+
     public function getUsersHS() {
         $ret = array();
 
