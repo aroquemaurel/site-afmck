@@ -239,7 +239,7 @@ class User {
         $ret .= '<h2 style="font-size: 14pt">Adresse</h2>';
         $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.($this->address).'<br/>'.($this->complementAddress!=""?($this->complementAddress).'<br/>':"").$this->cp.' '.($this->town);
         $ret .= '<h2 style="font-size: 14pt">Formation MDT</h2>';
-        $ret .= '<b>Niveau de formation</b>: '.$this->levelFormation.'<br/>';
+        $ret .= '<b>Niveau de formation</b>: '.$this->getLevelFormationString().'<br/>';
         $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->formationDate->format("m / Y");
         $ret .= '<H2 style="font-size: 14pt">Paiement</H2>';
         $ret .= 'Paiement par '.($this->payment == 1 ? "chèque":"virement bancaire") ."<br/> ";
@@ -564,6 +564,23 @@ class User {
     public function getLevelFormation()
     {
         return $this->levelFormation;
+    }
+
+    public function getLevelFormationString() {
+        switch($this->levelFormation) {
+            case 0:
+                return "A";
+            case 1:
+                return "B";
+            case 2:
+                return "C";
+            case 3:
+                return "D";
+            case 4:
+                return 'Certifié';
+            case 5:
+                return "Diplômé";
+        }
     }
 
     /**

@@ -69,7 +69,8 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
                 position : latlng,
 				map : map,
 				draggable: false,
-				content : '<b>" . $user->getFirstName() . "</b>'
+				content : '<p><b>" . $user->getFirstName() . " ".$user->getLastName()."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
+                   "<br/><br/>".$user->getPhonePro()."<br/>".$user->getMail()."<br/>Niveau ".$user->getlevelFormationString()."</p>'
 			}));";
            }
        }
