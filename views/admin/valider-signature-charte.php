@@ -8,7 +8,7 @@
             <th>Nom</th>
             <th>Prénom</th>
             <th>Courriel</th>
-            <th colspan="2">Valider</th>
+            <th colspan="2">Signée</th>
         </tr>
         <?php
         foreach($users as $user) {

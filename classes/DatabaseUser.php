@@ -111,7 +111,7 @@ class DatabaseUser extends Database {
     public function getUsersSigned($signed) {
         $ret = array();
 
-        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND levelFormation >= 4 AND validDate >= CURDATE()
                                            order by lastname");
         $query->bindParam(":signed", $signed, PDO::PARAM_INT);
         $query->execute();
