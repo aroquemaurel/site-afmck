@@ -32,6 +32,7 @@ if(!Visitor::getInstance()->isConnected()) {
             echo '&nbsp;<span class="badge">'.$nbAdmin.'</span>';
         }
         echo '</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/valider-signature-charte.php">Signatures de la charte';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/members.php">Liste des membres';
     }
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
