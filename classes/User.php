@@ -47,6 +47,7 @@ class User {
     private $longitude;
     private $latitude;
 
+    private $hasSigned;
 
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
@@ -215,6 +216,7 @@ class User {
         $this->hashPassword = $data->hashPassword;
         $this->longitude = $data->longitude;
         $this->latitude = $data->latitude;
+        $this->hasSigned = $data->hasSigned;
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -268,6 +270,23 @@ class User {
     {
         return $this->valuePaid;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getHasSigned()
+    {
+        return $this->hasSigned;
+    }
+
+    /**
+     * @param mixed $hasSigned
+     */
+    public function setHasSigned($hasSigned)
+    {
+        $this->hasSigned = $hasSigned;
+    }
+
 
     /**
      * @param mixed $valuePaid
@@ -686,6 +705,7 @@ class User {
     {
         $this->disable = $disable;
     }
+
 
 
 }

@@ -9,16 +9,16 @@ $db = new DatabaseUser();
 
 if(isset($_GET['valid'])) {
     $user = $db->getUserById($_GET['valid']);
-    $user->valid();
+    $user->setHasSigned(true);
     if($user->commit()) {
-        $_SESSION['lastMessage'] = Popup::validAccount();
+        //$_SESSION['lastMessage'] = Popup::validAccount(); // TODO
     }
-} else if(isset($_GET['unvalid'])) {
+} /*else if(isset($_GET['unvalid'])) {
     $user = $db->getUserById($_GET['unvalid']);
     $user->unvalid();
     $user->commit();
     $_SESSION['lastMessage'] = Popup::unvalidAccount();
-}
+}*/
 
 $users = $db->getUsersSigned(false);
 include('../views/includes/head.php');
