@@ -56,6 +56,7 @@ class User {
         $this->password = $password;
         $this->groups = array();
         $this->mailer = array();
+        $this->hasSigned = 2;
     }
     public function setCookie() {
         setcookie("user", $this->adeliNumber.'/-!!-/'.$this->password, time()+3600*24*30*6); // expire in 6 month

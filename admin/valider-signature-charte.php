@@ -9,18 +9,21 @@ $db = new DatabaseUser();
 
 if(isset($_GET['valid'])) {
     $user = $db->getUserById($_GET['valid']);
-    $user->setHasSigned(true);
+    $user->setHasSigned(1);
     if($user->commit()) {
-        //$_SESSION['lastMessage'] = Popup::validAccount(); // TODO
+        $_SESSION['lastMessage'] = Popup::successMessage("Le compte à été ajouté à la carte");
     }
-} /*else if(isset($_GET['unvalid'])) {
+} else if(isset($_GET['unvalid'])) {
     $user = $db->getUserById($_GET['unvalid']);
-    $user->unvalid();
-    $user->commit();
-    $_SESSION['lastMessage'] = Popup::unvalidAccount();
-}*/
+    $user->setHasSigned(0);
+    if($user->commit()) {
+        $_SESSION['lastMessage'] = Popup::successMessage("Le compte n'apparaitra pas sur la carte");
+    }
+}
 
-$users = $db->getUsersSigned(false);
+$usersToValid = $db->getUsersSigned(-1);
+$usersNotValidates = $db->getUsersSigned(0);
+$usersValides = $db->getUsersSigned(1);
 include('../views/includes/head.php');
 include('../views/admin/valider-signature-charte.php');
 include('../views/includes/foot.php');
