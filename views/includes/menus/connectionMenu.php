@@ -36,7 +36,7 @@ if(!Visitor::getInstance()->isConnected()) {
             echo '&nbsp;<span class="badge">'.$nbAccountToValid.'</span>';
         }
         echo '</a></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/valider-signature-charte.php">Signatures de la charte';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/valider-signature-charte.php">Signataires de la charte';
             if($nbCharteToValid > 0) {
                 echo '&nbsp;<span class="badge">'.$nbCharteToValid.'</span>';
             }
@@ -46,6 +46,7 @@ if(!Visitor::getInstance()->isConnected()) {
     }
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
         echo '<li><b>Mon profil</b></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/mon-profil.php">Voir mon profil</a></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/parameters.php">Modifier mes informations</a></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/password.php">Changer de mot de passe</a></li>';
         if(Visitor::getInstance()->getUser()->mustSignedChart()) {

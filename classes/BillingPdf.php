@@ -21,7 +21,7 @@ class BillingPdf extends PdfFile {
 
         $content .= "<div><b>ASSOCIATION FRANÇAISE McKENZIE</b><br/>
             Le Verlaine<br/>
-            2 rue CHarles Piot<br/>
+            2 rue Charles Piot<br/>
             38 320 EYBENS<br/>
             www.afmck.fr<br/><br/>
             contact@afmck.fr<br/>

@@ -252,9 +252,14 @@ class User {
         $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->formationDate->format("m / Y");
         $ret .= '<H2 style="font-size: 14pt">Paiement</H2>';
         $ret .= 'Paiement par '.($this->payment == 1 ? "chèque":"virement bancaire") ."<br/> ";
-        $ret .= 'Montant de la cotisation: '.($this->getValuePaid() != 100 ? $this->getValuePaid()." euros" : "100 euros et plus");
-        $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
+        $ret .= 'Montant de la cotisation: '.($this->getValuePaid() != 100 ? $this->getValuePaid()." euros" : "100 euros et plus").'<br/>';
+        if(!$pdf) {
+            $ret .= 'Dernière facture: <i class="glyphicon glyphicon-download-alt"></i> <a href="'.Visitor::getInstance()->getRootPage().'/docs/members/billing/'.(new DateTime())->format('Y').'_'.$this->adeliNumber.'.pdf">Télécharger</a>';
+        }
+            $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
         $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
+        $ret .= '<H2 style="font-size: 14pt">Charte de bonne pratique</H2>';
+        $ret .= $this->hasSigned == 1 ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;À signé la charte' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;N\'a pas signé la charte';
 
         if($pdf) {
             $ret .= '<p style="font-size: 11pt; margin-top: 50px;">Signature<br/><br/>Le .... / .... / 2015<br/><br/>À ........................</p>';
