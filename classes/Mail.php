@@ -18,6 +18,15 @@ class Mail {
 
                 Le bureau de l'AFMcK";
     }
+    public static function getValidationSignature(User $user) {
+        return "Bonjour ".$user->getFirstName()." ".$user->getLastName().",<br/>
+                Nous avons le plaisir de vous annoncer que votre signature de la charte a été validée. <br/>
+
+                Vous devriez maintenant apparaître sur la carte des praticiens : si tel n'est pas le cas, où en cas de problèmes, vous pouvez répondre à cet-email<br/>.
+
+                Le bureau de l'AFMcK";
+    }
+
     public static function getValidationMail(User $user) {
         return "Bonjour ".($user->getFirstName())." ".($user->getLastName()).",<br/>
                 Vous venez de vous inscrire sur <a href=\"http://afmck.fr\">http://afmck.fr</a>.<br/>
