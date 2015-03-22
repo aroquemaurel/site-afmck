@@ -32,7 +32,7 @@ MDT WORLD PRESS Newsletter Vol 3 N°4
         if(Visitor::getInstance()->getUser()->mustSignedChart()) {
             echo '<div class="alert alert-warning" role="alert">';
             echo "Vous êtes actuellement d'un niveau D ou supérieur, et n'avez pas signé la charte, qui vous permettrai d'être affiché dans la carte des praticiens.<br/>
-            Si vous souhaitez signer la charte, vous pouvez vous rendre sur cette <a href=\"".Visitor::getInstance()->getRootPage()."/members/signer-chart.php\">page</a>
+            Si vous souhaitez signer la charte, vous pouvez vous rendre sur cette <a href=\"".Visitor::getInstance()->getRootPage()."/members/signer-la-charte.php\">page</a>
  </div>";
         }
     ?>

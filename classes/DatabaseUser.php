@@ -176,7 +176,15 @@ class DatabaseUser extends Database {
                                            WHERE validDate < CURDATE()  AND mailValidation != 0 AND validDate != 'NULL' AND disable=0");
         $query->execute();
         return $query->fetchObject()->countid;
+    }
 
+    public function chartToValid() {
+        $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
+                                          WHERE hasSigned = 2 AND mailValidation != 0 AND disable!=1
+                                          AND levelFormation >= 4 AND validDate >= CURDATE()
+                                           order by lastname");
+        $query->execute();
+        return $query->fetchObject()->countid;
     }
     public function editUser(User $user)
     {

@@ -17,7 +17,10 @@ if(!Visitor::getInstance()->isConnected()) {
 <?php
 } else {
     $db = new DatabaseUser();
-    $nbAdmin = $db->countUsersToValid();
+    $nbAccountToValid = $db->countUsersToValid();
+    $nbCharteToValid = $db->chartToValid();
+    $nbAdmin = $nbAccountToValid + $nbCharteToValid;
+
     echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
         Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .Visitor::getInstance()->getUser()->getLastName();
         if($nbAdmin > 0 && Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
@@ -29,11 +32,16 @@ if(!Visitor::getInstance()->isConnected()) {
     if(Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
         echo '<li><b>Administration</b></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/validRegister.php">Validations inscriptions';
-        if($nbAdmin > 0) {
-            echo '&nbsp;<span class="badge">'.$nbAdmin.'</span>';
+        if($nbAccountToValid > 0) {
+            echo '&nbsp;<span class="badge">'.$nbAccountToValid.'</span>';
         }
         echo '</a></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/valider-signature-charte.php">Signatures de la charte</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/valider-signature-charte.php">Signatures de la charte';
+            if($nbCharteToValid > 0) {
+                echo '&nbsp;<span class="badge">'.$nbCharteToValid.'</span>';
+            }
+        echo '</a></li>';
+
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/members.php">Liste des membres</a></li>';
     }
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
@@ -41,7 +49,7 @@ if(!Visitor::getInstance()->isConnected()) {
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/parameters.php">Modifier mes informations</a></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/password.php">Changer de mot de passe</a></li>';
         if(Visitor::getInstance()->getUser()->mustSignedChart()) {
-            echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/members/signer-chart.php">Je souhaite signer la charte</a></li>';
+            echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/members/signer-la-charte.php">Je souhaite signer la charte</a></li>';
         }
     }
     echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/deconnexion.php">Déconnexion</a></li>';
