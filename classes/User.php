@@ -56,7 +56,7 @@ class User {
         $this->password = $password;
         $this->groups = array();
         $this->mailer = array();
-        $this->hasSigned = 2;
+        $this->hasSigned = -1;
     }
     public function setCookie() {
         setcookie("user", $this->adeliNumber.'/-!!-/'.$this->password, time()+3600*24*30*6); // expire in 6 month
@@ -147,6 +147,12 @@ class User {
         }
 
     }
+
+    public function mustSignedChart() {
+        return $this->hasSigned == -1 && $this->levelFormation >= 4 && $this->mailValidation != 0
+        && $this->disable!=1;
+    }
+
     public function valid() {
         $currentDate = new DateTime();
         $this->disable = 0;

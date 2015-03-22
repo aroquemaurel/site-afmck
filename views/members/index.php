@@ -28,6 +28,15 @@ MDT WORLD PRESS Newsletter Vol 3 N°4
             (en anglais)</p>
     </div><!--/.well -->
 <div style="padding-right: 80px;">
+    <?php
+        if(Visitor::getInstance()->getUser()->mustSignedChart()) {
+            echo '<div class="alert alert-warning" role="alert">';
+            echo "Vous êtes actuellement d'un niveau D ou supérieur, et n'avez pas signé la charte, qui vous permettrai d'être affiché dans la carte des praticiens.<br/>
+            Si vous souhaitez signer la charte, vous pouvez vous rendre sur cette <a href=\"".Visitor::getInstance()->getRootPage()."/members/signer-chart.php\">page</a>
+ </div>";
+        }
+    ?>
+
 <div class="alert alert-info">
 Bienvenue sur le nouveau site de l'Association Française McKenzie !!<br/>
 Ce site tout neuf vous permettra d'avoir prochainement de nouvelles fonctionnalités.<br/><br/>

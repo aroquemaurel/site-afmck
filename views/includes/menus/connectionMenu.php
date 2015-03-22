@@ -27,17 +27,22 @@ if(!Visitor::getInstance()->isConnected()) {
         <ul role="menu" class="dropdown-menu" style="padding: 10px">';
 
     if(Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
+        echo '<li><b>Administration</b></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/validRegister.php">Validations inscriptions';
         if($nbAdmin > 0) {
             echo '&nbsp;<span class="badge">'.$nbAdmin.'</span>';
         }
         echo '</a></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/valider-signature-charte.php">Signatures de la charte';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/members.php">Liste des membres';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/valider-signature-charte.php">Signatures de la charte</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/members.php">Liste des membres</a></li>';
     }
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
+        echo '<li><b>Mon profil</b></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/parameters.php">Modifier mes informations</a></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/password.php">Changer de mot de passe</a></li>';
+        if(Visitor::getInstance()->getUser()->mustSignedChart()) {
+            echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/members/signer-chart.php">Je souhaite signer la charte</a></li>';
+        }
     }
     echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/deconnexion.php">Déconnexion</a></li>';
         echo '</ul>';
