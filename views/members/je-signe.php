@@ -9,10 +9,11 @@
 
     <p>
         Afin que votre demande soit bien prise en compte et que vous apparaissez sur la liste des praticiens,
-        vous devez signer la charte ci-dessous et la renvoyer à l'adresse suivante :
+        vous devez signer la charte ci-dessous, la scanner et la renvoyer par e-mail à l'adresse suivante
     </p>
     <div class="bs-callout bs-callout-info">
-    <p>// ADRESSE</p>
+        <p><a href="mailto:secretariat@afmck.fr">secretariat@afmck.fr</a></p>
+        <p>Merci de nous signaler si vous possédez déjà la charte plastifiée, afin de ne pas vous la renvoyer.</p>
     </div>
 
     <p style="text-align: center"><a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/charte des praticiens adherents AFMcK.pdf";?>">

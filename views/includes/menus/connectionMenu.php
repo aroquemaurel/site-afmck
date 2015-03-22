@@ -17,33 +17,41 @@ if(!Visitor::getInstance()->isConnected()) {
 <?php
 } else {
     $db = new DatabaseUser();
-    $nbAccountToValid = $db->countUsersToValid();
-    $nbCharteToValid = $db->chartToValid();
+    $user = Visitor::getInstance()->getUser();
+    $accountsRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("TRESORIER");
+    $charteRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("SECRETAIRE");
+    $nbAccountToValid = $accountsRights ? $db->countUsersToValid() : 0;
+    $nbCharteToValid = $charteRights ? $db->chartToValid() : 0;
     $nbAdmin = $nbAccountToValid + $nbCharteToValid;
 
     echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
         Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .Visitor::getInstance()->getUser()->getLastName();
-        if($nbAdmin > 0 && Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
+
+    if($accountsRights || $charteRights) {
+        if($nbAdmin > 0) {
             echo '&nbsp;<span class="badge">'.$nbAdmin.'</span>';
         }
         echo '<b class="caret"></b></a>
         <ul role="menu" class="dropdown-menu" style="padding: 10px">';
 
-    if(Visitor::getInstance()->getUser()->isInGroup("ADMINISTRATEUR")) {
         echo '<li><b>Administration</b></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/validRegister.php">Validations inscriptions';
-        if($nbAccountToValid > 0) {
-            echo '&nbsp;<span class="badge">'.$nbAccountToValid.'</span>';
+    }
+    if($accountsRights) {
+        echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/admin/validRegister.php">Validations inscriptions';
+        if ($nbAccountToValid > 0) {
+            echo '&nbsp;<span class="badge">' . $nbAccountToValid . '</span>';
         }
         echo '</a></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/valider-signature-charte.php">Signataires de la charte';
-            if($nbCharteToValid > 0) {
-                echo '&nbsp;<span class="badge">'.$nbCharteToValid.'</span>';
-            }
-        echo '</a></li>';
-
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/members.php">Liste des membres</a></li>';
+        echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/admin/members.php">Liste des membres</a></li>';
     }
+    if($charteRights) {
+        echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/admin/valider-signature-charte.php">Signataires de la charte';
+        if ($nbCharteToValid > 0) {
+            echo '&nbsp;<span class="badge">' . $nbCharteToValid . '</span>';
+        }
+        echo '</a></li>';
+    }
+
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
         echo '<li><b>Mon profil</b></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/mon-profil.php">Voir mon profil</a></li>';

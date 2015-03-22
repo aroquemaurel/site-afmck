@@ -1,6 +1,6 @@
 <?php
 include('../begin.php');
-
+utils\Rights::hasRights(array("ADMINISTRATEUR", "SECRETAIRE"));
 use utils\Link;
 $title = 'Validation de signature de la charte';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
