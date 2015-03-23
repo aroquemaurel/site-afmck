@@ -35,13 +35,16 @@ Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des 
 </div>
 
     <?php
+    echo '<div style="margin-bottom: -30px;">';
+    (new utils\Pagination($page, $nbPages, Visitor::getInstance()->getRootPage().'/members/index.php'))->display();
+    echo '</div>';
     foreach($news as $new) {
         echo '<div style="padding-right: 80px">';
         echo '<h2>'.$new->getTitle().'&nbsp;<small>'.$new->getSubtitle().'</small></h2>';
         echo '<p style="margin-top: -8px;margin-bottom:15px"><small>Posté le '.$new->getDate()->format('d / m / Y à H:i').' par '.$new->getAuthor()->getFirstName().' '.$new->getAuthor()->getLastname().'</small></p>';
         echo $new->getContent();
         echo '</div>';
-
     }
+    (new utils\Pagination($page, $nbPages, Visitor::getInstance()->getRootPage().'/members/index.php'))->display();
     ?>
 </div>
