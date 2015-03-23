@@ -61,10 +61,12 @@ class DatabaseUser extends Database {
         $mailValidation = utf8_decode($user->getMailValidation());
         $hashMail = utf8_decode($user->getHashMail());
         $valuePaid = utf8_decode($user->getValuePaid());
+        $hasSigned = $user->getHasSigned();
+
         $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', 0, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
-                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid, '')");
+                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid, '', '', '', :hasSigned)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", ($firstname), PDO::PARAM_STR);
         $query->bindParam(":lastname", ($lastname), PDO::PARAM_STR);
@@ -85,6 +87,7 @@ class DatabaseUser extends Database {
         $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
         $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
         $query->bindParam(":valuePaid", $valuePaid, PDO::PARAM_INT);
+        $query->bindParam(":hasSigned", $hasSigned, PDO::PARAM_INT);
 
         $query->execute();
 
@@ -104,6 +107,26 @@ class DatabaseUser extends Database {
         }
         return $ret;
     }
+
+    public function getUsersSigned($signed) {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND levelFormation >= 4 AND validDate >= CURDATE()
+                                           order by lastname");
+        $query->bindParam(":signed", $signed, PDO::PARAM_INT);
+        $query->execute();
+
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $user->getFormationDate()->add(new DateInterval('P2Y'));
+            if($user->getFormationDate() < new DateTime()) {
+                $ret[] = $user;
+            }
+        }
+        return $ret;
+    }
+
     public function getUsersHS() {
         $ret = array();
 
@@ -156,7 +179,15 @@ class DatabaseUser extends Database {
                                            WHERE validDate < CURDATE()  AND mailValidation != 0 AND validDate != 'NULL' AND disable=0");
         $query->execute();
         return $query->fetchObject()->countid;
+    }
 
+    public function chartToValid() {
+        $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
+                                          WHERE hasSigned = 2 AND mailValidation != 0 AND disable!=1
+                                          AND levelFormation >= 4 AND validDate >= CURDATE()
+                                           order by lastname");
+        $query->execute();
+        return $query->fetchObject()->countid;
     }
     public function editUser(User $user)
     {
@@ -183,13 +214,16 @@ class DatabaseUser extends Database {
         $hashMail = utf8_decode($user->getHashMail());
         $valuePaid = utf8_decode($user->getValuePaid());
         $hashPassword = $user->getHashPassword();
+        $longitude = $user->getLongitude();
+        $latitude = $user->getLatitude();
+        $hasSigned = $user->getHasSigned();
 
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
                                           mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
                                           formationDate=:formationDate, levelFormation=:levelFormation, phonePro=:phonePro, phoneMobile=:phoneMobile,
                                           newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress,
-                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail, valuePaid=:valuePaid, hashPassword=:hashPassword
+                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail, valuePaid=:valuePaid, hashPassword=:hashPassword, longitude=:longitude, latitude=:latitude, hasSigned=:hasSigned
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":disable", $disable, PDO::PARAM_INT);
@@ -215,6 +249,9 @@ class DatabaseUser extends Database {
         $query->bindParam(":mailValidation", $mailValidation, PDO::PARAM_INT);
         $query->bindParam(":hashMail", $hashMail, PDO::PARAM_STR);
         $query->bindParam(":hashPassword", $hashPassword, PDO::PARAM_STR);
+        $query->bindParam(":longitude", $longitude);
+        $query->bindParam(":latitude", $latitude);
+        $query->bindParam(":hasSigned", $hasSigned);
 
         $query->execute();
 

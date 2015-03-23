@@ -1,6 +1,6 @@
 <?php
 include('../begin.php');
-
+utils\Rights::hasRights(array("ADMINISTRATEUR", "TRESORIER"));
 use utils\Link;
 $db = new DatabaseUser();
 $user = $db->getUserById($_GET['id']);
