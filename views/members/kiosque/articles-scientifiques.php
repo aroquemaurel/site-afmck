@@ -111,7 +111,11 @@ Image::thumbnailsPdf($folder.'/traduction', "Sciatique_Exercices Pour Eviter La 
 
             <h2>Articles parus en Anglais</h2>
             <ul>
-            <?php
+                <?php
+            Image::miniLink($folder."/en", "KHAN_2009_Mecanotherapie",
+                "Mécanothérapie : comment la prescription d’exercices des
+                    kinésithérapeutes stimulent-t-elles la réparation tissulaire ?
+            <small>K M Khan, A Scott</small>");
             Image::miniLink($folder."/en", "Recovery of motor deficit 2014_AFMcK",
                 "Recovery of Motor Deficit Accompanying Sciatica
             <small>G.M Overdevest, C. Vlegeert-Lankamp, C.H. Jacobs</small><br/>The Spine Journal");
