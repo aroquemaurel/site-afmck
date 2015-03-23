@@ -9,6 +9,7 @@
 class News {
     private $id;
     private $title;
+    private $subtitle;
     private $content;
     private $author;
     private $date;
@@ -19,6 +20,7 @@ class News {
         $this->content = utf8_encode($data->content);
         $this->author = (new DatabaseUser())->getUserById($data->author);
         $this->date = new DateTime($data->date);
+        $this->subtitle = utf8_encode($data->subtitle);
     }
 
     /**
@@ -100,6 +102,23 @@ class News {
     {
         $this->date = $date;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSubtitle()
+    {
+        return $this->subtitle;
+    }
+
+    /**
+     * @param mixed $subtitle
+     */
+    public function setSubtitle($subtitle)
+    {
+        $this->subtitle = $subtitle;
+    }
+
 
 
 }
