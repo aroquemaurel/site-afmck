@@ -31,81 +31,108 @@ MDT WORLD PRESS Newsletter Vol 3 N°4
 <div class="alert alert-info">
 Bienvenue sur le nouveau site de l'Association Française McKenzie !!<br/>
 Ce site tout neuf vous permettra d'avoir prochainement de nouvelles fonctionnalités.<br/><br/>
-Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des bugs ou des incompréhensions…<br/> Si tel est le cas, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a>, votre aide nous est précieuse ! </div> 
-<h3><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/SAGI 2015 - De l'héritage de Robin McKenzie - résumé.pdf">SAGI 2015 - de l'héritage de Robin Mckenzie - Résumé</a></h3>
-      <p>Bonjour à tous,<br/>
-      La date du 4èmes congrès de l’AFMcK approche !!!</p>
+Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des bugs ou des incompréhensions…<br/> Si tel est le cas, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a>, votre aide nous est précieuse ! </div>
 
-      <p>Lors du congrès aura lieu l’Assemblée Générale, trouvez ci-joint l’ordre du jour. Dans les prochains jours sera aussi disponible sur le site (<a href="http://www.afmck.fr">www.afmck.fr</a>) le rapport de trésorerie.<br/>
-      Vous trouverez aussi une seconde pièce jointe avec une procuration pour le vote de l’Assemblée Générale. Les bulletins vierges ne seront pas pris en compte, ils doivent impérativement être remplis et envoyés avant le 2 février 2015 à l’adresse suivante :</p>
+    <h2>Le MDT 2.0 est en marche !!!</h2>
+    <h3>Congrès JFK et AFMcK 2015</h3>
+    <p>
+    JFK = Plus de 1200 participants !! 3 jours de congrès !! 175 intervenants de toutes nationalités et des interventions sur le MDT qui ont fait salle comble !
+    </p>
+    <p>Et pour nous ?? 110 participants !! 1,5 jours de communication avec des stars du MDT (Audrey Long, Stephen May, Hans Van Helvoirt) et des experts d'autres domaines (Blaise Dubois, Jean-François Esculier...) !! 14 conférences données à guichets fermés au nom de l'AFMcK…</p>
 
-      <p>LOMER Romain-Brice<br/>
-      Masseur-Kinésithérapeutes DE<br/>
-      Z.A Les Noës<br/>
-      35380 PLELAN LE GRAND</p>
-    <p>Il reste encore des places, si vous souhaitez vous inscrire c’est en <b>2 fois</b>:</p>
-      <ul style="text-align: left;margin-left: 150px">
-          <li>Pour les <b>JFK</b> via : <a href="http://www.congres-jfk.fr/">http://www.congres-jfk.fr/</a></li>
-          <li><b>ET</b> pour le congrès AFMcK du dimanche et de la soirée de Gala via : <a href="http://afmck.web-events.net/">http://afmck.web-events.net/</a> </li>
-      </ul>
-      <p>
-          N'hésitez pas à contacter: tresorerie@afmck.fr si problème à l'inscription.<br/>
-          A bientôt.</p><p>
-          <i>L'équipe de l’AFMcK</i>
-      </p>
-      <h2><a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/Erratum_AG_2015.pdf">ERRATUM Ordre du jour de l'assemblée générale ordinaire</a></h2>
-      <hr/>
-    <h3>Information</h3>
-<p>
- Pour finir 2015 et les interviews de nos nouveaux diplômés 2014, vous trouverez sur le site celle de <b>Jean-Philippe DENEUVILLE</b>. (<a href="http://afmck.fr/members/kiosque/articles-scientifiques.php#Interviews">http://afmck.fr/members/kiosque/articles-scientifiques.php#Interviews</a>).
-</p>
-<p>
- Lorsque nous l’avons lu nous avons été impressionné par son enthousiasme et attendions ces fêtes de fin d’années avec impatience pour vous l’offrir : Histoire de finir en beauté et démarrer 2015 avec le plein de motivation.    
-</p>
+    <p>Waow ! Des chiffres qui font mal à la tête (presque autant que le gala du samedi soir pour certains...)<br/>
+    Grâce à vous ce fut un super moment pour la profession, pour l'association et pour le MDT. On le sait maintenant : tous les regards sont tournés vers le MDT pour l'avenir alors à nous de jouer...
+    Ce congrès a été un réel succès et tout le bureau de l'Afmck tient à vous remercier pour votre participation et votre soutien.<br/>
+    Nous vous donnons d'ores et déjà rendez vous pour les prochaines échéances : le congrès de l'AFMcK 2016 à Montpellier et les JFK 2017 à Paris !!!</p>
 
-    <h2>Sur le site</h2>
-<p>
-En cadeau de Noel une nouvelle <b>newsletter internationale</b> traduite, qui nous fait voyager du Danemark au Japon, en sous-groupe ou pas  et  parfois semé de doutes. Et peut-être que l’avenir sera fait de consultation virtuelle de nos patients. ? (<a href="http://afmck.fr/members/kiosque/newsletters-McKenzie.php">http://afmck.fr/members/kiosque/newsletters-McKenzie.php</a>)
-</p>
-<p>Profitez aussi des offres Essentiel Médical, la mode à l’italienne en cette fin d’année !</p>
-<p><a href="http://www.afmck.fr/docs/members/materiel/Offre_super_Roll_1.pdf">http://www.afmck.fr/docs/members/materiel/Offre_super_Roll_1.pdf</a></p>
+    <p>Pour un congrès 2016 encore meilleur, n'oubliez pas de remplir et de nous faire parvenir le questionnaire de satisfaction  fourni dans votre livret de congrès (ou même un simple mail).</p>
 
-<h2>Divers</h2>
-<p>
-Le mois de février approche et il reste moins de 30 places pour participer au congrès de l’AFMcK les 7 et 8 février lors des <b>JFK à Lille</b>. Bientôt les places seront ouvertes à tous, donc si vous souhaitez venir, dépêchez-vous !!!
-</p>
-<p>
-Pour vous inscrire :
-</p>
-<ul style="text-align: left;margin-left: 150px">
-<li>Pour le  repas de gala du samedi de l'AFMcK ET la matinée du dimanche : <a href="http://afmck.web-events.net/">http://afmck.web-events.net/</a></li>
-<li>Pour la journée du samedi (et les autres journées des JFK) : <a href="http://www.congres-jfk.fr/">http://www.congres-jfk.fr/</a></li>
-</ul>
-<p>
-L’AFMcK a obtenu des tarifs à <b>l’hôtel le Carlton</b> où aura lieu la soirée de Gala du Samedi soir :
-</p>
-<p>
-   <b>Hôtel CARLTON Lille, France</b>, Séjour autour du 7 Février 2015.
-<ul style="text-align: left;margin-left: 150px">
-    <li>Tarif en chambre single à 109 EUR au lieu de 195 EUR par nuit</li>
-    <li>Tarif en chambre double à 116 EUR au lieu de 215 EUR par nuit</li>
-    <li>Petit Déjeuner Buffet à 20 EUR par personne inclus</li>
-    <li>Taxe de séjour à 1.65 EUR par personne et par nuit en supplément</li>
-    <li>Internet en Wifi gratuit et illimité.</li>
-</ul>
-<p>Pour les contacter : HOTEL CARLTON LILLE France :  <b>f.heranval@carltonlille.com</b>  ou par téléphone:  <b>03 20 13 33 13</b></p>
-<h2>Logiciel</h2>
-<p>
-L’AFMcK propose un sondage pour savoir si vous seriez intéressés par la création d’une version I Pad du bilan informatique M.D.T ? Le coût de création du logiciel étant élevé, il est  important de savoir si cela vous serait utile.
-</p>
-<p>
-Merci de bien vouloir répondre au lien suivant : <a href="http://doodle.com/3zd5w2s865cazihi">http://doodle.com/3zd5w2s865cazihi</a>
-</p>
+    <h3>Assemblée Générale et Nouveau Bureau</h3>
+    <p>Fin de mandat, obligations personnelles, envies diverses : L'AG a été l'occasion de renouveler le CA et le bureau : en effet si certains nous quittent (merci à eux pour le boulot fait jusque là), d'autres intègrent l'équipe (Bravo à eux) et d'autres restent à bord mais à des postes différents : pour y voir plus clair voilà la composition du nouveau bureau, voté à l'unanimité par le CA
+        </p>
 
-<h2>Forum</h2>
-<p>N'oubliez cet outil d'échange entre praticien, qui permet à tous de progresser. Suivez le lien : <a href="http://afmck.forumactif.org/">http://afmck.forumactif.org/</a>
-<br/><br/>
-Le bureau de L'AFMcK
-</p>
+    <div class="bs-callout bs-callout-info">
+    <table>
+        <tr>
+            <td>Flavio Bonnet (Paris 75)</td>
+            <td>Président</td>
+        </tr>
+        <tr>
+            <td>Frederic Fayolle (Paris 75)</td>
+            <td>Trésorier adjoint</td>
+        </tr>
+        <tr>
+            <td>Anne-Marie Gastellu-Etchegorry (Paris 75)</td>
+            <td>Trésorier</td>
+        </tr>
+        <tr>
+            <td>Jacky Otero (Paris 75)</td>
+            <td>Vice-Préseident</td>
+        </tr>
+        <tr>
+            <td>Wilfried Serres (Paris 75)</td>
+            <td>Secrétaire adjoint</td>
+        </tr>
+        <tr>
+            <td>Jonathan Vizzini (Paris 75)</td>
+            <td>Secrétaire</td>
+        </tr>
+    </table>
+    </div>
+    <p>Les nouveaux membres du bureau sont : Adeline Braguier (Lyon 69), Sylvain Peterlongo (Paris 75) et Leif Steene (Montreuil 93), et nous continuerons à profiter des avis et conseils avisés de Pierre Dhien (Grenoble 38) qui a du quitter le bureau pour des raisons administratives mais dont le point de vue est toujours apprécié.<br/>
+    Vous retrouvez en PJ, le compte-rendu de l'AG</p>
+
+    <h3>Référents Régionaux</h3>
+    <p>Pour que les actions réalisées vous ressemblent le plus possible quoi de mieux que de les mener par vous-même ?<br/>
+    Déjà entamé l'année dernière ce projet mérite d'être accéléré : l'objectif est d'essayer de mettre en place un référent régional, départemental ou local qui pourrait être le catalyseur de toutes vos initiatives et le relais idéal avec le bureau national…<br/>
+    Certains ont déjà commencé : Carine Barazer à Brest, Romain-Brice Lomer à Rennes, , Thomas Regnier à Paris, Pierre Dhien à Grenoble, Wilfried Serres à Montpellier…</p>
+    <p>D'autres veulent s'y mettre et vont avoir besoin de soutien : Victor Sawaya en Lorraine, Adeline Braguier à Lyon… <br/>
+    L'association et les projets doivent rester les vôtres donc n'hésitez pas à manifester votre bonne volonté et nous nous ferons un plaisir de vous mettre en relation avec les personnes intéressées...<br/>
+    Sachez que vous ne partez pas seuls et que le bureau et les autres référents régionaux sont tous prêts à partager et mettre en commun leurs idées et leurs expériences passées pour vous faciliter la tâche (organismes à contacter, diaporamas de présentation …)</p>
+
+    <h3>Résultats « Evolution des symptômes et signes d'épaule suite à une prise en charge du rachis cervical en McKenzie/MDT » (Guillaume Neuville) en ligne !</h3>
+
+    <p>Certains d'entre vous ont participé à cette étude, d'autres auraient bien aimé mais n'ont pas eu l'occasion, d'autres encore étaient intéressés mais ne se sentaient peut être pas assez prêts ou disponible....quoi qu'il en soit Guillaume a réussi à mener cette étude jusqu'à son terme et les résultats sont plutôt....intéressants
+    (jugez vous même : <a href="http://www.afmck.fr/members/travaux-association/journees/lille">http://www.afmck.fr/members/travaux-association/journees/lille</a>)<br/>
+    En suivant ce lien vous trouverez la présentation audio synchronisée avec le diaporama de Guillaume à Lille. Encore bravo et merci à lui pour cette belle aventure, on espère qu'elle sera la première d'une longue série !!</p>
+
+    <h3>Bulletin d'adhésion</h3>
+    <p>Qui dit nouvelle année dit renouvellement d'adhésion...vous trouverez également en PJ le formulaire de ré-adhésion, avec une grande nouveauté cette année :</p>
+
+    <h4>Inscription en ligne</h4>
+    <p>La possibilité de s'inscrire et d'adhérer directement en ligne sur</p>
+    <div class="bs-callout bs-callout-info">
+        <a href="http://www.afmck.fr/inscription.php">http://www.afmck.fr/inscription.php</a>
+    </div>
+    <p>A compter du 30 mars, l'accès au site sera individualisé avec un code d'accès personnel qui nécessite de vous inscrire directement sur le site avant cette date (en haut à droite). Votre identifiant sera votre numéro ADELI et vous choisissez votre mot de passe ! Une fois votre règlement reçu, votre inscription sera validée par nos trésoriers et vous pourrez naviguer en toute liberté.</p>
+
+    <p>
+    En cas de problème sur le site, un Email à maintenance@afmck.fr
+    </p>
+
+    <h3>Rappel des mails de contact</h3>
+    <p>Question d'ordre générale (activation du logiciel bilan, changement de coordonnées, de niveau MDT, organisation d'action locale)</p>
+    <div class="bs-callout bs-callout-info">
+        <a href="mailto:secretariat@afmck.fr">secretariat@afmck.fr</a>  ou <a href="mailto:contact@afmck.fr">contact@afmck.fr</a>
+        </div>
+
+    <p>Question d'ordre financier</p>
+        <div class="bs-callout bs-callout-info">
+            <a href="mailto:tresor@afmck.fr">tresor@afmck.fr</a>
+        </div>
+    <p>Question d'ordre technique sur le site ou le logiciel</p>
+        <div class="bs-callout bs-callout-info">
+            <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a>
+        </div>
+
+    <h3>Forum</h3>
+    <p>N’oubliez cet outil d’échange entre praticien, qui permet à tous de progresser.</p>
+
+    <div class="bs-callout bs-callout-info">
+    <a href="http://afmck.forumactif.org/">http://afmck.forumactif.org/</a>
+    </div>
+
+    Le bureau de l'Afmck
+
 </div>
 </div>
