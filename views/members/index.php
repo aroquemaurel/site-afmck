@@ -67,7 +67,7 @@ Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des 
         </tr>
         <tr>
             <td>Jacky Otero (Paris 75)</td>
-            <td>Vice-Préseident</td>
+            <td>Vice-Président</td>
         </tr>
         <tr>
             <td>Wilfried Serres (Paris 75)</td>
