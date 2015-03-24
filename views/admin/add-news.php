@@ -20,7 +20,15 @@
                         >
                 </div>
             </div>
-
+            <div class="row">
+                <div class="form-group">
+                    <?php utils\Wysiwyg::display(); ?>
+                </div>
+                </div>
         </form>
     </div>
 </div>
+
+<?php
+$script = utils\Wysiwyg::getScriptSrc();
+$script .= utils\Wysiwyg::getJsToolbar();
