@@ -8,10 +8,10 @@
 
 class DatabaseNews extends Database {
 
-    public function getAllNews($page=1) {
+    public function getAllNews($page=1, $nbNewsByPage=2) {
         $ret = array();
-        $limitMin = ($page-1) * 2;
-        $limitMax = 2;
+        $limitMin = ($page-1) * $nbNewsByPage;
+        $limitMax = $nbNewsByPage;
         $query = $this->dbAccess->prepare("SELECT * from `news` order by date desc LIMIT :min,:max ");
         $query->bindParam(":min", $limitMin, PDO::PARAM_INT);
         $query->bindParam(":max", $limitMax, PDO::PARAM_INT);
