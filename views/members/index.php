@@ -58,28 +58,28 @@ Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des 
             <td>Président</td>
         </tr>
         <tr>
-            <td>Frederic Fayolle (Paris 75)</td>
+            <td>Frederic Fayolle (Aubignan 84)</td>
             <td>Trésorier adjoint</td>
         </tr>
         <tr>
-            <td>Anne-Marie Gastellu-Etchegorry (Paris 75)</td>
+            <td>Anne-Marie Gastellu-Etchegorry (Montauban 82)</td>
             <td>Trésorier</td>
         </tr>
         <tr>
-            <td>Jacky Otero (Paris 75)</td>
+            <td>Jacky Otero (Eybens 38)</td>
             <td>Vice-Président</td>
         </tr>
         <tr>
-            <td>Wilfried Serres (Paris 75)</td>
+            <td>Wilfried Serres (Montpellier 34)</td>
             <td>Secrétaire adjoint</td>
         </tr>
         <tr>
-            <td>Jonathan Vizzini (Paris 75)</td>
+            <td>Jonathan Vizzini (Nates 44)</td>
             <td>Secrétaire</td>
         </tr>
     </table>
     </div>
-    <p>Les nouveaux membres du bureau sont : Adeline Braguier (Lyon 69), Sylvain Peterlongo (Paris 75) et Leif Steene (Montreuil 93), et nous continuerons à profiter des avis et conseils avisés de Pierre Dhien (Grenoble 38) qui a du quitter le bureau pour des raisons administratives mais dont le point de vue est toujours apprécié.<br/>
+    <p>Les nouveaux membres du CA sont : Adeline Braguier (Lyon 69), Sylvain Peterlongo (Paris 75) et Leif Steene (Montreuil 93), et nous continuerons à profiter des avis et conseils avisés de Pierre Dhien (Grenoble 38) qui a du quitter le bureau pour des raisons administratives mais dont le point de vue est toujours apprécié.<br/>
     Vous retrouvez en PJ, le compte-rendu de l'AG</p>
 
     <h3>Référents Régionaux</h3>
