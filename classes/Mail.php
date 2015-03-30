@@ -20,9 +20,8 @@ class Mail {
     }
     public static function getValidationSignature(User $user) {
         return "Bonjour ".$user->getFirstName()." ".$user->getLastName().",<br/>
-                Nous avons le plaisir de vous annoncer que votre signature de la charte a été validée. <br/>
-
-                Vous devriez maintenant apparaître sur la carte des praticiens : si tel n'est pas le cas, où en cas de problèmes, vous pouvez répondre à cet-email<br/>.
+                Nous avons le plaisir de vous annoncer que votre signature de la charte a été validée. <br/> 
+                Vous devriez maintenant apparaître sur la carte des praticiens : si tel n'est pas le cas, où en cas de problèmes, vous pouvez répondre à cet-email.<br/><br/>
 
                 Le bureau de l'AFMcK";
     }
@@ -30,10 +29,10 @@ class Mail {
     public static function getValidationMail(User $user) {
         return "Bonjour ".($user->getFirstName())." ".($user->getLastName()).",<br/>
                 Vous venez de vous inscrire sur <a href=\"http://afmck.fr\">http://afmck.fr</a>.<br/>
-                Afin de pouvoir vous connecter sur le site, votre compte devra être validée manuellement par un membre du CA,
+                Afin de pouvoir vous connecter sur le site, votre compte devra être validé manuellement par un membre du CA,
                 une fois votre paiement récéptionné. <br/><br/>
 
-                Cependant, avant toutre chose, vous devez valider votre adresse email, pour cela, veuillez cliquer sur le lien suivant : <br/>
+                Cependant, avant toute chose, vous devez valider votre adresse email, pour cela, veuillez cliquer sur le lien suivant : <br/>
                 <a href=\"http://afmck.fr/validation.php?account=".$user->getAdeliNumber()."&validation=".$user->getHashMail()."\">
                     http://afmck.fr/validation.php?account=".$user->getAdeliNumber()."&validation=".$user->getHashMail()."
                     </a><br/><br/>
@@ -62,7 +61,7 @@ class Mail {
     }
 
     public static function getNewAccount(User $user) {
-        $ret = "Bonjour,
+        $ret = "Bonjour,<br/>
         Vous vous êtes correctement inscris à l'AFMcK : <br/>
         Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
         <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
