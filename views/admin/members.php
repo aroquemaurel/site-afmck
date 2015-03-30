@@ -3,17 +3,17 @@
     <h1>Liste des adhérents</h1>
     <?php
     if($usersOk->getUsers() != array()) {
-        echo '<h2>Comptes actifs</h2>';
+        echo '<h2>Comptes actifs ('.count($usersOk->getUsers()).')</h2>';
         echo $usersOk->usersToString(true);
     }
 
     if($usersToActivate->getUsers() != array()) {
-        echo '<h2>Comptes à activer</h2>';
+        echo '<h2>Comptes à activer ('.count($usersToActivate->getUsers()).')</h2>';
         echo $usersToActivate->usersToString(false);
     }
 
     if($usersNotOk->getUsers() != array()) {
-        echo '<h2>Comptes désactivés manuellement</h2>';
+        echo '<h2>Comptes désactivés manuellement ('.count($usersNotOk->getUsers()).')</h2>';
         echo $usersNotOk->usersToString(false);
     }
     ?>

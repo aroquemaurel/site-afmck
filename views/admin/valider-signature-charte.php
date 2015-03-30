@@ -1,7 +1,7 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid">
     <h1>Validation de la charte</h1>
-    <h2>Chartes à valider</h2>
+    <h2>Chartes à valider <?php echo '('.count($usersToValid).')'; ?></h2>
     <table class="table table-striped">
         <tr>
             <th>N° ADELI</th>
@@ -25,7 +25,7 @@
         ?>
     </table>
 
-    <h2>Chartes signées</h2>
+    <h2>Chartes signées <?php echo '('.count($usersValides).')'; ?></h2>
     <table class="table table-striped">
         <tr>
             <th>N° ADELI</th>
@@ -49,7 +49,7 @@
         ?>
     </table>
 
-    <h2>Charte non signées</h2>
+    <h2>Chartes non signées <?php echo '('.count($usersNotValidates).')'; ?></h2>
     <table class="table table-striped">
         <tr>
             <th>N° ADELI</th>
