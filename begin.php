@@ -10,4 +10,6 @@ session_start();
 if(!Visitor::getInstance()->isConnected()) {
     Visitor::getInstance()->autoconnect();
 }
-utils\Rights::hasRights();
+if(!isset($particularRights) || !$particularRights) {
+    utils\Rights::hasRights();
+}

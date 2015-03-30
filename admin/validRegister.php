@@ -1,4 +1,5 @@
 <?php
+$particularRights = true;
 include('../begin.php');
 utils\Rights::hasRights(array("ADMINISTRATEUR", "TRESORIER"));
 use utils\Link;
