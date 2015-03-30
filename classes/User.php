@@ -599,17 +599,17 @@ class User {
 
     public function getLevelFormationString() {
         switch($this->levelFormation) {
-            case 0:
-                return "A";
             case 1:
-                return "B";
+                return "A";
             case 2:
-                return "C";
+                return "B";
             case 3:
-                return "D";
+                return "C";
             case 4:
-                return 'Certifié';
+                return "D";
             case 5:
+                return 'Certifié';
+            case 6:
                 return "Diplômé";
         }
     }

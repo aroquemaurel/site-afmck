@@ -8,13 +8,13 @@
     if(!Visitor::getInstance()->getUser()->mustSignedChart()) {
         ?>
         <div class="bs-callout bs-callout-warning">
-    <p>Vous pouvez signer la charte et l'afficher dans votre cabinet, cependant tant que vous n'êtes pas certifié niveau D ou supérieur, vous n'apparaitrait pas dans la liste des praticiens.</p>
+    <p>Vous pouvez signer la charte et l'afficher dans votre cabinet, cependant tant que vous n'êtes pas niveau D ou supérieur, vous n'apparaitrez pas dans la liste des praticiens signataires.</p>
     </div>
 <?php
     } else {
     ?>
         <div class="bs-callout bs-callout-warning">
-        <p>Vous êtes actuellement de niveau D ou supérieur, une fois la charte signée, vous aller donc apparaître sur la carte des praticiens.<br/>>
+            <p>Vous êtes actuellement de niveau D ou supérieur, une fois la charte signée, vous aller donc apparaître sur la carte des praticiens.<br/>
         Attention, si vous restez niveau D pendant 2 ans sans être certifié, vous serez supprimé de la carte</p>
     </div>
     <?php
