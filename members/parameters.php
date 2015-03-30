@@ -25,7 +25,8 @@ if(isset($_POST['firstName'])) {
     $user->setNewsletter(!isset($_POST['newsletter']));
     $user->setPayment($_POST['payment']);
     $user->setValuePaid($_POST['valuePaid']);
-
+    $user->setLatitude("");
+    $user->setLongitude("");
     $user->commit();
     $_SESSION['lastMessage'] = Popup::successMessage("Les informations ont été correctement modifiées");
 }

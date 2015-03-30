@@ -43,6 +43,12 @@ class User {
     private $hashMail;
 
     private $valuePaid;
+
+    private $longitude;
+    private $latitude;
+
+    private $hasSigned;
+
     public function __construct($adeliNumber='', $password='') {
         date_default_timezone_set('UTC');
 
@@ -50,6 +56,7 @@ class User {
         $this->password = $password;
         $this->groups = array();
         $this->mailer = array();
+        $this->hasSigned = -1;
     }
     public function setCookie() {
         setcookie("user", $this->adeliNumber.'/-!!-/'.$this->password, time()+3600*24*30*6); // expire in 6 month
@@ -140,6 +147,12 @@ class User {
         }
 
     }
+
+    public function mustSignedChart() {
+        return $this->hasSigned == -1 && $this->levelFormation >= 4 && $this->mailValidation != 0
+        && $this->disable!=1;
+    }
+
     public function valid() {
         $currentDate = new DateTime();
         $this->disable = 0;
@@ -208,6 +221,10 @@ class User {
         $this->mailValidation = utf8_encode($data->mailValidation);
         $this->valuePaid = utf8_encode($data->valuePaid);
         $this->hashPassword = $data->hashPassword;
+        $this->longitude = $data->longitude;
+        $this->latitude = $data->latitude;
+        $this->hasSigned = $data->hasSigned;
+
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
         $this->groups = array();
@@ -231,13 +248,18 @@ class User {
         $ret .= '<h2 style="font-size: 14pt">Adresse</h2>';
         $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.($this->address).'<br/>'.($this->complementAddress!=""?($this->complementAddress).'<br/>':"").$this->cp.' '.($this->town);
         $ret .= '<h2 style="font-size: 14pt">Formation MDT</h2>';
-        $ret .= '<b>Niveau de formation</b>: '.$this->levelFormation.'<br/>';
+        $ret .= '<b>Niveau de formation</b>: '.$this->getLevelFormationString().'<br/>';
         $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->formationDate->format("m / Y");
         $ret .= '<H2 style="font-size: 14pt">Paiement</H2>';
         $ret .= 'Paiement par '.($this->payment == 1 ? "chèque":"virement bancaire") ."<br/> ";
-        $ret .= 'Montant de la cotisation: '.($this->getValuePaid() != 100 ? $this->getValuePaid()." euros" : "100 euros et plus");
-        $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
+        $ret .= 'Montant de la cotisation: '.($this->getValuePaid() != 100 ? $this->getValuePaid()." euros" : "100 euros et plus").'<br/>';
+        if(!$pdf) {
+            $ret .= 'Dernière facture: <i class="glyphicon glyphicon-download-alt"></i> <a href="'.Visitor::getInstance()->getRootPage().'/docs/members/billing/'.(new DateTime())->format('Y').'_'.$this->adeliNumber.'.pdf">Télécharger</a>';
+        }
+            $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
         $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
+        $ret .= '<H2 style="font-size: 14pt">Charte de bonne pratique</H2>';
+        $ret .= $this->hasSigned == 1 ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;À signé la charte' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;N\'a pas signé la charte';
 
         if($pdf) {
             $ret .= '<p style="font-size: 11pt; margin-top: 50px;">Signature<br/><br/>Le .... / .... / 2015<br/><br/>À ........................</p>';
@@ -260,6 +282,23 @@ class User {
     {
         return $this->valuePaid;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getHasSigned()
+    {
+        return $this->hasSigned;
+    }
+
+    /**
+     * @param mixed $hasSigned
+     */
+    public function setHasSigned($hasSigned)
+    {
+        $this->hasSigned = $hasSigned;
+    }
+
 
     /**
      * @param mixed $valuePaid
@@ -307,6 +346,38 @@ class User {
     public function setPayment($payment)
     {
         $this->payment = $payment;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * @param mixed $longitude
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * @param mixed $latitude
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
     }
 
     /**
@@ -526,6 +597,23 @@ class User {
         return $this->levelFormation;
     }
 
+    public function getLevelFormationString() {
+        switch($this->levelFormation) {
+            case 0:
+                return "A";
+            case 1:
+                return "B";
+            case 2:
+                return "C";
+            case 3:
+                return "D";
+            case 4:
+                return 'Certifié';
+            case 5:
+                return "Diplômé";
+        }
+    }
+
     /**
      * @param mixed $levelFormation
      */
@@ -629,6 +717,7 @@ class User {
     {
         $this->disable = $disable;
     }
+
 
 
 }
