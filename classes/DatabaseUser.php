@@ -111,7 +111,8 @@ class DatabaseUser extends Database {
     public function getUsersSigned($signed) {
         $ret = array();
 
-        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND levelFormation >= 4 AND validDate >= CURDATE()
+//        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND levelFormation >= 4 AND validDate >= CURDATE()
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND validDate >= CURDATE()
                                            order by lastname");
         $query->bindParam(":signed", $signed, PDO::PARAM_INT);
         $query->execute();
@@ -126,6 +127,24 @@ class DatabaseUser extends Database {
         }
         return $ret;
     }
+    public function getUsersOnMap($signed) {
+        $ret = array();
+
+        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = 1 AND mailValidation != 0 AND disable!=1 AND levelFormation >= 4 AND validDate >= CURDATE()");
+        $query->bindParam(":signed", $signed, PDO::PARAM_INT);
+        $query->execute();
+
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $user->getFormationDate()->add(new DateInterval('P2Y'));
+            if($user->getFormationDate() < new DateTime()) {
+                $ret[] = $user;
+            }
+        }
+        return $ret;
+    }
+
 
     public function getUsersHS() {
         $ret = array();
@@ -182,9 +201,13 @@ class DatabaseUser extends Database {
     }
 
     public function chartToValid() {
-        $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
+        /*$query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
                                           WHERE hasSigned = 2 AND mailValidation != 0 AND disable!=1
                                           AND levelFormation >= 4 AND validDate >= CURDATE()
+                                           order by lastname");*/
+        $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
+                                          WHERE hasSigned = 2 AND mailValidation != 0 AND disable!=1
+                                          AND validDate >= CURDATE()
                                            order by lastname");
         $query->execute();
         return $query->fetchObject()->countid;

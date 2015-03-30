@@ -57,7 +57,7 @@ if(!Visitor::getInstance()->isConnected()) {
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/mon-profil.php">Voir mon profil</a></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/parameters.php">Modifier mes informations</a></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/password.php">Changer de mot de passe</a></li>';
-        if(Visitor::getInstance()->getUser()->mustSignedChart()) {
+        if(Visitor::getInstance()->getUser()->getHasSigned() == -1) {
             echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/members/signer-la-charte.php">Je souhaite signer la charte</a></li>';
         }
     }
