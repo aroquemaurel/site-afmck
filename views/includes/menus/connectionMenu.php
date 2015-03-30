@@ -25,7 +25,7 @@ if(!Visitor::getInstance()->isConnected()) {
     $nbAdmin = $nbAccountToValid + $nbCharteToValid;
 
     echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
-        Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .Visitor::getInstance()->getUser()->getLastName();
+        Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .ucfirst(strtolower(Visitor::getInstance()->getUser()->getLastName()));
 
     if($accountsRights || $charteRights) {
         if($nbAdmin > 0) {

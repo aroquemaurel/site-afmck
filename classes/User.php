@@ -426,7 +426,7 @@ class User {
      */
     public function getFirstName()
     {
-        return ($this->firstName);
+        return ucfirst(strtolower($this->firstName));
     }
 
     /**
@@ -442,7 +442,7 @@ class User {
      */
     public function getLastName()
     {
-        return ($this->lastName);
+        return strtoupper($this->lastName);
     }
 
     /**
@@ -458,7 +458,7 @@ class User {
      */
     public function getMail()
     {
-        return $this->mail;
+        return strtolower($this->mail);
     }
 
     /**
@@ -562,7 +562,7 @@ class User {
      */
     public function getTown()
     {
-        return ($this->town);
+        return strtoupper($this->town);
     }
 
     /**
