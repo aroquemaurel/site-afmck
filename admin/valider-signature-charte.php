@@ -29,7 +29,7 @@ if(isset($_GET['valid'])) {
 }
 
 $usersToValid = $db->getUsersSigned(2);
-$usersNotValidates = $db->getUsersSigned(0);
+$usersNotValidates = $db->getUsersSigned(0) + $db->getUsersSigned(-1);
 $usersValides = $db->getUsersSigned(1);
 include('../views/includes/head.php');
 include('../views/admin/valider-signature-charte.php');
