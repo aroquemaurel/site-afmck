@@ -12,9 +12,9 @@
             <h2>Fonctionnalités</h2>
             <ul><li>Bilan Lombaire</li>
                 <li>Bilan Cervical</li>
-                <li>Bilan thoraciques</li>
-                <li>Bilans membres supérieurs</li>
-                <li>Bilans membres inférieurs</li>
+                <li>Bilan thoracique</li>
+                <li>Bilan membres supérieurs</li>
+                <li>Bilan membres inférieurs</li>
                 <li>Fiches de suivis</li>
                 <li>Envoi de documents par e-mail</li>
                 <li>Editions de PDF des bilans et des fiches de suivis</li>
@@ -23,13 +23,12 @@
             <h3>Les nouveautés</h3>
             <ul>
                 <li>Toutes les fiches bilan MDT dont le périphérique</li>
-                <li>Les fiches de liaisons médecin ajustées</li>
+                <li>Les fiches de liaison médecin ajustées</li>
                 <li>La possibilité d'envoyer des documents par mail</li>
                 <li>L'adresse de contact en cas de problème d'installation ou d'utilisation: maintenance@afmck.fr.</li>
             </ul>
             <ul>
-                <li>La nouvelle version (V1.6.7) du logiciel de bilan MDT est disponible pour les utilisateur de PC</li>
-                <li>L'ancienne version (1.5.6) est toujours disponible pour les utilisateurs de Mac, en attendant la nouvelle !</li>
+                <li>La nouvelle version (V1.6.7) du logiciel de bilan MDT est disponible pour les utilisateurs de PC et Mac</li>
             </ul>
 
             <div class="bs-callout bs-callout-info">
@@ -48,8 +47,9 @@
 
             <h3>A venir</h3>
             <ul>
+                <li>Nouvelle interface</li>
                 <li>les fiches périphériques et la transmission par mail directement depuis le logiciel !</li>
-                <li>Une version pour les cabinets multi-praticien</li>
+                <li>Une version pour les cabinets multi-praticiens</li>
                 <li>Analyse des données récoltées</li>
             </ul>
         </div><!-- fin de .logiciel -->
