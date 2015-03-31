@@ -120,10 +120,10 @@ class DatabaseUser extends Database {
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
             $user = new User();
             $user->hydrat($dataUser);
-            $user->getFormationDate()->add(new DateInterval('P2Y'));
-            if($user->getFormationDate() < new DateTime()) {
+    //        $user->getFormationDate()->add(new DateInterval('P2Y'));
+      //      if($user->getFormationDate() < new DateTime()) {
                 $ret[] = $user;
-            }
+        //    }
         }
         return $ret;
     }
@@ -138,7 +138,7 @@ class DatabaseUser extends Database {
             $user = new User();
             $user->hydrat($dataUser);
             $user->getFormationDate()->add(new DateInterval('P2Y'));
-            if($user->getFormationDate() < new DateTime()) {
+            if($user->getLevelFormation() !=  44 && $user->getFormationDate() < new DateTime()) {
                 $ret[] = $user;
             }
         }

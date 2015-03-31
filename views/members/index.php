@@ -31,7 +31,7 @@ MDT WORLD PRESS Newsletter Vol 3 N°4
     <?php
         if(Visitor::getInstance()->getUser()->mustSignedChart()) {
             echo '<div class="alert alert-warning" role="alert">';
-            echo "Vous êtes actuellement d'un niveau D ou supérieur et vous n'avez pas encore signé la charte, qui vous permettrai de figurer sur la carte des praticiens.<br/>
+            echo "Vous êtes actuellement d'un niveau D ou supérieur et vous n'avez pas signé la charte, qui vous permettrai d'être affiché dans la carte des praticiens.<br/>
             Si vous souhaitez signer la charte, vous pouvez vous rendre sur cette <a href=\"".Visitor::getInstance()->getRootPage()."/members/signer-la-charte.php\">page</a>
  </div>";
         }
@@ -120,7 +120,7 @@ Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des 
     </p>
 
     <h3>Rappel des mails de contact</h3>
-    <p>Question d'ordre général (activation du logiciel bilan, changement de coordonnées, de niveau MDT, organisation d'action locale)</p>
+    <p>Question d'ordre générale (activation du logiciel bilan, changement de coordonnées, de niveau MDT, organisation d'action locale)</p>
     <div class="bs-callout bs-callout-info">
         <a href="mailto:secretariat@afmck.fr">secretariat@afmck.fr</a>  ou <a href="mailto:contact@afmck.fr">contact@afmck.fr</a>
         </div>
