@@ -1,4 +1,4 @@
-<ul class="members nav navbar-nav " style="font-size: 9pt;">
+<ul class="members nav navbar-nav " style="font-size: 8pt;max-width: 195px">
 
 <?php
 if(!Visitor::getInstance()->isConnected()) {
