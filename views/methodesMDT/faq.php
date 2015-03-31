@@ -32,12 +32,12 @@
         <p>Cette approche est effectivement différente. Encore une fois, le principal mot d’ordre est autorééducation: le patient doit dans une certaine mesure se prendre en charge. Certains patients ne voudront pas faire les exercices et d'autres ne comprendront pas comment les faire. Il y a, comme dans toute approche, des limites à l'application MDT. Peut-être, dès lors, la difficulté viendra effectivement du fait qu'il faudra s'appliquer à bien faire comprendre les exercices, à faire préciser la fréquence et le nombre des mouvements et que finalement tout cela « prendra du temps ». Il est aussi possible que ce temps, en apparence perdu, permette plus tard de pérenniser les résultats obtenus et d'éviter les récidives...</p>
 
         <div class="alert alert-info" style="margin-top: 50px"><p> J'ai entendu parler d'études qui disaient que McKenzie ne marche pas dans les cas aigus.</div></p>
-        <p>L'approche MDT, du fait de sa grande fiabilité et validité, notamment inter et intra-examinateurs, fait depuis longtemps l'objet d'études de grande qualité. Fort logiquement, il existe aussi des études qui sont défavorables au MDT. Les études concernant des patients aigus, quelque soit l'approche considérée, montrent souvent des résultats mitigés. Les critères d'inclusion ou d'exclusion, les critères d'évaluation des résultats ou des questionnaires proposés aux patients ayant participés à l'étude sont toujours très difficiles à interpréter.</p>
+        <p>L'approche MDT, du fait de sa grande fiabilité et validité, notamment inter et intra-examinateur, fait depuis longtemps l'objet d'études de grande qualité. Fort logiquement, il existe aussi des études qui sont défavorables au MDT. Les études concernant des patients aigus, quelque soit l'approche considérée, montrent souvent des résultats mitigés. Les critères d'inclusion ou d'exclusion, les critères d'évaluation des résultats ou des questionnaires proposés aux patients ayant participés à l'étude sont toujours très difficiles à interpréter.</p>
         <p>Une chose reste sûre : pour l'heure il n'existe pas "d'étalon or" pour évaluer les patients aigus. Par comparaison, les mêmes types d'études sur des patients aigus, ne donnent pas d'effets positifs aux manipulations ostéopathiques au delà de … 72 heures !</p>
         <p>L'ostéopathie n'est pas pour autant devenue une « discipline inefficace » depuis que cette étude est sortie. Il est de notoriété publique que cette pratique améliore les patients ; simplement les critères pour évaluer cette amélioration ne sont pas pour l'heure pertinents.</p>
 
 
-        <div class="alert alert-info" style="margin-top: 50px"><p> Si j'ai bien compris l'approche McKenzie, je constate que lors d’une séance, le praticien fait un bilan, teste des mouvements répétés sur le patient et en fonction des résultats lui donne des exercices à faire à la maison ainsi que des mesures d’hygiène de vie à respecter. Donc le praticien ne « touche » pas le patient : pas de massages, de mobilisations etc...<br/>J’ai du mal à envisager une telle situation avec mes patients : comment les soigner sans les toucher et comment mon patient va accepter une séance sans massage ? </div></p>
+        <div class="alert alert-info" style="margin-top: 50px"><p> Si j’ai bien compris l’approche McKenzie, je constate que lors d’une séance, le praticien fait un bilan, teste des mouvements répétés sur le patient et en fonction des résultats lui donne des exercices à faire à la maison ainsi que des mesures d’hygiène de vie à respecter. Donc le praticien ne « touche » pas le patient : pas de massages, de mobilisations etc...<br/>J’ai du mal à envisager une telle situation avec mes patients : comment les soigner sans les toucher et comment mon patient va accepter une séance sans massage ?</div></p>
         <p>Certes, la méthode McKenzie est différente des autres méthodes sur ce point bien précis notamment : nous « touchons »le moins possible les patients afin de développer chez eux «l’autotraitement». Certaines situations impliquent notre participation « physique active » mais ce n’est pas la règle.<br/> N’oublions pas que ce qui compte c’est le résultat : notre patient est-il mieux après un massage ou après l’exercice que nous avons mis en place pour lui ?Ce sera à vous de juger…Nous savons quand même tous qu’un massage n’a qu’un effet ponctuel à court terme…</p>
         <p>N’oublions pas non plus que le bilan réalisé lors de la 1ère séance est une action d’échange avec le patient : nous l’écoutons, nous cherchons à comprendre son problème…c’est un vrai travail actif que nous faisons et votre patient sera sûrement sensible sur ce point !</p>
         <p>Il est vrai que certains patients n’attendent que des manoeuvres passives de notre part…Notre expérience nous montre qu’un praticien « convaincu et motivé » est respecté et apprécié même s’il ne fait pas forcément des massages…</p>
@@ -45,12 +45,13 @@
         <!------------ FAQ MEDECINS ------------>
         <h2>FAQ pour les médecins</h2>
 
-        <div class="alert alert-info" style="margin-top: 50px"><p> La méthode McKenzie (appelée aussi MDT : Mechanical Diagnosis & Therapy) n'est elle pas<br />une « recette » de plus appliquée aux problèmes rachidiens ?</div></p>
-        <p>La méthode McKenzie est tout sauf une « recette » ! Cette prise en charge est basée sur un BILAN validé internationalement, bénéficiant d’une bonne reproductibilité inter et intra-examinateurs.
+        <div class="alert alert-info" style="margin-top: 50px"><p> La méthode McKenzie (appelée aussi MDT : Mechanical Diagnosis & Therapy n’est elle pas<br />une « recette » de plus appliquée aux problèmes rachidiens ?</div></p>
+        <p>La méthode McKenzie est tout sauf une « recette » ! Cette prise en charge est basée sur un BILAN validé internationalement, bénéficiant d’une bonne reproductibilité inter et intra-examinateur.
             C’est seulement à l’issue de ce bilan que des exercices actifs personnalisés seront proposés au patient. Le traitement est sans cesse réadapté selon l’évolution de la présentation clinique du patient.</p>
 
 
                 <div class="alert alert-info" style="margin-top: 50px"><p> Qu’est ce qui différencie cette approche par rapport à d’autres traitements ?</div></p>
+
                     <ul>
                         <li><strong>L’évaluation</strong> du patient est poussée :</li>
                         <ul class="liste2">
@@ -76,14 +77,12 @@
         <p>Les indications sont variées : toutes les affections mécaniques du rachis et des membres. Les radiculopathies, névralgies cervico-brachiales, douleurs articulaires, tendinopathies et TMS en général forment une liste           non exhaustive des indications.</p>
         <p>Toutes les pathologies inflammatoires en phase aigue, les cancers, les maladies infectieuses articulaires ou osseuses sont des contre indications.</p>
         <p>Certaines pathologies comme le canal lombaire étroit ou encore le spondylolisthésis peuvent être évaluées en toute sécurité grâce au bilan, afin de déterminer la pertinence ou non de cet affection sur les symptômes. L'approche MDT permet aussi une prise en charge de ces deux affections.</p>
-        <div class="alert alert-info" style="margin-top: 50px">
-
-            <p> Comment se déroule un traitement type de méthode McKenzie ?</div></p>
+        <div class="alert alert-info" style="margin-top: 50px"><p> Comment se déroule un traitement type de méthode McKenzie ?</div></p>
         <p>Initialement un BILAN est réalisé. Ce bilan très complet permet d’appréhender de façon précise l’impact du problème sur la vie du patient, la nature du problème, son ancienneté….
             L’Examen des mouvements répétés permettra de retrouver s’il y a lieu une Préférence Directionnelle et la classification dans un des trois syndromes : Dérangement, Dysfonction ou Postural et ensuite la stratégie thérapeutique adaptée à ces syndromes.</p>
         <p>Cette première séance nécessite du temps mais constitue le « pilier » du reste de la prise en charge. Le bilan ainsi réalisé sera, pour tout le traitement, une référence initiale de l'état du patient et permettra donc tous les ajustements  nécessaires.</p>
         <p>La constante dans toutes les prises en charge est la notion d’auto-traitement. Le patient est l’acteur principal de son traitement, en réalisant de manière pluriquotidienne des exercices simples et précis.</p>
-        <p>Les séances successives sont des réévaluations du patient et permettent de vérifier la pertinence des exercices préconisés lors de la séance précédente. Au besoin, le thérapeute peut changer les exercices du patient aussi bien en terme de charge mécanique (par exemple demander plus de répétitions ou moins de fréquence) qu'en terme de direction de travail (exercices dans le plan latéral voir rotatoire) si la réponse symptomatique du patient n'est pas concluante. Le thérapeute peut aussi décider d'appliquer lui même des forces toujours en fonction de la symptomatologie (surpressions du thérapeute ou mobilisations spécifiques).</p>
+        <p>Les séances successives sont des réévaluations du patient et permettent de vérifier la pertinence des exercices préconisés lors de la séance précédente. Au besoin, le thérapeute peut changer les exercices du patient aussi bien en terme de charge mécanique (par exemple demander plus de répétition ou moins de fréquence) qu'en terme de direction de travail (exercices dans le plan latéral voir rotatoire) si la réponse symptomatique du patient n'est pas concluante. Le thérapeute peut aussi décider d'appliquer lui même des forces toujours en fonction de la symptomatologie (surpressions du thérapeute ou mobilisations spécifiques).</p>
 
         <!------------ FAQ PATIENTS ------------>
         <div class="anchor" id="patients"></div>
@@ -119,9 +118,9 @@
 
 
 
-        <div class="alert alert-info" style="margin-top: 50px"><p> J'ai mal au dos depuis plusieurs mois. La radio prescrite a montré une discopathie. Après avoir eu des soins et comme la douleur et les signes ne passaient pas, mon médecin m’a finalement fait faire une IRM. On a retrouvé une hernie discale. La méthode McKenzie est elle adaptée pour moi ? Ne va-t-elle pas m'aggraver ?</div></p>
-        <p>La méthode McKenzie est probablement l'approche la plus à même de vous prendre en charge, même avec une hernie discale découverte par les examens ! Votre thérapeute dans son bilan initial renseignera votre état clinique de départ par les biais de marqueurs précis et réévaluera ce statut à chaque séance : c est un des moyens de surveillance les plus sûr pour ne pas aggraver durablement les signes et donc vérifier que votre progression va dans le « bon sens ».
-            Il vous apprendra les mouvements qui soulagent et vous signifiera ceux qu'il faut éviter.</p>
+        <div class="alert alert-info" style="margin-top: 50px"><p> J’ai mal au dos depuis plusieurs mois. La radio prescrite a montré une discopathie. Après avoir eu des soins et comme la douleur et les signes ne passaient pas, mon médecin m’a finalement fait faire une IRM. On a retrouvé une hernie discale. La méthode McKenzie est elle adaptée pour moi ? Ne va-t-elle pas m'aggraver ?</div></p>
+        <p>La méthode McKenzie est probablement l'approche la plus à même de vous prendre en charge, même avec une hernie discale découverte par les examens ! Votre thérapeute dans son bilan initial renseignera votre état clinique de départ par les biais de marqueurs précis et réévaluera ce statut à chaque séance : c est un des moyens de surveillance les plus sûr pour ne pas aggraver durablement les signes et donc vérifier que votre progression va dans le "bon sens ».
+            Il vous apprendra les mouvements qui soulagent et vous signifiera ceux qu’il faut éviter.</p>
 
         <p>&nbsp;<br/>&nbsp;</p>
     </div><!-- Fin de .pg01a-prisecharge -->

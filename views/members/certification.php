@@ -26,7 +26,7 @@
                 d'être effectivement au niveau.</p>
 
             <p>Passer cette épreuve est une façon aussi de promouvoir l'approche MDT : en effet, plus le nombre
-                de praticiens certifiés sera important en France, plus cette méthode a des chances d'être reconnue,
+                de praticiens certifiés sera important en France, plus cette méthode à des chances d'être reconnue,
                 appréciée et pratiquée correctement. La bonne pratique et donc un haut niveau de formation sont
                 autant d'arguments forts en faveur d'une reconnaissance plus large de la part aussi bien du monde
                 médical que des organismes payeurs.</p>
@@ -55,12 +55,12 @@
                 notamment pour se familiariser avec le type de questions sur l'épreuve pratique et parce qu'il permet
                 de faire des révisons précises des différentes techniques indispensables. Il vous sera également
                 proposé lors de ce we des exemples de questions avec réponse à choix multiples qui vous
-                permettront de vous familiariser avec la méthodologie qu'il faut adopter lors d'épreuve type QCM.</p>
+                permettrons de vous familiariser avec la méthodologie qu'il faut adopter lors d'épreuve type QCM.</p>
 
             <p>Un écueil souvent décrit par les participants malheureux à l'épreuve de certification consiste à
                 penser qu'il n'est pas nécessaire de vraiment approfondir les choses puisque «je pratique tous les
                 jours McKenzie dans mon cabinet et donc je dois arriver sans problèmes à avoir cette épreuve».
-                Un exemple qu'on peut garder en tête pour illustrer cette écueil serait le suivant : « combien de
+                Un exemple qu'on peut garder en tête pour illustrer cette écueil serait le suivant : «combien de
                 conducteur avec 10 ans de conduite sans accrochages auraient leur code du premier coup sans
                 préparation ?» Quelques un certainement mais pas la majorité ! Pour cette épreuve il faut donc
                 rouvrir vos manuels ...</p>
