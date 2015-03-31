@@ -16,7 +16,7 @@
             <ul>
                 <li>professionnel.</li>
                 <li>de haute qualité.</li>
-                <li>reproductible inter-examinateur.</li>
+                <li>reproductible inter-examinateurs.</li>
                 <li>sur lequel de nombreux articles de référence internationaux ont démontré la validité et la pertinence.</li>
             </ul>
         </div>
@@ -60,7 +60,7 @@
             </ul>
 </div>
             <h2>Les séances</h2>
-            <p>Le traitement McKenzie/MDT privilégie les techniques d’auto-traitement. Vous serez ainsi amené à effectuer de façon pluriquotidienne des exercices courts, précis, issus du bilan réalisé préalablement.</p>
+            <p>Le traitement McKenzie/MDT privilégie les techniques d'auto-traitement. Vous serez ainsi amenés à effectuer de façon pluriquotidienne des exercices courts, précis, issus du bilan réalisé préalablement.</p>
             <p>Selon le syndrome que vous présentez, vous aurez à effectuer vos exercices sur une durée allant de quelques jours (syndrome de dérangement) à quelques semaines (syndrome de dysfonction).</p>
             <p>Parfois, en complément des exercices que vous réaliserez quotidiennement, votre praticien pourra effectuer des mobilisations si elles s s’avèrent indispensables à votre progression.</p>
             <p>En aucun cas, lors de cette prise en charge, des techniques de physiothérapie (chaleur, ultra-sons, électrothérapie….) ne sauraient être utilisées.</p>
@@ -72,7 +72,7 @@
             </div>
 
             <h2>Les aides ergonomiques</h2>
-            <p>Dans l'approche McKenzie/MDT, l'utilisation de coussin ergonomique fait souvent partie intégrante du traitement.</p>
+            <p>Dans l'approche McKenzie/MDT, l'utilisation d'un coussin ergonomique fait souvent partie intégrante du traitement.</p>
             <p>En effet, comment concilier traitement au cabinet sans prendre en compte ce que le patient peut imposer à sa colonne au cours de la journée chez lui ou lors de son activité professionnelle?</p>
             <p>Dans cette optique et si le bilan initial révèle une prédisposition du patient à la station assise avachie il peut être particulièrement pertinent de corriger cette attitude au quotidien. </p>
             <p>Tous les moyens que le thérapeute jugera nécessaires peuvent être entrepris pour lutter contre une telle attitude:</p>
@@ -91,8 +91,8 @@
                             <li>éviter les récidives.</li>
                         </ul>
 
-chroaf            <p>Il existe de nombreux modèles de coussins lombaires ou cervicaux. De nombreuses marques proposent ces coussins, aussi bien pour la voiture que pour le bureau. Les prix sont souvent assez élevés (entre 50 et 80 euros) et bien souvent  l'acquéreur ne bénéficie pas de conseils pertinents pour leur utilisation.</p>
-            <p>L'institut McKenzie International a donc établi un cahier des charges particulièrement pointu concernant ces différentes aides ergonomiques. Son savoir-faire en la matière a intéressé de nombreux industriels : de la conception de véhicules de grande marque avec coussins lombaire conducteur réglables jusqu'à des fabricants de sièges ergonomiques de bureau.</p>
+            <p>Il existe de nombreux modèles de coussins lombaires ou cervicaux. De nombreuses marques proposent ces coussins, aussi bien pour la voiture que pour le bureau. Les prix sont souvent assez élevés (entre 50 et 80 euros) et bien souvent  l'acquéreur ne bénéficie pas de conseils pertinents pour leur utilisation.</p>
+            <p>L'institut McKenzie International a donc établi un cahier des charges particulièrement pointu concernant ces différentes aides ergonomiques. Son savoir-faire en la matière a intéressé de nombreux industriels : de la conception de véhicules de grande marque avec coussins lombaires conducteur réglables jusqu'à des fabricants de sièges ergonomiques de bureau.</p>
             <p>Ce savoir faire est accessible à tous au travers d'un maillage international de producteurs de produits ergonomiques adaptés répondant à ces normes.</p>
             <h5>N'oubliez pas que ces aides ergonomiques accessibles en ligne seront surtout efficaces si vous suivez les conseils de votre thérapeute quant à leur utilisation et à leur positionnement !</h5>
 
