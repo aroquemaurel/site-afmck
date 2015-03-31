@@ -15,13 +15,10 @@
         <p>De la même façon notre association accueille les médecins formés . A l'inscription une photocopie d'un document officiel attestant de la qualité de médecin est demandée.</p>
 
         <h2>L'inscription</h2>
-        <p>Les inscriptions de membres se font sur le site, avec votre numéro ADELI, vous choisissez votre mot de passe. Votre inscription sera finalisée après réception du paiement par le trésorier.</p>
-        <p>Après validation du paiement, une facture vous sera envoyée automatiquement par e-mail</p>
-        <div class="bs-callout bs-callout-info">
-            <p><i class="glyphicon glyphicon-pushpin"></i>&nbsp;<a href="<?php echo Visitor::getInstance()->getRootPage()."/inscription.php"?>">Adhérer à l'AFMcK</a></p>
-        </div>
+        <p>Les inscriptions de membres se font par courrier, le login d'accès est donné à réception de la cotisation annuelle de l'année en cours après vérification par le bureau des pièces produites.</p>
+        <p>A réception des documents une facture vous sera adressée accompagnée de votre login.<br />Joindre une adresse mail : votre facture vous sera envoyée en .PDF . Si vous n avez pas de mail merci de le préciser afin que nous puissions vous envoyer une facture papier.</p>
 
-        <h3>Pièces à fournir</h3> <!-- todo relecture -->
+        <h3>Pièces à fournir</h3>
         <div class="bs-callout bs-callout-info">
             <ul>
                 <li>Certificat de formation de l'institut McKenzie de la dernière partie du cours que vous avez suivie</li>
@@ -40,9 +37,18 @@
                         <li>100 euros et plus (membres bienfaiteurs)</li>
                     </ul>
                 </li>
+                </li>
             </ul>
         </div>
         <div class="marge50px"></div>
+
+        <h3>Formulaire d'adhésion</h3>
+        <ul>
+            <?php
+            $folder = "/docs/adhesions";
+            Image::miniTooltipLink($folder, "formulaire adhesion 2013_AFMcK", "Formulaire d'adhésion à l'<b>A</b>ssociation <b>F</b>rançaise <b>McK</b>enzie");
+            ?>
+        </ul>
 
         </div><!-- Fin de .docformation -->
         <p>&nbsp;<br/>&nbsp;</p>
