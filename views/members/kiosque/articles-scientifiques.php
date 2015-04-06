@@ -24,12 +24,10 @@
         <h3>Dernier article traduit</h3>
         <ul>
             <?php
-            Image::miniLink($folder."/traduction", "Edmond 2014_Cervicalgies-Association entre centralisation et preference directionnelle_AFMcK",
-            "Association entre centralisation et préférence directionnelle,
-                résultats fonctionnels et algiques chez des patients cervicalgiques,
-            <small>Susan L. Edmond</small><br/>
-                <small>Journal of Orthopaedic & Sports Physical Therapy
-                Fevrier 2014, VOL. 44 N°2<small>");
+            Image::miniLink($folder."/traduction", "KHAN_2009_Mecanotherapie",
+                "Mécanothérapie : comment la prescription d’exercices des
+                    kinésithérapeutes stimulent-t-elles la réparation tissulaire ?
+            <small>K M Khan, A Scott</small>");
             ?>
         </ul>
 
@@ -58,6 +56,10 @@ Image::thumbnailsPdf($folder.'/traduction', "Sciatique_Exercices Pour Eviter La 
         <h3>Autres articles</h3>
         <ul>
             <?php
+            Image::miniLink($folder."/traduction", "KHAN_2009_Mecanotherapie",
+                "Mécanothérapie : comment la prescription d’exercices des
+                    kinésithérapeutes stimulent-t-elles la réparation tissulaire ?
+            <small>K M Khan, A Scott</small>");
             Image::miniLink($folder."/traduction", "Edmond 2014_Cervicalgies-Association entre centralisation et preference directionnelle_AFMcK",
                 "Association entre centralisation et préférence directionnelle, résultats fonctionnels et algiques chez des patients cervicalgiques.<small>Susan L. Edmond</small><br/>Journal of Orthopaedic & Sports Physical Therapy<br />Vol.44 N°2 Fev 2014 ");
             Image::miniLink($folder."/traduction", "Algorithme decisionnel des derangements d'epaule_AFMcK",
