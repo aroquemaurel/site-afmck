@@ -65,21 +65,21 @@
                 préparation ?» Quelques un certainement mais pas la majorité ! Pour cette épreuve il faut donc
                 rouvrir vos manuels ...</p>
 
-            <p>Disponible en bas de cette page les corrections de tous les « quizz » des manuels A et B . Les
-                corrections des « quizz » des manuel C et D seront bientôt disponibles également.<br/>
+            <p>Disponible en bas de cette page les corrections de tous les « quiz » des manuels A et B . Les
+                corrections des « quiz » des manuel C et D seront bientôt disponibles également.<br/>
                 Ces corrections sont précieuses car elles permettent notamment de se familiariser avec un mode de
                 raisonnement plus anglo-saxon et moins « rédactionnel » comme nous y sommes tous plus ou
                 moins habitués en France.<br/>
                 Une bonne façon de procéder pour évaluer son propre niveau, consiste à rédiger directement sur les
-                manuels A et B les réponses aux questions « quizz » puis dans une second temps à vérifier la
+                manuels A et B les réponses aux questions « quiz » puis dans une second temps à vérifier la
                 pertinence de ces réponses avec la correction. Cette démarche peut paraître évidente mais si on lit
                 les questions puis les réponses dans la foulée tout semble toujours très simple....</p>
 
             <ul>
                 <?php
-                $folder = "/docs/members/certification";
-                Image::miniTooltipLink($folder, "Correction Quizz Manuel Partie A_AFMcK", "Correction Quizz Manuel Partie A");
-                Image::miniTooltipLink($folder, "Correction Quizz Manuel Partie B_AFMcK", "Correction Quizz Manuel Partie B");
+                $folder = "docs/members/certification";
+                Image::miniTooltipLink($folder, "Correction Quizz Manuel Partie A_AFMcK", "Correction quiz Manuel Partie A");
+                Image::miniTooltipLink($folder, "Correction Quizz Manuel Partie B_AFMcK", "Correction quiz Manuel Partie B");
                 ?>
             </ul>
 
