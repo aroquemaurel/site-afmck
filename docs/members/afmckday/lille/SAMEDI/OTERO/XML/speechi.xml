@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>5-OTERO - CAS CLINIQUE LOMBAIRE LILLE 2015.ppt</PPTNAME>
+  <GENERATED>09/02/2015 13:44:48</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>11313973</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME></PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr/</LINK>
+  <SPEAKER></SPEAKER>
+  <SPEAKER_EMAIL></SPEAKER_EMAIL>
+  <TITLE>Prise en charge m.d.t.d’un patient lombalgique</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>1403</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="1">
+   <NUM pptslide="1">1</NUM>
+   <ID>256</ID>
+   <JPGFILE>slides/slide256.swf</JPGFILE>
+   <TITLE default="1">Prise en charge m.d.t. d’un  patient lombalgique</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="852" end_time="143764" duration="142912">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide256.txt</TEXTFILE>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="0">
+   <NUM pptslide="1">2</NUM>
+   <ID>257</ID>
+   <JPGFILE>slides/slide257.swf</JPGFILE>
+   <TITLE default="0">Patient lombalgique aigu très atypique</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="143764" end_time="145811" duration="2047">sounds/conference2.mp3</MP3>
+   <TEXTFILE>slides/slide257.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">143,94</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="0">
+   <NUM pptslide="1">3</NUM>
+   <ID>256</ID>
+   <JPGFILE>slides/slide256.swf</JPGFILE>
+   <TITLE default="1">Prise en charge m.d.t. d’un  patient lombalgique</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="145811" end_time="147398" duration="1587">sounds/conference3.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">146,047</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">4</NUM>
+   <ID>257</ID>
+   <JPGFILE>slides/slide257.swf</JPGFILE>
+   <TITLE default="0">Patient lombalgique aigu très atypique</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="147398" end_time="182087" duration="34689">sounds/conference4.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">147,639</ENTRY>
+    <ENTRY TIMER="9503" ACTION="next">157,142</ENTRY>
+    <ENTRY TIMER="20542" ACTION="next">168,181</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">5</NUM>
+   <ID>258</ID>
+   <JPGFILE>slides/slide258.swf</JPGFILE>
+   <TITLE default="0">Formulaire d'évaluation</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="182087" end_time="227182" duration="45095">sounds/conference5.mp3</MP3>
+   <TEXTFILE>slides/slide258.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">182,417</ENTRY>
+    <ENTRY TIMER="2438" ACTION="next">184,855</ENTRY>
+    <ENTRY TIMER="3907" ACTION="next">186,324</ENTRY>
+    <ENTRY TIMER="5254" ACTION="next">187,671</ENTRY>
+    <ENTRY TIMER="23610" ACTION="next">206,027</ENTRY>
+    <ENTRY TIMER="37203" ACTION="next">219,62</ENTRY>
+    <ENTRY TIMER="38953" ACTION="next">221,37</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>259</ID>
+   <JPGFILE>slides/slide259.swf</JPGFILE>
+   <TITLE default="0">Interrogatoire</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="227182" end_time="340292" duration="113110">sounds/conference6.mp3</MP3>
+   <TEXTFILE>slides/slide259.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">227,628</ENTRY>
+    <ENTRY TIMER="13147" ACTION="next">240,775</ENTRY>
+    <ENTRY TIMER="14442" ACTION="next">242,07</ENTRY>
+    <ENTRY TIMER="28467" ACTION="next">256,095</ENTRY>
+    <ENTRY TIMER="71999" ACTION="next">299,627</ENTRY>
+    <ENTRY TIMER="84713" ACTION="next">312,341</ENTRY>
+    <ENTRY TIMER="107154" ACTION="next">334,782</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>260</ID>
+   <JPGFILE>slides/slide260.swf</JPGFILE>
+   <TITLE default="0">Conclusion intermédiaire :  problème mécanique classique Syndrome de dérangement M.D.T. avec Préférence Directionnelle en extension ?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="340292" end_time="383350" duration="43058">sounds/conference7.mp3</MP3>
+   <TEXTFILE>slides/slide260.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">340,673</ENTRY>
+    <ENTRY TIMER="17392" ACTION="next">358,065</ENTRY>
+    <ENTRY TIMER="25357" ACTION="next">366,03</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">8</NUM>
+   <ID>270</ID>
+   <JPGFILE>slides/slide270.swf</JPGFILE>
+   <TITLE default="0">Extension en procubitus (EEP)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="383350" end_time="399562" duration="16212">sounds/conference8.mp3</MP3>
+   <TEXTFILE>slides/slide270.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">383,858</ENTRY>
+    <ENTRY TIMER="7945" ACTION="next">391,803</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>261</ID>
+   <JPGFILE>slides/slide261.swf</JPGFILE>
+   <TITLE default="0">Examen  m.d.t.</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="399562" end_time="402186" duration="2624">sounds/conference9.mp3</MP3>
+   <TEXTFILE>slides/slide261.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">400,121</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>262</ID>
+   <JPGFILE>slides/slide262.swf</JPGFILE>
+   <TITLE default="0">Examen</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="402186" end_time="503426" duration="101240">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide262.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">402,759</ENTRY>
+    <ENTRY TIMER="25490" ACTION="next">428,249</ENTRY>
+    <ENTRY TIMER="36241" ACTION="next">439</ENTRY>
+    <ENTRY TIMER="39958" ACTION="next">442,717</ENTRY>
+    <ENTRY TIMER="97512" ACTION="next">500,271</ENTRY>
+    <ENTRY TIMER="98272" ACTION="next">501,031</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">11</NUM>
+   <ID>263</ID>
+   <JPGFILE>slides/slide263.swf</JPGFILE>
+   <TITLE default="0">Mouvt  Tests</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="503426" end_time="641845" duration="138419">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide263.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">504,055</ENTRY>
+    <ENTRY TIMER="5713" ACTION="next">509,768</ENTRY>
+    <ENTRY TIMER="40840" ACTION="next">544,895</ENTRY>
+    <ENTRY TIMER="73616" ACTION="next">577,671</ENTRY>
+    <ENTRY TIMER="105798" ACTION="next">609,853</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">12</NUM>
+   <ID>264</ID>
+   <JPGFILE>slides/slide264.swf</JPGFILE>
+   <TITLE default="0">Conclusion provisoire : la préférence directionnelle a changé ?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="641845" end_time="681807" duration="39962">sounds/conference12.mp3</MP3>
+   <TEXTFILE>slides/slide264.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">642,54</ENTRY>
+    <ENTRY TIMER="2167" ACTION="next">644,707</ENTRY>
+    <ENTRY TIMER="6288" ACTION="next">648,828</ENTRY>
+    <ENTRY TIMER="22651" ACTION="next">665,191</ENTRY>
+    <ENTRY TIMER="23716" ACTION="next">666,256</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>271</ID>
+   <JPGFILE>slides/slide271.swf</JPGFILE>
+   <TITLE default="1">Rotation gauche en décubitus</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="681807" end_time="694815" duration="13008">sounds/conference13.mp3</MP3>
+   <TEXTFILE>slides/slide271.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">682,57</ENTRY>
+    <ENTRY TIMER="4241" ACTION="next">686,811</ENTRY>
+    <ENTRY TIMER="6022" ACTION="next">688,592</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>265</ID>
+   <JPGFILE>slides/slide265.swf</JPGFILE>
+   <TITLE default="0">Seance 2</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="694815" end_time="832807" duration="137992">sounds/conference14.mp3</MP3>
+   <TEXTFILE>slides/slide265.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">695,687</ENTRY>
+    <ENTRY TIMER="6268" ACTION="next">701,955</ENTRY>
+    <ENTRY TIMER="27564" ACTION="next">723,251</ENTRY>
+    <ENTRY TIMER="56721" ACTION="next">752,408</ENTRY>
+    <ENTRY TIMER="63603" ACTION="next">759,29</ENTRY>
+    <ENTRY TIMER="77482" ACTION="next">773,169</ENTRY>
+    <ENTRY TIMER="79995" ACTION="next">775,682</ENTRY>
+    <ENTRY TIMER="82072" ACTION="next">777,759</ENTRY>
+    <ENTRY TIMER="90232" ACTION="next">785,919</ENTRY>
+    <ENTRY TIMER="90691" ACTION="next">786,3781</ENTRY>
+    <ENTRY TIMER="91091" ACTION="next">786,778</ENTRY>
+    <ENTRY TIMER="91502" ACTION="next">787,189</ENTRY>
+    <ENTRY TIMER="91896" ACTION="next">787,583</ENTRY>
+    <ENTRY TIMER="92286" ACTION="next">787,973</ENTRY>
+    <ENTRY TIMER="92686" ACTION="next">788,373</ENTRY>
+    <ENTRY TIMER="93211" ACTION="next">788,898</ENTRY>
+    <ENTRY TIMER="120941" ACTION="next">816,6281</ENTRY>
+    <ENTRY TIMER="128435" ACTION="next">824,122</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>266</ID>
+   <JPGFILE>slides/slide266.swf</JPGFILE>
+   <TITLE default="0">Seance 6</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="832807" end_time="934251" duration="101444">sounds/conference15.mp3</MP3>
+   <TEXTFILE>slides/slide266.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">833,685</ENTRY>
+    <ENTRY TIMER="19968" ACTION="next">853,653</ENTRY>
+    <ENTRY TIMER="21220" ACTION="next">854,905</ENTRY>
+    <ENTRY TIMER="32768" ACTION="next">866,453</ENTRY>
+    <ENTRY TIMER="34615" ACTION="next">868,3</ENTRY>
+    <ENTRY TIMER="35796" ACTION="next">869,481</ENTRY>
+    <ENTRY TIMER="36769" ACTION="next">870,454</ENTRY>
+    <ENTRY TIMER="39793" ACTION="next">873,478</ENTRY>
+    <ENTRY TIMER="40614" ACTION="next">874,299</ENTRY>
+    <ENTRY TIMER="41182" ACTION="next">874,867</ENTRY>
+    <ENTRY TIMER="42002" ACTION="next">875,687</ENTRY>
+    <ENTRY TIMER="44720" ACTION="next">878,405</ENTRY>
+    <ENTRY TIMER="45224" ACTION="next">878,909</ENTRY>
+    <ENTRY TIMER="57428" ACTION="next">891,113</ENTRY>
+    <ENTRY TIMER="58385" ACTION="next">892,07</ENTRY>
+    <ENTRY TIMER="59673" ACTION="next">893,358</ENTRY>
+    <ENTRY TIMER="60878" ACTION="next">894,563</ENTRY>
+    <ENTRY TIMER="61427" ACTION="next">895,112</ENTRY>
+    <ENTRY TIMER="61935" ACTION="next">895,62</ENTRY>
+    <ENTRY TIMER="62482" ACTION="next">896,1671</ENTRY>
+    <ENTRY TIMER="92128" ACTION="next">925,813</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>267</ID>
+   <JPGFILE>slides/slide267.swf</JPGFILE>
+   <TITLE default="0">Seance 7</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="934251" end_time="1050293" duration="116042">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide267.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">935,178</ENTRY>
+    <ENTRY TIMER="1103" ACTION="next">936,281</ENTRY>
+    <ENTRY TIMER="3566" ACTION="next">938,744</ENTRY>
+    <ENTRY TIMER="8627" ACTION="next">943,8051</ENTRY>
+    <ENTRY TIMER="21092" ACTION="next">956,27</ENTRY>
+    <ENTRY TIMER="23362" ACTION="next">958,54</ENTRY>
+    <ENTRY TIMER="24211" ACTION="next">959,389</ENTRY>
+    <ENTRY TIMER="24922" ACTION="next">960,1</ENTRY>
+    <ENTRY TIMER="25867" ACTION="next">961,045</ENTRY>
+    <ENTRY TIMER="26750" ACTION="next">961,928</ENTRY>
+    <ENTRY TIMER="26771" ACTION="next">961,949</ENTRY>
+    <ENTRY TIMER="28068" ACTION="next">963,246</ENTRY>
+    <ENTRY TIMER="28965" ACTION="next">964,143</ENTRY>
+    <ENTRY TIMER="67389" ACTION="next">1002,567</ENTRY>
+    <ENTRY TIMER="68769" ACTION="next">1003,947</ENTRY>
+    <ENTRY TIMER="69645" ACTION="next">1004,823</ENTRY>
+    <ENTRY TIMER="70138" ACTION="next">1005,316</ENTRY>
+    <ENTRY TIMER="70641" ACTION="next">1005,819</ENTRY>
+    <ENTRY TIMER="71714" ACTION="next">1006,892</ENTRY>
+    <ENTRY TIMER="111570" ACTION="next">1046,748</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>268</ID>
+   <JPGFILE>slides/slide268.swf</JPGFILE>
+   <TITLE default="0">Seance 8</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1050293" end_time="1114048" duration="63755">sounds/conference17.mp3</MP3>
+   <TEXTFILE>slides/slide268.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1051,086</ENTRY>
+    <ENTRY TIMER="9384" ACTION="next">1060,47</ENTRY>
+    <ENTRY TIMER="10399" ACTION="next">1061,485</ENTRY>
+    <ENTRY TIMER="11945" ACTION="next">1063,031</ENTRY>
+    <ENTRY TIMER="12339" ACTION="next">1063,425</ENTRY>
+    <ENTRY TIMER="12686" ACTION="next">1063,772</ENTRY>
+    <ENTRY TIMER="28272" ACTION="next">1079,358</ENTRY>
+    <ENTRY TIMER="28894" ACTION="next">1079,98</ENTRY>
+    <ENTRY TIMER="29552" ACTION="next">1080,638</ENTRY>
+    <ENTRY TIMER="30187" ACTION="next">1081,273</ENTRY>
+    <ENTRY TIMER="30712" ACTION="next">1081,798</ENTRY>
+    <ENTRY TIMER="31446" ACTION="next">1082,532</ENTRY>
+    <ENTRY TIMER="32155" ACTION="next">1083,241</ENTRY>
+    <ENTRY TIMER="32771" ACTION="next">1083,857</ENTRY>
+    <ENTRY TIMER="40860" ACTION="next">1091,946</ENTRY>
+    <ENTRY TIMER="41243" ACTION="next">1092,329</ENTRY>
+    <ENTRY TIMER="41499" ACTION="next">1092,585</ENTRY>
+    <ENTRY TIMER="41696" ACTION="next">1092,782</ENTRY>
+    <ENTRY TIMER="42181" ACTION="next">1093,267</ENTRY>
+    <ENTRY TIMER="41917" ACTION="next">1093,003</ENTRY>
+    <ENTRY TIMER="41956" ACTION="next">1093,042</ENTRY>
+    <ENTRY TIMER="41980" ACTION="next">1093,066</ENTRY>
+    <ENTRY TIMER="42496" ACTION="next">1093,582</ENTRY>
+    <ENTRY TIMER="42658" ACTION="next">1093,744</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>269</ID>
+   <JPGFILE>slides/slide269.swf</JPGFILE>
+   <TITLE default="0">Seance 9</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1114048" end_time="1134014" duration="19966">sounds/conference18.mp3</MP3>
+   <TEXTFILE>slides/slide269.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1115,044</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1114,756</ENTRY>
+    <ENTRY TIMER="227" ACTION="next">1115,271</ENTRY>
+    <ENTRY TIMER="2713" ACTION="next">1117,757</ENTRY>
+    <ENTRY TIMER="3644" ACTION="next">1118,688</ENTRY>
+    <ENTRY TIMER="4291" ACTION="next">1119,335</ENTRY>
+    <ENTRY TIMER="5805" ACTION="next">1120,849</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">19</NUM>
+   <ID>274</ID>
+   <JPGFILE>slides/slide274.swf</JPGFILE>
+   <TITLE default="1">RÉSUMÉ</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1134014" end_time="1170375" duration="36361">sounds/conference19.mp3</MP3>
+   <TEXTFILE>slides/slide274.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1135,013</ENTRY>
+    <ENTRY TIMER="7884" ACTION="next">1142,897</ENTRY>
+    <ENTRY TIMER="15536" ACTION="next">1150,549</ENTRY>
+    <ENTRY TIMER="25452" ACTION="next">1160,465</ENTRY>
+    <ENTRY TIMER="26779" ACTION="next">1161,792</ENTRY>
+    <ENTRY TIMER="31729" ACTION="next">1166,742</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">20</NUM>
+   <ID>272</ID>
+   <JPGFILE>slides/slide272.swf</JPGFILE>
+   <TITLE default="1">Conclusion :  pas à pas on arrive au résultat</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1170375" end_time="1251947" duration="81572">sounds/conference20.mp3</MP3>
+   <TEXTFILE>slides/slide272.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1171,362</ENTRY>
+    <ENTRY TIMER="9536" ACTION="next">1180,898</ENTRY>
+    <ENTRY TIMER="15314" ACTION="next">1186,676</ENTRY>
+    <ENTRY TIMER="46255" ACTION="next">1217,617</ENTRY>
+    <ENTRY TIMER="56103" ACTION="next">1227,465</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">21</NUM>
+   <ID>273</ID>
+   <JPGFILE>slides/slide273.swf</JPGFILE>
+   <TITLE default="1">Merci de votre attention</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1251947" end_time="1407177" duration="155230">sounds/conference21.mp3</MP3>
+   <TEXTFILE>slides/slide273.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1253,015</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>

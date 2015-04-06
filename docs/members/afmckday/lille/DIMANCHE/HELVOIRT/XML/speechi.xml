@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>CP en stab testen , lille.ppt</PPTNAME>
+  <GENERATED>09/02/2015 13:08:56</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>11468319</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME>C:\Users\Congres\Desktop\helvoirt.jpg</PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr/</LINK>
+  <SPEAKER>Hans VAN HELVOIRT</SPEAKER>
+  <SPEAKER_EMAIL></SPEAKER_EMAIL>
+  <TITLE>The influence of centralization on stability tests in patients with low back pain.</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>2608</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="1">
+   <NUM pptslide="1">1</NUM>
+   <ID>256</ID>
+   <JPGFILE>slides/slide256.swf</JPGFILE>
+   <TITLE default="0">Introduction</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="590" end_time="62454" duration="61864">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide256.txt</TEXTFILE>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">2</NUM>
+   <ID>257</ID>
+   <JPGFILE>slides/slide257.swf</JPGFILE>
+   <TITLE default="0">How do we match the right treatment to the right  patient</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="62454" end_time="91313" duration="28859">sounds/conference2.mp3</MP3>
+   <TEXTFILE>slides/slide257.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">62,654</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">3</NUM>
+   <ID>258</ID>
+   <JPGFILE>slides/slide258.swf</JPGFILE>
+   <TITLE default="0">photo</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="91313" end_time="225023" duration="133710">sounds/conference3.mp3</MP3>
+   <TEXTFILE>slides/slide258.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">91,548</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">4</NUM>
+   <ID>259</ID>
+   <JPGFILE>slides/slide259.swf</JPGFILE>
+   <TITLE default="0">An  update of  stabilisation exercice for LBP</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="225023" end_time="294280" duration="69257">sounds/conference4.mp3</MP3>
+   <TEXTFILE>slides/slide259.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">225,294</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">5</NUM>
+   <ID>260</ID>
+   <JPGFILE>slides/slide260.swf</JPGFILE>
+   <TITLE default="0">Cardinal  Features of MDTT</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="294280" end_time="297396" duration="3116">sounds/conference5.mp3</MP3>
+   <TEXTFILE>slides/slide260.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">294,592</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>259</ID>
+   <JPGFILE>slides/slide259.swf</JPGFILE>
+   <TITLE default="0">An  update of  stabilisation exercice for LBP</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="297396" end_time="307739" duration="10343">sounds/conference6.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">297,786</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>260</ID>
+   <JPGFILE>slides/slide260.swf</JPGFILE>
+   <TITLE default="0">Cardinal  Features of MDTT</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="307739" end_time="343049" duration="35310">sounds/conference7.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">308,131</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">8</NUM>
+   <ID>261</ID>
+   <JPGFILE>slides/slide261.swf</JPGFILE>
+   <TITLE default="0">Schema</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="343049" end_time="369383" duration="26334">sounds/conference8.mp3</MP3>
+   <TEXTFILE>slides/slide261.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">343,468</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>262</ID>
+   <JPGFILE>slides/slide262.swf</JPGFILE>
+   <TITLE default="0">Schema</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="369383" end_time="387049" duration="17666">sounds/conference9.mp3</MP3>
+   <TEXTFILE>slides/slide262.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">369,871</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>263</ID>
+   <JPGFILE>slides/slide263.swf</JPGFILE>
+   <TITLE default="0">Derangemennt</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="387049" end_time="541439" duration="154390">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide263.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">387,529</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">11</NUM>
+   <ID>264</ID>
+   <JPGFILE>slides/slide264.swf</JPGFILE>
+   <TITLE default="0">Analysis loading strategies/directional preference</TITLE>
+   <COMMENTS default="1">EVENTUEL EEN ANDER WOORDGEBRUIK: BEWEGINGSVOORKEUR?</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="541439" end_time="545636" duration="4197">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide264.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">542,058</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="0">
+   <NUM pptslide="1">12</NUM>
+   <ID>265</ID>
+   <JPGFILE>slides/slide265.swf</JPGFILE>
+   <TITLE default="0">Video</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="545636" end_time="547898" duration="2262">sounds/conference12.mp3</MP3>
+   <TEXTFILE>slides/slide265.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">546,238</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>266</ID>
+   <JPGFILE>slides/slide266.swf</JPGFILE>
+   <TITLE default="0">Mc Kenzie Derangment "reflexes"</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="547898" end_time="552109" duration="4211">sounds/conference13.mp3</MP3>
+   <TEXTFILE>slides/slide266.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">548,639</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>265</ID>
+   <JPGFILE>slides/slide265.swf</JPGFILE>
+   <TITLE default="0">An extreme exemple</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="552109" end_time="634862" duration="82753">sounds/conference14.mp3</MP3>
+   <TEXTFILE>slides/slide265.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">552,749</ENTRY>
+   </TIMELINE>
+   <VIDEO file="Kopie van hans floppy.mp4" flv="1" xMin="0" xMax="1280" yMin="0" yMax="720" framerate="0" bgcolor="0" automatic="1" playwithsound="-1" timetoplay="5" playtotaly="1">resources\v14.mp4</VIDEO>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>266</ID>
+   <JPGFILE>slides/slide266.swf</JPGFILE>
+   <TITLE default="0">Mc Kenzie Derangment "reflexes"</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="634862" end_time="651180" duration="16318">sounds/conference15.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">635,621</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>267</ID>
+   <JPGFILE>slides/slide267.swf</JPGFILE>
+   <TITLE default="0">Study</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="651180" end_time="767639" duration="116459">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide267.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">652,002</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>266</ID>
+   <JPGFILE>slides/slide266.swf</JPGFILE>
+   <TITLE default="0">Mc Kenzie Derangment "reflexes"</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="767639" end_time="770258" duration="2619">sounds/conference17.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">768,429</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>265</ID>
+   <JPGFILE>slides/slide265.swf</JPGFILE>
+   <TITLE default="0">An extreme exemple</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="770258" end_time="1205951" duration="435693">sounds/conference18.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">771,152</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">19</NUM>
+   <ID>266</ID>
+   <JPGFILE>slides/slide266.swf</JPGFILE>
+   <TITLE default="0">Mc Kenzie Derangment "reflexes"</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1205951" end_time="1208379" duration="2428">sounds/conference19.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1206,847</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">20</NUM>
+   <ID>267</ID>
+   <JPGFILE>slides/slide267.swf</JPGFILE>
+   <TITLE default="0">Study</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1208379" end_time="1211921" duration="3542">sounds/conference20.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1209,36</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">21</NUM>
+   <ID>268</ID>
+   <JPGFILE>slides/slide268.swf</JPGFILE>
+   <TITLE default="0">Directional preference for extension without centralization</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1211921" end_time="1217367" duration="5446">sounds/conference21.mp3</MP3>
+   <TEXTFILE>slides/slide268.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1213,031</ENTRY>
+    <ENTRY TIMER="45" ACTION="next">1213,076</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">22</NUM>
+   <ID>267</ID>
+   <JPGFILE>slides/slide267.swf</JPGFILE>
+   <TITLE default="0">Study</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1217367" end_time="1302195" duration="84828">sounds/conference22.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1218,416</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">23</NUM>
+   <ID>268</ID>
+   <JPGFILE>slides/slide268.swf</JPGFILE>
+   <TITLE default="0">Directional preference for extension without centralization</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1302195" end_time="1335827" duration="33632">sounds/conference23.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1303,321</ENTRY>
+    <ENTRY TIMER="5386" ACTION="next">1308,707</ENTRY>
+    <ENTRY TIMER="5672" ACTION="next">1308,993</ENTRY>
+    <ENTRY TIMER="3934" ACTION="next">1307,255</ENTRY>
+    <ENTRY TIMER="4376" ACTION="next">1307,697</ENTRY>
+    <ENTRY TIMER="4602" ACTION="next">1307,923</ENTRY>
+    <ENTRY TIMER="4807" ACTION="next">1308,128</ENTRY>
+    <ENTRY TIMER="5062" ACTION="next">1308,383</ENTRY>
+    <ENTRY TIMER="7255" ACTION="next">1310,576</ENTRY>
+    <ENTRY TIMER="7275" ACTION="next">1310,596</ENTRY>
+    <ENTRY TIMER="21422" ACTION="next">1324,743</ENTRY>
+    <ENTRY TIMER="24968" ACTION="next">1328,289</ENTRY>
+    <ENTRY TIMER="24447" ACTION="next">1327,768</ENTRY>
+    <ENTRY TIMER="25203" ACTION="next">1328,524</ENTRY>
+    <ENTRY TIMER="26180" ACTION="next">1329,501</ENTRY>
+    <ENTRY TIMER="26139" ACTION="next">1329,46</ENTRY>
+    <ENTRY TIMER="27144" ACTION="next">1330,465</ENTRY>
+    <ENTRY TIMER="29466" ACTION="next">1332,787</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">24</NUM>
+   <ID>269</ID>
+   <JPGFILE>slides/slide269.swf</JPGFILE>
+   <TITLE default="0">Directional preference for extension without centralization</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1335827" end_time="1390792" duration="54965">sounds/conference24.mp3</MP3>
+   <TEXTFILE>slides/slide269.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1337,052</ENTRY>
+    <ENTRY TIMER="174" ACTION="next">1337,226</ENTRY>
+    <ENTRY TIMER="1484" ACTION="next">1338,536</ENTRY>
+    <ENTRY TIMER="14727" ACTION="next">1351,779</ENTRY>
+    <ENTRY TIMER="18486" ACTION="next">1355,538</ENTRY>
+    <ENTRY TIMER="19110" ACTION="next">1356,162</ENTRY>
+    <ENTRY TIMER="19654" ACTION="next">1356,706</ENTRY>
+    <ENTRY TIMER="20098" ACTION="next">1357,15</ENTRY>
+    <ENTRY TIMER="21321" ACTION="next">1358,373</ENTRY>
+    <ENTRY TIMER="22188" ACTION="next">1359,24</ENTRY>
+    <ENTRY TIMER="23998" ACTION="next">1361,05</ENTRY>
+    <ENTRY TIMER="24805" ACTION="next">1361,857</ENTRY>
+    <ENTRY TIMER="29520" ACTION="next">1366,572</ENTRY>
+    <ENTRY TIMER="30091" ACTION="next">1367,143</ENTRY>
+    <ENTRY TIMER="30668" ACTION="next">1367,72</ENTRY>
+    <ENTRY TIMER="31303" ACTION="next">1368,355</ENTRY>
+    <ENTRY TIMER="31944" ACTION="next">1368,996</ENTRY>
+    <ENTRY TIMER="32452" ACTION="next">1369,504</ENTRY>
+    <ENTRY TIMER="33928" ACTION="next">1370,98</ENTRY>
+    <ENTRY TIMER="45354" ACTION="next">1382,406</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">25</NUM>
+   <ID>270</ID>
+   <JPGFILE>slides/slide270.swf</JPGFILE>
+   <TITLE default="0">For many patients centralisation mea</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1390792" end_time="1406458" duration="15666">sounds/conference25.mp3</MP3>
+   <TEXTFILE>slides/slide270.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1392,029</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">26</NUM>
+   <ID>271</ID>
+   <JPGFILE>slides/slide271.swf</JPGFILE>
+   <TITLE default="0">Protocol</TITLE>
+   <COMMENTS default="1">The patient lies prone on the examination table, with the legs over the edge of the table and the feet resting on the floor. While the patient rests in this position, the examiner applies a postero-anterior pressure on the lumbar spine to identify a painful segment as previously described. Any provocation of pain is reported. The patient then lifts the legs off the floor to a height of 10-20cm with straight knees, while holding the table to maintain position. In this position, passive intervertebral motion testing is applied again to the segments that were identified as painful. The test is positive if pain is present in the first position but subsides in the second position</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1406458" end_time="1568747" duration="162289">sounds/conference26.mp3</MP3>
+   <TEXTFILE>slides/slide271.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1407,777</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">27</NUM>
+   <ID>272</ID>
+   <JPGFILE>slides/slide272.swf</JPGFILE>
+   <TITLE default="0">Video</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1568747" end_time="1694170" duration="125423">sounds/conference27.mp3</MP3>
+   <TEXTFILE>slides/slide272.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1570,143</ENTRY>
+   </TIMELINE>
+   <VIDEO file="1 stabiliteitstesten.mp4" flv="1" xMin="0" xMax="720" yMin="0" yMax="576" framerate="0" bgcolor="0" automatic="1" playwithsound="-1" timetoplay="5" playtotaly="1">resources\v27.mp4</VIDEO>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">28</NUM>
+   <ID>273</ID>
+   <JPGFILE>slides/slide273.swf</JPGFILE>
+   <TITLE default="0">Aberrant  Movement</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1694170" end_time="1803011" duration="108841">sounds/conference28.mp3</MP3>
+   <TEXTFILE>slides/slide273.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1695,644</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">29</NUM>
+   <ID>274</ID>
+   <JPGFILE>slides/slide274.swf</JPGFILE>
+   <TITLE default="0">Active Straight leg raise</TITLE>
+   <COMMENTS default="1">The patient lift the leg around 20 cm and scores the subjective weakness.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1803011" end_time="1918105" duration="115094">sounds/conference29.mp3</MP3>
+   <TEXTFILE>slides/slide274.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1804,437</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">30</NUM>
+   <ID>275</ID>
+   <JPGFILE>slides/slide275.swf</JPGFILE>
+   <TITLE default="0">Pre  Assessment</TITLE>
+   <COMMENTS default="1">Localization of pain was pointed out by the patient on a drawing</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1918105" end_time="1922524" duration="4419">sounds/conference30.mp3</MP3>
+   <TEXTFILE>slides/slide275.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1919,559</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">31</NUM>
+   <ID>274</ID>
+   <JPGFILE>slides/slide274.swf</JPGFILE>
+   <TITLE default="0">Active Straight leg raise</TITLE>
+   <COMMENTS default="1">The patient lift the leg around 20 cm and scores the subjective weakness.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1922524" end_time="1928242" duration="5718">sounds/conference31.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1924,035</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">32</NUM>
+   <ID>275</ID>
+   <JPGFILE>slides/slide275.swf</JPGFILE>
+   <TITLE default="0">Pre  Assessment</TITLE>
+   <COMMENTS default="1">Localization of pain was pointed out by the patient on a drawing</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1928242" end_time="2002470" duration="74228">sounds/conference32.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1929,899</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">33</NUM>
+   <ID>276</ID>
+   <JPGFILE>slides/slide276.swf</JPGFILE>
+   <TITLE default="0">Baseline characteristics</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2002470" end_time="2016479" duration="14009">sounds/conference33.mp3</MP3>
+   <TEXTFILE>slides/slide276.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2004,041</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">34</NUM>
+   <ID>277</ID>
+   <JPGFILE>slides/slide277.swf</JPGFILE>
+   <TITLE default="0">Prevalence  control tests pre-assesment</TITLE>
+   <COMMENTS default="1">Subjective weakness</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2016479" end_time="2046264" duration="29785">sounds/conference34.mp3</MP3>
+   <TEXTFILE>slides/slide277.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2018,254</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">35</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="0">MDT assessment</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2046264" end_time="2091783" duration="45519">sounds/conference35.mp3</MP3>
+   <TEXTFILE>slides/slide278.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2048,124</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">36</NUM>
+   <ID>277</ID>
+   <JPGFILE>slides/slide277.swf</JPGFILE>
+   <TITLE default="0">Prevalence  control tests pre-assesment</TITLE>
+   <COMMENTS default="1">Subjective weakness</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2091783" end_time="2095532" duration="3749">sounds/conference36.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2093,646</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">37</NUM>
+   <ID>276</ID>
+   <JPGFILE>slides/slide276.swf</JPGFILE>
+   <TITLE default="0">Baseline Characteristics</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2095532" end_time="2099521" duration="3989">sounds/conference37.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2097,423</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">38</NUM>
+   <ID>277</ID>
+   <JPGFILE>slides/slide277.swf</JPGFILE>
+   <TITLE default="0">Prevalence  control tests pre-assesment</TITLE>
+   <COMMENTS default="1">Subjective weakness</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2099521" end_time="2103726" duration="4205">sounds/conference38.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2101,493</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">39</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="0">MDT Assessments</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2103726" end_time="2124478" duration="20752">sounds/conference39.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2105,836</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">40</NUM>
+   <ID>279</ID>
+   <JPGFILE>slides/slide279.swf</JPGFILE>
+   <TITLE default="0">Difference between the 3 groups</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2124478" end_time="2128771" duration="4293">sounds/conference40.mp3</MP3>
+   <TEXTFILE>slides/slide279.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2126,544</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">41</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="0">MDT assessments</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2128771" end_time="2143958" duration="15187">sounds/conference41.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2130,971</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">42</NUM>
+   <ID>279</ID>
+   <JPGFILE>slides/slide279.swf</JPGFILE>
+   <TITLE default="0">Difference between the 3 groups</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2143958" end_time="2387920" duration="243962">sounds/conference42.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2146,251</ENTRY>
+    <ENTRY TIMER="44541" ACTION="next">2190,792</ENTRY>
+    <ENTRY TIMER="128599" ACTION="next">2274,85</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">43</NUM>
+   <ID>280</ID>
+   <JPGFILE>slides/slide280.swf</JPGFILE>
+   <TITLE default="0">Difference between the 3 groups (pre test negative)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2387920" end_time="2523005" duration="135085">sounds/conference43.mp3</MP3>
+   <TEXTFILE>slides/slide280.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2390,268</ENTRY>
+    <ENTRY TIMER="55216" ACTION="next">2445,484</ENTRY>
+    <ENTRY TIMER="120136" ACTION="next">2510,404</ENTRY>
+    <ENTRY TIMER="129630" ACTION="next">2519,898</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">44</NUM>
+   <ID>281</ID>
+   <JPGFILE>slides/slide281.swf</JPGFILE>
+   <TITLE default="0">Severity of pain</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2523005" end_time="2530420" duration="7415">sounds/conference44.mp3</MP3>
+   <TEXTFILE>slides/slide281.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2525,357</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">45</NUM>
+   <ID>282</ID>
+   <JPGFILE>slides/slide282.swf</JPGFILE>
+   <TITLE default="0">Conclusions</TITLE>
+   <COMMENTS default="1">Centralization is a clinically more important sign </COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2530420" end_time="2588951" duration="58531">sounds/conference45.mp3</MP3>
+   <TEXTFILE>slides/slide282.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2532,819</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">46</NUM>
+   <ID>283</ID>
+   <JPGFILE>slides/slide283.swf</JPGFILE>
+   <TITLE default="0">Take Home Message</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2588951" end_time="2603669" duration="14718">sounds/conference46.mp3</MP3>
+   <TEXTFILE>slides/slide283.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2591,468</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">47</NUM>
+   <ID>284</ID>
+   <JPGFILE>slides/slide284.swf</JPGFILE>
+   <TITLE default="0">People who did the Work</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2603669" end_time="2610431" duration="6762">sounds/conference47.mp3</MP3>
+   <TEXTFILE>slides/slide284.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2606,226</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>

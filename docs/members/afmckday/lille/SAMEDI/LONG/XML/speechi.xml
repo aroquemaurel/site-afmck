@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>9-France 2 Define Chronicity.ppt</PPTNAME>
+  <GENERATED>09/02/2015 14:33:54</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>10705391</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME>C:\Users\Congres\Desktop\LONG.jpg</PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr</LINK>
+  <SPEAKER>Audrey LONG</SPEAKER>
+  <SPEAKER_EMAIL></SPEAKER_EMAIL>
+  <TITLE>Le concept de "Preference Directionelle" peut-il redefinir la notion de chronicite?</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>3899</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="0">
+   <NUM pptslide="1">1</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="0">Introduction</TITLE>
+   <COMMENTS default="1">I’d first like to acknowledge Audrey Long, whose vision and hard work are solely responsible for the completion this project.
+Our research question was: Does it matter which exercise we prescribe when treating low back pain? </COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="536" end_time="760" duration="224">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide278.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">0,672</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">2</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="0">Introduction</TITLE>
+   <COMMENTS default="1">I’d first like to acknowledge Audrey Long, whose vision and hard work are solely responsible for the completion this project.
+Our research question was: Does it matter which exercise we prescribe when treating low back pain? </COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="760" end_time="20230" duration="19470">sounds/conference2.mp3</MP3>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">3</NUM>
+   <ID>426</ID>
+   <JPGFILE>slides/slide426.swf</JPGFILE>
+   <TITLE default="0">Subgroups</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="20230" end_time="21503" duration="1273">sounds/conference3.mp3</MP3>
+   <TEXTFILE>slides/slide426.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">20,523</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">4</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="0">Introduction</TITLE>
+   <COMMENTS default="1">I’d first like to acknowledge Audrey Long, whose vision and hard work are solely responsible for the completion this project.
+Our research question was: Does it matter which exercise we prescribe when treating low back pain? </COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="21503" end_time="149573" duration="128070">sounds/conference4.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">21,718</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="0">
+   <NUM pptslide="1">5</NUM>
+   <ID>426</ID>
+   <JPGFILE>slides/slide426.swf</JPGFILE>
+   <TITLE default="0">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="149573" end_time="153292" duration="3719">sounds/conference5.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">149,878</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="0">Introduction</TITLE>
+   <COMMENTS default="1">I’d first like to acknowledge Audrey Long, whose vision and hard work are solely responsible for the completion this project.
+Our research question was: Does it matter which exercise we prescribe when treating low back pain? </COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="153292" end_time="162338" duration="9046">sounds/conference6.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">153,623</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>426</ID>
+   <JPGFILE>slides/slide426.swf</JPGFILE>
+   <TITLE default="0">Subgroups</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="162338" end_time="193834" duration="31496">sounds/conference7.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">162,679</ENTRY>
+    <ENTRY TIMER="169" ACTION="next">162,848</ENTRY>
+    <ENTRY TIMER="13141" ACTION="next">175,82</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="0">
+   <NUM pptslide="1">8</NUM>
+   <ID>425</ID>
+   <JPGFILE>slides/slide425.swf</JPGFILE>
+   <TITLE default="0">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="193834" end_time="196263" duration="2429">sounds/conference8.mp3</MP3>
+   <TEXTFILE>slides/slide425.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">194,226</ENTRY>
+    <ENTRY TIMER="1072" ACTION="next">195,298</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>431</ID>
+   <JPGFILE>slides/slide431.swf</JPGFILE>
+   <TITLE default="0">Est-il  possible ?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="196263" end_time="212392" duration="16129">sounds/conference9.mp3</MP3>
+   <TEXTFILE>slides/slide431.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">196,683</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>329</ID>
+   <JPGFILE>slides/slide329.swf</JPGFILE>
+   <TITLE default="0">Prior to 2000</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="212392" end_time="222369" duration="9977">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide329.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">212,876</ENTRY>
+    <ENTRY TIMER="112" ACTION="next">212,988</ENTRY>
+    <ENTRY TIMER="7910" ACTION="next">220,786</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="0">
+   <NUM pptslide="1">11</NUM>
+   <ID>418</ID>
+   <JPGFILE>slides/slide418.swf</JPGFILE>
+   <TITLE default="1">Unfortunately, they seemed to ignore the first few  subgroup studies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="222369" end_time="223591" duration="1222">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide418.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">222,954</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">12</NUM>
+   <ID>329</ID>
+   <JPGFILE>slides/slide329.swf</JPGFILE>
+   <TITLE default="0">Prior o 2000</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="223591" end_time="255402" duration="31811">sounds/conference12.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="2">224,164</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>418</ID>
+   <JPGFILE>slides/slide418.swf</JPGFILE>
+   <TITLE default="0">Unfortunately, they seemed to ignore the first few subgroup studies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="255402" end_time="347088" duration="91686">sounds/conference13.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">256,022</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>432</ID>
+   <JPGFILE>slides/slide432.swf</JPGFILE>
+   <TITLE default="0">Sadly</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="347088" end_time="355835" duration="8747">sounds/conference14.mp3</MP3>
+   <TEXTFILE>slides/slide432.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">347,686</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>350</ID>
+   <JPGFILE>slides/slide350.swf</JPGFILE>
+   <TITLE default="0">The  most common subgrouping</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="355835" end_time="375615" duration="19780">sounds/conference15.mp3</MP3>
+   <TEXTFILE>slides/slide350.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">356,614</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>352</ID>
+   <JPGFILE>slides/slide352.swf</JPGFILE>
+   <TITLE default="0">Ho long have  you had your pain</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="375615" end_time="390920" duration="15305">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide352.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">376,403</ENTRY>
+    <ENTRY TIMER="6326" ACTION="next">382,729</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>351</ID>
+   <JPGFILE>slides/slide351.swf</JPGFILE>
+   <TITLE default="0">Today : acute/subacute pain</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="390920" end_time="402056" duration="11136">sounds/conference17.mp3</MP3>
+   <TEXTFILE>slides/slide351.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">391,766</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>355</ID>
+   <JPGFILE>slides/slide355.swf</JPGFILE>
+   <TITLE default="0">This is not fair</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="402056" end_time="542959" duration="140903">sounds/conference18.mp3</MP3>
+   <TEXTFILE>slides/slide355.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">402,881</ENTRY>
+    <ENTRY TIMER="2219" ACTION="next">405,1</ENTRY>
+    <ENTRY TIMER="104660" ACTION="next">507,541</ENTRY>
+    <ENTRY TIMER="113019" ACTION="next">515,9</ENTRY>
+    <ENTRY TIMER="122440" ACTION="next">525,321</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">19</NUM>
+   <ID>353</ID>
+   <JPGFILE>slides/slide353.swf</JPGFILE>
+   <TITLE default="0">Danger og these time based  subgroups</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="542959" end_time="598822" duration="55863">sounds/conference19.mp3</MP3>
+   <TEXTFILE>slides/slide353.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">543,901</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">20</NUM>
+   <ID>354</ID>
+   <JPGFILE>slides/slide354.swf</JPGFILE>
+   <TITLE default="0">It's a coninuum</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="598822" end_time="601664" duration="2842">sounds/conference20.mp3</MP3>
+   <TEXTFILE>slides/slide354.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">599,87</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">21</NUM>
+   <ID>427</ID>
+   <JPGFILE>slides/slide427.swf</JPGFILE>
+   <TITLE default="0">Biopsychosocial phenomenon</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="601664" end_time="624672" duration="23008">sounds/conference21.mp3</MP3>
+   <TEXTFILE>slides/slide427.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">602,79</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">22</NUM>
+   <ID>318</ID>
+   <JPGFILE>slides/slide318.swf</JPGFILE>
+   <TITLE default="0">"Acute" VS "Chronic"</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="624672" end_time="674602" duration="49930">sounds/conference22.mp3</MP3>
+   <TEXTFILE>slides/slide318.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">625,821</ENTRY>
+    <ENTRY TIMER="15746" ACTION="next">641,567</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">23</NUM>
+   <ID>438</ID>
+   <JPGFILE>slides/slide438.swf</JPGFILE>
+   <TITLE default="0">Natural  hhistory,  recurrences</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="674602" end_time="706016" duration="31414">sounds/conference23.mp3</MP3>
+   <TEXTFILE>slides/slide438.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">675,783</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">24</NUM>
+   <ID>439</ID>
+   <JPGFILE>slides/slide439.swf</JPGFILE>
+   <TITLE default="0">"Acute" VS "Chronic"</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="706016" end_time="720201" duration="14185">sounds/conference24.mp3</MP3>
+   <TEXTFILE>slides/slide439.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">707,344</ENTRY>
+    <ENTRY TIMER="2533" ACTION="next">709,877</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">25</NUM>
+   <ID>356</ID>
+   <JPGFILE>slides/slide356.swf</JPGFILE>
+   <TITLE default="0">+  Funcion</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="720201" end_time="757762" duration="37561">sounds/conference25.mp3</MP3>
+   <TEXTFILE>slides/slide356.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">721,569</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">26</NUM>
+   <ID>368</ID>
+   <JPGFILE>slides/slide368.swf</JPGFILE>
+   <TITLE default="0">...</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="757762" end_time="776373" duration="18611">sounds/conference26.mp3</MP3>
+   <TEXTFILE>slides/slide368.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">759,148</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">27</NUM>
+   <ID>357</ID>
+   <JPGFILE>slides/slide357.swf</JPGFILE>
+   <TITLE default="0">Others fail to funcion</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="776373" end_time="800493" duration="24120">sounds/conference27.mp3</MP3>
+   <TEXTFILE>slides/slide357.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">777,845</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">28</NUM>
+   <ID>446</ID>
+   <JPGFILE>slides/slide446.swf</JPGFILE>
+   <TITLE default="0">Pain for 8 months</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="800493" end_time="853983" duration="53490">sounds/conference28.mp3</MP3>
+   <TEXTFILE>slides/slide446.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">801,992</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">29</NUM>
+   <ID>447</ID>
+   <JPGFILE>slides/slide447.swf</JPGFILE>
+   <TITLE default="0">She was already doing "Mc Kenzie" Exercices</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="853983" end_time="880262" duration="26279">sounds/conference29.mp3</MP3>
+   <TEXTFILE>slides/slide447.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">855,68</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">30</NUM>
+   <ID>448</ID>
+   <JPGFILE>slides/slide448.swf</JPGFILE>
+   <TITLE default="0">Direcional preference</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="880262" end_time="909714" duration="29452">sounds/conference30.mp3</MP3>
+   <TEXTFILE>slides/slide448.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">881,941</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">31</NUM>
+   <ID>449</ID>
+   <JPGFILE>slides/slide449.swf</JPGFILE>
+   <TITLE default="0">No surprise</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="909714" end_time="1019682" duration="109968">sounds/conference31.mp3</MP3>
+   <TEXTFILE>slides/slide449.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">911,518</ENTRY>
+    <ENTRY TIMER="105129" ACTION="next">1016,647</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">32</NUM>
+   <ID>450</ID>
+   <JPGFILE>slides/slide450.swf</JPGFILE>
+   <TITLE default="1">He was already doing  “McKenzie” exercises</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1019682" end_time="1029294" duration="9612">sounds/conference32.mp3</MP3>
+   <TEXTFILE>slides/slide450.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1021,488</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">33</NUM>
+   <ID>451</ID>
+   <JPGFILE>slides/slide451.swf</JPGFILE>
+   <TITLE default="1">No surprise,  extension makes him worse</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1029294" end_time="1033482" duration="4188">sounds/conference33.mp3</MP3>
+   <TEXTFILE>slides/slide451.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1031,195</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">34</NUM>
+   <ID>452</ID>
+   <JPGFILE>slides/slide452.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1033482" end_time="1039820" duration="6338">sounds/conference34.mp3</MP3>
+   <TEXTFILE>slides/slide452.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1035,485</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">35</NUM>
+   <ID>453</ID>
+   <JPGFILE>slides/slide453.swf</JPGFILE>
+   <TITLE default="1">Then 2 weeks later</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1039820" end_time="1061960" duration="22140">sounds/conference35.mp3</MP3>
+   <TEXTFILE>slides/slide453.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1041,948</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">36</NUM>
+   <ID>416</ID>
+   <JPGFILE>slides/slide416.swf</JPGFILE>
+   <TITLE default="1">Questions asked after 	       2004 RCT</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1061960" end_time="1199532" duration="137572">sounds/conference36.mp3</MP3>
+   <TEXTFILE>slides/slide416.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1064,013</ENTRY>
+    <ENTRY TIMER="7351" ACTION="next">1071,364</ENTRY>
+    <ENTRY TIMER="95523" ACTION="next">1159,536</ENTRY>
+    <ENTRY TIMER="124758" ACTION="next">1188,771</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">37</NUM>
+   <ID>390</ID>
+   <JPGFILE>slides/slide390.swf</JPGFILE>
+   <TITLE default="1">Influence of Directional Preference on Two Clinical Dichotomies:       Acute versus Chronic                  and Axial Pain versus Sciatica.</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1199532" end_time="1283722" duration="84190">sounds/conference37.mp3</MP3>
+   <TEXTFILE>slides/slide390.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1201,793</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">38</NUM>
+   <ID>454</ID>
+   <JPGFILE>slides/slide454.swf</JPGFILE>
+   <TITLE default="1">Are there more useful subgroups than terms acute and chronic?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1283722" end_time="1301330" duration="17608">sounds/conference38.mp3</MP3>
+   <TEXTFILE>slides/slide454.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1286,005</ENTRY>
+    <ENTRY TIMER="5358" ACTION="next">1291,363</ENTRY>
+    <ENTRY TIMER="11241" ACTION="next">1297,246</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">39</NUM>
+   <ID>455</ID>
+   <JPGFILE>slides/slide455.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1">Analytical methods included descriptive statistics, frequency distributions, two-way Anova, and chi-square testing.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1301330" end_time="1307515" duration="6185">sounds/conference39.mp3</MP3>
+   <TEXTFILE>slides/slide455.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1303,748</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">40</NUM>
+   <ID>456</ID>
+   <JPGFILE>slides/slide456.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1307515" end_time="1348903" duration="41388">sounds/conference40.mp3</MP3>
+   <TEXTFILE>slides/slide456.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1309,99</ENTRY>
+    <ENTRY TIMER="111" ACTION="next">1310,101</ENTRY>
+    <ENTRY TIMER="5197" ACTION="next">1315,187</ENTRY>
+    <ENTRY TIMER="7206" ACTION="next">1317,196</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">41</NUM>
+   <ID>324</ID>
+   <JPGFILE>slides/slide324.swf</JPGFILE>
+   <TITLE default="1">Comparison</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1348903" end_time="1355591" duration="6688">sounds/conference41.mp3</MP3>
+   <TEXTFILE>slides/slide324.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1351,436</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">42</NUM>
+   <ID>331</ID>
+   <JPGFILE>slides/slide331.swf</JPGFILE>
+   <TITLE default="1">Yes, by percentage (p = .095 ) No significant difference in distribution</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1355591" end_time="1401104" duration="45513">sounds/conference42.mp3</MP3>
+   <TEXTFILE>slides/slide331.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1358,013</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">43</NUM>
+   <ID>349</ID>
+   <JPGFILE>slides/slide349.swf</JPGFILE>
+   <TITLE default="1">Are outcomes difference between these three groups?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1401104" end_time="1444490" duration="43386">sounds/conference43.mp3</MP3>
+   <TEXTFILE>slides/slide349.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1403,939</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">44</NUM>
+   <ID>347</ID>
+   <JPGFILE>slides/slide347.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1">40% were off work due to LBP, 24% with a work injury.  13% were acute, 32% subacute, and 55% chronic.  70% reported previous episodes.  47% had back pain only, 18% referred pain above the knee, 17% below the knee, and 17% had one positive neurologic sign.</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1444490" end_time="1523865" duration="79375">sounds/conference44.mp3</MP3>
+   <TEXTFILE>slides/slide347.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1447,325</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1446,887</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1446,921</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1446,979</ENTRY>
+    <ENTRY TIMER="176" ACTION="next">1447,501</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">45</NUM>
+   <ID>334</ID>
+   <JPGFILE>slides/slide334.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1523865" end_time="1530157" duration="6292">sounds/conference45.mp3</MP3>
+   <TEXTFILE>slides/slide334.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1526,989</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1526,568</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">46</NUM>
+   <ID>364</ID>
+   <JPGFILE>slides/slide364.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1530157" end_time="1536588" duration="6431">sounds/conference46.mp3</MP3>
+   <TEXTFILE>slides/slide364.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1533,262</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1532,958</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">47</NUM>
+   <ID>336</ID>
+   <JPGFILE>slides/slide336.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1536588" end_time="1543073" duration="6485">sounds/conference47.mp3</MP3>
+   <TEXTFILE>slides/slide336.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1539,731</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1539,293</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">48</NUM>
+   <ID>367</ID>
+   <JPGFILE>slides/slide367.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1543073" end_time="1549880" duration="6807">sounds/conference48.mp3</MP3>
+   <TEXTFILE>slides/slide367.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1546,382</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1545,941</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">49</NUM>
+   <ID>366</ID>
+   <JPGFILE>slides/slide366.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1549880" end_time="1556899" duration="7019">sounds/conference49.mp3</MP3>
+   <TEXTFILE>slides/slide366.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1553,363</ENTRY>
+    <ENTRY TIMER="0" ACTION="next">1552,944</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">50</NUM>
+   <ID>337</ID>
+   <JPGFILE>slides/slide337.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1556899" end_time="1626079" duration="69180">sounds/conference50.mp3</MP3>
+   <TEXTFILE>slides/slide337.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1560,39</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">51</NUM>
+   <ID>414</ID>
+   <JPGFILE>slides/slide414.swf</JPGFILE>
+   <TITLE default="1">Other studies supporting that chronic back pain patients can have mechanical pain</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1626079" end_time="1633616" duration="7537">sounds/conference51.mp3</MP3>
+   <TEXTFILE>slides/slide414.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1629,709</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">52</NUM>
+   <ID>337</ID>
+   <JPGFILE>slides/slide337.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1633616" end_time="1640945" duration="7329">sounds/conference52.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1637,038</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">53</NUM>
+   <ID>366</ID>
+   <JPGFILE>slides/slide366.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1640945" end_time="1648846" duration="7901">sounds/conference53.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1644,874</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">54</NUM>
+   <ID>337</ID>
+   <JPGFILE>slides/slide337.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1648846" end_time="1656923" duration="8077">sounds/conference54.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1652,886</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">55</NUM>
+   <ID>366</ID>
+   <JPGFILE>slides/slide366.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1656923" end_time="1705089" duration="48166">sounds/conference55.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1660,797</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">56</NUM>
+   <ID>367</ID>
+   <JPGFILE>slides/slide367.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1705089" end_time="1751560" duration="46471">sounds/conference56.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1708,922</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">57</NUM>
+   <ID>336</ID>
+   <JPGFILE>slides/slide336.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1751560" end_time="1766436" duration="14876">sounds/conference57.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1755,96</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">58</NUM>
+   <ID>364</ID>
+   <JPGFILE>slides/slide364.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1766436" end_time="1775155" duration="8719">sounds/conference58.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1770,44</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">59</NUM>
+   <ID>334</ID>
+   <JPGFILE>slides/slide334.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1775155" end_time="1784074" duration="8919">sounds/conference59.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1779,741</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">60</NUM>
+   <ID>364</ID>
+   <JPGFILE>slides/slide364.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1784074" end_time="1792580" duration="8506">sounds/conference60.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1788,23</ENTRY>
+    <ENTRY TIMER="70" ACTION="next">1788,3</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">61</NUM>
+   <ID>336</ID>
+   <JPGFILE>slides/slide336.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1792580" end_time="1963255" duration="170675">sounds/conference61.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1796,875</ENTRY>
+    <ENTRY TIMER="159602" ACTION="next">1956,477</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">62</NUM>
+   <ID>367</ID>
+   <JPGFILE>slides/slide367.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1963255" end_time="1973445" duration="10190">sounds/conference62.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">1968,062</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">63</NUM>
+   <ID>336</ID>
+   <JPGFILE>slides/slide336.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1973445" end_time="1996846" duration="23401">sounds/conference63.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="2">1978,332</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">64</NUM>
+   <ID>367</ID>
+   <JPGFILE>slides/slide367.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1996846" end_time="2069764" duration="72918">sounds/conference64.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">2001,534</ENTRY>
+    <ENTRY TIMER="8322" ACTION="next">2009,856</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">65</NUM>
+   <ID>366</ID>
+   <JPGFILE>slides/slide366.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2069764" end_time="2104190" duration="34426">sounds/conference65.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">2074,517</ENTRY>
+    <ENTRY TIMER="7393" ACTION="next">2081,91</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">66</NUM>
+   <ID>337</ID>
+   <JPGFILE>slides/slide337.swf</JPGFILE>
+   <TITLE default="1">Outcomes by QTF Duration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2104190" end_time="2135652" duration="31462">sounds/conference66.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2109,118</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">67</NUM>
+   <ID>414</ID>
+   <JPGFILE>slides/slide414.swf</JPGFILE>
+   <TITLE default="1">Other studies supporting that chronic back pain patients can have mechanical pain</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2135652" end_time="2166197" duration="30545">sounds/conference67.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2140,548</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">68</NUM>
+   <ID>396</ID>
+   <JPGFILE>slides/slide396.swf</JPGFILE>
+   <TITLE default="1">The Centralisation Phenomenon: It’s usefulness as a predictor of outcome in conservative treatment of chronic low back pain  Long A, Spine 1995;20:2512-2531</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2166197" end_time="2178943" duration="12746">sounds/conference68.mp3</MP3>
+   <TEXTFILE>slides/slide396.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2171,699</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">69</NUM>
+   <ID>397</ID>
+   <JPGFILE>slides/slide397.swf</JPGFILE>
+   <TITLE default="1">N = 223 Chronic back pain</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2178943" end_time="2242089" duration="63146">sounds/conference69.mp3</MP3>
+   <TEXTFILE>slides/slide397.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2184,549</ENTRY>
+    <ENTRY TIMER="50" ACTION="next">2184,599</ENTRY>
+    <ENTRY TIMER="71" ACTION="next">2184,62</ENTRY>
+    <ENTRY TIMER="90" ACTION="next">2184,639</ENTRY>
+    <ENTRY TIMER="123" ACTION="next">2184,672</ENTRY>
+    <ENTRY TIMER="149" ACTION="next">2184,698</ENTRY>
+    <ENTRY TIMER="4762" ACTION="next">2189,311</ENTRY>
+    <ENTRY TIMER="5696" ACTION="next">2190,245</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">70</NUM>
+   <ID>399</ID>
+   <JPGFILE>slides/slide399.swf</JPGFILE>
+   <TITLE default="1">Outcomes, p &lt; .05</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2242089" end_time="2253194" duration="11105">sounds/conference70.mp3</MP3>
+   <TEXTFILE>slides/slide399.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2247,63</ENTRY>
+    <ENTRY TIMER="75" ACTION="next">2247,705</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">71</NUM>
+   <ID>436</ID>
+   <JPGFILE>slides/slide436.swf</JPGFILE>
+   <TITLE default="1">Another Example</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2253194" end_time="2264687" duration="11493">sounds/conference71.mp3</MP3>
+   <TEXTFILE>slides/slide436.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2259,151</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">72</NUM>
+   <ID>437</ID>
+   <JPGFILE>slides/slide437.swf</JPGFILE>
+   <TITLE default="1">63% of this group had  “Chronic Pain” By definition of  &gt; 3 months</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2264687" end_time="2426132" duration="161445">sounds/conference72.mp3</MP3>
+   <TEXTFILE>slides/slide437.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2269,957</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">73</NUM>
+   <ID>345</ID>
+   <JPGFILE>slides/slide345.swf</JPGFILE>
+   <TITLE default="1">Summary</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2426132" end_time="3906864" duration="1480732">sounds/conference73.mp3</MP3>
+   <TEXTFILE>slides/slide345.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2431,921</ENTRY>
+    <ENTRY TIMER="43975" ACTION="next">2475,896</ENTRY>
+    <ENTRY TIMER="47321" ACTION="next">2479,242</ENTRY>
+    <ENTRY TIMER="49056" ACTION="next">2480,977</ENTRY>
+    <ENTRY TIMER="55053" ACTION="next">2486,974</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>

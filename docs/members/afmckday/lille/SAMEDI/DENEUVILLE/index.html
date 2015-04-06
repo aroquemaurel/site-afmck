@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0013)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Algorithme décisionnel pour les DP d'épaules</title>
+<style type="text/css">
+	/* hide from ie on mac \*/
+	html {
+		height: 100%;
+		overflow: hidden;
+	}
+	/* end hide */
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: #FBFBFB;
+	}
+</style>
+</head><body>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/frontend.js"></script>
+<script type="text/javascript">window.moveTo(0, 0);window.resizeTo(screen.availWidth, screen.availHeight);</script>
+<div id="mainDIV0" style="position:absolute; width:100%; height:100%">
+<div id="mainContent0">
+<!-- alt text div -->
+<div id="noFlash" style="background-color:#FFFFFF; visibility:hidden">
+<!-- alt text -->
+<P>&nbsp;</P>
+<BLOCKQUOTE>
+  <H3><FONT face="Arial, Helvetica, sans-serif" color=#999999>Your Macromedia 
+  Flash player version is too old to play your Speechi presentation.</FONT></H3>
+  <TABLE width="60%">
+    <TBODY>
+    <TR>
+      <TD colSpan=2>
+        <P><FONT face="Arial, Helvetica, sans-serif">Speechi</FONT><FONT 
+        face="Arial, Helvetica, sans-serif">&nbsp;makes use of <A 
+        href="http://www.macromedia.com/software/flash/" 
+        target=_new>Macromedia<SUP><FONT size=-1>®</FONT></SUP> Flash<SUP><FONT 
+        size=-2>TM</FONT></SUP></A> software. You have an old version of 
+        Macromedia Flash Player that cannot play the content we've 
+        created.</FONT> </P>
+    <TR>
+      <TD><FONT face="Arial, Helvetica, sans-serif"><A 
+        href="http://www.macromedia.com/go/getflashplayer"><IMG height=31 
+        src="get_flashplayer_88_31.gif" width=88 
+        border=0></A> </FONT>
+      <TD>
+        <P><FONT face="Arial, Helvetica, sans-serif">Why not download and 
+        install the latest version now for free ? It will only take a moment. 
+        </FONT></P></TD></TR></TBODY></TABLE>
+  <P><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2>Macromedia and 
+  Flash are trademarks of Macromedia, Inc.</FONT> <FONT face=Verdana 
+  size=1><BR>Speechi is a trademark of Wouarf</FONT></P>
+   <P><FONT face="Arial, Helvetica, sans-serif" size=3 color=#E94753> If you still think your Flash version is up to date, <A href="?detectflash=false">launch your Speechi presentation here.</A> </FONT></P>
+</BLOCKQUOTE>
+
+<HR width="95%" size="2" noshade>
+
+<BLOCKQUOTE>
+    <H3><FONT face="Arial, Helvetica, sans-serif" color=#999999>Votre version de 
+    plug-in Flash est trop ancienne pour Speechi.</FONT></H3>
+    <TABLE width="60%">
+      <TBODY>
+      <TR>
+        <TD colSpan=2>
+          <P><FONT face="Arial, Helvetica, sans-serif">Speechi</FONT><FONT 
+          face="Arial, Helvetica, sans-serif">&nbsp;utilise le plug-in <A 
+          href="http://www.macromedia.com/software/flash/" 
+          target=_new>Macromedia<SUP><FONT size=-1>®</FONT></SUP> 
+          Flash<SUP><FONT size=-2>TM</FONT></SUP></A> . Votre version de ce 
+          plug-in n'est pas suffisamment à jour.</FONT></P>
+      <TR>
+        <TD><FONT face="Arial, Helvetica, sans-serif"><A 
+          href="http://www.macromedia.com/go/getflashplayer"><IMG height=31 
+          src="get_flashplayer_88_31.gif" width=88 
+          border=0></A> </FONT>
+        <TD>
+          <P><FONT face="Arial, Helvetica, sans-serif">Vous pouvez télécharger 
+          ce plug-in gratuitement en cliquant sur le bouton 
+        ci-contre.</FONT></P></TD></TR></TBODY></TABLE>
+    <P><FONT face="Verdana, Arial, Helvetica, sans-serif" size=-2>Macromedia and 
+    Flash sont des marques déposées de Macromedia, Inc.</FONT> <FONT 
+    face=Verdana size=1><BR>Speechi est une marque déposée de 
+  Wouarf.</FONT></P>
+    <P><FONT face="Arial, Helvetica, sans-serif" size=3 color=#E94753> Si vous pensez quand même que votre version Flash est à jour, <A href="?detectflash=false">vous pouvez lancer votre présentation Speechi en cliquant ici.</A> </FONT></P>
+</BLOCKQUOTE>  
+<P>&nbsp;</P>
+<!-- /alt text -->
+</div>
+<script type="text/javascript">
+	// <![CDATA[
+	window.setTimeout(function() {
+		var noFlashDiv = document.getElementById("noFlash");
+		if (noFlashDiv != null)	noFlashDiv.style.visibility = "visible";
+	}, 1000);
+	// ]]>
+</script>
+<!-- /alt text div -->
+	</div>
+</div>
+<div id="extraDIV0" style="position:absolute; visibility:hidden; left:50%; top:50%; width:50%; height:50%">
+	<div id="extraContent0"></div>
+</div>
+<script type="text/javascript">
+	// <![CDATA[
+
+	function getparam(name){
+		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");  
+		var regexS = "[\\?&]"+name+"=([^&#]*)";
+		var regex = new RegExp( regexS );
+		var results = regex.exec( window.location.href );
+		if( results == null ) return ""; else return results[1];
+	}
+
+	fe = new speechi_SWFObject("", "", 0, "#FBFBFB");
+	fe.addVariable("timecode", getparam("timecode"));
+	
+	fe.write();
+	window.onresize=function(){speechi_frontend[0].resize()}
+	// ]]>
+</script>
+</body>
+</html>

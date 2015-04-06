@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>MAY.ppt</PPTNAME>
+  <GENERATED>09/02/2015 12:19:38</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>11206117</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME>C:\Users\Congres\Desktop\Stephen-may.jpg</PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr/</LINK>
+  <SPEAKER>Stephen MAY</SPEAKER>
+  <SPEAKER_EMAIL></SPEAKER_EMAIL>
+  <TITLE>McKenzie in the cervical  Spine</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>681</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="0">
+   <NUM pptslide="1">1</NUM>
+   <ID>256</ID>
+   <JPGFILE>slides/slide256.swf</JPGFILE>
+   <TITLE default="0">McKenzie in the cervical spine</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="580" end_time="817" duration="237">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide256.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">0,715</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">2</NUM>
+   <ID>256</ID>
+   <JPGFILE>slides/slide256.swf</JPGFILE>
+   <TITLE default="1">McKenzie in the cervical spine</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="817" end_time="41306" duration="40489">sounds/conference2.mp3</MP3>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">3</NUM>
+   <ID>257</ID>
+   <JPGFILE>slides/slide257.swf</JPGFILE>
+   <TITLE default="1">Introduction</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="41306" end_time="59131" duration="17825">sounds/conference3.mp3</MP3>
+   <TEXTFILE>slides/slide257.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">41,584</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">4</NUM>
+   <ID>258</ID>
+   <JPGFILE>slides/slide258.swf</JPGFILE>
+   <TITLE default="1">Centralization</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="59131" end_time="82165" duration="23034">sounds/conference4.mp3</MP3>
+   <TEXTFILE>slides/slide258.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">59,464</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">5</NUM>
+   <ID>259</ID>
+   <JPGFILE>slides/slide259.swf</JPGFILE>
+   <TITLE default="1">Centralization</TITLE>
+   <COMMENTS default="1">No long time follow up</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="82165" end_time="96530" duration="14365">sounds/conference5.mp3</MP3>
+   <TEXTFILE>slides/slide259.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">82,488</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>260</ID>
+   <JPGFILE>slides/slide260.swf</JPGFILE>
+   <TITLE default="1">Centralization</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="96530" end_time="104341" duration="7811">sounds/conference6.mp3</MP3>
+   <TEXTFILE>slides/slide260.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">96,91</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>261</ID>
+   <JPGFILE>slides/slide261.swf</JPGFILE>
+   <TITLE default="1">Prevalence of MDT classifications from 34 therapists (Hefford 2008)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="104341" end_time="138785" duration="34444">sounds/conference7.mp3</MP3>
+   <TEXTFILE>slides/slide261.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">104,822</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">8</NUM>
+   <ID>262</ID>
+   <JPGFILE>slides/slide262.swf</JPGFILE>
+   <TITLE default="1">Cervical spine classification (Hefford 2008) (N = 111)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="138785" end_time="146569" duration="7784">sounds/conference8.mp3</MP3>
+   <TEXTFILE>slides/slide262.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">139,336</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>263</ID>
+   <JPGFILE>slides/slide263.swf</JPGFILE>
+   <TITLE default="1">Directional preference (Hefford 2008)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="146569" end_time="155968" duration="9399">sounds/conference9.mp3</MP3>
+   <TEXTFILE>slides/slide263.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">147,194</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>264</ID>
+   <JPGFILE>slides/slide264.swf</JPGFILE>
+   <TITLE default="1">Directional preference</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="155968" end_time="203254" duration="47286">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide264.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">156,575</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">11</NUM>
+   <ID>276</ID>
+   <JPGFILE>slides/slide276.swf</JPGFILE>
+   <TITLE default="1">Reliability of the system</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="203254" end_time="248422" duration="45168">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide276.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">203,902</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">12</NUM>
+   <ID>277</ID>
+   <JPGFILE>slides/slide277.swf</JPGFILE>
+   <TITLE default="1">Reliability of the system</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="248422" end_time="277216" duration="28794">sounds/conference12.mp3</MP3>
+   <TEXTFILE>slides/slide277.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">249,091</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>265</ID>
+   <JPGFILE>slides/slide265.swf</JPGFILE>
+   <TITLE default="1">Randomised controlled trial (Kjellman &amp; Oberg 2002)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="277216" end_time="350014" duration="72798">sounds/conference13.mp3</MP3>
+   <TEXTFILE>slides/slide265.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">277,999</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>267</ID>
+   <JPGFILE>slides/slide267.swf</JPGFILE>
+   <TITLE default="1">Kjellman &amp; Oberg (2002) - pain intensity</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="350014" end_time="358848" duration="8834">sounds/conference14.mp3</MP3>
+   <TEXTFILE>slides/slide267.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">350,765</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>269</ID>
+   <JPGFILE>slides/slide269.swf</JPGFILE>
+   <TITLE default="1">Kjellman &amp; Oberg (2002) - NDI</TITLE>
+   <COMMENTS default="1">Neck disability index</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="358848" end_time="360772" duration="1924">sounds/conference15.mp3</MP3>
+   <TEXTFILE>slides/slide269.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">359,663</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>270</ID>
+   <JPGFILE>slides/slide270.swf</JPGFILE>
+   <TITLE default="1">Moffett et al. 2006</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="360772" end_time="374893" duration="14121">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide270.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">361,744</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>269</ID>
+   <JPGFILE>slides/slide269.swf</JPGFILE>
+   <TITLE default="1">Kjellman &amp; Oberg (2002) - NDI</TITLE>
+   <COMMENTS default="1">Neck disability index</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="374893" end_time="386956" duration="12063">sounds/conference17.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">375,82</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>270</ID>
+   <JPGFILE>slides/slide270.swf</JPGFILE>
+   <TITLE default="1">Moffett et al. 2006</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="386956" end_time="527218" duration="140262">sounds/conference18.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">387,956</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">19</NUM>
+   <ID>271</ID>
+   <JPGFILE>slides/slide271.swf</JPGFILE>
+   <TITLE default="1">Moffett et al. (2006) - neck pain</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="527218" end_time="533509" duration="6291">sounds/conference19.mp3</MP3>
+   <TEXTFILE>slides/slide271.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">528,286</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">20</NUM>
+   <ID>272</ID>
+   <JPGFILE>slides/slide272.swf</JPGFILE>
+   <TITLE default="1">May et al. (2008)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="533509" end_time="569020" duration="35511">sounds/conference20.mp3</MP3>
+   <TEXTFILE>slides/slide272.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">534,702</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">21</NUM>
+   <ID>273</ID>
+   <JPGFILE>slides/slide273.swf</JPGFILE>
+   <TITLE default="1">May et al. (2008)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="569020" end_time="596054" duration="27034">sounds/conference21.mp3</MP3>
+   <TEXTFILE>slides/slide273.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">570,248</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">22</NUM>
+   <ID>274</ID>
+   <JPGFILE>slides/slide274.swf</JPGFILE>
+   <TITLE default="1">May et al. (2008)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="596054" end_time="622531" duration="26477">sounds/conference22.mp3</MP3>
+   <TEXTFILE>slides/slide274.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">597,399</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">23</NUM>
+   <ID>275</ID>
+   <JPGFILE>slides/slide275.swf</JPGFILE>
+   <TITLE default="1">Bottom line</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="622531" end_time="681511" duration="58980">sounds/conference23.mp3</MP3>
+   <TEXTFILE>slides/slide275.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">623,97</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>

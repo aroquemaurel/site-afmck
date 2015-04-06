@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>4-McKenzie Method in the Extremities.ppt</PPTNAME>
+  <GENERATED>09/02/2015 13:36:31</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>10609009</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME>C:\Users\Congres\Desktop\Stephen-may.jpg</PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr/</LINK>
+  <SPEAKER></SPEAKER>
+  <SPEAKER_EMAIL>Stephen MAY</SPEAKER_EMAIL>
+  <TITLE>McKenzie Method in the Extremities</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>3118</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="1">
+   <NUM pptslide="1">1</NUM>
+   <ID>256</ID>
+   <JPGFILE>slides/slide256.swf</JPGFILE>
+   <TITLE default="1">McKenzie Method in the Extremities</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="646" end_time="146255" duration="145609">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide256.txt</TEXTFILE>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">2</NUM>
+   <ID>258</ID>
+   <JPGFILE>slides/slide258.swf</JPGFILE>
+   <TITLE default="0">McKenzie Method - concepts</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="146255" end_time="217805" duration="71550">sounds/conference2.mp3</MP3>
+   <TEXTFILE>slides/slide258.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">146,486</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">3</NUM>
+   <ID>268</ID>
+   <JPGFILE>slides/slide268.swf</JPGFILE>
+   <TITLE default="0">McKenzie Method - concepts</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="217805" end_time="283034" duration="65229">sounds/conference3.mp3</MP3>
+   <TEXTFILE>slides/slide268.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">218,079</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="0">
+   <NUM pptslide="1">4</NUM>
+   <ID>270</ID>
+   <JPGFILE>slides/slide270.swf</JPGFILE>
+   <TITLE default="1">McKenzie Method - concepts</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="283034" end_time="285245" duration="2211">sounds/conference4.mp3</MP3>
+   <TEXTFILE>slides/slide270.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">283,33</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">5</NUM>
+   <ID>268</ID>
+   <JPGFILE>slides/slide268.swf</JPGFILE>
+   <TITLE default="0">McKenzie Method - concepts</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="285245" end_time="333717" duration="48472">sounds/conference5.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">285,639</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>270</ID>
+   <JPGFILE>slides/slide270.swf</JPGFILE>
+   <TITLE default="1">McKenzie Method - concepts</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="333717" end_time="437864" duration="104147">sounds/conference6.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">334,083</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>314</ID>
+   <JPGFILE>slides/slide314.swf</JPGFILE>
+   <TITLE default="1">Classification or diagnosis?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="437864" end_time="507025" duration="69161">sounds/conference7.mp3</MP3>
+   <TEXTFILE>slides/slide314.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">438,305</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">8</NUM>
+   <ID>261</ID>
+   <JPGFILE>slides/slide261.swf</JPGFILE>
+   <TITLE default="1">McKenzie Method in the extremities</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="507025" end_time="562960" duration="55935">sounds/conference8.mp3</MP3>
+   <TEXTFILE>slides/slide261.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">507,537</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>269</ID>
+   <JPGFILE>slides/slide269.swf</JPGFILE>
+   <TITLE default="0">McKenzie Method in the extremities</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="562960" end_time="614821" duration="51861">sounds/conference9.mp3</MP3>
+   <TEXTFILE>slides/slide269.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">563,479</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>262</ID>
+   <JPGFILE>slides/slide262.swf</JPGFILE>
+   <TITLE default="0">McKenzie Method in the extremities</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="614821" end_time="657246" duration="42425">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide262.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">615,485</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">11</NUM>
+   <ID>263</ID>
+   <JPGFILE>slides/slide263.swf</JPGFILE>
+   <TITLE default="0">McKenzie Method in the extremities</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="657246" end_time="764516" duration="107270">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide263.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">657,943</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">12</NUM>
+   <ID>264</ID>
+   <JPGFILE>slides/slide264.swf</JPGFILE>
+   <TITLE default="1">McKenzie Method in the extremities</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="764516" end_time="809176" duration="44660">sounds/conference12.mp3</MP3>
+   <TEXTFILE>slides/slide264.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">765,259</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>265</ID>
+   <JPGFILE>slides/slide265.swf</JPGFILE>
+   <TITLE default="0">Survey of  Clinical practice</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="809176" end_time="884959" duration="75783">sounds/conference13.mp3</MP3>
+   <TEXTFILE>slides/slide265.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">809,937</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>271</ID>
+   <JPGFILE>slides/slide271.swf</JPGFILE>
+   <TITLE default="1">Turner (2002): 95 Shoulder, knee and hip patients</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="884959" end_time="938033" duration="53074">sounds/conference14.mp3</MP3>
+   <TEXTFILE>slides/slide271.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">885,821</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>272</ID>
+   <JPGFILE>slides/slide272.swf</JPGFILE>
+   <TITLE default="1">May (2004): 17 faculty members, 265 patients, just 70 extremity reported here</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="938033" end_time="996330" duration="58297">sounds/conference15.mp3</MP3>
+   <TEXTFILE>slides/slide272.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">938,842</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>273</ID>
+   <JPGFILE>slides/slide273.swf</JPGFILE>
+   <TITLE default="1">Audit 3 (2004): 57 patients</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="996330" end_time="1038721" duration="42391">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide273.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">997,312</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>274</ID>
+   <JPGFILE>slides/slide274.swf</JPGFILE>
+   <TITLE default="1">Audits of extremity MDT up to 2004</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1038721" end_time="1071301" duration="32580">sounds/conference17.mp3</MP3>
+   <TEXTFILE>slides/slide274.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1039,821</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>275</ID>
+   <JPGFILE>slides/slide275.swf</JPGFILE>
+   <TITLE default="0">Other  Categories</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1071301" end_time="1177891" duration="106590">sounds/conference18.mp3</MP3>
+   <TEXTFILE>slides/slide275.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1072,424</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">19</NUM>
+   <ID>276</ID>
+   <JPGFILE>slides/slide276.swf</JPGFILE>
+   <TITLE default="0">May 2006</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1177891" end_time="1255202" duration="77311">sounds/conference19.mp3</MP3>
+   <TEXTFILE>slides/slide276.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1179,129</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">20</NUM>
+   <ID>266</ID>
+   <JPGFILE>slides/slide266.swf</JPGFILE>
+   <TITLE default="0">Melbye (2007)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1255202" end_time="1284087" duration="28885">sounds/conference20.mp3</MP3>
+   <TEXTFILE>slides/slide266.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1256,446</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">21</NUM>
+   <ID>277</ID>
+   <JPGFILE>slides/slide277.swf</JPGFILE>
+   <TITLE default="0">Melbye (2007)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1284087" end_time="1350563" duration="66476">sounds/conference21.mp3</MP3>
+   <TEXTFILE>slides/slide277.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1285,393</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">22</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="0">Melbye (2007)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1350563" end_time="1452304" duration="101741">sounds/conference22.mp3</MP3>
+   <TEXTFILE>slides/slide278.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1351,7</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">23</NUM>
+   <ID>313</ID>
+   <JPGFILE>slides/slide313.swf</JPGFILE>
+   <TITLE default="0">Aytona &amp; Dudley (2013)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1452304" end_time="1517574" duration="65270">sounds/conference23.mp3</MP3>
+   <TEXTFILE>slides/slide313.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1453,668</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">24</NUM>
+   <ID>267</ID>
+   <JPGFILE>slides/slide267.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1517574" end_time="1602794" duration="85220">sounds/conference24.mp3</MP3>
+   <TEXTFILE>slides/slide267.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1519,036</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">25</NUM>
+   <ID>279</ID>
+   <JPGFILE>slides/slide279.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1602794" end_time="1680879" duration="78085">sounds/conference25.mp3</MP3>
+   <TEXTFILE>slides/slide279.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1604,292</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">26</NUM>
+   <ID>280</ID>
+   <JPGFILE>slides/slide280.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1680879" end_time="1764975" duration="84096">sounds/conference26.mp3</MP3>
+   <TEXTFILE>slides/slide280.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1682,559</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">27</NUM>
+   <ID>281</ID>
+   <JPGFILE>slides/slide281.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1764975" end_time="1829110" duration="64135">sounds/conference27.mp3</MP3>
+   <TEXTFILE>slides/slide281.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1766,616</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">28</NUM>
+   <ID>287</ID>
+   <JPGFILE>slides/slide287.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1829110" end_time="1854443" duration="25333">sounds/conference28.mp3</MP3>
+   <TEXTFILE>slides/slide287.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1831,047</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">29</NUM>
+   <ID>288</ID>
+   <JPGFILE>slides/slide288.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1854443" end_time="1884412" duration="29969">sounds/conference29.mp3</MP3>
+   <TEXTFILE>slides/slide288.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1856,04</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">30</NUM>
+   <ID>289</ID>
+   <JPGFILE>slides/slide289.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1884412" end_time="1930681" duration="46269">sounds/conference30.mp3</MP3>
+   <TEXTFILE>slides/slide289.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1886,378</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">31</NUM>
+   <ID>282</ID>
+   <JPGFILE>slides/slide282.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1930681" end_time="2044285" duration="113604">sounds/conference31.mp3</MP3>
+   <TEXTFILE>slides/slide282.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1932,793</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">32</NUM>
+   <ID>283</ID>
+   <JPGFILE>slides/slide283.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2044285" end_time="2107692" duration="63407">sounds/conference32.mp3</MP3>
+   <TEXTFILE>slides/slide283.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2046,416</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">33</NUM>
+   <ID>284</ID>
+   <JPGFILE>slides/slide284.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2107692" end_time="2179607" duration="71915">sounds/conference33.mp3</MP3>
+   <TEXTFILE>slides/slide284.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2109,831</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">34</NUM>
+   <ID>285</ID>
+   <JPGFILE>slides/slide285.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012) - graph</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2179607" end_time="2247298" duration="67691">sounds/conference34.mp3</MP3>
+   <TEXTFILE>slides/slide285.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2181,649</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">35</NUM>
+   <ID>290</ID>
+   <JPGFILE>slides/slide290.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012) - graph</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2247298" end_time="2285136" duration="37838">sounds/conference35.mp3</MP3>
+   <TEXTFILE>slides/slide290.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2249,656</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">36</NUM>
+   <ID>297</ID>
+   <JPGFILE>slides/slide297.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012) - graph</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2285136" end_time="2302998" duration="17862">sounds/conference36.mp3</MP3>
+   <TEXTFILE>slides/slide297.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2287,732</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">37</NUM>
+   <ID>291</ID>
+   <JPGFILE>slides/slide291.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012) - other</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2302998" end_time="2315223" duration="12225">sounds/conference37.mp3</MP3>
+   <TEXTFILE>slides/slide291.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2305,631</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">38</NUM>
+   <ID>292</ID>
+   <JPGFILE>slides/slide292.swf</JPGFILE>
+   <TITLE default="0">May &amp; Rosedale (2012) - graph</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2315223" end_time="2345098" duration="29875">sounds/conference38.mp3</MP3>
+   <TEXTFILE>slides/slide292.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2317,941</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">39</NUM>
+   <ID>294</ID>
+   <JPGFILE>slides/slide294.swf</JPGFILE>
+   <TITLE default="0">Directional preferences in derangments</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2345098" end_time="2465763" duration="120665">sounds/conference39.mp3</MP3>
+   <TEXTFILE>slides/slide294.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2347,788</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">40</NUM>
+   <ID>295</ID>
+   <JPGFILE>slides/slide295.swf</JPGFILE>
+   <TITLE default="0">Directional preferences in derangments</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2465763" end_time="2527945" duration="62182">sounds/conference40.mp3</MP3>
+   <TEXTFILE>slides/slide295.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2468,661</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">41</NUM>
+   <ID>296</ID>
+   <JPGFILE>slides/slide296.swf</JPGFILE>
+   <TITLE default="0">Common loading strategies for dysfunction</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2527945" end_time="2535454" duration="7509">sounds/conference41.mp3</MP3>
+   <TEXTFILE>slides/slide296.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2530,847</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">42</NUM>
+   <ID>295</ID>
+   <JPGFILE>slides/slide295.swf</JPGFILE>
+   <TITLE default="0">Common loading strategies for dysfunction</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2535454" end_time="2547895" duration="12441">sounds/conference42.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2538,503</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">43</NUM>
+   <ID>296</ID>
+   <JPGFILE>slides/slide296.swf</JPGFILE>
+   <TITLE default="0">Common loading strategies for dysfunction</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2547895" end_time="2561456" duration="13561">sounds/conference43.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2551,304</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">44</NUM>
+   <ID>286</ID>
+   <JPGFILE>slides/slide286.swf</JPGFILE>
+   <TITLE default="0">Common loading strategies for dysfunction</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2561456" end_time="2568060" duration="6604">sounds/conference44.mp3</MP3>
+   <TEXTFILE>slides/slide286.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2564,863</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">45</NUM>
+   <ID>298</ID>
+   <JPGFILE>slides/slide298.swf</JPGFILE>
+   <TITLE default="0">Common loading strategies for dysfunction</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2568060" end_time="2574900" duration="6840">sounds/conference45.mp3</MP3>
+   <TEXTFILE>slides/slide298.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2571,394</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">46</NUM>
+   <ID>302</ID>
+   <JPGFILE>slides/slide302.swf</JPGFILE>
+   <TITLE default="0">Conclusions</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2574900" end_time="2581788" duration="6888">sounds/conference46.mp3</MP3>
+   <TEXTFILE>slides/slide302.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2578,273</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">47</NUM>
+   <ID>303</ID>
+   <JPGFILE>slides/slide303.swf</JPGFILE>
+   <TITLE default="0">Conclusions</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2581788" end_time="2589223" duration="7435">sounds/conference47.mp3</MP3>
+   <TEXTFILE>slides/slide303.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2585,391</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">48</NUM>
+   <ID>302</ID>
+   <JPGFILE>slides/slide302.swf</JPGFILE>
+   <TITLE default="0">Conclusions</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2589223" end_time="2599554" duration="10331">sounds/conference48.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2592,995</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">49</NUM>
+   <ID>298</ID>
+   <JPGFILE>slides/slide298.swf</JPGFILE>
+   <TITLE default="0">Common loading strategies for dysfunction</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2599554" end_time="2607185" duration="7631">sounds/conference49.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2603,385</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">50</NUM>
+   <ID>302</ID>
+   <JPGFILE>slides/slide302.swf</JPGFILE>
+   <TITLE default="0">Conclusions</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2607185" end_time="2614828" duration="7643">sounds/conference50.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2611,041</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">51</NUM>
+   <ID>303</ID>
+   <JPGFILE>slides/slide303.swf</JPGFILE>
+   <TITLE default="0">Conclusions</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2614828" end_time="2626525" duration="11697">sounds/conference51.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2618,717</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">52</NUM>
+   <ID>302</ID>
+   <JPGFILE>slides/slide302.swf</JPGFILE>
+   <TITLE default="0">Conclusions</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2626525" end_time="2676501" duration="49976">sounds/conference52.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2630,041</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">53</NUM>
+   <ID>303</ID>
+   <JPGFILE>slides/slide303.swf</JPGFILE>
+   <TITLE default="0">Conclusions</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2676501" end_time="2706910" duration="30409">sounds/conference53.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2680,958</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">54</NUM>
+   <ID>304</ID>
+   <JPGFILE>slides/slide304.swf</JPGFILE>
+   <TITLE default="0">Reliability studies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2706910" end_time="2738239" duration="31329">sounds/conference54.mp3</MP3>
+   <TEXTFILE>slides/slide304.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2711,358</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">55</NUM>
+   <ID>308</ID>
+   <JPGFILE>slides/slide308.swf</JPGFILE>
+   <TITLE default="0">Reliability studies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2738239" end_time="2756627" duration="18388">sounds/conference55.mp3</MP3>
+   <TEXTFILE>slides/slide308.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2742,438</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">56</NUM>
+   <ID>305</ID>
+   <JPGFILE>slides/slide305.swf</JPGFILE>
+   <TITLE default="0">Randomised controlled trial</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2756627" end_time="2780903" duration="24276">sounds/conference56.mp3</MP3>
+   <TEXTFILE>slides/slide305.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2760,957</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">57</NUM>
+   <ID>306</ID>
+   <JPGFILE>slides/slide306.swf</JPGFILE>
+   <TITLE default="0">Rosedale et al. (2014)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2780903" end_time="2832399" duration="51496">sounds/conference57.mp3</MP3>
+   <TEXTFILE>slides/slide306.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2785,389</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">58</NUM>
+   <ID>309</ID>
+   <JPGFILE>slides/slide309.swf</JPGFILE>
+   <TITLE default="0">Rosedale et al. (2014)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2832399" end_time="2945781" duration="113382">sounds/conference58.mp3</MP3>
+   <TEXTFILE>slides/slide309.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2837,12</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">59</NUM>
+   <ID>310</ID>
+   <JPGFILE>slides/slide310.swf</JPGFILE>
+   <TITLE default="0">Rosedale et al. (2014)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2945781" end_time="2990580" duration="44799">sounds/conference59.mp3</MP3>
+   <TEXTFILE>slides/slide310.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2950,544</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">60</NUM>
+   <ID>311</ID>
+   <JPGFILE>slides/slide311.swf</JPGFILE>
+   <TITLE default="0">Rosedale et al. (2014)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2990580" end_time="3015993" duration="25413">sounds/conference60.mp3</MP3>
+   <TEXTFILE>slides/slide311.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2995,42</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">61</NUM>
+   <ID>307</ID>
+   <JPGFILE>slides/slide307.swf</JPGFILE>
+   <TITLE default="0">Bottom  line</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3015993" end_time="3062459" duration="46466">sounds/conference61.mp3</MP3>
+   <TEXTFILE>slides/slide307.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3020,473</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">62</NUM>
+   <ID>315</ID>
+   <JPGFILE>slides/slide315.swf</JPGFILE>
+   <TITLE default="0">For reference list</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3062459" end_time="3120596" duration="58137">sounds/conference62.mp3</MP3>
+   <TEXTFILE>slides/slide315.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3067,047</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>

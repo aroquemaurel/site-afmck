@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>LONG.ppt</PPTNAME>
+  <GENERATED>09/02/2015 12:33:19</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>10689913</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME>C:\Users\Congres\Desktop\LONG.jpg</PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr</LINK>
+  <SPEAKER></SPEAKER>
+  <SPEAKER_EMAIL>Audrey LONG</SPEAKER_EMAIL>
+  <TITLE>Centralisation Phenomenon And Directional Preference</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>2304</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="1">
+   <NUM pptslide="1">1</NUM>
+   <ID>363</ID>
+   <JPGFILE>slides/slide363.swf</JPGFILE>
+   <TITLE default="1">Audrey Long PT, Dip MDT</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="575" end_time="102131" duration="101556">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide363.txt</TEXTFILE>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">2</NUM>
+   <ID>471</ID>
+   <JPGFILE>slides/slide471.swf</JPGFILE>
+   <TITLE default="1">Why is it important to  know the difference?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="102131" end_time="172007" duration="69876">sounds/conference2.mp3</MP3>
+   <TEXTFILE>slides/slide471.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">102,366</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">3</NUM>
+   <ID>541</ID>
+   <JPGFILE>slides/slide541.swf</JPGFILE>
+   <TITLE default="1">Centralisation appears to be a spine phenomenon 	change in pain location toward midline</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="172007" end_time="190029" duration="18022">sounds/conference3.mp3</MP3>
+   <TEXTFILE>slides/slide541.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">172,29</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">4</NUM>
+   <ID>446</ID>
+   <JPGFILE>slides/slide446.swf</JPGFILE>
+   <TITLE default="1">Directional Preference ≠ Centralisation Phenomenon</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="190029" end_time="193627" duration="3598">sounds/conference4.mp3</MP3>
+   <TEXTFILE>slides/slide446.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">190,324</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">5</NUM>
+   <ID>445</ID>
+   <JPGFILE>slides/slide445.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="193627" end_time="214761" duration="21134">sounds/conference5.mp3</MP3>
+   <TEXTFILE>slides/slide445.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">193,957</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>447</ID>
+   <JPGFILE>slides/slide447.swf</JPGFILE>
+   <TITLE default="1">Slide192</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="214761" end_time="218801" duration="4040">sounds/conference6.mp3</MP3>
+   <TEXTFILE>slides/slide447.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">215,196</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>495</ID>
+   <JPGFILE>slides/slide495.swf</JPGFILE>
+   <TITLE default="1">One Example	</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="218801" end_time="222473" duration="3672">sounds/conference7.mp3</MP3>
+   <TEXTFILE>slides/slide495.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">219,314</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">8</NUM>
+   <ID>447</ID>
+   <JPGFILE>slides/slide447.swf</JPGFILE>
+   <TITLE default="1">Slide192</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="222473" end_time="237341" duration="14868">sounds/conference8.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">222,883</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>495</ID>
+   <JPGFILE>slides/slide495.swf</JPGFILE>
+   <TITLE default="1">One Example	</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="237341" end_time="287185" duration="49844">sounds/conference9.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">237,817</ENTRY>
+    <ENTRY TIMER="18783" ACTION="next">256,6</ENTRY>
+    <ENTRY TIMER="20324" ACTION="next">258,141</ENTRY>
+    <ENTRY TIMER="45892" ACTION="next">283,709</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>522</ID>
+   <JPGFILE>slides/slide522.swf</JPGFILE>
+   <TITLE default="1">Be cautious with terminology  in the clinic and research</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="287185" end_time="354396" duration="67211">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide522.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">287,855</ENTRY>
+    <ENTRY TIMER="1036" ACTION="next">288,891</ENTRY>
+    <ENTRY TIMER="12189" ACTION="next">300,044</ENTRY>
+    <ENTRY TIMER="26408" ACTION="next">314,263</ENTRY>
+    <ENTRY TIMER="56010" ACTION="next">343,865</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">11</NUM>
+   <ID>479</ID>
+   <JPGFILE>slides/slide479.swf</JPGFILE>
+   <TITLE default="1">However both CP and DP have  Implications for:	</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="354396" end_time="367154" duration="12758">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide479.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">355,051</ENTRY>
+    <ENTRY TIMER="6063" ACTION="next">361,114</ENTRY>
+    <ENTRY TIMER="8240" ACTION="next">363,291</ENTRY>
+    <ENTRY TIMER="9649" ACTION="next">364,7</ENTRY>
+    <ENTRY TIMER="10608" ACTION="next">365,659</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">12</NUM>
+   <ID>498</ID>
+   <JPGFILE>slides/slide498.swf</JPGFILE>
+   <TITLE default="1">1.  Patient</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="367154" end_time="385080" duration="17926">sounds/conference12.mp3</MP3>
+   <TEXTFILE>slides/slide498.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">367,895</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>499</ID>
+   <JPGFILE>slides/slide499.swf</JPGFILE>
+   <TITLE default="1">2.  Clinician</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="385080" end_time="449210" duration="64130">sounds/conference13.mp3</MP3>
+   <TEXTFILE>slides/slide499.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">385,877</ENTRY>
+    <ENTRY TIMER="6559" ACTION="next">392,436</ENTRY>
+    <ENTRY TIMER="28660" ACTION="next">414,537</ENTRY>
+    <ENTRY TIMER="32614" ACTION="next">418,491</ENTRY>
+    <ENTRY TIMER="41631" ACTION="next">427,508</ENTRY>
+    <ENTRY TIMER="50271" ACTION="next">436,148</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>504</ID>
+   <JPGFILE>slides/slide504.swf</JPGFILE>
+   <TITLE default="1">Diagnosing painful sacroiliac joints:  A validity study of a McKenzie evaluation and sacroiliac provocation tests. Laslett et al.  2003 Aust J of Physio.</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="449210" end_time="600055" duration="150845">sounds/conference14.mp3</MP3>
+   <TEXTFILE>slides/slide504.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">450,055</ENTRY>
+    <ENTRY TIMER="4691" ACTION="next">454,746</ENTRY>
+    <ENTRY TIMER="11605" ACTION="next">461,66</ENTRY>
+    <ENTRY TIMER="12945" ACTION="next">463</ENTRY>
+    <ENTRY TIMER="27605" ACTION="next">477,66</ENTRY>
+    <ENTRY TIMER="40969" ACTION="next">491,024</ENTRY>
+    <ENTRY TIMER="57333" ACTION="next">507,388</ENTRY>
+    <ENTRY TIMER="122011" ACTION="next">572,066</ENTRY>
+    <ENTRY TIMER="123280" ACTION="next">573,335</ENTRY>
+    <ENTRY TIMER="145591" ACTION="next">595,646</ENTRY>
+    <ENTRY TIMER="146577" ACTION="next">596,632</ENTRY>
+    <ENTRY TIMER="147604" ACTION="next">597,659</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>552</ID>
+   <JPGFILE>slides/slide552.swf</JPGFILE>
+   <TITLE default="1">Neck or shoulder?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="600055" end_time="622794" duration="22739">sounds/conference15.mp3</MP3>
+   <TEXTFILE>slides/slide552.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">600,901</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>553</ID>
+   <JPGFILE>slides/slide553.swf</JPGFILE>
+   <TITLE default="1">120 consecutive patients  referred for “shoulder pain”,  denied neck problem. Dekkers M,  Gustaitis R, Lopeman D manuscript, not yet published data</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="622794" end_time="699660" duration="76866">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide553.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">623,77</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>554</ID>
+   <JPGFILE>slides/slide554.swf</JPGFILE>
+   <TITLE default="1">Methods:</TITLE>
+   <COMMENTS default="1">Study, Document DASH, set baselines, assess posture, screen and reassess</COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="699660" end_time="776262" duration="76602">sounds/conference17.mp3</MP3>
+   <TEXTFILE>slides/slide554.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">700,692</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>556</ID>
+   <JPGFILE>slides/slide556.swf</JPGFILE>
+   <TITLE default="1">Shoulder signs immediately after  cervical repeated movements or positions.</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="776262" end_time="791310" duration="15048">sounds/conference18.mp3</MP3>
+   <TEXTFILE>slides/slide556.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">777,379</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">19</NUM>
+   <ID>557</ID>
+   <JPGFILE>slides/slide557.swf</JPGFILE>
+   <TITLE default="1">72% had changes in at least 2 criteria e.g. better ROM and less pain with concordant sign.</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="791310" end_time="865234" duration="73924">sounds/conference19.mp3</MP3>
+   <TEXTFILE>slides/slide557.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">792,472</ENTRY>
+    <ENTRY TIMER="15063" ACTION="next">807,535</ENTRY>
+    <ENTRY TIMER="32927" ACTION="next">825,399</ENTRY>
+    <ENTRY TIMER="52355" ACTION="next">844,827</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">20</NUM>
+   <ID>558</ID>
+   <JPGFILE>slides/slide558.swf</JPGFILE>
+   <TITLE default="1">Why important?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="865234" end_time="875060" duration="9826">sounds/conference20.mp3</MP3>
+   <TEXTFILE>slides/slide558.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">866,442</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">21</NUM>
+   <ID>557</ID>
+   <JPGFILE>slides/slide557.swf</JPGFILE>
+   <TITLE default="1">72% had changes in at least 2 criteria e.g. better ROM and less pain with concordant sign.</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="875060" end_time="894290" duration="19230">sounds/conference21.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="3">876,328</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">22</NUM>
+   <ID>558</ID>
+   <JPGFILE>slides/slide558.swf</JPGFILE>
+   <TITLE default="1">Why important?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="894290" end_time="931399" duration="37109">sounds/conference22.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">895,582</ENTRY>
+    <ENTRY TIMER="67" ACTION="next">895,649</ENTRY>
+    <ENTRY TIMER="18909" ACTION="next">914,491</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">23</NUM>
+   <ID>559</ID>
+   <JPGFILE>slides/slide559.swf</JPGFILE>
+   <TITLE default="1">This same group of researchers is collecting similar data for  hip differential diagnosis.</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="931399" end_time="984528" duration="53129">sounds/conference23.mp3</MP3>
+   <TEXTFILE>slides/slide559.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">932,862</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">24</NUM>
+   <ID>500</ID>
+   <JPGFILE>slides/slide500.swf</JPGFILE>
+   <TITLE default="1">3.  Payor</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="984528" end_time="987721" duration="3193">sounds/conference24.mp3</MP3>
+   <TEXTFILE>slides/slide500.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">985,923</ENTRY>
+    <ENTRY TIMER="49" ACTION="next">985,972</ENTRY>
+    <ENTRY TIMER="65" ACTION="next">985,988</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">25</NUM>
+   <ID>525</ID>
+   <JPGFILE>slides/slide525.swf</JPGFILE>
+   <TITLE default="1">Rasmussen et al.   Spine 2005;30:2469-73</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="987721" end_time="993373" duration="5652">sounds/conference25.mp3</MP3>
+   <TEXTFILE>slides/slide525.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">989,353</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">26</NUM>
+   <ID>501</ID>
+   <JPGFILE>slides/slide501.swf</JPGFILE>
+   <TITLE default="1">4.  Researchers</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="993373" end_time="996691" duration="3318">sounds/conference26.mp3</MP3>
+   <TEXTFILE>slides/slide501.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">994,999</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">27</NUM>
+   <ID>525</ID>
+   <JPGFILE>slides/slide525.swf</JPGFILE>
+   <TITLE default="1">Rasmussen et al.   Spine 2005;30:2469-73</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="996691" end_time="1000058" duration="3367">sounds/conference27.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">998,37</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">28</NUM>
+   <ID>501</ID>
+   <JPGFILE>slides/slide501.swf</JPGFILE>
+   <TITLE default="1">4.  Researchers</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1000058" end_time="1011042" duration="10984">sounds/conference28.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1001,636</ENTRY>
+    <ENTRY TIMER="6950" ACTION="next">1008,586</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">29</NUM>
+   <ID>465</ID>
+   <JPGFILE>slides/slide465.swf</JPGFILE>
+   <TITLE default="1">Need to Classify on day 1:</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1011042" end_time="1015136" duration="4094">sounds/conference29.mp3</MP3>
+   <TEXTFILE>slides/slide465.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1012,965</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">30</NUM>
+   <ID>466</ID>
+   <JPGFILE>slides/slide466.swf</JPGFILE>
+   <TITLE default="1">Werneke et Hart Spine; 28(2), 161-166, 2003. N = 287</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1015136" end_time="1117340" duration="102204">sounds/conference30.mp3</MP3>
+   <TEXTFILE>slides/slide466.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1017,053</ENTRY>
+    <ENTRY TIMER="49" ACTION="next">1017,102</ENTRY>
+    <ENTRY TIMER="67" ACTION="next">1017,12</ENTRY>
+    <ENTRY TIMER="9974" ACTION="next">1027,027</ENTRY>
+    <ENTRY TIMER="40526" ACTION="next">1057,579</ENTRY>
+    <ENTRY TIMER="70750" ACTION="next">1087,803</ENTRY>
+    <ENTRY TIMER="95230" ACTION="next">1112,283</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">31</NUM>
+   <ID>506</ID>
+   <JPGFILE>slides/slide506.swf</JPGFILE>
+   <TITLE default="1">Werneke et Hart Spine; 28(2), 161-166, 2003. N = 287</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1117340" end_time="1129575" duration="12235">sounds/conference31.mp3</MP3>
+   <TEXTFILE>slides/slide506.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1119,368</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">32</NUM>
+   <ID>507</ID>
+   <JPGFILE>slides/slide507.swf</JPGFILE>
+   <TITLE default="1">Werneke et Hart Spine; 28(2), 161-166, 2003. N = 287</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1129575" end_time="1167190" duration="37615">sounds/conference32.mp3</MP3>
+   <TEXTFILE>slides/slide507.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1131,534</ENTRY>
+    <ENTRY TIMER="12818" ACTION="next">1144,352</ENTRY>
+    <ENTRY TIMER="13277" ACTION="next">1144,811</ENTRY>
+    <ENTRY TIMER="22347" ACTION="next">1153,881</ENTRY>
+    <ENTRY TIMER="32231" ACTION="next">1163,765</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">33</NUM>
+   <ID>588</ID>
+   <JPGFILE>slides/slide588.swf</JPGFILE>
+   <TITLE default="1">Non-centralizers after 7 days Important group to identify early</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1167190" end_time="1194890" duration="27700">sounds/conference33.mp3</MP3>
+   <TEXTFILE>slides/slide588.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1169,266</ENTRY>
+    <ENTRY TIMER="48" ACTION="next">1169,314</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">34</NUM>
+   <ID>437</ID>
+   <JPGFILE>slides/slide437.swf</JPGFILE>
+   <TITLE default="1">Therefore, always consider Day 1 conclusion to be  a “Provisional” Classification</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1194890" end_time="1217216" duration="22326">sounds/conference34.mp3</MP3>
+   <TEXTFILE>slides/slide437.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1197,18</ENTRY>
+    <ENTRY TIMER="15771" ACTION="next">1212,951</ENTRY>
+    <ENTRY TIMER="17049" ACTION="next">1214,229</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">35</NUM>
+   <ID>508</ID>
+   <JPGFILE>slides/slide508.swf</JPGFILE>
+   <TITLE default="1">What I have encountered:  Anecdotal</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1217216" end_time="1222061" duration="4845">sounds/conference35.mp3</MP3>
+   <TEXTFILE>slides/slide508.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1219,483</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">36</NUM>
+   <ID>594</ID>
+   <JPGFILE>slides/slide594.swf</JPGFILE>
+   <TITLE default="1">MDT,  Treat clinical responses We do not treat the image because:</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1222061" end_time="1229207" duration="7146">sounds/conference36.mp3</MP3>
+   <TEXTFILE>slides/slide594.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1224,635</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">37</NUM>
+   <ID>508</ID>
+   <JPGFILE>slides/slide508.swf</JPGFILE>
+   <TITLE default="1">What I have encountered:  Anecdotal</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1229207" end_time="1356276" duration="127069">sounds/conference37.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1231,61</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">38</NUM>
+   <ID>594</ID>
+   <JPGFILE>slides/slide594.swf</JPGFILE>
+   <TITLE default="1">MDT,  Treat clinical responses We do not treat the image because:</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1356276" end_time="1408488" duration="52212">sounds/conference38.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1358,795</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">39</NUM>
+   <ID>595</ID>
+   <JPGFILE>slides/slide595.swf</JPGFILE>
+   <TITLE default="1">Case Report Williams et al. JMMT 2011</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1408488" end_time="1420355" duration="11867">sounds/conference39.mp3</MP3>
+   <TEXTFILE>slides/slide595.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1411,223</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">40</NUM>
+   <ID>484</ID>
+   <JPGFILE>slides/slide484.swf</JPGFILE>
+   <TITLE default="1">Don’t rely on imaging</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1420355" end_time="1479064" duration="58709">sounds/conference40.mp3</MP3>
+   <TEXTFILE>slides/slide484.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1423,103</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">41</NUM>
+   <ID>581</ID>
+   <JPGFILE>slides/slide581.swf</JPGFILE>
+   <TITLE default="1">Curiosity explored in new ways</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1479064" end_time="1488478" duration="9414">sounds/conference41.mp3</MP3>
+   <TEXTFILE>slides/slide581.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1481,89</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">42</NUM>
+   <ID>457</ID>
+   <JPGFILE>slides/slide457.swf</JPGFILE>
+   <TITLE default="1">Low back pain: An assessment using positional MRI and MDT</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1488478" end_time="1563910" duration="75432">sounds/conference42.mp3</MP3>
+   <TEXTFILE>slides/slide457.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1491,451</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">43</NUM>
+   <ID>486</ID>
+   <JPGFILE>slides/slide486.swf</JPGFILE>
+   <TITLE default="1">An evaluation of the MDT method using positional MRI</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1563910" end_time="1570011" duration="6101">sounds/conference43.mp3</MP3>
+   <TEXTFILE>slides/slide486.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1566,835</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">44</NUM>
+   <ID>457</ID>
+   <JPGFILE>slides/slide457.swf</JPGFILE>
+   <TITLE default="1">Low back pain: An assessment using positional MRI and MDT</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1570011" end_time="1576197" duration="6186">sounds/conference44.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1572,944</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">45</NUM>
+   <ID>486</ID>
+   <JPGFILE>slides/slide486.swf</JPGFILE>
+   <TITLE default="1">An evaluation of the MDT method using positional MRI</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1576197" end_time="1610619" duration="34422">sounds/conference45.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1579,378</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">46</NUM>
+   <ID>560</ID>
+   <JPGFILE>slides/slide560.swf</JPGFILE>
+   <TITLE default="1">Nucleus pulposus deformation in response to lumbar spine lateral flexion: an in vivo MRI investigation. Fazey P et al.  Eur Spine J 2010</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1610619" end_time="1621391" duration="10772">sounds/conference46.mp3</MP3>
+   <TEXTFILE>slides/slide560.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1613,825</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">47</NUM>
+   <ID>486</ID>
+   <JPGFILE>slides/slide486.swf</JPGFILE>
+   <TITLE default="1">An evaluation of the MDT method using positional MRI</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1621391" end_time="1634845" duration="13454">sounds/conference47.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1624,882</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">48</NUM>
+   <ID>560</ID>
+   <JPGFILE>slides/slide560.swf</JPGFILE>
+   <TITLE default="1">Nucleus pulposus deformation in response to lumbar spine lateral flexion: an in vivo MRI investigation. Fazey P et al.  Eur Spine J 2010</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1634845" end_time="1661024" duration="26179">sounds/conference48.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1638,316</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">49</NUM>
+   <ID>571</ID>
+   <JPGFILE>slides/slide571.swf</JPGFILE>
+   <TITLE default="1">Nucleus pulposus deformation following application of mechanical diagnosis and therapy: a single case report with magnetic resonance imaging</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1661024" end_time="1668346" duration="7322">sounds/conference49.mp3</MP3>
+   <TEXTFILE>slides/slide571.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1664,536</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">50</NUM>
+   <ID>582</ID>
+   <JPGFILE>slides/slide582.swf</JPGFILE>
+   <TITLE default="1">Slide327</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1668346" end_time="1724889" duration="56543">sounds/conference50.mp3</MP3>
+   <TEXTFILE>slides/slide582.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1672,273</ENTRY>
+    <ENTRY TIMER="18670" ACTION="next">1690,943</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">51</NUM>
+   <ID>572</ID>
+   <JPGFILE>slides/slide572.swf</JPGFILE>
+   <TITLE default="1">In vivo MRI of side bending / side gliding…..  disc hydration shift Takasaki H. JMMT 2013</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1724889" end_time="1747754" duration="22865">sounds/conference51.mp3</MP3>
+   <TEXTFILE>slides/slide572.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1728,796</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">52</NUM>
+   <ID>610</ID>
+   <JPGFILE>slides/slide610.swf</JPGFILE>
+   <TITLE default="1">Watch for this name Ezequiel Gherscovici Brazil</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1747754" end_time="1780072" duration="32318">sounds/conference52.mp3</MP3>
+   <TEXTFILE>slides/slide610.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1751,687</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">53</NUM>
+   <ID>573</ID>
+   <JPGFILE>slides/slide573.swf</JPGFILE>
+   <TITLE default="1">Neck?  Cranio-cervical flexion test. Takasaki et Herbowy JMMT 2014</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1780072" end_time="1890858" duration="110786">sounds/conference53.mp3</MP3>
+   <TEXTFILE>slides/slide573.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1784,239</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">54</NUM>
+   <ID>589</ID>
+   <JPGFILE>slides/slide589.swf</JPGFILE>
+   <TITLE default="1">Recall Hans van Helvoirt</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1890858" end_time="1920787" duration="29929">sounds/conference54.mp3</MP3>
+   <TEXTFILE>slides/slide589.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1894,874</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">55</NUM>
+   <ID>542</ID>
+   <JPGFILE>slides/slide542.swf</JPGFILE>
+   <TITLE default="1">Directional Preference in the extremity joints</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1920787" end_time="1929315" duration="8528">sounds/conference55.mp3</MP3>
+   <TEXTFILE>slides/slide542.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1925,016</ENTRY>
+    <ENTRY TIMER="61" ACTION="next">1925,077</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">56</NUM>
+   <ID>574</ID>
+   <JPGFILE>slides/slide574.swf</JPGFILE>
+   <TITLE default="1">Efficacy of Exercise Intervention as determined by the McKenzie System of Mechanical Diagnosis and Therapy  (MDT) for Knee Osteoarthritis:   A randomized controlled trial</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1929315" end_time="1937580" duration="8265">sounds/conference56.mp3</MP3>
+   <TEXTFILE>slides/slide574.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1933,447</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">57</NUM>
+   <ID>458</ID>
+   <JPGFILE>slides/slide458.swf</JPGFILE>
+   <TITLE default="1">MDT in the Extremities</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1937580" end_time="1952479" duration="14899">sounds/conference57.mp3</MP3>
+   <TEXTFILE>slides/slide458.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1941,824</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">58</NUM>
+   <ID>543</ID>
+   <JPGFILE>slides/slide543.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1952479" end_time="1964454" duration="11975">sounds/conference58.mp3</MP3>
+   <TEXTFILE>slides/slide543.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1957,197</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">59</NUM>
+   <ID>549</ID>
+   <JPGFILE>slides/slide549.swf</JPGFILE>
+   <TITLE default="1">Can we imagine?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1964454" end_time="2056252" duration="91798">sounds/conference59.mp3</MP3>
+   <TEXTFILE>slides/slide549.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1969,206</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">60</NUM>
+   <ID>527</ID>
+   <JPGFILE>slides/slide527.swf</JPGFILE>
+   <TITLE default="1">Synovial plicae of the hip: evaluation using MR arthrography in patients with hip pain</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2056252" end_time="2066857" duration="10605">sounds/conference60.mp3</MP3>
+   <TEXTFILE>slides/slide527.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2061,157</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">61</NUM>
+   <ID>528</ID>
+   <JPGFILE>slides/slide528.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2066857" end_time="2083346" duration="16489">sounds/conference61.mp3</MP3>
+   <TEXTFILE>slides/slide528.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2071,616</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">62</NUM>
+   <ID>529</ID>
+   <JPGFILE>slides/slide529.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2083346" end_time="2100182" duration="16836">sounds/conference62.mp3</MP3>
+   <TEXTFILE>slides/slide529.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2088,4</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">63</NUM>
+   <ID>533</ID>
+   <JPGFILE>slides/slide533.swf</JPGFILE>
+   <TITLE default="1">Elbow</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2100182" end_time="2110684" duration="10502">sounds/conference63.mp3</MP3>
+   <TEXTFILE>slides/slide533.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2105,317</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">64</NUM>
+   <ID>534</ID>
+   <JPGFILE>slides/slide534.swf</JPGFILE>
+   <TITLE default="1">Derangement possible mechanisms</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2110684" end_time="2131239" duration="20555">sounds/conference64.mp3</MP3>
+   <TEXTFILE>slides/slide534.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2116,019</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">65</NUM>
+   <ID>535</ID>
+   <JPGFILE>slides/slide535.swf</JPGFILE>
+   <TITLE default="1">Slide280</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2131239" end_time="2141987" duration="10748">sounds/conference65.mp3</MP3>
+   <TEXTFILE>slides/slide535.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2136,512</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">66</NUM>
+   <ID>539</ID>
+   <JPGFILE>slides/slide539.swf</JPGFILE>
+   <TITLE default="1">Man Ther 2010</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2141987" end_time="2159556" duration="17569">sounds/conference66.mp3</MP3>
+   <TEXTFILE>slides/slide539.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2147,381</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">67</NUM>
+   <ID>538</ID>
+   <JPGFILE>slides/slide538.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2159556" end_time="2172258" duration="12702">sounds/conference67.mp3</MP3>
+   <TEXTFILE>slides/slide538.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2165,335</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">68</NUM>
+   <ID>540</ID>
+   <JPGFILE>slides/slide540.swf</JPGFILE>
+   <TITLE default="1">Plausible Theories Yet to be proven</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2172258" end_time="2199013" duration="26755">sounds/conference68.mp3</MP3>
+   <TEXTFILE>slides/slide540.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2177,935</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">69</NUM>
+   <ID>583</ID>
+   <JPGFILE>slides/slide583.swf</JPGFILE>
+   <TITLE default="1">What about Achilles tendon pain?</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2199013" end_time="2268792" duration="69779">sounds/conference69.mp3</MP3>
+   <TEXTFILE>slides/slide583.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2204,767</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">70</NUM>
+   <ID>584</ID>
+   <JPGFILE>slides/slide584.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2268792" end_time="2304274" duration="35482">sounds/conference70.mp3</MP3>
+   <TEXTFILE>slides/slide584.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2274,265</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>3-MATISSE1ET2-SAMEDI - BLANC et KAPLANIS.ppt</PPTNAME>
+  <GENERATED>09/02/2015 13:20:37</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>11228221</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME></PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr/</LINK>
+  <SPEAKER>Jean-Luc BLANC - Evangelos KAPLANIS</SPEAKER>
+  <SPEAKER_EMAIL></SPEAKER_EMAIL>
+  <TITLE>Evolution des pratiques en chirurgie rachidienne et McKenzie</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>1456</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="1">
+   <NUM pptslide="1">1</NUM>
+   <ID>290</ID>
+   <JPGFILE>slides/slide290.swf</JPGFILE>
+   <TITLE default="1">Evolution des pratiques en chirurgie rachidienne et McKenzie</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="592" end_time="201368" duration="200776">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide290.txt</TEXTFILE>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">2</NUM>
+   <ID>291</ID>
+   <JPGFILE>slides/slide291.swf</JPGFILE>
+   <TITLE default="1">Petite mise au point…</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="201368" end_time="229217" duration="27849">sounds/conference2.mp3</MP3>
+   <TEXTFILE>slides/slide291.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">201,646</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">3</NUM>
+   <ID>292</ID>
+   <JPGFILE>slides/slide292.swf</JPGFILE>
+   <TITLE default="1">Quelques rappels…</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="229217" end_time="283391" duration="54174">sounds/conference3.mp3</MP3>
+   <TEXTFILE>slides/slide292.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">229,502</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">4</NUM>
+   <ID>293</ID>
+   <JPGFILE>slides/slide293.swf</JPGFILE>
+   <TITLE default="1">Résultats de la chirurgie</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="283391" end_time="352236" duration="68845">sounds/conference4.mp3</MP3>
+   <TEXTFILE>slides/slide293.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">283,727</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">5</NUM>
+   <ID>294</ID>
+   <JPGFILE>slides/slide294.swf</JPGFILE>
+   <TITLE default="1">Pourquoi ne pas opérer ?...</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="352236" end_time="411098" duration="58862">sounds/conference5.mp3</MP3>
+   <TEXTFILE>slides/slide294.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">352,586</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>295</ID>
+   <JPGFILE>slides/slide295.swf</JPGFILE>
+   <TITLE default="1">Pourquoi ne pas opérer ?...</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="411098" end_time="453754" duration="42656">sounds/conference6.mp3</MP3>
+   <TEXTFILE>slides/slide295.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">411,521</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>296</ID>
+   <JPGFILE>slides/slide296.swf</JPGFILE>
+   <TITLE default="1">Des précédents encourageants</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="453754" end_time="483048" duration="29294">sounds/conference7.mp3</MP3>
+   <TEXTFILE>slides/slide296.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">454,227</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">8</NUM>
+   <ID>297</ID>
+   <JPGFILE>slides/slide297.swf</JPGFILE>
+   <TITLE default="1">Conséquences sur la pratique...</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="483048" end_time="524115" duration="41067">sounds/conference8.mp3</MP3>
+   <TEXTFILE>slides/slide297.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">483,569</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>298</ID>
+   <JPGFILE>slides/slide298.swf</JPGFILE>
+   <TITLE default="1">Conséquences sur la pratique...</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="524115" end_time="615176" duration="91061">sounds/conference9.mp3</MP3>
+   <TEXTFILE>slides/slide298.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">524,715</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>299</ID>
+   <JPGFILE>slides/slide299.swf</JPGFILE>
+   <TITLE default="1">Conséquences sur la pratique...</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="615176" end_time="676645" duration="61469">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide299.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">615,821</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">11</NUM>
+   <ID>300</ID>
+   <JPGFILE>slides/slide300.swf</JPGFILE>
+   <TITLE default="1">Des résultats « intuitifs »</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="676645" end_time="708683" duration="32038">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide300.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">677,275</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">12</NUM>
+   <ID>301</ID>
+   <JPGFILE>slides/slide301.swf</JPGFILE>
+   <TITLE default="1">La force d’un réseau</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="708683" end_time="821310" duration="112627">sounds/conference12.mp3</MP3>
+   <TEXTFILE>slides/slide301.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">709,483</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>288</ID>
+   <JPGFILE>slides/slide288.swf</JPGFILE>
+   <TITLE default="1">L’EXPERIENCE Poitevine</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="821310" end_time="890152" duration="68842">sounds/conference13.mp3</MP3>
+   <TEXTFILE>slides/slide288.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">822,099</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>268</ID>
+   <JPGFILE>slides/slide268.swf</JPGFILE>
+   <TITLE default="1">McKenzie dans le Poitou-Charentes</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="890152" end_time="930431" duration="40279">sounds/conference14.mp3</MP3>
+   <TEXTFILE>slides/slide268.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">891,037</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>277</ID>
+   <JPGFILE>slides/slide277.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="930431" end_time="1009887" duration="79456">sounds/conference15.mp3</MP3>
+   <TEXTFILE>slides/slide277.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">931,417</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>285</ID>
+   <JPGFILE>slides/slide285.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1009887" end_time="1076866" duration="66979">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide285.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1010,756</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>289</ID>
+   <JPGFILE>slides/slide289.swf</JPGFILE>
+   <TITLE default="1">Le concept MDT  dans le parcours de soins du patient</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1076866" end_time="1176537" duration="99671">sounds/conference17.mp3</MP3>
+   <TEXTFILE>slides/slide289.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1077,928</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>283</ID>
+   <JPGFILE>slides/slide283.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1176537" end_time="1456834" duration="280297">sounds/conference18.mp3</MP3>
+   <TEXTFILE>slides/slide283.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1177,636</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>

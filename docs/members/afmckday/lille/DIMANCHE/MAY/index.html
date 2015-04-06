@@ -1,0 +1,32 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head><script>
+function loadContent(html5Priority, html5Content, flashContent) {
+	var href = flashContent;
+	if (html5Priority) {
+		if (isHTML5Enabled()) href = html5Content;
+	} else {
+		if (!isFlashEnabled()) href = html5Content;
+	}
+	window.location.assign(href);
+}
+
+function isHTML5Enabled() {
+	return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1");
+}
+
+//checks if flash is installed/enabled on the browser
+function isFlashEnabled() {
+	var hasFlash = false;
+	try {
+		var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+		if (fo) hasFlash = true;
+	} catch(e) {
+		if (navigator.mimeTypes ["application/x-shockwave-flash"] != undefined) hasFlash = true;
+	}
+	return hasFlash;
+}
+
+loadContent(true, "html5.html", "flash.html");
+</script></head>
+</html>

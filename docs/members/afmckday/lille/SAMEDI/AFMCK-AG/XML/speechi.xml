@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <INFOS>
+  <VERSION>1</VERSION>
+  <PPTNAME>10-AG de l'AFMcK 2015.ppt</PPTNAME>
+  <GENERATED>09/02/2015 14:37:34</GENERATED>
+  <LICENCE>1041652315</LICENCE>
+  <SIGNATURE>10731815</SIGNATURE>
+  <LOGO>XML/logo.jpg</LOGO>
+  <PICFILENAME></PICFILENAME>
+  <LOGOFILENAME>C:\Users\Congres\Desktop\afmck-2jpg_logo6356.jpg</LOGOFILENAME>
+  <LINKPICTURE>XML/link.jpg</LINKPICTURE>
+  <LINK>http://www.afmck.fr/</LINK>
+  <SPEAKER>AFMCK</SPEAKER>
+  <SPEAKER_EMAIL></SPEAKER_EMAIL>
+  <TITLE>AG AFMCK</TITLE>
+  <MODE>2</MODE>
+  <SCORMOPTIONS>
+   <SCORMTITLE></SCORMTITLE>
+   <VALIDATION>0</VALIDATION>
+   <VIEWEDSLIDE>ALL</VIEWEDSLIDE>
+   <VALIDATIONTIME>0</VALIDATIONTIME>
+   <PRINCIPALQUIZ></PRINCIPALQUIZ>
+   <SCORMDESCRIPTION>Description :</SCORMDESCRIPTION>
+   <SCORMVERSION>1.0</SCORMVERSION>
+   <SCORMZIP>0</SCORMZIP>
+  </SCORMOPTIONS>
+  <TOTALTIME display="0">
+   <TEXT>Durée :</TEXT>
+   <TAG>5903</TAG>
+  </TOTALTIME>
+  <PLAY_MODE_GLOBAL volume="50">AUTO</PLAY_MODE_GLOBAL>
+  <VIDEO_SERVER></VIDEO_SERVER>
+ </INFOS>
+ <SLIDES>
+  <SLIDE show="1">
+   <NUM pptslide="1">1</NUM>
+   <ID>281</ID>
+   <JPGFILE>slides/slide281.swf</JPGFILE>
+   <TITLE default="1">ASSEMBLÉE GÉNÉRALE 2015</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="541" end_time="76789" duration="76248">sounds/conference1.mp3</MP3>
+   <TEXTFILE>slides/slide281.txt</TEXTFILE>
+   <TIMELINE>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">2</NUM>
+   <ID>283</ID>
+   <JPGFILE>slides/slide283.swf</JPGFILE>
+   <TITLE default="1">1- Émargement des participants</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="76789" end_time="103184" duration="26395">sounds/conference2.mp3</MP3>
+   <TEXTFILE>slides/slide283.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">76,994</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">3</NUM>
+   <ID>284</ID>
+   <JPGFILE>slides/slide284.swf</JPGFILE>
+   <TITLE default="1">2- Désignation du secrétaire de séance</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="103184" end_time="244564" duration="141380">sounds/conference3.mp3</MP3>
+   <TEXTFILE>slides/slide284.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">103,468</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">4</NUM>
+   <ID>256</ID>
+   <JPGFILE>slides/slide256.swf</JPGFILE>
+   <TITLE default="1">3- Rapport moral 2014  du Président</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="244564" end_time="257203" duration="12639">sounds/conference4.mp3</MP3>
+   <TEXTFILE>slides/slide256.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">244,879</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">5</NUM>
+   <ID>259</ID>
+   <JPGFILE>slides/slide259.swf</JPGFILE>
+   <TITLE default="1">Une année de plus pour l’AFMcK</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="257203" end_time="312340" duration="55137">sounds/conference5.mp3</MP3>
+   <TEXTFILE>slides/slide259.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">257,609</ENTRY>
+    <ENTRY TIMER="17442" ACTION="next">275,051</ENTRY>
+    <ENTRY TIMER="27036" ACTION="next">284,645</ENTRY>
+    <ENTRY TIMER="43556" ACTION="next">301,165</ENTRY>
+    <ENTRY TIMER="45356" ACTION="next">302,965</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">6</NUM>
+   <ID>260</ID>
+   <JPGFILE>slides/slide260.swf</JPGFILE>
+   <TITLE default="1">Lors de l’AG de LYON,  des décisions importantes ont été prises</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="312340" end_time="354546" duration="42206">sounds/conference6.mp3</MP3>
+   <TEXTFILE>slides/slide260.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">312,815</ENTRY>
+    <ENTRY TIMER="6829" ACTION="next">319,644</ENTRY>
+    <ENTRY TIMER="26483" ACTION="next">339,298</ENTRY>
+    <ENTRY TIMER="33819" ACTION="next">346,634</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">7</NUM>
+   <ID>258</ID>
+   <JPGFILE>slides/slide258.swf</JPGFILE>
+   <TITLE default="1">Trancher et trouver une solution pour satisfaire la majorité</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="354546" end_time="612171" duration="257625">sounds/conference7.mp3</MP3>
+   <TEXTFILE>slides/slide258.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">355,045</ENTRY>
+    <ENTRY TIMER="16451" ACTION="next">371,496</ENTRY>
+    <ENTRY TIMER="17463" ACTION="next">372,508</ENTRY>
+    <ENTRY TIMER="38128" ACTION="next">393,173</ENTRY>
+    <ENTRY TIMER="60686" ACTION="next">415,731</ENTRY>
+    <ENTRY TIMER="71416" ACTION="next">426,461</ENTRY>
+    <ENTRY TIMER="105969" ACTION="next">461,014</ENTRY>
+    <ENTRY TIMER="135432" ACTION="next">490,477</ENTRY>
+    <ENTRY TIMER="177212" ACTION="next">532,257</ENTRY>
+    <ENTRY TIMER="181658" ACTION="next">536,703</ENTRY>
+    <ENTRY TIMER="202836" ACTION="next">557,881</ENTRY>
+    <ENTRY TIMER="207784" ACTION="next">562,829</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">8</NUM>
+   <ID>261</ID>
+   <JPGFILE>slides/slide261.swf</JPGFILE>
+   <TITLE default="1">De nouveaux membres ont intégrés le CA</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="612171" end_time="760466" duration="148295">sounds/conference8.mp3</MP3>
+   <TEXTFILE>slides/slide261.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">612,786</ENTRY>
+    <ENTRY TIMER="9754" ACTION="next">622,54</ENTRY>
+    <ENTRY TIMER="11158" ACTION="next">623,944</ENTRY>
+    <ENTRY TIMER="23753" ACTION="next">636,539</ENTRY>
+    <ENTRY TIMER="80892" ACTION="next">693,678</ENTRY>
+    <ENTRY TIMER="94240" ACTION="next">707,026</ENTRY>
+    <ENTRY TIMER="103419" ACTION="next">716,205</ENTRY>
+    <ENTRY TIMER="109626" ACTION="next">722,412</ENTRY>
+    <ENTRY TIMER="119991" ACTION="next">732,777</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">9</NUM>
+   <ID>262</ID>
+   <JPGFILE>slides/slide262.swf</JPGFILE>
+   <TITLE default="1">Des actions nouvelles ont vu le jour </TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="760466" end_time="950417" duration="189951">sounds/conference9.mp3</MP3>
+   <TEXTFILE>slides/slide262.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">761,104</ENTRY>
+    <ENTRY TIMER="1620" ACTION="next">762,724</ENTRY>
+    <ENTRY TIMER="14366" ACTION="next">775,47</ENTRY>
+    <ENTRY TIMER="47114" ACTION="next">808,218</ENTRY>
+    <ENTRY TIMER="48555" ACTION="next">809,659</ENTRY>
+    <ENTRY TIMER="53179" ACTION="next">814,283</ENTRY>
+    <ENTRY TIMER="61346" ACTION="next">822,45</ENTRY>
+    <ENTRY TIMER="98630" ACTION="next">859,734</ENTRY>
+    <ENTRY TIMER="120285" ACTION="next">881,389</ENTRY>
+    <ENTRY TIMER="140890" ACTION="next">901,994</ENTRY>
+    <ENTRY TIMER="168437" ACTION="next">929,541</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">10</NUM>
+   <ID>296</ID>
+   <JPGFILE>slides/slide296.swf</JPGFILE>
+   <TITLE default="1">Des actions nouvelles ont vu le jour </TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="950417" end_time="958755" duration="8338">sounds/conference10.mp3</MP3>
+   <TEXTFILE>slides/slide296.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">951,072</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">11</NUM>
+   <ID>263</ID>
+   <JPGFILE>slides/slide263.swf</JPGFILE>
+   <TITLE default="1">Des actions nationales ont été poursuivies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="958755" end_time="1133593" duration="174838">sounds/conference11.mp3</MP3>
+   <TEXTFILE>slides/slide263.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">959,519</ENTRY>
+    <ENTRY TIMER="2923" ACTION="next">962,442</ENTRY>
+    <ENTRY TIMER="65020" ACTION="next">1024,539</ENTRY>
+    <ENTRY TIMER="115146" ACTION="next">1074,665</ENTRY>
+    <ENTRY TIMER="126637" ACTION="next">1086,156</ENTRY>
+    <ENTRY TIMER="146799" ACTION="next">1106,318</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">12</NUM>
+   <ID>280</ID>
+   <JPGFILE>slides/slide280.swf</JPGFILE>
+   <TITLE default="1">Des actions nationales ont été poursuivies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1133593" end_time="1145934" duration="12341">sounds/conference12.mp3</MP3>
+   <TEXTFILE>slides/slide280.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1134,273</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">13</NUM>
+   <ID>263</ID>
+   <JPGFILE>slides/slide263.swf</JPGFILE>
+   <TITLE default="1">Des actions nationales ont été poursuivies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1145934" end_time="1283956" duration="138022">sounds/conference13.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="5">1146,74</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">14</NUM>
+   <ID>280</ID>
+   <JPGFILE>slides/slide280.swf</JPGFILE>
+   <TITLE default="1">Des actions nationales ont été poursuivies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1283956" end_time="1383231" duration="99275">sounds/conference14.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1284,794</ENTRY>
+    <ENTRY TIMER="85" ACTION="next">1284,879</ENTRY>
+    <ENTRY TIMER="105" ACTION="next">1284,899</ENTRY>
+    <ENTRY TIMER="76242" ACTION="next">1361,036</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">15</NUM>
+   <ID>264</ID>
+   <JPGFILE>slides/slide264.swf</JPGFILE>
+   <TITLE default="1">Des actions nationales ont été poursuivies</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1383231" end_time="1933791" duration="550560">sounds/conference15.mp3</MP3>
+   <TEXTFILE>slides/slide264.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1384,171</ENTRY>
+    <ENTRY TIMER="42720" ACTION="next">1426,891</ENTRY>
+    <ENTRY TIMER="51782" ACTION="next">1435,953</ENTRY>
+    <ENTRY TIMER="230703" ACTION="next">1614,874</ENTRY>
+    <ENTRY TIMER="371393" ACTION="next">1755,564</ENTRY>
+    <ENTRY TIMER="396093" ACTION="next">1780,264</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">16</NUM>
+   <ID>271</ID>
+   <JPGFILE>slides/slide271.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="1933791" end_time="2069567" duration="135776">sounds/conference16.mp3</MP3>
+   <TEXTFILE>slides/slide271.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">1934,778</ENTRY>
+    <ENTRY TIMER="82755" ACTION="next">2017,533</ENTRY>
+    <ENTRY TIMER="89732" ACTION="next">2024,51</ENTRY>
+    <ENTRY TIMER="99732" ACTION="next">2034,51</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">17</NUM>
+   <ID>272</ID>
+   <JPGFILE>slides/slide272.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2069567" end_time="2076455" duration="6888">sounds/conference17.mp3</MP3>
+   <TEXTFILE>slides/slide272.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2070,675</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">18</NUM>
+   <ID>271</ID>
+   <JPGFILE>slides/slide271.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2076455" end_time="2078779" duration="2324">sounds/conference18.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="3">2077,53</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">19</NUM>
+   <ID>272</ID>
+   <JPGFILE>slides/slide272.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2078779" end_time="2135079" duration="56300">sounds/conference19.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2079,929</ENTRY>
+    <ENTRY TIMER="97" ACTION="next">2080,026</ENTRY>
+    <ENTRY TIMER="168" ACTION="next">2080,097</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">20</NUM>
+   <ID>266</ID>
+   <JPGFILE>slides/slide266.swf</JPGFILE>
+   <TITLE default="1">Des actions locales ont été mises en place</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2135079" end_time="2243704" duration="108625">sounds/conference20.mp3</MP3>
+   <TEXTFILE>slides/slide266.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2136,281</ENTRY>
+    <ENTRY TIMER="65" ACTION="next">2136,346</ENTRY>
+    <ENTRY TIMER="2660" ACTION="next">2138,941</ENTRY>
+    <ENTRY TIMER="60553" ACTION="next">2196,834</ENTRY>
+    <ENTRY TIMER="62387" ACTION="next">2198,668</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">21</NUM>
+   <ID>267</ID>
+   <JPGFILE>slides/slide267.swf</JPGFILE>
+   <TITLE default="1">Des actions locales ont été mises en place</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2243704" end_time="2363099" duration="119395">sounds/conference21.mp3</MP3>
+   <TEXTFILE>slides/slide267.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2245,03</ENTRY>
+    <ENTRY TIMER="3938" ACTION="next">2248,968</ENTRY>
+    <ENTRY TIMER="94382" ACTION="next">2339,412</ENTRY>
+    <ENTRY TIMER="97496" ACTION="next">2342,526</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">22</NUM>
+   <ID>274</ID>
+   <JPGFILE>slides/slide274.swf</JPGFILE>
+   <TITLE default="1">Des actions locales ont été mises en place</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2363099" end_time="2428345" duration="65246">sounds/conference22.mp3</MP3>
+   <TEXTFILE>slides/slide274.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2364,447</ENTRY>
+    <ENTRY TIMER="36218" ACTION="next">2400,665</ENTRY>
+    <ENTRY TIMER="37299" ACTION="next">2401,746</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">23</NUM>
+   <ID>265</ID>
+   <JPGFILE>slides/slide265.swf</JPGFILE>
+   <TITLE default="1">Des actions locales ont été mises en place</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2428345" end_time="2518535" duration="90190">sounds/conference23.mp3</MP3>
+   <TEXTFILE>slides/slide265.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2429,645</ENTRY>
+    <ENTRY TIMER="7185" ACTION="next">2436,83</ENTRY>
+    <ENTRY TIMER="35267" ACTION="next">2464,912</ENTRY>
+    <ENTRY TIMER="51051" ACTION="next">2480,696</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">24</NUM>
+   <ID>268</ID>
+   <JPGFILE>slides/slide268.swf</JPGFILE>
+   <TITLE default="1">La recherche de postulants au Conseil d’administration s’est organisée</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2518535" end_time="2682801" duration="164266">sounds/conference24.mp3</MP3>
+   <TEXTFILE>slides/slide268.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2520,094</ENTRY>
+    <ENTRY TIMER="56726" ACTION="next">2576,82</ENTRY>
+    <ENTRY TIMER="62758" ACTION="next">2582,852</ENTRY>
+    <ENTRY TIMER="80746" ACTION="next">2600,84</ENTRY>
+    <ENTRY TIMER="99939" ACTION="next">2620,033</ENTRY>
+    <ENTRY TIMER="102360" ACTION="next">2622,454</ENTRY>
+    <ENTRY TIMER="113839" ACTION="next">2633,933</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">25</NUM>
+   <ID>269</ID>
+   <JPGFILE>slides/slide269.swf</JPGFILE>
+   <TITLE default="1">Les résultats sont là</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2682801" end_time="2815464" duration="132663">sounds/conference25.mp3</MP3>
+   <TEXTFILE>slides/slide269.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2684,344</ENTRY>
+    <ENTRY TIMER="45" ACTION="next">2684,389</ENTRY>
+    <ENTRY TIMER="20698" ACTION="next">2705,042</ENTRY>
+    <ENTRY TIMER="36388" ACTION="next">2720,732</ENTRY>
+    <ENTRY TIMER="42983" ACTION="next">2727,327</ENTRY>
+    <ENTRY TIMER="60118" ACTION="next">2744,462</ENTRY>
+    <ENTRY TIMER="112158" ACTION="next">2796,502</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">26</NUM>
+   <ID>275</ID>
+   <JPGFILE>slides/slide275.swf</JPGFILE>
+   <TITLE default="1">Les résultats sont là</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="2815464" end_time="3002048" duration="186584">sounds/conference26.mp3</MP3>
+   <TEXTFILE>slides/slide275.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">2817,083</ENTRY>
+    <ENTRY TIMER="55" ACTION="next">2817,138</ENTRY>
+    <ENTRY TIMER="74" ACTION="next">2817,157</ENTRY>
+    <ENTRY TIMER="132706" ACTION="next">2949,789</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">27</NUM>
+   <ID>273</ID>
+   <JPGFILE>slides/slide273.swf</JPGFILE>
+   <TITLE default="1">Ce qui n’a pas fonctionné</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3002048" end_time="3144507" duration="142459">sounds/conference27.mp3</MP3>
+   <TEXTFILE>slides/slide273.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3003,759</ENTRY>
+    <ENTRY TIMER="59" ACTION="next">3003,818</ENTRY>
+    <ENTRY TIMER="2868" ACTION="next">3006,627</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">28</NUM>
+   <ID>276</ID>
+   <JPGFILE>slides/slide276.swf</JPGFILE>
+   <TITLE default="1">Ce qui n’a pas fonctionné</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3144507" end_time="3197574" duration="53067">sounds/conference28.mp3</MP3>
+   <TEXTFILE>slides/slide276.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3146,171</ENTRY>
+    <ENTRY TIMER="62" ACTION="next">3146,233</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">29</NUM>
+   <ID>277</ID>
+   <JPGFILE>slides/slide277.swf</JPGFILE>
+   <TITLE default="1">Ce qui n’a pas fonctionné</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3197574" end_time="3235204" duration="37630">sounds/conference29.mp3</MP3>
+   <TEXTFILE>slides/slide277.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3199,472</ENTRY>
+    <ENTRY TIMER="1200" ACTION="next">3200,672</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">30</NUM>
+   <ID>270</ID>
+   <JPGFILE>slides/slide270.swf</JPGFILE>
+   <TITLE default="1">Résumé</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3235204" end_time="3469562" duration="234358">sounds/conference30.mp3</MP3>
+   <TEXTFILE>slides/slide270.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3237,096</ENTRY>
+    <ENTRY TIMER="1345" ACTION="next">3238,441</ENTRY>
+    <ENTRY TIMER="20008" ACTION="next">3257,104</ENTRY>
+    <ENTRY TIMER="66056" ACTION="next">3303,152</ENTRY>
+    <ENTRY TIMER="85182" ACTION="next">3322,278</ENTRY>
+    <ENTRY TIMER="108936" ACTION="next">3346,032</ENTRY>
+    <ENTRY TIMER="135688" ACTION="next">3372,784</ENTRY>
+    <ENTRY TIMER="165843" ACTION="next">3402,939</ENTRY>
+    <ENTRY TIMER="200426" ACTION="next">3437,522</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">31</NUM>
+   <ID>278</ID>
+   <JPGFILE>slides/slide278.swf</JPGFILE>
+   <TITLE default="1">À VOUS DE NOUS DIRE SI CELA VOUS CONVIENT</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3469562" end_time="3567279" duration="97717">sounds/conference31.mp3</MP3>
+   <TEXTFILE>slides/slide278.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3471,508</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">32</NUM>
+   <ID>282</ID>
+   <JPGFILE>slides/slide282.swf</JPGFILE>
+   <TITLE default="1">4- Rapport Financier 2014  des Trésoriers</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3567279" end_time="3648849" duration="81570">sounds/conference32.mp3</MP3>
+   <TEXTFILE>slides/slide282.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3569,36</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">33</NUM>
+   <ID>297</ID>
+   <JPGFILE>slides/slide297.swf</JPGFILE>
+   <TITLE default="1">Recettes/Dépenses AFMCK  2014</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3648849" end_time="3653440" duration="4591">sounds/conference33.mp3</MP3>
+   <TEXTFILE>slides/slide297.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3651,051</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">34</NUM>
+   <ID>298</ID>
+   <JPGFILE>slides/slide298.swf</JPGFILE>
+   <TITLE default="1">Comptabilité globale 2014</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3653440" end_time="3658694" duration="5254">sounds/conference34.mp3</MP3>
+   <TEXTFILE>slides/slide298.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3655,775</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">35</NUM>
+   <ID>299</ID>
+   <JPGFILE>slides/slide299.swf</JPGFILE>
+   <TITLE default="1">Recettes</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3658694" end_time="3663496" duration="4802">sounds/conference35.mp3</MP3>
+   <TEXTFILE>slides/slide299.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3661,037</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">36</NUM>
+   <ID>298</ID>
+   <JPGFILE>slides/slide298.swf</JPGFILE>
+   <TITLE default="1">Comptabilité globale 2014</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3663496" end_time="3678429" duration="14933">sounds/conference36.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3665,892</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">37</NUM>
+   <ID>299</ID>
+   <JPGFILE>slides/slide299.swf</JPGFILE>
+   <TITLE default="1">Recettes</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3678429" end_time="3737636" duration="59207">sounds/conference37.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3680,969</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">38</NUM>
+   <ID>300</ID>
+   <JPGFILE>slides/slide300.swf</JPGFILE>
+   <TITLE default="1">Dépenses</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3737636" end_time="3789073" duration="51437">sounds/conference38.mp3</MP3>
+   <TEXTFILE>slides/slide300.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3740,309</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">39</NUM>
+   <ID>301</ID>
+   <JPGFILE>slides/slide301.swf</JPGFILE>
+   <TITLE default="1">Dépenses (divers)</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3789073" end_time="3857549" duration="68476">sounds/conference39.mp3</MP3>
+   <TEXTFILE>slides/slide301.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3791,531</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">40</NUM>
+   <ID>302</ID>
+   <JPGFILE>slides/slide302.swf</JPGFILE>
+   <TITLE default="1">Mouvements Livret A</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3857549" end_time="3875270" duration="17721">sounds/conference40.mp3</MP3>
+   <TEXTFILE>slides/slide302.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3860,371</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">41</NUM>
+   <ID>303</ID>
+   <JPGFILE>slides/slide303.swf</JPGFILE>
+   <TITLE default="1">Comparons les chiffres</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3875270" end_time="3897881" duration="22611">sounds/conference41.mp3</MP3>
+   <TEXTFILE>slides/slide303.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3878,193</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">42</NUM>
+   <ID>304</ID>
+   <JPGFILE>slides/slide304.swf</JPGFILE>
+   <TITLE default="1">Comparons les chiffres</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3897881" end_time="3916788" duration="18907">sounds/conference42.mp3</MP3>
+   <TEXTFILE>slides/slide304.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3900,777</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">43</NUM>
+   <ID>305</ID>
+   <JPGFILE>slides/slide305.swf</JPGFILE>
+   <TITLE default="1">Synthèse</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3916788" end_time="3955403" duration="38615">sounds/conference43.mp3</MP3>
+   <TEXTFILE>slides/slide305.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3919,85</ENTRY>
+    <ENTRY TIMER="78" ACTION="next">3919,928</ENTRY>
+    <ENTRY TIMER="109" ACTION="next">3919,959</ENTRY>
+    <ENTRY TIMER="4263" ACTION="next">3924,113</ENTRY>
+    <ENTRY TIMER="4767" ACTION="next">3924,617</ENTRY>
+    <ENTRY TIMER="5193" ACTION="next">3925,043</ENTRY>
+    <ENTRY TIMER="5751" ACTION="next">3925,601</ENTRY>
+    <ENTRY TIMER="6743" ACTION="next">3926,593</ENTRY>
+    <ENTRY TIMER="7364" ACTION="next">3927,214</ENTRY>
+    <ENTRY TIMER="7825" ACTION="next">3927,675</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">44</NUM>
+   <ID>306</ID>
+   <JPGFILE>slides/slide306.swf</JPGFILE>
+   <TITLE default="1">Budget prévisionnel 2015</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="3955403" end_time="4209429" duration="254026">sounds/conference44.mp3</MP3>
+   <TEXTFILE>slides/slide306.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">3958,478</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">45</NUM>
+   <ID>307</ID>
+   <JPGFILE>slides/slide307.swf</JPGFILE>
+   <TITLE default="1">Diapositive PowerPoint</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="4209429" end_time="4505206" duration="295777">sounds/conference45.mp3</MP3>
+   <TEXTFILE>slides/slide307.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">4212,557</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">46</NUM>
+   <ID>295</ID>
+   <JPGFILE>slides/slide295.swf</JPGFILE>
+   <TITLE default="1">À VOUS DE NOUS DIRE SI CELA VOUS CONVIENT</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="4505206" end_time="4512260" duration="7054">sounds/conference46.mp3</MP3>
+   <TEXTFILE>slides/slide295.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">4508,72</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">47</NUM>
+   <ID>285</ID>
+   <JPGFILE>slides/slide285.swf</JPGFILE>
+   <TITLE default="1">5- Renouvellement des partenariats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="4512260" end_time="4519261" duration="7001">sounds/conference47.mp3</MP3>
+   <TEXTFILE>slides/slide285.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">4515,84</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">48</NUM>
+   <ID>279</ID>
+   <JPGFILE>slides/slide279.swf</JPGFILE>
+   <TITLE default="1">Renouvellement des partenariats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="4519261" end_time="4769074" duration="249813">sounds/conference48.mp3</MP3>
+   <TEXTFILE>slides/slide279.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">4522,685</ENTRY>
+    <ENTRY TIMER="105836" ACTION="next">4628,521</ENTRY>
+    <ENTRY TIMER="120840" ACTION="next">4643,525</ENTRY>
+    <ENTRY TIMER="122593" ACTION="next">4645,278</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">49</NUM>
+   <ID>286</ID>
+   <JPGFILE>slides/slide286.swf</JPGFILE>
+   <TITLE default="1">Renouvellement des partenariats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="4769074" end_time="5009533" duration="240459">sounds/conference49.mp3</MP3>
+   <TEXTFILE>slides/slide286.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">4772,997</ENTRY>
+    <ENTRY TIMER="45" ACTION="next">4773,042</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">50</NUM>
+   <ID>287</ID>
+   <JPGFILE>slides/slide287.swf</JPGFILE>
+   <TITLE default="1">Renouvellement des partenariats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5009533" end_time="5017636" duration="8103">sounds/conference50.mp3</MP3>
+   <TEXTFILE>slides/slide287.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5013,515</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">51</NUM>
+   <ID>286</ID>
+   <JPGFILE>slides/slide286.swf</JPGFILE>
+   <TITLE default="1">Renouvellement des partenariats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5017636" end_time="5078198" duration="60562">sounds/conference51.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">5021,664</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">52</NUM>
+   <ID>287</ID>
+   <JPGFILE>slides/slide287.swf</JPGFILE>
+   <TITLE default="1">Renouvellement des partenariats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5078198" end_time="5169047" duration="90849">sounds/conference52.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5082,025</ENTRY>
+    <ENTRY TIMER="37040" ACTION="next">5119,065</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">53</NUM>
+   <ID>288</ID>
+   <JPGFILE>slides/slide288.swf</JPGFILE>
+   <TITLE default="1">6- Approbation Version  « I pad » logiciel de bilan</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5169047" end_time="5177473" duration="8426">sounds/conference53.mp3</MP3>
+   <TEXTFILE>slides/slide288.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5173,31</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">54</NUM>
+   <ID>287</ID>
+   <JPGFILE>slides/slide287.swf</JPGFILE>
+   <TITLE default="1">Renouvellement des partenariats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5177473" end_time="5449122" duration="271649">sounds/conference54.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">5181,651</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">55</NUM>
+   <ID>288</ID>
+   <JPGFILE>slides/slide288.swf</JPGFILE>
+   <TITLE default="1">6- Approbation Version  « I pad » logiciel de bilan</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5449122" end_time="5458248" duration="9126">sounds/conference55.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5453,428</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">56</NUM>
+   <ID>287</ID>
+   <JPGFILE>slides/slide287.swf</JPGFILE>
+   <TITLE default="1">Renouvellement des partenariats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5458248" end_time="5497277" duration="39029">sounds/conference56.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto" POSITION="1">5462,916</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">57</NUM>
+   <ID>288</ID>
+   <JPGFILE>slides/slide288.swf</JPGFILE>
+   <TITLE default="1">6- Approbation Version  « I pad » logiciel de bilan</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5497277" end_time="5506487" duration="9210">sounds/conference57.mp3</MP3>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5501,997</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">58</NUM>
+   <ID>289</ID>
+   <JPGFILE>slides/slide289.swf</JPGFILE>
+   <TITLE default="1">7- Fixation cotisations 2015 et 2016</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5506487" end_time="5516096" duration="9609">sounds/conference58.mp3</MP3>
+   <TEXTFILE>slides/slide289.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5511,181</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">59</NUM>
+   <ID>290</ID>
+   <JPGFILE>slides/slide290.swf</JPGFILE>
+   <TITLE default="1">8- Élection membres du conseil d’administration</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5516096" end_time="5544784" duration="28688">sounds/conference59.mp3</MP3>
+   <TEXTFILE>slides/slide290.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5521,117</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">60</NUM>
+   <ID>291</ID>
+   <JPGFILE>slides/slide291.swf</JPGFILE>
+   <TITLE default="1">Membres sortants</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5544784" end_time="5601257" duration="56473">sounds/conference60.mp3</MP3>
+   <TEXTFILE>slides/slide291.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5550,003</ENTRY>
+    <ENTRY TIMER="55" ACTION="next">5550,058</ENTRY>
+    <ENTRY TIMER="72" ACTION="next">5550,075</ENTRY>
+    <ENTRY TIMER="2213" ACTION="next">5552,216</ENTRY>
+    <ENTRY TIMER="14012" ACTION="next">5564,015</ENTRY>
+    <ENTRY TIMER="18377" ACTION="next">5568,38</ENTRY>
+    <ENTRY TIMER="36285" ACTION="next">5586,288</ENTRY>
+    <ENTRY TIMER="37435" ACTION="next">5587,438</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">61</NUM>
+   <ID>292</ID>
+   <JPGFILE>slides/slide292.swf</JPGFILE>
+   <TITLE default="1">Candidats</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5601257" end_time="5893931" duration="292674">sounds/conference61.mp3</MP3>
+   <TEXTFILE>slides/slide292.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5606,254</ENTRY>
+    <ENTRY TIMER="55" ACTION="next">5606,309</ENTRY>
+    <ENTRY TIMER="74" ACTION="next">5606,328</ENTRY>
+    <ENTRY TIMER="103990" ACTION="next">5710,244</ENTRY>
+    <ENTRY TIMER="104460" ACTION="next">5710,714</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+  <SLIDE show="1">
+   <NUM pptslide="1">62</NUM>
+   <ID>293</ID>
+   <JPGFILE>slides/slide293.swf</JPGFILE>
+   <TITLE default="1">9- Questions Diverses</TITLE>
+   <COMMENTS default="1"></COMMENTS>
+   <MP3 capture="conference0.mp3" start_time="5893931" end_time="5903659" duration="9728">sounds/conference62.mp3</MP3>
+   <TEXTFILE>slides/slide293.txt</TEXTFILE>
+   <TIMELINE>
+    <ENTRY TIMER="0" ACTION="goto">5899,412</ENTRY>
+   </TIMELINE>
+  </SLIDE>
+ </SLIDES>
+ <OPTIONS>
+  <TITLE import="1">
+   <DEFAULT_PPT>Diapositive PowerPoint</DEFAULT_PPT>
+   <DEFAULT_EUREKI>Tableau Blanc n°</DEFAULT_EUREKI>
+   <DEFAULT_QUIZ>Quiz n°</DEFAULT_QUIZ>
+   <DEFAULT_VIDEO>Vidéo</DEFAULT_VIDEO>
+  </TITLE>
+  <COMMENTS>
+   <BUTTON>Notes</BUTTON>
+   <IMPORT>True</IMPORT>
+  </COMMENTS>
+  <HYPERLINKS>False</HYPERLINKS>
+  <QUALITY>
+   <IMAGE>1</IMAGE>
+   <RECORD>1</RECORD>
+  </QUALITY>
+  <RESOURCES>
+   <BUTTON>Ressources</BUTTON>
+  </RESOURCES>
+  <VIDEO>
+   <BUTTON>Vidéo</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+   <ONLY_VIDEO_SOUND>1</ONLY_VIDEO_SOUND>
+  
+   <ONLY_FLASH_SOUND>1</ONLY_FLASH_SOUND></VIDEO>
+  <FLASH>
+   <BUTTON>Flash</BUTTON>
+   <AUTOMATIC time="5">1</AUTOMATIC>
+   <UNTIL_END time="5">1</UNTIL_END>
+  </FLASH>
+ </OPTIONS></root>
