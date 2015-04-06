@@ -1,7 +1,7 @@
 <?php
 $particularRights = true;
 include('../begin.php');
-utils\Rights::hasRights(array("ADMINISTRATEUR", "TRESORIER"));
+utils\Rights::hasRights(array("ADMINISTRATEUR", "TRESORIER", "SECRETAIRE"));
 use utils\Link;
 $title = 'Liste des membres';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),

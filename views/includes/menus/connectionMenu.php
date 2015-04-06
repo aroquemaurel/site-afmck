@@ -42,6 +42,8 @@ if(!Visitor::getInstance()->isConnected()) {
             echo '&nbsp;<span class="badge">' . $nbAccountToValid . '</span>';
         }
         echo '</a></li>';
+    }
+    if($user->isInGroup("SECRETAIRE") || $accountsRights) {
         echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/admin/members.php">Liste des membres</a></li>';
     }
     if($charteRights) {
