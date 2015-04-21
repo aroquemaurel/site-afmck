@@ -25,6 +25,14 @@
                     <?php utils\Wysiwyg::display(); ?>
                 </div>
                 </div>
+            <hr class="colorgraph">
+            <textarea style="visibility: hidden" id="hiddeninput" name="content"></textarea>
+            <button id="submit" type="submit" style="margin: auto; width: 250px; "
+                    class="btn btn-primary btn-block btn-lg">
+                <i class="glyphicon glyphicon-ok-sign"></i>
+                <?php echo "Ajouter la news"?>
+            </button>
+
         </form>
     </div>
 </div>
@@ -32,3 +40,12 @@
 <?php
 $script = utils\Wysiwyg::getScriptSrc();
 $script .= utils\Wysiwyg::getJsToolbar();
+$script .= "
+<script type=\"text/javascript\">
+    $(function(){
+        $('#submit').click(function () {
+            var mysave = $('#editor').html();
+            $('#hiddeninput').val(mysave);
+        });
+    });
+</script>";

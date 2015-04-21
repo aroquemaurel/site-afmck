@@ -95,7 +95,7 @@ class Wysiwyg {
     }
 
     private static function displayEditor() {
-        echo '<div id="editor" class="lead" placeholder=""></div>';
+        echo '<div id="editor" class="lead" placeholder="Contenu de la news"></div>';
     }
 
     public static function getScriptSrc() {

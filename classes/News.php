@@ -14,6 +14,9 @@ class News {
     private $author;
     private $date;
 
+    public function __construct() {
+        $this->date = new DateTime();
+    }
     public function hydrat($data) {
         $this->id = $data->id;
         $this->title = utf8_encode($data->title);
@@ -23,6 +26,10 @@ class News {
         $this->subtitle = utf8_encode($data->subtitle);
     }
 
+    public function commit() {
+        $db = new DatabaseNews();
+        $db->addNew($this);
+    }
     /**
      * @return mixed
      */

@@ -31,4 +31,20 @@ class DatabaseNews extends Database {
 
         return $query->fetchObject()->nbnews;
     }
+
+    public function addNew(News $new)
+    {
+        $title = utf8_decode($new->getTitle());
+        $subtitle = utf8_decode($new->getSubtitle());
+        $content = utf8_decode($new->getContent());
+        $author = $new->getAuthor()->getId();
+        $date = $new->getDate()->format("Y-m-d H:i:s");
+        $query = $this->dbAccess->prepare("INSERT INTO news VALUES('', :title, :subtitle, :content, :author, :date)");
+        $query->bindParam(":title", $title, PDO::PARAM_STR);
+        $query->bindParam(":subtitle", $subtitle, PDO::PARAM_STR);
+        $query->bindParam(":content", $content, PDO::PARAM_STR);
+        $query->bindParam(":author", $author, PDO::PARAM_INT);
+        $query->bindParam(":date", $date, PDO::PARAM_STR);
+        $query->execute();
+    }
 }
