@@ -8,6 +8,13 @@
         <li data-target="#carousel-example-generic" data-slide-to="4"></li>
         <li data-target="#carousel-example-generic" data-slide-to="5"></li>
         <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="10"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="11"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="12"></li>
+
     </ol>
 
     <div class="carousel-inner" role="listbox">
@@ -17,36 +24,60 @@
             </div>
         </div>
         <div class="item">
-            <img src="img/home/carousel2.jpg" alt="...">
+            <img src="docs/home/carousel/2.png" alt="...">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="item">
-            <img src="img/home/carousel3.jpg" alt="...">
+            <img src="docs/home/carousel/3.png" alt="...">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="item">
-            <img src="img/home/carousel4.jpg" alt="...">
+            <img src="docs/home/carousel/4.png" alt="...">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="item">
-            <img src="img/home/carousel5.jpg" alt="...">
+            <img src="docs/home/carousel/5.png" alt="...">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="item">
-            <img src="img/home/carousel6.jpg" alt="...">
+            <img src="docs/home/carousel/6.png" alt="...">
             <div class="carousel-caption">
             </div>
         </div>
         <div class="item">
-            <img src="img/home/carousel7.jpg" alt="...">
+            <img src="docs/home/carousel/7.png" alt="...">
             <div class="carousel-caption">
             </div>
         </div>
-
+        <div class="item">
+            <img src="docs/home/carousel/8.png" alt="...">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="docs/home/carousel/9.png" alt="...">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="docs/home/carousel/10.png" alt="...">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="docs/home/carousel/11.png" alt="...">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="docs/home/carousel/12.png" alt="...">
+            <div class="carousel-caption">
+            </div>
+        </div>
     </div>
 
     <!-- Controls -->
