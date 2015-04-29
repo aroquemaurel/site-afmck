@@ -19,7 +19,7 @@
 
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="img/home/carousel1.jpg" alt="">
+            <img src="img/home/carousel/1.png" alt="">
             <div class="carousel-caption">
             </div>
         </div>
