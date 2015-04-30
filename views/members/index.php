@@ -143,7 +143,7 @@ Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des 
 
     <p>Question d'ordre financier</p>
         <div class="bs-callout bs-callout-info">
-            <a href="mailto:tresor@afmck.fr">tresor@afmck.fr</a>
+            <a href="mailto:tresorerie@afmck.fr">tresorerie@afmck.fr</a>
         </div>
     <p>Question d'ordre technique sur le site ou le logiciel</p>
         <div class="bs-callout bs-callout-info">
