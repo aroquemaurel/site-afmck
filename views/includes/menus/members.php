@@ -59,7 +59,12 @@
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/brest.php">Brest 2013</a></li>
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/lyon.php">Lyon 2014</a></li>
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/lille.php">Lille 2015</a></li>
-
+                                    </ul>
+                                    <ul class="col-sm-2 list-unstyled">
+                                        <li>
+                                            <p><strong>Annonces de remplacement</strong></p>
+                                        </li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/annonces/ile-de-france.php">Île de France</a></li>
                                     </ul>
                                 </div>
                             </div>
