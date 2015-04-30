@@ -4,6 +4,8 @@
     <h1>Bienvenue sur le site de l'Association Française McKenzie</h1>
     <div id="news" class="hidden-xs hidden-md thumbnail with-caption news" style="margin-right: -10px;margin-top: -80px; width: 220px">
         <h2>Actualités</h2>
+        <h3>Annonces de remplacement</h3>
+        <p>Une <a href="<?php echo Visitor::getInstance()->getRootPage()."/members/travaux-association/annonces/ile-de-france.php";?>">nouvelle section</a> est arrivée, elle contiendra les annonces pour des recherches de remplacement !</p>
 <h3>Newsletter Mckenzie International</h3>
 <a href="http://afmck.fr/members/kiosque/newsletters-McKenzie.php">
 <img width="100" src="http://afmck.fr/docs/members/kiosque/newsletters/mini/MDT%20World%20Press%20Newsletter_Vol4No1.jpg" /></a>
