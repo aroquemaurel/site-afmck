@@ -130,15 +130,20 @@ class DatabaseUser extends Database {
     public function getUsersOnMap($signed) {
         $ret = array();
 
-        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = 1 AND mailValidation != 0 AND disable!=1 AND levelFormation >= 4 AND validDate >= CURDATE()");
+        $query = $this->dbAccess->prepare("SELECT * from `user` 
+                                           WHERE hasSigned = 1 
+                                            AND mailValidation != 0 
+                                            AND disable!=1 
+                                            AND levelFormation >= 4 
+                                            AND validDate >= CURDATE()");
         $query->bindParam(":signed", $signed, PDO::PARAM_INT);
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
             $user = new User();
             $user->hydrat($dataUser);
-            $user->getFormationDate()->add(new DateInterval('P2Y'));
-            if($user->getLevelFormation() !=  44 && $user->getFormationDate() < new DateTime()) {
+            $deadLine = date('Y-m-d H:i:s', strtotime('-2 years'));
+            if($user->getLevelFormation() != 4 || $user->getFormationDate() > $deadLine) {
                 $ret[] = $user;
             }
         }
