@@ -13,10 +13,14 @@
     <div class="alert alert-info" style="margin-top: 50px">
         <p>Comment puis-je changer mes informations personnelles renseignées lors de l'inscription ? </p>
     </div>
+	<p>Vous pouvez changer vos informations en cliquant en haut à droite sur votre nom, via le menu « changer mes informations ».
 
     <div class="alert alert-info" style="margin-top: 50px">
         <p>J'ai perdu mon mot de passe, comment je fais ?</p>
     </div>
+	<p>Si vous ne vous souvenez pas de votre mot de passe, vous pouvez utilier le lien « mot de passe oublié » situé en dessous du formulaire de connexion. Vous devez renseigner votre numéro ADELI ainsi que votre adresse e-mail, si les deux concordent, vous recevez un e-mail avec un lien permettant de renseigner un nouveau mot de passe.
+</p>
+
     <h1>La charte de bonnes pratiques</h1>
     <div class="alert alert-info" style="margin-top: 50px">
         <p>Comment puis-je signer la charte de bonnes pratiques ? </p>
