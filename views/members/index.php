@@ -59,9 +59,8 @@ MDT WORLD PRESS Newsletter Vol 3 N°4
 Bienvenue sur le nouveau site de l'Association Française McKenzie !!<br/>
 Ce site tout neuf vous permettra d'avoir prochainement de nouvelles fonctionnalités.<br/><br/>
 Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des bugs ou des incompréhensions…<br/> Si tel est le cas, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a>, votre aide nous est précieuse ! </div>
-
     <?php
-    echo '<div style="margin-bottom: -30px;">';
+    echo '<div style="margin-bottom: 0px;">';
     (new utils\Pagination($page, $nbPages, Visitor::getInstance()->getRootPage().'/members/index.php'))->display();
     echo '</div>';
     foreach($news as $new) {
@@ -73,4 +72,5 @@ Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des 
     }
     (new utils\Pagination($page, $nbPages, Visitor::getInstance()->getRootPage().'/members/index.php'))->display();
     ?>
+</div>
 </div>
