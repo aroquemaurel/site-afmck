@@ -23,6 +23,7 @@ if(!Visitor::getInstance()->isConnected()) {
     $nbAccountToValid = $accountsRights ? $db->countUsersToValid() : 0;
     $nbCharteToValid = $charteRights ? $db->chartToValid() : 0;
     $nbAdmin = $nbAccountToValid + $nbCharteToValid;
+	$newsRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("SECRETAIRE");
 
     echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
         Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .ucfirst(strtolower(Visitor::getInstance()->getUser()->getLastName()));
@@ -53,6 +54,10 @@ if(!Visitor::getInstance()->isConnected()) {
         }
         echo '</a></li>';
     }
+
+	if($newsRights) {
+		echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/list-news.php">Gestion des newsletters</a></li>';
+	}
 
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
         echo '<li><b>Mon profil</b></li>';
