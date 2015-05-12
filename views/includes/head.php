@@ -25,6 +25,8 @@
     <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/yamm3/yamm/yamm.css" rel="stylesheet">
     <link rel="shortcut icon" href="<?php echo Visitor::getInstance()->getRootPage() ?>/afmck-icone.ico" />
     <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/src/stylesheets/jquery.tocify.css" rel="stylesheet">
+    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/wysiwyg/external/google-code-prettify/prettify.css" rel="stylesheet" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet" />
     <style>
         body {
             padding-top: 20px;
