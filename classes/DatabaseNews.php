@@ -32,6 +32,11 @@ class DatabaseNews extends Database {
         return $query->fetchObject()->nbnews;
     }
 
+    public function removeById($id) {
+        $query = $this->dbAccess->prepare("DELETE FROM news where id=:id");
+        $query->bindParam(":id", $id);
+        $query->execute();
+    }
     public function addNew(News $new)
     {
         $title = utf8_decode($new->getTitle());
@@ -46,5 +51,34 @@ class DatabaseNews extends Database {
         $query->bindParam(":author", $author, PDO::PARAM_INT);
         $query->bindParam(":date", $date, PDO::PARAM_STR);
         $query->execute();
+    }
+
+    public function updateNew(News $new) {
+        $title = utf8_decode($new->getTitle());
+        $subtitle = utf8_decode($new->getSubtitle());
+        $content = utf8_decode($new->getContent());
+        $author = $new->getAuthor()->getId();
+        $id = $new->getId();
+
+        $query = $this->dbAccess->prepare("UPDATE news set title=:title, subtitle=:subtitle, content=:content,
+                                          author=:author where id=:id");
+
+        $query->bindParam(":title", $title, PDO::PARAM_STR);
+        $query->bindParam(":subtitle", $subtitle, PDO::PARAM_STR);
+        $query->bindParam(":content", $content, PDO::PARAM_STR);
+        $query->bindParam(":author", $author, PDO::PARAM_INT);
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+
+
+    }
+
+    public function getById($id) {
+        $new = new News();
+        $query = $this->dbAccess->prepare("SELECT * from `news` where id=:id");
+        $query->bindParam(":id", $id);
+        $query->execute();
+        $new->hydrat($query->fetchObject());
+        return $new;
     }
 }

@@ -9,13 +9,18 @@ $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link
 
 // Add or edit the news
 if(isset($_POST['title']) && isset($_POST['subtitle'])) {
-    $news = new News();
+    if(isset($_POST['id'])) {
+        $db = new DatabaseNews();
+        $news = $db->getById($_POST['id']);
+    } else {
+        $news = new News();
+    }
     $news->setTitle(htmlspecialchars($_POST['title']));
     $news->setSubtitle(htmlspecialchars($_POST['subtitle']));
     $news->setContent($_POST['content']);
     $news->setAuthor(Visitor::getInstance()->getUser());
     $news->commit();
-    $_SESSION['lastMessage'] = Popup::successMessage("La news à bien été ajoutée");
+    $_SESSION['lastMessage'] = Popup::successMessage("La news à bien été ".(isset($_POST['id'])? "modifiée":"ajoutée"));
     header('Location: ' . Visitor::getInstance()->getRootPage().'/admin/list-news.php');
 } else {
     include('../views/includes/head.php');

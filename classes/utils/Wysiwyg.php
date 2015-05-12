@@ -88,14 +88,14 @@ class Wysiwyg {
                                id="voiceBtn" x-webkit-speech="" />
                     </div>';
     }
-    public static function display() {
+    public static function display($content="") {
         echo  '<div id="alerts"></div>';
         self::displayToolbar();
-        self::displayEditor();
+        self::displayEditor($content);
     }
 
-    private static function displayEditor() {
-        echo '<div id="editor" class="lead" placeholder="Contenu de la news"></div>';
+    private static function displayEditor($content="") {
+        echo '<div id="editor" class="lead" placeholder="'.($content != "" ? str_replace('"', "'", $content) : "Contenu de la news").'"></div>';
     }
 
     public static function getScriptSrc() {

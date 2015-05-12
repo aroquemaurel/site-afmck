@@ -16,6 +16,7 @@ class News {
 
     public function __construct() {
         $this->date = new DateTime();
+        $this->id = 0;
     }
     public function hydrat($data) {
         $this->id = $data->id;
@@ -28,7 +29,11 @@ class News {
 
     public function commit() {
         $db = new DatabaseNews();
-        $db->addNew($this);
+        if($this->id == 0) {
+            $db->addNew($this);
+        } else {
+            $db->updateNew($this);
+        }
     }
     /**
      * @return mixed
