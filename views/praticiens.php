@@ -36,8 +36,18 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
     $script .= "<script>
     var map;
     var elevator;
+    var myStyles =[
+    {
+        featureType: \"poi\",
+        elementType: \"labels\",
+        stylers: [
+              { visibility: \"off\" }
+        ]
+    }
+    ];
     var myOptions = {
         zoom: 5,
+        styles: myStyles,
         center: new google.maps.LatLng(46.5865209, 1.2814561),
         	          mapTypeId: google.maps.MapTypeId.ROADMAP
     };
