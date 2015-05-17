@@ -83,7 +83,7 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
 				map : map,
 				draggable: false,
 				content : '<p><b>" . $user->getFirstName() . " ".$user->getLastName()."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
-                   "<br/><br/>".$user->getPhonePro()."<br/>".$user->getMail()."<br/>Niveau ".$user->getlevelFormationString()."</p>'
+                   "<br/>".$user->getPhonePro().""./*$user->getMail()*/""."<br/><br/>Niveau ".$user->getlevelFormationString()."</p>'
 			}));";
            }
        }
