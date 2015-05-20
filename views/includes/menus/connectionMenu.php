@@ -32,9 +32,12 @@ if(!Visitor::getInstance()->isConnected()) {
         if($nbAdmin > 0) {
             echo '&nbsp;<span class="badge">'.$nbAdmin.'</span>';
         }
+}
         echo '<b class="caret"></b></a>
         <ul role="menu" class="dropdown-menu" style="padding: 10px">';
 
+
+    if($accountsRights || $charteRights) {
         echo '<li><b>Administration</b></li>';
     }
     if($accountsRights) {
