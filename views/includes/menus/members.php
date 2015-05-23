@@ -45,7 +45,9 @@
                                             <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°3_AFMcK.pdf" target="_blank">Trucs et Astuces N°3</a></li>
                                             <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">Trucs et Astuces N°4</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°5_AFMcK.pdf" target="_blank">Trucs et Astuces N°5</a></li>
-                                        </li>                                    </ul>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°6_AFMcK.pdf" target="_blank">Trucs et Astuces N°6</a></li>
+
+                        </li>                                    </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Études</strong></p>
