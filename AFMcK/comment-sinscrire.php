@@ -1,5 +1,5 @@
 <?php
-include('../../../begin.php');
+include('../begin.php');
 use utils\Link;
 
 $title = 'Manuel - Inscription';
