@@ -93,7 +93,9 @@ class License {
      */
     public function getKey()
     {
-        return $this->key;
+        $currentYear = ($this->getValidDate()->format("Y"));
+
+        return intval($this->user->getAdeliNumber()/$currentYear)*($currentYear-3);
     }
 
     /**
