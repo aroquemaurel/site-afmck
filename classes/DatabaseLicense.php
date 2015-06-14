@@ -19,7 +19,7 @@ class DatabaseLicense extends Database {
 
     public function addLicense(License $license) {
         $idUser = $license->getUser()->getId();
-        $date = $license->getDate()->format("Y-m-d");
+        $date = $license->getAskingDate()->format("Y-m-d");
         $key = $license->getKey();
 
         $query = $this->dbAccess->prepare("INSERT INTO user_software VALUES(:idUser, :dateAsking, :key)");

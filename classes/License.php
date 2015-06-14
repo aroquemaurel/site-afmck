@@ -8,30 +8,52 @@
 
 class License {
     private $user;
-    private $date;
+    private $askingDate;
+    private $validDate;
     private $key;
-
-    function __construct(User $user, Date $date)
+    private $toAdd;
+    function __construct(User $user)
     {
         $this->user = $user;
-        $this->date = $date;
+        $db = new DatabaseLicense();
+        $data = $db->getLicense($this->user);
+        if($data != null) {
+            $this->hydrat($data);
+            $this->toAdd = $this->validDate < new DateTime();
+        } else {
+            $this->askingDate = new DateTime();
+            $this->key = $this->calculKey();
+            $this->toAdd = true;
+        }
     }
+    public function getValidDate() {
+        $year = intval($this->askingDate->format("Y"));
+        if($this->askingDate->format("M") != 1 && $this->askingDate->format("M") != 2) {
+            $validDate = new DateTime(($year+1).'-2-28');
+        } else {
+            $validDate = new DateTime(($year+2).'-2-28');
+        }
 
+        return $validDate;
+    }
     public function commit() {
         $db = new DatabaseLicense();
-        $key = $this->calculKey();
-        $db->addLicense($this);
-        return true;
+        if($this->toAdd) {
+            $this->askingDate = new DateTime();
+            $db->addLicense($this);
+        }
     }
 
     public function hydrat($data) {
-        $this->user = new User($data->idUser);
-        $this->date = $data->dateAsking;
+        $db = new DatabaseUser();
+        $this->user = $db->getUserById($data->idUser);
+        $this->askingDate = new DateTime($data->dateAsking);
         $this->key = $data->key;
+        $this->validDate = $this->getValidDate();
     }
 
     public function calculKey() {
-        return 42;
+        return 42 + intval($this->askingDate->format("Y"));
     }
 
     /**
@@ -53,17 +75,17 @@ class License {
     /**
      * @return Date
      */
-    public function getDate()
+    public function getAskingDate()
     {
-        return $this->date;
+        return $this->askingDate;
     }
 
     /**
-     * @param Date $date
+     * @param Date $askingDate
      */
-    public function setDate($date)
+    public function setAskingDate($askingDate)
     {
-        $this->date = $date;
+        $this->askingDate = $askingDate;
     }
 
     /**
