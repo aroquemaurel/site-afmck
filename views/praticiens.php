@@ -21,10 +21,12 @@
 <?php
 $arrayAddress = '[';
 $arrayUser = '[';
-foreach($users as $user) {
-    if ($user->getAddress() != "") {
-        $arrayAddress .= "\"".str_replace(',', '', $user->getAddress()." ".$user->getCp()." ".$user->getTown()) . '",';
-        $arrayUser .= "'<b>".$user->getFirstName()."</b>',";
+foreach($users as $addresses) {
+    foreach ($addresses as $user) {
+        if ($user->getAddress() != "") {
+            $arrayAddress .= "\"" . str_replace(',', '', $user->getAddress() . " " . $user->getCp() . " " . $user->getTown()) . '",';
+            $arrayUser .= "'<b>" . $user->getFirstName() . "</b>',";
+        }
     }
 }
 $arrayUser = rtrim($arrayUser, ",");
@@ -61,20 +63,20 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
 
    // for (var x = 0; x < addresses.length; x++) {
 
-   foreach($users as $user) {
-       if ($user->getAddress() != "") {
-            if($user->getLatitude() == "" || $user->getLongitude() == "" ) {
-                $script .= "$.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($user->getAddress()." ".$user->getCp()." ".$user->getTown()) . "&sensor=false', null, function (data) {
+   foreach($users as $addresses) {
+       $someUser = $addresses[0];
+       if ($someUser->getAddress() != "") {
+           if($someUser->getLatitude() == "" || $someUser->getLongitude() == "" ) {
+               $script .= "$.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($someUser->getAddress()." ".$someUser->getCp()." ".$someUser->getTown()) . "&sensor=false', null, function (data) {
             var p = data.results[0].geometry.location;";
-                $key = md5($user->getId().' Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres. Des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l’interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n’est pas mon cas, comme je disais là, puisque moi au contraire ');
-                $script .= '$.ajax({url: "'.Visitor::getInstance()->getRootPage().'/change-coords.php?key='.$key.'&id='.$user->getId().'&lgt="+p.lng+"&lat="+p.lat,
+               $key = md5($user->getId().' Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres. Des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l’interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n’est pas mon cas, comme je disais là, puisque moi au contraire ');
+               $script .= '$.ajax({url: "'.Visitor::getInstance()->getRootPage().'/change-coords.php?key='.$key.'&id='.$someUser->getId().'&lgt="+p.lng+"&lat="+p.lat,
                                      context: document.body}).done(function(){})});';
-                $db = new DatabaseUser();
-                $u = $db->getUserById($user->getId());
-                $user->setLongitude($u->getLongitude());
-                $user->setLatitude($u->getLatitude());
-            }
-           if($user->getLatitude() != "" || $user->getLongitude() != "") {
+               $db = new DatabaseUser();
+               $u = $db->getUserById($someUser->getId());
+               $someUser->setLongitude($u->getLongitude());
+               $someUser->setLatitude($u->getLatitude());
+           } else {
                $script .= "
             var latlng = new google.maps.LatLng(" . $user->getLatitude() . ", " . $user->getLongitude() . ");
             thereisAjax = false;
@@ -82,9 +84,14 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
                 position : latlng,
 				map : map,
 				draggable: false,
-				content : '<p><b>" . $user->getFirstName() . " ".$user->getLastName()."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
-                   "<br/>".$user->getPhonePro().""./*$user->getMail()*/""."<br/><br/>Niveau ".$user->getlevelFormationString()."</p>'
-			}));";
+				content :'";
+
+               foreach ($addresses as $user) {
+                   $script .= "<p><b>" . $user->getFirstName() . " ".$user->getLastName()."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
+                   "<br/>".$user->getPhonePro().""./*$user->getMail()*/""."<br/><br/>Niveau ".$user->getlevelFormationString()."</p>";
+               }
+               $script .= "'
+               }));";
            }
        }
    }

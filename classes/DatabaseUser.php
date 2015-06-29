@@ -129,13 +129,14 @@ class DatabaseUser extends Database {
     }
     public function getUsersOnMap($signed) {
         $ret = array();
-
+        $i = 0;
         $query = $this->dbAccess->prepare("SELECT * from `user` 
                                            WHERE hasSigned = 1 
                                             AND mailValidation != 0 
                                             AND disable!=1 
                                             AND levelFormation >= 4 
-                                            AND validDate >= CURDATE()");
+                                            AND validDate >= CURDATE()
+                                            ORDER BY latitude, longitude");
         $query->bindParam(":signed", $signed, PDO::PARAM_INT);
         $query->execute();
 
@@ -144,7 +145,14 @@ class DatabaseUser extends Database {
             $user->hydrat($dataUser);
             $deadLine = date('Y-m-d H:i:s', strtotime('-2 years'));
             if($user->getLevelFormation() != 4 || $user->getFormationDate() > $deadLine) {
-                $ret[] = $user;
+                if (count($ret[0]) != 0) {
+                    $prevUser = $ret[$i][count($ret[$i]) - 1];
+                    if(round($prevUser->getLatitude(), 2) != round($user->getLatitude(), 2) ||
+                        round($prevUser->getLongitude(), 2) != round($user->getLongitude(), 2)) {
+                        ++$i;
+                    }
+                }
+                $ret[$i][] = $user;
             }
         }
         return $ret;
