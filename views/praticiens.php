@@ -12,7 +12,8 @@
             </div>
 <p>Il y a actuellement <?php echo count($users);?> praticiens sur la carte.</p>
     </div><!-- fin de .introcarte -->
-        <div style="width: 700px; height: 500px" id="map-canvas"></div>
+        <input id="pac-input" class="controls" type="text" placeholder="Rechercher un lieu">
+        <div id="map-canvas"></div>
 
         <p>&nbsp;<br/>&nbsp;</p>
 
@@ -33,7 +34,7 @@ $arrayUser = rtrim($arrayUser, ",");
 $arrayUser .= ']';
 $arrayAddress = rtrim($arrayAddress, ",");
 $arrayAddress .= ']';
-    $script = '   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>';
+    $script = '   <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=places&sensor=false"></script>';
 $script .='<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>';
     $script .= "<script>
     var map;
@@ -59,6 +60,19 @@ $script .='<script type="text/javascript" src="http://google-maps-utility-librar
     var users = ".$arrayUser.";
     var infoWindow = new google.maps.InfoWindow;
     var markers = new Array();
+      // Create the search box and link it to the UI element.
+  var input = /** @type {HTMLInputElement} */(
+      document.getElementById('pac-input'));
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+  var searchBox = new google.maps.places.SearchBox(
+    /** @type {HTMLInputElement} */(input));
+google.maps.event.addListener(searchBox, 'places_changed', function() {
+            //map.setZoom();
+    var places = searchBox.getPlaces();
+    map.setCenter(places[0].geometry.location);
+    map.setZoom(11);
+});
     var markerCluster;";
 
    // for (var x = 0; x < addresses.length; x++) {
