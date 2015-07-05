@@ -10,7 +10,13 @@
             <div class="bs-callout bs-callout-warning">
                 <p>Seuls les adhérents à l'association ayant une formation de niveau D ou supérieur sont affichés sur cette carte</p>
             </div>
-<p>Il y a actuellement <?php echo count($users);?> praticiens sur la carte.</p>
+<?php
+$nbPraticiens = 0;
+foreach($users as $addresses) {
+$nbPraticiens += count($addresses);
+}
+?>
+<p>Il y a actuellement <?php echo count($users);?> cabinets, de <?php echo $nbPraticiens;?> praticiens, sur la carte.</p>
     </div><!-- fin de .introcarte -->
         <input id="pac-input" class="controls" type="text" placeholder="Rechercher un lieu">
         <div id="map-canvas"></div>
