@@ -58,13 +58,10 @@ class Popup {
 
     public static function inscriptionOk()
     {
-        // TODO Change me
-     /*   return self::successMessage("Vous êtes maintenant inscrit sur le site.
-        <br/>Afin de pouvoir vous connecter, votre compte doit être validé.<br/><br/>
-        Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>
-        De plus, vous devez envoyer ce document signé par mail ou par courrier.
+        return self::successMessage("Vous êtes maintenant inscrit sur le site.
+        <br/>Afin de terminer votre inscription, vous devez valider votre adresse e-mail à l'aide du courriel que vous avez reçu.<br/><br/>
+        Si vous n'avez pas reçu d'e-mail, merci de contacter la maintenance à maintenance@afmck.fr
         ");
-     */
     }
     public static function validationOk(User $user)
     {

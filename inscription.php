@@ -9,14 +9,13 @@ $editing = false;
 
 if(isset($_POST['firstName'])) {
     $db = new DatabaseUser();
-    print_r($db->adeliExists($_POST['adeliNumber']));
-/*    if($db->adeliExists($_POST['adeliNumber'])) {
+    if($db->adeliExists($_POST['adeliNumber'])) {
         $_SESSION['lastMessage'] = Popup::errorMessage("Le numéro ADELI ".$_POST['adeliNumber']." est déjà dans la base de données.<br/>
                     Vérifiez que vous avez bien renseigné ce numéro.<br/><br/> Si tel est le cas et que vous n'êtes pas déjà inscris,
                     veuillez contacter l'association, ou l'administrateur du site à maintenance@afmck.fr");
         include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
         include(Visitor::getInstance()->getRootPath().'/views/inscription.php');
-    } else*/ if($_POST['password'] != $_POST['passwordConfirmation']) {
+    } else if($_POST['password'] != $_POST['passwordConfirmation']) {
         $_SESSION['lastMessage'] = Popup::verificationPasswordError();
         include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
         include(Visitor::getInstance()->getRootPath().'/views/inscription.php');
@@ -29,7 +28,7 @@ if(isset($_POST['firstName'])) {
         $user->setComplementAddress($_POST['complementAddress']);
         $user->setCp($_POST['cp']);
         $user->setTown($_POST['town']);
-
+        $user->setHasSigned($_POST['signed'] ? 2 : -1);
         $buff = count(explode('/', $_POST['formationDate']));
         if($buff == 2) {
             $user->setFormationDate(new DateTime("01/" . $_POST['formationDate']));
