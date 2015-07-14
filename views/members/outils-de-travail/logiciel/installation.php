@@ -10,10 +10,10 @@
     <h2>Téléchargement du logiciel</h2>
     Tout d'abord, téléchargez le logiciel en fonction de votre système d'exploitation :
     <ul>
-        <li>&nbsp;&nbsp;<a href="http://downloads.joohoo.fr/bilanMDT_windows_telechargement.php"
+        <li>&nbsp;&nbsp;<a href="http://afmck.fr/docs/members/logiciels/downloads/Windows/BilanMDT_windows_V1.6.8.exe"
                target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage().
                     "/docs/members/logiciels/Windows.png"?>" height="25" alt="vers win" />&nbsp;BilanMDT pour Windows</a></li>
-        <li><a href="http://downloads.joohoo.fr/bilanMDT_macOS_telechargement.php"
+        <li><a href="http://afmck.fr/docs/members/logiciels/downloads/OS_X/BilanMDT_OS-X_V1.6.8.zip"
                target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage().
                     "/docs/members/logiciels/mac.jpg"?>" height="25" alt="mac" />BilanMDT pour Mac OS X</a></li>
     </ul>
