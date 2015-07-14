@@ -24,6 +24,7 @@
                         <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/AFMcK/adhesion.php"> Adhésion</a></li>
                         <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/AFMcK/charte.php"> Charte</a></li>
                         <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/AFMcK/qui-sommes-nous.php"> Qui sommes nous</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getInstance()->getRootPage();?>/AFMcK/comment-sinscrire.php"> Comment s'inscrire ?</a></li>
                     </ul>
                 </li>
                 <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/praticiens.php">Praticiens</a></li>
