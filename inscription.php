@@ -28,7 +28,7 @@ if(isset($_POST['firstName'])) {
         $user->setComplementAddress($_POST['complementAddress']);
         $user->setCp($_POST['cp']);
         $user->setTown($_POST['town']);
-        $user->setHasSigned($_POST['signed'] ? 2 : -1);
+        $user->setHasSigned($_POST['signed'] ? 1 : -1);
         $buff = count(explode('/', $_POST['formationDate']));
         if($buff == 2) {
             $user->setFormationDate(new DateTime("01/" . $_POST['formationDate']));

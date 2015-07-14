@@ -172,6 +172,14 @@ class User {
         end($this->mailer)->Body = (Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
         end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
         end($this->mailer)->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/billing/".date("Y")."_".$this->getAdeliNumber().".pdf");
+
+        if($this->getHasSigned() == 1) {
+            $this->mailer[] = new Mailer();
+            end($this->mailer)->isHTML(true);                                  // Set email format to HTML
+            end($this->mailer)->Subject .= "Signature d'une charte";
+            end($this->mailer)->Body = Mail::getNewChartMail($this);
+            end($this->mailer)->addAddress(SECRETARIAT_MAIL, "Secrétariat AFMcK");
+        }
     }
 
     public function unvalid()
@@ -232,7 +240,9 @@ class User {
             $this->groups[] = new Group($group['idGroup'], $group['nom']);
         }
     }
-
+    public function getCompleteAddress() {
+        return ($this->address).'<br/>'.($this->complementAddress!=""?($this->complementAddress).'<br/>':"").$this->cp.' '.($this->town);
+    }
     public function toHtml($pdf=false) {
         $ret = '';
         if($pdf) {
@@ -246,7 +256,7 @@ class User {
         $ret .= '<i class="glyphicon glyphicon-phone"></i>&nbsp;<b>Téléphone portable: </b>'.$this->getPhoneMobile().'<br/>';
 
         $ret .= '<h2 style="font-size: 14pt">Adresse</h2>';
-        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.($this->address).'<br/>'.($this->complementAddress!=""?($this->complementAddress).'<br/>':"").$this->cp.' '.($this->town);
+        $ret .= '<i class="glyphicon glyphicon-envelope"></i>&nbsp;'.$this->getCompleteAddress();
         $ret .= '<h2 style="font-size: 14pt">Formation MDT</h2>';
         $ret .= '<b>Niveau de formation</b>: '.$this->getLevelFormationString().'<br/>';
         $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->formationDate->format("m / Y");
