@@ -75,10 +75,24 @@ class Mail {
             Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>
             Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
         }
+
         $ret .=
             "<h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
         En vous souhaitant une bonne journée,<br/>
         Le bureau de l'AFMcK";
         return utf8_decode($ret);
+    }
+
+    public static function getNewChartMail(User $user)
+    {
+        $ret = "Bonjour,<br/>
+            Une nouvelle signature de charte a eu lieu et nécessite l'envoie d'une charte plastifiée.<br/>
+            Cette charte est à destination de : <br/><br/>
+            ".$user->getFirstName()." ".$user->getLastName()." n° Adeli ".$user->getAdeliNumber()."<br/>".
+            "Email: ".$user->getMail()."<br/>".
+            $user->getCompleteAddress();
+
+        $ret.="<br/><br/>En vous souhaitant une bonne journée";
+        return $ret;
     }
 }
