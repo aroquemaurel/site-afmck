@@ -419,6 +419,7 @@ a.tooltip2 span
     text-overflow: ellipsis;
     position: absolute;
     z-index: 42;
+    top: 20px;
 }
 
 #pac-input:focus {
