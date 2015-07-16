@@ -41,6 +41,7 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
             $err = true;
         }
     } else {
+
         $err = true;
     }
 
