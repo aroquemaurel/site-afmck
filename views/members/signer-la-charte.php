@@ -23,10 +23,11 @@
 
     Afin de signer la charte, de recevoir un exemplaire plastifié, et d'éventuellement apparaitre sur le carte,
     vous pouvez cliquer sur le lien ci-dessous.
-
-    <p style="text-align: center"><a href="<?php echo Visitor::getInstance()->getRootPage()."/members/je-signe.php";?>">
-            <button class="btn btn-primary"><i class="glyphicon glyphicon-ok-sign"></i>
-                &nbsp;Je signe la charte</button></a></p>
-
+                <div style="width: 100%;margin:auto" class="modal-body">
+                    <object style="width: 100%; margin:auto;" type="application/pdf" data="<?php echo Visitor::getInstance()->getRootPage().'/docs/members/charte des praticiens adherents AFMcK.pdf';?>" width="500" height="500">this is not working as expected</object>
+                </div>
+                <div style="text-align: center">
+                    <a href="<?php echo Visitor::getInstance()->getRootPage()."/members/je-signe.php";?>"><button type="button" id="acceptBtn" class="btn btn-primary"><i class="glyphicon glyphicon-ok-sign"></i>&nbsp;Je comprends et accepte les engagements inhérents à la signature de cette charte</button></a>
+                </div>
 
 </div>
