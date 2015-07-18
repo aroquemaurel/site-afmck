@@ -10,16 +10,13 @@ $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'),
 
 $user = Visitor::getInstance()->getUser();
 if($user->getHasSigned() == -1) {
-    $user->setHasSigned(2);
+    $user->setHasSigned(1);
     $user->commit();
+    $_SESSION['lastMessage'] = Popup::successMessage("Votre demande de signature a bien été prise en compte par l'association, le secrétariat en a été informé. Vous allez recevoir une charte plastifiée.<br/>
+            Si vous avez déjà cette charte plastifiée, merci d'envoyer un email à secretariat@afmck.fr.");
 } else {
     $_SESSION['lastMessage'] = Popup::errorMessage('Vous avez déjà signé la charte, vous ne pouvez être sur cette page');
-    header('Location: ' . 'index.php');
 }
-
-
-include('../views/includes/head.php');
-include('../views/members/je-signe.php');
-include('../views/includes/foot.php');
+header('Location: ' . 'index.php');
 
 ?>

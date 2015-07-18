@@ -58,21 +58,20 @@ class Popup {
 
     public static function inscriptionOk()
     {
-        // TODO Change me
-     /*   return self::successMessage("Vous êtes maintenant inscrit sur le site.
-        <br/>Afin de pouvoir vous connecter, votre compte doit être validé.<br/><br/>
-        Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>
-        De plus, vous devez envoyer ce document signé par mail ou par courrier.
+        return self::successMessage("Vous êtes maintenant inscrit sur le site.
+        <br/>Afin de terminer votre inscription, vous devez valider votre adresse e-mail à l'aide du courriel que vous avez reçu.<br/><br/>
+        Si vous n'avez pas reçu d'e-mail, merci de contacter la maintenance à maintenance@afmck.fr.
         ");
-     */
     }
     public static function validationOk(User $user)
     {
-        return self::successMessage("Vous êtes maintenant inscrit sur le site.
+        $msg =
+        "Vous êtes maintenant inscrit sur le site.
            <br/>Afin de pouvoir vous connecter, votre compte doit être validé par un membre du CA.<br/><br/>
            Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>
            De plus, vous devez envoyer ce <a href=\"".Visitor::getInstance()->getRootPage()."/docs/members/registration/".$user->getAdeliNumber().".pdf\">document</a> signé par mail ou par courrier.
-           ");
+           ";
+        return self::successMessage($msg);
     }
     public static function disableAccount()
     {

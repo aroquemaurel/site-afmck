@@ -36,6 +36,9 @@ Image::miniLink($folder, "MDT World Press Newsletter_Vol4No1",
 <h3>Français</h3>
 <ul>
 <?php
+Image::miniLink($folder, "MDT Newsletter_Vol 3 No 4-fr_AFMcK",
+    "MDT World Press Newsletter Vol.3 N°4 <small>Français</small>");
+
 Image::miniLink($folder, "MDT Newsletter_Vol 3 No 3-fr_AFMcK",
     "MDT World Press Newsletter Vol.3 N°3 <small>Français</small>");
 Image::miniLink($folder, "MDT Newsletter_Vol 3 No 2-fr_AFMcK",

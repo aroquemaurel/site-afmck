@@ -170,9 +170,34 @@ if(!$editing) {
         </div>
         </fieldset>
         <fieldset>
+            <legend>Charte de bonnes pratiques</legend>
+            <div class="form-group">
+             <label><input tabindex="15" type="checkbox" <?php if($user->getHasSigned() && $editing) echo "checked=checked"; ?>
+    name="signed" id="signed"> &nbsp;Je souhaite signer la charte de bonnes pratiques</label>
+            </div>
+        </fieldset>
+        <!-- Button trigger modal -->
+<!-- Modal -->
+<div  class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div style="width: 70%" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div style="width: 100%;margin:auto" class="modal-body">
+          <object style="width: 100%; margin:auto;" type="application/pdf" data="<?php echo Visitor::getInstance()->getRootPage().'/docs/members/charte des praticiens adherents AFMcK.pdf';?>" width="500" height="500">this is not working as expected</object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="acceptBtn" class="btn btn-primary">je comprends et accepte les engagements inhérents à la signature de cette charte</button>
+        <button type="button" id="closeBtn" class="btn btn-default" data-dismiss="modal">je refuse de signer la charte pour le moment</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <fieldset>
             <legend>Paiement</legend>
             <div class="form-group">
-                <select tabindex="15" class="selectpicker form-control input-lg" required="required" id="payment" name="payment">
+                <select tabindex="16" class="selectpicker form-control input-lg" required="required" id="payment" name="payment">
                     <option disabled selected>Moyen de paiement</option>
                     <option <?php if($user->getPayment() == 1) echo "selected"?> value="1">Chèque</option>
                     <option <?php if($user->getPayment() == 2) echo "selected"?> value="2">Virement bancaire</option>
@@ -180,7 +205,7 @@ if(!$editing) {
             </div>
 
             <div class="form-group">
-                <select tabindex="16" class="selectpicker form-control input-lg" required="required" id="valuePaid" name="valuePaid">
+                <select tabindex="17" class="selectpicker form-control input-lg" required="required" id="valuePaid" name="valuePaid">
                     <option disabled selected>Montant de la cotisation</option>
                     <option <?php if($user->getValuePaid() == 60) echo "selected"?> value="60">Libéral : 60€</option>
                     <option <?php if($user->getValuePaid() == 40) echo "selected"?> value="40">Salarié : 40€</option>
@@ -191,10 +216,11 @@ if(!$editing) {
         <fieldset>
             <legend>Newsletter</legend>
             <div class="form-group">
-                     <label><input tabindex="17" type="checkbox" <?php if(!$user->getNewsletter() && $editing) echo "checked=checked";?>
+                     <label><input tabindex="18" type="checkbox" <?php if(!$user->getNewsletter() && $editing) echo "checked=checked";?>
                      name="newsletter" id="newsletter"> &nbsp;Je ne souhaite pas recevoir la newsletter</label>
             </div>
         </fieldset>
+
         <hr class="colorgraph">
             <button id="submit" type="submit" style="margin: auto; width: 250px; "
             class="btn btn-primary btn-block btn-lg">
@@ -222,7 +248,19 @@ $script .= "
                 					minViewMode: 'months'
                 });
             });
-                 $('.selectpicker').selectpicker();
+             $('.selectpicker').selectpicker();
+            $('#signed').click(function () {
+                if ($(this).prop('checked')) {
+                    $('#myModal').collapse('show');
+                }
+            });
+             $('#closeBtn').click(function() {
+                 $('#myModal').collapse('hide');
+                 $('#signed').attr('checked', false);
+             });
+             $('#acceptBtn').click(function() {
+                 $('#myModal').collapse('hide');
+             });
 </script>";
 
 if(!$editing) {

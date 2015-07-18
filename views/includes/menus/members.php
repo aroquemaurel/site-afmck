@@ -35,6 +35,7 @@
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°5_AFMcK.pdf" target="_blank">Chronique N°5</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°6_AFMcK.pdf" target="_blank">Chronique N°6</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/Algorithme_decisionnel_des_derangements_epaules.pdf" target="_blank">Chronique N°7</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°8_AFMcK.pdf" target="_blank">Chronique N°8</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
@@ -45,7 +46,9 @@
                                             <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°3_AFMcK.pdf" target="_blank">Trucs et Astuces N°3</a></li>
                                             <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">Trucs et Astuces N°4</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°5_AFMcK.pdf" target="_blank">Trucs et Astuces N°5</a></li>
-                                        </li>                                    </ul>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°6_AFMcK.pdf" target="_blank">Trucs et Astuces N°6</a></li>
+
+                        </li>                                    </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Études</strong></p>
@@ -77,7 +80,7 @@
                             <!-- Content container to add padding -->
                             <div class="yamm-content">
                                 <div class="row">
-                                    <ul class="col-sm-offset-2 col-sm-4 list-unstyled">
+                                    <ul class="col-sm-4 list-unstyled">
                                         <li>
                                             <p><strong>Les documentations</strong></p>
                                         </li>
@@ -85,12 +88,21 @@
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/documentations/fiches-exercices.php">Fiches d'exerices</a></li>
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/documentations/com.php">La com'</a></li>
                                     </ul>
-                                    <ul class="col-sm-3 list-unstyled">
+                                    <ul class="col-sm-4 list-unstyled">
                                         <li>
-                                            <p><strong>Autres outils</strong></p>
+                                            <p><strong>Logiciel de Bilan MDT</strong></p>
                                         </li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/autres-outils/materiel.php">Matériel</a></li>
-                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/autres-outils/logiciels.php">Logiciels</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/logiciel/logiciel.php">Le logiciel</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/logiciel/installation.php">Installation du logiciel</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/logiciel/cle-deverrouillage.php">Obtenir la clé de déverrouillage</a></li>
+                                    </ul>
+                                    <ul class="col-sm-4 list-unstyled">
+                                        <li>
+                                            <p><strong>Partenariats</strong></p>
+                                        </li>
+
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/partenariats/materiel.php">Le matériel</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/partenariats/monsitekine.php">MonSiteKiné</a></li>
                                     </ul>
                                 </div>
                             </div>

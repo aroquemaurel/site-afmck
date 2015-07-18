@@ -43,6 +43,10 @@ class RegistrationPdf extends PdfFile {
          Si vous souhaitez exercer ce droit et obtenir communication des informations vous concernant, veuillez vous adresser à
          : tresorerie@afmck.fr
         </p>
+        <p>Afin de régler votre adhésion, merci d'envoyer votre chèque, ainsi que cette fiche d'inscription à l'adresse suviante : <br/>
+         Anne-Marie GASTELLU-ETCHEGORRY<br/>
+        27 av. du 10ème Dragon<br/>
+        82000 Montauban</p>
         <div style=\"height:2px;border-bottom:1px solid black;\"></div>
         ";
         }
