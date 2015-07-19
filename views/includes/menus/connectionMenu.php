@@ -61,7 +61,11 @@ if(!Visitor::getInstance()->isConnected()) {
 	if($newsRights) {
 		echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/list-news.php">Gestion des newsletters</a></li>';
 	}
+    if($user->isInGroup("MEMBRE_CA") || $user->isInGroup("ADMINISTRATEUR")) {
+        echo '<li><b>Le Conseil d\'Administration</b></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/CA/liste-des-documents.php">Liste des documents</a></li>';
 
+    }
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
         echo '<li><b>Mon profil</b></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/mon-profil.php">Voir mon profil</a></li>';
