@@ -1,7 +1,7 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid">
     <h1>Ajouter un document</h1>
-    <form class="form-horizontal">
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo Visitor::getInstance()->getRootPage()."/admin/add-document.php"?>">
         <div class="form-group">
             <label for="title" class="col-sm-2 control-label">Titre</label>
             <div class="col-sm-10">
@@ -22,9 +22,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Document</label>
+            <label for="file" class="col-sm-2 control-label">Document</label>
             <div class="col-sm-10">
-                <input required="" type="file" style="padding-bottom: 50px;padding-top: 15px"class="form-control" id="inputEmail3" placeholder="Email">
+                <input  id="file" name="file" required="" type="file" style="padding-bottom: 50px;padding-top: 15px" class="form-control">
             </div>
         </div>
         <hr/>
