@@ -102,6 +102,8 @@ class Visitor {
             return $this->isConnected();
         } else if(strpos($pageFilename,'admin')) {
             return $this->isConnected() && $this->user->isInGroup("ADMINISTRATEUR");
+        } else if(strpos($pageFilename, 'CA')) {
+            return $this->isConnected() && $this->user->isInGroup("MEMBRE_CA");
         } else { // Every body can see
             return true;
         }

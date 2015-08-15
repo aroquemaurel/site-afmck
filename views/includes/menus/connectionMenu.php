@@ -26,7 +26,7 @@ if(!Visitor::getInstance()->isConnected()) {
 	$newsRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("SECRETAIRE");
 
     echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
-        Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .ucfirst(strtolower(Visitor::getInstance()->getUser()->getLastName()));
+        Visitor::getInstance()->getUser()->toString();
 
     if($accountsRights || $charteRights) {
         if($nbAdmin > 0) {
@@ -61,7 +61,13 @@ if(!Visitor::getInstance()->isConnected()) {
 	if($newsRights) {
 		echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/list-news.php">Gestion des newsletters</a></li>';
 	}
-
+    if($user->isInGroup("MEMBRE_CA") || $user->isInGroup("ADMINISTRATEUR")) {
+        echo '<li><b>Le Conseil d\'Administration</b></li>';
+        if($user->isInGroup("SECRETAIRE")  || $user->isInGroup("ADMINISTRATEUR")) {
+            echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/add-document.php">Ajouter un document</a></li>';
+        }
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/CA/liste-des-documents.php">Liste des documents</a></li>';
+    }
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
         echo '<li><b>Mon profil</b></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/mon-profil.php">Voir mon profil</a></li>';
