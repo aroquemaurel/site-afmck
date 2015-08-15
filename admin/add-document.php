@@ -3,6 +3,8 @@ $particularRights = true;
 include('../begin.php');
 utils\Rights::hasRights(array("SECRETAIRE", "ADMINISTRATEUR", "TRESORIER"));
 
+use models\Document;
+use models\Tag;
 use utils\Link;
 $title = 'Liste des newsletter';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
@@ -13,7 +15,9 @@ if(isset($_POST['title']) && isset($_POST['description']) && isset($_POST['tags'
     $title = $_POST['title'];
     $description = $_POST['description'];
     $target_dir = Visitor::getInstance()->getRootPath()."/docs/CA/";
-    $target_file =  $target_dir.uniqid()."_".basename($_FILES["file"]["name"]);
+
+    $filename = uniqid()."_".basename($_FILES["file"]["name"]);
+    $target_file =  $target_dir.$filename;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     echo $target_file." ".$_FILES['file']["tmp_name"];
     $_SESSION['lastMessage'] = "";
@@ -31,6 +35,19 @@ if(isset($_POST['title']) && isset($_POST['description']) && isset($_POST['tags'
     if($_SESSION['lastMessage'] == "") {
         if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
             // TODO add all fields in database
+            $document = new Document();
+            $document->setTitle($_POST['title']);
+            $document->setDate(new DateTime());
+            $document->setDescription($_POST['description']);
+            $tags = explode(",", $_POST['tags']);
+            foreach($tags as $tag) {
+                $document->addTag(new Tag(trim($tag)));
+            }
+
+            $document->addFile($title, $filename);
+            $document->setUser(Visitor::getInstance()->getUser());
+            $db = new DatabaseDocuments();
+            $db->addDocument($document);
             $_SESSION['lastMessage'] = Popup::successMessage("Le document " . $title . "(" . $_FILES["file"]["name"] . ") a été correctement ajouté à la liste de documents consultables par les membres du CA");
         } else {
             $_SESSION['lastMessage'] .= Popup::errorMessage("Un problème a eu lieu dans l'upload du document, celui-ci n'a pas pu être envoyé sur le serveur. Veuillez contacter l'administrateur à maintenance@afmck.fr");

@@ -1,5 +1,6 @@
 <?php
 use models\Document;
+use models\File;
 
 /**
  * Created by PhpStorm.
@@ -37,6 +38,74 @@ class DatabaseDocuments extends Database {
 
         }
         return $ret;
+    }
 
+    public function addDocument(Document $d) {
+        $title = $d->getTitle();
+        $desc = $d->getDescription();
+        $tags = $d->getTags();
+        $file = $d->getFiles()[0];
+        $idUser = $d->getUser()->getId();
+        $date = $d->getDate()->format("Y-m-d");
+
+        $query = $this->dbAccess->prepare("INSERT INTO document VALUES
+          ('', :title, :desc, :date, :idUser)");
+        $query->bindParam(":title", $title, PDO::PARAM_STR);
+        $query->bindParam(":desc", $desc, PDO::PARAM_STR);
+        $query->bindParam(":date", $date, PDO::PARAM_STR);
+        $query->bindParam(":idUser", $idUser, PDO::PARAM_STR);
+
+        $query->execute();
+        $idDoc = $this->dbAccess->lastInsertId();
+        foreach($tags as $tag) {
+            // add all tags
+            $this->addTag($tag->getTag(), $idDoc);
+        }
+
+        $this->addFile($file, $idDoc);
+    }
+
+    public function addFile(File $file, $idDoc) {
+        $path = $file->getPath();
+        $title = $file->getTitle();
+
+        $query = $this->dbAccess->prepare("INSERT INTO file VALUES
+          ('', :title, :path)");
+        $query->bindParam(":title", $title, PDO::PARAM_STR);
+        $query->bindParam(":path", $path, PDO::PARAM_STR);
+        $query->execute();
+        $idFIle =$this->dbAccess->lastInsertId();
+        $query = $this->dbAccess->prepare("INSERT INTO document_file VALUES (:idDocument, :idFile)");
+        $query->bindParam(":idDocument", $idDoc, PDO::PARAM_INT);
+        $query->bindParam(":idFile", $idFIle, PDO::PARAM_INT);
+        $query->execute();
+    }
+
+    public function addTag($tag, $idDocument)
+    {
+        $idTag = $this->getIdTag($tag);
+        $query = $this->dbAccess->prepare("INSERT INTO document_tag VALUES
+          (:idTag, :idDocument)");
+        $query->bindParam(":idTag", $idTag, PDO::PARAM_INT);
+        $query->bindParam(":idDocument", $idDocument, PDO::PARAM_INT);
+        $query->execute();
+    }
+
+    public function getIdTag($tag) {
+        $query = $this->dbAccess->prepare("SELECT id, tag
+                                          from tag where tag=:tag");
+        $query->bindParam(":tag", $tag, PDO::PARAM_STR);
+        $query->execute();
+
+        if($query->rowCount() == 0) {
+            $query = $this->dbAccess->prepare("INSERT INTO tag(tag) VALUES(:tag)");
+            $query->bindParam(":tag", $tag, PDO::PARAM_STR);
+            $query->execute();
+            $ret = $this->dbAccess->lastInsertId();
+        } else {
+            $ret = $query->fetchObject()->id;
+        }
+
+        return $ret;
     }
 }

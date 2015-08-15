@@ -12,6 +12,11 @@ namespace models;
 class Tag {
     private $tag;
 
+    function __construct($tag)
+    {
+        $this->tag = $tag;
+    }
+
     /**
      * @return mixed
      */

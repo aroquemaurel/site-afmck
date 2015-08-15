@@ -22,6 +22,7 @@ class Document {
 
     public function __construct() {
         $this->tags = array();
+        $this->files = array();
     }
     public function hydrat($data) {
         $this->title = $data->title;
@@ -29,6 +30,7 @@ class Document {
         $this->date = new DateTime($data->date);
         $this->user = new User();
         $this->user->hydrat($data);
+
     }
 
     /**
