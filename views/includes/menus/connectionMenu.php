@@ -26,7 +26,7 @@ if(!Visitor::getInstance()->isConnected()) {
 	$newsRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("SECRETAIRE");
 
     echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
-        Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .ucfirst(strtolower(Visitor::getInstance()->getUser()->getLastName()));
+        Visitor::getInstance()->getUser()->toString();
 
     if($accountsRights || $charteRights) {
         if($nbAdmin > 0) {

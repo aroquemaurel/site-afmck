@@ -108,4 +108,22 @@ class DatabaseDocuments extends Database {
 
         return $ret;
     }
+
+    public function removeDocument($id)
+    {
+        $query = $this->dbAccess->prepare("DELETE FROM document_tag
+                                          where idDocument=:id");
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+
+        $query = $this->dbAccess->prepare("DELETE FROM document_file
+                                          where idDocument=:id");
+
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+        $query = $this->dbAccess->prepare("DELETE FROM document
+                                          where id=:id");
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+    }
 }

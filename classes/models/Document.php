@@ -19,6 +19,7 @@ class Document {
     private $description;
     private $date;
     private $user;
+    private $id;
 
     public function __construct() {
         $this->tags = array();
@@ -30,8 +31,26 @@ class Document {
         $this->date = new DateTime($data->date);
         $this->user = new User();
         $this->user->hydrat($data);
+        $this->id = $data->id;
 
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
 
     /**
      * @return mixed

@@ -718,6 +718,8 @@ class User {
         $this->disable = $disable;
     }
 
-
+    public function toString() {
+        return $this->getFirstName()[0]. ". " .ucfirst(strtolower($this->getLastName()));
+    }
 
 }

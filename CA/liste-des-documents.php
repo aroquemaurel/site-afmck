@@ -9,6 +9,10 @@ $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link
     new Link('Administration','#'), new Link('Liste des documents', '#')));
 
 $db = new DatabaseDocuments();
+if(isset($_GET['d']) && isset($_GET['remove'])) { // we remove a doc
+    $db->removeDocument($_GET['d']);
+}
+
 $docs = $db->getAllDocuments();
 include('../views/includes/head.php');
 include('../views/CA/liste-des-documents.php');
