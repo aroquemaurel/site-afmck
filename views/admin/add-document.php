@@ -17,7 +17,7 @@
         <div class="form-group">
             <label for="tags" class="col-sm-2 control-label">Mots-clés</label>
             <div class="col-sm-10">
-                <input type="text" name="tags" class="form-control" required="" id="tags" placeholder="Exemple: Comptabilité, Trésorerie">
+                <input type="text" name="tags" class="form-control" required="" id="tags" placeholder="Exemple: Compte-Rendu, Trésorerie">
                 <p style="font-size: 10pt" class="help-block">Vous pouvez mettre plusieurs mots clés en les séparant par des virgules. Ceux-ci permettront ensuite de retrouver plus facilement ce document</p>
             </div>
         </div>

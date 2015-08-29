@@ -4,6 +4,14 @@
     <h1>Bienvenue sur le site de l'Association Française McKenzie</h1>
     <div id="news" class="hidden-xs hidden-md thumbnail with-caption news" style="margin-right: -10px;margin-top: -80px; width: 220px">
         <h2>Actualités</h2>
+        <h3>Traduction d'une newsletter McKenzie Internation</h3>
+<a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/MDT Newsletter_Vol 4 No 1-fr_AFMcK.pdf">
+<img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/mini/MDT Newsletter_Vol 4 No 1-fr_AFMcK.jpg" width="100"/>
+</a>
+        <h3>Nouvel article scientifique</h">
+<a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/fr/recommandation-clinique-2015-de-la-sofec-concernant-les-dissections-des.pdf">
+<img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/fr/mini/recommandation-clinique-2015-de-la-sofec-concernant-les-dissections-des.jpg" width="100"/>
+</a>
         <h3>Annonces de remplacement</h3>
         <p>Une <a href="<?php echo Visitor::getInstance()->getRootPage()."/members/travaux-association/annonces/ile-de-france.php";?>">nouvelle section</a> est arrivée, elle contiendra les annonces pour des recherches de remplacement !</p>
 <h3>Newsletter Mckenzie International</h3>
@@ -34,16 +42,6 @@ MDT WORLD PRESS Newsletter Vol 3 N°4
             Editions en PDF des bilans
             et des fiches de suivis.
             </p>
-        <h3>MDT World Press</h3>
-        <p>Newsletter Vol3.N°2</p>
-        <h3>Rapport d'étude</h3>
-        <p>Cervicalgies,
-            association entre centralisation et préférence directionnelle
-            Traduction AFMcK</p>
-        <h3>Article</h3>
-        <p>Recovery of Motor Deficit
-            Accompanying Sciatica
-            (en anglais)</p>
     </div><!--/.well -->
 <div style="padding-right: 80px;">
     <?php

@@ -19,7 +19,7 @@ $nbPraticiens += count($addresses);
 <p>Il y a actuellement <?php echo count($users);?> cabinets, de <?php echo $nbPraticiens;?> praticiens, sur la carte.</p>
     </div><!-- fin de .introcarte -->
         <input id="pac-input" class="controls" type="text" placeholder="Rechercher un lieu">
-        <div id="map-canvas"></div>
+        <div style="width: 700px; height: 500px" id="map-canvas"></div>
 
         <p>&nbsp;<br/>&nbsp;</p>
 
@@ -77,7 +77,7 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
             //map.setZoom();
     var places = searchBox.getPlaces();
     map.setCenter(places[0].geometry.location);
-    map.setZoom(11);
+    map.setZoom(12);
 });
     var markerCluster;";
 
