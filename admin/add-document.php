@@ -9,10 +9,11 @@ use utils\Link;
 $title = 'Liste des newsletter';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
     new Link('Administration','#'), new Link('Ajouter un document', '#')));
-
+$categories = (new DatabaseDocuments())->getAllCategoriesName();
 // Add or edit the document
 if(isset($_POST['title']) && isset($_POST['description']) && isset($_POST['tags'])) {
     $title = $_POST['title'];
+    $categoryName = $_POST['category'];
     $description = $_POST['description'];
     $target_dir = Visitor::getInstance()->getRootPath()."/docs/CA/";
 
@@ -39,6 +40,14 @@ if(isset($_POST['title']) && isset($_POST['description']) && isset($_POST['tags'
             $document->setTitle($_POST['title']);
             $document->setDate(new DateTime());
             $document->setDescription($_POST['description']);
+            $db = new DatabaseDocuments();
+
+            if(!isset($_POST['categoryId']) ||  $_POST['categoryId'] == -1) {
+                $idCat = $db->addCategory($categoryName);
+            } else {
+                $idCat = $_POST['categoryId'];
+            }
+            $document->setCategory(new \models\Category($idCat));
             $tags = explode(",", $_POST['tags']);
             foreach($tags as $tag) {
                 $document->addTag(new Tag(trim($tag)));
@@ -46,8 +55,8 @@ if(isset($_POST['title']) && isset($_POST['description']) && isset($_POST['tags'
 
             $document->addFile($title, $filename);
             $document->setUser(Visitor::getInstance()->getUser());
-            $db = new DatabaseDocuments();
             $db->addDocument($document);
+
             $_SESSION['lastMessage'] = Popup::successMessage("Le document " . $title . "(" . $_FILES["file"]["name"] . ") a été correctement ajouté à la liste de documents consultables par les membres du CA");
         } else {
             $_SESSION['lastMessage'] .= Popup::errorMessage("Un problème a eu lieu dans l'upload du document, celui-ci n'a pas pu être envoyé sur le serveur. Veuillez contacter l'administrateur à maintenance@afmck.fr");

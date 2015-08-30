@@ -20,6 +20,7 @@ class Document {
     private $date;
     private $user;
     private $id;
+    private $category;
 
     public function __construct() {
         $this->tags = array();
@@ -32,6 +33,7 @@ class Document {
         $this->user = new User();
         $this->user->hydrat($data);
         $this->id = $data->id;
+		$this->category = new Category($data->category, $data->name);
 
     }
 
@@ -166,4 +168,22 @@ class Document {
         }
         $this->files[] = new File($titleFile, $pathFile);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory(Category $category)
+    {
+        $this->category = $category;
+    }
+
+
 }

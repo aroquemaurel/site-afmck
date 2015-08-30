@@ -1,4 +1,5 @@
 <?php
+use models\Category;
 use models\Document;
 use models\File;
 
@@ -16,13 +17,14 @@ class DatabaseDocuments extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT *
-                                          from document, user, tag, file, document_file, document_tag
+                                          from document, user, tag, file, document_file, document_tag, category
                                         where idUser = user.id
+										and document.category = category.id
                                         and document_file.idFile = file.id
                                         and document_file.idDocument = document.id
                                         and document_tag.idTag = tag.id
                                         and document_tag.idDocument = document.id
-                                           order by date desc");
+                                           order by category.name asc, date desc");
         $query->execute();
         $lastDoc = 0;
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataDoc) {
@@ -47,13 +49,15 @@ class DatabaseDocuments extends Database {
         $file = $d->getFiles()[0];
         $idUser = $d->getUser()->getId();
         $date = $d->getDate()->format("Y-m-d");
+        $idCategory = $d->getCategory()->getId();
 
         $query = $this->dbAccess->prepare("INSERT INTO document VALUES
-          ('', :title, :desc, :date, :idUser)");
+          ('', :title, :desc, :date, :idUser, :category)");
         $query->bindParam(":title", $title, PDO::PARAM_STR);
         $query->bindParam(":desc", $desc, PDO::PARAM_STR);
         $query->bindParam(":date", $date, PDO::PARAM_STR);
         $query->bindParam(":idUser", $idUser, PDO::PARAM_STR);
+        $query->bindParam(":category", $idCategory, PDO::PARAM_STR);
 
         $query->execute();
         $idDoc = $this->dbAccess->lastInsertId();
@@ -108,6 +112,22 @@ class DatabaseDocuments extends Database {
 
         return $ret;
     }
+    public function addCategory($name) {
+        $query = $this->dbAccess->prepare("INSERT INTO category(name) VALUES(:name)");
+        $query->bindParam(":name", $name, PDO::PARAM_STR);
+        $query->execute();
+
+        return $this->dbAccess->lastInsertId();
+    }
+    public function getCategoryName($id) {
+        $query = $this->dbAccess->prepare("SELECT id, name
+                                          from category where id=:id");
+        $query->bindParam(":id", $id, PDO::PARAM_STR);
+        $query->execute();
+
+        return $query->fetchObject()->name;
+
+    }
 
     public function removeDocument($id)
     {
@@ -125,5 +145,17 @@ class DatabaseDocuments extends Database {
                                           where id=:id");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
+    }
+
+    public function getAllCategoriesName() {
+        $query = $this->dbAccess->prepare("SELECT id, name
+                                          from category
+                                           order by name");
+        $query->execute();
+        $ret = array();
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataCat) {
+            $ret[] = new Category($dataCat->id, $dataCat->name);
+        }
+        return $ret;
     }
 }
