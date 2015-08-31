@@ -38,9 +38,9 @@
 <!-- Bootstrap core JavaScript-->
 <!--<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
 <script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/js/jquery.js"></script>
-<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/js/bootstrap.min.js"></script>
 <script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/src/javascripts/jquery.tocify.js"></script>
+<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/js/bootstrap.min.js"></script>
 
 <script>
     $(function() {
@@ -74,9 +74,9 @@
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, duration);
             return false;
-        })
-	});
-
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+    });
     if($('.carousel')) {
         $('.carousel').carousel({
             interval: 3000

@@ -17,19 +17,17 @@
 			echo '<h2>'.$doc->getCategory()->getName().'</h2>';
 			echo '<table class="table table-striped">
 				<tr>
-				<th>Titre</th>
-				<th>Description</th>
-				<th>Mots clés</th>
-				<th>Auteur</th>';
+				<th style="width: 55%">Titre</th>
+				<th style="width:30%">Mots clés</th>
+				<th style="width: 15%">Auteur</th>';
 					if($canEdit) {
-						echo '<th>Actions</th>';
+						echo '<th style="width: 5%">Actions</th>';
 					}
 			echo '</tr>';
 			$lastCat = $doc->getCategory()->getId();
 		}
         echo '<tr>';
-			echo '<td><a href="'.VIsitor::getInstance()->getRootPage().'/docs/CA/'.$doc->getFiles()[0]->getPath().'">'.$doc->getTitle().'</a></td>';
-			echo '<td><a href="'.VIsitor::getInstance()->getRootPage().'/docs/CA/'.$doc->getFiles()[0]->getPath().'">'.$doc->getDescription().'</a></td>';
+			echo '<td><a data-toggle="tooltip" title="'.$doc->getDescription().'" href="'.VIsitor::getInstance()->getRootPage().'/docs/CA/'.$doc->getFiles()[0]->getPath().'">'.$doc->getTitle().'</a></td>';
 			echo '<td>';
 			foreach($doc->getTags() as $tag) {
 				echo '<span class="label label-primary">'.$tag.'</span> ';
@@ -54,4 +52,5 @@
 	echo '</table>';
 	}
     ?>
-</div>
+
+      </div>
