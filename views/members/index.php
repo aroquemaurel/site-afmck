@@ -1,6 +1,12 @@
 <?php $breadcrumb->display()?>
 
 <div class="container-fluid">
+<div class="alert alert-warning">
+<p>Le congrés AFMcK 2016 approche à grand pas ! <br/>Vous pouvez avoir accès à toutes les informations pratiques ici : <a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/journees/2016-montpellier.php">Montpellier 2016</a>.</p>
+<p>Pour vous inscrire, veuillez <b>remplir le formulaire</b> suivant : <a href="https://docs.google.com/forms/d/1NrUETlyEZKwsma10d-MQhLiTH-w7VhpAMezK1d32My4/viewform?c=0&w=1">Je souhaite m'inscrire au congrès</a></p>
+</div>
+
+</div>
     <h1>Bienvenue sur le site de l'Association Française McKenzie</h1>
     <div id="news" class="hidden-xs hidden-md thumbnail with-caption news" style="margin-right: -10px;margin-top: -80px; width: 220px">
         <h2>Actualités</h2>
@@ -54,9 +60,8 @@ MDT WORLD PRESS Newsletter Vol 3 N°4
     ?>
 
 <div class="alert alert-info">
-Bienvenue sur le nouveau site de l'Association Française McKenzie !!<br/>
-Ce site tout neuf vous permettra d'avoir prochainement de nouvelles fonctionnalités.<br/><br/>
-Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des bugs ou des incompréhensions…<br/> Si tel est le cas, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a>, votre aide nous est précieuse ! </div>
+Bienvenue sur le site de l'Association Française McKenzie !<br/>
+Si vous avez des remarques sur le site, ou avez un problème avec le site, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a>, votre aide nous est précieuse ! </div>
     <?php
     echo '<div style="margin-bottom: 0px;">';
     (new utils\Pagination($page, $nbPages, Visitor::getInstance()->getRootPage().'/members/index.php'))->display();
@@ -72,3 +77,5 @@ Celui-ci étant tout jeune, il se peut que vous tombiez sur des problèmes, des 
     ?>
 </div>
 </div>
+
+<?php

@@ -25,7 +25,7 @@
                     </div>
 
 
-                     <input type="text" name="category" class="form-control" id="category" required="">
+                     <input type="text" name="category" class="form-control" id="category"/> 
             </div>
         </div>
         <div class="form-group">

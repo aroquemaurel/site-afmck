@@ -135,7 +135,6 @@ class DatabaseDocuments extends Database {
                                           where idDocument=:id");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
-
         $query = $this->dbAccess->prepare("DELETE FROM document_file
                                           where idDocument=:id");
 

@@ -63,7 +63,7 @@ if(!Visitor::getInstance()->isConnected()) {
 	}
     if($user->isInGroup("MEMBRE_CA") || $user->isInGroup("ADMINISTRATEUR")) {
         echo '<li><b>Le Conseil d\'Administration</b></li>';
-        if($user->isInGroup("SECRETAIRE")  || $user->isInGroup("ADMINISTRATEUR")) {
+        if($user->isInGroup("SECRETAIRE")  || $user->isInGroup("ADMINISTRATEUR") | $user->isInGroup("PRESIDENT") || $user->isInGroup("TRESORIER")) {
             echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/add-document.php">Ajouter un document</a></li>';
         }
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/CA/liste-des-documents.php">Liste des documents</a></li>';

@@ -32,7 +32,7 @@ class Document {
         $this->date = new DateTime($data->date);
         $this->user = new User();
         $this->user->hydrat($data);
-        $this->id = $data->id;
+        $this->id = $data->idDocument;
 		$this->category = new Category($data->category, $data->name);
 
     }

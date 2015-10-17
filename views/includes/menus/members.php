@@ -63,6 +63,7 @@
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/brest.php">Brest 2013</a></li>
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/lyon.php">Lyon 2014</a></li>
                                         <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/lille.php">Lille 2015</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage(); ?>/members/travaux-association/journees/2016-montpellier.php">Montpellier 2016</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
