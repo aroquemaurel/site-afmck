@@ -1,12 +1,45 @@
 <?php $breadcrumb->display()?>
 
 <div class="container-fluid">
+<div class="bs-callout bs-callout-info">
+<h2><center>Les Inscriptions aux 5èmes journées de l’AFMcK sont ouvertes !</center></h2>
+<center>
+<p>
+<iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/kKWmwwQ84aulYndvLPH" allowfullscreen></iframe><br /><a href="http://www.dailymotion.com/video/kKWmwwQ84aulYndvLPH" target="_blank">AFMcK - 5e congr&egrave;s - Montpellier</a> <i>par <a href="http://www.dailymotion.com/antoinederoquemaurel" target="_blank">antoinederoquemaurel</a></i>
+</p>
+</center>
 <div class="alert alert-warning">
-<p>Le congrés AFMcK 2016 approche à grand pas ! <br/>Vous pouvez avoir accès à toutes les informations pratiques ici : <a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/journees/2016-montpellier.php">Montpellier 2016</a>.</p>
-<p>Pour vous inscrire, veuillez <b>remplir le formulaire</b> suivant : <a href="https://docs.google.com/forms/d/1NrUETlyEZKwsma10d-MQhLiTH-w7VhpAMezK1d32My4/viewform?c=0&w=1">Je souhaite m'inscrire au congrès</a></p>
+<p>
+Les inscriptions sont réservées aux adhérents jusqu’au 6 novembre et ouvertes à tous ensuite ! Dépéchez-vous de vous inscrire :) 
+</p>
+</div>
+<ul>
+<li>
+<strong>Etape 1</strong> : Lire le programme & Informations pratiques : <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/afmckday/montpellier/programme-montpellier.pdf">Programme</a>
+</li><li>
+<strong>Etape 2</strong> : Pour vous inscrire remplissez le formulaire : <a href="https://docs.google.com/forms/d/1NrUETlyEZKwsma10d-MQhLiTH-w7VhpAMezK1d32My4/viewform?c=0&w=1">Inscription au congrès</a></p>
+</li>
+<li>
+<strong>Etape 3</strong> : Envoyez votre chèque à cette adresse : 
+</li>
+</ul>
+<div class="alert alert-info">
+<p>Anne-Marie GASTELLU-ETCHEGORRY<br/>
+27 av. du 10ème Dragon<br/>
+82000 Montauban</p>
 </div>
 
+<p>Vous trouverez plus d'informations pratiques ici :  <a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/journees/2016-montpellier.php">Montpellier 2016</a>.</p>
+
+<p>Rendez vous à Montpellier !!!</p>
+
+<p>Toute l’équipe de l’AFMcK </p>
+</p>
 </div>
+<!--<p>Le congrés AFMcK 2016 approche à grand pas ! <br/>Vous pouvez avoir accès à toutes les informations pratiques ici : 
+<p>Pour vous inscrire, veuillez <b>remplir le formulaire</b> suivant : 
+</div>
+
     <h1>Bienvenue sur le site de l'Association Française McKenzie</h1>
     <div id="news" class="hidden-xs hidden-md thumbnail with-caption news" style="margin-right: -10px;margin-top: -80px; width: 220px">
         <h2>Actualités</h2>
