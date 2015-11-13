@@ -107,7 +107,7 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
 				content :'";
 
                foreach ($addresses as $user) {
-                   $script .= "<p><b>" . $user->getFirstName() . " ".$user->getLastName()."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
+                   $script .= "<p><b>" . addslashes($user->getFirstName()) . " ".addslashes($user->getLastName())."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
                    "<br/>".$user->getPhonePro().""./*$user->getMail()*/""."<br/><br/>Niveau ".$user->getlevelFormationString()."</p>";
                }
                $script .= "'
