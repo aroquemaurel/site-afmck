@@ -71,6 +71,7 @@ if(!Visitor::getInstance()->isConnected()) {
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
         echo '<li><b>Mon profil</b></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/mon-profil.php">Voir mon profil</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/readherer.php">Réadhérer à l\'association</a></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/parameters.php">Modifier mes informations</a></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/password.php">Changer de mot de passe</a></li>';
         if(Visitor::getInstance()->getUser()->getHasSigned() == -1) {

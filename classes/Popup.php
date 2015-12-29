@@ -75,7 +75,8 @@ class Popup {
     }
     public static function disableAccount()
     {
-        return self::errorMessage("Votre compte est désactivé, vous devez renouveler votre adhésion à l'association.");
+        return self::errorMessage("Votre compte est désactivé, vous devez renouveler votre adhésion à l'association.<br/>
+Vous pouvez réadhérer à l'association via le lien suivant : <a href=\"".Visitor::getInstance()->getRootPage()."/readherer.php\">Réadhérer à l'association</a>");
     }
 
     public static function validAccount() {
@@ -88,6 +89,7 @@ class Popup {
 
     public static function warningActivation($dateString)
     {
-        return self::warningMessage("Votre compte arrive à expiration le $dateString. Pensez à renouveller votre adhésion.");
+        return self::warningMessage("Votre compte arrive à expiration le $dateString. Pensez à renouveller votre adhésion.<br/>
+Vous pouvez réadhérer à l'association via le lien suivant : <a href=\"".Visitor::getInstance()->getRootPage()."/readherer.php\">Réadhérer à l'association</a>");
     }
 } 
