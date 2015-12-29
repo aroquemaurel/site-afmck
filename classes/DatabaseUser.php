@@ -14,7 +14,7 @@ class DatabaseUser extends Database {
         $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number");
         $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
         $query->execute();
-        print_r($query->rowCount());
+
         return $query->fetchObject();
     }
 
@@ -66,7 +66,7 @@ class DatabaseUser extends Database {
         $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', 0, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
-                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid, '', '', '', :hasSigned)");
+                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid, '', '', '', NULL)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", ($firstname), PDO::PARAM_STR);
         $query->bindParam(":lastname", ($lastname), PDO::PARAM_STR);
@@ -180,7 +180,7 @@ class DatabaseUser extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
-                                           WHERE validDate < CURDATE()  AND mailValidation != 0 AND validDate != 'NULL' AND disable != 1 order by lastname");
+                                           WHERE ((validDate < CURDATE()  AND validDate != 'NULL') OR askReadhesion != 'NULL') AND disable != 1 AND mailValidation != 0 order by lastname");
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
@@ -253,13 +253,14 @@ class DatabaseUser extends Database {
         $longitude = $user->getLongitude();
         $latitude = $user->getLatitude();
         $hasSigned = $user->getHasSigned();
+        $askReadhesion = $user->getAskReadhesion() != NULL ? $user->getAskReadhesion()->format("Y-m-d") : NULL;
 
         $query = $this->dbAccess->prepare("UPDATE `user`
                                           set adeliNumber=:adeli, lastname=:lastname, firstname=:firstname,
                                           mail=:mail,validDate=:validDate,askValidation=:askValidation, password=:password, forget=:forget,
                                           formationDate=:formationDate, levelFormation=:levelFormation, phonePro=:phonePro, phoneMobile=:phoneMobile,
                                           newsletter=:newsletter, address=:address, cp=:cp, town=:town, complementAddress=:complementAddress,
-                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail, valuePaid=:valuePaid, hashPassword=:hashPassword, longitude=:longitude, latitude=:latitude, hasSigned=:hasSigned
+                                          disable=:disable, payment=:payment, mailValidation=:mailValidation, hashMail=:hashMail, valuePaid=:valuePaid, hashPassword=:hashPassword, longitude=:longitude, latitude=:latitude, hasSigned=:hasSigned, askReadhesion=:askReadh
                                            WHERE id=:id");
         $query->bindParam(":adeli", $adeli, PDO::PARAM_STR);
         $query->bindParam(":disable", $disable, PDO::PARAM_INT);
@@ -272,6 +273,7 @@ class DatabaseUser extends Database {
         $query->bindParam(":mail", $mail, PDO::PARAM_STR);
         $query->bindParam(":validDate", $validDate, PDO::PARAM_STR);
         $query->bindParam(":askValidation", $askValidation, PDO::PARAM_STR);
+        $query->bindParam(":askReadh", $askReadhesion, PDO::PARAM_STR);
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->bindParam(":password", $password, PDO::PARAM_STR);
         $query->bindParam(":forget", $forget, PDO::PARAM_STR);

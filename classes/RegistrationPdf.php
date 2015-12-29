@@ -56,7 +56,7 @@ class RegistrationPdf extends PdfFile {
 
     public function generatePdf($str='') {
         parent::generatePdf(Visitor::getInstance()->getRootPath()."/docs/members/registration/".($this->tresor ? "tresor/":"")
-        .$this->user->getAdeliNumber().'.pdf');
+        .date('Y')."_".$this->user->getAdeliNumber().'.pdf');
     }
 
 

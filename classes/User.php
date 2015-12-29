@@ -20,6 +20,7 @@ class User {
     private $groups;
     private $validDate;
     private $askValidation;
+    private $askReadhesion;
 
     private $address;
     private $complementAddress;
@@ -79,6 +80,13 @@ class User {
         return false;
     }
 
+    public static function passwordIsValid($adeliNumber, $password) {
+        $db = new DatabaseUser();
+        $data = $db->getUser($adeliNumber);
+
+        return $data != null && password_verify($password, $data->password);
+    }
+
     public function connect($auto=false)
     {
         $ret = true;
@@ -107,7 +115,7 @@ class User {
         if(!$data->mailValidation) {
             $_SESSION['lastMessage'] = Popup::errorMessage("Votre adresse email n'a pas été validée");
             return false;
-        } else if(strtotime($data->validDate) < time()) {
+        } else if($this->isActive()) {
             $_SESSION['lastMessage'] = Popup::disableAccount();
             if(auto) {
                $this->clearCookie();
@@ -125,6 +133,10 @@ class User {
         }
         $_SESSION['lastMessage'] = Popup::connectionOk();
         return true;
+    }
+
+    public function isActive() {
+        return strtotime($this->validDate->format("Y-m-d")) < time();
     }
 
     public function insert()
@@ -156,11 +168,13 @@ class User {
     public function valid() {
         $currentDate = new DateTime();
         $this->disable = 0;
+        $this->askReadhesion = NULL;
         $year = $currentDate->format("Y");
-        if($currentDate->format("M") != 1 && $currentDate->format("M") != 2) {
+
+        if($currentDate->format("m") != 11 && $currentDate->format("m") != 12) {
             $newDate = new DateTime(($year+1).'-2-28');
         } else {
-            $newDate = new DateTime(($year+2).'-2-28');
+            $newDate = new DateTime(($year+2).'-1-31');
         }
         $this->validDate = $newDate;
         $pdf = new BillingPdf($this);
@@ -232,6 +246,7 @@ class User {
         $this->longitude = $data->longitude;
         $this->latitude = $data->latitude;
         $this->hasSigned = $data->hasSigned;
+        $this->askReadhesion = $data->askReadhesion;
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -730,6 +745,22 @@ class User {
 
     public function toString() {
         return $this->getFirstName()[0]. ". " .ucfirst(strtolower($this->getLastName()));
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAskReadhesion()
+    {
+        return $this->askReadhesion;
+    }
+
+    /**
+     * @param mixed $askReadhesion
+     */
+    public function setAskReadhesion($askReadhesion)
+    {
+        $this->askReadhesion = $askReadhesion;
     }
 
 }

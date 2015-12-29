@@ -32,6 +32,17 @@ class Visitor {
     public function getUser() {
         return $this->user;
     }
+    public function getUserByAdeliAndPassword($adeliNumber, $password) {
+        $this->user = new User();
+        if(User::passwordIsValid($adeliNumber, $password)) {
+            $db = new DatabaseUser();
+            $this->user->hydrat($db->getUser($adeliNumber));
+            return true;
+        } else {
+            $this->user = null;
+            return false;
+        }
+    }
 
     public function displayMenu() {
         if(strpos($this->getCurrentFile(), 'members') || strpos($this->getCurrentFile(), 'admin')) {
