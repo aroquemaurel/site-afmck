@@ -1,5 +1,5 @@
 <?php
-define('CONFIG', 'dev');
+define('CONFIG', 'prod');
 
 if(CONFIG == 'dev') {
     define('ROOT_PAGE', '/dev/site-afmck');
