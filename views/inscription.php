@@ -7,7 +7,10 @@ if(!$editing) {
             <div class="alert alert-warning">
                 <strong>Attention!</strong>
                 Votre inscription sera validée manuellement par un membre du CA après réception de votre paiement.<br/>
-                Cette adhésion, et donc l\'accès au site, est valable une année.
+                Cette adhésion, et donc l\'accès au site, est valable une année.<br/><br/>
+
+                Si vous vous êtes déjà inscrit à l\'association par le passé, et avez rempli ce formulaire, merci de réadhérer via le lien suivant :
+    <a href="'.Visitor::getInstance()->getRootPage().'/readherer.php">Réadhérer à l\'association</a>
             </div>';
     $user = new User();
 } else {

@@ -287,7 +287,7 @@ class User {
         $ret .= $this->hasSigned == 1 ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;À signé la charte' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;N\'a pas signé la charte';
 
         if($pdf) {
-            $ret .= '<p style="font-size: 11pt; margin-top: 50px;">Signature<br/><br/>Le .... / .... / 2015<br/><br/>À ........................</p>';
+            $ret .= '<p style="font-size: 11pt; margin-top: 50px;">Signature<br/><br/>Le .... / .... / '.date('Y').'<br/><br/>À ........................</p>';
         }
         return $ret;
     }

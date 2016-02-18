@@ -12,9 +12,9 @@
         </div>
         <div class="col-md-4 col-sm-4 col-xs-4">
             <p><b>Inscriptions</b><br/>
-                Anne-Marie GASTELLU-ETCHEGORRY<br/>
-                27 av. du 10ème Dragon<br/>
-                82000 Montauban<br/>
+                Adeline BRAGUIER<br/>
+                32, cours Albert Thomas<br/>
+                69008 Lyon<br/>
                 tresorerie@afmck.fr
             </p>
         </div>

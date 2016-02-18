@@ -66,7 +66,7 @@ class DatabaseUser extends Database {
         $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', 0, :adeliNumber, :firstname, :lastname, :password,
                                                                 :mail, CURDATE(), 0, :address, :complementAddress, :cp, :town, '',
                                                               :formationDate, :levelFormation, :phonePro,
-                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid, '', '', '', NULL)");
+                                                              :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid, '', '', '', :hasSigned, NULL)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
         $query->bindParam(":firstname", ($firstname), PDO::PARAM_STR);
         $query->bindParam(":lastname", ($lastname), PDO::PARAM_STR);
@@ -132,8 +132,8 @@ class DatabaseUser extends Database {
         $i = 0;
         $query = $this->dbAccess->prepare("SELECT * from `user` 
                                            WHERE hasSigned = 1 
-                                            AND mailValidation != 0 
-                                            AND disable!=1 
+                                            AND mailValidation <> 0 
+                                            AND disable<>1 
                                             AND levelFormation >= 4 
                                             AND validDate >= CURDATE()
                                             ORDER BY latitude, longitude");

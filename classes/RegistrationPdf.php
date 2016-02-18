@@ -44,9 +44,9 @@ class RegistrationPdf extends PdfFile {
          : tresorerie@afmck.fr
         </p>
         <p>Afin de régler votre adhésion, merci d'envoyer votre chèque, ainsi que cette fiche d'inscription à l'adresse suviante : <br/>
-         Anne-Marie GASTELLU-ETCHEGORRY<br/>
-        27 av. du 10ème Dragon<br/>
-        82000 Montauban</p>
+         Adeline BRAGUIER<br/>
+        32, cours Albert Thomas<br/>
+        69008 LYON</p>
         <div style=\"height:2px;border-bottom:1px solid black;\"></div>
         ";
         }

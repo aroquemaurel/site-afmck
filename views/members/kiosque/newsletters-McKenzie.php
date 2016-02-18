@@ -14,6 +14,8 @@ $breadcrumb->display();
 <ul>
 <?php
 $folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque/newsletters";
+Image::miniLink($folder, "MDT World Press Newsletter_Vol4No3",
+    "MDT World Press Newsletter Vol.4 N°3 <small>Anglais</small>");
 Image::miniLink($folder, "MDT World Press Newsletter_Vol4No1",
     "MDT World Press Newsletter Vol.4 N°1 <small>Anglais</small>");
 ?>
@@ -22,6 +24,8 @@ Image::miniLink($folder, "MDT World Press Newsletter_Vol4No1",
 <ul>
 <?php
 $folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque/newsletters";
+Image::miniLink($folder, "MDT Newsletter_Vol 4 No 2-fr_AFMcK",
+    "MDT World Press Newsletter Vol.4 N°2 <small>Français</small>");
 Image::miniLink($folder, "MDT Newsletter_Vol 4 No 1-fr_AFMcK",
     "MDT World Press Newsletter Vol.4 N°1 <small>Français</small>");
 ?>

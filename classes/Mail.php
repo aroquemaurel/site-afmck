@@ -78,9 +78,9 @@ class Mail {
         <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
         if($user->getPayment() == 1) {
             $ret .= "Vous avez choisis de payer votre cotisation, d'un montant de<b> ".$user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
-                Mme Anne-Marie GASTELLU-ETCHEGORRY,<br/>
-                27 avenue du10e Dragon,<br/>
-                82000 MONTAUBAN";
+                Mme Adeline Braguier,<br/>
+                32, cours Albert Thomas<br/>
+                69008 LYON";
         } else {
             $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>
             Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>
@@ -101,9 +101,9 @@ class Mail {
 
         if($user->getPayment() == 1) {
             $ret .= "Vous avez choisis de payer votre cotisation, d'un montant de<b> ".$user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
-                Mme Anne-Marie GASTELLU-ETCHEGORRY,<br/>
-                27 avenue du10e Dragon,<br/>
-                82000 MONTAUBAN";
+                Mme Adeline Braguier,<br/>
+                32, cours Albert Thomas<br/>
+                69008 LYON";
         } else {
             $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>
             Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>
