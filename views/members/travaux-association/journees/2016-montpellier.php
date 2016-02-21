@@ -22,7 +22,7 @@
                 <div class="thumbnail with-caption" style="width: 300px">
                     <a href="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Le MDT dans les recommandations de la lombalgie - VANDEPUT.pdf" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Le MDT dans les recommandations de la lombalgie - VANDEPUT.jpg" width="450" alt="Le MDT dans les recommandations de la lombalgie"/>
                     </a>
-                <p>Le MDT dans les recommandations de la lombalgie. <small>D. VENDEPUT</small></p>
+                <p>Le MDT dans les recommandations de la lombalgie. <small>D. VANDEPUT</small></p>
                 </div>
             </td>
         </tr>
@@ -41,7 +41,7 @@
                 <div class="thumbnail with-caption" style="width: 300px">
                     <a href="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Triptyque douleur patient V5 kiné - copie.pdf" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Triptyque douleur patient V5 kiné - copie.jpg" width="250" alt="Tryptique et douleur"/>
                     </a>
-                    <p style="font-size: 10pt">Tryptique et douleur pour le patient</p>
+                    <p style="font-size: 10pt">Tryptique et douleur pour le patient <small>L. ROUSSEAU</small></p>
                 </div>
             </td>
         </tr>
