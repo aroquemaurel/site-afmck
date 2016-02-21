@@ -1,16 +1,19 @@
 <?php
 function __autoload($className)
 {
-    $fileName = ROOT_PATH.'/'.ROOT_PAGE.'/';
+    $rootPath = ROOT_PATH . '/' . ROOT_PAGE . '/';
 
-    $fileName .= 'classes/';
+    $folder = 'classes/';
+    $file = strpos($className, '\\') ? str_replace('\\', DIRECTORY_SEPARATOR, $className) : $className;
 
-    if (strpos($className, '\\')) {
-        $fileName .= str_replace('\\', DIRECTORY_SEPARATOR, $className);
+    $fileName = $rootPath . $folder . $file . '.php';
+
+    if (file_exists($fileName)) {
+        require_once $fileName;
     } else {
-        $fileName .= $className;
+        $folder .= 'Database/';
+        require_once $rootPath . $folder . $file . '.php';
     }
-    $fileName .= '.php';
 
-    require_once $fileName;
+
 }
