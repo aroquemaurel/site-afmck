@@ -91,6 +91,10 @@ class News {
         return $this->author;
     }
 
+    public function isSend() {
+        return (new DatabaseNews())->newsIsSend($this->id);
+    }
+
     /**
      * @param mixed $author
      */

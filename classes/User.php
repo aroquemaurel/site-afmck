@@ -165,6 +165,12 @@ class User {
         && $this->disable!=1;
     }
 
+    public function addNewsToSend(News $news) {
+        // TODO add news,user in database user_news
+        $db = new DatabaseNews();
+        $db->addNewsToSend($this->id, $news->getId(), new DateTime());
+    }
+
     public function valid() {
         $currentDate = new DateTime();
         $this->disable = 0;

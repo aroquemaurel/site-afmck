@@ -22,7 +22,16 @@
             '<td>'.$new->getTitle().' <small>'.$new->getSubtitle().'</small></td>'.
             '<td><i class="glyphicon glyphicon-user"></i> '.($new->getAuthor()->getFirstname().' '.$new->getAuthor()->getLastname()).'</td>'.
             '<td>'.($new->getDate()->format('d/m/Y à H:i')).'</td>'.
-            '<td><a href="'.Visitor::getInstance()->getRootPage().'/admin/editer-news.php?id='.$new->getId().'"><i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;<a href="'.Visitor::getInstance()->getRootPage().'/admin/supprimer-news.php?id='.$new->getId().'"><i class="glyphicon glyphicon-trash"></i></a></td>';
+            '<td>'.(
+            !$new->isSend() ? ('<a href="'.Visitor::getInstance()->getRootPage().'/admin/envoyer-news.php?id='.$new->getId().'">
+            <i class="glyphicon glyphicon-envelope"></i></a>')
+                                        : '<i class="glyphicon glyphicon-envelope"></i>'
+        ).
+            '&nbsp;&nbsp;<a href="'.Visitor::getInstance()->getRootPage().'/admin/editer-news.php?id='.$new->getId().'">
+            <i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;
+            <a href="'.Visitor::getInstance()->getRootPage().'/admin/supprimer-news.php?id='.$new->getId().'">
+            <i class="glyphicon glyphicon-trash"></i></a>
+            </td>';
             echo '</tr>';
         }
 ?>
