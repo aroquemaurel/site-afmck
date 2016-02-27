@@ -98,4 +98,36 @@ class DatabaseNews extends Database {
 
         return $query->fetchObject()->countnews > 0;
     }
+
+    public function getFirstMailsToSend($nbNews)
+    {
+        $query = $this->dbAccess->prepare("SELECT idNewsletter as id, idUser, title, content, author, news.date as date, subtitle, idUser, user.mail as email, user.firstname as firstname, user.lastname as lastname
+                                        from news, user_newsletter, user
+                                        where user_newsletter.idNewsletter = news.id
+                                          and user_newsletter.idUser = user.id
+                                          and user_newsletter.isSend = 0
+                                        LIMIT 0,:nbnews");
+        $query->bindParam(":nbnews", $nbNews, PDO::PARAM_INT);
+        $query->execute();
+        $ret = array();
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $data) {
+            $news = new News();
+            $news->hydrat($data);
+            $user = new User();
+            $user->setMail($data->email);
+            $user->setId($data->idUser);
+            $user->setFirstName($data->firstname);
+            $user->setLastName($data->lastname);
+            $ret[] = new \models\NewsToSend($user, $news);
+        }
+        return $ret;
+    }
+
+    public function updateMailIsSend($idUser, $idNews)
+    {
+        $query = $this->dbAccess->prepare("UPDATE user_newsletter set isSend=1 where idUser=:idUser and idNewsletter=:idNews");
+        $query->bindParam(":idUser", $idUser, PDO::PARAM_INT);
+        $query->bindParam(":idNews", $idNews, PDO::PARAM_INT);
+        $query->execute();
+    }
 }

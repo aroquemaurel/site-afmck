@@ -1,4 +1,13 @@
 <?php
+
+function fileExists($file, $folder) {
+    return file_exists($folder . $file . '.php');
+}
+
+function requireFile($file, $folder) {
+    require_once($folder.$file.'.php');
+}
+
 function __autoload($className)
 {
     $rootPath = ROOT_PATH . '/' . ROOT_PAGE . '/';
@@ -6,14 +15,15 @@ function __autoload($className)
     $folder = 'classes/';
     $file = strpos($className, '\\') ? str_replace('\\', DIRECTORY_SEPARATOR, $className) : $className;
 
-    $fileName = $rootPath . $folder . $file . '.php';
-
-    if (file_exists($fileName)) {
-        require_once $fileName;
+    if (fileExists($file, $rootPath.$folder)) {
+        requireFile($file, $rootPath.$folder);
     } else {
-        $folder .= 'Database/';
-        require_once $rootPath . $folder . $file . '.php';
+        $folder = 'classes/Database/';
+        if (fileExists($file, $rootPath.$folder)) {
+            requireFile($file, $rootPath.$folder);
+        } else {
+            $folder = 'classes/models/';
+            requireFile($file, $rootPath.$folder);
+        }
     }
-
-
 }
