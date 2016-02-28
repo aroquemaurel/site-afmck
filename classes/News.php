@@ -1,4 +1,6 @@
 <?php
+use models\File;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -14,9 +16,12 @@ class News {
     private $author;
     private $date;
 
+    private $attachments;
+
     public function __construct() {
         $this->date = new DateTime();
         $this->id = 0;
+        $this->attachments = array();
     }
     public function hydrat($data) {
         $this->id = $data->id;
@@ -25,6 +30,14 @@ class News {
         $this->author = (new DatabaseUser())->getUserById($data->author);
         $this->date = new DateTime($data->date);
         $this->subtitle = utf8_encode($data->subtitle);
+    }
+
+    public function addAttchment(File $f) {
+        $this->attachments[] = $f;
+    }
+
+    public function getAttachments() {
+        return $this->attachments;
     }
 
     public function commit() {

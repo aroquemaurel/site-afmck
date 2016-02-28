@@ -22,6 +22,12 @@ class DatabaseNews extends Database {
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataNews) {
             $news = new News();
             $news->hydrat($dataNews);
+            $query2 = $this->dbAccess->prepare("SELECT titleFile, path from `newsletter_file`, file where idNewsletter=:idNew and newsletter_file.idFile = file.id");
+            $query2->bindParam(":idNew", $dataNews->id, PDO::PARAM_INT);
+            $query2->execute();
+            foreach($query2->fetchAll(PDO::FETCH_OBJ) as $dataFile) {
+                $news->addAttchment(new File($dataFile->titleFile, $dataFile->path));
+            }
             $ret[] = $news;
         }
         return $ret;

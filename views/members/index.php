@@ -32,6 +32,13 @@ Si vous avez des remarques sur le site, ou avez un problème avec le site, merci
         echo '<p style="margin-top: -8px;margin-bottom:15px"><small>Posté le '.$new->getDate()->format('d / m / Y à H:i').' par '.$new->getAuthor()->getFirstName().' '.$new->getAuthor()->getLastname().'</small></p>';
         echo $new->getContent();
         echo '</div>';
+        echo '<br/><div style="font-size:9.5pt">';
+        echo '<h5>Pièces jointes</h5>';
+        echo '<ul>';
+        foreach($new->getAttachments() as $att) {
+            echo '<li><i class="glyphicon glyphicon-download-alt"></i>&nbsp;<a href="'.Visitor::getInstance()->getRootPage().'/docs/members/news/'.$att->getPath().'">'.$att->getTitle().'</a></li>';
+        }
+        echo '</ul></div>';
     }
     (new utils\Pagination($page, $nbPages, Visitor::getInstance()->getRootPage().'/members/index.php'))->display();
     ?>

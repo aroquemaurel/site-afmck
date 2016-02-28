@@ -27,6 +27,7 @@ if(isset($_POST['title']) && isset($_POST['subtitle'])) {
 
     $err = false;
     $all_files = array();
+
     // Upload image
     for ($i = 0; $i < count($_FILES['file']['name']); $i++) {
         $filename = $uploader->upload($_FILES['file']['name'][$i], $_FILES['file']['tmp_name'][$i], $_FILES['file']['size'][$i]);
@@ -34,14 +35,17 @@ if(isset($_POST['title']) && isset($_POST['subtitle'])) {
             $err = true;
             break;
         } else {
-            $all_files[] = $filename;
+            $buff = array();
+            $buff['path'] = $filename;
+            $buff['title'] = $_FILES['file']['name'][$i];
+            $all_files[] = $buff;
         }
     }
 
     if (!$err) {
         $news->commit();
         foreach($all_files as $file) {
-            $file = new File($file, $file);
+            $file = new File($file['title'], $file['path']);
             $db = new DatabaseNews();
             $db->addFile($file, $news->getId());
         }
