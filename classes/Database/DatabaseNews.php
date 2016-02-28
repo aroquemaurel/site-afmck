@@ -1,4 +1,6 @@
 <?php
+use models\File;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -51,6 +53,7 @@ class DatabaseNews extends Database {
         $query->bindParam(":author", $author, PDO::PARAM_INT);
         $query->bindParam(":date", $date, PDO::PARAM_STR);
         $query->execute();
+        return $this->dbAccess->lastInsertId();
     }
 
     public function updateNew(News $new) {
@@ -130,4 +133,21 @@ class DatabaseNews extends Database {
         $query->bindParam(":idNews", $idNews, PDO::PARAM_INT);
         $query->execute();
     }
+
+    public function addFile(File $file, $idNews) {
+        $path = $file->getPath();
+        $title = $file->getTitle();
+
+        $query = $this->dbAccess->prepare("INSERT INTO file VALUES
+          ('', :title, :path)");
+        $query->bindParam(":title", $title, PDO::PARAM_STR);
+        $query->bindParam(":path", $path, PDO::PARAM_STR);
+        $query->execute();
+        $idFIle =$this->dbAccess->lastInsertId();
+        $query = $this->dbAccess->prepare("INSERT INTO newsletter_file VALUES (:idFile, :idNews)");
+        $query->bindParam(":idNews", $idNews, PDO::PARAM_INT);
+        $query->bindParam(":idFile", $idFIle, PDO::PARAM_INT);
+        $query->execute();
+    }
+
 }

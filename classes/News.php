@@ -30,7 +30,7 @@ class News {
     public function commit() {
         $db = new DatabaseNews();
         if($this->id == 0) {
-            $db->addNew($this);
+            $this->id = $db->addNew($this);
         } else {
             $db->updateNew($this);
         }

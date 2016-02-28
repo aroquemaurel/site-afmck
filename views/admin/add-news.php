@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <h1>Ajouter une newsletter</h1>
     <div class="col-xs-14 col-sm-10 col-md-11 col-sm-offset-1 col-md-offset-2">
-        <form role="form" method="post" action="<?php echo Visitor::getInstance()->getRootPage().'/admin/add-news.php';?>">
+        <form enctype="multipart/form-data"  role="form" method="post" action="<?php echo Visitor::getInstance()->getRootPage().'/admin/add-news.php';?>">
             <hr class="colorgraph">
             <div class="row">
                 <div class="form-group">
@@ -33,9 +33,8 @@
             }
             ?>
             <h2>Multiple Image Upload Form</h2>
-            <form enctype="multipart/form-data" action="" method="post">
                 First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
-                <div id="filediv"><input name="file[]" type="file" id="file"/></div>
+                <div id="filediv"><input name="file[]" type="file" id="file" multiple/></div>
                 <input type="button" id="add_more" class="upload btn btn-info btn-xs" value="Add More Files"/>
             <button id="submit" type="submit" style="margin: auto; width: 250px; "
                     class="btn btn-primary btn-block btn-lg">
