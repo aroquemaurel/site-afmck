@@ -23,27 +23,31 @@ if(isset($_POST['title']) && isset($_POST['subtitle'])) {
     $news->setAuthor(Visitor::getInstance()->getUser());
 
     $target_dir = Visitor::getInstance()->getRootPath() . "/docs/members/news";
-    $uploader = new Uploader($target_dir, array("pdf", "jpg", "png", "doc", "docx", "odt", "xls", "xlsx", "jpeg"), 4 * 1024 * 1024);
-
     $err = false;
-    $all_files = array();
+    if(isset($_FILES['file']['tmp_name'][0]) && $_FILES['file']['tmp_name'][0] != "") {
+        $uploader = new Uploader($target_dir, array("pdf", "jpg", "png", "doc", "docx", "odt", "xls", "xlsx", "jpeg"), 4 * 1024 * 1024);
 
-    // Upload image
-    for ($i = 0; $i < count($_FILES['file']['name']); $i++) {
-        $filename = $uploader->upload($_FILES['file']['name'][$i], $_FILES['file']['tmp_name'][$i], $_FILES['file']['size'][$i]);
-        if ($filename == null) {
-            $err = true;
-            break;
-        } else {
-            $buff = array();
-            $buff['path'] = $filename;
-            $buff['title'] = $_FILES['file']['name'][$i];
-            $all_files[] = $buff;
+
+        $all_files = array();
+
+        // Upload image
+        for ($i = 0; $i < count($_FILES['file']['name']); $i++) {
+            $filename = $uploader->upload($_FILES['file']['name'][$i], $_FILES['file']['tmp_name'][$i], $_FILES['file']['size'][$i]);
+            if ($filename == null) {
+                $err = true;
+                break;
+            } else {
+                $buff = array();
+                $buff['path'] = $filename;
+                $buff['title'] = $_FILES['file']['name'][$i];
+                $all_files[] = $buff;
+            }
         }
     }
 
     if (!$err) {
         $news->commit();
+
         foreach($all_files as $file) {
             $file = new File($file['title'], $file['path']);
             $db = new DatabaseNews();

@@ -44,7 +44,7 @@ class DatabaseNews extends Database {
     {
         $title = utf8_decode($new->getTitle());
         $subtitle = utf8_decode($new->getSubtitle());
-        $content = utf8_decode($new->getContent());
+        $content = ($new->getContent());
         $author = $new->getAuthor()->getId();
         $date = $new->getDate()->format("Y-m-d H:i:s");
         $query = $this->dbAccess->prepare("INSERT INTO news VALUES('', :title, :subtitle, :content, :author, :date)");
@@ -60,7 +60,7 @@ class DatabaseNews extends Database {
     public function updateNew(News $new) {
         $title = utf8_decode($new->getTitle());
         $subtitle = utf8_decode($new->getSubtitle());
-        $content = utf8_decode($new->getContent());
+        $content = ($new->getContent());
         $author = $new->getAuthor()->getId();
         $id = $new->getId();
 

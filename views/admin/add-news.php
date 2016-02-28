@@ -26,7 +26,6 @@
                 </div>
                 </div>
             <hr class="colorgraph">
-            <textarea style="visibility: hidden" id="hiddeninput" name="content"><?php if(isset($news)) { echo $news->getContent(); }?></textarea>
             <?php
             if(isset($news)) {
                 echo '<input type="hidden" name="id" value="'.$news->getId().'"/>';
@@ -48,7 +47,7 @@
 
 <?php
 $script = utils\Wysiwyg::getScriptSrc();
-$script .= utils\Wysiwyg::getJsToolbar();
+//$script .= utils\Wysiwyg::getJsToolbar();
 $script .= "
 <script type=\"text/javascript\">
     $(function(){
@@ -56,8 +55,36 @@ $script .= "
             var mysave = $('#editor').html();
             $('#hiddeninput').val(mysave);
         });
-    });
+    });";
 
+
+$script .= '
+tinymce.init({
+  selector: "textarea",
+  height: 500,
+  plugins: [
+    "advlist autolink lists link image charmap print preview anchor",
+    "searchreplace visualblocks code fullscreen",
+    "insertdatetime media table contextmenu paste code",
+    "paste"
+  ],
+  toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+  content_css: [
+    "//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css",
+    "//www.tinymce.com/css/codepen.min.css"
+  ],
+  paste_auto_cleanup_on_paste : true,
+    paste_preprocess : function(pl, o) {
+        // Content string containing the HTML from the clipboard
+
+    },
+    paste_postprocess : function(pl, o) {
+        // Content DOM node containing the DOM structure of the clipboard
+ o.node.innerHTML = o.node.innerHTML;
+    }
+});
+';
+$script .= "
 
 var abc = 0;      // Declaring and defining global increment variable.
 //  To add new input file field dynamically, on click of Add More Files button below function will be executed.

@@ -26,7 +26,7 @@ class News {
     public function hydrat($data) {
         $this->id = $data->id;
         $this->title = utf8_encode($data->title);
-        $this->content = utf8_encode($data->content);
+        $this->content = preg_replace('/\\<p(.+)\\>&nbsp;\\<\\/p\\>/', "", $data->content);
         $this->author = (new DatabaseUser())->getUserById($data->author);
         $this->date = new DateTime($data->date);
         $this->subtitle = utf8_encode($data->subtitle);
@@ -85,7 +85,7 @@ class News {
      */
     public function getContent()
     {
-        return nl2br($this->content);
+        return ($this->content);
     }
 
     /**
