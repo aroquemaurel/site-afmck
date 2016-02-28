@@ -22,12 +22,7 @@ class DatabaseNews extends Database {
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataNews) {
             $news = new News();
             $news->hydrat($dataNews);
-            $query2 = $this->dbAccess->prepare("SELECT titleFile, path from `newsletter_file`, file where idNewsletter=:idNew and newsletter_file.idFile = file.id");
-            $query2->bindParam(":idNew", $dataNews->id, PDO::PARAM_INT);
-            $query2->execute();
-            foreach($query2->fetchAll(PDO::FETCH_OBJ) as $dataFile) {
-                $news->addAttchment(new File($dataFile->titleFile, $dataFile->path));
-            }
+            $news = $this->getAttachmentsOfNews($dataNews->id, $news);
             $ret[] = $news;
         }
         return $ret;
@@ -122,6 +117,8 @@ class DatabaseNews extends Database {
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $data) {
             $news = new News();
             $news->hydrat($data);
+            $news = $this->getAttachmentsOfNews($data->id, $news);
+
             $user = new User();
             $user->setMail($data->email);
             $user->setId($data->idUser);
@@ -154,6 +151,22 @@ class DatabaseNews extends Database {
         $query->bindParam(":idNews", $idNews, PDO::PARAM_INT);
         $query->bindParam(":idFile", $idFIle, PDO::PARAM_INT);
         $query->execute();
+    }
+
+    /**
+     * @param $dataNews
+     * @param $news
+     */
+    public function getAttachmentsOfNews($id, $news)
+    {
+        $query2 = $this->dbAccess->prepare("SELECT titleFile, path from `newsletter_file`, file where idNewsletter=:idNew and newsletter_file.idFile = file.id");
+        $query2->bindParam(":idNew", $id, PDO::PARAM_INT);
+        $query2->execute();
+        foreach ($query2->fetchAll(PDO::FETCH_OBJ) as $dataFile) {
+            $news->addAttchment(new File($dataFile->titleFile, $dataFile->path));
+        }
+
+        return $news;
     }
 
 }

@@ -17,6 +17,9 @@ foreach($db->getFirstMailsToSend(NEWS_NB_MAILS) as $news) {
     $mailer->Body = $news->getNews()->getContent();
     //$mailer->addAddress($news->getUser()->getMail(), $news->getUser()->getFirstName()." ".$news->getUser()->getLastName());
     $mailer->addAddress("trash.dev.zero+afmck@gmail.com", "Test ".$news->getUser()->getFirstName()." ".$news->getUser()->getLastName());
+    foreach($news->getNews()->getAttachments() as $attch) {
+        $mailer->addAttachment(Visitor::getInstance()->getRootPath().'/docs/members/news/'.$attch->getPath());
+    }
     if(!$mailer->send()) {
         echo $mailer->ErrorInfo;
     } else {
