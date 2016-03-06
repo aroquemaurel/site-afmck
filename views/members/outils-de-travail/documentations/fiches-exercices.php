@@ -198,9 +198,9 @@
         Image::miniLink($folder."/hanches", "Derangement HANCHE en ABDUCTION en charge niveau 2_AFMcK",
             "<b>Dérangement de la hanche</b> Abduction En Charge Niveau 2");
         Image::miniLink($folder."/hanches", "Derangement HANCHE en ADDUCTION HORIZONTALE contre RESISTANCE 2_AFMcK",
-            "<b>Dérangement de la hanche</b> Abduction Horizontale Contre Résistance (Ballon)");
+            "<b>Dérangement de la hanche</b> Adduction Horizontale Contre Résistance (Ballon)");
         Image::miniLink($folder."/hanches", "Derangement HANCHE en ADDUCTION HORIZONTALE en Decharge 2_AFMcK",
-            "<b>Dérangement de la hanche</b> Abduction Horizontale En Décharge 2/2");
+            "<b>Dérangement de la hanche</b> Adduction Horizontale En Décharge 2/2");
         ?>
     </ul>
 

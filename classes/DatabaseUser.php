@@ -180,7 +180,8 @@ class DatabaseUser extends Database {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
-                                           WHERE ((validDate < CURDATE()  AND validDate != 'NULL') OR askReadhesion != 'NULL') AND disable != 1 AND mailValidation != 0 order by lastname");
+                                           WHERE (askReadhesion IS NOT NULL OR askValidation is not NULL) AND disable != 1 
+                                            AND mailValidation != 0 order by lastname");
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
@@ -208,7 +209,7 @@ class DatabaseUser extends Database {
 
     public function countUsersToValid() {
         $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
-                                           WHERE validDate < CURDATE()  AND mailValidation != 0 AND validDate != 'NULL' AND disable=0");
+                                           WHERE mailValidation != 0 AND validDate != 'NULL' AND disable=0 AND askReadhesion <> 'NULL' AND askValidation <> 'NULL'");
         $query->execute();
         return $query->fetchObject()->countid;
     }

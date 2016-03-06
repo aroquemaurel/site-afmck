@@ -1,5 +1,24 @@
     <div id="news" class="hidden-xs hidden-md thumbnail with-caption news" style="margin-right: -10px;margin-top: -80px; width: 220px">
         <h2>Actualités</h2>
+        <h3>Traduction Vol3 N°4</h3>
+        <center>
+        <a href="http://afmck.fr/docs/members/kiosque/newsletters/MDT%20World%20Press%20Newsletter%20Vol.4%20N3%20Francais.pdf">
+        <img width="100" src="http://afmck.fr/docs/members/kiosque/newsletters/mini/MDT%20World%20Press%20Newsletter%20Vol.4%20N3%20Francais.jpg" /> 
+        Newsletter Vol3 N°4 (Français)
+        </a>
+    <br/>
+        <a href="http://afmck.fr/docs/members/kiosque/newsletters/STart%20Back%20Sreening%20Tool%20-FR.xlt">
+        Start Back Screening Tool
+        </a>
+        </center>
+        <hr/>
+        <h3>Journées Montpellier 2016</h3>
+
+        <a href="http://afmck.fr/members/travaux-association/journees/2016-montpellier.php">
+        <img width="100" src="http://afmck.fr/docs/members/afmckday/montpellier/Montpellier2016_cover.jpg" /> 
+        </a>
+        <a href="http://afmck.fr/members/travaux-association/journees/2016-montpellier.php">
+Intervention et bonus</a> sont en ligne !
         <h3>Traduction d'une newsletter McKenzie Internation</h3>
 <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/MDT Newsletter_Vol 4 No 2-fr_AFMcK.pdf">
 <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/mini/MDT Newsletter_Vol 4 No 2-fr_AFMcK.jpg" width="100"/>
@@ -21,21 +40,4 @@ Vol.4 N°1 Anglais
 <h3>Communication Interne</h3>
 <a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/divers/com-interne.php">Assemblée Générale 2015</a>
 <hr/>
-<h3>Nouvelle traduction !</h3>
-<a href="http://afmck.fr/docs/members/kiosque/traduction/mini/KHAN_2009_Mecanotherapie.jpg">
-<img width="100" src="http://afmck.fr/docs/members/kiosque/traduction/mini/KHAN_2009_Mecanotherapie.jpg" /></a>
-Mécanothérapie. <small>Khan, Scott</small>
-<hr/>
-<a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/fr/OTERO 2014 - Lombalgie prévalence des syndromes McKenzie - Kine la revue n 145.pdf"><img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/fr/mini/OTERO 2014 - Lombalgie prévalence des syndromes McKenzie - Kine la revue n 145.jpg" width="100" /></a>
-Lombalgie prévalence des syndromes McKenzie – Jacky OTERO<hr/>
-<a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/MDT Newsletter_Vol 3 No 4-gb_AFMcK.pdf">
-<img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/mini/MDT Newsletter_Vol 3 No 4-gb_AFMcK.jpg" width="100"/>
-</a>
-MDT WORLD PRESS Newsletter Vol 3 N°4
-<hr/>
-            <h3>Le logiciel Bilan MDT évolue : V1.6</h3>
-            <p>Bilan Lombaire, Bilan Cervical, Bilan membres, Fiches de suivis, synthèses
-            Editions en PDF des bilans
-            et des fiches de suivis.
-            </p>
     </div><!--/.well -->
