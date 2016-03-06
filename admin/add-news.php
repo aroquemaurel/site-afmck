@@ -24,11 +24,11 @@ if(isset($_POST['title']) && isset($_POST['subtitle'])) {
 
     $target_dir = Visitor::getInstance()->getRootPath() . "/docs/members/news";
     $err = false;
+        $all_files = array();
     if(isset($_FILES['file']['tmp_name'][0]) && $_FILES['file']['tmp_name'][0] != "") {
         $uploader = new Uploader($target_dir, array("pdf", "jpg", "png", "doc", "docx", "odt", "xls", "xlsx", "jpeg"), 4 * 1024 * 1024);
 
 
-        $all_files = array();
 
         // Upload image
         for ($i = 0; $i < count($_FILES['file']['name']); $i++) {

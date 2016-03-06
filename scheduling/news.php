@@ -1,4 +1,4 @@
-#!/usr/local/bin/php
+#!/usr/local/bin/php.ORIG.5_4
 <?php
 require_once('../config.php');
 require_once('../autoload.php');
@@ -20,11 +20,11 @@ foreach($db->getFirstMailsToSend(NEWS_NB_MAILS) as $news) {
     foreach($news->getNews()->getAttachments() as $attch) {
         $mailer->addAttachment(Visitor::getInstance()->getRootPath().'/docs/members/news/'.$attch->getPath());
     }
-    if(!$mailer->send()) {
+/*    if(!$mailer->send()) {
         echo $mailer->ErrorInfo;
-    } else {
+    } else {*/
         $db->updateMailIsSend($news->getUser()->getId(), $news->getNews()->getId());
-    }
+//    }
 
 
     //echo $news->getUser()->getMail()."coucou\n";

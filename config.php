@@ -1,5 +1,5 @@
 <?php
-define('CONFIG', 'dev');
+define('CONFIG', 'prod');
 
 if(CONFIG == 'dev') {
     define('ROOT_PAGE', '/dev/site-afmck');
@@ -13,5 +13,7 @@ if(CONFIG == 'dev') {
     define('TRESORERIE_MAIL', 'tresorerie@afmck.fr');
     define('ROOT_PAGE', '');
     define('SECRETARIAT_MAIL', 'secretariat@afmck.fr');
+
+    define('NEWS_NB_MAILS', 50);
 }
 ?>

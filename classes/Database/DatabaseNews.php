@@ -64,13 +64,12 @@ class DatabaseNews extends Database {
         $author = $new->getAuthor()->getId();
         $id = $new->getId();
 
-        $query = $this->dbAccess->prepare("UPDATE news set title=:title, subtitle=:subtitle, content=:content,
-                                          author=:author where id=:id");
+        $query = $this->dbAccess->prepare("UPDATE news set title=:title, subtitle=:subtitle, content=:content 
+                                          where id=:id");
 
         $query->bindParam(":title", $title, PDO::PARAM_STR);
         $query->bindParam(":subtitle", $subtitle, PDO::PARAM_STR);
         $query->bindParam(":content", $content, PDO::PARAM_STR);
-        $query->bindParam(":author", $author, PDO::PARAM_INT);
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
 
