@@ -10,9 +10,13 @@
     </div>
 
 <center>
+<?php
+/*
 <p>
 <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/kKWmwwQ84aulYndvLPH" allowfullscreen></iframe><br /><a href="http://www.dailymotion.com/video/kKWmwwQ84aulYndvLPH" target="_blank">AFMcK - 5e congr&egrave;s - Montpellier</a> <i>par <a href="http://www.dailymotion.com/antoinederoquemaurel" target="_blank">antoinederoquemaurel</a></i>
 </p>
+*/
+?>
 </center>
 
 <h2>Les interventions</h2>

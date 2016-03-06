@@ -24,11 +24,17 @@ Image::miniLink($folder, "MDT World Press Newsletter_Vol4No1",
 <ul>
 <?php
 $folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque/newsletters";
+Image::miniLink($folder, "MDT World Press Newsletter Vol.4 N3 Francais",
+    "MDT World Press Newsletter Vol.4 N°3 <small>Français</small>");
 Image::miniLink($folder, "MDT Newsletter_Vol 4 No 2-fr_AFMcK",
     "MDT World Press Newsletter Vol.4 N°2 <small>Français</small>");
 Image::miniLink($folder, "MDT Newsletter_Vol 4 No 1-fr_AFMcK",
     "MDT World Press Newsletter Vol.4 N°1 <small>Français</small>");
 ?>
+</ul>
+<h3>Annexes</h3>
+<ul>
+<li><a href="<?php echo Visitor::getRootPage().'/docs/members/kiosque/newsletters/STart Back Sreening Tool -FR.xlt';?>">STart Back Screening Tool Vol.4 N°3 <small>Français</small></a>
 </ul>
 <h2>Vol 3</h2>
 <h3>Anglais</h3>

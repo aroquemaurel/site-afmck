@@ -169,6 +169,7 @@ class User {
         $currentDate = new DateTime();
         $this->disable = 0;
         $this->askReadhesion = NULL;
+        $this->askValidation = NULL;
         $year = $currentDate->format("Y");
 
         if($currentDate->format("m") != 11 && $currentDate->format("m") != 12) {
@@ -246,7 +247,7 @@ class User {
         $this->longitude = $data->longitude;
         $this->latitude = $data->latitude;
         $this->hasSigned = $data->hasSigned;
-        $this->askReadhesion = $data->askReadhesion;
+        $this->askReadhesion = new DateTime($data->askReadhesion);
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -539,7 +540,7 @@ class User {
      */
     public function getAskValidation()
     {
-        return $this->askValidation;
+        return $this->askReadhesion != NULL ? $this->askReadhesion : $this->askValidation;
     }
 
     /**
