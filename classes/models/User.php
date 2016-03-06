@@ -166,9 +166,37 @@ class User {
     }
 
     public function addNewsToSend(News $news) {
-        // TODO add news,user in database user_news
         $db = new DatabaseNews();
         $db->addNewsToSend($this->id, $news->getId(), new DateTime());
+    }
+
+    private function levelStringToInt($level) {
+        $ret = 0;
+        switch(strtoupper($level)) {
+            case "A":
+                $ret = 1;
+                break;
+            case "B":
+                $ret = 2;
+                break;
+            case "C":
+                $ret = 3;
+                break;
+            case "D":
+                $ret = 4;
+                break;
+            case "CERTIFIÉ":
+                $ret = 5;
+                break;
+            case "DIPLOMÉ":
+                $ret = 6;
+                break;
+        }
+
+        return $ret;
+    }
+    public function levelIsGreaterThan($level) {
+        return ($this->levelFormation >= $this->levelStringToInt($level));
     }
 
     public function valid() {
