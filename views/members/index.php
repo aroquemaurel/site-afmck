@@ -28,10 +28,19 @@ Si vous avez des remarques sur le site, ou avez un problème avec le site, merci
     echo '</div>';
     foreach($news as $new) {
         echo '<div style="padding-right: 80px">';
-        echo '<h2>'.$new->getTitle().'&nbsp;<small>'.$new->getSubtitle().'</small></h2>';
-        echo '<p style="margin-top: -8px;margin-bottom:15px"><small>Posté le '.$new->getDate()->format('d / m / Y à H:i').' par '.$new->getAuthor()->getFirstName().' '.$new->getAuthor()->getLastname().'</small></p>';
+        echo '<h2>' . $new->getTitle() . '&nbsp;<small>' . $new->getSubtitle() . '</small></h2>';
+        echo '<p style="margin-top: -8px;margin-bottom:15px"><small>Posté le ' . $new->getDate()->format('d / m / Y à H:i') . ' par ' . $new->getAuthor()->getFirstName() . ' ' . $new->getAuthor()->getLastname() . '</small></p>';
         echo $new->getContent();
         echo '</div>';
+        if (count($new->getAttachments()) > 0) {
+            echo '<br/><div style="font-size:9.5pt">';
+            echo '<h5>Pièces jointes</h5>';
+            echo '<ul>';
+            foreach ($new->getAttachments() as $att) {
+                echo '<li><i class="glyphicon glyphicon-download-alt"></i>&nbsp;<a href="' . Visitor::getInstance()->getRootPage() . '/docs/members/news/' . $att->getPath() . '">' . $att->getTitle() . '</a></li>';
+            }
+            echo '</ul></div>';
+        }
     }
     (new utils\Pagination($page, $nbPages, Visitor::getInstance()->getRootPage().'/members/index.php'))->display();
     ?>
