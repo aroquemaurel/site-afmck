@@ -1,4 +1,6 @@
 <?php
+namespace database;
+
 use models\File;
 
 /**

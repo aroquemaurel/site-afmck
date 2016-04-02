@@ -1,7 +1,7 @@
 <?php
 header( 'content-type: text/html; charset=utf-8' );
 
-require_once('config.php');
+require_once('config/server.php');
 include('config/doctrine.php');
 
 require_once('autoload.php');

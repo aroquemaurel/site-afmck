@@ -6,7 +6,8 @@
 	"autoload": {
 		"psr-4":{
 			"" : "classes/",
-			"models\\": "classes/models"
+			"models\\": "classes/models",
+            "database\\": "classes/database"
 		}
 	}
 }

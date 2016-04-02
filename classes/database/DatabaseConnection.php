@@ -1,4 +1,6 @@
 <?php
+namespace database;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel

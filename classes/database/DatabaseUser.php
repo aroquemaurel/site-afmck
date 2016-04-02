@@ -5,6 +5,7 @@
  * Date: 22/12/14
  * Time: 11:31
  */
+namespace database;
 
 require_once('Database.php');
 
