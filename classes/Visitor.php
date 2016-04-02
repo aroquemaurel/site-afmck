@@ -1,4 +1,6 @@
 <?php
+use models\User;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel

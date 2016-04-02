@@ -1,4 +1,6 @@
 <?php
+namespace models;
+
 use models\Group;
 
 /**
