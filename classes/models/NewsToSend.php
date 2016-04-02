@@ -8,10 +8,6 @@
 
 namespace models;
 
-
-use News;
-use User;
-
 class NewsToSend {
     private $user;
     private $news;

@@ -105,10 +105,6 @@ class Visitor {
 
 
     public function hasRights($pageFilename, $groups=array()) {
-        print_r( $this->isConnected());
-        echo "toto".($this->isConnected()?"true":"false");
-        print_r($groups);
-        //exit();
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
                 if($this->user->isInGroup($group)) {

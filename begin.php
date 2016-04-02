@@ -3,6 +3,8 @@ header( 'content-type: text/html; charset=utf-8' );
 
 require_once('classes/Visitor.php');
 require_once('config/server.php');
+require_once('config/db/logins.php');
+
 include(Visitor::getRootPath().'/config/doctrine.php');
 session_start();
 
