@@ -7,7 +7,7 @@
         Newsletter Vol3 N°4 (Français)
         </a>
     <br/>
-        <a href="http://afmck.fr/docs/members/kiosque/newsletters/STart%20Back%20Sreening%20Tool%20-FR.xlt">
+        <a href="http://afmck.fr/docs/members/kiosque/newsletters/STartBackScreeningTool.zip">
         Start Back Screening Tool
         </a>
         </center>

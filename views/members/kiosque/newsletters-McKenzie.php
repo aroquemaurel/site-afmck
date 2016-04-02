@@ -4,7 +4,7 @@ $breadcrumb->display();
 <div class="container-fluid">
     <h1>Les newsletters de l'Institut McKenzie International</h1>
     <div id="toc" class="toc"></div><!--/.well -->
-    <div class="thumbnail with-caption toc" id="toc"' style="text-align: left;margin-right: 300px; margin-top: -00px;">
+    <div class="thumbnail with-caption toc" id="toc" style="text-align: left;margin-right: 300px; margin-top: -00px;">
     <img id="mini" alt="" style="text-align: center;margin:auto">
     <p id="description" style="font-size: 10pt"></p>
 </div>
@@ -34,7 +34,7 @@ Image::miniLink($folder, "MDT Newsletter_Vol 4 No 1-fr_AFMcK",
 </ul>
 <h3>Annexes</h3>
 <ul>
-<li><a href="<?php echo Visitor::getRootPage().'/docs/members/kiosque/newsletters/STart Back Sreening Tool -FR.xlt';?>">STart Back Screening Tool Vol.4 N°3 <small>Français</small></a>
+<li><a href="<?php echo Visitor::getInstance()->getRootPage().'/docs/members/kiosque/newsletters/STartBackScreeningTool.zip';?>">STart Back Screening Tool Vol.4 N°3 <small>Français</small></a>
 </ul>
 <h2>Vol 3</h2>
 <h3>Anglais</h3>

@@ -147,6 +147,7 @@ class User {
     public function sendForgetPassword() {
         $mailer = new Mailer();
         $mailer->isHTML(true);                                  // Set email format to HTML
+        $mailer->CharSet = 'UTF-8';
         $mailer->Subject .= "Mot de passe oublié";
         $this->hashPassword = password_hash($this->mail.$this->adeliNumber, PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3)));
 
@@ -217,6 +218,7 @@ class User {
 
         $this->mailer[] = new Mailer();
         end($this->mailer)->isHTML(true);                                  // Set email format to HTML
+        end($this->mailer)->CharSet = 'UTF-8';
         end($this->mailer)->Subject .= "Validation inscription";
         end($this->mailer)->Body = (Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
         end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
@@ -225,8 +227,9 @@ class User {
         if($this->getHasSigned() == 1) {
             $this->mailer[] = new Mailer();
             end($this->mailer)->isHTML(true);                                  // Set email format to HTML
+            end($this->mailer)->CharSet = 'UTF-8';
             end($this->mailer)->Subject .= "Signature d'une charte";
-            end($this->mailer)->Body = Mail::getNewChartMail($this);
+            end($this->mailer)->Body = (Mail::getNewChartMail($this));
             end($this->mailer)->addAddress(SECRETARIAT_MAIL, "Secrétariat AFMcK");
         }
     }

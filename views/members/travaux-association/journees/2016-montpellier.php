@@ -24,6 +24,13 @@
         <tr>
             <td style="padding: 20px;">
                 <div class="thumbnail with-caption" style="width: 300px">
+                    <a href="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Montpellier Know Pain - Fr.pdf" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Montpellier Know Pain - Fr.jpg" width="250" alt="Comprendre la douleur : que cherchons nous à accomplir ?"/>
+                    </a>
+                    <p style="font-size: 10pt">Comprendre la douleur : que cherchons nous à accomplir ?<small>M. STEWART</small></p>
+                </div>
+            </td>
+            <td style="padding: 20px;">
+                <div class="thumbnail with-caption" style="width: 300px">
                     <a href="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Le MDT dans les recommandations de la lombalgie - VANDEPUT.pdf" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Le MDT dans les recommandations de la lombalgie - VANDEPUT.jpg" width="450" alt="Le MDT dans les recommandations de la lombalgie"/>
                     </a>
                 <p>Le MDT dans les recommandations de la lombalgie. <small>D. VANDEPUT</small></p>

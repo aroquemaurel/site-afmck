@@ -107,9 +107,9 @@ class DatabaseNews extends Database {
         $query = $this->dbAccess->prepare("SELECT idNewsletter as id, idUser, title, content, author, news.date as date, subtitle, idUser, user.mail as email, user.firstname as firstname, user.lastname as lastname
                                         from news, user_newsletter, user
                                         where user_newsletter.idNewsletter = news.id
-                                          and user_newsletter.idUser = user.id
-                                          and user_newsletter.isSend = 0
-                                        LIMIT 0,:nbnews");
+                                          and user_newsletter.idUser = user.id ".
+"                                          and user_newsletter.isSend = 0 ".
+                                        "LIMIT 0,:nbnews");
         $query->bindParam(":nbnews", $nbNews, PDO::PARAM_INT);
         $query->execute();
         $ret = array();
