@@ -22,7 +22,19 @@ class Forum
     protected $description;
 
     /**
-     * @OneToMany(targetEntity="Topic", mappedBy="forum")
+     * @OneToMany(targetEntity="Topic", mappedBy="forums")
      */
     protected $topics;
+
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getDescription() {
+        return $this->description;
+    }
 }

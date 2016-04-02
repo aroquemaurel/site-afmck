@@ -9,7 +9,8 @@
 namespace models\forum;
 
 /**
- * @Entity @Table(name="forum_category")
+ * @Entity
+ * @Table(name="forum_category")
  **/
 class Category
 {
@@ -24,6 +25,14 @@ class Category
      */
     protected $forums;
 
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getForums() {
+        return $this->forums;
+    }
 
 
 }
