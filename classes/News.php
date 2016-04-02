@@ -1,4 +1,6 @@
 <?php
+use models\File;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -14,23 +16,34 @@ class News {
     private $author;
     private $date;
 
+    private $attachments;
+
     public function __construct() {
         $this->date = new DateTime();
         $this->id = 0;
+        $this->attachments = array();
     }
     public function hydrat($data) {
         $this->id = $data->id;
         $this->title = utf8_encode($data->title);
-        $this->content = utf8_encode($data->content);
+        $this->content = preg_replace('/\\<p(.+)\\>&nbsp;\\<\\/p\\>/', "", $data->content);
         $this->author = (new DatabaseUser())->getUserById($data->author);
         $this->date = new DateTime($data->date);
         $this->subtitle = utf8_encode($data->subtitle);
     }
 
+    public function addAttchment(File $f) {
+        $this->attachments[] = $f;
+    }
+
+    public function getAttachments() {
+        return $this->attachments;
+    }
+
     public function commit() {
         $db = new DatabaseNews();
         if($this->id == 0) {
-            $db->addNew($this);
+            $this->id = $db->addNew($this);
         } else {
             $db->updateNew($this);
         }
@@ -72,7 +85,7 @@ class News {
      */
     public function getContent()
     {
-        return nl2br($this->content);
+        return ($this->content);
     }
 
     /**
@@ -89,6 +102,10 @@ class News {
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    public function isSend() {
+        return (new DatabaseNews())->newsIsSend($this->id);
     }
 
     /**

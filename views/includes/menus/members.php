@@ -37,6 +37,7 @@
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/Algorithme_decisionnel_des_derangements_epaules.pdf" target="_blank">N°7 — Algorithme décisionnel pour dérangement épaule</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°8_AFMcK.pdf" target="_blank">N°8 — Récupération de la fonction</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°9_AFMcK.pdf" target="_blank">N°9 — Progression autour de l'extension de genou</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°10_AFMcK.pdf" target="_blank">N°10 — Progression/Régression des forces</a></li>
                                     </ul>
                                     <ul class="col-sm-3 list-unstyled">
                                         <li>
@@ -48,13 +49,14 @@
                                             <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°4_AFMcK.pdf" target="_blank">N°4 — Extension d'épaule coude fléchi</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°5_AFMcK.pdf" target="_blank">N°5 — Extension thoracique "au nœud"</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°6_AFMcK.pdf" target="_blank">N°6 — PD atypique pour dérangement lombaire asymétrique</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°7_AFMcK.pdf" target="_blank">N°7 — Dérangement lombaire antérieur</a></li>
 
                         </li>                                    </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Études</strong></p>
                                         </li>
-                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/etudes/Etude AFMcK 2012 - Rachis Prevalence Des Syndromes McKenzie_AFMcK.pdf">Rachis prévalence des syndromes McKenzie</a></li>
+                                        <li><a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/travaux-association/etudes/prevalence-syndromes-mckenzie.php">Prévalence des syndromes McKenzie</a></li>
                                     </ul>
                                     <ul class="col-sm-2 list-unstyled">
                                         <li>

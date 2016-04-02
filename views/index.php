@@ -1,39 +1,3 @@
-<div class="bs-callout bs-callout-info">
-<h2><center>Les Inscriptions aux 5èmes journées de l’AFMcK sont ouvertes !</center></h2>
-<center>
-<p>
-<iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/kKWmwwQ84aulYndvLPH" allowfullscreen></iframe><br /><a href="http://www.dailymotion.com/video/kKWmwwQ84aulYndvLPH" target="_blank">AFMcK - 5e congr&egrave;s - Montpellier</a> <i>par <a href="http://www.dailymotion.com/antoinederoquemaurel" target="_blank">antoinederoquemaurel</a></i>
-</p>
-</center>
-<div class="alert alert-warning">
-<p>
-Les inscriptions sont réservées aux adhérents jusqu’au 6 novembre et ouvertes à tous ensuite ! <br/>Dépéchez-vous de vous inscrire :) 
-</p>
-</div>
-<ul>
-<li>
-<strong>Etape 1</strong> : Lire le programme & Informations pratiques : <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/afmckday/montpellier/programme-montpellier.pdf">Programme</a>
-</li><li>
-<strong>Etape 2</strong> : Pour vous inscrire remplissez le formulaire : <a href="https://docs.google.com/forms/d/1NrUETlyEZKwsma10d-MQhLiTH-w7VhpAMezK1d32My4/viewform?c=0&w=1">Inscription au congrès</a></p>
-</li>
-<li>
-<strong>Etape 3</strong> : Envoyez votre chèque à cette adresse : 
-</li>
-</ul>
-<div class="alert alert-info">
-<p>Anne-Marie GASTELLU-ETCHEGORRY<br/>
-27 av. du 10ème Dragon<br/>
-82000 Montauban</p>
-</div>
-
-<p>Vous trouverez plus d'informations pratiques ici :  <a href="<?php echo Visitor::getInstance()->getRootPage();?>/2016-montpellier.php">Montpellier 2016</a>.</p>
-
-<p>Rendez vous à Montpellier !!!</p>
-
-<p>Toute l’équipe de l’AFMcK </p>
-</p>
-</div>
-
 <div class="container-fluid">
         <h1>Bienvenue sur le site de l'Association Française McKenzie !</h1>
 

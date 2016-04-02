@@ -82,9 +82,11 @@ class Mail {
                 32, cours Albert Thomas<br/>
                 69008 LYON";
         } else {
-            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>
-            Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>
-            Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
+            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>".
+//                "IBAN : FR76 1046 8022 8420 1316 0020 081<br/>".
+  //              "BIC : RALPFR2G<br/>".
+            "Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>".
+            "Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
         }
 
         $ret .=
@@ -105,9 +107,11 @@ class Mail {
                 32, cours Albert Thomas<br/>
                 69008 LYON";
         } else {
-            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>
-            Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>
-            Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
+            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>".
+ //               "IBAN : FR76 1046 8022 8420 1316 0020 081<br/>".
+//                "BIC : RALPFR2G<br/>".
+            "Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>".
+            "Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
         }
 
         $ret .=

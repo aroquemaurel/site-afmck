@@ -15,7 +15,7 @@ class Mailer extends PHPMailer {
 
         $this->From = 'maintenance@afmck.fr';
 
-        $this->FromName = utf8_decode('Association Française McKenzie'); // Display name
+        $this->FromName = 'Association Française McKenzie'; // Display name
 
         $this->Subject = "[AFMcK] ";
     }
