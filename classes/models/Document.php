@@ -10,7 +10,6 @@ namespace models;
 
 
 use DateTime;
-use User;
 
 class Document {
     private $tags;

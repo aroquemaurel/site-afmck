@@ -3,6 +3,7 @@ $particularRights = true;
 include('../begin.php');
 utils\Rights::hasRights(array("SECRETAIRE", "ADMINISTRATEUR", "TRESORIER"));
 
+use database\DatabaseDocuments;
 use models\Document;
 use models\Tag;
 use utils\Link;

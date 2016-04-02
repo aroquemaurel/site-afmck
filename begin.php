@@ -1,13 +1,15 @@
 <?php
 header( 'content-type: text/html; charset=utf-8' );
 
+require_once('classes/Visitor.php');
 require_once('config/server.php');
-include('config/doctrine.php');
+include(Visitor::getRootPath().'/config/doctrine.php');
+session_start();
 
 require_once('autoload.php');
-require_once('libs/password_compat/lib/password.php');
+require_once(Visitor::getInstance()->getRootPath().'/libs/password_compat/lib/password.php');
 
-session_start();
+
 if(!Visitor::getInstance()->isConnected()) {
     Visitor::getInstance()->autoconnect();
 }

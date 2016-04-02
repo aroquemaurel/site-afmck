@@ -11,4 +11,4 @@
 
         </div>
 
-        <div id="navbar-collapse-1" class="navbar-collapse collapse" style="margin-top: 60px; margin-left: 100px;">
+        <div id="navbar-collapse-1" class="navbar-collapse collapse" style="margin-top: 60px; margin-left: 98px;">

@@ -3,7 +3,9 @@ $particularRights = true;
 include('../begin.php');
 utils\Rights::hasRights(array("SECRETAIRE", "ADMINISTRATEUR"));
 
+use database\DatabaseNews;
 use models\File;
+use models\News;
 use utils\Link;
 $title = 'Liste des newsletter';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),

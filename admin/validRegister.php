@@ -2,6 +2,7 @@
 $particularRights = true;
 include('../begin.php');
 utils\Rights::hasRights(array("ADMINISTRATEUR", "TRESORIER"));
+use database\DatabaseUser;
 use utils\Link;
 $title = 'Validation des incriptions';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),

@@ -1,6 +1,7 @@
-<ul class="members nav navbar-nav " style="font-size: 8pt;max-width: 195px">
+<ul class="members nav navbar-nav " style="font-size: 8pt;max-width: 250px" xmlns:color="http://www.w3.org/1999/xhtml">
 
 <?php
+
 if(!Visitor::getInstance()->isConnected()) {
 ?>
 <li class="hidden-xs dropdown"><a href="" data-toggle="dropdown"color: #ccc;"class="dropdown-toggle">Connexion<b class="caret"></b></a>
@@ -16,7 +17,7 @@ if(!Visitor::getInstance()->isConnected()) {
 
 <?php
 } else {
-    $db = new DatabaseUser();
+    $db = new database\DatabaseUser();
     $user = Visitor::getInstance()->getUser();
     $accountsRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("TRESORIER");
     $charteRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("SECRETAIRE");

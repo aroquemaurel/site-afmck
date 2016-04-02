@@ -1,5 +1,6 @@
 <?php
 include('../../../begin.php');
+use database\DatabaseLicense;
 use utils\Link;
 
 $title = 'Ma clé de déverrouillage';

@@ -1,4 +1,6 @@
 <?php
+use models\User;
+
 class RegistrationPdf extends PdfFile {
     private $user;
     private $tresor;

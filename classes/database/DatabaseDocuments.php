@@ -4,6 +4,7 @@ namespace database;
 use models\Category;
 use models\Document;
 use models\File;
+use PDO;
 
 /**
  * Created by PhpStorm.

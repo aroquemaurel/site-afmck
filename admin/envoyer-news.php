@@ -3,6 +3,8 @@ $particularRights = true;
 include('../begin.php');
 utils\Rights::hasRights(array("SECRETAIRE", "ADMINISTRATEUR"));
 
+use database\DatabaseNews;
+use database\DatabaseUser;
 use utils\Link;
 $title = 'Envoyer la news';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),

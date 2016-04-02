@@ -1,5 +1,9 @@
 <?php
-use models\File;
+namespace models;
+
+use database\DatabaseNews;
+use database\DatabaseUser;
+use DateTime;
 
 /**
  * Created by PhpStorm.

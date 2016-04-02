@@ -1,7 +1,14 @@
 <?php
 namespace models;
 
-use models\Group;
+use BillingPdf;
+use database\DatabaseNews;
+use database\DatabaseUser;
+use DateTime;
+use Mail;
+use Mailer;
+use Popup;
+use Visitor;
 
 /**
  * Created by PhpStorm.
@@ -104,7 +111,6 @@ class User {
                 $ret = false;
             }
         }
-
         if(!$ret) {
             if(!$this->auto) {
                 $_SESSION['lastMessage'] = Popup::connectionKo();
@@ -119,7 +125,7 @@ class User {
             return false;
         } else if($this->isActive()) {
             $_SESSION['lastMessage'] = Popup::disableAccount();
-            if(auto) {
+            if($auto) {
                $this->clearCookie();
             }
             return false;
@@ -134,6 +140,7 @@ class User {
             return true;
         }
         $_SESSION['lastMessage'] = Popup::connectionOk();
+
         return true;
     }
 
@@ -151,7 +158,7 @@ class User {
         $mailer->isHTML(true);                                  // Set email format to HTML
         $mailer->CharSet = 'UTF-8';
         $mailer->Subject .= "Mot de passe oublié";
-        $this->hashPassword = password_hash($this->mail.$this->adeliNumber, PASSWORD_BCRYPT, array("cost" =>utils\Utils::getOptimalCost(0.3)));
+        $this->hashPassword = password_hash($this->mail.$this->adeliNumber, PASSWORD_BCRYPT, array("cost" =>\utils\Utils::getOptimalCost(0.3)));
 
         $this->commit();
         $mailer->Body = (Mail::getForgetPassword($this->firstName." ".$this->lastName, "u=".$this->getId()."&s=".
@@ -224,7 +231,7 @@ class User {
         end($this->mailer)->Subject .= "Validation inscription";
         end($this->mailer)->Body = (Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
         end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
-        end($this->mailer)->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/billing/".date("Y")."_".$this->getAdeliNumber().".pdf");
+        end($this->mailer)->addAttachment(\Visitor::getInstance()->getRootPath()."/docs/members/billing/".date("Y")."_".$this->getAdeliNumber().".pdf");
 
         if($this->getHasSigned() == 1) {
             $this->mailer[] = new Mailer();

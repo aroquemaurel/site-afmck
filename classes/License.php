@@ -1,4 +1,8 @@
 <?php
+use database\DatabaseLicense;
+use database\DatabaseUser;
+use models\User;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel

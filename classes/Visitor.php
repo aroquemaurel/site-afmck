@@ -1,4 +1,5 @@
 <?php
+use database\DatabaseUser;
 use models\User;
 
 /**
@@ -22,7 +23,7 @@ class Visitor {
             if(isset($_SESSION['visitor']) && $_SESSION['visitor'] != null) {
                 Visitor::$instance = $_SESSION['visitor'];
             } else {
-                Visitor::$instance = new Visitor();
+                Visitor::$instance = new \Visitor();
                 $_SESSION['visitor'] = Visitor::$instance;
             }
 
@@ -54,11 +55,11 @@ class Visitor {
         }
     }
 
-    public function getRootPage() {
+    public static function getRootPage() {
         return ROOT_PAGE;
     }
 
-    public function getRootPath() {
+    public static function getRootPath() {
         return ROOT_PATH.'/'.ROOT_PAGE;
     }
 
@@ -104,6 +105,10 @@ class Visitor {
 
 
     public function hasRights($pageFilename, $groups=array()) {
+        print_r( $this->isConnected());
+        echo "toto".($this->isConnected()?"true":"false");
+        print_r($groups);
+        //exit();
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
                 if($this->user->isInGroup($group)) {

@@ -15,6 +15,7 @@ class Rights {
 
     }
     public static function hasRights($groups = array()) {
+
         if(!Visitor::getInstance()->hasRights(Visitor::getInstance()->getCurrentFile(), $groups)) {
             $_SESSION['lastMessage'] = Popup::forbidden();
             header('Location: ' . (Visitor::getInstance()->getRootPage(). '/index.php'));

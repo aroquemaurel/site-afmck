@@ -7,6 +7,9 @@
  */
 namespace database;
 
+use models\User;
+use PDO;
+
 require_once('Database.php');
 
 class DatabaseUser extends Database {
@@ -43,7 +46,7 @@ class DatabaseUser extends Database {
 
     }
 
-    public function addUser(User $user) {
+    public function addUser(\models\User $user) {
         $adeli = utf8_decode($user->getAdeliNumber());
         $firstname = utf8_decode($user->getFirstName());
         $lastname = utf8_decode($user->getLastName());

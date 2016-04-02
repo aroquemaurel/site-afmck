@@ -27,7 +27,6 @@
                                         <li>
                                             <p><strong>Chroniques scientifiques</strong></p>
                                         </li>
-<?php echo "<!-- /--------/  ".Visitor::getInstance()->getRootPage()."-->" ;?>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°1_AFMcK.pdf" target="_blank">N°1 — Étude de cas hernie lombaire</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°2_AFMcK.pdf" target="_blank">N°2 — Étude Donelson 2012</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK n°3_AFMck.pdf" target="_blank">N°3 — Effet des mouvements sur le nucléus</a></li>

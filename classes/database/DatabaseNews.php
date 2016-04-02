@@ -1,7 +1,11 @@
 <?php
 namespace database;
 
+use DateTime;
 use models\File;
+use models\News;
+use models\User;
+use PDO;
 
 /**
  * Created by PhpStorm.

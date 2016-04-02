@@ -8,7 +8,7 @@ namespace database;
  * Time: 22:08
  */
 
-require_once(Visitor::getInstance()->getRootPath()."/db/logins.php");
+require_once(\Visitor::getInstance()->getRootPath()."/config/db/logins.php");
 class Database {
     private $host;
     private $dbName;
@@ -27,14 +27,14 @@ class Database {
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
         // Set options
         $options = array(
-            PDO::ATTR_PERSISTENT => true,
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            \PDO::ATTR_PERSISTENT => true,
+            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
         );
 
         try {
-            $this->dbAccess = new PDO($dsn, $this->user, $this->password, $options);
+            $this->dbAccess = new \PDO($dsn, $this->user, $this->password, $options);
         }// Catch any errors
-        catch (PDOException $e) {
+        catch (\PDOException $e) {
             $this->error = $e->getMessage();
         }
     }

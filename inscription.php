@@ -1,14 +1,16 @@
 <?php
 include('begin.php');
 use utils\Link;
+use models\User;
 
 require_once('libs/password_compat/lib/password.php');
+
 $title = 'Inscription';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Inscription', '#')));
 $editing = false;
 
 if(isset($_POST['firstName'])) {
-    $db = new DatabaseUser();
+    $db = new database\DatabaseUser();
     if($db->adeliExists($_POST['adeliNumber'])) {
         $_SESSION['lastMessage'] = Popup::errorMessage("Le numéro ADELI ".$_POST['adeliNumber']." est déjà dans la base de données.<br/>
                     Vérifiez que vous avez bien renseigné ce numéro.<br/><br/> Si tel est le cas et que vous n'êtes pas déjà inscris,

@@ -9,6 +9,8 @@
 namespace models;
 
 
+use database\DatabaseDocuments;
+
 class Category {
     private $id;
     private $name;
@@ -17,7 +19,7 @@ class Category {
     {
         $this->id = $id;
         if($name=='') {
-            $db = new \DatabaseDocuments();
+            $db = new DatabaseDocuments();
             $this->name = $db->getCategoryName($id);
         } else {
             $this->name = $name;

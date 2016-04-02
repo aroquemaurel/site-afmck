@@ -4,7 +4,7 @@ use utils\Link;
 
 $title = 'Praticiens';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Praticiens', '#')));
-$db = new DatabaseUser();
+$db = new database\DatabaseUser();
 $users = $db->getUsersOnMap();
 
 include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
