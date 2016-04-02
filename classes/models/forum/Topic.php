@@ -36,4 +36,104 @@ class Topic
      */
     protected $posts;
 
+    /** @Column(type="integer") */
+    protected $idUser;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param mixed $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSubtitle()
+    {
+        return $this->subtitle;
+    }
+
+    /**
+     * @param mixed $subtitle
+     */
+    public function setSubtitle($subtitle)
+    {
+        $this->subtitle = $subtitle;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocked()
+    {
+        return $this->locked;
+    }
+
+    /**
+     * @param mixed $locked
+     */
+    public function setLocked($locked)
+    {
+        $this->locked = $locked;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getForum()
+    {
+        return $this->forum;
+    }
+
+    /**
+     * @param mixed $forum
+     */
+    public function setForum($forum)
+    {
+        $this->forum = $forum;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPosts()
+    {
+        return $this->posts;
+    }
+
+    /**
+     * @param mixed $posts
+     */
+    public function setPosts($posts)
+    {
+        $this->posts = $posts;
+    }
+
+
 }

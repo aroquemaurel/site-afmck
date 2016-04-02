@@ -22,7 +22,7 @@ class Forum
     protected $description;
 
     /**
-     * @OneToMany(targetEntity="Topic", mappedBy="forums")
+     * @OneToMany(targetEntity="Topic", mappedBy="forum")
      */
     protected $topics;
 
@@ -37,4 +37,26 @@ class Forum
     public function getDescription() {
         return $this->description;
     }
+
+    public function getTopics() {
+        return $this->topics;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+
 }

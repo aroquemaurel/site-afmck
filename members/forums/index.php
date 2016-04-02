@@ -7,7 +7,7 @@ include('../../begin.php');
 
 $title = 'Forums';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
-    new Link('Forums','#'), new Link('Liste des forums', '#')));
+    new Link('Forums','#')));
 
 $forumRepo = $entityManager->getRepository('models\forum\Category');
 
