@@ -22,9 +22,12 @@ class Category
 
     /**
      * @OneToMany(targetEntity="Forum", mappedBy="category")
+     * @OrderBy({"order" = "ASC"})
      */
     protected $forums;
 
+    /** @Column(type="integer") **/
+    protected $order;
 
     public function getName() {
         return $this->name;

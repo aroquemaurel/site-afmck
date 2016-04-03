@@ -33,11 +33,15 @@ class Topic
 
     /**
      * @OneToMany(targetEntity="Post", mappedBy="topic")
+     * @OrderBy({"date" = "ASC"})
      */
     protected $posts;
 
     /** @Column(type="integer") */
     protected $idUser;
+
+    /** @Column(type="datetime") **/
+    protected $date;
 
     /**
      * @return mixed

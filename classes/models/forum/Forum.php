@@ -21,8 +21,11 @@ class Forum
     /** @Column(type="string") **/
     protected $description;
 
+    /** @Column(type="integer") **/
+    protected $order;
     /**
      * @OneToMany(targetEntity="Topic", mappedBy="forum")
+     * @OrderBy({"date" = "DESC"})
      */
     protected $topics;
 

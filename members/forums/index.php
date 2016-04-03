@@ -11,7 +11,7 @@ $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link
 
 $forumRepo = $entityManager->getRepository('models\forum\Category');
 
-$categories = $forumRepo->findAll();
+$categories = $forumRepo->findBy(array(), array('order' => 'ASC'));
 include('../../views/includes/head.php');
 include('../../views/members/forums/index.php');
 include('../../views/includes/foot.php');
