@@ -7,6 +7,7 @@
  */
 
 namespace models\forum;
+use database\DatabaseUser;
 
 /**
  * @Entity @Table(name="forum_post")
@@ -96,21 +97,9 @@ class Post
         $this->date = $date;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getIdUser()
-    {
-        return $this->idUser;
+    public function getUser() {
+        $db = new DatabaseUser();
+        return $db->getUserById($this->idUser);
     }
-
-    /**
-     * @param mixed $idUser
-     */
-    public function setIdUser($idUser)
-    {
-        $this->idUser = $idUser;
-    }
-
 
 }

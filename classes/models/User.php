@@ -509,6 +509,10 @@ class User {
         $this->firstName = ($firstName);
     }
 
+    public function getName() {
+        return $this->firstName.' '.$this->getLastName();
+    }
+
     /**
      * @return mixed
      */

@@ -7,6 +7,7 @@
  */
 
 namespace models\forum;
+use database\DatabaseUser;
 
 /**
  * @Entity @Table(name="forum_topic")
@@ -139,5 +140,8 @@ class Topic
         $this->posts = $posts;
     }
 
-
+    public function getCreator() {
+        $db = new DatabaseUser();
+        return $db->getUserById($this->idUser);
+    }
 }

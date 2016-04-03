@@ -23,4 +23,11 @@ class Utils {
         return $cost;
     }
 
+    public static function getPlainDate($datetime) {
+        setlocale(LC_TIME, "fr_FR.utf8");
+
+        $date = strftime('%A %d %B %G à %R:%S', $datetime->getTimestamp());
+        return ucfirst($date);
+    }
+
 }
