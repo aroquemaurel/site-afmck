@@ -18,8 +18,12 @@ class Uploader
         $this->max_size = $max_size;
     }
 
-    public function upload($fileName, $tmpName, $fileSize) {
-        $uploadFilename = uniqid()."_".basename($fileName);
+    public function upload($fileName, $tmpName, $fileSize, $filename='') {
+        if($fileName == '') {
+            $uploadFilename = uniqid() . "_" . basename($fileName);
+        } else {
+            $uploadFilename = $filename;
+        }
 
         $target_path =  $this->targetFolder.$uploadFilename;
         $ext = explode('.', basename($fileName));   // Explode file name from dot

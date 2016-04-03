@@ -343,6 +343,24 @@ class User {
         return $ret;
     }
 
+    public function getAvatarPath() {
+        return Visitor::getRootPath()."/docs/members/avatars/".$this->getAvatarFileName();
+    }
+
+    public function getAvatarFileName() {
+        return $this->id."_".$this->adeliNumber.'.jpg';
+    }
+
+    public function getAvatar() {
+        $theoricalPath = $this->getAvatarPath();
+        $pageFolder = Visitor::getRootPage()."/docs/members/avatars/";
+        if(file_exists($theoricalPath)) {
+            return $pageFolder.'/'.$this->getAvatarFileName();
+        } else {
+            return $pageFolder.'/default.jpg';
+        }
+    }
+
     public function getHashPassword() {
         return $this->hashPassword;
     }
