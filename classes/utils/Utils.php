@@ -24,9 +24,9 @@ class Utils {
     }
 
     public static function getPlainDate($datetime) {
-        setlocale(LC_TIME, "fr_FR.utf8");
+        setlocale(LC_ALL, "fr_FR.utf8");
 
-        $date = strftime('%A %d %B %G à %R:%S', $datetime->getTimestamp());
+        $date = strftime('%A %d %B %G', $datetime->getTimestamp()) . ' à '.$datetime->format('H:i:s');
         return ucfirst($date);
     }
 

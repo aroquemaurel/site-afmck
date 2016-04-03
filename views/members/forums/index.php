@@ -4,7 +4,7 @@
     <table class="table table-striped table-hover" style="width: 99%;">
     <?php
     foreach($categories as $category) {
-        echo '<tr style="background-color: #96A5C0">';
+        echo '<tr style="background-color: #ebfaff">';
             echo '<th colspan="3">'.$category->getName().'</th>';
         echo '</tr>';
         foreach($category->getForums() as $forum) {

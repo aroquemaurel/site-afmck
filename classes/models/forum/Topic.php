@@ -9,6 +9,7 @@
 namespace models\forum;
 use database\DatabaseUser;
 use DateTime;
+use models\User;
 
 /**
  * @Entity @Table(name="forum_topic")
@@ -149,11 +150,19 @@ class Topic
         return $db->getUserById($this->idUser);
     }
 
+    public function setCreator(User $user) {
+        $this->idUser = $user->getId();
+    }
+
     public function getDateUpdate() {
         return $this->dateUpdate;
     }
 
     public function setDateUpdate(DateTime $date) {
         $this->dateUpdate = $date;
+    }
+
+    public function setDate(DateTime $date) {
+        $this->date = $date;
     }
 }

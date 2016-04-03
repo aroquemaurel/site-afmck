@@ -11,7 +11,8 @@ session_start();
 require_once('autoload.php');
 require_once(Visitor::getInstance()->getRootPath().'/libs/password_compat/lib/password.php');
 
-setlocale(LC_ALL, 'fr_FR');
+setlocale(LC_ALL, 'fr_FR.utf8');
+date_default_timezone_set('Europe/Paris');
 
 if(!Visitor::getInstance()->isConnected()) {
     Visitor::getInstance()->autoconnect();
