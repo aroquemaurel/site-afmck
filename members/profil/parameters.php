@@ -1,5 +1,5 @@
 <?php
-include('../begin.php');
+include('../../begin.php');
 use utils\Link;
 
 $title = 'Paramètres';
@@ -30,7 +30,7 @@ if(isset($_POST['firstName'])) {
     $user->commit();
     $_SESSION['lastMessage'] = Popup::successMessage("Les informations ont été correctement modifiées");
 }
-include('../views/includes/head.php');
-include('../views/members/parameters.php');
-include('../views/includes/foot.php');
+include('../../views/includes/head.php');
+include('../../views/members/profil/parameters.php');
+include('../../views/includes/foot.php');
 ?>

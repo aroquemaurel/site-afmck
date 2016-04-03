@@ -71,10 +71,12 @@ if(!Visitor::getInstance()->isConnected()) {
     }
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
         echo '<li><b>Mon profil</b></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/mon-profil.php">Voir mon profil</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/profil/mon-profil.php">Voir mon profil</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/profil/parameters.php">Modifier mes informations</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/profil/password.php">Changer de mot de passe</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/profil/changer-avatar.php">Changer d\'avatar</a></li>';
+        echo '<li><b>Mon adhésion</b></li>';
         echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/readherer.php">Réadhérer à l\'association</a></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/parameters.php">Modifier mes informations</a></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/password.php">Changer de mot de passe</a></li>';
         if(Visitor::getInstance()->getUser()->getHasSigned() == -1) {
             echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/members/signer-la-charte.php">Je souhaite signer la charte</a></li>';
         }

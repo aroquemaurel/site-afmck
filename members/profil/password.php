@@ -1,5 +1,5 @@
 <?php
-include('../begin.php');
+include('../../begin.php');
 use utils\Link;
 
 $title = 'Changer de mot de passe';
@@ -23,7 +23,7 @@ if(isset($_POST['lastPassword'])) {
         $_SESSION['lastMessage'] = Popup::errorMessage('Le mot de passe est incorrect');
     }
 }
-include('../views/includes/head.php');
-include('../views/members/password.php');
-include('../views/includes/foot.php');
+include('../../views/includes/head.php');
+include('../../views/members/profil/password.php');
+include('../../views/includes/foot.php');
 ?>
