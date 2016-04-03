@@ -2,7 +2,7 @@
 use utils\Link;
 use utils\Rights;
 
-include('../../begin.php');
+include('../../../begin.php');
 
 if(!isset($_GET['id'])) {
     $_SESSION['lastMessage'] = Popup::errorMessage("Le sujet que vous recherchiez n'existe pas.");
@@ -27,7 +27,7 @@ $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link
     new Link('Voir le sujet « '.$topic->getTitle().' »', '#')));
 
 
-include('../../views/includes/head.php');
-include('../../views/members/forums/voir-sujet.php');
-include('../../views/includes/foot.php');
+include('../../../views/includes/head.php');
+include('../../../views/members/forums/sujets/voir.php');
+include('../../../views/includes/foot.php');
 ?>

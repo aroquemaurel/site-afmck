@@ -7,7 +7,7 @@
     foreach($forum->getTopics() as $topic) {
         echo '<tr>';
         echo '<td>';
-        echo '<a href="'.Visitor::getRootPage().'/members/forums/voir-sujet.php?id='.$topic->getId().'"><b>'.$topic->getTitle().'</b></a><br>';
+        echo '<a href="'.Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$topic->getId().'"><b>'.$topic->getTitle().'</b></a><br>';
         if($topic->getSubtitle() != null && $topic->getSubtitle() != "") {
             echo '<p><em>' . $topic->getSubtitle() . '</em></p>';
         }

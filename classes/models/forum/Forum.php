@@ -25,7 +25,7 @@ class Forum
     protected $order;
     /**
      * @OneToMany(targetEntity="Topic", mappedBy="forum")
-     * @OrderBy({"date" = "DESC"})
+     * @OrderBy({"dateUpdate" = "DESC"})
      */
     protected $topics;
 

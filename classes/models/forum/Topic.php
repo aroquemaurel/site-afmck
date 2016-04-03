@@ -8,6 +8,7 @@
 
 namespace models\forum;
 use database\DatabaseUser;
+use DateTime;
 
 /**
  * @Entity @Table(name="forum_topic")
@@ -43,6 +44,9 @@ class Topic
 
     /** @Column(type="datetime") **/
     protected $date;
+
+    /** @Column(type="datetime") **/
+    protected $dateUpdate;
 
     /**
      * @return mixed
@@ -143,5 +147,13 @@ class Topic
     public function getCreator() {
         $db = new DatabaseUser();
         return $db->getUserById($this->idUser);
+    }
+
+    public function getDateUpdate() {
+        return $this->dateUpdate;
+    }
+
+    public function setDateUpdate(DateTime $date) {
+        $this->dateUpdate = $date;
     }
 }

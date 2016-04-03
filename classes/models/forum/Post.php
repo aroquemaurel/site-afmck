@@ -8,6 +8,7 @@
 
 namespace models\forum;
 use database\DatabaseUser;
+use models\User;
 
 /**
  * @Entity @Table(name="forum_post")
@@ -100,6 +101,10 @@ class Post
     public function getUser() {
         $db = new DatabaseUser();
         return $db->getUserById($this->idUser);
+    }
+
+    public function setUser(User $u) {
+        $this->idUser = $u->getId();
     }
 
 }
