@@ -46,7 +46,7 @@ $breadcrumb->display()?>
         if(!$topic->isLocked() || Visitor::getInstance()->getUser()->isModerator()) {
             echo '<h2>Répondre au sujet « ' . $topic->getTitle() . ' »</h2>';
             if($topic->isLocked()) {
-                echo '<div class="alert alert-warning">Le sujet est actuellement verouillé. Seul les modérateurs peuvent ajouter de nouveaux messages.</div>';
+                echo '<div class="alert alert-warning" style="text-align: center">Le sujet est actuellement verouillé. Seul les modérateurs peuvent ajouter de nouveaux messages.</div>';
             }
             echo '
 

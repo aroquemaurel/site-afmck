@@ -13,6 +13,12 @@ if(!isset($_GET['id']) || !isset($_GET['verrouiller'])) {
     $locked = $_GET['verrouiller'] == 1;
 }
 
+if(!Visitor::getInstance()->getUser()->isModerator()) {
+    $_SESSION['lastMessage'] = Popup::errorMessage("Vous n'avez pas le droit d'être ici.");
+    header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
+    exit();
+}
+
 $topicRepo = $entityManager->getRepository('models\forum\Topic');
 $topic = $topicRepo->findOneBy(array('id'=>$id));
 if($topic == null) {

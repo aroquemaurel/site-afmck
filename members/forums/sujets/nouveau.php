@@ -21,7 +21,6 @@ if($forum == null) {
 }
 
 if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
-   // …
     $topic = new Topic();
     $date = new DateTime();
     $topic->setDateUpdate($date);

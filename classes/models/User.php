@@ -244,7 +244,7 @@ class User {
     }
 
     public function isModerator() {
-        return false;
+        return true;
     }
 
     public function unvalid()

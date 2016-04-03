@@ -18,6 +18,16 @@ $post = $postRepo->findOneBy(array('id'=>$id));
 if($post == null) {
     $_SESSION['lastMessage'] = Popup::errorMessage("Le message que vous recherchiez n'existe pas.");
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
+    exit();
+}
+
+if((!Visitor::getInstance()->getUser()->getId() == $post->getUser()->getId() &&
+    !Visitor::getInstance()->getUser()->isModerator()) ||
+    ($post->getTopic()->isLocked() && !Visitor::getInstance()->getUser()->isModerator())
+) {
+    $_SESSION['lastMessage'] = Popup::errorMessage("Vous n'avez pas le droit d'être ici.");
+    header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
+    exit();
 }
 
 if(isset($_POST['content'])) {
