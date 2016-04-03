@@ -11,7 +11,7 @@
     foreach($forum->getTopics() as $topic) {
         echo '<tr>';
         echo '<td>';
-        echo '<a href="'.Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$topic->getId().'"><b>'.$topic->getTitle().'</b></a><br>';
+        echo '<a href="'.Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$topic->getId().'"><b>'.($topic->isLocked() ? '<i class="glyphicon glyphicon-lock"></i>&nbsp;':'').$topic->getTitle().'</b></a><br>';
         if($topic->getSubtitle() != null && $topic->getSubtitle() != "") {
             echo '<p><em style="font-size: 9pt">' . $topic->getSubtitle() . '</em></p>';
         }

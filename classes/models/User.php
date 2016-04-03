@@ -243,6 +243,10 @@ class User {
         }
     }
 
+    public function isModerator() {
+        return false;
+    }
+
     public function unvalid()
     {
         $this->validDate = NULL;

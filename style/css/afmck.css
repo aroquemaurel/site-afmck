@@ -498,7 +498,7 @@ a.tooltip2 span
     width: 80%;
     margin-left: 200px;
     margin-bottom: 30px;
-    height: 195px;
+    min-height: 195px;
     padding: 20px;
     background: #ebfaff;
     -webkit-border-radius: 10px;
@@ -559,4 +559,9 @@ a.tooltip2 span
     border-right: 1px solid #a2cdff;
     padding: 2px;
     color: #000049;;
+}
+
+.forum-post .message .toolbar {
+    position: absolute;
+    right: 20px;
 }

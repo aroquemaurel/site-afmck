@@ -100,7 +100,7 @@ class Topic
     /**
      * @return mixed
      */
-    public function getLocked()
+    public function isLocked()
     {
         return $this->locked;
     }

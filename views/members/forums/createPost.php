@@ -4,9 +4,9 @@
     ?>
     <div class="message" style="min-height: 400px;">
             <div class="form-group">
-                <?php utils\Wysiwyg::display(); ?>
+                <?php utils\Wysiwyg::display(isset($post)?$post->getContent() : ''); ?>
             </div>
-            <textarea style="visibility: hidden" id="hiddeninput" name="content"><?php if(isset($news)) { echo $news->getContent(); }?></textarea>
+            <textarea style="visibility: hidden" id="hiddeninput" name="content"><?php if(isset($post)) { echo $post->getContent(); }?></textarea>
 
             <button id="submit" type="submit" style="margin: auto; margin-top: -50px; width: 250px; "
                     class="btn btn-primary btn-block btn-lg">
