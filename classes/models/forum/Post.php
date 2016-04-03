@@ -23,7 +23,7 @@ class Post
     protected $topic;
 
 
-    /** @Column(type="string") **/
+    /** @Column(type="text") **/
     protected $content;
 
     /** @Column(type="datetime") **/
