@@ -16,7 +16,13 @@ $breadcrumb->display()?>
         }
         foreach($topic->getPosts() as $post) {
             echo '<div class="forum-post">'.
-                '<div class="author">'.$post->getUser()->getFirstName().'<br/>'.$post->getUser()->getLastName().'</div>'.
+                '<div class="author">
+                    <div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
+                <img width="100px" src="'.$post->getUser()->getAvatar().'"/></div>
+                <p id="description" style="font-size: 10pt">'.
+                $post->getUser()->getFirstName().'<br/>'.$post->getUser()->getLastName().
+                '</p>
+                </div>'.
                 '<div class="message">'.
                 ($topic->getCreator()->getId() == $post->getUser()->getId() ? "<span class='creator'>Auteur du sujet</span>" : "").
                 '<span class="toolbar">';

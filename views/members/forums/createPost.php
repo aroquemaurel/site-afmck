@@ -1,6 +1,12 @@
 <div class="forum-post">
     <?php
-    echo '<div class="author">'.Visitor::getInstance()->getUser()->getFirstName().'<br/>'.Visitor::getInstance()->getUser()->getLastName().'</div>';
+    $user = Visitor::getInstance()->getUser();
+    echo '<div class="author">
+<div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
+                <img width="100px" src="'.$user->getAvatar().'"/></div>
+                <p id="description" style="font-size: 10pt">'.
+        $user->getFirstName().'<br/>'.$user->getLastName().
+        '</p></div>';
     ?>
     <div class="message" style="min-height: 400px;">
             <div class="form-group">

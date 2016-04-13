@@ -1,4 +1,5 @@
 <?php
+use models\forum\TopicUser;
 use utils\Link;
 use utils\Rights;
 
@@ -26,6 +27,7 @@ $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link
     new Link('Voir le forum « '.$forum->getName().' »', Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId()),
     new Link('Voir le sujet « '.$topic->getTitle().' »', '#')));
 
+$topic->addViewer(Visitor::getInstance()->getUser(), $entityManager);
 
 include('../../../views/includes/head.php');
 include('../../../views/members/forums/sujets/voir.php');

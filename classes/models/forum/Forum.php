@@ -1,5 +1,6 @@
 <?php
 namespace models\forum;
+use models\User;
 
 /**
  * @Entity @Table(name="forum_forum")
@@ -61,5 +62,15 @@ class Forum
         $this->category = $category;
     }
 
+    public function hasRead(User $u)
+    {
+        foreach ($this->topics as $topic) {
+            if (!$topic->hasRead($u)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
 }

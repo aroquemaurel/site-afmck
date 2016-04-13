@@ -351,6 +351,7 @@ table td {
 }
 
 
+
 a.tooltip2 {outline:none; }
 a.tooltip2 strong {line-height:30px;}
 a.tooltip2:hover {text-decoration:none;}
@@ -564,4 +565,24 @@ a.tooltip2 span
 .forum-post .message .toolbar {
     position: absolute;
     right: 20px;
+}
+
+table .forum-list {
+    width: 99%;
+}
+
+.forum-list .unread {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    border-left: 2px solid #3074ae;
+}
+
+.forum-list .unread:hover, .forum-list .read:hover {
+    background-color: #e2e2e2;
+    border-left: 4px solid #3074ae;
+}
+.forum-list .forum-stats {
+    font-size: 9pt;
+    width: 250px;
+    font-weight: normal;
 }

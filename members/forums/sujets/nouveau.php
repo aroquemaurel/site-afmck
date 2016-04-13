@@ -1,5 +1,6 @@
 <?php
 use models\forum\Topic;
+use models\forum\TopicUser;
 use utils\Link;
 use utils\Rights;
 
@@ -30,7 +31,8 @@ if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
     $topic->setLocked(false);
     $topic->setForum($forum);
     $topic->setCreator(Visitor::getInstance()->getUser());
-
+    $topic->addViewer(Visitor::getInstance()->getUser(), $entityManager);
+    
     $post = new \models\forum\Post();
     $post->setDate($date);
     $post->setUser(Visitor::getInstance()->getUser());

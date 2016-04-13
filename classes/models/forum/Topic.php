@@ -10,6 +10,7 @@ namespace models\forum;
 use database\DatabaseUser;
 use DateTime;
 use models\User;
+use Visitor;
 
 /**
  * @Entity @Table(name="forum_topic")
@@ -48,6 +49,12 @@ class Topic
 
     /** @Column(type="datetime") **/
     protected $dateUpdate;
+
+    /**
+     * @OneToMany(targetEntity="TopicUser", mappedBy="topic")
+     * @OrderBy({"idUser" = "ASC"})
+     */
+    protected $usersRead;
 
     /**
      * @return mixed
@@ -164,5 +171,40 @@ class Topic
 
     public function setDate(DateTime $date) {
         $this->date = $date;
+    }
+
+    public function getDate() {
+        return $this->date;
+    }
+
+    public function addViewer(User $user, $entityManager)
+    {
+        foreach($this->usersRead as $topicUser) {
+            if($user->getId() == $topicUser->getIdUser()) {
+                return;
+            }
+        }
+        $topicUser = new TopicUser();
+        $topicUser->setUser($user);
+        $topicUser->setTopic($this);
+        $entityManager->persist($topicUser);
+        $entityManager->flush();
+    }
+
+    public function removeAllViewers($entityManager) {
+        foreach($this->usersRead as $topicUser) {
+            $entityManager->remove($topicUser);
+        }
+        $entityManager->flush();
+    }
+
+    public function hasRead(User $pUser) {
+        foreach($this->usersRead as $u) {
+            if($u->getIdUser() == $pUser->getId()) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
