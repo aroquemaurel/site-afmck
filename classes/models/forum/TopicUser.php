@@ -21,6 +21,10 @@ class TopicUser
     /** @Column(type="integer") */
     protected $idUser;
 
+    /** @Column(type="integer") */
+    protected $isRead;
+
+
     /**
      * @ManyToOne(targetEntity="Topic", inversedBy="usersRead")
      * @JoinColumn(name="topic_id", referencedColumnName="id")
@@ -29,17 +33,24 @@ class TopicUser
 
 
 
-    public function setTopic($topic)
-    {
+    public function setTopic($topic) {
         $this->topic = $topic;
     }
 
-    public function setUser(User $user)
-    {
+    public function setUser(User $user) {
         $this->idUser = $user->getId();
     }
 
     public function getIdUser() {
         return $this->idUser;
     }
+
+    public function setRead($read) {
+        $this->isRead = $read;
+    }
+
+    public function hasRead() {
+        return $this->isRead;
+    }
+
 }

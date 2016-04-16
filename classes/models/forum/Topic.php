@@ -181,19 +181,26 @@ class Topic
     {
         foreach($this->usersRead as $topicUser) {
             if($user->getId() == $topicUser->getIdUser()) {
+                $topicUser->setRead(true);
+                $entityManager->persist($topicUser);
+                $entityManager->flush();
                 return;
             }
         }
         $topicUser = new TopicUser();
         $topicUser->setUser($user);
         $topicUser->setTopic($this);
+        $topicUser->setRead(true);
+
         $entityManager->persist($topicUser);
         $entityManager->flush();
     }
 
     public function removeAllViewers($entityManager) {
+
         foreach($this->usersRead as $topicUser) {
-            $entityManager->remove($topicUser);
+            $topicUser->setRead(false);
+            $entityManager->persist($topicUser);
         }
         $entityManager->flush();
     }
@@ -201,10 +208,19 @@ class Topic
     public function hasRead(User $pUser) {
         foreach($this->usersRead as $u) {
             if($u->getIdUser() == $pUser->getId()) {
-                return true;
+                return $u->hasRead();
             }
         }
 
         return false;
+    }
+
+    public function isNew(User $user) {
+        foreach($this->usersRead as $u) {
+            if($u->getIdUser() == $user->getId()) {
+                return false;
+            }
+        }
+        return true;
     }
 }

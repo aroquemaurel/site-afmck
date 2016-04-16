@@ -15,6 +15,7 @@ $breadcrumb->display()?>
 
         echo '<tr class="'.($topic->hasRead(Visitor::getInstance()->getUser())?'read': 'unread').'" >';
         echo '<td>'.
+            ($topic->isNew(Visitor::getInstance()->getUser()) ? '<i class="label label-info new">Nouveau</i> ':'').
             '<a href="'.Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$topic->getId().'">'.
             ($topic->isLocked() ? '<i class="glyphicon glyphicon-lock"></i>&nbsp;':'').$topic->getTitle().'</a><br>';
         if($topic->getSubtitle() != null && $topic->getSubtitle() != "") {

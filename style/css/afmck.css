@@ -577,12 +577,24 @@ table .forum-list {
     border-left: 2px solid #3074ae;
 }
 
-.forum-list .unread:hover, .forum-list .read:hover {
+.forum-list .unread:hover,  .forum-list .read:hover{
     background-color: #e2e2e2;
+
+}
+
+.forum-list .unread:hover {
     border-left: 4px solid #3074ae;
+}
+
+.forum-list .read:hover {
+    border-left: 0px solid #3074ae;
 }
 .forum-list .forum-stats {
     font-size: 9pt;
     width: 250px;
     font-weight: normal;
+}
+
+.forum-list .new {
+    font-size: 6pt;
 }

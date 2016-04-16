@@ -105,6 +105,7 @@ class Visitor {
 
 
     public function hasRights($pageFilename, $groups=array()) {
+
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
                 if($this->user->isInGroup($group)) {
@@ -112,7 +113,10 @@ class Visitor {
                 }
             }
             return false;
-        } else if(strpos($pageFilename,'members')) { // not in database, but begin with members
+        } else if(strpos($pageFilename,'members/forums/')) { // not in database, but begin with members
+            $authMembers = array("OTERO", "DE ROQUEMAUREL", "LOMER", "ROMEDENNE");
+            return $this->isConnected() && (in_array($this->getUser()->getLastName(), $authMembers));
+        } else if(strpos($pageFilename, 'members/')) {
             return $this->isConnected();
         } else if(strpos($pageFilename,'admin')) {
             return $this->isConnected() && $this->user->isInGroup("ADMINISTRATEUR");
