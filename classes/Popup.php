@@ -63,7 +63,7 @@ class Popup {
         Si vous n'avez pas reçu d'e-mail, merci de contacter la maintenance à maintenance@afmck.fr.
         ");
     }
-    public static function validationOk(User $user)
+    public static function validationOk(models\User $user)
     {
         $msg =
         "Vous êtes maintenant inscrit sur le site.

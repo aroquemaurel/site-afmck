@@ -1,5 +1,8 @@
 <?php
 include('begin.php');
+
+use database\DatabaseUser;
+use models\User; 
 require_once('libs/password_compat/lib/password.php');
 $err = false;
 if(isset($_GET['validation']) && isset($_GET['account'])) {

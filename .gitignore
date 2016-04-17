@@ -4,8 +4,6 @@
 config.php
 **/*/*.swo
 **/*/*.swp
-**/post.php
-post.php
 docs/members/registration
 docs/members/billing
 docs/members/logiciels
