@@ -11,6 +11,12 @@ session_start();
 require_once('autoload.php');
 require_once(Visitor::getInstance()->getRootPath().'/libs/password_compat/lib/password.php');
 
+if(Visitor::getInstance()->isConnected() && !isset($_SESSION['isReloaded'])) {
+session_destroy();
+session_start();
+$_SESSION['isReloaded'] = true;
+}
+
 setlocale(LC_ALL, 'fr_FR.utf8');
 date_default_timezone_set('Europe/Paris');
 

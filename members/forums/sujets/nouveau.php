@@ -31,6 +31,7 @@ if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
     $topic->setLocked(false);
     $topic->setForum($forum);
     $topic->setCreator(Visitor::getInstance()->getUser());
+    $entityManager->persist($topic);
     $topic->addViewer(Visitor::getInstance()->getUser(), $entityManager);
     
     $post = new \models\forum\Post();
@@ -39,7 +40,6 @@ if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
     $post->setContent($_POST['content']);
     $post->setTopic($topic);
 
-    $entityManager->persist($topic);
     $entityManager->persist($post);
     $entityManager->flush();
 

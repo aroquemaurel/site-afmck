@@ -6,6 +6,7 @@ if(Visitor::getInstance()->isConnected()) {
     Visitor::getInstance()->removeUser();
     session_destroy();
     session_start();
+    $_SESSION['isReloaded'] = true;
     $_SESSION['lastMessage'] = Popup::deconnectionOk();
 } else {
     $_SESSION['lastMessage'] = Popup::notConnected();

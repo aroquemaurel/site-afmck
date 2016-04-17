@@ -179,12 +179,14 @@ class Topic
 
     public function addViewer(User $user, $entityManager)
     {
-        foreach($this->usersRead as $topicUser) {
-            if($user->getId() == $topicUser->getIdUser()) {
-                $topicUser->setRead(true);
-                $entityManager->persist($topicUser);
-                $entityManager->flush();
-                return;
+        if($this->usersRead != null) {
+            foreach($this->usersRead as $topicUser) {
+                if($user->getId() == $topicUser->getIdUser()) {
+                    $topicUser->setRead(true);
+                    $entityManager->persist($topicUser);
+                    $entityManager->flush();
+                    return;
+                }
             }
         }
         $topicUser = new TopicUser();

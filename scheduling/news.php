@@ -1,15 +1,16 @@
 #!/usr/local/bin/php.ORIG.5_4
 <?php
-require_once('../config.php');
-require_once('../autoload.php');
+require_once('../begin.php');
+//require_once('../autoload.php');
 require_once('../libs/password_compat/lib/password.php');
+
 
 /**
  * Script is executed by crontab of OVH every hours.
  *
  * It look on database if we have to send emails, if it's the case, we send the firsts NEWS_NB_MAILS mails
  */
-$db = new DatabaseNews();
+$db = new database\DatabaseNews();
 foreach($db->getFirstMailsToSend(NEWS_NB_MAILS) as $news) {
     $mailer = new Mailer();
     $mailer->isHTML(true);                                  // Set email format to HTML

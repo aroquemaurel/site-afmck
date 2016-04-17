@@ -105,6 +105,9 @@ body {
     }
 }
 @media ( min-width: 767px ) {
+#afmckLogo {
+    margin-left: -40px;
+}
   .panel-group { width: 400px; }
   .thumbnail { margin: 0; }
 
@@ -499,7 +502,7 @@ a.tooltip2 span
     width: 80%;
     margin-left: 200px;
     margin-bottom: 30px;
-    min-height: 195px;
+    min-height: 225px;
     padding: 20px;
     background: #ebfaff;
     -webkit-border-radius: 10px;
