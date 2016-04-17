@@ -22,9 +22,9 @@ $breadcrumb->display()?>
             if($nbTopics > 0) {
                 $lastTopic = $forum->getTopics()[$nbTopics - 1];
                 if($nbPosts > 0) {
-                    $lastPost = $lastTopic->getLastPost($entityManager);
+                    $lastPost = $forum->getLastPost($entityManager);
                     echo '<td class="forum-stats">Dernier message de <br/><b>' . $lastPost->getUser()->getName() . '</b> <br/>le '
-                        . ($lastPost->getDate()->format('d/m/Y à h:i')) . ' <br/>
+                        . ($lastPost->getDate()->format('d/m/Y à H:i')) . ' <br/>
                         Dans <a href="'.Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$lastTopic->getId().'">'.$lastTopic->getTitle().'</a></td>';
                 } else {
                     echo '<td class="forum-stats">Aucun message</td>';

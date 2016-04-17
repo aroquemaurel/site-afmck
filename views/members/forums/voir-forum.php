@@ -26,10 +26,10 @@ $breadcrumb->display()?>
             }
             echo '<p style="font-size: 8pt">Par ' . $topic->getCreator()->getName() . ' le ' . Utils::getPlainDate($topic->getDate()) . '</p>';
             echo '</td>';
-            $nbPosts = count($topic->getPosts());
-            $lastPost = $topic->getPosts()[$nbPosts-1];
+            $nbPosts = $topic->getNbPosts($entityManager);
+            $lastPost = $topic->getLastPost($entityManager);
             echo '<td style="width: 100px;" class="forum-stats">'.$nbPosts.' message'.($nbPosts > 1 ? 's':'').'</td>';
-            echo '<td class="forum-stats">Dernier message de <br/><b>'.$lastPost->getUser()->getName().'</b> <br/>le '.($lastPost->getDate()->format('d/m/Y à h:i')).'</td>';
+            echo '<td class="forum-stats">Dernier message de <br/><b>'.$lastPost->getUser()->getName().'</b> <br/>le '.($lastPost->getDate()->format('d/m/Y à H:i')).'</td>';
             echo '</tr>';
         }
     }

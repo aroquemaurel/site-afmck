@@ -251,7 +251,12 @@ class Topic
     }
 
     public function getLastPost($em) {
-        $posts = $this->getPosts(0, $em);
-        return $posts->getIterator()->getArrayCopy()[count($posts)-1];
+        $postsRepo = $em->getRepository('models\forum\Post');
+        return $postsRepo->getLastPost($this);
+
+    }
+
+    public function getNbPosts($em) {
+        return $this->getPosts(0, $em)->count();
     }
 }

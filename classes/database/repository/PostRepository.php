@@ -23,6 +23,7 @@ class PostRepository extends EntityRepository
             ->select('posts', 'topic')
             ->join('posts.topic', 'topic')
             ->where('topic.id=:topic')
+            ->orderBy('topic.date', 'ASC')
             ->setFirstResult($first_result)
             ->setMaxResults($max_results)
             ->setParameter(':topic', $topic->getId());
@@ -45,5 +46,21 @@ class PostRepository extends EntityRepository
 
         return count($qb->getQuery()->getArrayResult());
     }
+
+    public function getLastPost(Topic $topic)
+    {
+        $qb = $this->createQueryBuilder('posts');
+        $qb
+            ->select('posts', 'topic')
+            ->join('posts.topic', 'topic')
+            ->where('topic.id=:topic')
+            ->orderBy('posts.date', 'DESC')
+            ->setMaxResults(1)
+            ->setParameter(':topic', $topic->getId());
+
+        $pag = new Paginator($qb);
+        return $pag->getIterator()->getArrayCopy()[0];
+    }
+
 
 }
