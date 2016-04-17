@@ -1,4 +1,6 @@
 <?php
+use utils\Pagination;
+
 $breadcrumb->display()?>
     <div class="container" style="">
         <?php
@@ -23,7 +25,14 @@ $breadcrumb->display()?>
             echo'<div style="margin-bottom: 20px;"></div>';
         }
 
-        foreach($topic->getPosts() as $post) {
+        $posts = $topic->getPosts(($currentPage-1)*FORUM_NB_POSTS_TOPIC, $entityManager);
+
+        $p = new Pagination($currentPage,
+            \utils\Pagination::getNbPages($posts->count(), FORUM_NB_POSTS_TOPIC),
+            Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$topic->getId());
+
+        $p->display();
+        foreach($posts as $post) {
             echo '<div class="forum-post '.($post->isHided()?'hided':'').'">' .
                 '<div class="author">
                     <div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
@@ -47,7 +56,7 @@ $breadcrumb->display()?>
 
 
             if((Visitor::getInstance()->getUser()->isModerator() || Visitor::getInstance()->getUser()->getId() == $post->getUser()->getId()) &&
-                $post->getId() != $topic->getPosts()[0]->getId()) {
+                $post->getId() != $topic->getFirstPost($entityManager)->getId()) {
                 if ($post->isHided()) {
                     echo '<a href="'.Visitor::getRootPage().'/members/forums/messages/masquer.php?id='.$post->getId().'&masquer=0"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;&nbsp;</a>';
                 } else {
@@ -75,10 +84,8 @@ $breadcrumb->display()?>
             echo '</div>';
             echo '</div>';
         }
-        ?>
-        <hr/>
-
-        <?php
+        $p->display();
+        echo '<hr/>';
 
         if(!$topic->isLocked() || Visitor::getInstance()->getUser()->isModerator()) {
             echo '<h2>Répondre au sujet « ' . $topic->getTitle() . ' »</h2>';

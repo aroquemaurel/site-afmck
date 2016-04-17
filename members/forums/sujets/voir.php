@@ -14,13 +14,15 @@ if(!isset($_GET['id'])) {
 }
 
 $topicRepo = $entityManager->getRepository('models\forum\Topic');
+
 $topic = $topicRepo->findOneBy(array('id'=>$id));
 if($topic == null) {
     $_SESSION['lastMessage'] = Popup::errorMessage("Le sujet que vous recherchiez n'existe pas.");
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
-$forum = $topic->getForum();
 
+$forum = $topic->getForum();
+$currentPage = isset($_GET['p']) && is_numeric($_GET['p']) ? $_GET['p'] : 1;
 $title = 'Voir le sujet « '.$topic->getTitle().' »';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
     new Link('Forums',Visitor::getRootPage().'/members/forums/'),

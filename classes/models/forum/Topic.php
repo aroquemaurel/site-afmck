@@ -13,7 +13,8 @@ use models\User;
 use Visitor;
 
 /**
- * @Entity @Table(name="forum_topic")
+ * @Entity(repositoryClass="database\repository\TopicRepository")
+ * @Table(name="forum_topic")
  **/
 class Topic
 {
@@ -142,9 +143,10 @@ class Topic
     /**
      * @return mixed
      */
-    public function getPosts()
+    public function getPosts($offset, $em)
     {
-        return $this->posts;
+        $postsRepo = $em->getRepository('models\forum\Post');
+        return $postsRepo->getPosts($this, $offset);
     }
 
     /**
@@ -241,5 +243,10 @@ class Topic
 
     public function unhide() {
         $this->isHided = false;
+    }
+
+    public function getFirstPost($em) {
+        $posts = $this->getPosts(0, $em);
+        return $posts->getIterator()->getArrayCopy()[0];
     }
 }

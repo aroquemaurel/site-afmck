@@ -11,7 +11,8 @@ use database\DatabaseUser;
 use models\User;
 
 /**
- * @Entity @Table(name="forum_post")
+ * @Entity(repositoryClass="database\repository\PostRepository")
+ * @Table(name="forum_post")
  **/
 class Post
 {

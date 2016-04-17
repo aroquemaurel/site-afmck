@@ -9,6 +9,9 @@ class Pagination {
     public function __construct($currentPage, $nbPages, $link) {
         $this->currentPage = $currentPage;
         $this->link = $link;
+        if(!strpos($this->link, '?')) {
+            $this->link .= '?';
+        }
         $this->nbPages = $nbPages;
     }
 
@@ -18,16 +21,16 @@ class Pagination {
         <nav>
             <ul class="pagination">
                 <li ' . ($this->currentPage == 1 ? 'class="disabled' : '') . '">
-                    <a href="' . $this->link . '?p=' . ($this->currentPage - 1) . '" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                    <a href="' . $this->link . '&p=' . ($this->currentPage - 1) . '" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
                 </li>';
             for ($i = 1; $i <= $this->nbPages; ++$i) {
                 echo '<li ' . ($this->currentPage == $i ? 'class="active"' : '') . '>';
-                echo '<a href="' . $this->link . '?p=' . $i . '">' . $i . '</a>';
+                echo '<a href="' . $this->link . '&p=' . $i . '">' . $i . '</a>';
                 echo '</li>';
             }
 
             echo '<li ' . ($this->currentPage == $this->nbPages ? 'class="disabled"' : '') . '>
-                    <a href="' . $this->link . '?p=' . ($this->currentPage + 1) . '" aria-label="Next"><span aria-hidden="true">»</span></a>
+                    <a href="' . $this->link . '&p=' . ($this->currentPage + 1) . '" aria-label="Next"><span aria-hidden="true">»</span></a>
                 </li>
             </ul>
         </nav>';
@@ -48,6 +51,10 @@ class Pagination {
     public function setCurrentPage($currentPage)
     {
         $this->currentPage = $currentPage;
+    }
+
+    public static function getNbPages($nbValues, $nbItemByPage) {
+        return ceil($nbValues/$nbItemByPage);
     }
 
 }

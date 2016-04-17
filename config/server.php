@@ -9,6 +9,8 @@ if(CONFIG == 'dev') {
 
     define('NEWS_NB_MAILS', 3);
 
+    define('FORUM_NB_POSTS_TOPIC', 5);
+
     ini_set('display_errors',1);
 } else if(CONFIG == 'prod') {
     ini_set('display_errors',1);
@@ -16,6 +18,8 @@ if(CONFIG == 'dev') {
     define('TRESORERIE_MAIL', 'tresorerie@afmck.fr');
     define('ROOT_PAGE', '');
     define('SECRETARIAT_MAIL', 'secretariat@afmck.fr');
+
+    define('FORUM_NB_POSTS_TOPIC', 15);
 
     define('NEWS_NB_MAILS', 50);
 }
