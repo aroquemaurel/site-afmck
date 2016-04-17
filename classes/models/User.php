@@ -244,7 +244,7 @@ class User {
     }
 
     public function isModerator() {
-        return true;
+        return $this->isInGroup("MODERATEUR") || $this->isInGroup("ADMINISTRATEUR");
     }
 
     public function unvalid()
