@@ -235,4 +235,11 @@ class Topic
         return $this->isHided;
     }
 
+    public function hide() {
+        $this->isHided = true;
+    }
+
+    public function unhide() {
+        $this->isHided = false;
+    }
 }

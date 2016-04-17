@@ -35,6 +35,12 @@ class Post
     protected $idUser;
 
     /**
+     * @OneToOne(targetEntity="Message")
+     * @JoinColumn(name="isHided", referencedColumnName="id")
+     */
+    protected $isHided = null;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -105,6 +111,30 @@ class Post
 
     public function setUser(User $u) {
         $this->idUser = $u->getId();
+    }
+
+    public function isHided() {
+        return $this->isHided != null;
+    }
+
+    public function messageHided() {
+        if($this->isHided()) {
+            return $this->isHided->getMessage();
+        } else {
+            return null;
+        }
+    }
+
+    public function hide($msg, User $u, $entityManager) {
+        $message = new Message();
+        $message->setMessage($msg);
+        $message->setUser($u->getId());
+        $entityManager->persist($message);
+
+        $this->isHided = $message->getId();
+        $entityManager->persist($this);
+
+        $entityManager->flush();
     }
 
 }

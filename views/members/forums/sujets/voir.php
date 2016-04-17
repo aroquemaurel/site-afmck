@@ -12,6 +12,14 @@ $breadcrumb->display()?>
                 echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/verrouiller.php?verrouiller=1&id=' . $topic->getId() . '">
                     <button class="btn btn-primary"><i class="glyphicon glyphicon-lock"></i>&nbsp;Verrouiller le sujet</button></a>';
             }
+
+            if($topic->isHided()) {
+                echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/masquer.php?masquer=0&id=' . $topic->getId() . '">
+                    <button class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;Réafficher le sujet</button></a>';
+            } else {
+                echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/masquer.php?masquer=1&id=' . $topic->getId() . '">
+                    <button class="btn btn-primary"><i class="glyphicon glyphicon-eye-close"></i>&nbsp;Masquer le sujet</button></a>';
+            }
             echo'<div style="margin-bottom: 20px;"></div>';
         }
         foreach($topic->getPosts() as $post) {
