@@ -7,7 +7,7 @@ $breadcrumb->display()?>
     <?php
     foreach($categories as $category) {
         echo '<tr style="background-color: #ebfaff">';
-            echo '<th colspan="3">'.$category->getName().'</th>';
+            echo '<th colspan="4">'.$category->getName().'</th>';
         echo '</tr>';
         foreach($category->getForums() as $forum) {
             echo '<tr class="'.($forum->hasRead(Visitor::getInstance()->getUser())?'read': 'unread').'">';
@@ -15,7 +15,9 @@ $breadcrumb->display()?>
                     '</a><p style="font-size: 9pt"><em>'.$forum->getDescription().'</em>'.
                 '</p></td>';
             $nbTopics = count($forum->getTopics());
+            $nbPosts = $forum->getNbPosts();
             echo '<td class="forum-stats" style="width: 100px;">' . $nbTopics . ' sujet' . ($nbTopics > 1 ? 's' : '') . '</td>';
+            echo '<td class="forum-stats" style="width: 100px;">' . $nbPosts . ' message' . ($nbPosts > 1 ? 's' : '') . '</td>';
 
             if($nbTopics > 0) {
                 $lastTopic = $forum->getTopics()[$nbTopics - 1];
