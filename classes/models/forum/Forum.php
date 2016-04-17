@@ -73,12 +73,9 @@ class Forum
         return true;
     }
 
-    public function getNbPosts() {
-        $ret = 0;
-        foreach($this->topics as $topic) {
-            $ret += count($topic->getPosts());
-        }
-        return $ret;
+    public function getNbPosts($em) {
+        $postsRepo = $em->getRepository('models\forum\Post');
+        return $postsRepo->getNbPosts($this);
     }
 
 }

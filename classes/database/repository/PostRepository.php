@@ -11,6 +11,7 @@ namespace database\repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
+use models\forum\Forum;
 use models\forum\Topic;
 
 class PostRepository extends EntityRepository
@@ -24,11 +25,25 @@ class PostRepository extends EntityRepository
             ->where('topic.id=:topic')
             ->setFirstResult($first_result)
             ->setMaxResults($max_results)
-            ->setParameter(':topic', $topic->getId())
-        ;
+            ->setParameter(':topic', $topic->getId());
 
         $pag = new Paginator($qb);
         return $pag;
+    }
+
+    public function getNbPosts(Forum $forum) {
+        $qb = $this->createQueryBuilder('posts');
+        $ids = array();
+        foreach($forum->getTopics() as $t) {
+            $ids[] = $t->getId();
+        }
+        $qb
+            ->select('posts', 'topic')
+            ->join('posts.topic', 'topic')
+            ->where('topic.id IN(:topics)')
+            ->setParameter(':topics', $ids);
+
+        return count($qb->getQuery()->getArrayResult());
     }
 
 }

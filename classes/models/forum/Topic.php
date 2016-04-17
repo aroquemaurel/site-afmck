@@ -249,4 +249,9 @@ class Topic
         $posts = $this->getPosts(0, $em);
         return $posts->getIterator()->getArrayCopy()[0];
     }
+
+    public function getLastPost($em) {
+        $posts = $this->getPosts(0, $em);
+        return $posts->getIterator()->getArrayCopy()[count($posts)-1];
+    }
 }
