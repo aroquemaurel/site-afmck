@@ -56,6 +56,9 @@ class Topic
      */
     protected $usersRead;
 
+    /** @Column(type="boolean") **/
+    protected $isHided = false;
+
     /**
      * @return mixed
      */
@@ -193,6 +196,7 @@ class Topic
         $topicUser->setUser($user);
         $topicUser->setTopic($this);
         $topicUser->setRead(true);
+        $topicUser->setNotified(true);
 
         $entityManager->persist($topicUser);
         $entityManager->flush();
@@ -202,6 +206,7 @@ class Topic
 
         foreach($this->usersRead as $topicUser) {
             $topicUser->setRead(false);
+            $topicUser->setNotified(false);
             $entityManager->persist($topicUser);
         }
         $entityManager->flush();
@@ -225,4 +230,9 @@ class Topic
         }
         return true;
     }
+
+    public function isHided() {
+        return $this->isHided;
+    }
+
 }
