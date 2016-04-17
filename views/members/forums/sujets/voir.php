@@ -46,10 +46,13 @@ $breadcrumb->display()?>
             }
 
 
-            if ($post->isHided()) {
-                echo '<i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;';
-            } else {
-                echo '<i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;';
+            if((Visitor::getInstance()->getUser()->isModerator() || Visitor::getInstance()->getUser()->getId() == $post->getUser()->getId()) &&
+                $post->getId() != $topic->getPosts()[0]->getId()) {
+                if ($post->isHided()) {
+                    echo '<a href="'.Visitor::getRootPage().'/members/forums/messages/masquer.php?id='.$post->getId().'&masquer=0"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;&nbsp;</a>';
+                } else {
+                    echo '<a href="'.Visitor::getRootPage().'/members/forums/messages/masquer.php?id='.$post->getId().'&masquer=1"><i class="glyphicon glyphicon-eye-close"></i>&nbsp;&nbsp;</a>';
+                }
             }
 
 

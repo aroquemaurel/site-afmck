@@ -21,7 +21,7 @@ if($post == null) {
     exit();
 }
 
-if((!Visitor::getInstance()->getUser()->getId() == $post->getUser()->getId() &&
+if((Visitor::getInstance()->getUser()->getId() != $post->getUser()->getId() &&
     !Visitor::getInstance()->getUser()->isModerator()) ||
     ($post->getTopic()->isLocked() && !Visitor::getInstance()->getUser()->isModerator())
 ) {

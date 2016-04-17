@@ -55,5 +55,14 @@ class Message
         return $db->getUserById($this->idUser);
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
 
 }

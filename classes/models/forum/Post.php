@@ -130,11 +130,12 @@ class Post
         $message->setMessage($msg);
         $message->setUser($u->getId());
         $entityManager->persist($message);
-
-        $this->isHided = $message->getId();
-        $entityManager->persist($this);
-
         $entityManager->flush();
+        $this->isHided = $message;
+    }
+
+    public function unhide() {
+        $this->isHided = null;
     }
 
 }

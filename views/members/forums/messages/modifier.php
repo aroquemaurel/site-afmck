@@ -18,7 +18,7 @@ $breadcrumb->display()?>
                     >
                 </div>
             </div>
-            <div class="row" style="width: 80%; margin: auto;margin-bottom: 20px;>
+            <div class="row" style="width: 80%; margin: auto;margin-bottom: 20px;">
                 <div class="form-group">
             <input type="text" name="subtitle" id="subtitle"
                    class="form-control input-lg" placeholder="Sous-Titre (Facultatif)" tabindex="3"
