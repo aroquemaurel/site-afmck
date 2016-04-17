@@ -21,9 +21,11 @@ class TopicUser
     /** @Column(type="integer") */
     protected $idUser;
 
-    /** @Column(type="integer") */
-    protected $isRead;
+    /** @Column(type="boolean") */
+    protected $isRead = true;
 
+    /** @Column(type="boolean") */
+    protected $isNotified = false;
 
     /**
      * @ManyToOne(targetEntity="Topic", inversedBy="usersRead")
@@ -52,5 +54,23 @@ class TopicUser
     public function hasRead() {
         return $this->isRead;
     }
+
+    /**
+     * @return mixed
+     */
+    public function isNotified()
+    {
+        return $this->isNotified;
+    }
+
+    /**
+     * @param mixed $isNotified
+     */
+    public function setNotified($isNotified)
+    {
+        $this->isNotified = $isNotified;
+    }
+
+
 
 }

@@ -402,6 +402,10 @@ class User {
         $this->valuePaid = $valuePaid;
     }
 
+    public function getShortName() {
+        return $this->toString();
+    }
+
     /**
      * @return mixed
      */
