@@ -21,9 +21,20 @@ if($topic == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
+$allPosts = $topic->getPosts();
+$lastPost = $allPosts[count($allPosts)-1];
+$now = new DateTime();
+if($lastPost->getUser()->getId() == Visitor::getInstance()->getUser()->getId()) { // Same user
+    $offset = strtotime($now->format("Y-m-d H:i:s")) - strtotime($lastPost->getDate()->format("Y-m-d H:i:s"));
+    if($offset < 60) {
+        $_SESSION['lastMessage'] = Popup::errorMessage("Vous avez déjà répondu il y a moins d'une minute à ce sujet. Merci de modifier votre message précédent afin d'éviter le spam.");
+        header('Location: ' . (Visitor::getRootPage(). '/members/forums/sujets/voir.php?id='.$id));
+        exit();
+    }
+}
 // We add the new post
 $post = new Post();
-$now = new DateTime();
+
 $post->setDate($now);
 $post->setTopic($topic);
 $post->setContent($_POST['content']);
