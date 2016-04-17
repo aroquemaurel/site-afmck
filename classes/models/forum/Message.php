@@ -10,12 +10,12 @@ namespace models\forum;
 use database\DatabaseUser;
 
 /**
- * @Entity @Table(name="message")
+ * @Entity @Table(name="forum_message")
  **/
-
 class Message
 {
-    /** @Id @Column(type="integer") @GeneratedValue **/
+    /** @Id @Column(type="integer") @GeneratedValue 
+     */
     protected $id;
 
     /** @Column(type="string") **/
@@ -23,6 +23,11 @@ class Message
 
     /** @Column(type="integer") **/
     protected $idUser;
+
+    /**
+     * @OneToMany(targetEntity="Post", mappedBy="isHided")
+     */
+    protected $post;
 
     /**
      * @return mixed

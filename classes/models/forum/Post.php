@@ -35,7 +35,7 @@ class Post
     protected $idUser;
 
     /**
-     * @OneToOne(targetEntity="Message")
+     * @OneToOne(targetEntity="Message", inversedBy="post")
      * @JoinColumn(name="isHided", referencedColumnName="id")
      */
     protected $isHided = null;
@@ -119,7 +119,7 @@ class Post
 
     public function messageHided() {
         if($this->isHided()) {
-            return $this->isHided->getMessage();
+            return $this->isHided;
         } else {
             return null;
         }

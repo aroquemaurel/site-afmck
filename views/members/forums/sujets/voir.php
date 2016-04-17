@@ -22,35 +22,55 @@ $breadcrumb->display()?>
             }
             echo'<div style="margin-bottom: 20px;"></div>';
         }
+
         foreach($topic->getPosts() as $post) {
-            echo '<div class="forum-post">'.
+            echo '<div class="forum-post '.($post->isHided()?'hided':'').'">' .
                 '<div class="author">
                     <div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
-                <img width="100px" src="'.$post->getUser()->getAvatar().'"/></div>
-                <p id="description" style="font-size: 10pt">'.
-                $post->getUser()->getFirstName().'<br/>'.$post->getUser()->getLastName().
+                <img width="100px" src="' . $post->getUser()->getAvatar() . '"/></div>
+                <p id="description" style="font-size: 10pt">' .
+                $post->getUser()->getFirstName() . '<br/>' . $post->getUser()->getLastName() .
                 '</p>
-                </div>'.
-                '<div class="message">'.
-                ($topic->getCreator()->getId() == $post->getUser()->getId() ? "<span class='creator'>Auteur du sujet</span>" : "").
+                </div>' .
+                '<div class="message ">' .
+                ($topic->getCreator()->getId() == $post->getUser()->getId() ? "<span class='creator'>Auteur du sujet</span>" : "") .
                 '<span class="toolbar">';
 
-                if($post->getUser()->getId() == Visitor::getInstance()->getUser()->getId() || Visitor::getInstance()->getUser()->isModerator()) {
-                    if (!$topic->isLocked() || Visitor::getInstance()->getUser()->isModerator()) {
-                        echo '<a href="' . Visitor::getRootPage() . '/members/forums/messages/modifier.php?id=' . $post->getId() . '">' .
-                            '<i class="glyphicon glyphicon-edit"></i></a>&nbsp;&nbsp;';
-                    } else {
-                        echo '<i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;';
-                    }
+            if ($post->getUser()->getId() == Visitor::getInstance()->getUser()->getId() || Visitor::getInstance()->getUser()->isModerator()) {
+                if (!$topic->isLocked() || Visitor::getInstance()->getUser()->isModerator()) {
+                    echo '<a href="' . Visitor::getRootPage() . '/members/forums/messages/modifier.php?id=' . $post->getId() . '">' .
+                        '<i class="glyphicon glyphicon-edit"></i></a>&nbsp;&nbsp;';
+                } else {
+                    echo '<i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;';
                 }
-/*                (Visitor::getInstance()->getUser()->isModerator() ?
-                    '<a href="'.Visitor::getRootPage().'/members/forums/messages/modifier.php?id='.$post->getId().'">
-                    <i class="glyphicon glyphicon-lock"></i></a>':''
-                ).
-*/
-                echo '</span>'.
-                '<span class="date">'.utils\Utils::getPlainDate($post->getDate()).'</span><div class="post">'.$post->getContent().'</div></div>'.
-                '</div>';
+            }
+
+
+            if ($post->isHided()) {
+                echo '<i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;';
+            } else {
+                echo '<i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;';
+            }
+
+
+            /*                (Visitor::getInstance()->getUser()->isModerator() ?
+                                '<a href="'.Visitor::getRootPage().'/members/forums/messages/modifier.php?id='.$post->getId().'">
+                                <i class="glyphicon glyphicon-lock"></i></a>':''
+                            ).
+            */
+            echo '</span>';
+            echo '<span class="author-inline">'.$post->getUser()->getShortName().'</span>';
+            echo '<span class="date">' . utils\Utils::getPlainDate($post->getDate()) . '</span>';
+            if ($post->isHided()) {
+                echo '<span class="message-hided">' .
+                '</span>';
+                echo '<div class="hided-post"><p><em>Réponse masquée par</em> '.$post->messageHided()->getUser()->getShortName().
+                    ' <em>pour le motif suivant : '.($post->messageHided()->getMessage()) .'</em></p></div>';
+            } else {
+                echo '<div class="post">' . $post->getContent() . '</div>';
+            }
+            echo '</div>';
+            echo '</div>';
         }
         ?>
         <hr/>
