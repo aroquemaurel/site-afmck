@@ -10,6 +10,7 @@ if(CONFIG == 'dev') {
     define('NEWS_NB_MAILS', 3);
 
     define('FORUM_NB_POSTS_TOPIC', 5);
+    define('FORUM_NB_TOPIC_FORUM', 2);
 
     ini_set('display_errors',1);
 } else if(CONFIG == 'prod') {
@@ -20,6 +21,7 @@ if(CONFIG == 'dev') {
     define('SECRETARIAT_MAIL', 'secretariat@afmck.fr');
 
     define('FORUM_NB_POSTS_TOPIC', 15);
+    define('FORUM_NB_TOPIC_FORUM', 20);
 
     define('NEWS_NB_MAILS', 50);
 }

@@ -1,4 +1,5 @@
-<?php use utils\Utils;
+<?php use utils\Pagination;
+use utils\Utils;
 
 $breadcrumb->display()?>
 <div class="container" style="">
@@ -8,9 +9,15 @@ $breadcrumb->display()?>
         <button class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>&nbsp;Créer un nouveau sujet</button>
     </a>
 
-    <table class="table table-hover forum-list" style="margin-top: 15px;">
     <?php
-    foreach($forum->getTopics() as $topic) {
+    $p = new Pagination($currentPage,
+        \utils\Pagination::getNbPages($topics->count(), FORUM_NB_TOPIC_FORUM),
+        Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId());
+
+    $p->display();
+
+    echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
+    foreach($topics as $topic) {
         //$style = ($topic->hasRead(Visitor::getInstance()->getUser())?'':'');
 
         if(!$topic->isHided() || ($topic->isHided() && Visitor::getInstance()->getUser()->isModerator())) {
@@ -33,6 +40,11 @@ $breadcrumb->display()?>
             echo '</tr>';
         }
     }
+
     ?>
     </table>
+    <?php
+    $p->display();
+
+    ?>
 </div>

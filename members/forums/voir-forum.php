@@ -24,8 +24,9 @@ if($forum == null) {
 $title = 'Voir le forum « '.$forum->getName().' »';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
     new Link('Forums',Visitor::getRootPage().'/members/forums/'), new Link('Voir le forum « '.$forum->getName().' »', '#')));
+$currentPage = isset($_GET['p']) && is_numeric($_GET['p']) ? $_GET['p'] : 1;
 
-
+$topics = $forum->getTopics(($currentPage-1)*FORUM_NB_TOPIC_FORUM, $entityManager);
 
 
 include('../../views/includes/head.php');

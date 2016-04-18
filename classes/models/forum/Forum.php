@@ -42,8 +42,9 @@ class Forum
         return $this->description;
     }
 
-    public function getTopics() {
-        return $this->topics;
+    public function getTopics($offset, $em) {
+        $topicsRepo = $em->getRepository('models\forum\Topic');
+        return $topicsRepo->getTopics($this, $offset);
     }
 
     /**
