@@ -72,7 +72,7 @@ class Style {
         $text = $pText;
         foreach(self::getSmileys() as $smiley=>$image) {
             $smiley = preg_quote($smiley, '#');
-            $text = preg_replace("#(^|\W)$smiley($|\W)#",$image,$text);
+            $text = preg_replace("#(^|\W)$smiley($|\W)#",'$1'.$image.'$2',$text);
         }
 
 

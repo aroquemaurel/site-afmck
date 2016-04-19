@@ -103,6 +103,19 @@ body {
         -moz-border-radius: 8px;
         border-radius: 8px;
     }
+
+    .forum-post .author {
+        display: none;
+    }
+
+    .forum-post .message {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .forum-post .message .author-inline {
+    display: inline-block;
+    }
 }
 @media ( min-width: 767px ) {
 #afmckLogo {
@@ -127,6 +140,15 @@ body {
         border-radius: 8px;
     }
 
+    .forum-post .message {
+        width: 80%;
+        margin-left: 200px;
+    
+    }
+
+.forum-post .message .author-inline {
+    display: none;
+}
 }
 
 h1 {
@@ -499,8 +521,6 @@ a.tooltip2 span
 .forum-post .message
 {
     position: relative;
-    width: 80%;
-    margin-left: 200px;
     margin-bottom: 30px;
     min-height: 225px;
     padding: 20px;
@@ -509,7 +529,6 @@ a.tooltip2 span
     -moz-border-radius: 10px;
     border-radius: 10px;
     border: #a2cdff solid 1px;
-
 }
 
 .forum-post .message:after
@@ -551,9 +570,6 @@ a.tooltip2 span
     display: inline-block;
     padding-right: 15px;
     margin-bottom: 15px;
-}
-.forum-post .message .author-inline {
-    display: none;
 }
 
 .forum-post .message .creator {
