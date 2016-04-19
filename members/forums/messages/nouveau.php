@@ -21,8 +21,7 @@ if($topic == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
-$allPosts = $topic->getPosts();
-$lastPost = $allPosts[count($allPosts)-1];
+$lastPost = $topic->getLastPost($entityManager); 
 $now = new DateTime();
 if($lastPost->getUser()->getId() == Visitor::getInstance()->getUser()->getId()) { // Same user
     $offset = strtotime($now->format("Y-m-d H:i:s")) - strtotime($lastPost->getDate()->format("Y-m-d H:i:s"));

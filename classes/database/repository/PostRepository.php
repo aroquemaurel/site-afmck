@@ -35,7 +35,7 @@ class PostRepository extends EntityRepository
     public function getNbPosts(Forum $forum) {
         $qb = $this->createQueryBuilder('posts');
         $ids = array();
-        foreach($forum->getTopics() as $t) {
+        foreach($forum->getAllTopics() as $t) {
             $ids[] = $t->getId();
         }
         $qb

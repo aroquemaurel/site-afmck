@@ -47,6 +47,10 @@ class Forum
         return $topicsRepo->getTopics($this, $offset);
     }
 
+    public function getAllTopics() {
+        return $this->topics;
+    }
+
     /**
      * @return mixed
      */
