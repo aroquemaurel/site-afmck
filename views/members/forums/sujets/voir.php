@@ -79,7 +79,7 @@ $breadcrumb->display()?>
                 echo '<div class="hided-post"><p><em>Réponse masquée par</em> '.$post->messageHided()->getUser()->getShortName().
                     ' <em>pour le motif suivant : '.($post->messageHided()->getMessage()) .'</em></p></div>';
             } else {
-                echo '<div class="post">' . $post->getContent() . '</div>';
+                echo '<div class="post">' . utils\Style::replaceSmileys($post->getContent()) . '</div>';
             }
             echo '</div>';
             echo '</div>';
