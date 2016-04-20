@@ -20,7 +20,6 @@ if(isset($_POST['title']) && isset($_POST['description']) && isset($_POST['tags'
     $target_dir = Visitor::getInstance()->getRootPath()."/docs/CA/";
 
     $uploader = new Uploader($target_dir, array("pdf", "jpg", "png", "doc", "docx", "odt", "xls", "xlsx", "jpeg"), 30*1024*1024);
-
     $filename = $uploader->upload($_FILES["file"]["name"], $_FILES["file"]["tmp_name"], $_FILES["file"]["size"]);
     if($filename != null) {
         $document = new Document();

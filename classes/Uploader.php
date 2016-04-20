@@ -22,10 +22,12 @@ class Uploader
         if($fileName == '') {
             $uploadFilename = uniqid() . "_" . basename($fileName);
         } else {
-            $uploadFilename = $filename;
+            $uploadFilename = $fileName;
         }
 
         $target_path =  $this->targetFolder.$uploadFilename;
+        echo $target_path.'<br/>';
+        echo $uploadFilename;
         $ext = explode('.', basename($fileName));   // Explode file name from dot
         $file_extension = end($ext); // Store extensions in the variable.
 
