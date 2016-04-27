@@ -108,6 +108,9 @@ class Visitor {
 
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
+                if(substr($group, 0, 7) == "NIVEAU_" && $this->user->levelIsGreaterThan(substr($group, -1))) {
+                    return true;
+                }
                 if($this->user->isInGroup($group)) {
                     return true;
                 }

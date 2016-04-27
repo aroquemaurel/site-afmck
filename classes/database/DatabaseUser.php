@@ -7,6 +7,7 @@
  */
 namespace database;
 
+use models\Group;
 use models\User;
 use PDO;
 
@@ -36,6 +37,15 @@ class DatabaseUser extends Database {
         $user->hydrat($query->fetchObject());
         return $user;
     }
+    public function getGroupById($id) {
+        $query = $this->dbAccess->prepare("SELECT * from `group` WHERE id=:id");
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+        $group = new Group($id, $query->fetchObject()->nom);
+
+        return $group;
+    }
+
     public function getGroups($id) {
         $query = $this->dbAccess->prepare("SELECT idGroup, nom from `user_group`, `group`
                                            WHERE idUser = :id and group.id=`user_group`.idGroup");
