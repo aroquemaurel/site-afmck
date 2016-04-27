@@ -34,7 +34,6 @@ class TopicUser
     protected $topic;
 
 
-
     public function setTopic($topic) {
         $this->topic = $topic;
     }
@@ -70,6 +69,7 @@ class TopicUser
     {
         $this->isNotified = $isNotified;
     }
+
 
 
 

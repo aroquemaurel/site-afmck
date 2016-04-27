@@ -259,4 +259,29 @@ class Topic
     public function getNbPosts($em) {
         return $this->getPosts(0, $em)->count();
     }
+
+    public function isFollowedBy(User $u) {
+        foreach($this->usersRead as $uread) {
+            if($uread->getIdUser() == $u->getId()) {
+                return $uread->isNotified();
+            }
+        }
+        return false;
+    }
+
+    public function addFollower(User $u) {
+        foreach($this->usersRead as $uread) {
+            if($uread->getIdUser() == $u->getId()) {
+                $uread->setNotified(true);
+            }
+        }
+    }
+
+    public function removeFollower(User $u) {
+        foreach($this->usersRead as $uread) {
+            if($uread->getIdUser() == $u->getId()) {
+                $uread->setNotified(false);
+            }
+        }
+    }
 }

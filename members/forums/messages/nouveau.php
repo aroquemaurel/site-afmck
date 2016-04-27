@@ -43,6 +43,7 @@ $topic->setDateUpdate($now);
 $topicUser = new TopicUser();
 $topicUser->setUser(Visitor::getInstance()->getUser());
 $topicUser->setTopic($topic);
+$topicUser->setNotified(true);
 
 $topic->removeAllViewers($entityManager);
 $topic->addViewer(Visitor::getInstance()->getUser(), $entityManager);

@@ -6,6 +6,14 @@ $breadcrumb->display()?>
         <?php
         echo '<h1>'.($topic->isLocked()? '<i class="glyphicon glyphicon-lock"></i>&nbsp;':'').$topic->getTitle().' <small>'.$topic->getSubtitle().' </small></h1>';
 
+        if($topic->isFollowedBy(Visitor::getInstance()->getUser())) {
+            echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/suivre.php?suivre=0&id=' . $topic->getId() . '">
+                    <button class="btn btn-default"><i class="glyphicon glyphicon-star-empty"></i>&nbsp;Ne plus suivre le sujet</button></a>';
+        } else {
+            echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/suivre.php?suivre=1&id=' . $topic->getId() . '">
+                    <button class="btn btn-primary"><i class="glyphicon glyphicon-star"></i>&nbsp;Suivre le sujet</button></a>';
+        }
+
         if(Visitor::getInstance()->getUser()->isModerator()) {
             if($topic->isLocked()) {
                 echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/verrouiller.php?verrouiller=0&id=' . $topic->getId() . '">
