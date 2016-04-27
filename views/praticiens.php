@@ -1,4 +1,6 @@
-    <?php $breadcrumb->display()?>
+    <?php 
+use \database\DatabaseUser;
+$breadcrumb->display()?>
     <div class="container-fluid">
         <div id="toc" class="toc"></div>
         <h1>Praticiens MDT</h1>
