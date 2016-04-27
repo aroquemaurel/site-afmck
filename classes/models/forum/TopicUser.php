@@ -27,6 +27,9 @@ class TopicUser
     /** @Column(type="boolean") */
     protected $isNotified = false;
 
+    /** @Column(type="boolean") */
+    protected $askUnfollow = false;
+
     /**
      * @ManyToOne(targetEntity="Topic", inversedBy="usersRead")
      * @JoinColumn(name="topic_id", referencedColumnName="id")
@@ -68,6 +71,24 @@ class TopicUser
     public function setNotified($isNotified)
     {
         $this->isNotified = $isNotified;
+    }
+
+    /**
+     * @param mixed $askUnfollow
+     */
+    public function setAskUnfollow($askUnfollow)
+    {
+        $this->askUnfollow = $askUnfollow;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
+    public function askUnfollow()
+    {
+        return $this->askUnfollow;
     }
 
 

@@ -281,7 +281,18 @@ class Topic
         foreach($this->usersRead as $uread) {
             if($uread->getIdUser() == $u->getId()) {
                 $uread->setNotified(false);
+                $uread->setAskUnfollow(true);
             }
         }
+    }
+
+    public function askUnfollow(User $u) {
+        foreach($this->usersRead as $uread) {
+            if($uread->getIdUser() == $u->getId()) {
+                return $uread->askUnfollow();
+            }
+        }
+
+        return false;
     }
 }
