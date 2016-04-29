@@ -24,12 +24,10 @@ foreach($db->getFirstMailsToSend(NEWS_NB_MAILS) as $news) {
     }
     if(!$mailer->send()) {
         echo $mailer->ErrorInfo;
+        exit(-1);
     } else {
         $db->updateMailIsSend($news->getUser()->getId(), $news->getNews()->getId());
     }
-
-
-    //echo $news->getUser()->getMail()."coucou\n";
 }
 
 exit(0);

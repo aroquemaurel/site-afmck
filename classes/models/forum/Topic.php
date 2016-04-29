@@ -188,6 +188,7 @@ class Topic
             foreach($this->usersRead as $topicUser) {
                 if($user->getId() == $topicUser->getIdUser()) {
                     $topicUser->setRead(true);
+                    $topicUser->setNotified(false);
                     $entityManager->persist($topicUser);
                     $entityManager->flush();
                     return;
@@ -208,7 +209,6 @@ class Topic
 
         foreach($this->usersRead as $topicUser) {
             $topicUser->setRead(false);
-            $topicUser->setNotified(false);
             $entityManager->persist($topicUser);
         }
         $entityManager->flush();
@@ -263,7 +263,7 @@ class Topic
     public function isFollowedBy(User $u) {
         foreach($this->usersRead as $uread) {
             if($uread->getIdUser() == $u->getId()) {
-                return $uread->isNotified();
+                return $uread->getAskNotification();
             }
         }
         return false;
@@ -272,7 +272,7 @@ class Topic
     public function addFollower(User $u) {
         foreach($this->usersRead as $uread) {
             if($uread->getIdUser() == $u->getId()) {
-                $uread->setNotified(true);
+                $uread->setAskNotification(true);
             }
         }
     }
@@ -280,7 +280,7 @@ class Topic
     public function removeFollower(User $u) {
         foreach($this->usersRead as $uread) {
             if($uread->getIdUser() == $u->getId()) {
-                $uread->setNotified(false);
+                $uread->setAskNotification(false);
                 $uread->setAskUnfollow(true);
             }
         }
