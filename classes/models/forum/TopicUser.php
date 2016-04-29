@@ -7,6 +7,7 @@
  */
 
 namespace models\forum;
+use database\DatabaseUser;
 use models\User;
 
 
@@ -27,12 +28,17 @@ class TopicUser
     /** @Column(type="boolean") */
     protected $isNotified = false;
 
+    /** @Column(type="boolean") */
+    protected $askUnfollow = false;
+
+    /** @Column(type="boolean") */
+    protected $askNotification = false;
+
     /**
      * @ManyToOne(targetEntity="Topic", inversedBy="usersRead")
      * @JoinColumn(name="topic_id", referencedColumnName="id")
      * */
     protected $topic;
-
 
 
     public function setTopic($topic) {
@@ -45,6 +51,11 @@ class TopicUser
 
     public function getIdUser() {
         return $this->idUser;
+    }
+
+    public function getUser() {
+        $db = new DatabaseUser();
+        return $db->getUserById($this->idUser);
     }
 
     public function setRead($read) {
@@ -70,6 +81,50 @@ class TopicUser
     {
         $this->isNotified = $isNotified;
     }
+
+    /**
+     * @param mixed $askUnfollow
+     */
+    public function setAskUnfollow($askUnfollow)
+    {
+        $this->askUnfollow = $askUnfollow;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
+    public function askUnfollow()
+    {
+        return $this->askUnfollow;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAskNotification()
+    {
+        return $this->askNotification;
+    }
+
+    /**
+     * @param mixed $askNotification
+     */
+    public function setAskNotification($askNotification)
+    {
+        $this->askNotification = $askNotification;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTopic()
+    {
+        return $this->topic;
+    }
+
+
 
 
 

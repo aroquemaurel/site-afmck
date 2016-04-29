@@ -26,6 +26,7 @@ $breadcrumb->display()?>
             echo '<td>' .
                 ($topic->isNew(Visitor::getInstance()->getUser()) ? '<i class="label label-info new">Nouveau</i> ' : '') .
                 '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/voir.php?id=' . $topic->getId() . '">' .
+                ($topic->isFollowedBy(Visitor::getInstance()->getUser()) ? '<i style="font-size: 9pt;" class="glyphicon glyphicon-star"></i>&nbsp;':'').
                 ($topic->isHided() ? '<i class="glyphicon glyphicon-eye-close"></i>&nbsp;':'').
                 ($topic->isLocked() ? '<i class="glyphicon glyphicon-lock"></i>&nbsp;' : '') . $topic->getTitle() . '</a><br>';
             if ($topic->getSubtitle() != null && $topic->getSubtitle() != "") {

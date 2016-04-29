@@ -30,6 +30,11 @@ class Forum
      */
     protected $topics;
 
+    /**
+     * @OneToMany(targetEntity="RightForum", mappedBy="forum")
+     */
+    protected $rights;
+
     public function getId() {
         return $this->id;
     }
@@ -94,6 +99,16 @@ class Forum
         }
 
         return $ret;
+    }
+
+    public function hasRights(User $u) {
+        foreach($this->rights as $right) {
+            if($u->isInGroup($right->getGroupName())) {
+                return true;
+            }
+        }
+
+        return count($this->rights) == 0;
     }
 
 }

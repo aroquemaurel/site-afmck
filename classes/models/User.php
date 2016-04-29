@@ -592,6 +592,16 @@ class User {
             }
         }
 
+        if(substr($group, 0, 7) == 'NIVEAU_') {
+
+            $level = substr($group, 7, 8);
+            if(in_array($level, array("A", "B", "C", "D"))) {
+                return $this->levelIsGreaterThan($level);
+            }
+        } else if ($group == 'CERTIFIE') {
+            return $this->levelIsGreaterThan("CERTIFIÉ");
+        }
+
         return false;
     }
 
