@@ -206,7 +206,7 @@ h3 {
     padding-bottom: 50px;
     padding-right: 150px;
     margin: auto;
-    width: 80%;
+    width: 90%;
     margin-top: 100px;
 }
 
@@ -594,13 +594,13 @@ table .forum-list {
 }
 
 .forum-list .unread {
-    background-color: #f4f4f4;
+    background-color: #e8e8e8;
     font-weight: bold;
-    border-left: 2px solid #3074ae;
+    border-left: 3px solid #3074ae;
 }
 
 .forum-list .unread:hover,  .forum-list .read:hover{
-    background-color: #e2e2e2;
+    background-color: #e0e0e0;
 
 }
 

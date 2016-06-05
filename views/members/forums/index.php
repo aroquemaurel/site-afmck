@@ -6,6 +6,15 @@ $breadcrumb->display()?>
     <table class="table table-hover forum-list" style="width: 99%;">
     <?php
     foreach($categories as $category) {
+        $thereIsForum = false;
+        foreach($category->getForums() as $forum) {
+            if($forum->hasRights(Visitor::getInstance()->getUser())) {
+               $thereIsForum = true;
+                break;
+            } 
+        }
+
+        if($thereIsForum) {
         echo '<tr style="background-color: #ebfaff">';
             echo '<th colspan="4">'.$category->getName().'</th>';
         echo '</tr>';
@@ -36,6 +45,7 @@ $breadcrumb->display()?>
             }
         }
         echo '</tr>';
+}
     }
     ?>
     </table>

@@ -118,7 +118,7 @@ class Visitor {
             return false;
         } else if(strpos($pageFilename,'members/forums/')) { // not in database, but begin with members
             $authMembers = array("OTERO", "DE ROQUEMAUREL", "LOMER", "ROMEDENNE");
-            return $this->isConnected() && ($this->user->isInGroup("MEMBRE_CA") || $this->user->isInGroup("ADMINISTRATEUR"));
+            return $this->isConnected();// && ($this->user->isInGroup("MEMBRE_CA") || $this->user->isInGroup("ADMINISTRATEUR"));
         } else if(strpos($pageFilename, 'members/')) {
             return $this->isConnected();
         } else if(strpos($pageFilename,'admin')) {

@@ -14,8 +14,9 @@ $breadcrumb->display()?>
         \utils\Pagination::getNbPages($topics->count(), FORUM_NB_TOPIC_FORUM),
         Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId());
 
-    $p->display();
 
+    if(count($topics) != 0) {
+    $p->display();
     echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
     foreach($topics as $topic) {
         //$style = ($topic->hasRead(Visitor::getInstance()->getUser())?'':'');
@@ -47,5 +48,8 @@ $breadcrumb->display()?>
     <?php
     $p->display();
 
+    } else {
+        echo "<p style=\"margin-top: 20px;\"><em>Aucun sujet n'a été créé pour le moment.</em></p>";
+    }
     ?>
 </div>

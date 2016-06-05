@@ -21,6 +21,12 @@ if($forum == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
+if(!$forum->hasRights(Visitor::getInstance()->getUser())) {
+    $_SESSION['lastMessage'] = Popup::errorMessage("Vous n'avez pas le droit d'être ici");
+    header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
+    exit();
+}
+
 $title = 'Voir le forum « '.$forum->getName().' »';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
     new Link('Forums',Visitor::getRootPage().'/members/forums/'), new Link('Voir le forum « '.$forum->getName().' »', '#')));

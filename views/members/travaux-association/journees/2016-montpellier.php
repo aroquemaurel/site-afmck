@@ -9,19 +9,16 @@
     </a>
     </div>
 
-<center>
-<?php
-/*
-<p>
-<iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/kKWmwwQ84aulYndvLPH" allowfullscreen></iframe><br /><a href="http://www.dailymotion.com/video/kKWmwwQ84aulYndvLPH" target="_blank">AFMcK - 5e congr&egrave;s - Montpellier</a> <i>par <a href="http://www.dailymotion.com/antoinederoquemaurel" target="_blank">antoinederoquemaurel</a></i>
-</p>
-*/
-?>
-</center>
-
 <h2>Les interventions</h2>
     <table style="margin: auto;text-align: center">
         <tr>
+            <td style="padding: 20px;">
+                <div class="thumbnail with-caption" style="width: 300px">
+                    <a href="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/JL NEPHTALI - présentation_MDT2016_vf.pdf" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/JL NEPHTALI - présentation_MDT2016_vf.jpg" width="250" alt="Épaule et EBP Syndrome douloureux sous acromial"/>
+                    </a>
+                    <p style="font-size: 10pt">Épaule et EBP Syndrome douloureux sous acromial : Des séries de cas aux... Séries de cas <small>J.L. NEPHTALI</small></p>
+                </div>
+            </td>
             <td style="padding: 20px;">
                 <div class="thumbnail with-caption" style="width: 300px">
                     <a href="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Montpellier Know Pain - Fr.pdf" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage() ?>/docs/members/afmckday/montpellier/Montpellier Know Pain - Fr.jpg" width="250" alt="Comprendre la douleur : que cherchons nous à accomplir ?"/>

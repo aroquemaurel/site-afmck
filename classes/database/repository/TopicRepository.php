@@ -22,7 +22,7 @@ class TopicRepository extends EntityRepository
             ->select('topics', 'forum')
             ->join('topics.forum', 'forum')
             ->where('forum.id=:forum')
-            ->orderBy('topics.date', 'ASC')
+            ->orderBy('topics.dateUpdate', 'DESC')
             ->setFirstResult($first_result)
             ->setMaxResults($max_results)
             ->setParameter(':forum', $forum->getId());

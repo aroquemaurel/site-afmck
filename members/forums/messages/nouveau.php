@@ -21,6 +21,12 @@ if($topic == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
+if(!$topic->getForum()->hasRights(Visitor::getInstance()->getUser())) {
+    $_SESSION['lastMessage'] = Popup::errorMessage("Vous n'avez pas le droit d'être ici");
+    header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
+    exit();
+}
+
 $lastPost = $topic->getLastPost($entityManager); 
 $now = new DateTime();
 if($lastPost->getUser()->getId() == Visitor::getInstance()->getUser()->getId()) { // Same user

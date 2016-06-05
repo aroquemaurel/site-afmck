@@ -43,7 +43,7 @@ $arrayUser .= ']';
 $arrayAddress = rtrim($arrayAddress, ",");
 $arrayAddress .= ']';
     $script = '   <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=places&sensor=false"></script>';
-$script .='<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>';
+//$script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
     $script .= "<script>
     var map;
     var elevator;

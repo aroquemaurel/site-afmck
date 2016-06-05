@@ -37,6 +37,7 @@
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°8_AFMcK.pdf" target="_blank">N°8 — Récupération de la fonction</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°9_AFMcK.pdf" target="_blank">N°9 — Progression autour de l'extension de genou</a></li>
                                         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°10_AFMcK.pdf" target="_blank">N°10 — Progression/Régression des forces</a></li>
+                                        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getRootPage();?>/docs/members/news/ULTT.pdf" target="_blank">N°11 — ULTT : KESAKO ?</a></li>
                                     </ul>
                                     <ul class="col-sm-3 list-unstyled">
                                         <li>
@@ -135,7 +136,7 @@
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Divers<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a tabindex="-1" href="<?php echo Visitor::getRootPage();?>/docs/members/charte des praticiens adherents AFMcK.pdf"> Charte AFMcK</a></li>
-                        <li><a tabindex="-1" href="http://afmck.forumactif.org/login"> Forum</a></li>
+                        <li><a tabindex="-1" href="<?php echo Visitor::getRootPage();?>/members/forums/"> Forum</a></li>
                         <li><a tabindex="-1" href="<?php echo Visitor::getRootPage();?>/members/divers/com-interne.php"> Communication Interne</a></li>
                         <!--<li><a tabindex="-1" href="#"> Partenaires</a></li>
                         <li><a tabindex="-1" href="#"> Nous contacter</a></li>-->

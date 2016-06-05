@@ -46,7 +46,6 @@ if(isset($_POST['title']) && isset($_POST['subtitle'])) {
             }
         }
     }
-
     if (!$err) {
         $news->commit();
 

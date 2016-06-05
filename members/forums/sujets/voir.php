@@ -19,9 +19,15 @@ $topic = $topicRepo->findOneBy(array('id'=>$id));
 if($topic == null) {
     $_SESSION['lastMessage'] = Popup::errorMessage("Le sujet que vous recherchiez n'existe pas.");
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
+    exit();
 }
 
 $forum = $topic->getForum();
+if(!$forum->hasRights(Visitor::getInstance()->getUser())) {
+    $_SESSION['lastMessage'] = Popup::errorMessage("Vous n'avez pas le droit d'être ici");
+    header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
+    exit();
+}
 $currentPage = isset($_GET['p']) && is_numeric($_GET['p']) ? $_GET['p'] : 1;
 $title = 'Voir le sujet « '.$topic->getTitle().' »';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
