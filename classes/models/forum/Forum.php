@@ -23,7 +23,7 @@ class Forum
     protected $description;
 
     /** @Column(type="integer") **/
-    protected $order;
+    protected $position;
     /**
      * @OneToMany(targetEntity="Topic", mappedBy="forum")
      * @OrderBy({"dateUpdate" = "DESC"})
@@ -109,6 +109,22 @@ class Forum
         }
 
         return count($this->rights) == 0;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    public function moveUp() {
+        --$this->position;
+    }
+
+    public function moveDown() {
+        ++$this->position;
     }
 
 }
