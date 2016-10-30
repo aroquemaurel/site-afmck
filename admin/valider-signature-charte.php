@@ -17,7 +17,7 @@ if(isset($_GET['valid'])) {
         $mailer = new Mailer();
         $mailer->isHTML(true);                                  // Set email format to HTML
         $mailer->Subject .= "Validation de la signature de la charte";
-        $mailer->Body = utf8_decode(Mail::getValidationSignature($user));
+        $mailer->Body = (Mail::getValidationSignature($user));
         $mailer->addAddress($user->getMail(), $user->getFirstName()." ".$user->getLastName());
         $mailer->send();
     }

@@ -19,4 +19,8 @@ class Mailer extends PHPMailer {
 
         $this->Subject = "[AFMcK] ";
     }
+
+    public function send() {
+        parent::send();
+    }
 }

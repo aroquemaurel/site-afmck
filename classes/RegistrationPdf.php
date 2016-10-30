@@ -17,7 +17,8 @@ class RegistrationPdf extends PdfFile {
         if(!$this->tresor) {
             $content .= "<p style=\"margin-top: -20px\">Sous l’impulsion de kinésithérapeutes certifiés McKenzie, l’Association Française McKenzie (AFMcK) a vu le jour à Paris le 06 Novembre 2010.  </p>
             Cette association a pour but:
-            <ul style=\"list-style-type:none\">
+            <p>
+            <ul style=\"list-style-type:none;margin-top:-15px;\">
             <li>— De faciliter les échanges et la pratique MDT : fiches d'exercices patients, logiciel de bilans,
                 fiches de synthèse pour médecins et sécurité sociale, articles, journées de rencontres et d’études,
                 nscription pour les adhérents détenant le niveau D sur le net...</li>
@@ -27,14 +28,13 @@ class RegistrationPdf extends PdfFile {
             <li>— D'entamer des discussions avec les organismes nationaux (ordre, syndicats, CNAM, mutuelles) pour faire reconnaître
                 et prendre en charge cette méthode.</li>
             </ul>
-                <p style=\"\"> En étudiant, puis en pratiquant la méthode McKenzie, bien moins connue chez nous que dans les pays anglo-saxons,
-            vous avez orienté votre travail dans une direction particulière et novatrice.
-            </p>    <p style=\"\">
+
+                En étudiant, puis en pratiquant la méthode McKenzie, bien moins connue chez nous que dans les pays anglo-saxons,
+            vous avez orienté votre travail dans une direction particulière et novatrice.<br/>
+
         Il est donc naturel que nous vous proposions de rejoindre notre association qui ne pourra que s'enrichir de
         l'addition de nos différentes expériences et sensibilités.
-        </p>    <p style=\"\">
-        A bientôt !
-        </p>    <p style=\"\">
+        </p>  <p style=\"\">
         P.S.: pour nous joindre = adresse mail: contact@afmck.fr ; site internet: www.afmck.fr<br/>
         En cas de changement de coordonnées et/ou de niveau de formation: secretariat@afmck.fr
         </p>    <p style=\"font-size: 6pt; text-align: left;\">
@@ -53,7 +53,7 @@ class RegistrationPdf extends PdfFile {
         ";
         }
         $content .= $this->user->toHtml(true);
-        return $content;
+        return ($content);
     }
 
     public function generatePdf($str='') {
