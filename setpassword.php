@@ -1,5 +1,6 @@
 <?php
 include('begin.php');
+use database\DatabaseUser;
 use utils\Link;
 
 $title = 'J\'ai oublié mon mot de passe';

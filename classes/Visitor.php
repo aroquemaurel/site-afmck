@@ -1,4 +1,7 @@
 <?php
+use database\DatabaseUser;
+use models\User;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -20,7 +23,7 @@ class Visitor {
             if(isset($_SESSION['visitor']) && $_SESSION['visitor'] != null) {
                 Visitor::$instance = $_SESSION['visitor'];
             } else {
-                Visitor::$instance = new Visitor();
+                Visitor::$instance = new \Visitor();
                 $_SESSION['visitor'] = Visitor::$instance;
             }
 
@@ -32,6 +35,17 @@ class Visitor {
     public function getUser() {
         return $this->user;
     }
+    public function getUserByAdeliAndPassword($adeliNumber, $password) {
+        $this->user = new User();
+        if(User::passwordIsValid($adeliNumber, $password)) {
+            $db = new DatabaseUser();
+            $this->user->hydrat($db->getUser($adeliNumber));
+            return true;
+        } else {
+            $this->user = null;
+            return false;
+        }
+    }
 
     public function displayMenu() {
         if(strpos($this->getCurrentFile(), 'members') || strpos($this->getCurrentFile(), 'admin')) {
@@ -41,11 +55,11 @@ class Visitor {
         }
     }
 
-    public function getRootPage() {
+    public static function getRootPage() {
         return ROOT_PAGE;
     }
 
-    public function getRootPath() {
+    public static function getRootPath() {
         return ROOT_PATH.'/'.ROOT_PAGE;
     }
 
@@ -91,17 +105,26 @@ class Visitor {
 
 
     public function hasRights($pageFilename, $groups=array()) {
+
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
+                if(substr($group, 0, 7) == "NIVEAU_" && $this->user->levelIsGreaterThan(substr($group, -1))) {
+                    return true;
+                }
                 if($this->user->isInGroup($group)) {
                     return true;
                 }
             }
             return false;
-        } else if(strpos($pageFilename,'members')) { // not in database, but begin with members
+        } else if(strpos($pageFilename,'members/forums/')) { // not in database, but begin with members
+            $authMembers = array("OTERO", "DE ROQUEMAUREL", "LOMER", "ROMEDENNE");
+            return $this->isConnected();// && ($this->user->isInGroup("MEMBRE_CA") || $this->user->isInGroup("ADMINISTRATEUR"));
+        } else if(strpos($pageFilename, 'members/')) {
             return $this->isConnected();
         } else if(strpos($pageFilename,'admin')) {
             return $this->isConnected() && $this->user->isInGroup("ADMINISTRATEUR");
+        } else if(strpos($pageFilename, 'CA')) {
+            return $this->isConnected() && $this->user->isInGroup("MEMBRE_CA");
         } else { // Every body can see
             return true;
         }

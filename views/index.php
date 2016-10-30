@@ -1,4 +1,4 @@
-    <div class="container-fluid">
+<div class="container-fluid">
         <h1>Bienvenue sur le site de l'Association Française McKenzie !</h1>
 
         <div id="toc" class="toc">

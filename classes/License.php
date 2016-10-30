@@ -1,4 +1,8 @@
 <?php
+use database\DatabaseLicense;
+use database\DatabaseUser;
+use models\User;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -19,16 +23,21 @@ class License {
         $data = $db->getLicense($this->user);
         if($data != null) {
             $this->hydrat($data);
-            $this->toAdd = $this->validDate < new DateTime();
-        } else {
+            $yearValidDate = $this->validDate->format("Y");
+            $currentDate = (new DateTime())->format("Y");
+            $this->toAdd = $this->getKey() != $data->key; 
+        } 
+
+        if($data == null || $this->toAdd) {
             $this->askingDate = new DateTime();
-            $this->key = $this->calculKey();
+            $this->key = $this->getKey(); 
             $this->toAdd = true;
         }
     }
     public function getValidDate() {
-        $year = intval($this->askingDate->format("Y"));
-        if($this->askingDate->format("M") != 1 && $this->askingDate->format("M") != 2) {
+        $askingDate = new DateTime();
+        $year = intval($askingDate->format("Y"));
+        if($askingDate->format("M") != 1 && $askingDate->format("M") != 2) {
             $validDate = new DateTime(($year+1).'-2-28');
         } else {
             $validDate = new DateTime(($year+2).'-2-28');

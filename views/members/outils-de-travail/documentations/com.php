@@ -190,7 +190,7 @@
         <p>La première chose à faire dans un cabinet libéral est d'informer le patient. <strong>C'est une obligation</strong>.</p>
         <div class="bs-callout bs-callout-info">
             <?php
-            Image::miniTooltipLink(Visitor::getInstance()->getRootPage()."/docs/members/com/facturehn/",
+            Image::miniTooltipLink("docs/members/com/facturehn/",
                 "affiche cabinet HN_AFMcK", "Honoraires à afficher en salle d'attente", false);
             ?>
         </div>
@@ -203,7 +203,7 @@
         <p>L'association vous propose ci-dessous un modèle de facturation HN à remettre à vos patients à la fin de la première séance bilan McKenzie:</p>
         <div class="bs-callout bs-callout-info">
         <?php
-            Image::miniTooltipLink(Visitor::getInstance()->getRootPage()."/docs/members/com/facturehn/",
+            Image::miniTooltipLink("docs/members/com/facturehn/",
                 "Facture HN_AFMcK", "Modèle de Facture HN", false);
         ?>
         </div>

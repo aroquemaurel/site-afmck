@@ -30,7 +30,7 @@
         <div style="text-align: center">
         <?php
         $folder = "docs/members/materiel";
-        Image::thumbnailsWithCaption($folder, "2015 Offre Sangle Américaine",
+        Image::thumbnailsWithCaption($folder, "2016 Offre Sangle Américaine",
             "Bon de commande Sangle américaine", "<a href=\"http://www.essentiel-med.fr\">Essentiel Medical. <br/>http://www.essentiel-med.fr</a>");
         ?>
         </div>
@@ -55,48 +55,28 @@
         <div class="bs-callout bs-callout-info">
             <ul>
                 <?php
-                Image::miniTooltipLink($folder, "2015 Offre Super Roll", "Offre spécial Super Roll");
-                Image::miniTooltipLink($folder, "2015 Offre INTERNET", "Bon de commande « Offre Internet »");
-                Image::miniTooltipLink($folder, "2015 Patient AFMcK", "Bon de commande « Offre Patient» ");
+                Image::miniTooltipLink($folder, "2016 Offre Super Roll", "Offre spécial Super Roll");
+                Image::miniTooltipLink($folder, "2016 Offre INTERNET", "Bon de commande « Offre Internet »");
+                Image::miniTooltipLink($folder, "2016 Patient AFMcK", "Bon de commande « Offre Patient» ");
                 ?>
             </ul>
         </div>
 
-        <h4>Le pack 2013</h4>
+        <h4>Le pack découverte 2016</h4>
         <div style="text-align : center;">
         <?php
-        Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
-        Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
-        Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');echo '<br/>';
-        Image::thumbnails($folder.'/coussin1_AFMcK.jpg', 'http://www.essentiel-med.fr');
-        Image::thumbnails($folder.'/coussin4_AFMcK.jpg', 'http://www.essentiel-med.fr');
-        Image::thumbnails($folder.'/coussin5_AFMcK.jpg', 'http://www.essentiel-med.fr');
-        ?>
-        </div>
-        <div class="bs-callout bs-callout-info">
-            <ul>
-                <?php
-                Image::miniTooltipLink($folder, "BON DE COMMANDE - PACK 2013_AFMcK", "Bon de commande « Pack 2013 »");
-                ?>
-            </ul>
-        </div>
-
-
-        <h4>Le pack découverte</h4>
-        <div style="text-align : center;">
-        <?php
-            Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
-            Image::thumbnails($folder.'/coussin4_AFMcK.jpg', 'http://www.essentiel-med.fr');
-            Image::thumbnails($folder.'/coussin5_AFMcK.jpg', 'http://www.essentiel-med.fr');echo '<br/>';
-            Image::thumbnails($folder.'/coussin2_AFMcK.jpg', 'http://www.essentiel-med.fr');
             Image::thumbnails($folder.'/coussin1_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin4_AFMcK.jpg', 'http://www.essentiel-med.fr');echo '<br/>';
+            Image::thumbnails($folder.'/coussin2_AFMcK.jpg', 'http://www.essentiel-med.fr');
+            Image::thumbnails($folder.'/coussin3_AFMcK.jpg', 'http://www.essentiel-med.fr');
             Image::thumbnails($folder.'/coussin13_AFMcK.jpg', 'http://www.essentiel-med.fr');
         ?>
         </div>
         <div class="bs-callout bs-callout-info">
             <ul>
                 <?php
-                Image::miniTooltipLink($folder, "BON DE COMMANDE - PACK DECOUVERTE 2014_AFMcK", "Bon de commande « Pack Découverte »");
+                Image::miniTooltipLink($folder, "2016 Pack Découverte", "Bon de commande « Pack Découverte »");
                 ?>
             </ul>
         </div>

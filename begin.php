@@ -1,12 +1,25 @@
 <?php
-//require_once("/home/afmck/www/crawlprotect/include/cppf.php");
 header( 'content-type: text/html; charset=utf-8' );
 
-require_once('config.php');
-require_once('autoload.php');
-require_once('libs/password_compat/lib/password.php');
+require_once('classes/Visitor.php');
+require_once('config/server.php');
+require_once('config/db/logins.php');
 
+include(Visitor::getRootPath().'/config/doctrine.php');
 session_start();
+
+require_once('autoload.php');
+require_once(Visitor::getInstance()->getRootPath().'/libs/password_compat/lib/password.php');
+
+if(Visitor::getInstance()->isConnected() && !isset($_SESSION['isReloaded'])) {
+session_destroy();
+session_start();
+$_SESSION['isReloaded'] = true;
+}
+
+setlocale(LC_ALL, 'fr_FR.utf8');
+date_default_timezone_set('Europe/Paris');
+
 if(!Visitor::getInstance()->isConnected()) {
     Visitor::getInstance()->autoconnect();
 }

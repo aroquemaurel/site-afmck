@@ -1,0 +1,4 @@
+#!/usr/local/bin/php.ORIG.5_4
+<?php
+
+include('doctrine.php');

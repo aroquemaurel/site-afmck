@@ -17,7 +17,8 @@ $adeliNumber = $_POST['inputAdeli'];
 $password = $_POST['inputPassword'];
 
 if(!Visitor::getInstance()->isConnected()) {
-        Visitor::getInstance()->connect($adeliNumber, $password, $_POST['remember']);
+    Visitor::getInstance()->connect($adeliNumber, $password, isset($_POST['remember']) ? $_POST['remember'] : false);
+    $_SESSION['isReloaded'] = true;
 } else {
     $_SESSION['lastMessage'] = Popup::alreadyConnection();
 }
@@ -27,4 +28,5 @@ if(Visitor::getInstance()->isConnected()) {
 } else {
     header('Location: ' . 'index.php');
 }
+
 ?>

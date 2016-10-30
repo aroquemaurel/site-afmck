@@ -1,6 +1,7 @@
-<ul class="members nav navbar-nav " style="font-size: 8pt;max-width: 195px">
+<ul class="members nav navbar-nav " style="font-size: 8pt;max-width: 250px" xmlns:color="http://www.w3.org/1999/xhtml">
 
 <?php
+
 if(!Visitor::getInstance()->isConnected()) {
 ?>
 <li class="hidden-xs dropdown"><a href="" data-toggle="dropdown"color: #ccc;"class="dropdown-toggle">Connexion<b class="caret"></b></a>
@@ -16,7 +17,7 @@ if(!Visitor::getInstance()->isConnected()) {
 
 <?php
 } else {
-    $db = new DatabaseUser();
+    $db = new database\DatabaseUser();
     $user = Visitor::getInstance()->getUser();
     $accountsRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("TRESORIER");
     $charteRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("SECRETAIRE");
@@ -26,7 +27,7 @@ if(!Visitor::getInstance()->isConnected()) {
 	$newsRights = $user->isInGroup("ADMINISTRATEUR") || $user->isInGroup("SECRETAIRE");
 
     echo '<li class="dropdown"><a href="" data-toggle="dropdown" style="color: #ccc;"class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'.
-        Visitor::getInstance()->getUser()->getFirstName()[0]. ". " .ucfirst(strtolower(Visitor::getInstance()->getUser()->getLastName()));
+        Visitor::getInstance()->getUser()->toString();
 
     if($accountsRights || $charteRights) {
         if($nbAdmin > 0) {
@@ -61,12 +62,21 @@ if(!Visitor::getInstance()->isConnected()) {
 	if($newsRights) {
 		echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/list-news.php">Gestion des newsletters</a></li>';
 	}
-
+    if($user->isInGroup("MEMBRE_CA") || $user->isInGroup("ADMINISTRATEUR")) {
+        echo '<li><b>Le Conseil d\'Administration</b></li>';
+        if($user->isInGroup("SECRETAIRE")  || $user->isInGroup("ADMINISTRATEUR") | $user->isInGroup("PRESIDENT") || $user->isInGroup("TRESORIER")) {
+            echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/admin/add-document.php">Ajouter un document</a></li>';
+        }
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/CA/liste-des-documents.php">Liste des documents</a></li>';
+    }
     if(Visitor::getInstance()->getUser()->getAdeliNumber() != "afmck") {
         echo '<li><b>Mon profil</b></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/mon-profil.php">Voir mon profil</a></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/parameters.php">Modifier mes informations</a></li>';
-        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/password.php">Changer de mot de passe</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/profil/mon-profil.php">Voir mon profil</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/profil/parameters.php">Modifier mes informations</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/profil/password.php">Changer de mot de passe</a></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/members/profil/changer-avatar.php">Changer d\'avatar</a></li>';
+        echo '<li><b>Mon adhésion</b></li>';
+        echo '<li><a href="'.Visitor::getInstance()->getRootPage().'/readherer.php">Réadhérer à l\'association</a></li>';
         if(Visitor::getInstance()->getUser()->getHasSigned() == -1) {
             echo '<li><a href="' . Visitor::getInstance()->getRootPage() . '/members/signer-la-charte.php">Je souhaite signer la charte</a></li>';
         }

@@ -90,7 +90,10 @@ Image::thumbnailsPdf($folder.'/traduction', "Sciatique_Exercices Pour Eviter La 
         <h2>Articles parus en Français</h2>
         <ul>
         <?php
-            Image::miniLink($folder."/fr", "OTERO 2014 - Lombalgie prévalence des syndromes McKenzie - Kine la revue n 145",
+        Image::miniLink($folder."/fr", "recommandation-clinique-2015-de-la-sofec-concernant-les-dissections-des",
+            "Manipulation cervical et accident vasculaire<br/>SO.F.E.C,</br>Juin, 2015");
+
+        Image::miniLink($folder."/fr", "OTERO 2014 - Lombalgie prévalence des syndromes McKenzie - Kine la revue n 145",
                 "Lombalgie prévalence des syndromes McKenzie<br/>J. OTERO,</br>Kiné la revue N°145, 2014");
             Image::miniLink($folder."/fr", "modic et IRM",
                 "La discopathie de type Modic 1<br/>J. Beaudreuil, P. Orcel</br>2009");

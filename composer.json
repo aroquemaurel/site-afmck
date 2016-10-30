@@ -1,0 +1,18 @@
+{
+	"require": {
+		"doctrine/orm": "2.4.*",
+		"symfony/yaml": "2.*"
+	},
+	"autoload": {
+		"psr-0":{
+			"": "classes/"
+		},
+		"psr-4":{
+			"" : "classes/",
+			"models\\": "classes/models",
+            "database\\": "classes/database",
+			"models\\forum\\": "classes/models/forums"
+		}
+	}
+}
+

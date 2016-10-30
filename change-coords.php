@@ -1,4 +1,5 @@
 <?php
+use \database\DatabaseUser;
 include('begin.php');
 
 if(isset($_GET['key']) && isset($_GET['id']) && isset($_GET['lgt']) && isset($_GET['lat'])) {

@@ -1,4 +1,6 @@
 <?php
+use models\User;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -50,6 +52,17 @@ class Mail {
                 Le bureau de l'AFMcK");
     }
 
+    public static function getNewReadhesionTresor(User $user) {
+        return "Bonjour,
+        Une nouvelle demande de réadhésion a eu lieu sur www.afmck.fr : <br/>
+        Vous trouverez ci-joint sa fiche au format PDF. Une fois le paiement réceptionné, vous pourrez valider son compte
+        via le site web.<br/><br/>
+        <h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
+        En vous souhaitant une bonne journée,<br/>
+        Le bureau de l'AFMcK";
+    }
+
+
     public static function getNewAccountTresor(User $user) {
         return "Bonjour,
         Une nouvelle inscription a eu lieu sur www.afmck.fr : <br/>
@@ -67,13 +80,15 @@ class Mail {
         <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
         if($user->getPayment() == 1) {
             $ret .= "Vous avez choisis de payer votre cotisation, d'un montant de<b> ".$user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
-                Mme Anne-Marie GASTELLU-ETCHEGORRY,<br/>
-                27 avenue du10e Dragon,<br/>
-                82000 MONTAUBAN";
+                Mme Adeline Braguier,<br/>
+                32, cours Albert Thomas<br/>
+                69008 LYON";
         } else {
-            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>
-            Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>
-            Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
+            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>".
+//                "IBAN : FR76 1046 8022 8420 1316 0020 081<br/>".
+  //              "BIC : RALPFR2G<br/>".
+            "Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>".
+            "Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
         }
 
         $ret .=
@@ -82,7 +97,31 @@ class Mail {
         Le bureau de l'AFMcK";
         return utf8_decode($ret);
     }
+    public static function getNewReadhesion(User $user) {
+        $ret = "Bonjour,
+        Votre demande de réadhésion a bien été prise en compte.<br/> <br/>
+        Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
+        <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
 
+        if($user->getPayment() == 1) {
+            $ret .= "Vous avez choisis de payer votre cotisation, d'un montant de<b> ".$user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
+                Mme Adeline Braguier,<br/>
+                32, cours Albert Thomas<br/>
+                69008 LYON";
+        } else {
+            $ret .= "Vous avez choisis le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>".
+ //               "IBAN : FR76 1046 8022 8420 1316 0020 081<br/>".
+//                "BIC : RALPFR2G<br/>".
+            "Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>".
+            "Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
+        }
+
+        $ret .=
+            "<h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
+        En vous souhaitant une bonne journée,<br/>
+        Le bureau de l'AFMcK";
+        return $ret;
+    }
     public static function getNewChartMail(User $user)
     {
         $ret = "Bonjour,<br/>

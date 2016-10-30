@@ -11,11 +11,10 @@
     Tout d'abord, téléchargez le logiciel en fonction de votre système d'exploitation :
     <ul>
         <li>&nbsp;&nbsp;<a href="http://afmck.fr/docs/members/logiciels/downloads/Windows/BilanMDT_windows_V1.6.8.exe"
-               target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage().
-                    "/docs/members/logiciels/Windows.png"?>" height="25" alt="vers win" />&nbsp;BilanMDT pour Windows</a></li>
+               target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage()."/docs/img/Windows.png"?>" height="25" alt="vers win" />&nbsp;BilanMDT pour Windows</a></li>
         <li><a href="http://afmck.fr/docs/members/logiciels/downloads/OS_X/BilanMDT_OS-X_V1.6.8.zip"
                target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage().
-                    "/docs/members/logiciels/mac.jpg"?>" height="25" alt="mac" />BilanMDT pour Mac OS X</a></li>
+                    "/docs/img/mac.jpg"?>" height="25" alt="mac" />BilanMDT pour Mac OS X</a></li>
     </ul>
 
 

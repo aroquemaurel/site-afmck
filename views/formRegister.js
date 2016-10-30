@@ -43,7 +43,9 @@ $(document).ready(function() {
             disable = true;
         }
 
-        if($('#adeliNumber').val().match("^[0-9]{9}$")) {
+        if($('#adeliNumber').val().match("^[0-9]{9}$") || 
+        $('#adeliNumber').val().match("^[0-9][A-F][0-9]{7}$")
+        ) {
             $("#adeli").removeClass("glyphicon-remove");
             $("#adeli").addClass("glyphicon-ok");
             $("#adeli").css("color", "#00A41E");

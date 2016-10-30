@@ -3,7 +3,7 @@
     <h1>Je signe la charte !</h1>
     <div class="alert alert-info">
         <p>
-
+            Afin de valider la signature de votre charte, vous devez la signer, la scanner et l'envoyer par courriel à <a href="mailto:secretariat@afmck.fr">secretariat@afmck.fr</a>.
         </p>
     </div>
 

@@ -1,4 +1,6 @@
-    <?php $breadcrumb->display()?>
+    <?php 
+use \database\DatabaseUser;
+$breadcrumb->display()?>
     <div class="container-fluid">
         <div id="toc" class="toc"></div>
         <h1>Praticiens MDT</h1>
@@ -19,7 +21,7 @@ $nbPraticiens += count($addresses);
 <p>Il y a actuellement <?php echo count($users);?> cabinets, de <?php echo $nbPraticiens;?> praticiens, sur la carte.</p>
     </div><!-- fin de .introcarte -->
         <input id="pac-input" class="controls" type="text" placeholder="Rechercher un lieu">
-        <div id="map-canvas"></div>
+        <div style="width: 700px; height: 500px" id="map-canvas"></div>
 
         <p>&nbsp;<br/>&nbsp;</p>
 
@@ -41,7 +43,7 @@ $arrayUser .= ']';
 $arrayAddress = rtrim($arrayAddress, ",");
 $arrayAddress .= ']';
     $script = '   <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=places&sensor=false"></script>';
-$script .='<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>';
+//$script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
     $script .= "<script>
     var map;
     var elevator;
@@ -77,7 +79,7 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
             //map.setZoom();
     var places = searchBox.getPlaces();
     map.setCenter(places[0].geometry.location);
-    map.setZoom(11);
+    map.setZoom(12);
 });
     var markerCluster;";
 
@@ -112,7 +114,7 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
 				content :'";
 
                foreach ($addresses as $user) {
-                   $script .= "<p><b>" . $user->getFirstName() . " ".$user->getLastName()."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
+                   $script .= "<p><b>" . addslashes($user->getFirstName()) . " ".addslashes($user->getLastName())."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
                    "<br/>".$user->getPhonePro().""./*$user->getMail()*/""."<br/><br/>Niveau ".$user->getlevelFormationString()."</p>";
                }
                $script .= "'

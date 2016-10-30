@@ -95,7 +95,7 @@ class Wysiwyg {
     }
 
     private static function displayEditor($content="") {
-        echo '<div id="editor" class="lead" placeholder="'.($content != "" ? str_replace('"', "'", $content) : "Contenu de la news").'">'.$content.'</div>';
+        echo '<div id="editor" class="lead" >'.$content.'</div>';
     }
 
     public static function getScriptSrc() {
