@@ -73,11 +73,6 @@ $breadcrumb->display()?>
             }
 
 
-            /*                (Visitor::getInstance()->getUser()->isModerator() ?
-                                '<a href="'.Visitor::getRootPage().'/members/forums/messages/modifier.php?id='.$post->getId().'">
-                                <i class="glyphicon glyphicon-lock"></i></a>':''
-                            ).
-            */
             echo '</span>';
             echo '<span class="author-inline">'.$post->getUser()->getShortName().'</span>';
             echo '<span class="date">' . utils\Utils::getPlainDate($post->getDate()) . '</span>';

@@ -15,12 +15,12 @@ $breadcrumb->display()?>
         }
 
         if($thereIsForum) {
-        echo '<tr style="background-color: #ebfaff">';
+        echo '<tr id="cat-'.$category->getId().'" style="background-color: #ebfaff">';
             echo '<th colspan="4">'.$category->getName().'</th>';
         echo '</tr>';
         foreach($category->getForums() as $forum) {
             if($forum->hasRights(Visitor::getInstance()->getUser())) {
-                echo '<tr class="' . ($forum->hasRead(Visitor::getInstance()->getUser()) ? 'read' : 'unread') . '">';
+                echo '<tr id="forum-'.$forum->getId().'" class="' . ($forum->hasRead(Visitor::getInstance()->getUser()) ? 'read' : 'unread') . '">';
                 echo '<td style=""><a href="' . Visitor::getRootPage() . '/members/forums/voir-forum.php?id=' . $forum->getId() . '">' . $forum->getName() .
                     '</a><p style="font-size: 9pt"><em>' . $forum->getDescription() . '</em>' .
                     '</p></td>';

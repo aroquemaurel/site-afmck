@@ -67,13 +67,13 @@
                                         <li><a href="<?php echo Visitor::getRootPage(); ?>/members/travaux-association/journees/lille.php">Lille 2015</a></li>
                                         <li><a href="<?php echo Visitor::getRootPage(); ?>/members/travaux-association/journees/2016-montpellier.php">Montpellier 2016</a></li>
                                     </ul>
-                                    <ul class="col-sm-2 list-unstyled">
+<!--                                    <ul class="col-sm-2 list-unstyled">
                                         <li>
                                             <p><strong>Annonces de remplacement</strong></p>
                                         </li>
                                         <li><a href="<?php echo Visitor::getRootPage();?>/members/travaux-association/annonces/rhone-alpes.php">Rhône-Alpes</a></li>
                                     </ul>
-
+-->
                                 </div>
                             </div>
                         </li>
@@ -118,17 +118,19 @@
                         <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                     <li><a href="<?php echo Visitor::getRootPage();?>/members/kiosque/articles-scientifiques.php">Articles scientifiques</a></li>
-                    <li><a href="http://www.mckenziemdt.org/MDTWorldPress/" target="_blank"><i span class="glyphicon glyphicon-globe"></i> Institut McKenzie</a></li>
+                    <li><a href="http://www.mckenzieinstitute.org/clinicians/research-and-resources/mdt-world-press/" target="_blank"><i span class="glyphicon glyphicon-globe"></i> Institut McKenzie</a></li>
                     <li><a href="<?php echo Visitor::getRootPage();?>/members/kiosque/newsletters-McKenzie.php">Newsletters de McKenzie International</a></li>
                     </ul>
                 </li>
         <li class="dropdown"><a href="<?php echo Visitor::getRootPage();?>/members/certification.php">Certification</a></li>
 
-                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Actualités en région
+                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Annonces locales
                         <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                        <!-- <li><a tabindex="-1" href="#"> APMK</a></li>-->
-                        <li><a tabindex="-1" href="<?php echo Visitor::getRootPage();?>/members/actualites-en-region/collaborations-locales.php"> Collaborations locales</a></li>
+                        <li><a tabindex="-1" href="http://afmck.fr/members/forums/voir-forum.php?id=47"> Petites annonces</a></li>
+                        <li><a tabindex="-1" href="http://afmck.fr/members/forums/index.php#forum-45"> Actions locales</a></li>
+<!--                        <li><a tabindex="-1" href="<?php echo Visitor::getRootPage();?>/members/actualites-en-region/collaborations-locales.php"> Collaborations locales</a></li>-->
                         <!--<li><a tabindex="-1" href="#"> Divers</a></li>-->
                     </ul>
                 </li>

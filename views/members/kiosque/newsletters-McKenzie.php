@@ -9,11 +9,17 @@ $breadcrumb->display();
     <p id="description" style="font-size: 10pt"></p>
 </div>
 
+<h2>Vol 5</h2>
+<h3>Français</h3>
+<?php
+$folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque/newsletters";
+Image::miniLink($folder, "MDT World Press Newsletter_Vol5No1",
+    "MDT World Press Newsletter Vol.5 N°1 <small>Anglais</small>");
+?>
 <h2>Vol 4</h2>
 <h3>Anglais</h3>
 <ul>
 <?php
-$folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque/newsletters";
 Image::miniLink($folder, "MDT World Press Newsletter_Vol4No3",
     "MDT World Press Newsletter Vol.4 N°3 <small>Anglais</small>");
 Image::miniLink($folder, "MDT World Press Newsletter_Vol4No1",
