@@ -10,6 +10,7 @@
                 <option disabled selected>Moyen de paiement</option>
                 <option value="1">Chèque</option>
                 <option value="2">Virement bancaire</option>
+                <option value="3">Carte bancaire via helloasso</option>
             </select>
         </div>
         <div class="form-group">

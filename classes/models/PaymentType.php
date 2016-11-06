@@ -46,7 +46,7 @@ class PaymentType
                 "Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>".
                 "Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
             case 2:
-                return "Vous avez choisi le paiement par carte bancaire en passant par <a href=\"https://www.helloasso.com/associations/afmck\">helloasso</a>, site qui va vous permettre d'effectuer une transaction sécurisée. ".
+#                return "Vous avez choisi le paiement par carte bancaire en passant par <a href=\"https://www.helloasso.com/associations/afmck\">helloasso</a>, site qui va vous permettre d'effectuer une transaction sécurisée. ".
                 "Pour effectuer votre paiement, vous devez aller sur la page <a href=\"https://www.helloasso.com/associations/afmck\">https://www.helloasso.com/associations/afmck</a> et cliquer sur « faire un don ». ".
                 "Effectuer le don de votre cotisation, et renseigner vos coordonnées.<br/><br/>Pour toute question ou incompréhension vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
         }
