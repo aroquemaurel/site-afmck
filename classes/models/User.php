@@ -217,9 +217,9 @@ class User {
         $year = $currentDate->format("Y");
 
         if($currentDate->format("m") != 11 && $currentDate->format("m") != 12) {
-            $newDate = new DateTime(($year+1).'-2-28');
+            $newDate = new DateTime(($year+1).'-1-01');
         } else {
-            $newDate = new DateTime(($year+2).'-1-31');
+            $newDate = new DateTime(($year+2).'-1-01');
         }
         $this->validDate = $newDate;
         $pdf = new BillingPdf($this);
