@@ -202,8 +202,9 @@ if(!$editing) {
             <div class="form-group">
                 <select tabindex="16" class="selectpicker form-control input-lg" required="required" id="payment" name="payment">
                     <option disabled selected>Moyen de paiement</option>
-                    <option <?php if($user->getPayment() == 1) echo "selected"?> value="1">Chèque</option>
-                    <option <?php if($user->getPayment() == 2) echo "selected"?> value="2">Virement bancaire</option>
+                    <option <?php if($user->getPayment()->getIdType() == 1) echo "selected"?> value="1">Chèque</option>
+                    <option <?php if($user->getPayment()->getIdType() == 2) echo "selected"?> value="2">Virement bancaire</option>
+                    <option <?php if($user->getPayment()->getIdType() == 3) echo "selected"?> value="3">Carte bancaire via helloasso.com</option>
                 </select>
             </div>
 

@@ -67,6 +67,7 @@ class User {
         $this->groups = array();
         $this->mailer = array();
         $this->hasSigned = -1;
+        $this->payment = new PaymentType(0);
     }
     public function setCookie() {
         setcookie("user", $this->adeliNumber.'/-!!-/'.$this->password, time()+3600*24*30*6); // expire in 6 month
@@ -289,7 +290,7 @@ class User {
         $this->phonePro = utf8_encode($data->phonePro);
         $this->newsletter = utf8_encode($data->newsletter);
         $this->disable = utf8_encode($data->disable);
-        $this->payment = utf8_encode($data->payment);
+        $this->payment = $data->payment->getIdType();
         $this->hashMail = utf8_encode($data->hashMail);
         $this->mailValidation = utf8_encode($data->mailValidation);
         $this->valuePaid = utf8_encode($data->valuePaid);
@@ -327,7 +328,7 @@ class User {
         $ret .= '<b>Niveau de formation</b>: '.$this->getLevelFormationString().'<br/>';
         $ret .= '<i class="glyphicon glyphicon-calendar"></i>&nbsp;<b>Date de validation</b>: '.$this->formationDate->format("m / Y");
         $ret .= '<H2 style="font-size: 14pt">Paiement</H2>';
-        $ret .= 'Paiement par '.($this->payment == 1 ? "chèque":"virement bancaire") ."<br/> ";
+        $ret .= 'Paiement par '.($this->payment->toString()) ."<br/> ";
         $ret .= 'Montant de la cotisation: '.($this->getValuePaid() != 100 ? $this->getValuePaid()." euros" : "100 euros et plus").'<br/>';
         if(!$pdf) {
             $ret .= 'Dernière facture: <i class="glyphicon glyphicon-download-alt"></i> <a href="'.Visitor::getInstance()->getRootPage().'/docs/members/billing/'.(new DateTime())->format('Y').'_'.$this->adeliNumber.'.pdf">Télécharger</a>';
@@ -443,7 +444,7 @@ class User {
      */
     public function setPayment($payment)
     {
-        $this->payment = $payment;
+        $this->payment = new PaymentType($payment);
     }
 
     /**

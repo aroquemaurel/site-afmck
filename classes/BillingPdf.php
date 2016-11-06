@@ -41,7 +41,7 @@ class BillingPdf extends PdfFile {
         $content .= "Désignation<br/><hr/>";
         $content .= "<table><tr><td style=\"width: 150px\">".date("d/m/Y")."</td><td style=\"width: 150px\">1 cotisation ".date("Y")."</td><td style=\"width: 150px\">".$this->user->getValuePaid()." EUR</td></tr></table><hr/>";
         $content .="<b>TOTAL: ".$this->user->getValuePaid()." EUR</b><br/><br/>";
-        $content .= "Réglé par ".($this->user->getPayment() == 0 ? "Chèque":"Virement");
+        $content .= "Réglé par ".($this->user->getPayment()->toString());
         return $content;
     }
 
