@@ -4,7 +4,7 @@ require_once('../begin.php');
 $db = new database\DatabaseUser();
 foreach($db->getUsersValides() as $user) {
     $date = $user->getValidDate();
-    $interval = new DateInterval("P2M");
+    $interval = new DateInterval("P3M");
     $interval->invert = 1;
     $mailer = new Mailer();
     $mailer->isHTML(true);                                  // Set email format to HTML
@@ -17,27 +17,32 @@ foreach($db->getUsersValides() as $user) {
         Le CA de l'AFMcK");
 
         $mailer->addAddress($user->getMail(), $user->getFirstName()." ".$user->getLastName());
+        if($mailer->send()) {
+		}
     }
+}
+foreach($db->getUsersHS() as $user) {
     $date = new DateTime();
-
     if($user->getValidDate()->format("Y-M-d") == (new DateTime())->format("Y-M-d")) {
-        // TODO disable account
         $mailer->Subject .= "Pensez à renouveller votre adhésion, votre compte est désactivé !";
         $mailer->Body = ("Bonjour,<br/>Votre adhésion à l'AFMcK à pris fin ce jour, pensez à renouveller votre adhésion".
             "<br/>Tant que votre adhésion n'aura pas été renouvellée, vous ne pourrez plus accéder au site web ou au logiciel.<br/>".
         "Pour cela, vous pouvez vous rendre sur la page <a href=\"http://afmck.fr/readherer.php\">http://afmck.fr/readherer.php</a>.<br/><br/>
         Le CA de l'AFMcK");
 
-        echo "test disable account";
+        $mailer->addAddress($user->getMail(), $user->getFirstName()." ".$user->getLastName());
+        if($mailer->send()) {
+		}
     }
 
     if(!$user->isActive() && $user->getValidDate()->add(new DateInterval(("P1M")))->format("Y-M-d") == (new DateTime())->format("Y-M-d")) {
-        // TODO disable account month +1
         $mailer->Body = ("Bonjour,<br/>Votre adhésion à l'AFMcK à pris fin le ".$date->format("d-M-Y").", pensez à renouveller votre adhésion".
             "<br/>Tant que votre adhésion n'aura pas été renouvellée, vous ne pourrez plus accéder au site web ou au logiciel.<br/>".
             "Pour cela, vous pouvez vous rendre sur la page <a href=\"http://afmck.fr/readherer.php\">http://afmck.fr/readherer.php</a>.<br/><br/>
         Le CA de l'AFMcK");
 
-        echo "test disable account +1";
+        $mailer->addAddress($user->getMail(), $user->getFirstName()." ".$user->getLastName());
+        if($mailer->send()) {
+		}
     }
 }

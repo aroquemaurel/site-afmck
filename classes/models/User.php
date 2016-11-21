@@ -290,7 +290,7 @@ class User {
         $this->phonePro = utf8_encode($data->phonePro);
         $this->newsletter = utf8_encode($data->newsletter);
         $this->disable = utf8_encode($data->disable);
-        $this->payment = $data->payment->getIdType();
+        $this->payment = new PaymentType($data->payment);
         $this->hashMail = utf8_encode($data->hashMail);
         $this->mailValidation = utf8_encode($data->mailValidation);
         $this->valuePaid = utf8_encode($data->valuePaid);
