@@ -247,7 +247,12 @@ h3 {
         display: none;
     }
 
-    @media(min-width: 750px) {
+    .main {
+        width: 95%;
+        padding-right: 5px;
+    }
+
+    @media(min-width: 768px) {
         .members {
             background-color: #273f64;
             height: 45px;
@@ -269,7 +274,7 @@ h3 {
 
         .members .dropdown-toggle {
             max-width: 999px;
-            margin-top:0px;
+            margin-top: 0px;
             height: 50px;
         }
         .members .dropdown .dropdown-menu {
@@ -282,20 +287,19 @@ h3 {
     }
 }
 
-@media(min-width: 750px) {
-    @media(max-width: 1300px) {
+@media(min-width: 1000px) {
+.members {
+margin-top: 0;
+}
+}
+@media(min-width: 768px) {
+    @media(max-width: 1200px) {
         .main {
             padding-right: 150px;
         }
     }
 }
 
-@media(max-width: 1030px) {
-    .main {
-        width: 95%;
-        padding-right: 5px;
-    }
-}
 .back-to-top:hover {
     background-color: rgba(135, 135, 135, 0.50);
 }
