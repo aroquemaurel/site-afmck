@@ -1,5 +1,5 @@
 <?php
-define('CONFIG', 'dev');
+define('CONFIG', 'prod');
 
 if(CONFIG == 'dev') {
     define('ROOT_PAGE', '/dev/site-afmck');
@@ -14,7 +14,7 @@ if(CONFIG == 'dev') {
 
     ini_set('display_errors',1);
 } else if(CONFIG == 'prod') {
-    ini_set('display_errors',0);
+    ini_set('display_errors',1);
     define('ROOT_PATH', '/homez.441/afmck/www/');
     define('TRESORERIE_MAIL', 'tresorerie@afmck.fr');
     define('ROOT_PAGE', '');

@@ -226,12 +226,26 @@
         <h4>Principe de flexion</h4>
         <ul>
             <?php
-            Image::miniLink($folder . "/hanches", "Derangement HANCHE en FLEXION Assis_AFMcK",
-                "<b>Dérangement de la hanche</b> Flexion Assis");
+//            Image::miniLink($folder . "/hanches", "Derangement GENOU en FLEXION Assis_AFMcK",
+  //              "<b>Dérangement du genou</b> Flexion Assis");
             Image::miniLink($folder . "/articperif", "Derangement GENOU en Flexion debout_AFMcK",
                 "<b>Dérangement du genou</b> Flexion Debout");
             Image::miniLink($folder . "/articperif", "Derangement GENOU en Flexion en charge_AFMcK",
                 "<b>Dérangement du genou</b> Flexion En Charge");
+            ?>
+        </ul>
+
+    <h3>Dérangement de la cheville</h3>
+        <ul>
+            <?php
+            Image::miniLink($folder . "/cheville", "Dérangement Cheville FLEXION DORSALE en Charge",
+                "<b>Dérangement de la cheville</b> Flexion Dorsale en charge");
+            Image::miniLink($folder . "/cheville", "Dérangement Cheville FLEXION PLANTAIRE avec Surpression",
+                "<b>Dérangement de la cheville</b> Flexion plantaire avec supression");
+            Image::miniLink($folder . "/cheville", "Dérangement Cheville FLEXION DORSALE en Décharge",
+                "<b>Dérangement de la cheville</b> Flexion dorsale en décharge");
+            Image::miniLink($folder . "/cheville", "Dérangement Cheville FLEXION PLANTAIRE en Décharge",
+                "<b>Dérangement de la cheville</b> Flexion plantaire en décharge");
             ?>
         </ul>
 
