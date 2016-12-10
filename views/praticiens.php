@@ -106,11 +106,6 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
                 position : latlng,
 				map : map,
 				draggable: false,
-<<<<<<< HEAD
-				content : '<p><b>" . $user->getFirstName() . " ".$user->getLastName()."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
-                   "<br/>".$user->getPhonePro().""./*$user->getMail()*/""."<br/><br/>Niveau ".$user->getlevelFormationString()."</p>'
-			}));";
-=======
 				content :'";
 
                foreach ($addresses as $user) {
@@ -119,7 +114,6 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
                }
                $script .= "'
                }));";
->>>>>>> prod
            }
        }
    }

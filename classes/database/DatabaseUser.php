@@ -71,7 +71,7 @@ class DatabaseUser extends Database {
         $phonePro = utf8_decode($user->getPhonePro());
         $phoneMobile = utf8_decode($user->getPhoneMobile());
         $newsletter = utf8_decode($user->getNewsletter());
-        $payment = utf8_decode($user->getPayment());
+        $payment = $user->getPayment()->getIdType();
         $mailValidation = utf8_decode($user->getMailValidation());
         $hashMail = utf8_decode($user->getHashMail());
         $valuePaid = utf8_decode($user->getValuePaid());
@@ -260,7 +260,7 @@ class DatabaseUser extends Database {
         $phoneMobile = utf8_decode($user->getPhoneMobile());
         $newsletter = utf8_decode($user->getNewsletter());
         $disable = utf8_decode($user->getDisable());
-        $payment = utf8_decode($user->getPayment());
+        $payment = $user->getPayment()->getIdType();
         $mailValidation = utf8_decode($user->getMailValidation());
         $hashMail = utf8_decode($user->getHashMail());
         $valuePaid = utf8_decode($user->getValuePaid());

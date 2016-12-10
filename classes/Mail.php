@@ -44,7 +44,7 @@ class Mail {
                     Le bureau de l'AFMcK";
     }
     public static function getForgetPassword($name, $param) {
-        return utf8_decode("Bonjour $name,<br/>
+        return ("Bonjour $name,<br/>
                 Vous avez demandé un changement de mot de passe, vous pouvez changer de mot de passe à l'adresse suivante : <br/>
                 <a href=\"http://afmck.fr/setpassword.php?$param\">
                 http://afmck.fr/setpassword.php?$param
@@ -78,7 +78,7 @@ class Mail {
         Vous vous êtes correctement inscris à l'AFMcK : <br/>
         Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
         <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
-        $ret .= $user->getPayment()->getExplainMessage()
+        $ret .= $user->getPayment()->getExplainMessage();
 
         $ret .=
             "<h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
@@ -87,7 +87,7 @@ class Mail {
         return utf8_decode($ret);
     }
     public static function getNewReadhesion(User $user) {
-        $ret = "Bonjour,
+        $ret = "Bonjour,<br/>
         Votre demande de réadhésion a bien été prise en compte.<br/> <br/>
         Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
         <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";

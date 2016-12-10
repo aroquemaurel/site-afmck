@@ -67,7 +67,7 @@ class User {
         $this->groups = array();
         $this->mailer = array();
         $this->hasSigned = -1;
-        $this->payment = new PaymentType(0);
+        $this->payment = new PaymentType(0, $this);
     }
     public function setCookie() {
         setcookie("user", $this->adeliNumber.'/-!!-/'.$this->password, time()+3600*24*30*6); // expire in 6 month
@@ -260,9 +260,9 @@ class User {
         if($this->mailer != null) {
             foreach($this->mailer as $mailer) {
                 if(!$mailer->send()) {
-                    $_SESSION['lastMessage'] = Popup::warningMessage("
-                    Problème dans l'envoie du mail de confirmation, le compte à tout de même été validé.");
-                    return false;
+//                    $_SESSION['lastMessage'] = Popup::warningMessage("
+  //                  Problème dans l'envoie du mail de confirmation, le compte à tout de même été validé.");
+    //                return false;
                 }
             }
         }
@@ -290,7 +290,7 @@ class User {
         $this->phonePro = utf8_encode($data->phonePro);
         $this->newsletter = utf8_encode($data->newsletter);
         $this->disable = utf8_encode($data->disable);
-        $this->payment = new PaymentType($data->payment);
+        $this->payment = new PaymentType($data->payment, $this);
         $this->hashMail = utf8_encode($data->hashMail);
         $this->mailValidation = utf8_encode($data->mailValidation);
         $this->valuePaid = utf8_encode($data->valuePaid);
@@ -444,7 +444,7 @@ class User {
      */
     public function setPayment($payment)
     {
-        $this->payment = new PaymentType($payment);
+        $this->payment = new PaymentType($payment, $this);
     }
 
     /**

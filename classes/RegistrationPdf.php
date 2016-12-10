@@ -44,12 +44,11 @@ class RegistrationPdf extends PdfFile {
          et de rectification s aux informations qui vous concernent.<br/>
          Si vous souhaitez exercer ce droit et obtenir communication des informations vous concernant, veuillez vous adresser à
          : tresorerie@afmck.fr
-        </p>
-        <p>Afin de régler votre adhésion, merci d'envoyer votre chèque, ainsi que cette fiche d'inscription à l'adresse suviante : <br/>
-         Adeline BRAGUIER<br/>
-        32, cours Albert Thomas<br/>
-        69008 LYON</p>
-        <div style=\"height:2px;border-bottom:1px solid black;\"></div>
+        </p>";
+        
+        $content .= "<p>".$this->user->getPayment()->getExplainMessage()."</p>".
+
+"        <div style=\"height:2px;border-bottom:1px solid black;\"></div>
         ";
         }
         $content .= $this->user->toHtml(true);

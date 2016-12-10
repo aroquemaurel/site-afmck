@@ -57,7 +57,7 @@ if(isset($_POST['firstName'])) {
         $mailer = new Mailer();
         $mailer->isHTML(true);                                  // Set email format to HTML
         $mailer->Subject .= "Demande de validation de votre adresse email";
-        $mailer->Body = Mail::getValidationMail($user);
+        $mailer->Body = utf8_decode(Mail::getValidationMail($user));
         $mailer->addAddress($user->getMail(), ($user->getFirstName())." ".($user->getLastName()));
         $mailer->send();
 

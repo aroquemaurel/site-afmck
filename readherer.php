@@ -38,8 +38,8 @@ if(isset($_POST['valuePaid']) && isset($_POST['payment'])) { // We ask an new ad
     // Send email to user.
     $mailer = new Mailer();
     $mailer->isHTML(true);                                  // Set email format to HTML
-    $mailer->Subject .= "Votre réadhésion sur afmck.fr";
-    $mailer->Body = (Mail::getNewReadhesion($user));
+    $mailer->Subject .= utf8_decode("Votre réadhésion sur afmck.fr");
+    $mailer->Body = utf8_decode(Mail::getNewReadhesion($user));
     $mailer->addAddress($user->getMail(), utf8_decode($user->getFirstName()." ".$user->getLastName()));
     $mailer->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/registration/".date('Y')."_".$user->getAdeliNumber().".pdf");
     $mailer->send();
