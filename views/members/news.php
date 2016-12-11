@@ -23,7 +23,7 @@ Intervention et bonus</a> sont en ligne !
 <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/MDT Newsletter_Vol 4 No 2-fr_AFMcK.pdf">
 <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/newsletters/mini/MDT Newsletter_Vol 4 No 2-fr_AFMcK.jpg" width="100"/>
 </a>
-        <h3>Nouvel article scientifique</h">
+        <h3>Nouvel article scientifique</h3>
 <a href="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/fr/recommandation-clinique-2015-de-la-sofec-concernant-les-dissections-des.pdf">
 <img src="<?php echo Visitor::getInstance()->getRootPage();?>/docs/members/kiosque/fr/mini/recommandation-clinique-2015-de-la-sofec-concernant-les-dissections-des.jpg" width="100"/>
 </a>

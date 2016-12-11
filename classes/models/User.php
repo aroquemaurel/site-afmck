@@ -300,7 +300,8 @@ class User {
         $this->longitude = $data->longitude;
         $this->latitude = $data->latitude;
         $this->hasSigned = intval($data->hasSigned);
-        $this->askReadhesion = new DateTime($data->askReadhesion);
+
+        $this->askReadhesion = new DateTime($data->askReadhesion." 00:00:00");
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -790,7 +791,7 @@ class User {
      */
     public function getNewsletter() : bool
     {
-        return $this->newsletter;
+        return boolval($this->newsletter);
     }
 
     /**

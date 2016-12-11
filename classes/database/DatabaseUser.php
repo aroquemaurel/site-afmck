@@ -19,7 +19,7 @@ class DatabaseUser extends Database {
     public function getUser(string $adeliNumber, string $password="") {
         parent::__construct();
         $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number");
-        $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
+        $query->bindParam(":number", $adeliNumber, PDO::PARAM_STR);
         $query->execute();
 
         return $query->fetchObject();
