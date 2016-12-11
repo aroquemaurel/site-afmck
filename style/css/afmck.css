@@ -667,3 +667,7 @@ table .forum-list {
 .forum-post .message img {
 max-width: 90%; 
 }
+
+.news-list .attachment {
+    font-size: 8pt;
+}
