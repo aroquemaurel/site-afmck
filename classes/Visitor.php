@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 use database\DatabaseUser;
 use models\User;
 
@@ -18,7 +19,7 @@ class Visitor {
         $this->currentPath = '.';
     }
 
-    public static function getInstance() {
+    public static function getInstance() : Visitor {
         if(Visitor::$instance == null) {
             if(isset($_SESSION['visitor']) && $_SESSION['visitor'] != null) {
                 Visitor::$instance = $_SESSION['visitor'];
@@ -32,10 +33,10 @@ class Visitor {
         return Visitor::$instance;
     }
 
-    public function getUser() {
+    public function getUser() : User {
         return $this->user;
     }
-    public function getUserByAdeliAndPassword($adeliNumber, $password) {
+    public function getUserByAdeliAndPassword(string $adeliNumber, string $password) : bool {
         $this->user = new User();
         if(User::passwordIsValid($adeliNumber, $password)) {
             $db = new DatabaseUser();
@@ -55,11 +56,11 @@ class Visitor {
         }
     }
 
-    public static function getRootPage() {
+    public static function getRootPage() : string {
         return ROOT_PAGE;
     }
 
-    public static function getRootPath() {
+    public static function getRootPath() : string  {
         return ROOT_PATH.'/'.ROOT_PAGE;
     }
 
@@ -67,21 +68,21 @@ class Visitor {
         return $this->lastPage;
     }
 
-    public function setLastPage($lastpage) {
+    public function setLastPage(string $lastpage) {
         if($lastpage == $this->lastPage) {
             $this->lastPage = '../index.php';
         } else {
             $this->lastPage = $lastpage;
         }
     }
-    public function isConnected() {
+    public function isConnected() : bool {
         return $this->user != null;
     }
-    public function getCurrentPath() {
+    public function getCurrentPath() : string {
         return $this->currentPath;
     }
 
-    public function setCurrentPath($currentPath) {
+    public function setCurrentPath(string $currentPath) {
         $this->currentPath = $currentPath;
     }
     public function autoconnect() {
@@ -92,7 +93,7 @@ class Visitor {
             }
         }
     }
-    public function connect($user, $password, $remember=false) {
+    public function connect(string $user, string $password, bool $remember=false) {
         $this->user = new User($user, $password);
         if($remember) {
             $this->user->setCookie();
@@ -104,7 +105,7 @@ class Visitor {
     }
 
 
-    public function hasRights($pageFilename, $groups=array()) {
+    public function hasRights(string $pageFilename, array $groups=array()) : bool {
 
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
@@ -130,7 +131,7 @@ class Visitor {
         }
     }
 
-    public function getCurrentDir() {
+    public function getCurrentDir() : string {
         $currentDir = '';
         if(basename(getcwd()) == 'members') {
             $currentDir = 'members/';
@@ -141,7 +142,7 @@ class Visitor {
         return $currentDir;
     }
 
-    public function getCurrentFile() {
+    public function getCurrentFile() : string {
         return $_SERVER['PHP_SELF'];
     }
 

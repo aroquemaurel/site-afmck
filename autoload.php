@@ -23,7 +23,12 @@ function __autoload($className)
             requireFile($file, $rootPath.$folder);
         } else {
             $folder = 'classes/models/';
-            requireFile($file, $rootPath.$folder);
+            if (fileExists($file, $rootPath.$folder)) {
+                requireFile($file, $rootPath . $folder);
+            } else {
+                $folder = 'classes/utils/';
+                requireFile($file, $rootPath . $folder);
+            }
         }
     }
 }

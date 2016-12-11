@@ -1,4 +1,6 @@
 <?php
+declare(strict_types = 1);
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -14,7 +16,7 @@ use PDO;
 require_once('Database.php');
 
 class DatabaseUser extends Database {
-    public function getUser($adeliNumber, $password="") {
+    public function getUser(string $adeliNumber, string $password="") {
         parent::__construct();
         $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number");
         $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
@@ -23,13 +25,13 @@ class DatabaseUser extends Database {
         return $query->fetchObject();
     }
 
-    public function adeliExists($adeli) {
+    public function adeliExists(string $adeli) : bool {
         $query = $this->dbAccess->prepare("SELECT count(*) as nb from user where adeliNumber = :number");
         $query->bindParam(":number", $adeli, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject()->nb ;
+        return intval($query->fetchObject()->nb) > 0;
     }
-    public function getUserById($id) {
+    public function getUserById(int $id) : User {
         $query = $this->dbAccess->prepare("SELECT * from user WHERE id=:id");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
@@ -37,7 +39,7 @@ class DatabaseUser extends Database {
         $user->hydrat($query->fetchObject());
         return $user;
     }
-    public function getGroupById($id) {
+    public function getGroupById(int $id) : Group {
         $query = $this->dbAccess->prepare("SELECT * from `group` WHERE id=:id");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
@@ -46,7 +48,7 @@ class DatabaseUser extends Database {
         return $group;
     }
 
-    public function getGroups($id) {
+    public function getGroups(int $id) {
         $query = $this->dbAccess->prepare("SELECT idGroup, nom from `user_group`, `group`
                                            WHERE idUser = :id and group.id=`user_group`.idGroup");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
@@ -107,7 +109,7 @@ class DatabaseUser extends Database {
 
     }
 
-    public function getUsersValides () {
+    public function getUsersValides () : array {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate >= CURDATE()
@@ -122,10 +124,9 @@ class DatabaseUser extends Database {
         return $ret;
     }
 
-    public function getUsersSigned($signed) {
+    public function getUsersSigned(int $signed) : array {
         $ret = array();
 
-//        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND levelFormation >= 4 AND validDate >= CURDATE()
         $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND validDate >= CURDATE()
                                            order by lastname");
         $query->bindParam(":signed", $signed, PDO::PARAM_INT);
@@ -134,14 +135,11 @@ class DatabaseUser extends Database {
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
             $user = new User();
             $user->hydrat($dataUser);
-    //        $user->getFormationDate()->add(new DateInterval('P2Y'));
-      //      if($user->getFormationDate() < new DateTime()) {
-                $ret[] = $user;
-        //    }
+            $ret[] = $user;
         }
         return $ret;
     }
-    public function getUsersOnMap($signed) {
+    public function getUsersOnMap(int $signed) : array {
         $ret = array();
         $i = 0;
         $query = $this->dbAccess->prepare("SELECT * from `user` 
@@ -173,7 +171,7 @@ class DatabaseUser extends Database {
     }
 
 
-    public function getUsersHS() {
+    public function getUsersHS() : array {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate < CURDATE() AND mailValidation != 0
@@ -190,7 +188,7 @@ class DatabaseUser extends Database {
 
 
 
-    public function getUsersToValid() {
+    public function getUsersToValid() : array {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
@@ -205,7 +203,7 @@ class DatabaseUser extends Database {
         }
         return $ret;
     }
-    public function getUsersDisableSoon() {
+    public function getUsersDisableSoon() : array  {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
@@ -221,24 +219,20 @@ class DatabaseUser extends Database {
         return $ret;
     }
 
-    public function countUsersToValid() {
+    public function countUsersToValid() : int {
         $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
                                            WHERE mailValidation != 0 AND validDate != 'NULL' AND disable=0 AND askReadhesion <> 'NULL' AND askValidation <> 'NULL'");
         $query->execute();
-        return $query->fetchObject()->countid;
+        return intval($query->fetchObject()->countid);
     }
 
-    public function chartToValid() {
-        /*$query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
-                                          WHERE hasSigned = 2 AND mailValidation != 0 AND disable!=1
-                                          AND levelFormation >= 4 AND validDate >= CURDATE()
-                                           order by lastname");*/
+    public function chartToValid() : int {
         $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
                                           WHERE hasSigned = 2 AND mailValidation != 0 AND disable!=1
                                           AND validDate >= CURDATE()
                                            order by lastname");
         $query->execute();
-        return $query->fetchObject()->countid;
+        return intval($query->fetchObject()->countid);
     }
     public function editUser(User $user)
     {
@@ -310,7 +304,7 @@ class DatabaseUser extends Database {
 
     }
 
-    public function getUsersDisable()
+    public function getUsersDisable() : array
     {
         $ret = array();
 
