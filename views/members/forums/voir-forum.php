@@ -16,7 +16,7 @@ $breadcrumb->display()?>
 
 
     if(count($topics) != 0) {
-    $p->display();
+    echo $p->toString();
     echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
     foreach($topics as $topic) {
         //$style = ($topic->hasRead(Visitor::getInstance()->getUser())?'':'');
@@ -46,7 +46,7 @@ $breadcrumb->display()?>
     ?>
     </table>
     <?php
-    $p->display();
+    echo $p->toString();
 
     } else {
         echo "<p style=\"margin-top: 20px;\"><em>Aucun sujet n'a été créé pour le moment.</em></p>";

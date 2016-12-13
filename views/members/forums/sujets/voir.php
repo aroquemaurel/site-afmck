@@ -39,7 +39,7 @@ $breadcrumb->display()?>
             \utils\Pagination::getNbPages($posts->count(), FORUM_NB_POSTS_TOPIC),
             Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$topic->getId());
 
-        $p->display();
+        echo $p->toString();
         foreach($posts as $post) {
             echo '<div class="forum-post '.($post->isHided()?'hided':'').'">' .
                 '<div class="author">
@@ -87,7 +87,7 @@ $breadcrumb->display()?>
             echo '</div>';
             echo '</div>';
         }
-        $p->display();
+        echo $p->toString();
         echo '<hr/>';
 
         if(!$topic->isLocked() || Visitor::getInstance()->getUser()->isModerator()) {

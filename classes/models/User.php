@@ -279,7 +279,7 @@ class User {
         $this->validDate = new DateTime($data->validDate);
         $this->password = utf8_encode($data->password);
         $this->adeliNumber = utf8_encode($data->adeliNumber);
-        $this->askValidation = new DateTime($data->askValidation);
+        $this->askValidation = $data->askValidation == NULL ? NULL : new DateTime($data->askValidation);
         $this->hash = utf8_encode($data->forget);
         $this->address = utf8_encode($data->address);
         $this->complementAddress = utf8_encode($data->complementAddress);

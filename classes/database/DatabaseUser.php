@@ -36,6 +36,7 @@ class DatabaseUser extends Database {
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
         $user = new User();
+
         $user->hydrat($query->fetchObject());
         return $user;
     }

@@ -621,10 +621,13 @@ table .forum-list {
 }
 .forum-list .forum-stats {
     font-size: 9pt;
-    width: 250px;
+    width: 230px;
     font-weight: normal;
 }
 
+.forums-page h3 {
+    padding-top: 10px;
+}
 .forum-list .new {
     font-size: 6pt;
 }
