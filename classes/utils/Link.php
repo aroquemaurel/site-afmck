@@ -35,7 +35,7 @@ class Link {
      */
     public function getUrl()
     {
-        return $this->url;
+        return $this->link != 'home' ? $this->url : \Visitor::getRootPage();
     }
 
     /**
