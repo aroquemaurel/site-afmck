@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -9,6 +10,7 @@
 namespace models\forum;
 use database\DatabaseUser;
 use models\User;
+use utils\StringHelper;
 
 /**
  * @Entity(repositoryClass="database\repository\PostRepository")
@@ -78,7 +80,7 @@ class Post
      */
     public function getContent()
     {
-        return $this->content;
+        return StringHelper::addHref($this->content);
     }
 
     /**

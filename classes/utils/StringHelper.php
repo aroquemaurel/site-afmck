@@ -19,4 +19,13 @@ class StringHelper
 
         return $original;
     }
+
+    public static function addHref(string $original) : string {
+        if(strpos($original, "href")) {
+            return $original;
+        }
+
+        $url = '@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@';
+        return preg_replace($url, '<a href="http$2://$4" target="_blank" title="$0">$0</a>', $original);
+    }
 }
