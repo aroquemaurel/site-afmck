@@ -1,5 +1,6 @@
-<?php use utils\Pagination;
+<?php
 use utils\Utils;
+use viewers\Pagination;
 
 $breadcrumb->display()?>
 <div class="container" style="">
@@ -11,7 +12,7 @@ $breadcrumb->display()?>
 
     <?php
     $p = new Pagination($currentPage,
-        \utils\Pagination::getNbPages($topics->count(), FORUM_NB_TOPIC_FORUM),
+        Pagination::getNbPages($topics->count(), FORUM_NB_TOPIC_FORUM),
         Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId());
 
 

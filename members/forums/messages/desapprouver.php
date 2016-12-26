@@ -19,9 +19,9 @@ if($post == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
-$post->disapproved(Visitor::getInstance()->getUser());
+$post->disaproved(Visitor::getInstance()->getUser());
 
-$_SESSION['lastMessage'] = Popup::successMessage("La réponse a bien été désapprouvée"));
+$_SESSION['lastMessage'] = Popup::successMessage("La réponse a bien été désapprouvée");
 
 header('Location: ' . (Visitor::getRootPage() . '/members/forums/sujets/voir.php?id=' . $post->getTopic()->getId()));
 exit();

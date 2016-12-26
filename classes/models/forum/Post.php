@@ -44,6 +44,92 @@ class Post
     protected $isHided = null;
 
     /**
+     * @OneToMany(targetEntity="PostApprovedUser", mappedBy="post")
+     * @OrderBy({"idUser" = "ASC"})
+     */
+    protected $usersApproved;
+
+    public function userAproved() {
+
+    }
+
+    public function doesUserAgree(User $user)  : bool {
+        foreach($this->usersApproved as $userapproved) {
+            if($userapproved->isAprovement() &&
+                $userapproved->getIdUser() == $user->getId()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public function doesUserDisagree(User $user) : bool {
+        foreach($this->usersApproved as $userapproved) {
+            if(!$userapproved->isAprovement() &&
+                $userapproved->getIdUser() == $user->getId()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
+    /**
+     * @return int
+     */
+    public function getNbApprovement() : int {
+        $ret = 0;
+        foreach($this->usersApproved as $userapproved) {
+            if($userapproved->isAprovement()) {
+                ++$ret;
+            }
+        }
+
+        return $ret;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNbDisaprovement() : int {
+        $ret = 0;
+        foreach($this->usersApproved as $userapproved) {
+            if(!$userapproved->isAprovement()) {
+                ++$ret;
+            }
+        }
+
+        return $ret;
+    }
+
+    /**
+     * @param $user
+     */
+    public function aproved($user) {
+        $aprov = new PostApprovedUser($user, $this, true);
+        \Visitor::getEntityManager()->persist($aprov);
+        \Visitor::getEntityManager()->flush();
+    }
+
+    public function removeApproved($user) {
+        $repo = \Visitor::getEntityManager()->getRepository('models\forum\Topic');
+        $app = $repo->findBy(["idUser" => $user->getId(), "post"=>$this]);
+        // TODO how we do that
+
+    }
+
+    /**
+     * @param $user
+     */
+    public function disaproved($user) {
+        $aprov = new PostApprovedUser($user, $this, false);
+        \Visitor::getEntityManager()->persist($aprov);
+        \Visitor::getEntityManager()->flush();
+    }
+
+    /**
      * @return mixed
      */
     public function getId()

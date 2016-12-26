@@ -77,6 +77,24 @@ class PostApprovedUser
         $this->isAprovement = $isAprovement;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getIdUser()
+    {
+        return $this->idUser;
+    }
+
+    /**
+     * @param mixed $idUser
+     */
+    public function setIdUser($idUser)
+    {
+        $this->idUser = $idUser;
+    }
+
+
+
 
 
 
