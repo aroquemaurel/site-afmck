@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace viewers;
 
-use \utils\Pagination;
+use utils\StringHelper;
 use \Visitor;
 use \models\News;
 
@@ -19,19 +19,27 @@ class NewsViewer
 
     }
 
-    public static function getHtmlNew(News $new) : string {
+    public static function getHtmlNew(News $new, int $size=-1) : string {
         $ret = '<div style="padding-right: 80px">';
         $ret .= '<h2>' . $new->getTitle() . '&nbsp;<small>' . $new->getSubtitle() . '</small></h2>';
-        $ret .= '<p style="margin-top: -8px;margin-bottom:15px"><small>Posté le ' . $new->getDate()->format('d / m / Y à H:i') . ' par ' . $new->getAuthor()->getFirstName() . ' ' . $new->getAuthor()->getLastname() . '</small></p>';
-        $ret .= $new->getContent();
-        $ret .= '</div>';
+        $ret .= '<p style="margin-top: -8px;margin-bottom:15px"><small>Posté le ' . $new->getDate()->format('d / m / Y à H:i') .
+            ' par ' . $new->getAuthor()->getFirstName() . ' ' . $new->getAuthor()->getLastname() . '</small></p>';
 
-        if (count($new->getAttachments()) > 0) {
-            $ret .= '<br/><div style="font-size:9.5pt">';
-            $ret .= '<h5>Pièces jointes</h5>';
-            $ret .= self::getHtmlAttachmentsNews($new);
-            $ret .= '</div>';
+        if($size == -1 || $size >= strlen($new->getContent())) {
+            $ret .= $new->getContent();
+            if (count($new->getAttachments()) > 0) {
+                $ret .= '<br/><div style="font-size:9.5pt">';
+                $ret .= '<h5>Pièces jointes</h5>';
+                $ret .= self::getHtmlAttachmentsNews($new);
+                $ret .= '</div>';
+            }
+        } else {
+            $ret .= StringHelper::truncate($new->getContent(), $size, ['html' => true, 'ending' => '...', 'exact'=>false]);
+            $ret .='<p style="text-align: center">';
+            $ret .= '<button type="button" id="acceptBtn" class="btn btn-primary">';
+            $ret .= '<i class="glyphicon glyphicon-ok-sign"></i>&nbsp;Lire l\'intégralité de la news</button></p>';
         }
+        $ret .= '</div>';
 
         return $ret;
     }

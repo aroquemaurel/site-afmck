@@ -35,6 +35,18 @@ class DatabaseNews extends Database {
         return $ret;
     }
 
+    public function getLastNew() {
+        $query = $this->dbAccess->prepare("SELECT * from `news` order by date desc LIMIT 1 ");
+        $query->bindParam(":max", $limitMax, PDO::PARAM_INT);
+        $query->execute();
+        $dataNews = $query->fetchObject();
+        $news = new News();
+        $news->hydrat($dataNews);
+        $news = $this->getAttachmentsOfNews($dataNews->id, $news);
+
+        return $news;
+    }
+
     public function getNbNews() {
         $query = $this->dbAccess->prepare("SELECT count(id) as nbnews from `news`");
         $query->execute();
