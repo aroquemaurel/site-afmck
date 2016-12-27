@@ -77,7 +77,36 @@ body {
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
 	color: #d7c562;
 }
+.forum-post .bottom {
+    bottom: 5px;
+    right:0;
+    position: absolute;
+}
 
+.forum-post .bottom .plus {
+    margin-right: 10px;
+}
+
+.forum-post .bottom .plus .activate {
+    color: green;
+}
+
+.forum-post .bottom .minus .activate {
+    color: red;
+}
+
+.forum-post .bottom .plus .best {
+    border-bottom: 3px solid green;
+    display: inline-block;
+}
+
+.forum-post .bottom .minus .best {
+    border-bottom: 3px solid red;
+    display: inline-block;
+}
+.forum-post .bottom .minus {
+    margin-right: 10px;
+}
 @media(max-width: 768px) {
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         background-color: #273f64;
