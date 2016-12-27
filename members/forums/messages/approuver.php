@@ -18,11 +18,11 @@ if($post == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
-// TODO if user already approved.
-
-$post->agree(Visitor::getInstance()->getUser());
-
-$_SESSION['lastMessage'] = Popup::successMessage("La réponse a bien été approuvée");
-
+if($post->hasVote(Visitor::getInstance()->getUser())) {
+    $_SESSION['lastMessage'] = Popup::errorMessage("Vous avez déjà voté pour ce message.");
+} else {
+    $post->agree(Visitor::getInstance()->getUser());
+    $_SESSION['lastMessage'] = Popup::successMessage("La réponse a bien été approuvée");
+}
 header('Location: ' . (Visitor::getRootPage() . '/members/forums/sujets/voir.php?id=' . $post->getTopic()->getId()));
 exit();

@@ -19,9 +19,12 @@ if($post == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
-$post->disagree(Visitor::getInstance()->getUser());
-
-$_SESSION['lastMessage'] = Popup::successMessage("La réponse a bien été désapprouvée");
+if($post->hasVote(Visitor::getInstance()->getUser())) {
+    $_SESSION['lastMessage'] = Popup::errorMessage("Vous avez déjà voté pour ce message.");
+} else {
+    $post->disagree(Visitor::getInstance()->getUser());
+    $_SESSION['lastMessage'] = Popup::successMessage("La réponse a bien été désapprouvée");
+}
 
 header('Location: ' . (Visitor::getRootPage() . '/members/forums/sujets/voir.php?id=' . $post->getTopic()->getId()));
 exit();
