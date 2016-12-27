@@ -93,9 +93,11 @@ class PostApprovedUser
         $this->idUser = $idUser;
     }
 
-
-
-
-
-
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

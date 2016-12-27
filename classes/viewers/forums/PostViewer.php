@@ -24,7 +24,9 @@ class PostViewer
         $str .= '<div class="bottom">';
 
         if($canVote) { // add link
-            $str .= '<a href="#">';
+            $str .= '<a href="'.\Visitor::getRootPage().'/members/forums/messages/approuver.php?id='.$post->getId().'">';
+        } else if($useragree) {
+            $str .= '<a href="'.\Visitor::getRootPage().'/members/forums/messages/supprimer-approbation.php?id='.$post->getId().'">';
         }
         $str .= '<span class="plus"><span class="';
 
@@ -43,30 +45,32 @@ class PostViewer
         }
         $str .= '</span></span>';
 
-        if($canVote) {
+        if($canVote||$useragree) {
             $str .= '</a>';
         }
 
         if($canVote) { // add link
-            $str .= '<a href="#">';
+            $str .= '<a href="'.\Visitor::getRootPage().'/members/forums/messages/desapprouver.php?id='.$post->getId().'">';
+        } else if($userdisagree) {
+            $str .= '<a href="'.\Visitor::getRootPage().'/members/forums/messages/supprimer-approbation.php?id='.$post->getId().'">';
         }
         $str .= '<span class="minus"><span class="';
         if($nbDisAgree > $nbAgree) { // style of best counter
-            $str .= 'best';
+            $str .= 'best ';
         }
 
         if($nbDisAgree != 0) { // thereis vote
-            $str .= 'activate';
+            $str .= 'activate ';
         }
         $str .= '">';
         $str .= '<i class="'.($userdisagree ? 'fa fa-thumbs-down' : 'fa fa-thumbs-o-down').'" ></i>';
 
         if($nbDisAgree != 0) {
-            $str .= '&nbsp;+ ' . $nbDisAgree;
+            $str .= '&nbsp;- ' . $nbDisAgree;
         }
         $str .= '</span></span>';
 
-        if($canVote) {
+        if($canVote || $userdisagree) {
             $str .= '</a>';
         }
 

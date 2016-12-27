@@ -113,11 +113,11 @@ class Post
         \Visitor::getEntityManager()->flush();
     }
 
-    public function removeApproved($user) {
-        $repo = \Visitor::getEntityManager()->getRepository('models\forum\Topic');
-        $app = $repo->findBy(["idUser" => $user->getId(), "post"=>$this]);
-        // TODO how we do that
-
+    public function removeAgreed($user) {
+        $repo = \Visitor::getEntityManager()->getRepository('models\forum\PostApprovedUser');
+        $app = $repo->findOneBy(["idUser" => $user->getId(), "post"=>$this]);
+        \Visitor::getEntityManager()->remove($app);
+        \Visitor::getEntityManager()->flush();
     }
 
     /**
