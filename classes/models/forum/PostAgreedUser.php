@@ -14,7 +14,7 @@ use models\User;
  * @Entity @Table(name="forum_post_approved_user")
  **/
 
-class PostApprovedUser
+class PostAgreedUser
 {
     /** @Id @Column(type="integer") @GeneratedValue **/
     protected $id;

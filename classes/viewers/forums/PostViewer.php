@@ -14,10 +14,10 @@ use models\User;
 class PostViewer
 {
     public static function getAprovement(Post $post, User $user) {
-        $useragree = $post->doesUserAgree($user);
-        $userdisagree = $post->doesUserDisagree($user);
+        $useragree = $post->doesUserAgreed($user);
+        $userdisagree = $post->doesUserDisagreed($user);
         $nbAgree = $post->getNbApprovement();
-        $nbDisAgree = $post->getNbDisaprovement();
+        $nbDisAgree = $post->getNbDisagreed();
 
         $canVote = !$useragree && !$userdisagree;
         $str = '';

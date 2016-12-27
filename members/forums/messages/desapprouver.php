@@ -19,7 +19,7 @@ if($post == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
-$post->disaproved(Visitor::getInstance()->getUser());
+$post->disagree(Visitor::getInstance()->getUser());
 
 $_SESSION['lastMessage'] = Popup::successMessage("La réponse a bien été désapprouvée");
 

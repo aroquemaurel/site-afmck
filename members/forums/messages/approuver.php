@@ -20,7 +20,7 @@ if($post == null) {
 
 // TODO if user already approved.
 
-$post->aproved(Visitor::getInstance()->getUser());
+$post->agree(Visitor::getInstance()->getUser());
 
 $_SESSION['lastMessage'] = Popup::successMessage("La réponse a bien été approuvée");
 

@@ -44,16 +44,12 @@ class Post
     protected $isHided = null;
 
     /**
-     * @OneToMany(targetEntity="PostApprovedUser", mappedBy="post")
+     * @OneToMany(targetEntity="PostAgreedUser", mappedBy="post")
      * @OrderBy({"idUser" = "ASC"})
      */
     protected $usersApproved;
 
-    public function userAproved() {
-
-    }
-
-    public function doesUserAgree(User $user)  : bool {
+    public function doesUserAgreed(User $user)  : bool {
         foreach($this->usersApproved as $userapproved) {
             if($userapproved->isAprovement() &&
                 $userapproved->getIdUser() == $user->getId()) {
@@ -64,7 +60,7 @@ class Post
         return false;
     }
 
-    public function doesUserDisagree(User $user) : bool {
+    public function doesUserDisagreed(User $user) : bool {
         foreach($this->usersApproved as $userapproved) {
             if(!$userapproved->isAprovement() &&
                 $userapproved->getIdUser() == $user->getId()) {
@@ -93,7 +89,7 @@ class Post
     /**
      * @return int
      */
-    public function getNbDisaprovement() : int {
+    public function getNbDisagreed() : int {
         $ret = 0;
         foreach($this->usersApproved as $userapproved) {
             if(!$userapproved->isAprovement()) {
@@ -107,24 +103,30 @@ class Post
     /**
      * @param $user
      */
-    public function aproved($user) {
-        $aprov = new PostApprovedUser($user, $this, true);
+    public function agree($user) {
+        $aprov = new PostAgreedUser($user, $this, true);
         \Visitor::getEntityManager()->persist($aprov);
         \Visitor::getEntityManager()->flush();
     }
 
     public function removeAgreed($user) {
-        $repo = \Visitor::getEntityManager()->getRepository('models\forum\PostApprovedUser');
+        $repo = \Visitor::getEntityManager()->getRepository('models\forum\PostAgreedUser');
         $app = $repo->findOneBy(["idUser" => $user->getId(), "post"=>$this]);
         \Visitor::getEntityManager()->remove($app);
         \Visitor::getEntityManager()->flush();
     }
 
+    public function hasVote(User $user) : bool {
+        $repo = \Visitor::getEntityManager()->getRepository('models\forum\PostAgreedUser');
+        $app = $repo->findOneBy(["idUser" => $user->getId(), "post"=>$this]);
+        return $app != null;
+    }
+
     /**
      * @param $user
      */
-    public function disaproved($user) {
-        $aprov = new PostApprovedUser($user, $this, false);
+    public function disagree($user) {
+        $aprov = new PostAgreedUser($user, $this, false);
         \Visitor::getEntityManager()->persist($aprov);
         \Visitor::getEntityManager()->flush();
     }
