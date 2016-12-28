@@ -37,7 +37,7 @@ class ListUsers {
         </thead>
         <tbody>';
         foreach($this->users as $user) {
-            $ret .= '<tr href="'.Visitor::getInstance()->getRootPage().'/admin/user.php?id='.$user->getId().'">'.
+            $ret .= '<tr href="'.Visitor::getRootPage().'/admin/user.php?id='.$user->getId().'">'.
              '<td>'.$user->getAdeliNumber().'</td>'.
             '<td>'.($user->getLastName()).'</td>'.
             '<td>'.($user->getFirstName()).'</td>'.

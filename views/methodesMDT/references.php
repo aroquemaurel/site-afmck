@@ -55,7 +55,7 @@
     <h2>Articles de presse divers</h2>
         <ul>
             <?php
-            $folder = Visitor::getInstance()->getRootPage()."/docs/references";
+            $folder = Visitor::getRootPage()."/docs/references";
             Image::miniTooltipLink($folder, "McKenzie france Dimanche",
                 " Article paru dans France Dimanche évoquant la méthode McKenzie.");
             ?>

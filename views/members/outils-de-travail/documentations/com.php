@@ -12,16 +12,16 @@
     <h3>Présentation de la méthode</h3>
         <ul>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/Presentation methode McKenzie pour Medecins_AFMcK.pdf" target="_blank">
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/Presentation methode McKenzie pour Medecins_AFMcK.pdf" target="_blank">
                 Presentation de la méthode McKenzie à l'adresse des médecins
             </a>
         </li>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/Presentation methode McKenzie pour patients_AFMcK.pdf" target="_blank" id="synthbil">
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/Presentation methode McKenzie pour patients_AFMcK.pdf" target="_blank" id="synthbil">
                 Presentation de la méthode McKenzie à l'adresse des patients
             </a>
         </li>
-        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/2013-11-23-Dijon_AFMcK.pdf" target="_blank" id="synthbil">
+        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/2013-11-23-Dijon_AFMcK.pdf" target="_blank" id="synthbil">
                 Intérêt de l’utilisation de l’examen MDT pour mettre en évidence une préférence directionnelle pour les patients lombalgiques
             </a>
         </li>
@@ -34,73 +34,73 @@
 
         <ul>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/Synthese Bilan Initial Medecin_AFMcK.dot">Bilan initial: Médecins</a>
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/Synthese Bilan Initial Medecin_AFMcK.dot">Bilan initial: Médecins</a>
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/Synthese Initiale Referentiel Cervicalgie_AFMcK.dot">Synthèse bilan initial: Référentiel Cervicalgie</a>
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/Synthese Initiale Referentiel Cervicalgie_AFMcK.dot">Synthèse bilan initial: Référentiel Cervicalgie</a>
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/Synthese Initiale Referentiel Lombalgie_AFMcK.dot">Synthèse bilan initial: Référentiel Lombalgie</a>
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/Synthese Initiale Referentiel Lombalgie_AFMcK.dot">Synthèse bilan initial: Référentiel Lombalgie</a>
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/BDK FS Derangement vierge_AFMcK.pdf">Fiche de Synthèse: Vierge</a>
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/BDK FS Derangement vierge_AFMcK.pdf">Fiche de Synthèse: Vierge</a>
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/Synthese Bilan Final Medecin_AFMcK.dot">Bilan final: Médecins</a>
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/Synthese Bilan Final Medecin_AFMcK.dot">Bilan final: Médecins</a>
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/Synthese Finale Referentiel Cervicalgie_AFMcK.dot">Synthèse bilan final: Référentiel Cervicalgie</a>
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/Synthese Finale Referentiel Cervicalgie_AFMcK.dot">Synthèse bilan final: Référentiel Cervicalgie</a>
 
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/Synthese Finale Referentiel Lombalgie_AFMcK.dot">Synthèse bilan final: Référentiel Lombalgie</a>
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/Synthese Finale Referentiel Lombalgie_AFMcK.dot">Synthèse bilan final: Référentiel Lombalgie</a>
 
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/BDK FS Derangement pre rempli_AFMcK.dot">Fiche de Synthèse: Pré remplie</a>
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/BDK FS Derangement pre rempli_AFMcK.dot">Fiche de Synthèse: Pré remplie</a>
             </li>
         </ul>
 
     <h3>Articles et parutions en français</h3>
         <ul>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsfr/BERTHELOT-LASLETT_AFMcK.pdf">
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsfr/BERTHELOT-LASLETT_AFMcK.pdf">
                     Signes cliniques assurant l'origine sacro-iliaque d'une douleur<br/>
                     Jean Marie BERTHELOT et Mark LASLETT — Janvier 2009 (.pdf)</a>
 
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsfr/EMC fev 2011 _AFMcK.pdf">
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsfr/EMC fev 2011 _AFMcK.pdf">
                     La méthode McKenzie diagnostic et thérapie mécanique du rachis et des extrémités.<br/>
                     G. SAGI, P. BOUDOT et D. VANDEPUT EMC — Février 2011 (.pdf)</a>
 
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsfr/DOSSIER McKENZIE ANNALES KINE JUIL 05_AFMcK.pdf">
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsfr/DOSSIER McKENZIE ANNALES KINE JUIL 05_AFMcK.pdf">
                     Dossier « La Méthode McKENZIE ».<br/> Michel GEDDA Annales Kiné Juillet — 2005 (.pdf)</a>
 
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsfr/Classifier patients rachialgiques_AFMcK.pdf">
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsfr/Classifier patients rachialgiques_AFMcK.pdf">
                     Classifier les patients rachialgiques en sous-groupes homogenes:
                     Une nécessité pour rendre les études cliniques pertinentes. <br/>Gabor SAGI et Jacky OTERO (.pdf)</a>
 
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsfr/Kuslich resume prealable cours McKenzie_AFMcK.doc">
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsfr/Kuslich resume prealable cours McKenzie_AFMcK.doc">
                     Traductions résumées préalables aux cours McKenzie.<br/>
                     Kuslich D et al (.doc)</a>
 
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsfr/Revue de medecine orthopedique mars 2000_AFMcK.pdf">
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsfr/Revue de medecine orthopedique mars 2000_AFMcK.pdf">
                     La méthode McKENZIE<br/>
                     D. CYPEL, R. McKENZIE, G. SAGI et R. DONELSON
                     (Revue de médecine orthopédique N°60) — Mars 2000 (.pdf)</a>
 
             </li>
             <li><i class="glyphicon glyphicon-download-alt"></i>
-                <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsfr/SAGI 2010 Pref Dir Kine Rev_AFMcK.pdf" target="_blank" id="docgb">
+                <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsfr/SAGI 2010 Pref Dir Kine Rev_AFMcK.pdf" target="_blank" id="docgb">
                     Recherche d'une préférence directionnelle avec la méthode McKenzie dans l'évaluation de patients rachialgiques.<br/>
                         Gabor SAGI —
                         2010 (.pdf)</a>
@@ -110,38 +110,38 @@
     <h3>Articles et parutions en anglais</h3>
     <ul>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsgb/2010 IJMDT 1_AFMcK.pdf">
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsgb/2010 IJMDT 1_AFMcK.pdf">
                 International Journal of MDT. <br/>Volume 5, N°1 — Mars 2010 (.pdf)</a>
         </li>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsgb/DONELSON 2011_AFMcK.pdf">Mechanical diagnosis and therapy for radiculopathy.
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsgb/DONELSON 2011_AFMcK.pdf">Mechanical diagnosis and therapy for radiculopathy.
                 <br />Ronald Donelson — 2011 (.pdf)</a>
         </li>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsgb/LONG_2004_AFMcK.pdf">
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsgb/LONG_2004_AFMcK.pdf">
                 Does it matter which exercise? A randomized control trial
                 of exercise for low back pain.<br />A Long, R Donelson, T Fung — Spine 2004 vol.29 numero 23(.pdf)</a>
         </li>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsgb/standing on giant's shoulders_AFMcK.doc">Survey categorizes the seven most influential people in orthopedic PT.<br />Robert J Schrupp,MA,PT<br />Honoring our Giants, vol.15, issue 14, page61 (.doc)</a>
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsgb/standing on giant's shoulders_AFMcK.doc">Survey categorizes the seven most influential people in orthopedic PT.<br />Robert J Schrupp,MA,PT<br />Honoring our Giants, vol.15, issue 14, page61 (.doc)</a>
         </li>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsgb/centralization phenomen_AFMcK.pdf">The centralization phenomenon of
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsgb/centralization phenomen_AFMcK.pdf">The centralization phenomenon of
                 spinal symptoms-a systematic review.<br />A Aina, S May, H Clare — Manual Therapy Mars 2004 (.pdf)</a>
         </li>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsgb/LASLET 2003_AFMcK.pdf">Diagnosis painful sacroiliac joints:
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsgb/LASLET 2003_AFMcK.pdf">Diagnosis painful sacroiliac joints:
                 A validity study of a McKenzie evaluation and sacroiliac provocation tests.
                 <br>M Laslett, S B Young, C N Aprill et B McDonald — Australian Journal ofPhysiotherapy 2003 vol.49 (.pdf)</a>
         </li>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsgb/sorensen 2010_AFMcK.pdf">
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsgb/sorensen 2010_AFMcK.pdf">
                 An educational approach based on a non-injury model compared with individual
                 symptom-based physical training in chronic LBP. A pragmatic, randomised trial with a one-year follow-up.
                 <br />P H Sorensen, T Bendix, C Manniche, L Korsholm, D Lemvigh, A Indahl — BMC Musculoskeletal Disorders 2010 (.pdf)</a>
         </li>
         <li><i class="glyphicon glyphicon-download-alt"></i>
-            <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/parutionsgb/The myth of acute back pain Robin McKenzie 05_AFMcK.pdf" target="_blank"
+            <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/parutionsgb/The myth of acute back pain Robin McKenzie 05_AFMcK.pdf" target="_blank"
                >The myth of short term acute low back pain.<br />Robin McKenzie CNZM OBE FNZSP Dip MDT — NZFP vol.32 numero 2, avril 2005 (.pdf)</a>
         </li>
 
@@ -152,18 +152,18 @@
 
         <div style="text-align: center">
         <div class="thumbnail with-caption" style="width: 400px;text-align: center;">
-    <a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.pdf">
-        <img src="../pgadh/<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.jpg">
+    <a href="<?= Visitor::getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.pdf">
+        <img src="../pgadh/<?= Visitor::getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.jpg">
     </a><p></p>
             <audio controls><!-- balise <audio> pour les navigateurs recents -->
-                <source src="../pgadh/<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.mp3"></source><!-- en mp3 pour IE, googlechrome... -->
-                <source src="../pgadh/<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.ogg"></source><!-- en ogg pour firefox le navigateur prenant celui qu'il sait lire (mp3 ou ogg)... -->
+                <source src="../pgadh/<?= Visitor::getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.mp3"></source><!-- en mp3 pour IE, googlechrome... -->
+                <source src="../pgadh/<?= Visitor::getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.ogg"></source><!-- en ogg pour firefox le navigateur prenant celui qu'il sait lire (mp3 ou ogg)... -->
                 <!-- pour les vieux navigateurs balise <object> avec dewplayer.swf -->
                 <object type="application/x-shockwave-flash" data="dewplayer.swf" width="200" height="20" id="dewplayer" name="dewplayer">
                     <param name="wmode" value="transparent" />
                     <param name="movie" value="dewplayer.swf" />
                     <param name="flashvars"
-                           value="mp3=../pgadh/<?php echo Visitor::getInstance()->getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.mp3&amp;showtime=1" />
+                           value="mp3=../pgadh/<?= Visitor::getRootPage()."/docs/members/com/";?>/confjacky/Lombalgie et MDT- INK 13 10 2012_AFMcK.mp3&amp;showtime=1" />
                 </object>
             </audio>
 

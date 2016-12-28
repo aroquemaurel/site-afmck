@@ -49,7 +49,7 @@ if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
     exit();
 }
 $title = 'Créer un sujet sur le forum « '.$forum->getName().' »';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Forums',Visitor::getRootPage().'/members/forums/'),
     new Link('Voir le forum « '.$forum->getName().' »', Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId()),
     new Link('Créer un nouveau sujet', '#')));

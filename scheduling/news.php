@@ -20,7 +20,7 @@ foreach($db->getFirstMailsToSend(NEWS_NB_MAILS) as $news) {
     $mailer->CharSet = 'UTF-8';
     $mailer->addAddress($news->getUser()->getMail(), $news->getUser()->getFirstName()." ".$news->getUser()->getLastName());
     foreach($news->getNews()->getAttachments() as $attch) {
-        $mailer->addAttachment(Visitor::getInstance()->getRootPath().'/docs/members/news/'.$attch->getPath());
+        $mailer->addAttachment(Visitor::getRootPath().'/docs/members/news/'.$attch->getPath());
     }
     if(!$mailer->send()) {
         echo $mailer->ErrorInfo;

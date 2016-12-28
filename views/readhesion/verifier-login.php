@@ -3,6 +3,6 @@
     <?php
     $loginOk = false;
     $readhesion = true;
-    include(Visitor::getInstance()->getRootPath().'/views/includes/formConnexion.php');
+    include(Visitor::getRootPath().'/views/includes/formConnexion.php');
     ?>
 </div>

@@ -10,7 +10,7 @@
         <h2>Interviews</h2>
         <ul>
             <?php
-            $folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque";
+            $folder = Visitor::getRootPage()."/docs/members/kiosque";
             Image::miniLink($folder."/interview", "Interview Diplomes - Fred Steimer_AFMcK",
                             "Interview de Frédéric STEIMER, diplômé en juin 2014, qui nous livre ses impressions");
             Image::miniLink($folder."/interview", "Interview Diplomes - Deneuville",

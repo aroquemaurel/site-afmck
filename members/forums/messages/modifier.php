@@ -49,7 +49,7 @@ if(isset($_POST['content'])) {
     exit();
 } else {
     $title = 'Modifier un message sur le sujet « '.$post->getTopic()->getTitle().' »';
-    $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+    $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
         new Link('Forums',Visitor::getRootPage().'/members/forums/'),
         new Link('Voir le forum « '.$post->getTopic()->getForum()->getName().' »', Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$post->getTopic()->getForum()->getId()),
         new Link('Créer un nouveau sujet', '#')));

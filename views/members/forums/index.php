@@ -3,7 +3,7 @@ use utils\Utils;
 
 $breadcrumb->display()?>
 <div class="container forums-page">
-    <h1><?php echo $title;?></h1>
+    <h1><?= $title;?></h1>
     <?php
     $catIt = 0;
     $catForum = 0;

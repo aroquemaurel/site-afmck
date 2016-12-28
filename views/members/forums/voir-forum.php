@@ -3,9 +3,9 @@ use utils\Utils;
 
 $breadcrumb->display()?>
 <div class="container" style="">
-    <h1>Voir le forum « <?php echo $forum->getName();?> »</h1>
+    <h1>Voir le forum « <?= $forum->getName();?> »</h1>
 
-    <a href="<?php echo Visitor::getRootPage().'/members/forums/sujets/nouveau.php?forum='.$forum->getId();?>">
+    <a href="<?= Visitor::getRootPage().'/members/forums/sujets/nouveau.php?forum='.$forum->getId();?>">
         <button class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>&nbsp;Créer un nouveau sujet</button>
     </a>
 

@@ -7,7 +7,7 @@ use database\DatabaseNews;
 use database\DatabaseUser;
 use utils\Link;
 $title = 'Envoyer la news';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Administration','#'), new Link('Envoyer une newsletter', '#')));
 
 // Edit the news
@@ -33,10 +33,10 @@ if(isset($_GET['id'])) {
         include('../views/admin/envoyer-news.php');
         include('../views/includes/foot.php');
     } else {
-        header('Location: ' . Visitor::getInstance()->getRootPage().'/admin/list-news.php');
+        header('Location: ' . Visitor::getRootPage().'/admin/list-news.php');
     }
 } else {
-    header('Location: ' . Visitor::getInstance()->getRootPage().'/admin/list-news.php');
+    header('Location: ' . Visitor::getRootPage().'/admin/list-news.php');
 }
 ?>
 

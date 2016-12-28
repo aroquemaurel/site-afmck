@@ -1,28 +1,57 @@
-<?php $breadcrumb->display()?>
+<?php use viewers\HomeViewer;
+
+$breadcrumb->display()?>
 
 <div class="container-fluid">
-<?php
-include('news.php');
-?>
-<!--<p>Le congrés AFMcK 2016 approche à grand pas ! <br/>Vous pouvez avoir accès à toutes les informations pratiques ici : 
-<p>Pour vous inscrire, veuillez <b>remplir le formulaire</b> suivant : 
-</div>
-
-    <h1>Bienvenue sur le site de l'Association Française McKenzie</h1>-->
-<div style="padding-right: 80px;">
     <?php
-        if(Visitor::getInstance()->getUser()->mustSignedChart()) {
-            echo '<div class="alert alert-warning" role="alert">';
-            echo "Vous êtes actuellement d'un niveau D ou supérieur et vous n'avez pas encore signé la charte, qui vous permettrai de figurer sur la carte des praticiens.<br/>
-            Si vous souhaitez signer la charte, vous pouvez vous rendre sur cette <a href=\"".Visitor::getInstance()->getRootPage()."/members/signer-la-charte.php\">page</a>
+    if(Visitor::getInstance()->getUser()->mustSignedChart()) {
+        echo '<div class="alert alert-warning" role="alert">';
+        echo "Vous êtes actuellement d'un niveau D ou supérieur et vous n'avez pas encore signé la charte, qui vous permettrai de figurer sur la carte des praticiens.<br/>
+            Si vous souhaitez signer la charte, vous pouvez vous rendre sur cette <a href=\"".Visitor::getRootPage()."/members/signer-la-charte.php\">page</a>
  </div>";
-        }
+    }
     ?>
+    <div class="row">
+        <div class="col-md-7">
+            <?= \viewers\NewsViewer::getHtmlNew($lastNew, 750); ?>
+        </div>
+        <div class="col-md-5">
+            <div class="row">
+                <h2>Dernières actualités</h2>
+                <?= HomeViewer::getNewThings() ?>
+            </div>
+            <div class="row">
+                <h2>Demandes de remplacement</h2>
+                <p><pre>// TODO Stubbed content</pre>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <?php
+        echo '<h2>Dernières news <small style="right: 130px; position: absolute"><a href="'.Visitor::getRootPage().'/members/newsletters/index.php">Toutes les news</a></small></h2>';
+                
+                foreach($listNews as $new) {
+                    echo '<a href="'.Visitor::getRootPage().'/members/newsletters/voir.php?id='.$new->getId().'">';
+                    echo '<h3>'.$new->getTitle().' <small>'.$new->getSubtitle().'</small></h3>';
+                    echo '<p style="font-size: 8pt">Par '.$new->getAuthor()->toString().' le ' . $new->getDate()->format('d / m / Y à H:i').'</p>';
+                    echo '</a>';
+                }
+                ?>
+            </div>
+        <div class="col-md-5">
+            <h2>Derniers sujets sur le forum</h2>
+            <p><pre>// TODO Stubbed content</pre>
+        </div>
+        </div>
 
-<div class="alert alert-info">
-Bienvenue sur le site de l'Association Française McKenzie !<br/>
-Si vous avez des remarques sur le site, ou avez un problème avec le site, merci d'envoyer un courriel à <a href="mailto:maintenance@afmck.fr">maintenance@afmck.fr</a>, votre aide nous est précieuse ! </div>
-<?= viewers\NewsViewer::getHtmlNewsContents($news, $page, $nbPages)?>
+    </div>
+<?php
+//    include('news.php');
+?>
+<div style="padding-right: 80px;">
+
 </div>
 </div>
 

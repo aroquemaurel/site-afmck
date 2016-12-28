@@ -6,7 +6,7 @@
     <?= \viewers\NewsViewer::getHtmlNew($news);?>
 
     <div style="text-align: center">
-        <a href="<?php echo Visitor::getInstance()->getRootPage()."/admin/envoyer-news.php?id=".$news->getId();?>&send=1">
+        <a href="<?=Visitor::getRootPage()."/admin/envoyer-news.php?id=".$news->getId();?>&send=1">
             <button type="button" id="acceptBtn" class="btn btn-primary"><i class="glyphicon glyphicon-ok-sign"></i>&nbsp;Envoyer la news</button>
         </a>
     </div>

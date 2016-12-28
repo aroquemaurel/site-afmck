@@ -7,11 +7,11 @@
     <p id="description" style="font-size: 10pt"></p>
 </div>
 </div>
-<?php $folder = Visitor::getInstance()->getRootPage().'/docs/members/fichesexercices'; ?>
+<?php $folder = Visitor::getRootPage().'/docs/members/fichesexercices'; ?>
 <div class="bs-callout bs-callout-warning">
     <p>Vous avez uniquement accès aux fiches d'exercices disponible pour votre niveau de formation.
     </p>
-    <p>Vous avez actuellement le <b>niveau <?php echo Visitor::getInstance()->getUser()->getLevelFormationString();?></b></p>
+    <p>Vous avez actuellement le <b>niveau <?= Visitor::getInstance()->getUser()->getLevelFormationString();?></b></p>
 </div>
 
 <?php

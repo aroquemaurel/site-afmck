@@ -104,7 +104,7 @@ class News {
     /**
      * @return mixed
      */
-    public function getAuthor()
+    public function getAuthor() : User
     {
         return $this->author;
     }

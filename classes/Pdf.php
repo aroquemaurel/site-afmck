@@ -5,7 +5,7 @@
  * Date: 19/01/15
  * Time: 00:09
  */
-require_once(Visitor::getInstance()->getRootPath().'/libs/html2pdf/html2pdf.class.php');
+require_once(Visitor::getRootPath().'/libs/html2pdf/html2pdf.class.php');
 
 class Pdf extends HTML2PDF {
     private $head;

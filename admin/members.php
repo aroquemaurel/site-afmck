@@ -5,7 +5,7 @@ utils\Rights::hasRights(array("ADMINISTRATEUR", "TRESORIER", "SECRETAIRE"));
 use database\DatabaseUser;
 use utils\Link;
 $title = 'Liste des membres';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Administration','#'), new Link('Liste des membres', '#')));
 $db = new DatabaseUser();
 if(isset($_GET['valid'])) {

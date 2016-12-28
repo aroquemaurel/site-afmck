@@ -7,7 +7,7 @@
         </p>
     </div>
 
-    <p style="text-align: center"><a href="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/charte des praticiens adherents AFMcK.pdf";?>">
+    <p style="text-align: center"><a href="<?= Visitor::getRootPage()."/docs/members/charte des praticiens adherents AFMcK.pdf";?>">
             <button class="btn btn-primary"><i class="glyphicon glyphicon-download-alt"></i>
                 &nbsp;Télécharger la charte de bonnes pratiques</button></a></p>
 

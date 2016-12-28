@@ -1,12 +1,12 @@
 <?php
 $breadcrumb->display()?>
 <div class="container" style="">
-    <h1><?php echo $title;?></h1>
+    <h1><?= $title;?></h1>
     <?php
     $titleBtn = "Créer le sujet";
     ?>
     <form enctype="multipart/form-data"  role="form" method="post"
-          action="<?php echo Visitor::getRootPage().'/members/forums/sujets/nouveau.php?forum='.$forum->getId();?>">
+          action="<?= Visitor::getRootPage().'/members/forums/sujets/nouveau.php?forum='.$forum->getId();?>">
         <div class="row" style="width: 80%; margin: auto;">
             <div class="form-group">
                 <input required="required" type="text" name="title" id="title"

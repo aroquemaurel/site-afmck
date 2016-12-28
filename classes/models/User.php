@@ -234,7 +234,7 @@ class User {
         end($this->mailer)->Subject .= "Validation inscription";
         end($this->mailer)->Body = (Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
         end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
-        end($this->mailer)->addAttachment(\Visitor::getInstance()->getRootPath()."/docs/members/billing/".date("Y")."_".$this->getAdeliNumber().".pdf");
+        end($this->mailer)->addAttachment(\Visitor::getRootPath()."/docs/members/billing/".date("Y")."_".$this->getAdeliNumber().".pdf");
 
         if($this->getHasSigned() == 1) {
             $this->mailer[] = new Mailer();
@@ -334,7 +334,7 @@ class User {
         $ret .= 'Paiement par '.($this->payment->toString()) ."<br/> ";
         $ret .= 'Montant de la cotisation: '.($this->getValuePaid() != 100 ? $this->getValuePaid()." euros" : "100 euros et plus").'<br/>';
         if(!$pdf) {
-            $ret .= 'Dernière facture: <i class="glyphicon glyphicon-download-alt"></i> <a href="'.Visitor::getInstance()->getRootPage().'/docs/members/billing/'.(new DateTime())->format('Y').'_'.$this->adeliNumber.'.pdf">Télécharger</a>';
+            $ret .= 'Dernière facture: <i class="glyphicon glyphicon-download-alt"></i> <a href="'.Visitor::getRootPage().'/docs/members/billing/'.(new DateTime())->format('Y').'_'.$this->adeliNumber.'.pdf">Télécharger</a>';
         }
             $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
         $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
