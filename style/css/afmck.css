@@ -210,9 +210,8 @@ h3 {
     overflow:auto;
     padding-bottom: 50px;
     padding-right: 150px;
-    margin: auto;
     width: 90%;
-    margin-top: 100px;
+    margin: 60px auto auto;
 }
 
 .back-to-top {
@@ -674,3 +673,38 @@ max-width: 90%;
 .news-list .attachment {
     font-size: 8pt;
 }
+
+
+.changes-home {
+
+}
+.changes-home .container-img {
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+    height: 100px;
+    display: inline-block;
+    border: 1px solid #3074ae;
+    float: left;
+}
+
+.changes-home img {
+    position: relative;
+    width: 100px;
+}
+
+.changes-home .description {
+    height: 100px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.changes-home .bloc {
+    margin-top: 5px;
+}
+
+
+/*.navbar .nav .dropdown {
+// TODO add class for all menu links
+    font-variant-caps: all-petite-caps;
+    font-size: 10pt;
+}*/

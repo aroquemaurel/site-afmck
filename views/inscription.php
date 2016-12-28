@@ -10,7 +10,7 @@ if(!$editing) {
                 Cette adhésion, et donc l\'accès au site, est valable jusqu\'au 1er Janvier de l\'année suivante. <br/><br/>
 
                 Si vous vous êtes déjà inscrit à l\'association par le passé, et avez rempli ce formulaire, merci de réadhérer via le lien suivant :
-    <a href="'.Visitor::getInstance()->getRootPage().'/readherer.php">Réadhérer à l\'association</a>
+    <a href="'.Visitor::getRootPage().'/readherer.php">Réadhérer à l\'association</a>
             </div>';
     $user = new models\User();
 } else {
@@ -31,14 +31,14 @@ if(!$editing) {
                 <div class="form-group">
                     <input required="required" type="text" name="firstName" id="firstName"
                            class="form-control input-lg" placeholder="Prénom" tabindex="1"
-                           value="<?php echo $user->getFirstName()?>">
+                           value="<?= $user->getFirstName()?>">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                     <input required="required" type="text" name="lastName" id="lastName"
                            class="form-control input-lg" placeholder="Nom de famille" tabindex="2"
-                           value ="<?php echo $user->getLastName();?>"
+                           value ="<?= $user->getLastName();?>"
                            >
                 </div>
             </div>
@@ -46,7 +46,7 @@ if(!$editing) {
         <div class="form-group">
             <input required="required" type="text" name="adeliNumber" id="adeliNumber"
                    class="form-control input-lg" placeholder="Numéro ADELI" tabindex="3"
-                   value="<?php echo $user->getAdeliNumber();?>"
+                   value="<?= $user->getAdeliNumber();?>"
                    >
                    <span id="adeli" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Numéro valide
         </div>
@@ -57,7 +57,7 @@ if(!$editing) {
             <div class="input-group input-group-lg">
                 <input required="required" type="email" name="email" id="email"
                        class="form-control input-lg" placeholder="Adresse e-mail" tabindex="4"
-                       value="<?php echo $user->getMail();?>"
+                       value="<?= $user->getMail();?>"
                        >
               <span class="input-group-addon" id="sizing-addon1">@</span>
             </div>
@@ -68,7 +68,7 @@ if(!$editing) {
                             <div class="input-group input-group-lg">
                     <input required="required" type="text" name="phonePro" id="phonePro" data-format="dd dd dd dd dd"
                            class="form-control input-lg bfh-phone" placeholder="Téléphone professionnel" tabindex="5"
-                           value="<?php echo ($user->getPhonePro() != 0 ? $user->getPhonePro() : "");?>"
+                           value="<?= ($user->getPhonePro() != 0 ? $user->getPhonePro() : "");?>"
                            >
                          <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-earphone"></i></span>
 
@@ -80,7 +80,7 @@ if(!$editing) {
                             <div class="input-group input-group-lg">
                     <input type="text" name="phoneMobile" id="phoneMobile" data-format="dd dd dd dd dd"
                            class="form-control input-lg bfh-phone" placeholder="Téléphone mobile" tabindex="6"
-                           value="<?php echo $user->getPhoneMobile();?>"
+                           value="<?= $user->getPhoneMobile();?>"
                            >
                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-phone"></i></span>
@@ -98,7 +98,7 @@ if(!$editing) {
                             <div class="input-group input-group-lg">
             <input required="required" type="text" name="address" id="address"
                    class="form-control input-lg" placeholder="Adresse (Rue et numéro de rue)" tabindex="7"
-                   value="<?php echo $user->getAddress();?>">
+                   value="<?= $user->getAddress();?>">
                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-envelope"></i></span>
                    </div>
@@ -107,7 +107,7 @@ if(!$editing) {
                             <div class="input-group input-group-lg">
             <input type="text" name="complementAddress" id="complementAddress"
                    class="form-control input-lg" placeholder="Complément d'adresse (Bâtiment, Appartement, …)" tabindex="8"
-                   value="<?php echo $user->getComplementAddress();?>">
+                   value="<?= $user->getComplementAddress();?>">
                                          <span class="input-group-addon" id="sizing-addon1">
                                          <i class="glyphicon glyphicon-envelope"></i></span>
                    </div>
@@ -126,7 +126,7 @@ if(!$editing) {
                 <div class="form-group">
                     <input required="required" type="text" name="town" id="town"
                            class="form-control input-lg" placeholder="Ville" tabindex="10"
-                           value="<?php echo $user->getTown();?>"
+                           value="<?= $user->getTown();?>"
                            >
                 </div>
             </div>
@@ -163,7 +163,7 @@ if(!$editing) {
                 <div class="form-group">
                     <div required="required" class='input-group date input-group-lg' id="formationDate">
                         <input data-date-format="MM/YYYY" tabindex="14" type='text'  id='formationDate1' name='formationDate' placeholder="Date de validation" class="form-control input-lg"
-                        value="<?php echo ($user->getFormationDate() != NULL ? $user->getFormationDate()->format("m/Y") : "");?>"
+                        value="<?= ($user->getFormationDate() != NULL ? $user->getFormationDate()->format("m/Y") : "");?>"
                         />
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -188,7 +188,7 @@ if(!$editing) {
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
       </div>
       <div style="width: 100%;margin:auto" class="modal-body">
-          <object style="width: 100%; margin:auto;" type="application/pdf" data="<?php echo Visitor::getInstance()->getRootPage().'/docs/members/charte des praticiens adherents AFMcK.pdf';?>" width="500" height="500">this is not working as expected</object>
+          <object style="width: 100%; margin:auto;" type="application/pdf" data="<?= Visitor::getRootPage().'/docs/members/charte des praticiens adherents AFMcK.pdf';?>" width="500" height="500">this is not working as expected</object>
       </div>
       <div class="modal-footer">
         <button type="button" id="acceptBtn" class="btn btn-primary">je comprends et accepte les engagements inhérents à la signature de cette charte</button>
@@ -229,7 +229,7 @@ if(!$editing) {
             <button id="submit" type="submit" style="margin: auto; width: 250px; "
             class="btn btn-primary btn-block btn-lg">
                 <i class="glyphicon glyphicon-ok-sign"></i>
-                <?php echo (!$editing ? "Je m'inscris" : "Modifier mes informations")?>
+                <?= (!$editing ? "Je m'inscris" : "Modifier mes informations")?>
             </button>
     </form>
     <p></p>
@@ -238,10 +238,10 @@ if(!$editing) {
 </div>
 </div>
 <?php
-$script = '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/moment.js"></script>';
-$script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-select.min.js"></script>';
-$script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-datetimepicker.js"></script>';
-$script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/style/js/bootstrap-formhelpers.min.js"></script>';
+$script = '<script src="' . Visitor::getRootPage() . '/style/js/moment.js"></script>';
+$script .= '<script src="' . Visitor::getRootPage() . '/style/js/bootstrap-select.min.js"></script>';
+$script .= '<script src="' . Visitor::getRootPage() . '/style/js/bootstrap-datetimepicker.js"></script>';
+$script .= '<script src="' . Visitor::getRootPage() . '/style/js/bootstrap-formhelpers.min.js"></script>';
 
 $script .= "
         <script type=\"text/javascript\">
@@ -268,5 +268,5 @@ $script .= "
 </script>";
 
 if(!$editing) {
-    $script .= '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formRegister.js"></script>';
+    $script .= '<script src="' . Visitor::getRootPage() . '/views/formRegister.js"></script>';
 }

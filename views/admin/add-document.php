@@ -1,7 +1,7 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid">
     <h1>Ajouter un document</h1>
-    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo Visitor::getInstance()->getRootPage()."/admin/add-document.php"?>">
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?=Visitor::getRootPage()."/admin/add-document.php"?>">
         <div class="form-group">
             <label for="title" class="col-sm-2 control-label">Titre</label>
             <div class="col-sm-10">

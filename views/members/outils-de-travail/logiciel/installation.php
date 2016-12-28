@@ -11,9 +11,9 @@
     Tout d'abord, téléchargez le logiciel en fonction de votre système d'exploitation :
     <ul>
         <li>&nbsp;&nbsp;<a href="http://afmck.fr/docs/members/logiciels/downloads/Windows/BilanMDT_windows_V1.6.8.exe"
-               target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage()."/docs/img/Windows.png"?>" height="25" alt="vers win" />&nbsp;BilanMDT pour Windows</a></li>
+               target="_blank"><img src="<?= Visitor::getRootPage()."/docs/img/Windows.png"?>" height="25" alt="vers win" />&nbsp;BilanMDT pour Windows</a></li>
         <li><a href="http://afmck.fr/docs/members/logiciels/downloads/OS_X/BilanMDT_OS-X_V1.6.8.zip"
-               target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage().
+               target="_blank"><img src="<?= Visitor::getRootPage().
                     "/docs/img/mac.jpg"?>" height="25" alt="mac" />BilanMDT pour Mac OS X</a></li>
     </ul>
 
@@ -22,7 +22,7 @@
     <P>Afin d'utiliser correctement le logiciel de BilanMDT, vous devez être adhérent à l'Association Française McKenzie, et ainsi
     posséder une licence du logiciel.</P>
     <p>Afin d'obtenir votre licence du logiciel, vous devez vous rendre sur la page
-        <a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/logiciel/cle-deverrouillage.php">suivante</a></p>
+        <a href="<?= Visitor::getRootPage();?>/members/outils-de-travail/logiciel/cle-deverrouillage.php">suivante</a></p>
     <p>Si vous ne souhaitez pas obtenir votre licence immédiatement, ou souhaitez tout d'abord essayer le logiciel, vous avez
     le droit à une version d'essai du logiciel. Cette version vous permet de créer 5 bilans différents, et de posséder 5 patients. Au dela de cette limite, vous n'aurez qu'un accès en lecture à vos données.
     </p>
@@ -31,7 +31,7 @@
         <p>Le document ci-dessous détaille précisemment le fonctionnement de l'installation et du paramétrage de votre logiciel, merci de le lire en cas de problème :
         </p>
         <?php
-        Image::miniTooltipLink(Visitor::getInstance()->getRootPage()."/docs/members/logiciels/", "installationEtMiseAJour_bilanMDT_AFMcK",
+        Image::miniTooltipLink(Visitor::getRootPage()."/docs/members/logiciels/", "installationEtMiseAJour_bilanMDT_AFMcK",
             "Installation et configuration du logiciel permettant la gestion des bilans McKenzie", false);
         ?>
     </div>

@@ -3,7 +3,7 @@
     <h1>Changer d'avatar</h1>
 
     <div class="thumbnail" style="width: 150px; margin: auto;text-align: center">
-    <img width="100px"; src="<?php echo Visitor::getInstance()->getUser()->getAvatar();?>"/>
+    <img width="100px"; src="<?= Visitor::getInstance()->getUser()->getAvatar();?>"/>
         <p id="description">Avatar actuel</p>
     </div>
     <form role="form" method="post" enctype="multipart/form-data">

@@ -47,6 +47,21 @@ class DatabaseNews extends Database {
         return $news;
     }
 
+    public function getNew(int $id) {
+        $query = $this->dbAccess->prepare("SELECT * from `news` where id=:id");
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+        $dataNews = $query->fetchObject();
+        if($dataNews != null) {
+            $news = new News();
+            $news->hydrat($dataNews);
+            $news = $this->getAttachmentsOfNews($dataNews->id, $news);
+            return $news;
+        }
+
+        return null;
+    }
+
     public function getNbNews() {
         $query = $this->dbAccess->prepare("SELECT count(id) as nbnews from `news`");
         $query->execute();

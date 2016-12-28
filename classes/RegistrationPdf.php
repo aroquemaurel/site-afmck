@@ -10,7 +10,7 @@ class RegistrationPdf extends PdfFile {
     }
     public function toHtml() {
         $content = "    <p style=\"\">
-        <img src=\"" . Visitor::getInstance()->getRootPath() . "/style/img/logo.jpg\"
+        <img src=\"" . Visitor::getRootPath() . "/style/img/logo.jpg\"
         style=\"position:absolute;margin-left:0px;margin-top:15px;width:100px\"/>
         <div style=\"position:absolute;margin-top:50px;margin-left: 150px;font-weight: bold; font-size: 12pt;\"class=\"titlePdf\">FORMULAIRE D'INSCRIPTION À L'AFMCK</div>
         </p>";
@@ -57,7 +57,7 @@ class RegistrationPdf extends PdfFile {
     }
 
     public function generatePdf($str='') {
-        parent::generatePdf(Visitor::getInstance()->getRootPath()."/docs/members/registration/".($this->tresor ? "tresor/":"")
+        parent::generatePdf(Visitor::getRootPath()."/docs/members/registration/".($this->tresor ? "tresor/":"")
         .date('Y')."_".$this->user->getAdeliNumber().'.pdf');
     }
 

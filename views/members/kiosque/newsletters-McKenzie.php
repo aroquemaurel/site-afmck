@@ -12,7 +12,7 @@ $breadcrumb->display();
 <h2>Vol 5</h2>
 <h3>Français</h3>
 <?php
-$folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque/newsletters";
+$folder = Visitor::getRootPage()."/docs/members/kiosque/newsletters";
 Image::miniLink($folder, "MDT World Press Newsletter_Vol5No1",
     "MDT World Press Newsletter Vol.5 N°1 <small>Anglais</small>");
 ?>
@@ -29,7 +29,7 @@ Image::miniLink($folder, "MDT World Press Newsletter_Vol4No1",
 <h3>Français</h3>
 <ul>
 <?php
-$folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque/newsletters";
+$folder = Visitor::getRootPage()."/docs/members/kiosque/newsletters";
 Image::miniLink($folder, "MDT World Press Newsletter Vol.4 N3 Francais",
     "MDT World Press Newsletter Vol.4 N°3 <small>Français</small>");
 Image::miniLink($folder, "MDT Newsletter_Vol 4 No 2-fr_AFMcK",
@@ -40,13 +40,13 @@ Image::miniLink($folder, "MDT Newsletter_Vol 4 No 1-fr_AFMcK",
 </ul>
 <h3>Annexes</h3>
 <ul>
-<li><a href="<?php echo Visitor::getInstance()->getRootPage().'/docs/members/kiosque/newsletters/STartBackScreeningTool.zip';?>">STart Back Screening Tool Vol.4 N°3 <small>Français</small></a>
+<li><a href="<?= Visitor::getRootPage().'/docs/members/kiosque/newsletters/STartBackScreeningTool.zip';?>">STart Back Screening Tool Vol.4 N°3 <small>Français</small></a>
 </ul>
 <h2>Vol 3</h2>
 <h3>Anglais</h3>
     <ul>
         <?php
-        $folder = Visitor::getInstance()->getRootPage()."/docs/members/kiosque/newsletters";
+        $folder = Visitor::getRootPage()."/docs/members/kiosque/newsletters";
 
         Image::miniLink($folder, "MDT Newsletter_Vol 3 No 4-gb_AFMcK",
             "MDT World Press Newsletter Vol.3 N°4 <small>Anglais</small>");

@@ -29,11 +29,11 @@ if(isset($_FILES["file"])) {
     }
 
 
-    header('Location: ' . Visitor::getInstance()->getRootPage().'/members/profil/changer-avatar.php');
+    header('Location: ' . Visitor::getRootPage().'/members/profil/changer-avatar.php');
     exit();
 }
 $title = 'Changer son avatar';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Mon profil',Visitor::getRootPage().'/members/mon-profil.php'), new Link('Changer d\'avatar', '#')));
 include('../../views/includes/head.php');
 include('../../views/members/profil/changer-avatar.php');
