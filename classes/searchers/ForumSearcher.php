@@ -2,6 +2,7 @@
 declare(strict_types = 1);
 
 namespace searchers;
+use Doctrine\ORM\Query\ResultSetMapping;
 
 /**
  * Created by PhpStorm.
@@ -12,17 +13,31 @@ namespace searchers;
 class ForumSearcher extends AbstractSearcher
 {
     private $topicRepo;
+    private $postRepo;
+
     public function __construct()
     {
         $this->topicRepo = \Visitor::getEntityManager()->getRepository('models\forum\Topic');
+        $this->postRepo = \Visitor::getEntityManager()->getRepository('models\forum\Post');
     }
 
     public function search(string $search) : array
     {
-        $ret = array();
-        // TODO: How to use 'like' ?
-        $ret['topics'] = $this->topicRepo->findBy(array("title" => $search));
-        // TODO better search : currently, it smell shit.
+        // search topics by title/subtitle
+        $query = $this->topicRepo->createQueryBuilder('a')
+            ->where('a.title LIKE :title')
+            ->orWhere('a.subtitle LIKE :subtitle')
+            ->setParameter('title', '%'.$search.'%')
+            ->setParameter('subtitle', '%'.$search.'%')
+            ->getQuery();
+        $ret['topics'] = $query->getResult();
+
+        // search topics by post content
+        $query = $this->postRepo->createQueryBuilder('a')
+            ->where('a.content LIKE :content')
+            ->setParameter('content', '%'.$search.'%')
+            ->getQuery();
+        $ret['posts'] = $query->getResult();
 
         return $ret;
     }

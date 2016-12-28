@@ -30,13 +30,16 @@ $breadcrumb->display()?>
     <div class="row">
         <div class="col-md-7">
             <?php
-        echo '<h2>Dernières news <small style="right: 130px; position: absolute"><a href="'.Visitor::getRootPage().'/members/newsletters/index.php">Toutes les news</a></small></h2>';
-                
+        echo '<h2>Dernières newsletters <small style="right: 130px; position: absolute"><a href="'.Visitor::getRootPage().'/members/newsletters/index.php">Toutes les news</a></small></h2>';
+                $i = 0;
                 foreach($listNews as $new) {
-                    echo '<a href="'.Visitor::getRootPage().'/members/newsletters/voir.php?id='.$new->getId().'">';
-                    echo '<h3>'.$new->getTitle().' <small>'.$new->getSubtitle().'</small></h3>';
-                    echo '<p style="font-size: 8pt">Par '.$new->getAuthor()->toString().' le ' . $new->getDate()->format('d / m / Y à H:i').'</p>';
-                    echo '</a>';
+                    if($i != 0) {
+                        echo '<a href="' . Visitor::getRootPage() . '/members/newsletters/voir.php?id=' . $new->getId() . '">';
+                        echo '<h3>' . $new->getTitle() . ' <small>' . $new->getSubtitle() . '</small></h3>';
+                        echo '<p style="font-size: 8pt">Par ' . $new->getAuthor()->toString() . ' le ' . $new->getDate()->format('d / m / Y à H:i') . '</p>';
+                        echo '</a>';
+                    }
+                    ++$i;
                 }
                 ?>
             </div>
