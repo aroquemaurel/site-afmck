@@ -16,7 +16,7 @@
 
             <button id="submit" type="submit" style="margin: auto; margin-top: -50px; width: 250px; "
                     class="btn btn-primary btn-block btn-lg">
-                <i class="glyphicon glyphicon-ok-sign"></i>&nbsp;<?php echo $titleBtn;?>
+                <i class="glyphicon glyphicon-ok-sign"></i>&nbsp;<?= $titleBtn;?>
             </button>
 
     </div>

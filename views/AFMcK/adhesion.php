@@ -18,7 +18,7 @@
         <p>Les inscriptions de membres se font sur le site, avec votre numéro ADELI, vous choisissez votre mot de passe. Votre inscription sera finalisée après réception du paiement par le trésorier.</p>
         <p>Après validation du paiement, une facture vous sera envoyée automatiquement par e-mail</p>
         <div class="bs-callout bs-callout-info">
-            <p><i class="glyphicon glyphicon-pushpin"></i>&nbsp;<a href="<?php echo Visitor::getInstance()->getRootPage()."/inscription.php"?>">Adhérer à l'AFMcK</a></p>
+            <p><i class="glyphicon glyphicon-pushpin"></i>&nbsp;<a href="<?=Visitor::getRootPage()."/inscription.php"?>">Adhérer à l'AFMcK</a></p>
         </div>
 
         <h3>Pièces à fournir</h3> <!-- todo relecture -->

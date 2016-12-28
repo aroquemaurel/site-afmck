@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <h1>Tendinite Rotulienne <small>Étude du cas clinique de M. T</small></h1>
     <div id="toc" class="toc"></div><!--/.well -->
-<p><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage().'/docs/members/cascliniques/Bilan Mr T_AFMcK.pdf'; ?>">
+<p><i class="glyphicon glyphicon-download-alt"></i> <a href="<?= Visitor::getRootPage().'/docs/members/cascliniques/Bilan Mr T_AFMcK.pdf'; ?>">
         Étude du cas clinique de M. T. (.pdf)
     </a></p>
 <h2>Interrogatoire</h2>

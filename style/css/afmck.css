@@ -31,11 +31,16 @@ body a:visited {
 
 footer {
 	background-image: url('../img/footBackground.jpg');
-	height: 120px;
+	height: 50px;
 	color: #fff;
 	border-top: 4px solid #F1A260;
     position:relative;
-    margin-top: -50px;
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+footer a, footer a:visited, footer a:hover {
+    color: white;
 }
 
 .home .carousel-indicators li {
@@ -205,14 +210,13 @@ h3 {
     overflow:auto;
     padding-bottom: 50px;
     padding-right: 150px;
-    margin: auto;
     width: 90%;
-    margin-top: 100px;
+    margin: 60px auto auto;
 }
 
 .back-to-top {
      position: fixed;
-     bottom: 2em;
+     bottom: 70px;
      right: 0px;
      text-decoration: none;
      color: #000000;
@@ -220,7 +224,6 @@ h3 {
      font-size: 12px;
      padding: 1em;
      display: none;
-    margin-top: 150px;
  }
 
 
@@ -617,10 +620,13 @@ table .forum-list {
 }
 .forum-list .forum-stats {
     font-size: 9pt;
-    width: 250px;
+    width: 230px;
     font-weight: normal;
 }
 
+.forums-page h3 {
+    padding-top: 10px;
+}
 .forum-list .new {
     font-size: 6pt;
 }
@@ -663,3 +669,42 @@ table .forum-list {
 .forum-post .message img {
 max-width: 90%; 
 }
+
+.news-list .attachment {
+    font-size: 8pt;
+}
+
+
+.changes-home {
+
+}
+.changes-home .container-img {
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+    height: 100px;
+    display: inline-block;
+    border: 1px solid #3074ae;
+    float: left;
+}
+
+.changes-home img {
+    position: relative;
+    width: 100px;
+}
+
+.changes-home .description {
+    height: 100px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.changes-home .bloc {
+    margin-top: 5px;
+}
+
+
+/*.navbar .nav .dropdown {
+// TODO add class for all menu links
+    font-variant-caps: all-petite-caps;
+    font-size: 10pt;
+}*/

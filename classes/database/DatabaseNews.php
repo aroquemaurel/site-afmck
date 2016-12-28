@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace database;
 
 use DateTime;
@@ -16,7 +17,7 @@ use PDO;
 
 class DatabaseNews extends Database {
 
-    public function getAllNews($page=1, $nbNewsByPage=2) {
+    public function getAllNews(int $page=1, int $nbNewsByPage=2) {
         $ret = array();
         $limitMin = ($page-1) * $nbNewsByPage;
         $limitMax = $nbNewsByPage;
@@ -32,6 +33,33 @@ class DatabaseNews extends Database {
             $ret[] = $news;
         }
         return $ret;
+    }
+
+    public function getLastNew() {
+        $query = $this->dbAccess->prepare("SELECT * from `news` order by date desc LIMIT 1 ");
+        $query->bindParam(":max", $limitMax, PDO::PARAM_INT);
+        $query->execute();
+        $dataNews = $query->fetchObject();
+        $news = new News();
+        $news->hydrat($dataNews);
+        $news = $this->getAttachmentsOfNews($dataNews->id, $news);
+
+        return $news;
+    }
+
+    public function getNew(int $id) {
+        $query = $this->dbAccess->prepare("SELECT * from `news` where id=:id");
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+        $dataNews = $query->fetchObject();
+        if($dataNews != null) {
+            $news = new News();
+            $news->hydrat($dataNews);
+            $news = $this->getAttachmentsOfNews($dataNews->id, $news);
+            return $news;
+        }
+
+        return null;
     }
 
     public function getNbNews() {
@@ -78,8 +106,6 @@ class DatabaseNews extends Database {
         $query->bindParam(":content", $content, PDO::PARAM_STR);
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
-
-
     }
 
     public function getById($id) {
@@ -88,6 +114,8 @@ class DatabaseNews extends Database {
         $query->bindParam(":id", $id);
         $query->execute();
         $new->hydrat($query->fetchObject());
+        $new = $this->getAttachmentsOfNews($new->getId(), $new);
+
         return $new;
     }
 
@@ -162,7 +190,7 @@ class DatabaseNews extends Database {
      * @param $dataNews
      * @param $news
      */
-    public function getAttachmentsOfNews($id, $news)
+    public function getAttachmentsOfNews($id, News $news)
     {
         $query2 = $this->dbAccess->prepare("SELECT titleFile, path from `newsletter_file`, file where idNewsletter=:idNew and newsletter_file.idFile = file.id");
         $query2->bindParam(":idNew", $id, PDO::PARAM_INT);

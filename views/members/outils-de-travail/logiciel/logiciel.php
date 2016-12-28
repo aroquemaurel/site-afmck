@@ -55,6 +55,6 @@
 
         <h2>Procédure d'installation</h2>
         <p>Afin d'avoir plus de détails sur la procédure d'installation, rendez-vous
-            <a href="<?php echo Visitor::getInstance()->getRootPage()?>/members/outils-de-travail/logiciel/installation.php">ici</a></p>
+            <a href="<?= Visitor::getRootPage()?>/members/outils-de-travail/logiciel/installation.php">ici</a></p>
     </div>
 </div>

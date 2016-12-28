@@ -99,9 +99,9 @@ class Wysiwyg {
     }
 
     public static function getScriptSrc() {
-        $script = '<script src="' . \Visitor::getInstance()->getRootPage() . '/style/wysiwyg/external/google-code-prettify/prettify.js"></script>';
-        $script .= '<script src="' . \Visitor::getInstance()->getRootPage() . '/style/wysiwyg/external/jquery.hotkeys.js"></script>';
-        $script .= '<script src="' . \Visitor::getInstance()->getRootPage() . '/style/wysiwyg/src/bootstrap-wysiwyg.js"></script>';
+        $script = '<script src="' . \Visitor::getRootPage() . '/style/wysiwyg/external/google-code-prettify/prettify.js"></script>';
+        $script .= '<script src="' . \Visitor::getRootPage() . '/style/wysiwyg/external/jquery.hotkeys.js"></script>';
+        $script .= '<script src="' . \Visitor::getRootPage() . '/style/wysiwyg/src/bootstrap-wysiwyg.js"></script>';
 
         return $script;
     }

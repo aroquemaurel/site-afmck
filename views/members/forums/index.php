@@ -1,9 +1,9 @@
-<?php use utils\Utils;
+<?php use utils\StringHelper;
+use utils\Utils;
 
 $breadcrumb->display()?>
-<div class="container" style="">
-    <h1><?php echo $title;?></h1>
-    <table class="table table-hover forum-list" style="width: 99%;">
+<div class="container forums-page">
+    <h1><?= $title;?></h1>
     <?php
     $catIt = 0;
     $catForum = 0;
@@ -17,8 +17,8 @@ $breadcrumb->display()?>
         }
 
         if($thereIsForum) {
-            echo '<tr style="background-color: #ebfaff">';
-                echo '<th colspan="4">'.$category->getName().'</th>';
+                echo '<h3>'.$category->getName().'</h3>';
+                echo '<table class="table table-hover forum-list">';
                 if($title == 'Administration des forums') {
                     echo '<td style="width: 150px;">';
                     if($catIt != 0) {
@@ -35,11 +35,11 @@ $breadcrumb->display()?>
                     <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>';
                 }
-            echo '</tr>';
+            //echo '</tr>';
             foreach($category->getForums() as $forum) {
                 if($forum->hasRights(Visitor::getInstance()->getUser())) {
                     echo '<tr class="' . ($forum->hasRead(Visitor::getInstance()->getUser()) || $title == 'Administration des forums' ? 'read' : 'unread') . '">';
-                    echo '<td style="">';
+                    echo '<td>';
                     if($title == 'Liste des forums') {
                         echo '<a href="' . Visitor::getRootPage() . '/members/forums/voir-forum.php?id=' . $forum->getId() . '">';
                     }
@@ -57,13 +57,13 @@ $breadcrumb->display()?>
                     if ($nbTopics > 0) {
                         if ($nbPosts > 0) {
                             $lastPost = $forum->getLastPost($entityManager);
-                            echo '<td class="forum-stats">Dernier message de <br/><b>' . $lastPost->getUser()->getName() . '</b> <br/>le '
+                            echo '<td class="forum-stats">le '
                                 . ($lastPost->getDate()->format('d/m/Y à H:i')) . ' <br/>
-                            Dans ';
+                            ';
                             if($title == 'Liste des forums') {
                                 echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/voir.php?id=' . $lastPost->getTopic()->getId() . '">';
                             }
-                            echo $lastPost->getTopic()->getTitle();
+                            echo StringHelper::trunkString($lastPost->getTopic()->getTitle(), 40);
                             if($title == 'Liste des forums') {
                                 echo '</a>';
                             }
@@ -96,7 +96,7 @@ $breadcrumb->display()?>
                 }
                 ++$catForum;
             }
-            echo '</tr>';
+            echo '</table>';
         }
         ++$catIt;
         $catForum = 0;

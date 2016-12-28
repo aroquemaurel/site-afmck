@@ -3,9 +3,9 @@ use utils\Utils;
 
 $breadcrumb->display()?>
 <div class="container" style="">
-    <h1>Voir le forum « <?php echo $forum->getName();?> »</h1>
+    <h1>Voir le forum « <?= $forum->getName();?> »</h1>
 
-    <a href="<?php echo Visitor::getRootPage().'/members/forums/sujets/nouveau.php?forum='.$forum->getId();?>">
+    <a href="<?= Visitor::getRootPage().'/members/forums/sujets/nouveau.php?forum='.$forum->getId();?>">
         <button class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>&nbsp;Créer un nouveau sujet</button>
     </a>
 
@@ -16,7 +16,7 @@ $breadcrumb->display()?>
 
 
     if(count($topics) != 0) {
-    $p->display();
+    echo $p->toString();
     echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
     foreach($topics as $topic) {
         //$style = ($topic->hasRead(Visitor::getInstance()->getUser())?'':'');
@@ -46,7 +46,7 @@ $breadcrumb->display()?>
     ?>
     </table>
     <?php
-    $p->display();
+    echo $p->toString();
 
     } else {
         echo "<p style=\"margin-top: 20px;\"><em>Aucun sujet n'a été créé pour le moment.</em></p>";

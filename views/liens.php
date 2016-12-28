@@ -6,7 +6,7 @@
         <div class="cadrelink">
             <table>
                 <tr><td class="img">
-                        <a href="http://www.mckenziemdt.org"><img class="img-thumbnail" src="<?php echo Visitor::getInstance()->getRootPage()?>/docs/img/logointer.gif"></a></td>
+                        <a href="http://www.mckenziemdt.org"><img class="img-thumbnail" src="<?= Visitor::getRootPage()?>/docs/img/logointer.gif"></a></td>
                     <td class="txt">
                         <a href="http://www.mckenziemdt.org"><p><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;Site de l'Institut McKENZIE International (en anglais).</p></a>
                     </td></tr></table>
@@ -19,7 +19,7 @@
 
             <table>
                 <tr><td class="img">
-                        <a href="http://www.mckenzie.fr"><img class="img-thumbnail" src="<?php echo Visitor::getInstance()->getRootPage()?>/docs/img/logomckenzie.gif"></a></td>
+                        <a href="http://www.mckenzie.fr"><img class="img-thumbnail" src="<?= Visitor::getRootPage()?>/docs/img/logomckenzie.gif"></a></td>
                     <td class="txt">
                         <a href="http://www.mckenzie.fr"><p><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;Site de l'Institut McKENZIE France (en français).</p></a>
                     </td></tr></table>
@@ -33,7 +33,7 @@
 
             <table>
                 <tr><td class="img">
-                        <a href="http://www.apmk.fr"><img class="img-thumbnail" src="<?php echo Visitor::getInstance()->getRootPage()?>/docs/img/apmk.jpg"></a></td>
+                        <a href="http://www.apmk.fr"><img class="img-thumbnail" src="<?= Visitor::getRootPage()?>/docs/img/apmk.jpg"></a></td>
                     <td class="txt">
                         <a href="http://www.apmk.fr"><p><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;Association de praticiens MDT Basée à Poitiers (en français).</p></a>
                     </td></tr></table>

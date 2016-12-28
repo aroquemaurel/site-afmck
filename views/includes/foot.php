@@ -1,28 +1,39 @@
 </div>
 <footer>
     <div class="container-fluid">
-        <div class="col-md-1 col-sm-1"></div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <p><b>Nous contacter</b><br/>
+        <div class="col-md-4 col-sm-1">afmck.fr&nbsp;&nbsp;version <?= utils\GitHelper::getCurrentTag()?></div>
+        <div class="col-md-1 col-sm-4 col-xs-4"></div>
+        <div class="col-md-3 col-sm-4 col-xs-4">
+           <!-- <p><b>Nous contacter</b><br/>
                 AFMcK<br/>
                 2 rue Charles PIOT<br/>
                 38320 EYBENS<br/>
                 contact@afmck.fr
             </p>
+            -->
+            <a href="https://www.facebook.com/AFMcK/" title="Retrouvez-nous sur Facebook !">
+                <img width="15" src="<?= Visitor::getRootPage()?>/style/img/fb-logo.png" alt="Facebook" /> Retrouvez nous sur Facebook !
+            </a>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <p><b>Inscriptions</b><br/>
+        <div class="col-md-1 col-sm-4 col-xs-4"></div>
+
+        <div class="col-md-3 col-sm-4 col-xs-4">
+     <!--       <p><b>Inscriptions</b><br/>
                 Adeline BRAGUIER<br/>
                 32, cours Albert Thomas<br/>
                 69008 Lyon<br/>
                 tresorerie@afmck.fr
             </p>
+            -->
+            <a href="<?= Visitor::getRootPage()?>/AFMcK/qui-sommes-nous.php">L'association</a><span style="margin-left: 10px;"></span>
+            <a href="<?= Visitor::getRootPage()?>/AFMcK/adhesion.php">Adhésions</a><span style="margin-left: 10px;"></span>
+            <a href="<?= Visitor::getRootPage()?>/AFMcK/contacts.php">Contacts</a>
         </div>
-        <div class="col-md-3 col-sm-4 col-xs-4">
+   <!--     <div class="col-md-3 col-sm-4 col-xs-4">
             <p>
                 … Et retrouvez nous aussi sur Facebook !
             </p>
-            <!-- ~~ Bouton Facebook ~~ -->
+            <!-- ~~ Bouton Facebook ~~ --
             <div style="text-align: center;"class="fb-like fb_iframe_widget" data-href="http://www.afmck.fr" data-width="90" data-layout="button_count" data-action="like"
                  data-show-faces="true" data-share="true" fb-xfbml-state="rendered"
                  fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2Fwww.afmck.fr%2F&amp;layout=button_count&amp;locale=fr_FR&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=90"><span
@@ -31,16 +42,17 @@
                                                                                         src="http://www.facebook.com/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df378fdf0e%26domain%3Dafmck.fr%26origin%3Dhttp%253A%252F%252Fafmck.fr%252Ff38a42555%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.afmck.fr%2F&amp;layout=button_count&amp;locale=fr_FR&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=90"
                                                                                         style="border: none; visibility: visible; width: 151px; height: 20px;" class=""></iframe></span></div>
         </div>
+    -->
         <p><a href="#" class="back-to-top">Retour haut de page</a></p>
     </div>
 </footer>
 <!-- /container -->
 <!-- Bootstrap core JavaScript-->
 <!--<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
-<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/js/jquery.js"></script>
-<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
-<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/src/javascripts/jquery.tocify.js"></script>
-<script src="<?php echo Visitor::getInstance()->getRootPage() ?>/style/js/bootstrap.min.js"></script>
+<script src="<?=Visitor::getRootPage() ?>/style/js/jquery.js"></script>
+<script src="<?=Visitor::getRootPage() ?>/style/tocify/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
+<script src="<?=Visitor::getRootPage() ?>/style/tocify/src/javascripts/jquery.tocify.js"></script>
+<script src="<?=Visitor::getRootPage() ?>/style/js/bootstrap.min.js"></script>
 
 <script>
     $(function() {

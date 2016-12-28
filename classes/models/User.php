@@ -1,4 +1,6 @@
 <?php
+declare(strict_types = 1);
+
 namespace models;
 
 use BillingPdf;
@@ -59,7 +61,7 @@ class User {
 
     private $hasSigned;
 
-    public function __construct($adeliNumber='', $password='') {
+    public function __construct(string $adeliNumber='', string $password='') {
         date_default_timezone_set('UTC');
 
         $this->adeliNumber = $adeliNumber;
@@ -80,7 +82,7 @@ class User {
         }
     }
 
-    public function autoConnect() {
+    public function autoConnect() : bool {
         if(isset($_COOKIE['user'])) {
             $info = explode('/-!!-/', $_COOKIE['user']);
             $this->adeliNumber = $info[0];
@@ -90,14 +92,14 @@ class User {
         return false;
     }
 
-    public static function passwordIsValid($adeliNumber, $password) {
+    public static function passwordIsValid(int $adeliNumber, string $password) : bool {
         $db = new DatabaseUser();
         $data = $db->getUser($adeliNumber);
 
         return $data != null && password_verify($password, $data->password);
     }
 
-    public function connect($auto=false)
+    public function connect(bool $auto=false) : bool
     {
         $ret = true;
         $db = new DatabaseUser();
@@ -145,7 +147,7 @@ class User {
         return true;
     }
 
-    public function isActive() {
+    public function isActive() : bool {
         return strtotime($this->validDate->format("Y-m-d")) < time();
     }
 
@@ -171,7 +173,7 @@ class User {
 
     }
 
-    public function mustSignedChart() {
+    public function mustSignedChart() : bool {
         return $this->hasSigned == -1 && $this->levelFormation >= 4 && $this->mailValidation != 0
         && $this->disable!=1;
     }
@@ -181,7 +183,7 @@ class User {
         $db->addNewsToSend($this->id, $news->getId(), new DateTime());
     }
 
-    private function levelStringToInt($level) {
+    private function levelStringToInt(string $level) : int {
         $ret = 0;
         switch(strtoupper($level)) {
             case "A":
@@ -206,7 +208,7 @@ class User {
 
         return $ret;
     }
-    public function levelIsGreaterThan($level) {
+    public function levelIsGreaterThan($level) : bool {
         return ($this->levelFormation >= $this->levelStringToInt($level));
     }
 
@@ -215,7 +217,7 @@ class User {
         $this->disable = 0;
         $this->askReadhesion = NULL;
         $this->askValidation = NULL;
-        $year = $currentDate->format("Y");
+        $year = intval($currentDate->format("Y"));
 
         if($currentDate->format("m") != 11 && $currentDate->format("m") != 12) {
             $newDate = new DateTime(($year+1).'-1-01');
@@ -232,7 +234,7 @@ class User {
         end($this->mailer)->Subject .= "Validation inscription";
         end($this->mailer)->Body = (Mail::getValidationRegistrationMail($this, $newDate->format("d/m/Y")));
         end($this->mailer)->addAddress($this->mail, $this->firstName." ".$this->lastName);
-        end($this->mailer)->addAttachment(\Visitor::getInstance()->getRootPath()."/docs/members/billing/".date("Y")."_".$this->getAdeliNumber().".pdf");
+        end($this->mailer)->addAttachment(\Visitor::getRootPath()."/docs/members/billing/".date("Y")."_".$this->getAdeliNumber().".pdf");
 
         if($this->getHasSigned() == 1) {
             $this->mailer[] = new Mailer();
@@ -244,7 +246,7 @@ class User {
         }
     }
 
-    public function isModerator() {
+    public function isModerator() : bool {
         return $this->isInGroup("MODERATEUR") || $this->isInGroup("ADMINISTRATEUR");
     }
 
@@ -254,7 +256,7 @@ class User {
         $this->disable = 1;
     }
 
-    public function commit() {
+    public function commit() : bool {
         $db = new DatabaseUser();
         $db->editUser($this);
         if($this->mailer != null) {
@@ -273,16 +275,16 @@ class User {
         $this->lastName = utf8_encode($data->lastname);
         $this->firstName = utf8_encode($data->firstname);
         $this->mail = utf8_encode($data->mail);
-        $this->id = utf8_encode($data->id);
+        $this->id = intval($data->id);
         $this->validDate = new DateTime($data->validDate);
         $this->password = utf8_encode($data->password);
         $this->adeliNumber = utf8_encode($data->adeliNumber);
-        $this->askValidation = new DateTime($data->askValidation);
+        $this->askValidation = $data->askValidation == NULL ? NULL : new DateTime($data->askValidation);
         $this->hash = utf8_encode($data->forget);
         $this->address = utf8_encode($data->address);
         $this->complementAddress = utf8_encode($data->complementAddress);
         $this->town = utf8_encode($data->town);
-        $this->cp = utf8_encode($data->cp);
+        $this->cp = intval($data->cp);
         $this->hash = utf8_encode($data->forget);
         $this->formationDate = new DateTime($data->formationDate);
         $this->levelFormation = utf8_encode($data->levelFormation);
@@ -297,8 +299,9 @@ class User {
         $this->hashPassword = $data->hashPassword;
         $this->longitude = $data->longitude;
         $this->latitude = $data->latitude;
-        $this->hasSigned = $data->hasSigned;
-        $this->askReadhesion = new DateTime($data->askReadhesion);
+        $this->hasSigned = intval($data->hasSigned);
+
+        $this->askReadhesion = new DateTime($data->askReadhesion." 00:00:00");
 
         $db = new DatabaseUser();
         $dataGroups = $db->getGroups($this->id);
@@ -307,10 +310,10 @@ class User {
             $this->groups[] = new Group($group['idGroup'], $group['nom']);
         }
     }
-    public function getCompleteAddress() {
+    public function getCompleteAddress() : string {
         return ($this->address).'<br/>'.($this->complementAddress!=""?($this->complementAddress).'<br/>':"").$this->cp.' '.($this->town);
     }
-    public function toHtml($pdf=false) {
+    public function toHtml(bool $pdf=false) : string {
         $ret = '';
         if($pdf) {
             $ret .= '<h1 style="font-size: 18pt">' . ($this->getFirstName()) . ' ' . ($this->getLastName()) . '</h1>';
@@ -331,7 +334,7 @@ class User {
         $ret .= 'Paiement par '.($this->payment->toString()) ."<br/> ";
         $ret .= 'Montant de la cotisation: '.($this->getValuePaid() != 100 ? $this->getValuePaid()." euros" : "100 euros et plus").'<br/>';
         if(!$pdf) {
-            $ret .= 'Dernière facture: <i class="glyphicon glyphicon-download-alt"></i> <a href="'.Visitor::getInstance()->getRootPage().'/docs/members/billing/'.(new DateTime())->format('Y').'_'.$this->adeliNumber.'.pdf">Télécharger</a>';
+            $ret .= 'Dernière facture: <i class="glyphicon glyphicon-download-alt"></i> <a href="'.Visitor::getRootPage().'/docs/members/billing/'.(new DateTime())->format('Y').'_'.$this->adeliNumber.'.pdf">Télécharger</a>';
         }
             $ret .= '<H2 style="font-size: 14pt">Newsletter</H2>';
         $ret .= $this->newsletter ? '<i style="color: green" class="glyphicon glyphicon-ok"></i>&nbsp;Reçoit la newsletter' : '<i class="glyphicon glyphicon-remove" style="color: red;"></i>&nbsp;Ne reçoit pas la newsletter';
@@ -344,15 +347,15 @@ class User {
         return $ret;
     }
 
-    public function getAvatarPath() {
+    public function getAvatarPath() : string {
         return Visitor::getRootPath()."/docs/members/avatars/".$this->getAvatarFileName();
     }
 
-    public function getAvatarFileName() {
+    public function getAvatarFileName() : string {
         return $this->id."_".$this->adeliNumber.'.jpg';
     }
 
-    public function getAvatar() {
+    public function getAvatar() : string {
         $theoricalPath = $this->getAvatarPath();
         $pageFolder = Visitor::getRootPage()."/docs/members/avatars/";
         if(file_exists($theoricalPath)) {
@@ -362,7 +365,7 @@ class User {
         }
     }
 
-    public function getHashPassword() {
+    public function getHashPassword() : string {
         return $this->hashPassword;
     }
 
@@ -373,7 +376,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getValuePaid()
+    public function getValuePaid() : int
     {
         return $this->valuePaid;
     }
@@ -381,7 +384,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getHasSigned()
+    public function getHasSigned() : int
     {
         return $this->hasSigned;
     }
@@ -389,7 +392,7 @@ class User {
     /**
      * @param mixed $hasSigned
      */
-    public function setHasSigned($hasSigned)
+    public function setHasSigned(int $hasSigned)
     {
         $this->hasSigned = $hasSigned;
     }
@@ -398,19 +401,19 @@ class User {
     /**
      * @param mixed $valuePaid
      */
-    public function setValuePaid($valuePaid)
+    public function setValuePaid(int $valuePaid)
     {
         $this->valuePaid = $valuePaid;
     }
 
-    public function getShortName() {
+    public function getShortName() : string {
         return $this->toString();
     }
 
     /**
      * @return mixed
      */
-    public function getHashMail()
+    public function getHashMail() : string
     {
         return $this->hashMail;
     }
@@ -418,7 +421,7 @@ class User {
     /**
      * @param mixed $hashMail
      */
-    public function setHashMail($hashMail)
+    public function setHashMail(string $hashMail)
     {
         $this->hashMail = $hashMail;
     }
@@ -426,7 +429,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getAdeliNumber()
+    public function getAdeliNumber() : string
     {
         return $this->adeliNumber;
     }
@@ -434,7 +437,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getPayment()
+    public function getPayment() : PaymentType
     {
         return $this->payment;
     }
@@ -442,7 +445,7 @@ class User {
     /**
      * @param mixed $payment
      */
-    public function setPayment($payment)
+    public function setPayment(PaymentType $payment)
     {
         $this->payment = new PaymentType($payment);
     }
@@ -450,7 +453,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getLongitude()
+    public function getLongitude() : double
     {
         return $this->longitude;
     }
@@ -458,7 +461,7 @@ class User {
     /**
      * @param mixed $longitude
      */
-    public function setLongitude($longitude)
+    public function setLongitude(double $longitude)
     {
         $this->longitude = $longitude;
     }
@@ -466,7 +469,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getLatitude()
+    public function getLatitude() : double
     {
         return $this->latitude;
     }
@@ -474,7 +477,7 @@ class User {
     /**
      * @param mixed $latitude
      */
-    public function setLatitude($latitude)
+    public function setLatitude(double $latitude)
     {
         $this->latitude = $latitude;
     }
@@ -482,7 +485,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getMailValidation()
+    public function getMailValidation() : string
     {
         return $this->mailValidation;
     }
@@ -490,7 +493,7 @@ class User {
     /**
      * @param mixed $mailValidation
      */
-    public function setMailValidation($mailValidation)
+    public function setMailValidation(string $mailValidation)
     {
         $this->mailValidation = $mailValidation;
     }
@@ -499,7 +502,7 @@ class User {
     /**
      * @param mixed $adeliNumber
      */
-    public function setAdeliNumber($adeliNumber)
+    public function setAdeliNumber(int $adeliNumber)
     {
         $this->adeliNumber = $adeliNumber;
     }
@@ -507,7 +510,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getPassword()
+    public function getPassword() : string
     {
         return $this->password;
     }
@@ -515,7 +518,7 @@ class User {
     /**
      * @param mixed $password
      */
-    public function setPassword($password)
+    public function setPassword(string $password)
     {
         $this->password = $password;
     }
@@ -523,7 +526,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getFirstName()
+    public function getFirstName() : string
     {
         return ucfirst(strtolower($this->firstName));
     }
@@ -531,19 +534,19 @@ class User {
     /**
      * @param mixed $firstName
      */
-    public function setFirstName($firstName)
+    public function setFirstName(string $firstName)
     {
         $this->firstName = ($firstName);
     }
 
-    public function getName() {
+    public function getName() : string {
         return $this->firstName.' '.$this->getLastName();
     }
 
     /**
      * @return mixed
      */
-    public function getLastName()
+    public function getLastName() : string
     {
         return strtoupper($this->lastName);
     }
@@ -551,7 +554,7 @@ class User {
     /**
      * @param mixed $lastName
      */
-    public function setLastName($lastName)
+    public function setLastName(string $lastName)
     {
         $this->lastName = ($lastName);
     }
@@ -559,7 +562,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getMail()
+    public function getMail() : string
     {
         return strtolower($this->mail);
     }
@@ -567,7 +570,7 @@ class User {
     /**
      * @param mixed $mail
      */
-    public function setMail($mail)
+    public function setMail(string $mail)
     {
         $this->mail = $mail;
     }
@@ -575,18 +578,18 @@ class User {
     /**
      * @return mixed
      */
-    public function getGroups() {
+    public function getGroups() : array {
         return $this->groups;
     }
 
     /**
      * @param $group
      */
-    public function setGroups($group) {
+    public function setGroups(array $group) {
         $this->groups = $group;
     }
 
-    public function isInGroup($group) {
+    public function isInGroup(string $group) : bool {
         foreach($this->groups as $gr) {
             if($gr->getName() == $group) {
                 return true;
@@ -609,7 +612,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getId()
+    public function getId() : int
     {
         return $this->id;
     }
@@ -617,7 +620,7 @@ class User {
     /**
      * @param mixed $id
      */
-    public function setId($id)
+    public function setId(int $id)
     {
         $this->id = $id;
     }
@@ -625,7 +628,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getAskValidation()
+    public function getAskValidation() : bool
     {
         return $this->askReadhesion != NULL ? $this->askReadhesion : $this->askValidation;
     }
@@ -633,7 +636,7 @@ class User {
     /**
      * @param mixed $askValidation
      */
-    public function setAskValidation($askValidation)
+    public function setAskValidation(bool $askValidation)
     {
         $this->askValidation = $askValidation;
     }
@@ -641,7 +644,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getValidDate()
+    public function getValidDate() : DateTime
     {
         return $this->validDate;
     }
@@ -649,7 +652,7 @@ class User {
     /**
      * @param mixed $validDate
      */
-    public function setValidDate($validDate)
+    public function setValidDate(DateTime $validDate)
     {
         $this->validDate = $validDate;
     }
@@ -657,7 +660,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getAddress()
+    public function getAddress() : string
     {
         return ($this->address);
     }
@@ -665,7 +668,7 @@ class User {
     /**
      * @param mixed $address
      */
-    public function setAddress($address)
+    public function setAddress(string $address)
     {
         $this->address = ($address);
     }
@@ -673,7 +676,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getTown()
+    public function getTown() : string
     {
         return strtoupper($this->town);
     }
@@ -681,7 +684,7 @@ class User {
     /**
      * @param mixed $town
      */
-    public function setTown($town)
+    public function setTown(string $town)
     {
         $this->town = ($town);
     }
@@ -689,7 +692,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getCp()
+    public function getCp() : int
     {
         return $this->cp;
     }
@@ -697,7 +700,7 @@ class User {
     /**
      * @param mixed $cp
      */
-    public function setCp($cp)
+    public function setCp(int $cp)
     {
         $this->cp = $cp;
     }
@@ -705,12 +708,12 @@ class User {
     /**
      * @return mixed
      */
-    public function getLevelFormation()
+    public function getLevelFormation() : int
     {
         return $this->levelFormation;
     }
 
-    public function getLevelFormationString() {
+    public function getLevelFormationString() : string {
         switch($this->levelFormation) {
             case 1:
                 return "A";
@@ -730,7 +733,7 @@ class User {
     /**
      * @param mixed $levelFormation
      */
-    public function setLevelFormation($levelFormation)
+    public function setLevelFormation(int $levelFormation)
     {
         $this->levelFormation = $levelFormation;
     }
@@ -738,7 +741,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getFormationDate()
+    public function getFormationDate() : DateTime
     {
         return $this->formationDate;
     }
@@ -746,7 +749,7 @@ class User {
     /**
      * @param mixed $formationDate
      */
-    public function setFormationDate($formationDate)
+    public function setFormationDate(DateTime $formationDate)
     {
         $this->formationDate = $formationDate;
     }
@@ -754,7 +757,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getPhonePro()
+    public function getPhonePro() : string
     {
         return $this->phonePro;
     }
@@ -762,7 +765,7 @@ class User {
     /**
      * @param mixed $phonePro
      */
-    public function setPhonePro($phonePro)
+    public function setPhonePro(string $phonePro)
     {
         $this->phonePro = $phonePro;
     }
@@ -770,7 +773,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getPhoneMobile()
+    public function getPhoneMobile() : string
     {
         return $this->phoneMobile;
     }
@@ -778,7 +781,7 @@ class User {
     /**
      * @param mixed $phoneMobile
      */
-    public function setPhoneMobile($phoneMobile)
+    public function setPhoneMobile(string $phoneMobile)
     {
         $this->phoneMobile = $phoneMobile;
     }
@@ -786,15 +789,15 @@ class User {
     /**
      * @return mixed
      */
-    public function getNewsletter()
+    public function getNewsletter() : bool
     {
-        return $this->newsletter;
+        return boolval($this->newsletter);
     }
 
     /**
      * @param mixed $newsletter
      */
-    public function setNewsletter($newsletter)
+    public function setNewsletter(bool $newsletter)
     {
         $this->newsletter = $newsletter;
     }
@@ -802,7 +805,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getComplementAddress()
+    public function getComplementAddress() : string
     {
         return ($this->complementAddress);
     }
@@ -810,7 +813,7 @@ class User {
     /**
      * @param mixed $complementAddress
      */
-    public function setComplementAddress($complementAddress)
+    public function setComplementAddress(string $complementAddress)
     {
         $this->complementAddress = ($complementAddress);
     }
@@ -818,7 +821,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getDisable()
+    public function getDisable() : bool
     {
         return $this->disable;
     }
@@ -826,19 +829,19 @@ class User {
     /**
      * @param mixed $disable
      */
-    public function setDisable($disable)
+    public function setDisable(bool $disable)
     {
         $this->disable = $disable;
     }
 
-    public function toString() {
+    public function toString() : string {
         return $this->getFirstName()[0]. ". " .ucfirst(strtolower($this->getLastName()));
     }
 
     /**
      * @return mixed
      */
-    public function getAskReadhesion()
+    public function getAskReadhesion() : bool
     {
         return $this->askReadhesion;
     }
@@ -846,7 +849,7 @@ class User {
     /**
      * @param mixed $askReadhesion
      */
-    public function setAskReadhesion($askReadhesion)
+    public function setAskReadhesion(bool $askReadhesion)
     {
         $this->askReadhesion = $askReadhesion;
     }

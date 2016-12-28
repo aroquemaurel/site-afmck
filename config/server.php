@@ -1,9 +1,9 @@
 <?php
-define('CONFIG', 'prod');
+define('CONFIG', 'dev');
 
 if(CONFIG == 'dev') {
-    define('ROOT_PAGE', '/dev/site-afmck');
-    define('ROOT_PATH', '/data/dev/www/');
+    define('ROOT_PAGE', '/site-afmck');
+    define('ROOT_PATH', '/var/www/html/');
     define('TRESORERIE_MAIL', 'trash.dev.zero+tresorerie@gmail.com');
     define('SECRETARIAT_MAIL', 'trash.dev.zero+secretariat@gmail.com');
 

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace utils;
 
 class Pagination {
@@ -15,26 +16,29 @@ class Pagination {
         $this->nbPages = $nbPages;
     }
 
-    public function display() {
+    public function toString() : string {
+        $ret = '';
         if($this->nbPages != 1) {
-            echo '
+            $ret = '
         <nav>
             <ul class="pagination">
                 <li ' . ($this->currentPage == 1 ? 'class="disabled' : '') . '">
                     <a href="' . $this->link . '&p=' . ($this->currentPage - 1) . '" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
                 </li>';
             for ($i = 1; $i <= $this->nbPages; ++$i) {
-                echo '<li ' . ($this->currentPage == $i ? 'class="active"' : '') . '>';
-                echo '<a href="' . $this->link . '&p=' . $i . '">' . $i . '</a>';
-                echo '</li>';
+                $ret .='<li ' . ($this->currentPage == $i ? 'class="active"' : '') . '>';
+                $ret .= '<a href="' . $this->link . '&p=' . $i . '">' . $i . '</a>';
+                $ret .= '</li>';
             }
 
-            echo '<li ' . ($this->currentPage == $this->nbPages ? 'class="disabled"' : '') . '>
+            $ret .='<li ' . ($this->currentPage == $this->nbPages ? 'class="disabled"' : '') . '>
                     <a href="' . $this->link . '&p=' . ($this->currentPage + 1) . '" aria-label="Next"><span aria-hidden="true">»</span></a>
                 </li>
             </ul>
         </nav>';
         }
+
+        return $ret;
     }
 
     /**

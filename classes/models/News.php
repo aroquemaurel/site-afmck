@@ -4,6 +4,7 @@ namespace models;
 use database\DatabaseNews;
 use database\DatabaseUser;
 use DateTime;
+use utils\StringHelper;
 
 /**
  * Created by PhpStorm.
@@ -89,7 +90,7 @@ class News {
      */
     public function getContent()
     {
-        return ($this->content);
+        return StringHelper::addHref($this->content);
     }
 
     /**
@@ -103,7 +104,7 @@ class News {
     /**
      * @return mixed
      */
-    public function getAuthor()
+    public function getAuthor() : User
     {
         return $this->author;
     }
