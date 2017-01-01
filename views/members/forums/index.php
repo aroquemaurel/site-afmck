@@ -35,7 +35,6 @@ $breadcrumb->display()?>
                     <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>';
                 }
-            //echo '</tr>';
             foreach($category->getForums() as $forum) {
                 if($forum->hasRights(Visitor::getInstance()->getUser())) {
                     echo '<tr class="' . ($forum->hasRead(Visitor::getInstance()->getUser()) || $title == 'Administration des forums' ? 'read' : 'unread') . '">';

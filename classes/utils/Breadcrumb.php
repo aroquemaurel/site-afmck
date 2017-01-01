@@ -7,6 +7,8 @@
  */
 namespace utils;
 
+use Visitor;
+
 class Breadcrumb {
     private $links;
 
@@ -23,17 +25,20 @@ class Breadcrumb {
                     '').$link->getLink().($link->hasUrl() ? '</a>' : '').'</li>';
         }
         echo '</ul></div>';
-        echo '<div class="col-md-4">';
-        echo '<form method="get" action="'.\Visitor::getRootPage().'/members/recherche.php">';
-        echo '<div class="input-group">';
-        echo '<span class="input-group-btn">';
-        echo '<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>';
-        echo '</span>';
-        echo '<input type="text" name="search" class="form-control" placeholder="Rechercher...">';
+        if(Visitor::getInstance()->isConnected()) {
+            echo '<div class="col-md-4">';
+            echo '<form method="get" action="' . \Visitor::getRootPage() . '/members/recherche.php">';
+            echo '<div class="input-group">';
+            echo '<span class="input-group-btn">';
+            echo '<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>';
+            echo '</span>';
+            echo '<input type="text" name="search" class="form-control" placeholder="Rechercher...">';
 
-        echo '</div><!-- /input-group -->';
-        echo '</form>';
-        echo '</div>';
+            echo '</div><!-- /input-group -->';
+            echo '</form>';
+
+            echo '</div>';
+        }
         echo '</div>';
     }
 }
