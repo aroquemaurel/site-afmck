@@ -13,7 +13,7 @@
 
     <div style="text-align: center">
         <p>
-            <a href="<?php echo Visitor::getInstance()->getRootPage();?>/members/outils-de-travail/logiciel/obtenir-ma-cle.php">
+            <a href="<?= Visitor::getRootPage();?>/members/outils-de-travail/logiciel/obtenir-ma-cle.php">
                 <button class="btn btn-lg btn-primary">Obtenir ma clé de déverrouillage</button>
             </a>
         </p>

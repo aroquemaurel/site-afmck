@@ -16,7 +16,7 @@ class BillingPdf extends PdfFile {
     }
     public function toHtml() {
         $content = "    <p style=\"\">
-        <img src=\"" . Visitor::getInstance()->getRootPath() . "/style/img/logo.jpg\"
+        <img src=\"" . Visitor::getRootPath() . "/style/img/logo.jpg\"
         style=\"position:absolute;margin-left:0px;margin-top:15px;width:100px\"/>
         <div style=\"position:absolute;margin-top:50px;margin-left: 150px;font-weight: bold; font-size: 12pt;\"class=\"titlePdf\">FACTURE SUITE À UNE ADHÉSION</div>
         </p>";
@@ -46,7 +46,7 @@ class BillingPdf extends PdfFile {
     }
 
     public function generatePdf($str='') {
-        parent::generatePdf(Visitor::getInstance()->getRootPath()."/docs/members/billing/".date("Y")."_".$this->user->getAdeliNumber().'.pdf');
+        parent::generatePdf(Visitor::getRootPath()."/docs/members/billing/".date("Y")."_".$this->user->getAdeliNumber().'.pdf');
     }
 
 }

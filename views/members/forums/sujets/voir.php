@@ -2,7 +2,7 @@
 use viewers\Pagination;
 use viewers\forums\PostViewer;
 
-$breadcrumb->display()?>
+    $breadcrumb->display()?>
     <div class="container" style="">
         <?php
         echo '<h1>'.($topic->isLocked()? '<i class="glyphicon glyphicon-lock"></i>&nbsp;':'').$topic->getTitle().' <small>'.$topic->getSubtitle().' </small></h1>';

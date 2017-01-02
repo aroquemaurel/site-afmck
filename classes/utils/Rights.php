@@ -18,7 +18,7 @@ class Rights {
 
         if(!Visitor::getInstance()->hasRights(Visitor::getInstance()->getCurrentFile(), $groups)) {
             $_SESSION['lastMessage'] = Popup::forbidden();
-            header('Location: ' . (Visitor::getInstance()->getRootPage(). '/index.php'));
+            header('Location: ' . (Visitor::getRootPage(). '/index.php'));
             exit();
         }
     }

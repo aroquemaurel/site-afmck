@@ -1,6 +1,7 @@
 <?php
 declare(strict_types = 1);
 use database\DatabaseUser;
+use Doctrine\ORM\EntityManager;
 use models\User;
 
 /**
@@ -14,6 +15,8 @@ class Visitor {
     private static $instance;
     private $lastPage;
     private $currentPath;
+
+    private static $entityManager;
 
     private function __construct() {
         $this->currentPath = '.';
@@ -148,6 +151,14 @@ class Visitor {
 
     public function removeUser() {
         $this->user = null;
+    }
+
+    public static function setEntityManager(EntityManager $entityManager) {
+        self::$entityManager = $entityManager;
+    }
+
+    public static function getEntityManager() : EntityManager {
+        return self::$entityManager;
     }
 
 } 

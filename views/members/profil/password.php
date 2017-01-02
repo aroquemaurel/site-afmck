@@ -10,7 +10,7 @@
         </div>
 
         <?php
-        include(Visitor::getInstance()->getRootPath().'/views/includes/formPassword.php');
+        include(Visitor::getRootPath().'/views/includes/formPassword.php');
         ?>
     <hr class="colorgraph">
         <button id="submit" type="submit" style="margin: auto; width: 250px; "
@@ -22,4 +22,4 @@
 
 </div>
 <?php
-$script = '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formPassword.js"></script>';
+$script = '<script src="' . Visitor::getRootPage() . '/views/formPassword.js"></script>';

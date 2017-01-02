@@ -6,7 +6,7 @@ include('../../begin.php');
 
 
 $title = 'Administration des forums';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Administration','#'), new Link('Forums','#')));
 
 $forumRepo = $entityManager->getRepository('models\forum\Category');

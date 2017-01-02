@@ -7,8 +7,9 @@ use Doctrine\Common\Proxy\Autoloader;
 require_once \Visitor::getRootPath()."/vendor/autoload.php";
 
 // Create a simple "default" Doctrine ORM configuration for Annotations
-$isDevMode = CONFIG == 'prod';
+$isDevMode = CONFIG == 'dev';
 $config = Setup::createAnnotationMetadataConfiguration(array(\Visitor::getRootPath()."/classes/models"), $isDevMode);
+
 if ($isDevMode) {
 	$config->setAutoGenerateProxyClasses(true);
 } else {
@@ -37,4 +38,5 @@ $conn = array(
 
 
 // obtaining the entity manager
-$entityManager = EntityManager::create($conn, $config);
+\Visitor::setEntityManager(EntityManager::create($conn, $config));
+$entityManager = \Visitor::getEntityManager();

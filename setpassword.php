@@ -32,9 +32,9 @@ if($user == null || $_GET['s'] != $user->getHashPassword()) {
 $title = 'Modifier le mot de passe';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Modifier le mot de passe', '#')));
 
-include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
-include(Visitor::getInstance()->getRootPath().'/views/setpassword.php');
-include(Visitor::getInstance()->getRootPath().'/views/includes/foot.php');
+include(Visitor::getRootPath().'/views/includes/head.php');
+include(Visitor::getRootPath().'/views/setpassword.php');
+include(Visitor::getRootPath().'/views/includes/foot.php');
 ?>
 
 

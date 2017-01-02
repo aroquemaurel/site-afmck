@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <h1>Ajouter une newsletter</h1>
     <div class="col-xs-14 col-sm-10 col-md-11 col-sm-offset-1 col-md-offset-2">
-        <form enctype="multipart/form-data"  role="form" method="post" action="<?php echo Visitor::getInstance()->getRootPage().'/admin/add-news.php';?>">
+        <form enctype="multipart/form-data"  role="form" method="post" action="<?=Visitor::getRootPage().'/admin/add-news.php';?>">
             <hr class="colorgraph">
             <div class="row">
                 <div class="form-group">
@@ -39,7 +39,7 @@
             <button id="submit" type="submit" style="margin: auto; width: 250px; "
                     class="btn btn-primary btn-block btn-lg">
                 <i class="glyphicon glyphicon-ok-sign"></i>
-                <?php echo (isset($news) ? "Modifier" : "Ajouter")." la news"?>
+                <?=(isset($news) ? "Modifier" : "Ajouter")." la news"?>
             </button>
 
         </form>
@@ -83,7 +83,7 @@ reader.readAsDataURL(this.files[0]);
 $(this).hide();
 $(\"#abcd\" + abc).append($(\"<img/>\", {
 id: 'img',
-src: '".Visitor::getInstance()->getRootPage()."/style/img/x.png"."',
+src: '".Visitor::getRootPage()."/style/img/x.png"."',
 alt: 'delete'
 }).click(function() {
     $(this).parent().parent().remove();

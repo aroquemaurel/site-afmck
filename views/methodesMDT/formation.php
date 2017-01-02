@@ -12,7 +12,7 @@
         <p><strong>En tant que professionnel</strong> la formation suivie et l'adhésion à notre association vous permettront d'augmenter votre efficacité en toute sécurité dans votre pratique quotidienne ainsi que votre visibilité sur une région d'exercice donnée. Cette démarche nécessite un engagement personnel de professionnel de santé seul capable de garantir un haut niveau de compétence dans votre pratique quotidienne. </p>
 
         <ul>
-        <li><i class="glyphicon glyphicon-pushpin"></i> <a href="<?php echo Visitor::getInstance()->getRootPage()?>/AFMcK/charte.php">Consulter la charte de bonne pratique</a></li>
+        <li><i class="glyphicon glyphicon-pushpin"></i> <a href="<?= Visitor::getRootPage()?>/AFMcK/charte.php">Consulter la charte de bonne pratique</a></li>
         <li><i class="glyphicon
         "></i> <a href="../praticiens.php">Vérifier le niveau de formation de votre thérapeute</a></li>
         </ul>
@@ -40,7 +40,7 @@
         <p>Résumés d'articles à consulter avant de suivre le cours Mc Kenzie Partie A:</p>
 
         <ul>
-            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?php echo Visitor::getInstance()->getRootPage().
+            <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?= Visitor::getRootPage().
                     "/docs/formation/Kuslich trad resum prealables cours McKenzie_AFMcK.doc";?>">Kuslich trad resum prealables cours McKenzie_AFMcK.pdf</a>
             </li>
         </ul>

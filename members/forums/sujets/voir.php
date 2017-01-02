@@ -30,7 +30,7 @@ if(!$forum->hasRights(Visitor::getInstance()->getUser())) {
 }
 $currentPage = isset($_GET['p']) && is_numeric($_GET['p']) ? $_GET['p'] : 1;
 $title = 'Voir le sujet « '.$topic->getTitle().' »';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Forums',Visitor::getRootPage().'/members/forums/'),
     new Link('Voir le forum « '.$forum->getName().' »', Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId()),
     new Link('Voir le sujet « '.$topic->getTitle().' »', '#')));

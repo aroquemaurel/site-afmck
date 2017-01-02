@@ -3,7 +3,7 @@ use utils\Utils;
 
 $breadcrumb->display()?>
 <div class="container forums-page">
-    <h1><?php echo $title;?></h1>
+    <h1><?= $title;?></h1>
     <?php
     $catIt = 0;
     $catForum = 0;
@@ -35,7 +35,6 @@ $breadcrumb->display()?>
                     <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>';
                 }
-            //echo '</tr>';
             foreach($category->getForums() as $forum) {
                 if($forum->hasRights(Visitor::getInstance()->getUser())) {
                     echo '<tr class="' . ($forum->hasRead(Visitor::getInstance()->getUser()) || $title == 'Administration des forums' ? 'read' : 'unread') . '">';

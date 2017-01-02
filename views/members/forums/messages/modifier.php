@@ -1,12 +1,12 @@
 <?php
 $breadcrumb->display()?>
 <div class="container" style="">
-    <h1><?php echo $title;?></h1>
+    <h1><?= $title;?></h1>
     <?php
     $titleBtn = "Modifier un message";
     ?>
     <form enctype="multipart/form-data"  role="form" method="post"
-          action="<?php echo Visitor::getRootPage().'/members/forums/messages/modifier.php?id='.$post->getId();?>">
+          action="<?= Visitor::getRootPage().'/members/forums/messages/modifier.php?id='.$post->getId();?>">
             <?php
             if($post->getTopic()->getCreator()->getId() == Visitor::getInstance()->getUser()->getId()) {
                 echo '
