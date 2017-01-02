@@ -14,8 +14,9 @@ use Visitor;
 
 /**
  * @Entity(repositoryClass="database\repository\TopicRepository")
- * @Table(name="forum_topic", indexes={@Index(columns={"title", "subtitle"}, flags={"fulltext"})})
+ * @Table(name="forum_topic", indexes={@Index(columns={"title", "subtitle"})})
  **/
+//, flags={"fulltext"}
 class Topic
 {
     /** @Id @Column(type="integer") @GeneratedValue **/

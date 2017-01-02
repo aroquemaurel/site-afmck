@@ -1,11 +1,17 @@
 <?php include('menu.php') ?>
 <ul class="nav navbar-nav">
     <!-- Classic list -->
-    <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Travaux de l'association<b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li>
-                <!-- Content container to add padding -->
-                <div class="yamm-content">
+    <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Les travaux de l'association<b class="caret"></b></a>
+        <ul role="menu" class="dropdown-menu">
+            <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/'?>">Le top des archives</a></li>
+            <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/'?>">L'année en cours</a></li>
+            <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/'?>">Les études de l'association</a></li>
+            <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/'?>">Les fiches bilan et d'exercices</a></li>
+            <!-- TODO chemin -->
+            <li><a href="<?=Visitor::getRootPage().'/members/outils-de-travail/documentations/com.php'?>">La communication sur le MDT</a></li>
+
+            <!-- Content container to add padding -->
+              <!--  <div class="yamm-content">
                     <div class="row">
                         <ul class="col-sm-2 list-unstyled">
                             <li>
@@ -63,6 +69,7 @@
                     </div>
                 </div>
             </li>
+            -->
         </ul>
     </li>
     <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Outils de travail<b class="caret"></b></a>
@@ -77,7 +84,6 @@
                             </li>
                             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/documentations/fiches-bilan.php">Fiches Bilan</a></li>
                             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/documentations/fiches-exercices.php">Fiches d'exerices</a></li>
-                            <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/documentations/com.php">La com'</a></li>
                         </ul>
                         <ul class="col-sm-4 list-unstyled">
                             <li>

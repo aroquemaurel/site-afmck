@@ -58,7 +58,7 @@ final class Versions
   'symfony/yaml' => 'v2.8.15@befb26a3713c97af90d25dd12e75621ef14d91ff',
   'zendframework/zend-code' => '3.1.0@2899c17f83a7207f2d7f53ec2f421204d3beea27',
   'zendframework/zend-eventmanager' => '3.1.0@c3bce7b7d47c54040b9ae51bc55491c72513b75d',
-  '__root__' => 'dev-56-refonte-du-menu-horizontal@ece3f7980f88fb442206af5fe0188f1164dc50c0',
+  '__root__' => 'dev-56-refonte-du-menu-horizontal@786da4c0f3a1a04d5d48559eda8523af8dba3ec1',
 );
 
     private function __construct()
