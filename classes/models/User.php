@@ -175,7 +175,7 @@ class User {
 
     public function mustSignedChart() : bool {
         return $this->hasSigned == -1 && $this->levelFormation >= 4 && $this->mailValidation != 0
-        && $this->disable!=1;
+        && !$this->disable;
     }
 
     public function addNewsToSend(News $news) {
@@ -214,7 +214,7 @@ class User {
 
     public function valid() {
         $currentDate = new DateTime();
-        $this->disable = 0;
+        $this->disable = false;
         $this->askReadhesion = NULL;
         $this->askValidation = NULL;
         $year = intval($currentDate->format("Y"));
@@ -253,7 +253,7 @@ class User {
     public function unvalid()
     {
         $this->validDate = NULL;
-        $this->disable = 1;
+        $this->disable = true;
     }
 
     public function commit() : bool {
@@ -287,18 +287,18 @@ class User {
         $this->cp = intval($data->cp);
         $this->hash = utf8_encode($data->forget);
         $this->formationDate = new DateTime($data->formationDate);
-        $this->levelFormation = utf8_encode($data->levelFormation);
+        $this->levelFormation = intval($data->levelFormation);
         $this->phoneMobile = utf8_encode($data->phoneMobile);
         $this->phonePro = utf8_encode($data->phonePro);
         $this->newsletter = utf8_encode($data->newsletter);
-        $this->disable = utf8_encode($data->disable);
+        $this->disable = $data->disable == 1;
         $this->payment = new PaymentType($data->payment);
         $this->hashMail = utf8_encode($data->hashMail);
         $this->mailValidation = utf8_encode($data->mailValidation);
-        $this->valuePaid = utf8_encode($data->valuePaid);
+        $this->valuePaid = intval($data->valuePaid);
         $this->hashPassword = $data->hashPassword;
-        $this->longitude = $data->longitude;
-        $this->latitude = $data->latitude;
+        $this->longitude = doubleval($data->longitude);
+        $this->latitude = doubleval($data->latitude);
         $this->hasSigned = intval($data->hasSigned);
 
         $this->askReadhesion = new DateTime($data->askReadhesion." 00:00:00");
@@ -453,7 +453,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getLongitude() : double
+    public function getLongitude() : float
     {
         return $this->longitude;
     }
@@ -461,7 +461,7 @@ class User {
     /**
      * @param mixed $longitude
      */
-    public function setLongitude(double $longitude)
+    public function setLongitude(float $longitude)
     {
         $this->longitude = $longitude;
     }
@@ -469,7 +469,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getLatitude() : double
+    public function getLatitude() : float
     {
         return $this->latitude;
     }
@@ -477,7 +477,7 @@ class User {
     /**
      * @param mixed $latitude
      */
-    public function setLatitude(double $latitude)
+    public function setLatitude(float $latitude)
     {
         $this->latitude = $latitude;
     }
@@ -628,7 +628,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getAskValidation() : bool
+    public function getAskValidation()
     {
         return $this->askReadhesion != NULL ? $this->askReadhesion : $this->askValidation;
     }
@@ -644,7 +644,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getValidDate() : DateTime
+    public function getValidDate()
     {
         return $this->validDate;
     }
@@ -841,7 +841,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getAskReadhesion() : bool
+    public function getAskReadhesion()
     {
         return $this->askReadhesion;
     }
@@ -849,7 +849,7 @@ class User {
     /**
      * @param mixed $askReadhesion
      */
-    public function setAskReadhesion(bool $askReadhesion)
+    public function setAskReadhesion(DateTime $askReadhesion)
     {
         $this->askReadhesion = $askReadhesion;
     }

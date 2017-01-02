@@ -3,7 +3,6 @@ declare(strict_types = 1);
 
 namespace viewers;
 
-use utils\Pagination;
 use utils\StringHelper;
 use \Visitor;
 use \models\News;
