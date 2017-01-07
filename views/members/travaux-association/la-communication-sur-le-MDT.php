@@ -1,6 +1,6 @@
 <?php $breadcrumb->display()?>
 <div class="container-fluid">
-    <h1>Outils de travail : La com'</h1>
+    <h1>La communication sur le MDT</h1>
     <div id="toc" class="toc"></div><!--/.well -->
 
     <div class="casclinic">
