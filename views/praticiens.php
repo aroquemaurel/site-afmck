@@ -42,8 +42,8 @@ $arrayUser = rtrim($arrayUser, ",");
 $arrayUser .= ']';
 $arrayAddress = rtrim($arrayAddress, ",");
 $arrayAddress .= ']';
-    $script = '   <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=places&sensor=false"></script>';
-//$script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
+$script = '<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=places&key=AIzaSyCqSdPbxboWbBCwD2qWcj-nfpMxn14jqUk"></script>';
+$script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
     $script .= "<script>
     var map;
     var elevator;
@@ -81,7 +81,7 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
     map.setCenter(places[0].geometry.location);
     map.setZoom(12);
 });
-    var markerCluster;";
+    var markerCluster;\n\t";
 
    // for (var x = 0; x < addresses.length; x++) {
 
@@ -90,10 +90,11 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
        if ($someUser->getAddress() != "") {
            if($someUser->getLatitude() == "" || $someUser->getLongitude() == "" ) {
                $script .= "$.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($someUser->getAddress()." ".$someUser->getCp()." ".$someUser->getTown()) . "&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location;";
-               $key = md5($someUser->getId().' Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres. Des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l’interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n’est pas mon cas, comme je disais là, puisque moi au contraire ');
+               if(data.results[0] != null) {
+                var p = data.results[0].geometry.location;\n";
+               $key = md5($someUser->getId().KEY_AJAX_PRATICIENS);
                $script .= '$.ajax({url: "'.Visitor::getRootPage().'/change-coords.php?key='.$key.'&id='.$someUser->getId().'&lgt="+p.lng+"&lat="+p.lat,
-                                     context: document.body}).done(function(){})});';
+                                     context: document.body}).done(function(){})}});';
                $db = new DatabaseUser();
                $u = $db->getUserById($someUser->getId());
                $someUser->setLongitude($u->getLongitude());
@@ -106,11 +107,6 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
                 position : latlng,
 				map : map,
 				draggable: false,
-<<<<<<< HEAD
-				content : '<p><b>" . $user->getFirstName() . " ".$user->getLastName()."</b><br/>".addslashes($user->getAddress()." <br/>".$user->getCp()." ".$user->getTown()).
-                   "<br/>".$user->getPhonePro().""./*$user->getMail()*/""."<br/><br/>Niveau ".$user->getlevelFormationString()."</p>'
-			}));";
-=======
 				content :'";
 
                foreach ($addresses as $user) {
@@ -119,7 +115,6 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
                }
                $script .= "'
                }));";
->>>>>>> prod
            }
        }
    }

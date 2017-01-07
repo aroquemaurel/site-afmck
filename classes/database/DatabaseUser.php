@@ -140,7 +140,7 @@ class DatabaseUser extends Database {
         }
         return $ret;
     }
-    public function getUsersOnMap(int $signed) : array {
+    public function getUsersOnMap() : array {
         $ret = array();
         $i = 0;
         $query = $this->dbAccess->prepare("SELECT * from `user` 
@@ -150,7 +150,6 @@ class DatabaseUser extends Database {
                                             AND levelFormation >= 4 
                                             AND validDate >= CURDATE()
                                             ORDER BY latitude, longitude");
-        $query->bindParam(":signed", $signed, PDO::PARAM_INT);
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
