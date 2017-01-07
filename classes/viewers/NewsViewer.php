@@ -107,13 +107,27 @@ class NewsViewer
         return $ret;
     }
 
-    public static function getHtmlNewslettersMemberList($news, $page, $nbPages) {
+    public static function getHtmlNewslettersMemberList($news, $page=-1, $nbPages=-1) {
         //$ret = (new Pagination($page, $nbPages, Visitor::getRootPage().'/admin/list-news.php'))->toString();
-        $ret = '<ul>';
+    /*    $ret = '<ul>';
         foreach($news as $new) {
-            $ret .= '<li>'.$new->getTitle().' <small>'.$new->getSubtitle().'</small></li>';
+            $ret .= '<li><a href="'.Visitor::getRootPage().'/members/newsletters/voir.php?id='.$new->getId().'">'.$new->getTitle().' <small>'.$new->getSubtitle().'</small></a></li>';
         }
         $ret .= '</ul>';
+
+        return $ret;
+*/
+        $i = 0;
+        $ret = '';
+        foreach($news as $new) {
+            if($i != 0) {
+                $ret .= '<a href="' . Visitor::getRootPage() . '/members/newsletters/voir.php?id=' . $new->getId() . '">';
+                $ret .= '<h3>' . $new->getTitle() . ' <small>' . $new->getSubtitle() . '</small></h3>';
+                $ret .= '<p style="font-size: 8pt">Par ' . $new->getAuthor()->toString() . ' le ' . $new->getDate()->format('d / m / Y à H:i') . '</p>';
+                $ret .= '</a>';
+            }
+            ++$i;
+        }
 
         return $ret;
 

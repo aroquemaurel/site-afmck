@@ -1,4 +1,7 @@
-<?php use viewers\HomeViewer;
+<?php use models\forum\Post;
+use models\forum\Topic;
+use viewers\forums\TopicForumViewer;
+use viewers\HomeViewer;
 
 $breadcrumb->display()?>
 
@@ -31,21 +34,29 @@ $breadcrumb->display()?>
         <div class="col-md-7">
             <?php
         echo '<h2>Dernières newsletters <small style="right: 130px; position: absolute"><a href="'.Visitor::getRootPage().'/members/newsletters/index.php">Toutes les news</a></small></h2>';
-                $i = 0;
-                foreach($listNews as $new) {
-                    if($i != 0) {
-                        echo '<a href="' . Visitor::getRootPage() . '/members/newsletters/voir.php?id=' . $new->getId() . '">';
-                        echo '<h3>' . $new->getTitle() . ' <small>' . $new->getSubtitle() . '</small></h3>';
-                        echo '<p style="font-size: 8pt">Par ' . $new->getAuthor()->toString() . ' le ' . $new->getDate()->format('d / m / Y à H:i') . '</p>';
-                        echo '</a>';
-                    }
-                    ++$i;
-                }
+        echo \viewers\NewsViewer::getHtmlNewslettersMemberList($listNews)
                 ?>
             </div>
         <div class="col-md-5">
             <h2>Derniers sujets sur le forum</h2>
-            <p><pre>// TODO Stubbed content</pre>
+            <?php
+            $topics = array();
+            $i = 0;
+            foreach(Post::getLastPosts(20) as $post) {
+                if($i >= 5) {
+                    break;
+                }
+                $topic = $post->getTopic();
+                if(!in_array($topic, $topics)) {
+                    $topics[] = $topic;
+                    echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/voir.php?id=' . $topic->getId() . '">';
+                    echo '<h3>' . $topic->getTitle() . ' <small>' . $topic->getSubtitle() . '</small></h3>';
+                    echo  '<p style="font-size: 8pt">Par ' . $post->getUser()->toString() . ' le ' . $topic->getDate()->format('d / m / Y à H:i') . '</p>';
+                    echo '</a>';
+                    ++$i;
+                }
+            }
+            ?>
         </div>
         </div>
 
