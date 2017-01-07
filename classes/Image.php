@@ -7,12 +7,15 @@
  */
 
 class Image {
-    public static function miniLink($folder, $filename, $title) {
-        if(!file_exists($folder.'/mini/'.$filename.'.jpg')) {
+    public static function miniLink($folder, $filename, $title, $target=true) {
+        if($target && !file_exists($folder.'/mini/'.$filename.'.jpg')) {
             self::createPdfMini($folder.'/'.$filename.'.pdf', $folder.'/mini/'.$filename.'.jpg');
         }
-        echo '<li><a  target="'.$folder.'/mini/'.$filename.'.jpg"
-                class="miniLink" name="'.$title.'"
+        echo '<li><a ';
+        if($target) {
+            echo 'target="' . $folder . '/mini/' . $filename . '.jpg" ';
+        }
+        echo 'class="miniLink" name="'.$title.'"
                 href="'.$folder.'/'.$filename.'.pdf">
                 <i class="glyphicon glyphicon-download-alt"></i>
                 '.$title.'</a></li>';

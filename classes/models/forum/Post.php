@@ -14,8 +14,10 @@ use utils\StringHelper;
 
 /**
  * @Entity(repositoryClass="database\repository\PostRepository")
- * @Table(name="forum_post", indexes={@Index(columns={"content",}, flags={"fulltext"})})
+ * @Table(name="forum_post")
  **/
+//, indexes={@Index(columns={"content"})}
+//, flags={"fulltext"}
 class Post
 {
     /** @Id @Column(type="integer") @GeneratedValue **/

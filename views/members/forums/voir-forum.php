@@ -1,7 +1,7 @@
 <?php
 use utils\Utils;
+use viewers\forums\TopicForumViewer;
 use viewers\Pagination;
-use viewers\TopicForumViewer;
 
 $breadcrumb->display()?>
 <div class="container" style="">
