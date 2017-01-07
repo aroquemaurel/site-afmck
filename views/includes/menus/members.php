@@ -4,7 +4,7 @@
     <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Travaux de l'association<b class="caret"></b></a>
         <ul role="menu" class="dropdown-menu">
             <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/le-top-des-archives.php'?>">Le top des archives</a></li>
-            <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/lannee-en-cours.php'?>">L'année en cours</a></li>
+            <!--<li><a href="<?=Visitor::getRootPage().'/members/travaux-association/lannee-en-cours.php'?>">L'année en cours</a></li>-->
             <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/les-etudes-de-lassociation.php'?>">Les études de l'association</a></li>
             <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/les-fiches-bilan-et-exercices.php'?>">Les fiches bilan et d'exercices</a></li>
             <li><a href="<?=Visitor::getRootPage().'/members/travaux-association/la-communication-sur-le-MDT.php'?>">La communication sur le MDT</a></li>
@@ -14,7 +14,7 @@
         <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Outils de travail <b class="caret"></b></a>
         <ul role="menu" class="dropdown-menu">
             <!-- TODO -->
-            <li><a href="#">Le logiciel de bilan MDT</a></li>
+            <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/logiciel-bilan-mdt.php"">Le logiciel de bilan MDT</a></li>
             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/partenariats/materiel.php">Le materiel</a></li>
             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/partenariats/monsitekine.php">Votre site professionnel : monsitekine.com</a></li>
         </ul>

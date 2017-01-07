@@ -1,4 +1,6 @@
-<?php use viewers\TopicForumViewer;
+<?php
+
+use viewers\forums\TopicForumViewer;
 
 $breadcrumb->display()?>
 <div class="container-fluid">
