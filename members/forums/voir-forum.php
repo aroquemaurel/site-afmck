@@ -29,7 +29,9 @@ if(!$forum->hasRights(Visitor::getInstance()->getUser())) {
 
 $title = 'Voir le forum « '.$forum->getName().' »';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
-    new Link('Forums',Visitor::getRootPage().'/members/forums/'), new Link('Voir le forum « '.$forum->getName().' »', '#')));
+    new Link('Forums',Visitor::getRootPage().'/members/forums/'),
+    new Link($forum->getCategory()->getName(), Visitor::getRootPage().'/members/forums/voir-categorie.php?id='.$forum->getCategory()->getId()),
+    new Link($forum->getName(), '#')));
 $currentPage = isset($_GET['p']) && is_numeric($_GET['p']) ? $_GET['p'] : 1;
 
 $topics = $forum->getTopics(($currentPage-1)*FORUM_NB_TOPIC_FORUM, $entityManager);

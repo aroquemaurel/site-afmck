@@ -6,7 +6,7 @@
  * Time: 00:21
  */
 
-namespace viewers;
+namespace viewers\forums;
 
 
 use models\forum\Topic;

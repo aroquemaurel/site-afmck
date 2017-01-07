@@ -32,8 +32,9 @@ $currentPage = isset($_GET['p']) && is_numeric($_GET['p']) ? $_GET['p'] : 1;
 $title = 'Voir le sujet « '.$topic->getTitle().' »';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Forums',Visitor::getRootPage().'/members/forums/'),
-    new Link('Voir le forum « '.$forum->getName().' »', Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId()),
-    new Link('Voir le sujet « '.$topic->getTitle().' »', '#')));
+    new Link($forum->getCategory()->getName(), Visitor::getRootPage().'/members/forums/voir-categorie.php?id='.$forum->getCategory()->getId()),
+    new Link($forum->getName(), Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId()),
+    new Link($topic->getTitle(), '#')));
 
 $topic->addViewer(Visitor::getInstance()->getUser(), $entityManager);
 

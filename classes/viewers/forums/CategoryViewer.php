@@ -14,8 +14,10 @@ class CategoryViewer
     public static function getLiCategoryList($categories) : string {
         $ret = '';
         foreach($categories as $cat) {
-            $ret .= '<li><a href="#">'.$cat->getName().'</a>';
+            $ret .= '<li><a href="'.\Visitor::getRootPage().'/members/forums/voir-categorie.php?id='.$cat->getId().'">'.$cat->getName().'</a>';
         }
         return $ret;
     }
+
+
 }
