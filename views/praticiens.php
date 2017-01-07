@@ -44,6 +44,7 @@ $arrayAddress = rtrim($arrayAddress, ",");
 $arrayAddress .= ']';
 $script = '<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=places&key=AIzaSyCqSdPbxboWbBCwD2qWcj-nfpMxn14jqUk"></script>';
 $script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
+$script .= '<script>MarkerClusterer.prototype.MARKER_CLUSTER_IMAGE_PATH_ = \''.Visitor::getRootPage().'/style/img/markerclustered/m'.'\'</script>';
     $script .= "<script>
     var map;
     var elevator;
@@ -101,7 +102,7 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
                $someUser->setLatitude($u->getLatitude());
            } else {
                $script .= "
-            var latlng = new google.maps.LatLng(" . $someUser->getLatitude() . ", " . $someUser->getLongitude() . ");
+            var latlng = new google.maps.LatLng(" . number_format($someUser->getLatitude(), 15, '.', '') . ", " . number_format($someUser->getLongitude(), 15, '.', '') . ");
             thereisAjax = false;
             addMarker(new google.maps.Marker({
                 position : latlng,
