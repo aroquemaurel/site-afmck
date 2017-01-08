@@ -292,7 +292,7 @@ class User {
         $this->phonePro = utf8_encode($data->phonePro);
         $this->newsletter = utf8_encode($data->newsletter);
         $this->disable = $data->disable == 1;
-        $this->payment = new PaymentType($data->payment);
+        $this->payment = new PaymentType(intval($data->payment));
         $this->hashMail = utf8_encode($data->hashMail);
         $this->mailValidation = utf8_encode($data->mailValidation);
         $this->valuePaid = intval($data->valuePaid);
@@ -378,7 +378,7 @@ class User {
      */
     public function getValuePaid() : int
     {
-        return $this->valuePaid;
+        return intval($this->valuePaid);
     }
 
     /**
@@ -447,7 +447,7 @@ class User {
      */
     public function setPayment(PaymentType $payment)
     {
-        $this->payment = new PaymentType($payment);
+        $this->payment = $payment;
     }
 
     /**
@@ -528,7 +528,7 @@ class User {
      */
     public function getFirstName() : string
     {
-        return ucfirst(strtolower($this->firstName));
+        return $this->firstName != NULL ? strval(ucfirst(strtolower($this->firstName))) : "";
     }
 
     /**
@@ -548,7 +548,7 @@ class User {
      */
     public function getLastName() : string
     {
-        return strtoupper($this->lastName);
+        return $this->lastName != NULL ? strtoupper($this->lastName) : "";
     }
 
     /**
@@ -564,7 +564,7 @@ class User {
      */
     public function getMail() : string
     {
-        return strtolower($this->mail);
+        return $this->mail != NULL ? strtolower($this->mail) : "";
     }
 
     /**
@@ -662,7 +662,7 @@ class User {
      */
     public function getAddress() : string
     {
-        return ($this->address);
+        return $this->address != NULL ? $this->address : "";
     }
 
     /**
@@ -678,7 +678,7 @@ class User {
      */
     public function getTown() : string
     {
-        return strtoupper($this->town);
+        return $this->town != NULL ? strtoupper($this->town) : "";
     }
 
     /**
@@ -694,7 +694,7 @@ class User {
      */
     public function getCp() : int
     {
-        return $this->cp;
+        return intval($this->cp);
     }
 
     /**
@@ -710,7 +710,7 @@ class User {
      */
     public function getLevelFormation() : int
     {
-        return $this->levelFormation;
+        return intval($this->levelFormation);
     }
 
     public function getLevelFormationString() : string {
@@ -741,7 +741,7 @@ class User {
     /**
      * @return mixed
      */
-    public function getFormationDate() : DateTime
+    public function getFormationDate()
     {
         return $this->formationDate;
     }
@@ -759,7 +759,7 @@ class User {
      */
     public function getPhonePro() : string
     {
-        return $this->phonePro;
+        return $this->phonePro != NULL ? $this->phonePro : "";
     }
 
     /**
@@ -775,7 +775,7 @@ class User {
      */
     public function getPhoneMobile() : string
     {
-        return $this->phoneMobile;
+        return $this->phoneMobile != NULL ? $this->phoneMobile : "" ;
     }
 
     /**
@@ -807,7 +807,7 @@ class User {
      */
     public function getComplementAddress() : string
     {
-        return ($this->complementAddress);
+        return $this->complementAddress != NULL ? $this->complementAddress : "";
     }
 
     /**

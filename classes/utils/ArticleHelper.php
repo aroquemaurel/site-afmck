@@ -9,6 +9,7 @@
 namespace utils;
 
 
+use models\articles\Article;
 use Visitor;
 
 class ArticleHelper

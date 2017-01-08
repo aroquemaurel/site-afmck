@@ -1,5 +1,5 @@
 <?php
-use models\articles\Article;
+declare(strict_types = 1);
 
 header( 'content-type: text/html; charset=utf-8' );
 
@@ -11,7 +11,6 @@ include(Visitor::getRootPath().'/config/doctrine.php');
 session_start();
 
 require_once('autoload.php');
-require_once(Visitor::getRootPath().'/libs/password_compat/lib/password.php');
 
 if(Visitor::getInstance()->isConnected() && !isset($_SESSION['isReloaded'])) {
     session_destroy();

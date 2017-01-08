@@ -78,7 +78,7 @@ class Mail {
         Vous vous êtes correctement inscris à l'AFMcK : <br/>
         Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
         <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
-        $ret .= $user->getPayment()->getExplainMessage();
+        $ret .= $user->getPayment()->getExplainMessage($user);
 
         $ret .=
             "<h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
@@ -92,7 +92,7 @@ class Mail {
         Vous trouverez ci-joint votre fiche au format PDF, vous devez signer cette fiche et la retourner par courrier ou par mail à
         <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>.<br/><br/>";
 
-        $ret .= $user->getPayment()->getExplainMessage();
+        $ret .= $user->getPayment()->getExplainMessage($user);
 
         $ret .=
             "<h2>".($user->getFirstName()." ".$user->getLastName())."</h2>".$user->toHtml(false)."<br/><br/>
