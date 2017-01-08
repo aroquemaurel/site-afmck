@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 namespace searchers;
 use Doctrine\ORM\Query\ResultSetMapping;
+use Visitor;
 
 /**
  * Created by PhpStorm.
@@ -12,33 +13,18 @@ use Doctrine\ORM\Query\ResultSetMapping;
  */
 class ForumSearcher extends AbstractSearcher
 {
-    private $topicRepo;
-    private $postRepo;
-
-    public function __construct()
-    {
-        $this->topicRepo = \Visitor::getEntityManager()->getRepository('models\forum\Topic');
-        $this->postRepo = \Visitor::getEntityManager()->getRepository('models\forum\Post');
-    }
-
     public function search(string $search) : array
     {
-        // search topics by title/subtitle
-        $query = $this->topicRepo->createQueryBuilder('a')
-            ->where('a.title LIKE :title')
-            ->orWhere('a.subtitle LIKE :subtitle')
-            ->setParameter('title', '%'.$search.'%')
-            ->setParameter('subtitle', '%'.$search.'%')
-            ->getQuery();
-        $ret['topics'] = $query->getResult();
+        $qb = Visitor::getEntityManager()->createQueryBuilder();
+        $qb
+            ->select('p', 't')
+            ->from('models\forum\Post', 'p')
+            ->leftJoin('p.topic', 't')
+            ->where('t.title LIKE :search')
+            ->orWhere('t.subtitle LIKE :search')
+            ->orWhere('p.content LIKE :search')
+            ->setParameter('search', '%'.$search.'%');
 
-        // search topics by post content
-        $query = $this->postRepo->createQueryBuilder('a')
-            ->where('a.content LIKE :content')
-            ->setParameter('content', '%'.$search.'%')
-            ->getQuery();
-        $ret['posts'] = $query->getResult();
-
-        return $ret;
+        return $qb->getQuery()->getResult();
     }
 }

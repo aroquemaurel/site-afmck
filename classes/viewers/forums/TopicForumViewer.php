@@ -24,7 +24,7 @@ class TopicForumViewer
         return $ret;
     }
 
-    public static function getTopicsLine(Topic $topic) : string {
+    public static function getTopicsLine(Topic $topic, bool $displayForum=false) : string {
         $ret = '';
         if(!$topic->isHided() || ($topic->isHided() && Visitor::getInstance()->getUser()->isModerator())) {
             $ret .= '<tr class="'.($topic->hasRead(Visitor::getInstance()->getUser())?'read': 'unread').'" >';
@@ -42,7 +42,13 @@ class TopicForumViewer
             $ret .= '</td>';
             $nbPosts = $topic->getNbPosts(Visitor::getEntityManager());
             $lastPost = $topic->getLastPost(Visitor::getEntityManager());
-            $ret .= '<td style="width: 100px;" class="forum-stats">'.$nbPosts.' message'.($nbPosts > 1 ? 's':'').'</td>';
+            if(!$displayForum) {
+                $ret .= '<td style="width: 100px;" class="forum-stats">' . $nbPosts . ' message' . ($nbPosts > 1 ? 's' : '') . '</td>';
+            } else {
+                $forum = $topic->getForum();
+                $ret .= '<td style="width: 250px; font-size: 10pt" class"forum-stats">'.
+                    '<a href="'.Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId().'">'.$forum->getName().'</a></td>';
+            }
             $ret .= '<td class="forum-stats">Dernier message de <br/><b>'.$lastPost->getUser()->getName().'</b> <br/>le '.($lastPost->getDate()->format('d/m/Y à H:i')).'</td>';
             $ret .= '</tr>';
         }

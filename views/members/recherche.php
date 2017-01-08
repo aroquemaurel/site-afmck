@@ -39,18 +39,11 @@ $breadcrumb->display()?>
     <?php
     $used = array();
     echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
-    foreach($result['forum']['posts'] as $post) {
+    foreach($result['forum'] as $post) {
         $topic = $post->getTopic();
         if(!in_array($topic->getId(), $used)) {
             $used[] = $topic->getId();
-            echo TopicForumViewer::getTopicsLine($topic);
-        }
-    }
-
-    foreach($result['forum']['topics'] as $topic) {
-        if(!in_array($topic->getId(), $used)) {
-            $used[] = $topic->getId();
-            echo TopicForumViewer::getTopicsLine($topic);
+            echo TopicForumViewer::getTopicsLine($topic, true);
         }
     }
     echo '</table>';
