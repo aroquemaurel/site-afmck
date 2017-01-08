@@ -60,6 +60,9 @@ $folder = Visitor::getRootPage()."/docs/members/kiosque";
                 "Contribution de la méthode McKenzie à l'évaluation et au traitement des patients lombalgique.<br />G. SAGI, J. OTERO, Kinésitherapie Scientifique 2012 ");
             Image::miniLink($folder."/fr", "canal lombaire etroit_AFMcK",
                 "L'imagerie des sténoses lombaires.<br />G. MORVAN, J Radiol 2002, 83:1165-1175 ");
+            Image::miniLink($folder."/fr", "canal lombaire etroit_AFMcK",
+                "La méthode McKenzie diagnostic et thérapie mécanique du rachis et des extrémités.<br/>
+                    G. SAGI, P. BOUDOT et D. VANDEPUT EMC — Février 2011");
             Image::miniLink($folder."/en", "Recovery of motor deficit 2014_AFMcK",
                 "Recovery of Motor Deficit Accompanying Sciatica
             <small>G.M Overdevest, C. Vlegeert-Lankamp, C.H. Jacobs</small>, The Spine Journal");
@@ -100,6 +103,8 @@ herniated mass and correlation with clinical outcome.<br/><small>E TAKADA and M 
         Image::miniLink($folder."/en", "magnetic-resonance scans cervical spine_AFMcK",
             "Abnormal magnetic-resonance scans of the cervical spine in asymptomatic subjects.<br/>
             <small>1990 SD BODEN</small>, The Journal of Bone and Joint Surgery ");
+        Image::miniLink($folder."/fr", "EMC fev 2011 _AFMcK",
+            "Etude de cas: différenciation entre dérangement postérieur et antérieur.<br />J. Anspach-Rickey, IJMDT 2010 vol 2 page 41-45 ");
         ?>
     </ul>
 
@@ -137,8 +142,14 @@ Australian Journal of Physiotherapy 2004 vol.50 ");
             "Enquête relative au système McKenzie de classification des atteintes au niveau des extrémités.<br/><small>S. J. May, R. Rosedale, traduction F. Steimer</small>, Rapport de recherche. Phys Ther. 2012 ");
         ?>
     </ul>
-    <!--<h3>Articles en langue originale</h3>-->
+    <h3>Articles en langue originale</h3>
+    <ul>
+<?php
+Image::miniLink($folder."/fr", "EMC fev 2011 _AFMcK",
+    "Etude de cas: différenciation entre dérangement postérieur et antérieur.<br />J. Anspach-Rickey, IJMDT 2010 vol 2 page 41-45 ");
 
+?>
+    </ul>
     <h2>Épaule</h2>
     <h3>Articles traduits par l'AFMcK</h3>
     <ul>
@@ -148,12 +159,13 @@ Australian Journal of Physiotherapy 2004 vol.50 ");
     ?>
     </ul>
     <h3>Articles en langue originale</h3>
-    <ul>
+        <ul>
         <?php
         Image::miniLink($folder."/traduction", "Algorithme decisionnel des derangements d'epaule_AFMcK",
             "Algorithme décisionnel pour les dérangements d'épaule.<br/><small>Jean-Philippe Deneuville</small>, 
                     Basé sur les travaux de Scott Herbowy (Diplomé MDT), nov 2013 ");
-
+        Image::miniLink($folder."/fr", "EMC fev 2011 _AFMcK",
+            "Etude de cas: différenciation entre dérangement postérieur et antérieur.<br />J. Anspach-Rickey, IJMDT 2010 vol 2 page 41-45 ");
         ?>
     </ul>
     <h2>Généralités</h2>
@@ -182,25 +194,50 @@ Australian Journal of Physiotherapy 2004 vol.50 ");
     Image::miniLink($folder."/traduction", "Diagnostic et traitement bases sur les preuves de l'articulation sacro-iliaque douloureuse_AFMcK",
         "Diagnostic et traitement basés sur les preuves de l'articulation sacro-iliaque douloureuse
 <small>Mark Laslett</small>, Journal of Manual & Manipulative Therapy 2008 Vol.16 - N°3 ");
-
     ?>
 </ul>
     <h3>Articles en langue originale</h3>
-
+    <ul>
+        <?php
+        Image::miniLink($folder."/traduction", "BERTHELOT-LASLETT_AFMcK",
+            "Signes cliniques assurant l'origine sacro-iliaque d'une douleur<br/><small>Jean Marie BERTHELOT et Mark LASLETT</small>, Janvier 2009");
+        Image::miniLink($folder."/en", "LASLET 2003_AFMcK",
+            "Diagnosis painful sacroiliac joints:
+                A validity study of a McKenzie evaluation and sacroiliac provocation tests.<br/>
+                    <small>M Laslett, S B Young, C N Aprill et B McDonald</small>, Australian Journal ofPhysiotherapy 2003 vol.49");
+        ?>
+    </ul>
     <h2>Généralités et présentation MDT</h2>
     <h3>Articles traduits par l'AFMcK</h3>
         <ul>
             <?php
-            Image::miniLink($folder."/en", "KHAN_2009_Mecanotherapie",
-                "Mécanothérapie : comment la prescription d’exercices des
-                            kinésithérapeutes stimulent-t-elles la réparation tissulaire ?<br/>
-                    <small>K M Khan, A Scott</small>");
-
-
+            Image::miniLink($folder."/fr", "DOSSIER McKENZIE ANNALES KINE JUIL 05_AFMcK",
+                "Dossier « La Méthode McKENZIE ».<br/><small>Michel GEDDA</small>, Annales Kiné Juillet 2005");
             ?>
         </ul>
 
-    <!--<h3>Articles en langue originale</h3>-->
+    <h3>Articles en langue originale</h3>
+    <ul>
+        <?php
+        Image::miniLink($folder."/en", "LASLET 2003_AFMcK",
+            "Diagnosis painful sacroiliac joints:
+                A validity study of a McKenzie evaluation and sacroiliac provocation tests.<br/>
+                    <small>M Laslett, S B Young, C N Aprill et B McDonald</small>, Australian Journal ofPhysiotherapy 2003 vol.49");
+        Image::miniLink($folder."/fr", "Classifier patients rachialgiques_AFMcK",
+            "Classifier les patients rachialgiques en sous-groupes homogenes:
+                    Une nécessité pour rendre les études cliniques pertinentes. <br/><small>Gabor SAGI et Jacky OTERO</small>");
+
+        Image::miniLink($folder."/fr", "Revue de medecine orthopedique mars 2000_AFMcK",
+            "La méthode McKENZIE<br/><small>D. CYPEL, R. McKENZIE, G. SAGI et R. DONELSON</small>, Revue de médecine orthopédique N°60 Mars 2000");
+
+        Image::miniLink($folder."/fr", "SAGI 2010 Pref Dir Kine Rev_AFMcK",
+            "Recherche d'une préférence directionnelle avec la méthode McKenzie dans l'évaluation de patients rachialgiques.<br/>
+                        <small>Gabor SAGI</small>, 2010");
+
+        Image::miniLink($folder."/en", "standing on giant's shoulders_AFMcK",
+            "Survey categorizes the seven most influential people in orthopedic PT.<br /><small>Robert J Schrupp</small>, MA,PT, Honoring our Giants, vol.15, issue 14, page61");
+        ?>
+    </ul>
 <h2>Interviews</h2>
 <ul>
     <?php
