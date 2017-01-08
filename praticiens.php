@@ -1,8 +1,9 @@
 <?php
+$title = 'Praticiens';
+
 include('begin.php');
 use utils\Link;
 
-$title = 'Praticiens';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Praticiens', '#')));
 $db = new database\DatabaseUser();
 $users = $db->getUsersOnMap();

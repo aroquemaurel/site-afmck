@@ -1,9 +1,10 @@
 <?php
+$title = 'Réadhésion';
+
 include('begin.php');
 use utils\Link;
 
 require_once('libs/password_compat/lib/password.php');
-$title = 'Réadhésion';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Réadhésion', '#')));
 
 $loginOk = false;

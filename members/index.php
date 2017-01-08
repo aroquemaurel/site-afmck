@@ -1,4 +1,6 @@
 <?php
+$title = 'Accueil membres';
+
 include('../begin.php');
 use utils\Link;
 

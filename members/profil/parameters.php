@@ -1,8 +1,9 @@
 <?php
+$title = 'Paramètres';
+
 include('../../begin.php');
 use utils\Link;
 
-$title = 'Paramètres';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Paramètres', '#')));
 

@@ -1,10 +1,10 @@
 <?php
 use utils\Breadcrumb;
 use utils\Link;
+$title = 'Liste des newsletters';
 
 include('../../begin.php');
 
-$title = 'Liste des newsletters';
 $breadcrumb = new Breadcrumb([new Link('home', 'index.php'),
     new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Liste des newsletters', '#')]);

@@ -1,11 +1,12 @@
 <?php
+$title = 'Inscription';
+
 include('begin.php');
 use utils\Link;
 use models\User;
 
 require_once('libs/password_compat/lib/password.php');
 
-$title = 'Inscription';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Inscription', '#')));
 $editing = false;
 

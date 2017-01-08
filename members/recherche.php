@@ -1,10 +1,11 @@
 <?php
+$title = 'Recherche';
+
 include('../begin.php');
 
 use utils\Link;
 use searchers\ForumSearcher;
 
-$title = 'Recherche';
 $breadcrumb = new utils\Breadcrumb([new Link('home', 'index.php'), new Link('Espace membres',
                                             Visitor::getInstance()->getRootPage()."/members/index.php"),
                                         new Link('Recherche','#')]);
