@@ -11,14 +11,20 @@ class Image {
         if($target && !file_exists($folder.'/mini/'.$filename.'.jpg')) {
             self::createPdfMini($folder.'/'.$filename.'.pdf', $folder.'/mini/'.$filename.'.jpg');
         }
+
         echo '<li><a ';
         if($target) {
             echo 'target="' . $folder . '/mini/' . $filename . '.jpg" ';
         }
         echo 'class="miniLink" name="'.$title.'"
-                href="'.$folder.'/'.$filename.'.pdf">
-                <i class="glyphicon glyphicon-download-alt"></i>
-                '.$title.'</a></li>';
+                href="'.$folder.'/'.$filename.'.pdf">';
+        if(strpos($folder, '/en')) {
+            echo '<img width="18" src="'.Visitor::getRootPage().'/style/img/flags/24/en.png" alt="en" /> ';
+        } else if(strpos($folder, '/fr') || strpos($folder, '/traduction') || strpos($folder, '/interview')) {
+            echo '<img width="18" src="'.Visitor::getRootPage().'/style/img/flags/24/fr.png" alt="fr" /> ';
+        }
+        //echo '<i class="glyphicon glyphicon-download-alt"></i>';
+        echo $title.'</a></li>';
     }
 
     public static function miniTooltipLink($folder, $filename, $title, $li=true) {
