@@ -1,6 +1,5 @@
-<?php use models\forum\Post;
-use models\forum\Topic;
-use viewers\forums\TopicForumViewer;
+<?php
+use models\forum\Post;
 use viewers\HomeViewer;
 
 $breadcrumb->display()?>
