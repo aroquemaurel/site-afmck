@@ -1,4 +1,7 @@
 <?php
+// TODO remove me.
+exit();
+
 $title = 'L\'année en cours';
 
 include('../../begin.php');

@@ -1,6 +1,4 @@
 <?php
-// TODO remove me.
-exit();
 $title = 'Le top des archives';
 include('../../begin.php');
 use utils\Link;

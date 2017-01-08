@@ -1,4 +1,6 @@
 <?php
+use models\articles\Article;
+
 header( 'content-type: text/html; charset=utf-8' );
 
 require_once('classes/Visitor.php');
@@ -12,9 +14,9 @@ require_once('autoload.php');
 require_once(Visitor::getRootPath().'/libs/password_compat/lib/password.php');
 
 if(Visitor::getInstance()->isConnected() && !isset($_SESSION['isReloaded'])) {
-session_destroy();
-session_start();
-$_SESSION['isReloaded'] = true;
+    session_destroy();
+    session_start();
+    $_SESSION['isReloaded'] = true;
 }
 
 setlocale(LC_ALL, 'fr_FR.utf8');
@@ -25,4 +27,9 @@ if(!Visitor::getInstance()->isConnected()) {
 }
 if(!isset($particularRights) || !$particularRights) {
     utils\Rights::hasRights();
+}
+
+
+if(isset($title)) {
+    \utils\ArticleHelper::updateArticleDatabase($title, \utils\UrlHelper::getCurrentPath());
 }
