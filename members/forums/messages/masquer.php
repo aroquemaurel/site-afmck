@@ -26,7 +26,7 @@ if(Visitor::getInstance()->getUser()->getId() != $post->getUser()->getId() && !V
     exit();
 }
 
-if($hided == true) {
+if($hided) {
     if (isset($_POST['msg'])) {
         $post->hide($_POST['msg'], Visitor::getInstance()->getUser(), $entityManager);
         $entityManager->persist($post);
