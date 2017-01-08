@@ -3,6 +3,7 @@ $title = 'Recherche';
 
 include('../begin.php');
 
+use searchers\ArticleSearcher;
 use utils\Link;
 use searchers\ForumSearcher;
 
@@ -12,10 +13,12 @@ $breadcrumb = new utils\Breadcrumb([new Link('home', 'index.php'), new Link('Esp
 
 $search = isset($_GET['search']) ? $_GET['search'] : null;
 
-$searcher = new ForumSearcher();
+$forumSearcher = new ForumSearcher();
+$articleSearcher = new ArticleSearcher();
 $result = array();
 if($search != null) {
-    $result = $searcher->search($search);
+    $result['forum'] = $forumSearcher->search($search);
+    $result['article'] = $articleSearcher->search($search);
 }
 
 include('../views/includes/head.php');

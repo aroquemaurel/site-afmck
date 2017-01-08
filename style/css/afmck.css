@@ -747,3 +747,8 @@ max-width: 90%;
     font-variant-caps: all-petite-caps;
     font-size: 10pt;
 }*/
+
+.keyword a:visited, .keyword a:hover, .keyword a, .keyword {
+    color: white;
+    font-size: 8pt;
+}

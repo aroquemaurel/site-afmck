@@ -9,21 +9,31 @@
 namespace searchers;
 
 
+use Visitor;
+
 class ArticleSearcher extends AbstractSearcher
 {
-    private $articleRepo;
-
     /**
      * ArticleSearcher constructor.
      */
     public function __construct()
     {
-        $this->articleRepo = \Visitor::getEntityManager()->getRepository('models\article\Article');
     }
 
 
     public function search(string $search) : array
     {
-        // TODO: Implement search() method.
+        $qb = Visitor::getEntityManager()->createQueryBuilder();
+        $qb
+            ->select('ka', 'a', 'k')
+            ->from('models\articles\KeywordArticle', 'ka')
+            ->leftJoin('ka.article', 'a')
+            ->leftJoin('ka.keyword', 'k')
+            ->where('k.name LIKE :search')
+            ->orWhere('a.title LIKE :search')
+            ->setParameter('search', '%'.$search.'%');
+            
+        return $qb->getQuery()->getResult();
+
     }
 }

@@ -21,8 +21,18 @@ class Keyword
     protected $name;
 
     /**
-     * @OneToMany(targetEntity="KeywordArticle", mappedBy="keyword")
+     * @return mixed
      */
-    protected $articles;
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /*
+     * @OneToMany(targetEntity="KeywordArticle", mappedBy="keyword")
+     *
+    protected $articles;*/
+
+
 
 }

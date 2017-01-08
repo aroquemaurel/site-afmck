@@ -18,15 +18,33 @@ class KeywordArticle
     protected $id;
 
     /**
-     * @ManyToOne(targetEntity="Article", inversedBy="articles")
+     * @ManyToOne(targetEntity="Article")
      * @JoinColumn(name="article_id", referencedColumnName="id")
      * */
     protected $article;
 
     /**
-     * @ManyToOne(targetEntity="Keyword", inversedBy="keywords")
+     * @ManyToOne(targetEntity="Keyword")
      * @JoinColumn(name="keyword_id", referencedColumnName="id")
      * */
     protected $keyword;
+
+    /**
+     * @return mixed
+     */
+    public function getArticle()
+    {
+        return $this->article;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getKeyword()
+    {
+        return $this->keyword;
+    }
+
+
 
 }
