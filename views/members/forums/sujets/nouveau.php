@@ -12,12 +12,12 @@ $breadcrumb->display();
         ?>
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-10">
             <div class="form-group">
-                <select tabindex="13" class="selectpicker form-control input-lg" required="required" id="levelFormation" name="levelFormation">
+                <select tabindex="13" class="selectpicker form-control input-lg" required="required" id="announceType" name="announceType">
                     <option disabled selected>Type d'annonce</option>
-                    <option>Remplacement</option>
-                    <option>Praticien</option>
-                    <option>Assitanat</option>
-                    <option>Autre</option>
+                    <option value="1">Remplacement</option>
+                    <option value="2">Praticien</option>
+                    <option value="3">Assitanat</option>
+                    <option value="4">Autre</option>
                 </select>
             </div>
         </div>
@@ -31,7 +31,7 @@ $breadcrumb->display();
         </div>
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-6">
             <div class="form-group">
-                <input required="required" type="text" name="title" id="title"
+                <input required="required" type="text" name="town" id="town"
                        class="form-control input-lg" placeholder="Ville" tabindex="3"
                        value="<?php if(isset($news)) { echo $news->getTitle(); }?>"
                 >
@@ -39,17 +39,17 @@ $breadcrumb->display();
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="form-group">
-                <input required="required" type="text" name="Code postal" id="title"
-                       class="form-control input-lg" placeholder="Ville" tabindex="3"
+                <input required="required" type="text" name="postalCode" id="postalCode"
+                       class="form-control input-lg" placeholder="Code postal" tabindex="3"
                        value="<?php if(isset($news)) { echo $news->getTitle(); }?>"
                 >
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-6">
             <div class="form-group">
-                <div required="required" class='input-group date input-group-lg' id="formationDate">
-                    <input data-date-format="DD/MM/YYYY" tabindex="14" type='text'  id='formationDate1'
-                    name='formationDate' placeholder="Date de début" class="form-control input-lg"
+                <div required="required" class='input-group date input-group-lg' id="date">
+                    <input data-date-format="DD/MM/YYYY" tabindex="14" type='text'  id='date'
+                    name='date' placeholder="Date de début" class="form-control input-lg"
                            value=""
                     />
                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
@@ -67,7 +67,7 @@ $breadcrumb->display();
 
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-6">
             <div class="form-group">
-                <input required="required" type="text" name="title" id="title"
+                <input required="required" type="text" name="duration" id="duration"
                        class="form-control input-lg" placeholder="Durée" tabindex="3"
                        value="<?php if(isset($news)) { echo $news->getTitle(); }?>"
                 >
@@ -77,7 +77,7 @@ $breadcrumb->display();
             <div class="form-group">
                 <label><input tabindex="15" type="checkbox"
                         <?php /*if($user->getHasSigned() && $editing) echo "checked=checked"; */?>
-                              name="signed" id="signed"> &nbsp;Durée indeterminée</label>
+                              name="indeterminatedDuration" id="indeterminatedDuration"> &nbsp;Durée indeterminée</label>
             </div>
         </div>
         <div class="row" style="width: 80%; margin: auto;margin-bottom: 20px;">

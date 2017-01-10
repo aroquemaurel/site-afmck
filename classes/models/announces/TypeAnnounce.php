@@ -1,5 +1,7 @@
 <?php
 
+namespace models\announces;
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
