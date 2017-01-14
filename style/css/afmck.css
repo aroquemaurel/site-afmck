@@ -740,7 +740,13 @@ max-width: 90%;
 .changes-home .bloc {
     margin-top: 5px;
 }
-
+.block-member-home h3 {
+    font-size: 12pt;
+    font-weight: bold;
+}
+.block-member-home .label {
+    font-size: 7.5pt;
+}
 
 /*.navbar .nav .dropdown {
 // TODO add class for all menu links

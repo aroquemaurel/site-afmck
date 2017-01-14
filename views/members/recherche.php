@@ -15,37 +15,47 @@ $breadcrumb->display()?>
     </form>
     -->
     <h2>Les articles du site</h2>
-    <table class="table table-hover forum-list" style="margin-top: 15px;">
-        <?php
-        $articles = array();
-        foreach($result['article'] as $articleKeyword) {
-            $article = $articleKeyword->getArticle();
-            if(!in_array($article->getId(), $articles)) {
-                echo '<tr>';
-                echo '<td><a href="' . Visitor::getRootPage() . $article->getPath() . '">' . $article->getTitle() . '</a></td>';
-                echo '<td><i class="glyphicon glyphicon-tags"></i>&nbsp;&nbsp;&nbsp;';
-                foreach ($article->getKeywords() as $articleKeyword) {
-                    $keyword = $articleKeyword->getKeyword()->getName();
-                    echo '<i class="label label-info keyword"><a href="' . Visitor::getRootPage() . '/members/recherche.php?search=' . $keyword . '">' . $keyword . '</a></i> ';
+    <?php
+        if(count($result['article']) == 0) {
+            echo 'Aucun article correspondant à votre recherche n\'a été trouvé.';
+        } else {
+            echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
+
+            $articles = array();
+            foreach($result['article'] as $articleKeyword) {
+                $article = $articleKeyword->getArticle();
+                if (!in_array($article->getId(), $articles)) {
+                    echo '<tr>';
+                    echo '<td><a href="' . Visitor::getRootPage() . $article->getPath() . '">' . $article->getTitle() . '</a></td>';
+                    echo '<td><i class="glyphicon glyphicon-tags"></i>&nbsp;&nbsp;&nbsp;';
+                    foreach ($article->getKeywords() as $articleKeyword) {
+                        $keyword = $articleKeyword->getKeyword()->getName();
+                        echo '<i class="label label-info keyword"><a href="' . Visitor::getRootPage() . '/members/recherche.php?search=' . $keyword . '">' . $keyword . '</a></i> ';
+                    }
+                    echo '</td>';
+                    $articles[] = $article->getId();
                 }
-                echo '</td>';
-                $articles[] = $article->getId();
+                echo '</tr>';
+                echo '</table>';
             }
-            echo '</tr>';
         }
         ?>
-    </table>
+
     <h2>Sur le forum</h2>
     <?php
     $used = array();
-    echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
-    foreach($result['forum'] as $post) {
-        $topic = $post->getTopic();
-        if(!in_array($topic->getId(), $used)) {
-            $used[] = $topic->getId();
-            echo TopicForumViewer::getTopicsLine($topic, true);
+    if(count($result['forum']) == 0) {
+        echo 'Aucun forum correspondant à votre recherche n\'a été trouvé.';
+    } else {
+        echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
+        foreach ($result['forum'] as $post) {
+            $topic = $post->getTopic();
+            if (!in_array($topic->getId(), $used)) {
+                $used[] = $topic->getId();
+                echo TopicForumViewer::getTopicsLine($topic, true);
+            }
         }
+        echo '</table>';
     }
-    echo '</table>';
 ?>
 </div>
