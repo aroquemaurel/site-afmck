@@ -9,6 +9,7 @@ namespace models\announces;
  * Date: 09/01/17
  * Time: 23:24
  */
+use database\DatabaseUser;
 use models\User;
 
 /**
@@ -28,6 +29,12 @@ class Announce
      * @JoinColumn(name="announces_type_id", referencedColumnName="id")
      */
     protected $type;
+
+    /**
+     * @ManyToOne(targetEntity="\models\forum\Topic")
+     * @JoinColumn(name="forum_topic_id", referencedColumnName="id")
+     */
+    protected $topic;
 
     /** @Column(type="string") **/
     protected $town;
@@ -165,12 +172,16 @@ class Announce
         $this->date = $date;
     }
 
+    public function getUser() {
+        $db = new DatabaseUser();
+        return $db->getUserById($this->idUser);
+    }
     /**
-     * @param mixed $idUser
+     * @return mixed
      */
-    public function setUser(User $user)
+    public function getTopic()
     {
-        $this->idUser = $user->getId();
+        return $this->topic;
     }
 
 

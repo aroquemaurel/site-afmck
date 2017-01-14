@@ -1,5 +1,6 @@
 <?php
 use models\forum\Post;
+use viewers\AnnounceViewer;
 use viewers\HomeViewer;
 
 $breadcrumb->display()?>
@@ -14,29 +15,29 @@ $breadcrumb->display()?>
     }
     ?>
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-7 block-member-home">
             <?= \viewers\NewsViewer::getHtmlNew($lastNew, 750); ?>
         </div>
         <div class="col-md-5">
-            <div class="row">
+            <div class="row block-member-home">
                 <h2>Dernières actualités</h2>
                 <?= HomeViewer::getNewThings() ?>
             </div>
-            <div class="row">
+            <div class="row block-member-home">
                 <h2>Demandes de remplacement</h2>
-                <p><pre>// TODO Stubbed content</pre>
+                <?= AnnounceViewer::getAnnouncesList($listAnnounces); ?>
                 </p>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-7 block-member-home">
             <?php
         echo '<h2>Dernières newsletters <small style="right: 130px; position: absolute"><a href="'.Visitor::getRootPage().'/members/newsletters/index.php">Toutes les news</a></small></h2>';
         echo \viewers\NewsViewer::getHtmlNewslettersMemberList($listNews)
                 ?>
             </div>
-        <div class="col-md-5">
+        <div class="col-md-5 block-member-home">
             <h2>Derniers sujets sur le forum</h2>
             <?php
             $topics = array();
