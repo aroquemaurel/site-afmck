@@ -23,9 +23,9 @@ if($forum == null) {
 
 if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
     // TODO corrects informations
-    $title = 'ANNOUNCE'.$_POST['title'];
-    $subtitle = 'ahah';
-    $content = 'supercontent'.$_POST['content'];
+    $title = $_POST['title'];
+    $subtitle = $_POST['subtitle'];
+    $content = $_POST['content'];
 
     if($forum->getName() == FORUM_NAME_ANNOUNCES) {
         // Add announce.
@@ -40,6 +40,11 @@ if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
         $announce->setType($announceType);
         $announce->setUser(Visitor::getInstance()->getUser());
         $entityManager->persist($announce);
+
+        // TODO no duration ?
+        $title = '['.$announceType->getLabel().'] '.$announce->getTown().' '.$announce->getPostalCode().' — '.$_POST['title'];
+        $subtitle = 'Dès le '.$_POST['date'].' / '.$_POST['duration'];
+        $content = $_POST['content'];
 
         $_SESSION['lastMessage'] = Popup::successMessage("Votre annonce a bien été créée");
     }

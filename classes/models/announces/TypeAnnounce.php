@@ -25,4 +25,13 @@ class TypeAnnounce
      */
     protected $announces;
 
+    /**
+     * @return mixed
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+
 }
