@@ -15,25 +15,25 @@ class HomeViewer
         return '<div class="changes-home">
 <div class="bloc">
     <span class="container-img img-rounded">
-<img class=" img-news" src="http://afmck.fr/docs/members/kiosque/newsletters/mini/MDT%20World%20Press%20Newsletter%20Vol.4%20N3%20Francais.jpg"
+<img class=" img-news" src="https://afmck.fr/docs/members/kiosque/newsletters/mini/MDT%20World%20Press%20Newsletter%20Vol.4%20N3%20Francais.jpg"
 />
 </span>
     <span class="description">
-<a href="http://afmck.fr/docs/members/kiosque/newsletters/MDT%20World%20Press%20Newsletter%20Vol.4%20N3%20Francais.pdf">
+<a href="https://afmck.fr/docs/members/kiosque/newsletters/MDT%20World%20Press%20Newsletter%20Vol.4%20N3%20Francais.pdf">
     Newsletter Vol3 N°4 (Français)
 </a>
 <br/>
-<a href="http://afmck.fr/docs/members/kiosque/newsletters/STartBackScreeningTool.zip">
+<a href="https://afmck.fr/docs/members/kiosque/newsletters/STartBackScreeningTool.zip">
 Start Back Screening Tool
 </a>
 </span>
 </div>
     <div class="bloc">
 <span class="container-img img-rounded">
-    <img class="img-news" src="http://afmck.fr/docs/members/afmckday/montpellier/Montpellier2016_cover.jpg" />
+    <img class="img-news" src="https://afmck.fr/docs/members/afmckday/montpellier/Montpellier2016_cover.jpg" />
 </span>
 <span class="description">
-    <a href="http://afmck.fr/members/travaux-association/journees/2016-montpellier.php">Intervention et bonus</a>
+    <a href="https://afmck.fr/members/travaux-association/journees/2016-montpellier.php">Intervention et bonus</a>
     sont en ligne !
 </span>
     </div>
