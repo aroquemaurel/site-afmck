@@ -52,7 +52,7 @@ class Visitor {
     }
 
     public function displayMenu() {
-        if(strpos($this->getCurrentFile(), 'members') || strpos($this->getCurrentFile(), 'admin')) {
+        if(strpos($this->getCurrentFile(), 'members') || strpos($this->getCurrentFile(), 'admin') || strpos($this->getCurrentFile(), 'CA')) {
             include($this->getRootPath() . '/views/includes/menus/members.php');
         } else {
             include($this->getRootPath() . '/views/includes/menus/visitors.php');
