@@ -16,7 +16,7 @@ final class Versions
   'doctrine/collections' => 'v1.3.0@6c1e4eef75f310ea1b3e30945e9f06e652128b8a',
   'doctrine/common' => 'v2.6.2@7bce00698899aa2c06fe7365c76e4d78ddb15fa3',
   'doctrine/dbal' => 'v2.5.5@9f8c05cd5225a320d56d4bfdb4772f10d045a0c9',
-  'doctrine/doctrine-bundle' => '1.6.4@dd40b0a7fb16658cda9def9786992b8df8a49be7',
+  'doctrine/doctrine-bundle' => '1.6.6@0f0c4df366bd1d36d38a27e2f5ff128e118ac969',
   'doctrine/doctrine-cache-bundle' => '1.3.0@18c600a9b82f6454d2e81ca4957cdd56a1cf3504',
   'doctrine/doctrine-migrations-bundle' => 'v1.2.1@6276139e0b913a4e5120fc36bb5b0eae8ac549bc',
   'doctrine/inflector' => 'v1.1.0@90b2128806bfde671b6952ab8bea493942c1fdae',
@@ -24,6 +24,7 @@ final class Versions
   'doctrine/lexer' => 'v1.0.1@83893c552fd2045dd78aef794c31e694c37c0b8c',
   'doctrine/migrations' => 'v1.5.0@c81147c0f2938a6566594455367e095150547f72',
   'doctrine/orm' => 'v2.5.6@e6c434196c8ef058239aaa0724b4aadb0107940b',
+  'ircmaxell/password-compat' => 'v1.0.4@5c5cde8822a69545767f7c7f3058cb15ff84614c',
   'jdorn/sql-formatter' => 'v1.2.17@64990d96e0959dff8e059dfcdc1af130728d92bc',
   'ocramius/package-versions' => '1.1.2@51e867c70f0799790b3e82276875414ce13daaca',
   'ocramius/proxy-manager' => '2.0.4@a55d08229f4f614bf335759ed0cf63378feeb2e6',
@@ -31,6 +32,7 @@ final class Versions
   'phpmailer/phpmailer' => 'v5.2.21@1d51856b76c06fc687fcd9180efa7a0bed0d761e',
   'psr/cache' => '1.0.1@d11b50ad223250cf17b86e38383413f5a6764bf8',
   'psr/log' => '1.0.2@4ebe3a8bf773a19edfe0a84b6585ba3d401b724d',
+  'spipu/html2pdf' => 'v4.6.1@4898439e170ebf032513b8d3a83f0f5ffe85fece',
   'symfony/asset' => 'v3.2.1@3fefb7894820447175818d3a86596c1f9a4fd78b',
   'symfony/cache' => 'v3.2.1@a2503bbf8ef729f4eb7b134efee6217f49ecd56d',
   'symfony/class-loader' => 'v3.2.1@87cd4e69435d98de01d0162c5f9c0ac017075c63',
@@ -56,9 +58,10 @@ final class Versions
   'symfony/templating' => 'v3.2.1@709cb8145bbac2514065111d9588b0c57aa3bb9d',
   'symfony/translation' => 'v3.2.1@5fd18eca88f4d187807a1eba083bc99feaa8635b',
   'symfony/yaml' => 'v2.8.15@befb26a3713c97af90d25dd12e75621ef14d91ff',
+  'tecnickcom/tcpdf' => '6.2.12@2f732eaa91b5665274689b1d40b285a7bacdc37f',
   'zendframework/zend-code' => '3.1.0@2899c17f83a7207f2d7f53ec2f421204d3beea27',
   'zendframework/zend-eventmanager' => '3.1.0@c3bce7b7d47c54040b9ae51bc55491c72513b75d',
-  '__root__' => 'dev-56-refonte-du-menu-horizontal@786da4c0f3a1a04d5d48559eda8523af8dba3ec1',
+  '__root__' => 'dev-dev/2.6/refonte@c0ceb84de2afa9b39ec7d1462731440e045bf306',
 );
 
     private function __construct()

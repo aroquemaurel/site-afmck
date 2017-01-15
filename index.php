@@ -1,7 +1,8 @@
 <?php
+$title = 'Accueil';
+
 include('begin.php');
 
-$title = 'Accueil';
 
 include(Visitor::getRootPath().'/views/includes/head.php');
 include(Visitor::getRootPath().'/views/index.php');

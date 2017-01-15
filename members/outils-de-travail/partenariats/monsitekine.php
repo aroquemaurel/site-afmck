@@ -1,8 +1,9 @@
 <?php
+$title = 'MonSiteKiné';
+
 include('../../../begin.php');
 use utils\Link;
 
-$title = 'MonSiteKiné';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Outils de travail','#'), new Link('Partenariats', '#'), new Link('MonSiteKiné', '#')));
 include(Visitor::getRootPath().'/views/includes/head.php');

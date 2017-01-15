@@ -1,11 +1,11 @@
 <?php
+$title = 'Inscription';
+
 include('begin.php');
+use models\PaymentType;
 use utils\Link;
 use models\User;
 
-require_once('libs/password_compat/lib/password.php');
-
-$title = 'Inscription';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Inscription', '#')));
 $editing = false;
 
@@ -44,7 +44,7 @@ if(isset($_POST['firstName'])) {
             exit();
         }
         $user->setLevelFormation($_POST['levelFormation']);
-        $user->setPayment($_POST['payment']);
+        $user->setPayment(new PaymentType(intval($_POST['payment'])));
         $user->setPhoneMobile($_POST['phoneMobile']);
         $user->setPhonePro($_POST['phonePro']);
         $user->setNewsletter(!isset($_POST['newsletter']));

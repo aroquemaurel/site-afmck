@@ -1,8 +1,9 @@
 <?php
+$title = 'Signer la charte';
+
 include('../begin.php');
 use utils\Link;
 
-$title = 'Signer la charte';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'),
     new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Signer la charte', '#'), new Link('Je signe !', '#')));

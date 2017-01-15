@@ -1,9 +1,9 @@
 <?php
+$title = 'Connexion';
+
 include('begin.php');
-require_once('libs/password_compat/lib/password.php');
 
 use utils\Link;
-$title = 'Connexion';
 
 if(!isset($_POST['inputAdeli']) || !isset($_POST['inputPassword'])) {
     $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Connexion', '#')));

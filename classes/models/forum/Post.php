@@ -231,4 +231,10 @@ class Post
         $this->isHided = null;
     }
 
+    public static function getLastPosts($nbTopics = 5) {
+        $repo = \Visitor::getEntityManager()->getRepository('models\forum\Post');
+        return $repo->findBy(array(), null, $nbTopics);
+    }
+
+
 }

@@ -1,8 +1,9 @@
 <?php
+$title = 'Manuel — Foire aux Questions';
+
 include('../../../begin.php');
 use utils\Link;
 
-$title = 'Manuel — Foire aux Questions';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Outils de travail','#'), new Link('Manuels', '#'), new Link('Foire aux questions', '#')));
 include(Visitor::getRootPath().'/views/includes/head.php');

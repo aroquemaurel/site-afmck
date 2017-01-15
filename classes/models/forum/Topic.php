@@ -296,4 +296,13 @@ class Topic
 
         return false;
     }
+
+    public static function getLastTopics($nbTopics = 5) {
+        $ret = array();
+        foreach(Post::getLastPosts($nbTopics) as $post) {
+            $ret[] = $post->getTopic();
+        }
+
+        return $ret;
+    }
 }

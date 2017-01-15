@@ -1,9 +1,10 @@
 <?php
+$title = 'Ma clé de déverrouillage';
+
 include('../../../begin.php');
 use database\DatabaseLicense;
 use utils\Link;
 
-$title = 'Ma clé de déverrouillage';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Outils de travail','#'), new Link('Logiciel de Bilan', '#'), new Link('Déverrouillage du logiciel', '#')));
 

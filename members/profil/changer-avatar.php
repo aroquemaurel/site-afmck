@@ -1,4 +1,6 @@
 <?php
+$title = 'Changer son avatar';
+
 include('../../begin.php');
 use utils\Link;
 use utils\Rights;
@@ -32,7 +34,6 @@ if(isset($_FILES["file"])) {
     header('Location: ' . Visitor::getRootPage().'/members/profil/changer-avatar.php');
     exit();
 }
-$title = 'Changer son avatar';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Mon profil',Visitor::getRootPage().'/members/mon-profil.php'), new Link('Changer d\'avatar', '#')));
 include('../../views/includes/head.php');

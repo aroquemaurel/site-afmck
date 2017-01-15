@@ -1,9 +1,6 @@
 #!/usr/local/bin/php.ORIG.5_4
 <?php
 require_once('../begin.php');
-//require_once('../autoload.php');
-require_once('../libs/password_compat/lib/password.php');
-
 
 /**
  * Script is executed by crontab of OVH every hours.

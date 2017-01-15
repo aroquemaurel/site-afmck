@@ -1,9 +1,10 @@
 <?php
+$title = 'Journées de l\'AFMcK — Lille 2015';
+
 include('../../../begin.php');
 
 use utils\Link;
 
-$title = 'Journées de l\'AFMcK — Lille 2015';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Journées de l\'association','#'), new Link('Lille 2015', '#')));
 include(Visitor::getRootPath().'/views/includes/head.php');

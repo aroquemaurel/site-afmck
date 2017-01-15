@@ -3,8 +3,9 @@ include('begin.php');
 
 use database\DatabaseUser;
 use models\User; 
-require_once('libs/password_compat/lib/password.php');
+
 $err = false;
+
 if(isset($_GET['validation']) && isset($_GET['account'])) {
     $db = new DatabaseUser();
     $data = $db->getUser($_GET['account']);
@@ -12,7 +13,6 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
     if($data != null) {
         $user = new User();
         $user->hydrat($data);
-
         if ($user->getHashMail() == $_GET['validation']) {
             $user->setMailValidation(1);
             $user->commit();

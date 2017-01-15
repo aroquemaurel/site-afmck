@@ -1,8 +1,9 @@
 <?php
+$title = 'J\'ai oublié mon mot de passe';
+
 include('begin.php');
 use utils\Link;
 
-$title = 'J\'ai oublié mon mot de passe';
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('J\'ai oublié mon mot de passe', '#')));
 
 if(isset($_POST['adeliNumber']) && isset($_POST['email'])) {

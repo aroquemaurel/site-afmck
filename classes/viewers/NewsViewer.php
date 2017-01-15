@@ -25,16 +25,20 @@ class NewsViewer
         $ret .= '<p style="margin-top: -8px;margin-bottom:15px"><small>Posté le ' . $new->getDate()->format('d / m / Y à H:i') .
             ' par ' . $new->getAuthor()->getFirstName() . ' ' . $new->getAuthor()->getLastname() . '</small></p>';
 
+        $strPj = '';
+        if (count($new->getAttachments()) > 0) {
+            $strPj .= '<br/><div style="font-size:9.5pt">';
+            $strPj .= '<h5>Pièces jointes</h5>';
+            $strPj .= self::getHtmlAttachmentsNews($new);
+            $strPj .= '</div>';
+        }
+
         if($size == -1 || $size >= strlen($new->getContent())) {
             $ret .= $new->getContent();
-            if (count($new->getAttachments()) > 0) {
-                $ret .= '<br/><div style="font-size:9.5pt">';
-                $ret .= '<h5>Pièces jointes</h5>';
-                $ret .= self::getHtmlAttachmentsNews($new);
-                $ret .= '</div>';
-            }
+            $ret .= $strPj;
         } else {
             $ret .= StringHelper::truncate($new->getContent(), $size, ['html' => true, 'ending' => '...', 'exact'=>false]);
+            $ret .= $strPj;
             $ret .='<p style="text-align: center">';
             $ret .= '<a href="'.Visitor::getRootPage().'/members/newsletters/voir.php?id='.$new->getId().'">';
             $ret .= '<button type="button" id="acceptBtn" class="btn btn-primary">';
@@ -107,13 +111,18 @@ class NewsViewer
         return $ret;
     }
 
-    public static function getHtmlNewslettersMemberList($news, $page, $nbPages) {
-        //$ret = (new Pagination($page, $nbPages, Visitor::getRootPage().'/admin/list-news.php'))->toString();
-        $ret = '<ul>';
+    public static function getHtmlNewslettersMemberList($news, $page=-1, $nbPages=-1) {
+        $i = 0;
+        $ret = '';
         foreach($news as $new) {
-            $ret .= '<li>'.$new->getTitle().' <small>'.$new->getSubtitle().'</small></li>';
+            if($i != 0) {
+                $ret .= '<a href="' . Visitor::getRootPage() . '/members/newsletters/voir.php?id=' . $new->getId() . '">';
+                $ret .= '<h3>' . $new->getTitle() . ' <small>' . $new->getSubtitle() . '</small></h3>';
+                $ret .= '<p style="font-size: 8pt">Par ' . $new->getAuthor()->toString() . ' le ' . $new->getDate()->format('d / m / Y à H:i') . '</p>';
+                $ret .= '</a>';
+            }
+            ++$i;
         }
-        $ret .= '</ul>';
 
         return $ret;
 
