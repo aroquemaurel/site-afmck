@@ -14,11 +14,33 @@ $breadcrumb->display()?>
             </div>
 <?php
 $nbPraticiens = 0;
+$nbDLevel = 0;
+$nbCertif = 0;
+$nbDiplo = 0;
 foreach($users as $addresses) {
-$nbPraticiens += count($addresses);
+    $nbPraticiens += count($addresses);
+    foreach($addresses as $addr) {
+        switch($addr->getLevelFormationString()) {
+            case "D":
+                ++$nbDLevel;
+                break;
+            case "Certifié":
+                ++$nbCertif;
+                break;
+            case "Diplômé":
+                ++$nbDiplo;
+                break;
+        }
+    }
 }
 ?>
 <p>Il y a actuellement <?= count($users);?> cabinets, de <?= $nbPraticiens;?> praticiens, sur la carte.</p>
+        <ul>
+            <li><img src="<?= Visitor::getRootPage().'/style/img/markerclustered/pinLevelD.png'?>"/>&nbsp;&nbsp;<?=$nbDLevel?> niveaux D</li>
+            <li><img src="<?= Visitor::getRootPage().'/style/img/markerclustered/pinCertif.png'?>"/>&nbsp;&nbsp;<?=$nbCertif?> certifiés</li>
+            <li><img src="<?= Visitor::getRootPage().'/style/img/markerclustered/pinDiplome.png'?>"/>&nbsp;&nbsp;<?=$nbDiplo?> diplomés</li>
+        </ul>
+
     </div><!-- fin de .introcarte -->
         <input id="pac-input" class="controls" type="text" placeholder="Rechercher un lieu">
         <div style="width: 700px; height: 500px" id="map-canvas"></div>
@@ -42,7 +64,7 @@ $arrayUser = rtrim($arrayUser, ",");
 $arrayUser .= ']';
 $arrayAddress = rtrim($arrayAddress, ",");
 $arrayAddress .= ']';
-$script = '<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=places&key=AIzaSyCqSdPbxboWbBCwD2qWcj-nfpMxn14jqUk"></script>';
+$script = '<script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&libraries=places&key=AIzaSyCqSdPbxboWbBCwD2qWcj-nfpMxn14jqUk"></script>';
 $script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
 $script .= '<script>MarkerClusterer.prototype.MARKER_CLUSTER_IMAGE_PATH_ = \''.Visitor::getRootPage().'/style/img/markerclustered/m'.'\'</script>';
     $script .= "<script>
@@ -85,12 +107,33 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
     var markerCluster;\n\t";
 
    // for (var x = 0; x < addresses.length; x++) {
+    $script .= "            
+    var pinColorD = 'fc7468';
+    var pinColorCert = 'fefe57';
+    var pinColorDipl = '34b946';
+            var pinImage4 = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|\" + pinColorD,
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0,0),
+                new google.maps.Point(10, 34));
+            var pinImage5 = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|\" + pinColorCert,
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0,0),
+                new google.maps.Point(10, 34));
+            var pinImage6 = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|\" + pinColorDipl,
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0,0),
+                new google.maps.Point(10, 34));
 
+            var pinShadow = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_shadow\",
+                new google.maps.Size(40, 37),
+                new google.maps.Point(0, 0),
+                new google.maps.Point(12, 35));
+";
    foreach($users as $addresses) {
        $someUser = $addresses[0];
        if ($someUser->getAddress() != "") {
            if($someUser->getLatitude() == "" || $someUser->getLongitude() == "" ) {
-               $script .= "$.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($someUser->getAddress()." ".$someUser->getCp()." ".$someUser->getTown()) . "&sensor=false', null, function (data) {
+               $script .= "$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($someUser->getAddress()." ".$someUser->getCp()." ".$someUser->getTown()) . "&sensor=false', null, function (data) {
                if(data.results[0] != null) {
                 var p = data.results[0].geometry.location;\n";
                $key = md5($someUser->getId().KEY_AJAX_PRATICIENS);
@@ -107,6 +150,8 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
             addMarker(new google.maps.Marker({
                 position : latlng,
 				map : map,
+                icon: pinImage".$someUser->getLevelFormation().",
+                shadow: pinShadow,
 				draggable: false,
 				content :'";
 
