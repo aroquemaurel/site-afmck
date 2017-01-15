@@ -28,11 +28,11 @@
     </li>
     <li class="dropdown"><a href="<?=Visitor::getRootPage();?>/members/certification.php">Certification</a></li>
 
-        <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Actions locales
+        <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Annonces
                     <b class="caret"></b></a>
                 <ul role="menu" class="dropdown-menu">
-                    <li><a tabindex="-1" href="http://afmck.fr/members/forums/voir-forum.php?id=47"> Petites annonces</a></li>
-                    <li><a tabindex="-1" href="http://afmck.fr/members/forums/index.php#forum-45"> Actions locales</a></li>
+                    <li><a tabindex="-1" href="<?= Visitor::getRootPage()?>/members/forums/voir-forum.php?id=47"> Petites annonces</a></li>
+                    <li><a tabindex="-1" href="<?= Visitor::getRootPage()?>/members/forums/voir-categorie.php?id=9"> Actions locales</a></li>
                 </ul>
             </li>
 
