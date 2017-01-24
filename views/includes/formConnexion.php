@@ -1,4 +1,4 @@
-<form action="<?=(isset($readhesion) ? "readherer.php" : "connexion.php") ;?>" method="post">
+<form action="<?=Visitor::getRootPage().'/'.(isset($readhesion) ? "readherer.php" : "connexion.php") ;?>" method="post">
     <div class="form-group">
         <label for="inputAdeli">Numéro ADELI</label>
         <input type="string" name="inputAdeli" class="form-control" id="inputAdeli" placeholder="Numéro ADELI">

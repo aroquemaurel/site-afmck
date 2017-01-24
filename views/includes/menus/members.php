@@ -23,15 +23,15 @@
         <ul role="menu" class="dropdown-menu">
         <li><a href="<?=Visitor::getRootPage();?>/members/kiosque/articles-scientifiques.php">Articles scientifiques</a></li>
         <li><a href="http://www.mckenzieinstitute.org/clinicians/research-and-resources/mdt-world-press/" target="_blank"><i span class="glyphicon glyphicon-globe"></i> Institut McKenzie</a></li>
-        <li><a href="<?=Visitor::getRootPage();?>/members/kiosque/newsletters-McKenzie.php">Newsletters de McKenzie International</a></li>
         </ul>
     </li>
     <li class="dropdown"><a href="<?=Visitor::getRootPage();?>/members/certification.php">Certification</a></li>
 
         <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Annonces
                     <b class="caret"></b></a>
-                <ul role="menu" class="dropdown-menu">
+                <ul role="menu" class="dropdown-menu"> 
                     <li><a tabindex="-1" href="<?= Visitor::getRootPage()?>/members/forums/voir-forum.php?id=47"> Petites annonces</a></li>
+                    <li><a href="<?= Visitor::getRootPage()?>/members/forums/sujets/nouveau.php?forum=47">Ajouter une petite annonce</a></li>
                     <li><a tabindex="-1" href="<?= Visitor::getRootPage()?>/members/forums/voir-categorie.php?id=9"> Actions locales</a></li>
                 </ul>
             </li>

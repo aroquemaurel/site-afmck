@@ -10,6 +10,7 @@ namespace utils;
 
 
 use models\articles\Article;
+use utils\UrlHelper;
 use Visitor;
 
 class ArticleHelper
@@ -17,8 +18,8 @@ class ArticleHelper
     public static function updateArticleDatabase($title, $url) {
         $repo = Visitor::getEntityManager()->getRepository('models\articles\Article');
         $article = $repo->findOneBy(array("title" => $title));
-        $split = explode(Visitor::getRootPage(), $_SERVER['REQUEST_URI']);
-        $path = $split[1];
+
+        $path = UrlHelper::getCurrentPath();
 
         if ($article == null) { // Create a new article
             if (isset($split[1])) {

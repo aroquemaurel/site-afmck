@@ -1,16 +1,17 @@
 <?php
 declare(strict_types = 1);
-
 header( 'content-type: text/html; charset=utf-8' );
+
 
 require_once('classes/Visitor.php');
 require_once('config/server.php');
 require_once('config/db/logins.php');
 
 include(Visitor::getRootPath().'/config/doctrine.php');
-session_start();
 
 require_once('autoload.php');
+
+session_start();
 
 if(Visitor::getInstance()->isConnected() && !isset($_SESSION['isReloaded'])) {
     session_destroy();

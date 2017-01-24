@@ -1,6 +1,8 @@
 <?php
 
 namespace utils;
+
+use Visitor;
 class Link {
     private $link;
     private $url;
@@ -35,7 +37,7 @@ class Link {
      */
     public function getUrl()
     {
-        return $this->link != 'home' ? $this->url : \Visitor::getRootPage();
+        return $this->link != 'home' ? $this->url : Visitor::getRootPage().'/';
     }
 
     /**

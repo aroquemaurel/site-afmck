@@ -34,10 +34,10 @@ $breadcrumb->display()?>
                     }
                     echo '</td>';
                     $articles[] = $article->getId();
+                    echo '</tr>';
                 }
-                echo '</tr>';
-                echo '</table>';
             }
+            echo '</table>';
         }
         ?>
 

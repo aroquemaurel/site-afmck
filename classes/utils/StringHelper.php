@@ -42,6 +42,8 @@ class StringHelper
      */
     public static function truncate($text, $length = 100, $options = array())
     {
+        $REGEX_MARKUP = '(<\/?([\w+]+)[^>]*>)?([^<>]*)';
+
         $default = array(
             'ending' => '...', 'exact' => true, 'html' => false
         );
@@ -56,7 +58,7 @@ class StringHelper
             $openTags = array();
             $truncate = '';
 
-            preg_match_all('/(<\/?([\w+]+)[^>]*>)?([^<>]*)/', $text, $tags, PREG_SET_ORDER);
+            preg_match_all('/'.$REGEX_MARKUP.'/', $text, $tags, PREG_SET_ORDER);
             foreach ($tags as $tag) {
                 // specials characters of WYSIWYG are skipped
                 if ($tag[2] == "" || $tag[2] == null) {
@@ -78,9 +80,9 @@ class StringHelper
                 if (
                 !preg_match('/img|br|input|hr|area|base|basefont|col|frame|isindex|link|meta|param/s', $tag[2])
                 ) {
-                    if (preg_match('/<[\w]+[^>]*>/s', $tag[0])) {
+                    if (preg_match('/<[\w+]+[^>]*>/s', $tag[0])) {
                         array_unshift($openTags, $tag[2]);
-                    } else if (preg_match('/<\/([\w]+)[^>]*>/s', $tag[0], $closeTag)) {
+                    } else if (preg_match('/<\/[\w+]+[^>]*>/s', $tag[0], $closeTag)) {
                         $pos = array_search($closeTag[1], $openTags);
                         if ($pos !== false) {
                             array_splice($openTags, $pos, 1);
@@ -135,7 +137,7 @@ class StringHelper
                         }
                     }
                 }
-                $truncate = mb_substr($truncate, 0, $spacepos);
+                //$truncate = mb_substr($truncate, 0, $spacepos);
             }
         }
         $truncate .= $ending;
