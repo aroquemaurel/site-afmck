@@ -16,7 +16,7 @@ $breadcrumb->display()?>
     -->
     <h2>Les articles du site</h2>
     <?php
-        if(count($result['article']) == 0) {
+        if(!isset($result['article']) || count($result['article']) == 0) {
             echo 'Aucun article correspondant à votre recherche n\'a été trouvé.';
         } else {
             echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';
@@ -44,7 +44,7 @@ $breadcrumb->display()?>
     <h2>Sur le forum</h2>
     <?php
     $used = array();
-    if(count($result['forum']) == 0) {
+    if(!isset($result['forum']) || count($result['forum']) == 0) {
         echo 'Aucun forum correspondant à votre recherche n\'a été trouvé.';
     } else {
         echo '<table class="table table-hover forum-list" style="margin-top: 15px;">';

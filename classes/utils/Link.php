@@ -3,6 +3,7 @@
 namespace utils;
 
 use Visitor;
+
 class Link {
     private $link;
     private $url;
