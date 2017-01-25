@@ -65,7 +65,8 @@ $arrayUser .= ']';
 $arrayAddress = rtrim($arrayAddress, ",");
 $arrayAddress .= ']';
 $script = '<script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&libraries=places&key=AIzaSyCqSdPbxboWbBCwD2qWcj-nfpMxn14jqUk"></script>';
-$script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
+//08d11r91
+//$script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
 $script .= '<script>MarkerClusterer.prototype.MARKER_CLUSTER_IMAGE_PATH_ = \''.Visitor::getRootPage().'/style/img/markerclustered/m'.'\'</script>';
     $script .= "<script>
     var map;
@@ -108,9 +109,9 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
 
    // for (var x = 0; x < addresses.length; x++) {
     $script .= "            
-    var pinColorD = 'fc7468';
-    var pinColorCert = 'fefe57';
-    var pinColorDipl = '34b946';
+    var pinColorD = 'fefe57';
+    var pinColorCert = '34b946';
+    var pinColorDipl = 'fc7468';
             var pinImage4 = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|\" + pinColorD,
                 new google.maps.Size(21, 34),
                 new google.maps.Point(0,0),

@@ -19,6 +19,7 @@
         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°5_AFMcK.pdf" target="_blank">N°5 — Extension thoracique "au nœud"</a></li>
         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°6_AFMcK.pdf" target="_blank">N°6 — PD atypique pour dérangement lombaire asymétrique</a></li>
         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°7_AFMcK.pdf" target="_blank">N°7 — Dérangement lombaire antérieur</a></li>
+        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/trucsastuces/TRUCS et ASTUCES en MDT N°8_AFMcK.pdf" target="_blank">N°8 — Variante pour une composante latérale</a></li>
 
         </li>                                    </ul>
 
@@ -35,6 +36,8 @@
         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°9_AFMcK.pdf" target="_blank">N°9 — Progression autour de l'extension de genou</a></li>
         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/chroniquesscientifiques/La Chronique Scientifique de l'AFMcK N°10_AFMcK.pdf" target="_blank">N°10 — Progression/Régression des forces</a></li>
         <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/news/ULTT.pdf" target="_blank">N°11 — ULTT : KESAKO ?</a></li>
+        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/chroniquesscientifiques/chronique_waddell_v3.pdf" target="_blank">N°12 — Signes de Waddel</a></li>
+        <li><i class="glyphicon glyphicon-download-alt"></i> <a href="<?=Visitor::getRootPage();?>/docs/members/chroniquesscientifiques/Yellows_Flags_Définitif_V2_corrigée.pdf" target="_blank">N°13 — Yello flags !</a></li>
     </ul>
 
     <h2>Les anciennes journées de l'association</h2>
@@ -45,5 +48,5 @@
         <li><a href="<?=Visitor::getRootPage(); ?>/members/travaux-association/journees/2016-montpellier.php">Montpellier 2016</a></li>
     </ul>
 
-    <h2>La bibliothèque de l'association</h2>
+    <!--<h2>La bibliothèque de l'association</h2> -->
 </div>

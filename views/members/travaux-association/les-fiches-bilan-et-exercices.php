@@ -25,6 +25,8 @@
 
     <?php
     if(Visitor::getInstance()->getUser()->levelIsGreaterThan('A')) {
+        $folder = Visitor::getRootPage().'/docs/members/fichesexercices';
+
         ?>
         <!-- Level A+B -->
         <h3>Rachis Lombaire</h3>
