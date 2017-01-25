@@ -16,7 +16,10 @@
     <link href="<?=Visitor::getRootPage()?>/style/fonts/family-lato.css"rel="stylesheet" type="text/css" >
     <link href="<?=Visitor::getRootPage()?>/style/fonts/family-roboto.css"rel="stylesheet" type="text/css" >
     <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap-theme.min.css" rel="stylesheet">
+
     <link href="<?=Visitor::getRootPage() ?>/style/css/afmck.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage() ?>/style/css/afmck-forum.css" rel="stylesheet">
+
     <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap-select.min.css" rel="stylesheet">
     <link href="<?=Visitor::getRootPage() ?>/style/css/tooltip-viewport.css" rel="stylesheet">
