@@ -361,11 +361,16 @@ class User {
     public function getAvatar() : string {
         $theoricalPath = $this->getAvatarPath();
         $pageFolder = Visitor::getRootPage()."/docs/members/avatars/";
-        if(file_exists($theoricalPath)) {
+        if(!$this->hasDefaultAvatar()) {
             return $pageFolder.'/'.$this->getAvatarFileName();
         } else {
             return $pageFolder.'/default.jpg';
         }
+    }
+
+    public function hasDefaultAvatar() {
+        $theoricalPath = $this->getAvatarPath();
+        return !file_exists($theoricalPath);
     }
 
     public function getHashPassword() : string {

@@ -9,6 +9,8 @@ if(isset($_FILES["file"])) {
     $target_dir = Visitor::getRootPath().'/docs/members/avatars';
     $uploader = new Uploader($target_dir, array("jpg", "png", "jpeg"), 4 * 1024 * 1024*1024);
     $err = false;
+
+    echo VIsitor::getInstance()->getUser()->getAvatarFileName();
     if(file_exists(Visitor::getInstance()->getUser()->getAvatarPath())) {
         rename(Visitor::getInstance()->getUser()->getAvatarPath(), Visitor::getInstance()->getUser()->getAvatarPath().".old");
     }

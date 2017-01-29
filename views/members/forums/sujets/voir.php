@@ -5,6 +5,13 @@ use viewers\forums\PostViewer;
     $breadcrumb->display()?>
     <div class="container" style="">
         <?php
+        if(Visitor::getInstance()->getUser()->hasDefaultAvatar()) {
+            echo "
+            <div class=\"alert alert-warning\" > Vous n'avez pas défini d'avatar pour le forum .
+            Afin que vous puissiez être facilement reconnaissable, il est préférable d'ajouter un avatar tel qu'une photo .<br />
+            <a href=\"".Visitor::getRootPage()."/members/profil/changer-avatar.php\">Ajouter un avatar à mon profil </a>
+            </div>";
+        }
         echo '<h1>'.($topic->isLocked()? '<i class="glyphicon glyphicon-lock"></i>&nbsp;':'').$topic->getTitle().' <small>'.$topic->getSubtitle().' </small></h1>';
 
         if($topic->isFollowedBy(Visitor::getInstance()->getUser())) {
