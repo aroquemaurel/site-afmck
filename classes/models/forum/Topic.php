@@ -287,6 +287,15 @@ class Topic
         }
     }
 
+    public function getAllViewers() {
+        $ret  =array();
+        $db = new DatabaseUser();
+        foreach($this->usersRead as $uread) {
+            $ret[] = $db->getUserById($uread->getIdUser());
+        }
+        return $ret;
+    }
+
     public function askUnfollow(User $u) {
         foreach($this->usersRead as $uread) {
             if($uread->getIdUser() == $u->getId()) {

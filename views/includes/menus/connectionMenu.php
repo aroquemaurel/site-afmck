@@ -23,7 +23,7 @@ if(!Visitor::getInstance()->isConnected()) {
   //  $nbCharteToValid = $charteRights ? $db->chartToValid() : 0;
     //$nbAdmin = $nbAccountToValid + $nbCharteToValid;
 
-    echo MenuViewer::getNotificationMenu();
+    echo MenuViewer::getNotificationMenu(Visitor::getNotifications());
     echo MenuViewer::getProfilMenu(Visitor::getInstance()->getUser());
     echo MenuViewer::getAdminMenu(Visitor::getInstance()->getUser());
 }

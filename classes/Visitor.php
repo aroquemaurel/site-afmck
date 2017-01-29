@@ -3,6 +3,7 @@ declare(strict_types = 1);
 use database\DatabaseUser;
 use Doctrine\ORM\EntityManager;
 use models\User;
+use utils\NotificationHelper;
 
 /**
  * Created by PhpStorm.
@@ -34,6 +35,16 @@ class Visitor {
         }
 
         return Visitor::$instance;
+    }
+
+    public static function getNotifications()
+    {
+        $notifications = array();
+        if(Visitor::getInstance()->isConnected()) {
+            $notifications = NotificationHelper::getAllNotificationOfUser(Visitor::getInstance()->getUser());
+        }
+
+        return $notifications;
     }
 
     public function getUser() : User {

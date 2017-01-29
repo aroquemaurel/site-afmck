@@ -2,7 +2,7 @@
 include('begin.php');
 
 use database\DatabaseUser;
-use models\User; 
+use models\User;
 
 $err = false;
 
@@ -40,6 +40,13 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
             $mailer->addAddress($user->getMail(), utf8_decode($user->getFirstName()." ".$user->getLastName()));
             $mailer->addAttachment(Visitor::getRootPath()."/docs/members/registration/".date('Y').'_'.$user->getAdeliNumber().".pdf");
             $mailer->send();
+
+            $db = new DatabaseUser();
+            foreach($db->getUsersByGroup("TRESORIER") as $user) {
+                $user->pushNotification("Nouvelle inscription",
+                    "Une nouvelle demande d'adhésion à valider est disponible.",
+                    \utils\NotificationHelper::$NEWSLETTER, Visitor::getRootPage() . '/admin/validRegister.php');
+            }
         } else {
             $err = true;
         }

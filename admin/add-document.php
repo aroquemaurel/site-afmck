@@ -43,7 +43,16 @@ if(isset($_POST['title']) && isset($_POST['description']) && isset($_POST['tags'
         $document->setUser(Visitor::getInstance()->getUser());
         $db->addDocument($document);
 
-        $_SESSION['lastMessage'] = Popup::successMessage("Le document " . $title . "(" . $_FILES["file"]["name"] . ") a été correctement ajouté à la liste de documents consultables par les membres du CA");
+        // add notif for all CA member
+        $dbUser = new \database\DatabaseUser();
+        foreach($dbUser->getUsersValides() as $user) {
+            if($user->isInGroup("MEMBRE_CA") || $user->isInGroup("ADMINISTRATEUR")) {
+                $user->pushNotification("Nouveau document",
+                    "Un nouveau document est disponible pour les membres du CA: « ".$document->getTitle()." »",
+                    \utils\NotificationHelper::$NEWSLETTER, Visitor::getRootPage() . '/CA/liste-des-documents.php');
+            }
+        }
+            $_SESSION['lastMessage'] = Popup::successMessage("Le document " . $title . "(" . $_FILES["file"]["name"] . ") a été correctement ajouté à la liste de documents consultables par les membres du CA");
     } else {
         $_SESSION['lastMessage'] .= Popup::errorMessage("Une erreur à eu lieu lors de l'upload du document.");
     }

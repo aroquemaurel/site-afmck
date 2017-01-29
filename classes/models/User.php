@@ -9,7 +9,10 @@ use database\DatabaseUser;
 use DateTime;
 use Mail;
 use Mailer;
+use models\notifications\Notification;
+use models\notifications\NotificationType;
 use Popup;
+use utils\NotificationHelper;
 use Visitor;
 
 /**
@@ -852,6 +855,13 @@ class User {
     public function setAskReadhesion(DateTime $askReadhesion)
     {
         $this->askReadhesion = $askReadhesion;
+    }
+
+    public function pushNotification(string $title, string $description, $idType, string $url) {
+        $type = NotificationHelper::getNotificationType($idType);
+        $notif = new Notification($title, $description, $type, $this, $url);
+        Visitor::getEntityManager()->persist($notif);
+        Visitor::getEntityManager()->flush();
     }
 
 }

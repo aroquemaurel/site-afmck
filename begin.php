@@ -1,5 +1,8 @@
 <?php
 declare(strict_types = 1);
+use models\notifications\Notification;
+use utils\NotificationHelper;
+
 header( 'content-type: text/html; charset=utf-8' );
 
 
@@ -32,4 +35,12 @@ if(!isset($particularRights) || !$particularRights) {
 
 if(isset($title)) {
     \utils\ArticleHelper::updateArticleDatabase($title, \utils\UrlHelper::getCurrentPath());
+}
+
+// C'est une notification qui nous amène
+if(Visitor::getInstance()->isConnected() && isset($_GET['notif'])) {
+    $notif = Notification::getRepo()->find($_GET['notif']);
+    $notif->setHasRead(true);
+    Visitor::getEntityManager()->persist($notif);
+    Visitor::getEntityManager()->flush();
 }

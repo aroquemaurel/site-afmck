@@ -13,8 +13,8 @@
     <title><?=$title; ?> — Association française Mc Kenzie</title>
     <!-- Bootstrap and demo CSS -->
     <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?=Visitor::getRootPage()?>/style/fonts/family-lato.css"rel="stylesheet" type="text/css" >
-    <link href="<?=Visitor::getRootPage()?>/style/fonts/family-roboto.css"rel="stylesheet" type="text/css" >
+    <link href="<?=Visitor::getRootPage()?>/style/fonts/family-lato.css" rel="stylesheet" type="text/css" >
+    <link href="<?=Visitor::getRootPage()?>/style/fonts/family-roboto.css" rel="stylesheet" type="text/css" >
     <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <link href="<?=Visitor::getRootPage() ?>/style/css/afmck.css" rel="stylesheet">
@@ -38,7 +38,7 @@
     <link href="<?=Visitor::getRootPage() ?>/afmck-icone.ico" rel="shortcut icon" />
     <link href="<?=Visitor::getRootPage() ?>/style/tocify/src/stylesheets/jquery.tocify.css" rel="stylesheet">
     <link href="<?=Visitor::getRootPage() ?>/style/wysiwyg/external/google-code-prettify/prettify.css" rel="stylesheet" />
-    <link href="<?=Visitor::getRootPage()?>/style/fonts/font-awesome.css"rel="stylesheet" type="text/css" >
+    <link href="<?=Visitor::getRootPage()?>/style/fonts/font-awesome.css" rel="stylesheet" type="text/css" >
     <style>
         body {
             padding-top: 20px;

@@ -51,9 +51,14 @@ $topic->removeAllViewers($entityManager);
 if(!$topic->askUnfollow(Visitor::getInstance()->getUser())) {
     $topic->addFollower(Visitor::getInstance()->getUser());
 }
-$topic->addViewer(Visitor::getInstance()->getUser(), $entityManager);
 
-// TODO if we don't want notification… :/
+foreach($topic->getAllViewers() as $user) {
+    if($user->getId() != Visitor::getInstance()->getUser()->getId())
+    $user->pushNotification("Nouveau message",
+        "Un nouveau message est présent sur le sujet ".$topic->getTitle(), \utils\NotificationHelper::$FORUM,
+        Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$topic->getId());
+}
+$topic->addViewer(Visitor::getInstance()->getUser(), $entityManager);
 
 $entityManager->persist($post);
 $entityManager->flush();

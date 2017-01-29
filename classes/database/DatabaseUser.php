@@ -40,6 +40,22 @@ class DatabaseUser extends Database {
         $user->hydrat($query->fetchObject());
         return $user;
     }
+
+    public function getUsersByGroup($grp) {
+        $query = $this->dbAccess->prepare("SELECT DISTINCT * from `user`, `user_group`, `group`
+        WHERE `user_group`.idUser = `user`.id AND `user_group`.idGroup = `group`.id AND `group`.nom=:grp");
+        $query->bindParam(":grp", $grp, PDO::PARAM_STR);
+        $query->execute();
+        $ret = array();
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $user->setId(intval($dataUser->idUser));
+            $ret[] = $user;
+        }
+        return $ret;
+
+    }
     public function getGroupById(int $id) : Group {
         $query = $this->dbAccess->prepare("SELECT * from `group` WHERE id=:id");
         $query->bindParam(":id", $id, PDO::PARAM_INT);

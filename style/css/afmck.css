@@ -1,5 +1,4 @@
 .yamm {
-	/*background-image: linear-gradient(to bottom,#222 0,#3e659f 80%);*/
     background-image: url('../img/headBackground.jpg');
     padding: 0;
 }
@@ -58,7 +57,7 @@ footer a, footer a:visited, footer a:hover {
 
 body {
 	background-color: #ffffff;
-	font-family: 'Lato';
+    font-family: 'Lato', monospace;
     font-size: 12pt;
     height: 100%;
     width: 100%;
@@ -66,7 +65,7 @@ body {
 }
 
 .navbar-default {
-	font-family: 'Roboto';
+    font-family: 'Roboto', monospace;
 	font-size: 13px;
 	border-bottom: 4px solid #F1A260;
 }
@@ -576,13 +575,6 @@ a.tooltip2 span
 .block-member-home .label {
     font-size: 7.5pt;
 }
-
-/*.navbar .nav .dropdown {
-// TODO add class for all menu links
-    font-variant-caps: all-petite-caps;
-    font-size: 10pt;
-}*/
-
 .keyword a:visited, .keyword a:hover, .keyword a, .keyword {
     color: white;
     font-size: 8pt;

@@ -20,6 +20,10 @@ if(isset($_GET['valid'])) {
         $mailer->Body = (Mail::getValidationSignature($user));
         $mailer->addAddress($user->getMail(), $user->getFirstName()." ".$user->getLastName());
         $mailer->send();
+
+        $user->pushNotification("Validation de la signature de la charte",
+            "Votre signature de la charte a été validée, vous apparaissez maintenant sur la carte des praticiens",
+            \utils\NotificationHelper::$ARTICLES, Visitor::getRootPage().'/praticiens.php');
     }
 } else if(isset($_GET['unvalid'])) {
     $user = $db->getUserById($_GET['unvalid']);

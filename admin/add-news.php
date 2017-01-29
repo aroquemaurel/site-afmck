@@ -54,7 +54,12 @@ if(isset($_POST['title']) && isset($_POST['subtitle'])) {
             $db = new DatabaseNews();
             $db->addFile($file, $news->getId());
         }
-
+        $dbUser = new \database\DatabaseUser();
+        foreach($dbUser->getUsersValides() as $user) {
+            $user->pushNotification("Nouvelle newsletter",
+                "Une nouvelle newsletter est disponible : « ".$news->getTitle()." »",
+                \utils\NotificationHelper::$NEWSLETTER, Visitor::getRootPage() . '/members/newsletters/voir.php?id='.$news->getId());
+        }
         $_SESSION['lastMessage'] = Popup::successMessage("La news à bien été " . (isset($_POST['id']) ? "modifiée" : "ajoutée"));
     }
     header('Location: ' . Visitor::getRootPage().'/admin/list-news.php');
