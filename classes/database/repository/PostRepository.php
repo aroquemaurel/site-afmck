@@ -59,7 +59,7 @@ class PostRepository extends EntityRepository
             ->setParameter(':topic', $topic->getId());
 
         $pag = new Paginator($qb);
-        return $pag->getIterator()->getArrayCopy()[0];
+        return count($pag->getIterator()->getArrayCopy()) > 0 ? $pag->getIterator()->getArrayCopy()[0] : null;
     }
 
 

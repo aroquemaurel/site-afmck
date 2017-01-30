@@ -12,7 +12,7 @@ $breadcrumb->display();
         ?>
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-10">
             <div class="form-group">
-                <select tabindex="13" class="selectpicker form-control input-lg" required="required" id="announceType" name="announceType">
+                <select tabindex="1" class="selectpicker form-control input-lg" required="required" id="announceType" name="announceType">
                     <option disabled selected>Type d'annonce</option>
                     <option value="1">Remplacement</option>
                     <option value="2">Praticien</option>
@@ -24,7 +24,7 @@ $breadcrumb->display();
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-10">
             <div class="form-group">
                 <input required="required" type="text" name="title" id="title"
-                       class="form-control input-lg" placeholder="Titre de l'annonce" tabindex="3"
+                       class="form-control input-lg" placeholder="Titre de l'annonce" tabindex="2"
                        value="<?php if(isset($news)) { echo $news->getTitle(); }?>"
                 >
             </div>
@@ -40,7 +40,7 @@ $breadcrumb->display();
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="form-group">
                 <input required="required" type="text" name="postalCode" id="postalCode"
-                       class="form-control input-lg" placeholder="Code postal" tabindex="3"
+                       class="form-control input-lg" placeholder="Code postal" tabindex="4"
                        value="<?php if(isset($news)) { echo $news->getTitle(); }?>"
                 >
             </div>
@@ -48,7 +48,7 @@ $breadcrumb->display();
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-6">
             <div class="form-group">
                 <div required="required" class='input-group date input-group-lg' id="date">
-                    <input data-date-format="DD/MM/YYYY" tabindex="14" type='text'  id='date'
+                    <input data-date-format="DD/MM/YYYY" tabindex="5" type='text'  id='date'
                     name='date' placeholder="Date de début" class="form-control input-lg"
                            value=""
                     />
@@ -59,7 +59,7 @@ $breadcrumb->display();
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4" style="padding-top: 12px">
             <div class="form-group">
-                 <label><input tabindex="15" type="checkbox"
+                 <label><input tabindex="6" type="checkbox"
                  <?php /*if($user->getHasSigned() && $editing) echo "checked=checked"; */?>
                  name="signed" id="signed"> &nbsp;Dès que possible</label>
             </div>
@@ -68,14 +68,14 @@ $breadcrumb->display();
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-6">
             <div class="form-group">
                 <input required="required" type="text" name="duration" id="duration"
-                       class="form-control input-lg" placeholder="Durée" tabindex="3"
+                       class="form-control input-lg" placeholder="Durée" tabindex="7"
                        value="<?php if(isset($news)) { echo $news->getTitle(); }?>"
                 >
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4" style="padding-top: 12px">
             <div class="form-group">
-                <label><input tabindex="15" type="checkbox"
+                <label><input tabindex="8" type="checkbox"
                         <?php /*if($user->getHasSigned() && $editing) echo "checked=checked"; */?>
                               name="indeterminatedDuration" id="indeterminatedDuration"> &nbsp;Durée indeterminée</label>
             </div>
@@ -91,7 +91,7 @@ $breadcrumb->display();
             <div class="row" style="width: 80%; margin: auto;">
                 <div class="form-group">
                     <input required="required" type="text" name="title" id="title"
-                           class="form-control input-lg" placeholder="Titre" tabindex="3"
+                           class="form-control input-lg" placeholder="Titre" tabindex="9"
                            value="<?php if(isset($news)) { echo $news->getTitle(); }?>"
                     >
                 </div>
@@ -99,7 +99,7 @@ $breadcrumb->display();
             <div class="row" style="width: 80%; margin: auto;margin-bottom: 20px;">
                 <div class="form-group">
                     <input type="text" name="subtitle" id="subtitle"
-                           class="form-control input-lg" placeholder="Sous-Titre (Facultatif)" tabindex="3"
+                           class="form-control input-lg" placeholder="Sous-Titre (Facultatif)" tabindex="10"
                            value="<?php if(isset($news)) { echo $news->getSubtitle(); }?>"
                     >
                 </div>

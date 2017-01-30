@@ -30,6 +30,11 @@ if((Visitor::getInstance()->getUser()->getId() != $post->getUser()->getId() &&
     exit();
 }
 
+if($post->getTopic()->getForum()->getName() == FORUM_NAME_ANNOUNCES) {
+    $announceRepo = $entityManager->getRepository('models\announces\Announce');
+    $announce = $announceRepo->findOneBy(array('topic'=>$post->getTopic()));
+}
+
 if(isset($_POST['content'])) {
     // We edit the new post
     $post->setContent($_POST['content']);

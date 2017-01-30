@@ -93,7 +93,7 @@ class Forum
 
         foreach($this->topics as $t) {
             $lastPost = $t->getLastPost($em);
-            if($ret == null || strtotime($lastPost->getDate()->format("Y-m-d H:i:s")) > strtotime($ret->getDate()->format("Y-m-d H:i:s"))) {
+            if($ret == null || $lastPost == null || strtotime($lastPost->getDate()->format("Y-m-d H:i:s")) > strtotime($ret->getDate()->format("Y-m-d H:i:s"))) {
                 $ret = $t->getLastPost($em);
             }
         }

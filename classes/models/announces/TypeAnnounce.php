@@ -33,5 +33,15 @@ class TypeAnnounce
         return $this->label;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    
+
 
 }

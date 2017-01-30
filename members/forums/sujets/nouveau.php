@@ -22,9 +22,8 @@ if($forum == null) {
 }
 
 if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
-    // TODO corrects informations
     $title = $_POST['title'];
-    $subtitle = $_POST['subtitle'];
+    $subtitle = isset($_POST['subtitle']) ? $_POST['subtitle'] : '';
     $content = $_POST['content'];
 
     if($forum->getName() == FORUM_NAME_ANNOUNCES) {
@@ -44,7 +43,14 @@ if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
         // TODO no duration ?
         $title = '['.$announceType->getLabel().'] '.$announce->getTown().' '.$announce->getPostalCode().' — '.$_POST['title'];
         $subtitle = 'Dès le '.$_POST['date'].' / '.$_POST['duration'];
-        $content = $_POST['content'];
+        $content = '<h1>'.$announceType->getLabel().' à '.$announce->getTown().'</h1>';
+        $content .= '<ul>';
+        $content .= '<li><b>Date de début :</b> '.$_POST['date'].' </li>';
+        $content .= '<li><b>Durée :</b> '.$_POST['duration'].' </li>';
+        $content .= '<li><b>Localisation:</b> '.$announce->getPostalCode().' '.$announce->getTown().' </li>';
+        $content .= '</ul>';
+        $content .= '<br/><br/>';
+        $content .= $_POST['content'];
 
         $_SESSION['lastMessage'] = Popup::successMessage("Votre annonce a bien été créée");
     }
@@ -70,6 +76,9 @@ if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
     $entityManager->persist($post);
 
     $idTopic = $topic->getId();
+    if(isset($announce)) {
+        $announce->setTopic($topic);
+    }
     $_SESSION['lastMessage'] = Popup::successMessage("Votre sujet a bien été créé");
 
     $entityManager->flush();

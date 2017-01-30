@@ -184,6 +184,22 @@ class Announce
         return $this->topic;
     }
 
+    /**
+     * @param mixed $idUser
+     */
+    public function setUser(User $user)
+    {
+        $this->idUser = $user->getId();
+    }
+
+    /**
+     * @param mixed $topic
+     */
+    public function setTopic($topic)
+    {
+        $this->topic = $topic;
+    }
+
 
 
 

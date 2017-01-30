@@ -1,6 +1,6 @@
 <div class="forum-post">
     <?php
-    $user = Visitor::getInstance()->getUser();
+    $user = $post != null ? $post->getUser() : Visitor::getInstance()->getUser();
     echo '<div class="author">
 <div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
                 <img width="100px" src="'.$user->getAvatar().'"/></div>

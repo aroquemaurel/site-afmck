@@ -49,7 +49,11 @@ class TopicForumViewer
                 $ret .= '<td style="width: 250px; font-size: 10pt" class"forum-stats">'.
                     '<a href="'.Visitor::getRootPage().'/members/forums/voir-forum.php?id='.$forum->getId().'">'.$forum->getName().'</a></td>';
             }
-            $ret .= '<td class="forum-stats">Dernier message de <br/><b>'.$lastPost->getUser()->getName().'</b> <br/>le '.($lastPost->getDate()->format('d/m/Y à H:i')).'</td>';
+            if($lastPost != null) {
+                $ret .= '<td class="forum-stats">Dernier message de <br/><b>' . $lastPost->getUser()->getName() . '</b> <br/>le ' . ($lastPost->getDate()->format('d/m/Y à H:i')) . '</td>';
+            } else {
+                $ret .= '<td class="forum-stats">Aucun message</td>';
+            }
             $ret .= '</tr>';
         }
         return $ret;
