@@ -27,7 +27,7 @@ $breadcrumb->display();
                 "MDT World Press Newsletter Vol.4 N°1 <small>Anglais</small>");
             ?>
         </ul>
-        <h2>Articles traduits par l'AFMcK</h2>
+        <h3>Articles traduits par l'AFMcK</h3>
         <ul>
             <?php
             $folder = Visitor::getRootPage()."/docs/members/kiosque/newsletters";
@@ -40,7 +40,7 @@ $breadcrumb->display();
             ?>
         </ul>
 
-        <h2>Annexes</h2>
+        <h3>Annexes</h3>
         <ul>
             <li><a href="<?= Visitor::getRootPage().'/docs/members/kiosque/newsletters/STartBackScreeningTool.zip';?>">STart Back Screening Tool Vol.4 N°3 <small>Français</small></a>
         </ul>
@@ -59,7 +59,7 @@ $breadcrumb->display();
             ?>
         </ul>
 
-        <h2>Articles traduits par l'AFMcK</h2>
+        <h3>Articles traduits par l'AFMcK</h3>
         <ul>
             <?php
             Image::miniLink($folder.'/traduction', "MDT Newsletter_Vol 3 No 4-fr_AFMcK",
@@ -85,7 +85,7 @@ $breadcrumb->display();
             ?>
         </ul>
 
-        <h2>Articles traduits par l'AFMcK</h2>
+        <h3>Articles traduits par l'AFMcK</h3>
         <ul>
             <?php
             Image::miniLink($folder.'/traduction', "MDT Newsletter_Vol 2 No 4-fr_AFMcK",
@@ -103,7 +103,7 @@ $breadcrumb->display();
             ?>
         </ul>
 
-        <h2>Articles traduits par l'AFMcK</h2>
+        <h3>Articles traduits par l'AFMcK</h3>
         <ul>
             <?php
             Image::miniLink($folder.'/traduction', "MDT Newsletter_Vol 1 No 1-fr_AFMcK",
