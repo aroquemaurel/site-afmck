@@ -22,6 +22,8 @@
             <b class="caret"></b></a>
         <ul role="menu" class="dropdown-menu">
         <li><a href="<?=Visitor::getRootPage();?>/members/kiosque/articles-scientifiques.php">Articles scientifiques</a></li>
+        <li><a href="<?=Visitor::getRootPage();?>/members/kiosque/generalites-mdt.php">Généralités sur le MDT</a></li>
+        <li><a href="<?=Visitor::getRootPage();?>/members/kiosque/newsletters-McKenzie.php">MDT World press</a></li>
         <li><a href="http://www.mckenzieinstitute.org/clinicians/research-and-resources/mdt-world-press/" target="_blank"><i span class="glyphicon glyphicon-globe"></i> Institut McKenzie</a></li>
         </ul>
     </li>
