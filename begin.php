@@ -10,6 +10,12 @@ require_once('classes/Visitor.php');
 require_once('config/server.php');
 require_once('config/db/logins.php');
 
+if(MAINTENANCE) {
+    if(!in_array(Visitor::getIpAddress(), AUTHORIZED_IP)) {
+        header('Location: '.Visitor::getRootPage().'/maintenance.php');
+        exit();
+    }
+}
 include(Visitor::getRootPath().'/config/doctrine.php');
 
 require_once('autoload.php');

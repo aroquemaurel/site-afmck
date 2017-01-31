@@ -1,3 +1,13 @@
+<?php
+require_once('classes/Visitor.php');
+require_once('config/server.php');
+
+if(!MAINTENANCE) {
+    header('Location: '.Visitor::getRootPage().'/index.php');
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +26,7 @@
 <body>
 
 <div class="container-fluid" style="text-align: center">
-    <h1>Le afmck.Fr est actuellement en maintenance</h1>
+    <h1>Le site afmck.Fr est actuellement en maintenance</h1>
     <p><img src="style/img/logo.jpg" /></p>
     <p>Le site web est actuellement indisponible afin d'effectuer une maintenance.<br/> Merci de revenir un peu plus tard, nous essayons de faire nos actions le plus rapidement possible</p>
     <p>Merci de votre patience</p>
