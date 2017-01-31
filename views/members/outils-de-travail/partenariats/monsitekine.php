@@ -5,7 +5,7 @@
 
 <p>L’AFMcK souhaite vous faire profiter de trois mois d’essai gratuits et sans engagement à
     <a href="http://www.monsitekine.com/" target="_blank">
-        <img src="<?php echo Visitor::getInstance()->getRootPage()?>/docs/members/logositekine2.png" width="176" height="40" alt="logositekine.com" />
+        <img src="<?= Visitor::getRootPage()?>/docs/members/logositekine2.png" width="176" height="40" alt="logositekine.com" />
     </a>.
 </p>
 <p>MonsiteKiné.com soutient l’Association Française McKENZIE en reversant 1€ par mensualité payée.</p>
@@ -35,5 +35,5 @@
     Dans tous les cas, vous pourrez résilier à tout moment.</p>
 </div>
 <h5>N’hésitez pas à nous contacter par mail ou téléphone au 0970440092 pour toutes informations ou aide à la création de votre site.</h5>
-<h5>A bientôt sur <a href="http://www.monsitekine.com/" target="_blank"><img src="<?php echo Visitor::getInstance()->getRootPage()?>/docs/members/logositekinept.png" width="88" height="20" alt="logo petit sitekine.com" /></a>.</h5>
+<h5>A bientôt sur <a href="http://www.monsitekine.com/" target="_blank"><img src="<?= Visitor::getRootPage()?>/docs/members/logositekinept.png" width="88" height="20" alt="logo petit sitekine.com" /></a>.</h5>
 </div>

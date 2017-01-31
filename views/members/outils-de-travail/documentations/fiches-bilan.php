@@ -4,7 +4,7 @@
     <div id="toc" class="toc"></div><!--/.well -->
     <ul  style="float:left">
     <?php
-        $folder = Visitor::getInstance()->getRootPage().'/docs/members/fichesbilan';
+        $folder = Visitor::getRootPage().'/docs/members/fichesbilan';
         Image::miniLink($folder, 'Bilan_Evaluation Rachis Lombaire_AFMcK', '<b>Fiche Bilan</b> Evaluation rachis lombaire');
         Image::miniLink($folder, 'Bilan_Evaluation Rachis Dorsal_AFMcK', '<b>Fiche Bilan</b> Evaluation rachis Dorsal');
         Image::miniLink($folder, 'Bilan-Evaluation Membres Inferieurs_AFMcK', '<b>Fiche Bilan</b> Membres inférieurs');

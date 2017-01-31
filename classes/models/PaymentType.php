@@ -13,11 +13,8 @@ class PaymentType
 {
     private $idType;
 
-    private $user;
-
-    public function __construct($idType, $user) {
+    public function __construct(int $idType) {
         $this->idType = $idType;
-        $this->user = $user;
     }
 
     public function toString() {
@@ -37,7 +34,7 @@ class PaymentType
         return $this->idType;
     }
 
-    public function getExplainMessage() {
+    public function getExplainMessage(User $user) {
         switch($this->idType) {
             case 1:
                 return "Vous avez choisi de payer votre cotisation, d'un montant de<b> ".$this->user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>

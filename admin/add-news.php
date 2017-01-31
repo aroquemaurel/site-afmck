@@ -8,7 +8,7 @@ use models\File;
 use models\News;
 use utils\Link;
 $title = 'Liste des newsletter';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Administration','#'), new Link('Ajouter une newsletter', '#')));
 
 // Add or edit the news
@@ -24,7 +24,7 @@ if(isset($_POST['title']) && isset($_POST['subtitle'])) {
     $news->setContent($_POST['content']);
     $news->setAuthor(Visitor::getInstance()->getUser());
 
-    $target_dir = Visitor::getInstance()->getRootPath() . "/docs/members/news";
+    $target_dir = Visitor::getRootPath() . "/docs/members/news";
     $err = false;
         $all_files = array();
     if(isset($_FILES['file']['tmp_name'][0]) && $_FILES['file']['tmp_name'][0] != "") {
@@ -54,10 +54,15 @@ if(isset($_POST['title']) && isset($_POST['subtitle'])) {
             $db = new DatabaseNews();
             $db->addFile($file, $news->getId());
         }
-
+        $dbUser = new \database\DatabaseUser();
+        foreach($dbUser->getUsersValides() as $user) {
+            $user->pushNotification("Nouvelle newsletter",
+                "Une nouvelle newsletter est disponible : « ".$news->getTitle()." »",
+                \utils\NotificationHelper::$NEWSLETTER, Visitor::getRootPage() . '/members/newsletters/voir.php?id='.$news->getId());
+        }
         $_SESSION['lastMessage'] = Popup::successMessage("La news à bien été " . (isset($_POST['id']) ? "modifiée" : "ajoutée"));
     }
-    header('Location: ' . Visitor::getInstance()->getRootPage().'/admin/list-news.php');
+    header('Location: ' . Visitor::getRootPage().'/admin/list-news.php');
 } else {
     include('../views/includes/head.php');
     include('../views/admin/add-news.php');

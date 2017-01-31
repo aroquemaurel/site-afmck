@@ -7,8 +7,8 @@
     </div>
 
     <p>
-        <b>Votre numéro ADELI:</b>&nbsp;&nbsp;<?php echo Visitor::getInstance()->getUser()->getAdeliNumber();?><br/>
-        <b>Votre clé:&nbsp;</b><?php echo $license->getKey();?><br/>
-        <b>Valable jusqu'au:&nbsp;</b><?php echo $license->getValidDate()->format("d / m / Y");?><br/>
+        <b>Votre numéro ADELI:</b>&nbsp;&nbsp;<?= Visitor::getInstance()->getUser()->getAdeliNumber();?><br/>
+        <b>Votre clé:&nbsp;</b><?= $license->getKey();?><br/>
+        <b>Valable jusqu'au:&nbsp;</b><?= $license->getValidDate()->format("d / m / Y");?><br/>
     </p>
 </div>

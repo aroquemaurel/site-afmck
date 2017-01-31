@@ -26,7 +26,7 @@ if(Visitor::getInstance()->getUser()->getId() != $post->getUser()->getId() && !V
     exit();
 }
 
-if($hided == true) {
+if($hided) {
     if (isset($_POST['msg'])) {
         $post->hide($_POST['msg'], Visitor::getInstance()->getUser(), $entityManager);
         $entityManager->persist($post);
@@ -37,7 +37,7 @@ if($hided == true) {
         exit();
     } else {
         $title = 'Masquer un message sur le sujet « ' . $post->getTopic()->getTitle() . ' »';
-        $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage() . "/members/index.php"),
+        $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage() . "/members/index.php"),
             new Link('Forums', Visitor::getRootPage() . '/members/forums/'),
             new Link('Voir le forum « ' . $post->getTopic()->getForum()->getName() . ' »', Visitor::getRootPage() . '/members/forums/voir-forum.php?id=' . $post->getTopic()->getForum()->getId()),
             new Link('Voir le sujet « ' . $post->getTopic()->getTitle() . ' »', Visitor::getRootPage() . '/members/forums/sujets/voir.php?id=' . $post->getTopic()->getId()),

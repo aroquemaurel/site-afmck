@@ -8,7 +8,7 @@ namespace database;
  * Time: 22:08
  */
 
-require_once(\Visitor::getInstance()->getRootPath()."/config/db/logins.php");
+require_once(\Visitor::getRootPath()."/config/db/logins.php");
 class Database {
     private $host;
     private $dbName;

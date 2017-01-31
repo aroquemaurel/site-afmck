@@ -17,7 +17,7 @@
         <div style="text-align: center">
         <div class="thumbnail with-caption" style="text-align: center">
             <a href="http://www.essentiel-med.fr/PrestaShop1/">
-                <img src="<?php echo Visitor::getInstance()->getRootPage()."/docs/members/materiel/logo3 essentiel.png";?>" />
+                <img src="<?= Visitor::getRootPage()."/docs/members/materiel/logo3 essentiel.png";?>" />
             </a>
             <p style="font-size: 10pt"><a href="http://www.essentiel-med.fr/PrestaShop1/">
                     <i class="glyphicon glyphicon-globe"></i>&nbsp; Essentiel-med

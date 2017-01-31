@@ -1,4 +1,6 @@
 <?php
+declare(strict_types = 1);
+
 /**
  * Created by PhpStorm.
  * User: aroquemaurel
@@ -14,30 +16,47 @@ use PDO;
 require_once('Database.php');
 
 class DatabaseUser extends Database {
-    public function getUser($adeliNumber, $password="") {
+    public function getUser(string $adeliNumber, string $password="") {
         parent::__construct();
         $query = $this->dbAccess->prepare("SELECT * from user WHERE adeliNumber = :number");
-        $query->bindParam(":number", $adeliNumber, PDO::PARAM_INT);
+        $query->bindParam(":number", $adeliNumber, PDO::PARAM_STR);
         $query->execute();
 
         return $query->fetchObject();
     }
 
-    public function adeliExists($adeli) {
+    public function adeliExists(string $adeli) : bool {
         $query = $this->dbAccess->prepare("SELECT count(*) as nb from user where adeliNumber = :number");
         $query->bindParam(":number", $adeli, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject()->nb ;
+        return intval($query->fetchObject()->nb) > 0;
     }
-    public function getUserById($id) {
+    public function getUserById(int $id) : User {
         $query = $this->dbAccess->prepare("SELECT * from user WHERE id=:id");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
         $user = new User();
+
         $user->hydrat($query->fetchObject());
         return $user;
     }
-    public function getGroupById($id) {
+
+    public function getUsersByGroup($grp) {
+        $query = $this->dbAccess->prepare("SELECT DISTINCT * from `user`, `user_group`, `group`
+        WHERE `user_group`.idUser = `user`.id AND `user_group`.idGroup = `group`.id AND `group`.nom=:grp");
+        $query->bindParam(":grp", $grp, PDO::PARAM_STR);
+        $query->execute();
+        $ret = array();
+        foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
+            $user = new User();
+            $user->hydrat($dataUser);
+            $user->setId(intval($dataUser->idUser));
+            $ret[] = $user;
+        }
+        return $ret;
+
+    }
+    public function getGroupById(int $id) : Group {
         $query = $this->dbAccess->prepare("SELECT * from `group` WHERE id=:id");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
         $query->execute();
@@ -46,7 +65,7 @@ class DatabaseUser extends Database {
         return $group;
     }
 
-    public function getGroups($id) {
+    public function getGroups(int $id) {
         $query = $this->dbAccess->prepare("SELECT idGroup, nom from `user_group`, `group`
                                            WHERE idUser = :id and group.id=`user_group`.idGroup");
         $query->bindParam(":id", $id, PDO::PARAM_INT);
@@ -63,18 +82,18 @@ class DatabaseUser extends Database {
         $password = utf8_decode($user->getPassword());
         $mail = utf8_decode($user->getMail());
         $address = utf8_decode($user->getAddress());
-        $cp = utf8_decode($user->getCp());
+        $cp = $user->getCp();
         $town = utf8_decode($user->getTown());
         $complementAddress = utf8_decode($user->getComplementAddress());
         $formationDate = utf8_decode($user->getFormationDate()->format("Y-m-d"));
-        $levelFormation = utf8_decode($user->getLevelFormation());
+        $levelFormation = $user->getLevelFormation();
         $phonePro = utf8_decode($user->getPhonePro());
         $phoneMobile = utf8_decode($user->getPhoneMobile());
-        $newsletter = utf8_decode($user->getNewsletter());
+        $newsletter = $user->getNewsletter();
         $payment = $user->getPayment()->getIdType();
-        $mailValidation = utf8_decode($user->getMailValidation());
+        $mailValidation = $user->getMailValidation();
         $hashMail = utf8_decode($user->getHashMail());
-        $valuePaid = utf8_decode($user->getValuePaid());
+        $valuePaid = $user->getValuePaid();
         $hasSigned = $user->getHasSigned();
 
         $query = $this->dbAccess->prepare("INSERT INTO user VALUES('', 0, :adeliNumber, :firstname, :lastname, :password,
@@ -82,15 +101,15 @@ class DatabaseUser extends Database {
                                                               :formationDate, :levelFormation, :phonePro,
                                                               :phoneMobile, :newsletter, :payment, :mailValidation, :hashMail, :valuePaid, '', '', '', :hasSigned, NULL)");
         $query->bindParam(":adeliNumber", $adeli, PDO::PARAM_STR);
-        $query->bindParam(":firstname", ($firstname), PDO::PARAM_STR);
-        $query->bindParam(":lastname", ($lastname), PDO::PARAM_STR);
+        $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
+        $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);
         $query->bindParam(":password", $password, PDO::PARAM_STR);
         $query->bindParam(":mail", $mail, PDO::PARAM_STR);
 
-        $query->bindParam(":address", ($address), PDO::PARAM_STR);
-        $query->bindParam(":complementAddress", ($complementAddress), PDO::PARAM_STR);
+        $query->bindParam(":address", $address, PDO::PARAM_STR);
+        $query->bindParam(":complementAddress", $complementAddress, PDO::PARAM_STR);
         $query->bindParam(":cp", $cp, PDO::PARAM_STR);
-        $query->bindParam(":town", ($town), PDO::PARAM_STR);
+        $query->bindParam(":town", $town, PDO::PARAM_STR);
 
         $query->bindParam(":formationDate", $formationDate, PDO::PARAM_STR);
         $query->bindParam(":levelFormation", $levelFormation, PDO::PARAM_INT);
@@ -107,7 +126,7 @@ class DatabaseUser extends Database {
 
     }
 
-    public function getUsersValides () {
+    public function getUsersValides () : array {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate >= CURDATE()
@@ -122,10 +141,9 @@ class DatabaseUser extends Database {
         return $ret;
     }
 
-    public function getUsersSigned($signed) {
+    public function getUsersSigned(int $signed) : array {
         $ret = array();
 
-//        $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND levelFormation >= 4 AND validDate >= CURDATE()
         $query = $this->dbAccess->prepare("SELECT * from `user` WHERE hasSigned = :signed AND mailValidation != 0 AND disable!=1 AND validDate >= CURDATE()
                                            order by lastname");
         $query->bindParam(":signed", $signed, PDO::PARAM_INT);
@@ -134,14 +152,11 @@ class DatabaseUser extends Database {
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
             $user = new User();
             $user->hydrat($dataUser);
-    //        $user->getFormationDate()->add(new DateInterval('P2Y'));
-      //      if($user->getFormationDate() < new DateTime()) {
-                $ret[] = $user;
-        //    }
+            $ret[] = $user;
         }
         return $ret;
     }
-    public function getUsersOnMap($signed) {
+    public function getUsersOnMap() : array {
         $ret = array();
         $i = 0;
         $query = $this->dbAccess->prepare("SELECT * from `user` 
@@ -151,7 +166,6 @@ class DatabaseUser extends Database {
                                             AND levelFormation >= 4 
                                             AND validDate >= CURDATE()
                                             ORDER BY latitude, longitude");
-        $query->bindParam(":signed", $signed, PDO::PARAM_INT);
         $query->execute();
 
         foreach($query->fetchAll(PDO::FETCH_OBJ) as $dataUser) {
@@ -173,7 +187,7 @@ class DatabaseUser extends Database {
     }
 
 
-    public function getUsersHS() {
+    public function getUsersHS() : array {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user` WHERE validDate < CURDATE() AND mailValidation != 0
@@ -190,7 +204,7 @@ class DatabaseUser extends Database {
 
 
 
-    public function getUsersToValid() {
+    public function getUsersToValid() : array {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
@@ -205,7 +219,7 @@ class DatabaseUser extends Database {
         }
         return $ret;
     }
-    public function getUsersDisableSoon() {
+    public function getUsersDisableSoon() : array  {
         $ret = array();
 
         $query = $this->dbAccess->prepare("SELECT * from `user`
@@ -221,24 +235,20 @@ class DatabaseUser extends Database {
         return $ret;
     }
 
-    public function countUsersToValid() {
+    public function countUsersToValid() : int {
         $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
                                            WHERE mailValidation != 0 AND validDate != 'NULL' AND disable=0 AND askReadhesion <> 'NULL' AND askValidation <> 'NULL'");
         $query->execute();
-        return $query->fetchObject()->countid;
+        return intval($query->fetchObject()->countid);
     }
 
-    public function chartToValid() {
-        /*$query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
-                                          WHERE hasSigned = 2 AND mailValidation != 0 AND disable!=1
-                                          AND levelFormation >= 4 AND validDate >= CURDATE()
-                                           order by lastname");*/
+    public function chartToValid() : int {
         $query = $this->dbAccess->prepare("SELECT count(id) as countid from `user`
                                           WHERE hasSigned = 2 AND mailValidation != 0 AND disable!=1
                                           AND validDate >= CURDATE()
                                            order by lastname");
         $query->execute();
-        return $query->fetchObject()->countid;
+        return intval($query->fetchObject()->countid);
     }
     public function editUser(User $user)
     {
@@ -251,19 +261,19 @@ class DatabaseUser extends Database {
         $password = utf8_decode($user->getPassword());
         $mail = utf8_decode($user->getMail());
         $address = utf8_decode($user->getAddress());
-        $cp = utf8_decode($user->getCp());
+        $cp = $user->getCp();
         $town = utf8_decode($user->getTown());
         $complementAddress = utf8_decode($user->getComplementAddress());
         $formationDate = utf8_decode($user->getFormationDate()->format("Y-m-d"));
-        $levelFormation = utf8_decode($user->getLevelFormation());
+        $levelFormation = $user->getLevelFormation();
         $phonePro = utf8_decode($user->getPhonePro());
         $phoneMobile = utf8_decode($user->getPhoneMobile());
-        $newsletter = utf8_decode($user->getNewsletter());
-        $disable = utf8_decode($user->getDisable());
+        $newsletter = $user->getNewsletter();
+        $disable = $user->getDisable() == 1;
         $payment = $user->getPayment()->getIdType();
         $mailValidation = utf8_decode($user->getMailValidation());
         $hashMail = utf8_decode($user->getHashMail());
-        $valuePaid = utf8_decode($user->getValuePaid());
+        $valuePaid = intval($user->getValuePaid());
         $hashPassword = $user->getHashPassword();
         $longitude = $user->getLongitude();
         $latitude = $user->getLatitude();
@@ -310,7 +320,7 @@ class DatabaseUser extends Database {
 
     }
 
-    public function getUsersDisable()
+    public function getUsersDisable() : array
     {
         $ret = array();
 

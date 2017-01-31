@@ -14,8 +14,9 @@ use Visitor;
 
 /**
  * @Entity(repositoryClass="database\repository\TopicRepository")
- * @Table(name="forum_topic")
+ * @Table(name="forum_topic", indexes={@Index(columns={"title", "subtitle"})})
  **/
+//, flags={"fulltext"}
 class Topic
 {
     /** @Id @Column(type="integer") @GeneratedValue **/
@@ -286,6 +287,15 @@ class Topic
         }
     }
 
+    public function getAllViewers() {
+        $ret  =array();
+        $db = new DatabaseUser();
+        foreach($this->usersRead as $uread) {
+            $ret[] = $db->getUserById($uread->getIdUser());
+        }
+        return $ret;
+    }
+
     public function askUnfollow(User $u) {
         foreach($this->usersRead as $uread) {
             if($uread->getIdUser() == $u->getId()) {
@@ -294,5 +304,14 @@ class Topic
         }
 
         return false;
+    }
+
+    public static function getLastTopics($nbTopics = 5) {
+        $ret = array();
+        foreach(Post::getLastPosts($nbTopics) as $post) {
+            $ret[] = $post->getTopic();
+        }
+
+        return $ret;
     }
 }

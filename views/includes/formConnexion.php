@@ -1,4 +1,4 @@
-<form action="<?php echo (isset($readhesion) ? "readherer.php" : "connexion.php") ;?>" method="post">
+<form action="<?=Visitor::getRootPage().'/'.(isset($readhesion) ? "readherer.php" : "connexion.php") ;?>" method="post">
     <div class="form-group">
         <label for="inputAdeli">Numéro ADELI</label>
         <input type="string" name="inputAdeli" class="form-control" id="inputAdeli" placeholder="Numéro ADELI">
@@ -23,7 +23,7 @@
     <?php
     if(!isset($readhesion)) {
         ?>
-    <p style="text-align: center"><a href="<?php echo Visitor::getInstance()->getRootPage();?>/readherer.php">Réadhérer à l'association</a></p>
+    <p style="text-align: center"><a href="<?=Visitor::getRootPage();?>/readherer.php">Réadhérer à l'association</a></p>
     <?php
     }
 ?>

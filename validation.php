@@ -2,9 +2,10 @@
 include('begin.php');
 
 use database\DatabaseUser;
-use models\User; 
-require_once('libs/password_compat/lib/password.php');
+use models\User;
+
 $err = false;
+
 if(isset($_GET['validation']) && isset($_GET['account'])) {
     $db = new DatabaseUser();
     $data = $db->getUser($_GET['account']);
@@ -12,7 +13,6 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
     if($data != null) {
         $user = new User();
         $user->hydrat($data);
-
         if ($user->getHashMail() == $_GET['validation']) {
             $user->setMailValidation(1);
             $user->commit();
@@ -29,7 +29,7 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
             $mailer->Subject .= "Nouvelle inscription sur afmck.fr";
             $mailer->Body = (Mail::getNewAccountTresor($user));
             $mailer->addAddress(TRESORERIE_MAIL, utf8_decode("Trésorerie"));
-            $mailer->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/registration/tresor/".date('Y').'_'.$user->getAdeliNumber().".pdf");
+            $mailer->addAttachment(Visitor::getRootPath()."/docs/members/registration/tresor/".date('Y').'_'.$user->getAdeliNumber().".pdf");
             $mailer->send();
 
             // Send email to user.
@@ -38,8 +38,15 @@ if(isset($_GET['validation']) && isset($_GET['account'])) {
             $mailer->Subject .= "Votre inscription sur afmck.fr";
             $mailer->Body = (Mail::getNewAccount($user));
             $mailer->addAddress($user->getMail(), utf8_decode($user->getFirstName()." ".$user->getLastName()));
-            $mailer->addAttachment(Visitor::getInstance()->getRootPath()."/docs/members/registration/".date('Y').'_'.$user->getAdeliNumber().".pdf");
+            $mailer->addAttachment(Visitor::getRootPath()."/docs/members/registration/".date('Y').'_'.$user->getAdeliNumber().".pdf");
             $mailer->send();
+
+            $db = new DatabaseUser();
+            foreach($db->getUsersByGroup("TRESORIER") as $user) {
+                $user->pushNotification("Nouvelle inscription",
+                    "Une nouvelle demande d'adhésion à valider est disponible.",
+                    \utils\NotificationHelper::$NEWSLETTER, Visitor::getRootPage() . '/admin/validRegister.php');
+            }
         } else {
             $err = true;
         }

@@ -1,9 +1,17 @@
 <?php
-use utils\Pagination;
+use viewers\Pagination;
+use viewers\forums\PostViewer;
 
-$breadcrumb->display()?>
+    $breadcrumb->display()?>
     <div class="container" style="">
         <?php
+        if(Visitor::getInstance()->getUser()->hasDefaultAvatar()) {
+            echo "
+            <div class=\"alert alert-warning\" > Vous n'avez pas défini d'avatar pour le forum .
+            Afin que vous puissiez être facilement reconnaissable, il est préférable d'ajouter un avatar tel qu'une photo .<br />
+            <a href=\"".Visitor::getRootPage()."/members/profil/changer-avatar.php\">Ajouter un avatar à mon profil </a>
+            </div>";
+        }
         echo '<h1>'.($topic->isLocked()? '<i class="glyphicon glyphicon-lock"></i>&nbsp;':'').$topic->getTitle().' <small>'.$topic->getSubtitle().' </small></h1>';
 
         if($topic->isFollowedBy(Visitor::getInstance()->getUser())) {
@@ -36,10 +44,10 @@ $breadcrumb->display()?>
         $posts = $topic->getPosts(($currentPage-1)*FORUM_NB_POSTS_TOPIC, $entityManager);
 
         $p = new Pagination($currentPage,
-            \utils\Pagination::getNbPages($posts->count(), FORUM_NB_POSTS_TOPIC),
+            Pagination::getNbPages($posts->count(), FORUM_NB_POSTS_TOPIC),
             Visitor::getRootPage().'/members/forums/sujets/voir.php?id='.$topic->getId());
 
-        $p->display();
+        echo $p->toString();
         foreach($posts as $post) {
             echo '<div class="forum-post '.($post->isHided()?'hided':'').'">' .
                 '<div class="author">
@@ -82,12 +90,14 @@ $breadcrumb->display()?>
                 echo '<div class="hided-post"><p><em>Réponse masquée par</em> '.$post->messageHided()->getUser()->getShortName().
                     ' <em>pour le motif suivant : '.($post->messageHided()->getMessage()) .'</em></p></div>';
             } else {
-                echo '<div class="post">' . utils\Style::replaceSmileys($post->getContent()) . '</div>';
+                echo '<div class="post">' . utils\Style::replaceSmileys($post->getContent());
+                echo PostViewer::getAprovement($post, Visitor::getInstance()->getUser());
+                echo '</div>';
             }
             echo '</div>';
             echo '</div>';
         }
-        $p->display();
+        echo $p->toString();
         echo '<hr/>';
 
         if(!$topic->isLocked() || Visitor::getInstance()->getUser()->isModerator()) {

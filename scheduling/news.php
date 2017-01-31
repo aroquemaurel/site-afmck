@@ -1,9 +1,6 @@
 #!/usr/local/bin/php.ORIG.5_4
 <?php
 require_once('../begin.php');
-//require_once('../autoload.php');
-require_once('../libs/password_compat/lib/password.php');
-
 
 /**
  * Script is executed by crontab of OVH every hours.
@@ -20,7 +17,7 @@ foreach($db->getFirstMailsToSend(NEWS_NB_MAILS) as $news) {
     $mailer->CharSet = 'UTF-8';
     $mailer->addAddress($news->getUser()->getMail(), $news->getUser()->getFirstName()." ".$news->getUser()->getLastName());
     foreach($news->getNews()->getAttachments() as $attch) {
-        $mailer->addAttachment(Visitor::getInstance()->getRootPath().'/docs/members/news/'.$attch->getPath());
+        $mailer->addAttachment(Visitor::getRootPath().'/docs/members/news/'.$attch->getPath());
     }
     if(!$mailer->send()) {
         echo $mailer->ErrorInfo;

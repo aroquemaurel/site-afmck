@@ -10,31 +10,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="viewport" content="width=device-width">
 
-
-    <title><?php echo $title; ?> — Association française Mc Kenzie</title>
+    <title><?=$title; ?> — Association française Mc Kenzie</title>
     <!-- Bootstrap and demo CSS -->
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/afmck.css" rel="stylesheet">
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/tooltip-viewport.css" rel="stylesheet">
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/css/multi-upload.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage()?>/style/fonts/family-lato.css" rel="stylesheet" type="text/css" >
+    <link href="<?=Visitor::getRootPage()?>/style/fonts/family-roboto.css" rel="stylesheet" type="text/css" >
+    <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="<?=Visitor::getRootPage() ?>/style/css/afmck.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage() ?>/style/css/afmck-forum.css" rel="stylesheet">
+
+    <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage() ?>/style/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage() ?>/style/css/tooltip-viewport.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage() ?>/style/css/multi-upload.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= Visitor::getRootPage()?>/style/css/font-awesome-4.7.0/css/font-awesome.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="<?=Visitor::getRootPage() ?>/style/js/html5shiv.min.js"></script>
+      <script src="<?=Visitor::getRootPage() ?>/style/js/respond.min.js"></script>
     <![endif]-->
 
     <!-- Yamm styles-->
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/yamm3/yamm/yamm.css" rel="stylesheet">
-    <link rel="shortcut icon" href="<?php echo Visitor::getInstance()->getRootPage() ?>/afmck-icone.ico" />
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/tocify/src/stylesheets/jquery.tocify.css" rel="stylesheet">
-    <link href="<?php echo Visitor::getInstance()->getRootPage() ?>/style/wysiwyg/external/google-code-prettify/prettify.css" rel="stylesheet" />
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet" />
+    <link href="<?=Visitor::getRootPage() ?>/style/yamm3/yamm/yamm.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage() ?>/afmck-icone.ico" rel="shortcut icon" />
+    <link href="<?=Visitor::getRootPage() ?>/style/tocify/src/stylesheets/jquery.tocify.css" rel="stylesheet">
+    <link href="<?=Visitor::getRootPage() ?>/style/wysiwyg/external/google-code-prettify/prettify.css" rel="stylesheet" />
+    <link href="<?=Visitor::getRootPage()?>/style/fonts/font-awesome.css" rel="stylesheet" type="text/css" >
     <style>
         body {
             padding-top: 20px;
@@ -52,7 +56,7 @@
                 margin: 0px 0px 20px 0px;
             }
         }
-        </style>
+    </style>
 </head>
 <body>
 <script>

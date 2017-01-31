@@ -1,16 +1,16 @@
 <?php
+$title = 'Connexion';
+
 include('begin.php');
-require_once('libs/password_compat/lib/password.php');
 
 use utils\Link;
-$title = 'Connexion';
 
 if(!isset($_POST['inputAdeli']) || !isset($_POST['inputPassword'])) {
     $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Connexion', '#')));
 
-    include(Visitor::getInstance()->getRootPath().'/views/includes/head.php');
-    include(Visitor::getInstance()->getRootPath().'/views/connexion.php');
-    include(Visitor::getInstance()->getRootPath().'/views/includes/foot.php');
+    include(Visitor::getRootPath().'/views/includes/head.php');
+    include(Visitor::getRootPath().'/views/connexion.php');
+    include(Visitor::getRootPath().'/views/includes/foot.php');
     exit();
 }
 $adeliNumber = $_POST['inputAdeli'];

@@ -6,7 +6,7 @@
     include('includes/formPassword.php');
     ?>
 
-    <input type="hidden" value="<?php echo $user->getId()?>" name="user" />
+    <input type="hidden" value="<?= $user->getId()?>" name="user" />
     <hr class="colorgraph">
     <button id="submit" type="submit" style="margin: auto; width: 250px; "
             class="btn btn-primary btn-block btn-lg">
@@ -21,5 +21,5 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <?php
-$script = '<script src="' . Visitor::getInstance()->getRootPage() . '/views/formPassword.js"></script>';
+$script = '<script src="' . Visitor::getRootPage() . '/views/formPassword.js"></script>';
 ?>

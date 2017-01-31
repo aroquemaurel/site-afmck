@@ -1,9 +1,9 @@
 <?php
 $breadcrumb->display()?>
 <div class="container" style="">
-    <h1><?php echo $title;?></h1>
+    <h1><?= $title;?></h1>
     <form enctype="multipart/form-data"  role="form" method="post"
-          action="<?php echo Visitor::getRootPage().'/members/forums/messages/masquer.php?id='.$post->getId();?>&masquer=1">
+          action="<?= Visitor::getRootPage().'/members/forums/messages/masquer.php?id='.$post->getId();?>&masquer=1">
         <div class="row" style="width: 80%; margin: auto;">
             <div class="form-group">
                 <input required="required" type="text" name="msg" id="msg"
@@ -24,7 +24,7 @@ $breadcrumb->display()?>
     </form>
     <div class="forum-post">
         <?php
-        $user = Visitor::getInstance()->getUser();
+        $user = $post->getUser();
         echo '<div class="author">
 <div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
                 <img width="100px" src="'.$user->getAvatar().'"/></div>

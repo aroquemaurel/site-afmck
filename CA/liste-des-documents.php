@@ -1,12 +1,13 @@
 <?php
 $particularRights = true;
+$title = 'Liste des documents';
+
 include('../begin.php');
 utils\Rights::hasRights(array("MEMBRE_CA", "ADMINISTRATEUR"));
 
 use database\DatabaseDocuments;
 use utils\Link;
-$title = 'Liste des documents';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Administration','#'), new Link('Liste des documents', '#')));
 
 $db = new DatabaseDocuments();

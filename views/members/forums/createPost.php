@@ -1,8 +1,8 @@
 <div class="forum-post">
     <?php
-    $user = Visitor::getInstance()->getUser();
+    $user = isset($post) ? $post->getUser() : Visitor::getInstance()->getUser();
     echo '<div class="author">
-<div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
+            <div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
                 <img width="100px" src="'.$user->getAvatar().'"/></div>
                 <p id="description" style="font-size: 10pt">'.
         $user->getFirstName().'<br/>'.$user->getLastName().
@@ -12,11 +12,11 @@
             <div class="form-group">
                 <?php utils\Wysiwyg::display(isset($post)?$post->getContent() : ''); ?>
             </div>
-            <textarea style="visibility: hidden" id="hiddeninput" name="content"><?php if(isset($post)) { echo $post->getContent(); }?></textarea>
+            <textarea style="visibility: hidden" id="hiddeninput" name="content"><?= (isset($post)? $post->getContent() : '')?></textarea>
 
             <button id="submit" type="submit" style="margin: auto; margin-top: -50px; width: 250px; "
                     class="btn btn-primary btn-block btn-lg">
-                <i class="glyphicon glyphicon-ok-sign"></i>&nbsp;<?php echo $titleBtn;?>
+                <i class="glyphicon glyphicon-ok-sign"></i>&nbsp;<?= $titleBtn;?>
             </button>
 
     </div>

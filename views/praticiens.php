@@ -8,17 +8,39 @@ $breadcrumb->display()?>
         <div class="introcarte">
         <p>
             Sur cette carte, vous pouvez avoir accès à une liste de praticiens adhérents à notre association et ayant
-            signé une <a href="<?php echo Visitor::getInstance()->getRootPage();?>/AFMcK/charte.php" target="_blank">charte de bonne pratique</a>.
+            signé une <a href="<?= Visitor::getRootPage();?>/AFMcK/charte.php" target="_blank">charte de bonne pratique</a>.
             <div class="bs-callout bs-callout-warning">
                 <p>Seuls les adhérents à l'association ayant une formation de niveau D ou supérieur sont affichés sur cette carte</p>
             </div>
 <?php
 $nbPraticiens = 0;
+$nbDLevel = 0;
+$nbCertif = 0;
+$nbDiplo = 0;
 foreach($users as $addresses) {
-$nbPraticiens += count($addresses);
+    $nbPraticiens += count($addresses);
+    foreach($addresses as $addr) {
+        switch($addr->getLevelFormationString()) {
+            case "D":
+                ++$nbDLevel;
+                break;
+            case "Certifié":
+                ++$nbCertif;
+                break;
+            case "Diplômé":
+                ++$nbDiplo;
+                break;
+        }
+    }
 }
 ?>
-<p>Il y a actuellement <?php echo count($users);?> cabinets, de <?php echo $nbPraticiens;?> praticiens, sur la carte.</p>
+<p>Il y a actuellement <?= count($users);?> cabinets, de <?= $nbPraticiens;?> praticiens, sur la carte.</p>
+        <ul>
+            <li><img src="<?= Visitor::getRootPage().'/style/img/markerclustered/pinLevelD.png'?>"/>&nbsp;&nbsp;<?=$nbDLevel?> niveaux D</li>
+            <li><img src="<?= Visitor::getRootPage().'/style/img/markerclustered/pinCertif.png'?>"/>&nbsp;&nbsp;<?=$nbCertif?> certifiés</li>
+            <li><img src="<?= Visitor::getRootPage().'/style/img/markerclustered/pinDiplome.png'?>"/>&nbsp;&nbsp;<?=$nbDiplo?> diplomés</li>
+        </ul>
+
     </div><!-- fin de .introcarte -->
         <input id="pac-input" class="controls" type="text" placeholder="Rechercher un lieu">
         <div style="width: 700px; height: 500px" id="map-canvas"></div>
@@ -42,8 +64,10 @@ $arrayUser = rtrim($arrayUser, ",");
 $arrayUser .= ']';
 $arrayAddress = rtrim($arrayAddress, ",");
 $arrayAddress .= ']';
-    $script = '   <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=places&sensor=false"></script>';
+$script = '<script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&libraries=places&key=AIzaSyCqSdPbxboWbBCwD2qWcj-nfpMxn14jqUk"></script>';
+//08d11r91
 //$script .='<script type="text/javascript" src="'.Visitor::getRootPage().'/style/js/markerclusterer.js"></script>';
+$script .= '<script>MarkerClusterer.prototype.MARKER_CLUSTER_IMAGE_PATH_ = \''.Visitor::getRootPage().'/style/img/markerclustered/m'.'\'</script>';
     $script .= "<script>
     var map;
     var elevator;
@@ -81,30 +105,54 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
     map.setCenter(places[0].geometry.location);
     map.setZoom(12);
 });
-    var markerCluster;";
+    var markerCluster;\n\t";
 
    // for (var x = 0; x < addresses.length; x++) {
+    $script .= "            
+    var pinColorD = 'fefe57';
+    var pinColorCert = '34b946';
+    var pinColorDipl = 'fc7468';
+            var pinImage4 = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|\" + pinColorD,
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0,0),
+                new google.maps.Point(10, 34));
+            var pinImage5 = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|\" + pinColorCert,
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0,0),
+                new google.maps.Point(10, 34));
+            var pinImage6 = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|\" + pinColorDipl,
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0,0),
+                new google.maps.Point(10, 34));
 
+            var pinShadow = new google.maps.MarkerImage(\"https://chart.apis.google.com/chart?chst=d_map_pin_shadow\",
+                new google.maps.Size(40, 37),
+                new google.maps.Point(0, 0),
+                new google.maps.Point(12, 35));
+";
    foreach($users as $addresses) {
        $someUser = $addresses[0];
        if ($someUser->getAddress() != "") {
            if($someUser->getLatitude() == "" || $someUser->getLongitude() == "" ) {
-               $script .= "$.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($someUser->getAddress()." ".$someUser->getCp()." ".$someUser->getTown()) . "&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location;";
-               $key = md5($someUser->getId().' Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres. Des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l’interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n’est pas mon cas, comme je disais là, puisque moi au contraire ');
-               $script .= '$.ajax({url: "'.Visitor::getInstance()->getRootPage().'/change-coords.php?key='.$key.'&id='.$someUser->getId().'&lgt="+p.lng+"&lat="+p.lat,
-                                     context: document.body}).done(function(){})});';
+               $script .= "$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=" . addslashes($someUser->getAddress()." ".$someUser->getCp()." ".$someUser->getTown()) . "&sensor=false', null, function (data) {
+               if(data.results[0] != null) {
+                var p = data.results[0].geometry.location;\n";
+               $key = md5($someUser->getId().KEY_AJAX_PRATICIENS);
+               $script .= '$.ajax({url: "'.Visitor::getRootPage().'/change-coords.php?key='.$key.'&id='.$someUser->getId().'&lgt="+p.lng+"&lat="+p.lat,
+                                     context: document.body}).done(function(){})}});';
                $db = new DatabaseUser();
                $u = $db->getUserById($someUser->getId());
                $someUser->setLongitude($u->getLongitude());
                $someUser->setLatitude($u->getLatitude());
            } else {
                $script .= "
-            var latlng = new google.maps.LatLng(" . $someUser->getLatitude() . ", " . $someUser->getLongitude() . ");
+            var latlng = new google.maps.LatLng(" . number_format($someUser->getLatitude(), 15, '.', '') . ", " . number_format($someUser->getLongitude(), 15, '.', '') . ");
             thereisAjax = false;
             addMarker(new google.maps.Marker({
                 position : latlng,
 				map : map,
+                icon: pinImage".$someUser->getLevelFormation().",
+                shadow: pinShadow,
 				draggable: false,
 				content :'";
 

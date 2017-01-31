@@ -38,13 +38,13 @@ class TextDescriptor extends Descriptor
         }
 
         $totalWidth = isset($options['total_width']) ? $options['total_width'] : strlen($argument->getName());
-        $spacingWidth = $totalWidth - strlen($argument->getName()) + 2;
+        $spacingWidth = $totalWidth - strlen($argument->getName());
 
-        $this->writeText(sprintf('  <info>%s</info>%s%s%s',
+        $this->writeText(sprintf('  <info>%s</info>  %s%s%s',
             $argument->getName(),
             str_repeat(' ', $spacingWidth),
-            // + 17 = 2 spaces + <info> + </info> + 2 spaces
-            preg_replace('/\s*[\r\n]\s*/', "\n".str_repeat(' ', $totalWidth + 17), $argument->getDescription()),
+            // + 4 = 2 spaces before <info>, 2 spaces after </info>
+            preg_replace('/\s*[\r\n]\s*/', "\n".str_repeat(' ', $totalWidth + 4), $argument->getDescription()),
             $default
         ), $options);
     }
@@ -75,13 +75,13 @@ class TextDescriptor extends Descriptor
             sprintf('--%s%s', $option->getName(), $value)
         );
 
-        $spacingWidth = $totalWidth - strlen($synopsis) + 2;
+        $spacingWidth = $totalWidth - strlen($synopsis);
 
-        $this->writeText(sprintf('  <info>%s</info>%s%s%s%s',
+        $this->writeText(sprintf('  <info>%s</info>  %s%s%s%s',
             $synopsis,
             str_repeat(' ', $spacingWidth),
-            // + 17 = 2 spaces + <info> + </info> + 2 spaces
-            preg_replace('/\s*[\r\n]\s*/', "\n".str_repeat(' ', $totalWidth + 17), $option->getDescription()),
+            // + 4 = 2 spaces before <info>, 2 spaces after </info>
+            preg_replace('/\s*[\r\n]\s*/', "\n".str_repeat(' ', $totalWidth + 4), $option->getDescription()),
             $default,
             $option->isArray() ? '<comment> (multiple values allowed)</comment>' : ''
         ), $options);
@@ -156,7 +156,7 @@ class TextDescriptor extends Descriptor
             $this->writeText("\n");
             $this->writeText('<comment>Help:</comment>', $options);
             $this->writeText("\n");
-            $this->writeText(' '.str_replace("\n", "\n ", $help), $options);
+            $this->writeText('  '.str_replace("\n", "\n  ", $help), $options);
             $this->writeText("\n");
         }
     }
@@ -198,6 +198,8 @@ class TextDescriptor extends Descriptor
             }
 
             // add commands by namespace
+            $commands = $description->getCommands();
+
             foreach ($description->getNamespaces() as $namespace) {
                 if (!$describedNamespace && ApplicationDescription::GLOBAL_NAMESPACE !== $namespace['id']) {
                     $this->writeText("\n");
@@ -205,9 +207,13 @@ class TextDescriptor extends Descriptor
                 }
 
                 foreach ($namespace['commands'] as $name) {
-                    $this->writeText("\n");
-                    $spacingWidth = $width - strlen($name);
-                    $this->writeText(sprintf('  <info>%s</info>%s%s', $name, str_repeat(' ', $spacingWidth), $description->getCommand($name)->getDescription()), $options);
+                    if (isset($commands[$name])) {
+                        $this->writeText("\n");
+                        $spacingWidth = $width - strlen($name);
+                        $command = $commands[$name];
+                        $commandAliases = $this->getCommandAliasesText($command);
+                        $this->writeText(sprintf('  <info>%s</info>%s%s', $name, str_repeat(' ', $spacingWidth), $commandAliases.$command->getDescription()), $options);
+                    }
                 }
             }
 
@@ -227,6 +233,25 @@ class TextDescriptor extends Descriptor
     }
 
     /**
+     * Formats command aliases to show them in the command description.
+     *
+     * @param Command $command
+     *
+     * @return string
+     */
+    private function getCommandAliasesText($command)
+    {
+        $text = '';
+        $aliases = $command->getAliases();
+
+        if ($aliases) {
+            $text = '['.implode('|', $aliases).'] ';
+        }
+
+        return $text;
+    }
+
+    /**
      * Formats input option/argument default value.
      *
      * @param mixed $default
@@ -235,10 +260,6 @@ class TextDescriptor extends Descriptor
      */
     private function formatDefaultValue($default)
     {
-        if (PHP_VERSION_ID < 50400) {
-            return str_replace(array('\/', '\\\\'), array('/', '\\'), json_encode($default));
-        }
-
         return str_replace('\\\\', '\\', json_encode($default, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
     }
 

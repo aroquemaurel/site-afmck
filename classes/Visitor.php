@@ -1,6 +1,9 @@
 <?php
+declare(strict_types = 1);
 use database\DatabaseUser;
+use Doctrine\ORM\EntityManager;
 use models\User;
+use utils\NotificationHelper;
 
 /**
  * Created by PhpStorm.
@@ -14,11 +17,13 @@ class Visitor {
     private $lastPage;
     private $currentPath;
 
+    private static $entityManager;
+
     private function __construct() {
         $this->currentPath = '.';
     }
 
-    public static function getInstance() {
+    public static function getInstance() : Visitor {
         if(Visitor::$instance == null) {
             if(isset($_SESSION['visitor']) && $_SESSION['visitor'] != null) {
                 Visitor::$instance = $_SESSION['visitor'];
@@ -32,10 +37,20 @@ class Visitor {
         return Visitor::$instance;
     }
 
-    public function getUser() {
+    public static function getNotifications()
+    {
+        $notifications = array();
+        if(Visitor::getInstance()->isConnected()) {
+            $notifications = NotificationHelper::getAllNotificationOfUser(Visitor::getInstance()->getUser());
+        }
+
+        return $notifications;
+    }
+
+    public function getUser() : User {
         return $this->user;
     }
-    public function getUserByAdeliAndPassword($adeliNumber, $password) {
+    public function getUserByAdeliAndPassword(string $adeliNumber, string $password) : bool {
         $this->user = new User();
         if(User::passwordIsValid($adeliNumber, $password)) {
             $db = new DatabaseUser();
@@ -48,18 +63,18 @@ class Visitor {
     }
 
     public function displayMenu() {
-        if(strpos($this->getCurrentFile(), 'members') || strpos($this->getCurrentFile(), 'admin')) {
+        if(strpos($this->getCurrentFile(), 'members') || strpos($this->getCurrentFile(), 'admin') || strpos($this->getCurrentFile(), 'CA')) {
             include($this->getRootPath() . '/views/includes/menus/members.php');
         } else {
             include($this->getRootPath() . '/views/includes/menus/visitors.php');
         }
     }
 
-    public static function getRootPage() {
+    public static function getRootPage() : string {
         return ROOT_PAGE;
     }
 
-    public static function getRootPath() {
+    public static function getRootPath() : string  {
         return ROOT_PATH.'/'.ROOT_PAGE;
     }
 
@@ -67,21 +82,21 @@ class Visitor {
         return $this->lastPage;
     }
 
-    public function setLastPage($lastpage) {
+    public function setLastPage(string $lastpage) {
         if($lastpage == $this->lastPage) {
             $this->lastPage = '../index.php';
         } else {
             $this->lastPage = $lastpage;
         }
     }
-    public function isConnected() {
+    public function isConnected() : bool {
         return $this->user != null;
     }
-    public function getCurrentPath() {
+    public function getCurrentPath() : string {
         return $this->currentPath;
     }
 
-    public function setCurrentPath($currentPath) {
+    public function setCurrentPath(string $currentPath) {
         $this->currentPath = $currentPath;
     }
     public function autoconnect() {
@@ -92,7 +107,7 @@ class Visitor {
             }
         }
     }
-    public function connect($user, $password, $remember=false) {
+    public function connect(string $user, string $password, bool $remember=false) {
         $this->user = new User($user, $password);
         if($remember) {
             $this->user->setCookie();
@@ -104,7 +119,7 @@ class Visitor {
     }
 
 
-    public function hasRights($pageFilename, $groups=array()) {
+    public function hasRights(string $pageFilename, array $groups=array()) : bool {
 
         if($groups != array() && $this->isConnected()) { // particular rights
             foreach($groups as $group) {
@@ -130,7 +145,7 @@ class Visitor {
         }
     }
 
-    public function getCurrentDir() {
+    public function getCurrentDir() : string {
         $currentDir = '';
         if(basename(getcwd()) == 'members') {
             $currentDir = 'members/';
@@ -141,12 +156,39 @@ class Visitor {
         return $currentDir;
     }
 
-    public function getCurrentFile() {
+    public function getCurrentFile() : string {
         return $_SERVER['PHP_SELF'];
     }
 
     public function removeUser() {
         $this->user = null;
+    }
+
+    public static function setEntityManager(EntityManager $entityManager) {
+        self::$entityManager = $entityManager;
+    }
+
+    public static function getEntityManager() : EntityManager {
+        return self::$entityManager;
+    }
+
+    public static function getIpAddress() : string {
+        $ipaddress = '';
+        if (getenv('HTTP_CLIENT_IP'))
+            $ipaddress = getenv('HTTP_CLIENT_IP');
+        else if(getenv('HTTP_X_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+        else if(getenv('HTTP_X_FORWARDED'))
+            $ipaddress = getenv('HTTP_X_FORWARDED');
+        else if(getenv('HTTP_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_FORWARDED_FOR');
+        else if(getenv('HTTP_FORWARDED'))
+            $ipaddress = getenv('HTTP_FORWARDED');
+        else if(getenv('REMOTE_ADDR'))
+            $ipaddress = getenv('REMOTE_ADDR');
+        else
+            $ipaddress = 'UNKNOWN';
+        return $ipaddress;
     }
 
 } 

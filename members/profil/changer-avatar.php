@@ -1,4 +1,6 @@
 <?php
+$title = 'Changer son avatar';
+
 include('../../begin.php');
 use utils\Link;
 use utils\Rights;
@@ -7,6 +9,8 @@ if(isset($_FILES["file"])) {
     $target_dir = Visitor::getRootPath().'/docs/members/avatars';
     $uploader = new Uploader($target_dir, array("jpg", "png", "jpeg"), 4 * 1024 * 1024*1024);
     $err = false;
+
+    echo VIsitor::getInstance()->getUser()->getAvatarFileName();
     if(file_exists(Visitor::getInstance()->getUser()->getAvatarPath())) {
         rename(Visitor::getInstance()->getUser()->getAvatarPath(), Visitor::getInstance()->getUser()->getAvatarPath().".old");
     }
@@ -29,11 +33,10 @@ if(isset($_FILES["file"])) {
     }
 
 
-    header('Location: ' . Visitor::getInstance()->getRootPage().'/members/profil/changer-avatar.php');
+    header('Location: ' . Visitor::getRootPage().'/members/profil/changer-avatar.php');
     exit();
 }
-$title = 'Changer son avatar';
-$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getInstance()->getRootPage()."/members/index.php"),
+$breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Mon profil',Visitor::getRootPage().'/members/mon-profil.php'), new Link('Changer d\'avatar', '#')));
 include('../../views/includes/head.php');
 include('../../views/members/profil/changer-avatar.php');
