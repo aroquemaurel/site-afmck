@@ -7,7 +7,7 @@ use Doctrine\Common\Proxy\Autoloader;
 require_once \Visitor::getRootPath()."/vendor/autoload.php";
 
 // Create a simple "default" Doctrine ORM configuration for Annotations
-$isDevMode = CONFIG == 'dev'||CONFIG == 'preprod';
+$isDevMode = CONFIG == 'dev'||CONFIG == 'preprod' || MAINTENANCE;
 $config = Setup::createAnnotationMetadataConfiguration(array(\Visitor::getRootPath()."/classes/models"), $isDevMode);
 
 if ($isDevMode) {
