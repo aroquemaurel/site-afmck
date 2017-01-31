@@ -1,4 +1,5 @@
 <?php
+
 define('CONFIG', 'dev');
 
 define('MAINTENANCE', false);
@@ -17,9 +18,9 @@ if(CONFIG == 'dev') {
     define('FORUM_NB_POSTS_TOPIC', 5);
     define('FORUM_NB_TOPIC_FORUM', 2);
 
-    ini_set('display_errors',1);
+    ini_set('display_errors', 1);
 } else if(CONFIG == 'prod') {
-    ini_set('display_errors',0);
+    ini_set('display_errors', '0');
     define('ROOT_PATH', '/homez.441/afmck/www/');
     define('TRESORERIE_MAIL', 'tresorerie@afmck.fr');
     define('ROOT_PAGE', '');
@@ -30,7 +31,7 @@ if(CONFIG == 'dev') {
 
     define('NEWS_NB_MAILS', 50);
 } else if(CONFIG == 'preprod') {
-    ini_set('display_errors', 1);
+    ini_set('display_errors', '1');
     define('ROOT_PATH', '/homez.441/afmck/preprod/');
     define('TRESORERIE_MAIL', 'tresorerie@afmck.fr');
     define('ROOT_PAGE', '');

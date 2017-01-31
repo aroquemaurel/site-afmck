@@ -193,6 +193,10 @@ h5 {
     margin: 60px auto auto;
 }
 
+.main .forum-post {
+    width: 97%;
+}
+
 * html .main {
     height: 100%;
 }

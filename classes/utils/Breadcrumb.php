@@ -26,7 +26,7 @@ class Breadcrumb {
         }
         echo '</ul></div>';
         if(Visitor::getInstance()->isConnected()) {
-            echo '<div class="col-md-4">';
+            echo '<div class="col-md-3">';
             echo '<form method="get" action="' . \Visitor::getRootPage() . '/members/recherche.php">';
             echo '<div class="input-group">';
             echo '<span class="input-group-btn">';

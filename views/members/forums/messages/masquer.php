@@ -24,7 +24,7 @@ $breadcrumb->display()?>
     </form>
     <div class="forum-post">
         <?php
-        $user = Visitor::getInstance()->getUser();
+        $user = $post->getUser();
         echo '<div class="author">
 <div class="thumbnail" style="width: 110px; margin: auto;text-align: center">
                 <img width="100px" src="'.$user->getAvatar().'"/></div>

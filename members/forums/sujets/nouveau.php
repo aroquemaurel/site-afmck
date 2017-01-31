@@ -2,6 +2,7 @@
 declare(strict_types = 1);
 use models\announces\Announce;
 use models\forum\Topic;
+use utils\AnnounceHelper;
 use utils\Link;
 
 include('../../../begin.php');
@@ -21,38 +22,33 @@ if($forum == null) {
     header('Location: ' . (Visitor::getRootPage(). '/members/forums/index.php'));
 }
 
-if(isset($_POST['title']) && isset($_POST['content'])) { // New topic
-    $title = $_POST['title'];
-    $subtitle = isset($_POST['subtitle']) ? $_POST['subtitle'] : '';
-    $content = $_POST['content'];
+if((isset($_POST['title']) || isset($_POST['announcetitle'])) && isset($_POST['content'])) { // New topic
+    $subtitle = isset($_POST['subtitle']) ? htmlspecialchars($_POST['subtitle']) : '';
 
     if($forum->getName() == FORUM_NAME_ANNOUNCES) {
         // Add announce.
-        $announce = new Announce($_POST['title']);
+        $announce = new Announce(htmlspecialchars($_POST['announcetitle']));
         $announce->setDate(new DateTime($_POST['date']));
         $announce->setDuration($_POST['duration']);
         $announce->setPostalCode($_POST['postalCode']);
         $announce->setTown($_POST['town']);
-        $announce->setTitle(htmlspecialchars($_POST['title']));
+        $announce->setTitle(htmlspecialchars($_POST['announcetitle']));
         $announceTypeRepo = $entityManager->getRepository('models\announces\TypeAnnounce');
         $announceType = $announceTypeRepo->findOneBy(array('id'=>$_POST['announceType']));
         $announce->setType($announceType);
         $announce->setUser(Visitor::getInstance()->getUser());
+        $announce->setDescription($_POST['content']);
         $entityManager->persist($announce);
 
         // TODO no duration ?
-        $title = '['.$announceType->getLabel().'] '.$announce->getTown().' '.$announce->getPostalCode().' — '.$_POST['title'];
-        $subtitle = 'Dès le '.$_POST['date'].' / '.$_POST['duration'];
-        $content = '<h1>'.$announceType->getLabel().' à '.$announce->getTown().'</h1>';
-        $content .= '<ul>';
-        $content .= '<li><b>Date de début :</b> '.$_POST['date'].' </li>';
-        $content .= '<li><b>Durée :</b> '.$_POST['duration'].' </li>';
-        $content .= '<li><b>Localisation:</b> '.$announce->getPostalCode().' '.$announce->getTown().' </li>';
-        $content .= '</ul>';
-        $content .= '<br/><br/>';
-        $content .= $_POST['content'];
+        $title = AnnounceHelper::getTopicTitleFromAnnounce($announce);
+        $subtitle = AnnounceHelper::getTopicSubtitleFromAnnoune($announce);
+        $content = AnnounceHelper::getContentPostFromAnnounec($announce);
 
         $_SESSION['lastMessage'] = Popup::successMessage("Votre annonce a bien été créée");
+    } else {
+        $title = htmlspecialchars($_POST['title']);
+        $content = $_POST['content'];
     }
 
     $topic = new Topic();

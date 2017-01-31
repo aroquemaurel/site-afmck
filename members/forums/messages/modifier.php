@@ -1,5 +1,6 @@
 <?php
 use models\forum\Post;
+use utils\AnnounceHelper;
 use utils\Link;
 use utils\Rights;
 
@@ -33,19 +34,40 @@ if((Visitor::getInstance()->getUser()->getId() != $post->getUser()->getId() &&
 if($post->getTopic()->getForum()->getName() == FORUM_NAME_ANNOUNCES) {
     $announceRepo = $entityManager->getRepository('models\announces\Announce');
     $announce = $announceRepo->findOneBy(array('topic'=>$post->getTopic()));
+    $post->setContent($announce->getDescription());
 }
 
-if(isset($_POST['content'])) {
-    // We edit the new post
-    $post->setContent($_POST['content']);
-    if($post->getTopic()->getCreator()->getId() == Visitor::getInstance()->getUser()->getId()) {
-        if(isset($_POST['title'])) {
-            $post->getTopic()->setTitle($_POST['title']);
-        }
+if(isset($_POST['content']) && isset($post)) {
+    if(isset($announce) && isset($_POST['announcetitle']) && isset($_POST['town']) && isset($_POST['postalCode']) && isset($_POST['date'])) {
+        // We edit the associate announce
+        $announce->setDate(new DateTime($_POST['date']));
+        $announce->setDuration($_POST['duration']);
+        $announce->setPostalCode($_POST['postalCode']);
+        $announce->setTown($_POST['town']);
+        $announce->setTitle(htmlspecialchars($_POST['announcetitle']));
+        $announceTypeRepo = $entityManager->getRepository('models\announces\TypeAnnounce');
+        $announceType = $announceTypeRepo->findOneBy(array('id'=>$_POST['announceType']));
+        $announce->setType($announceType);
+        $announce->setUser(Visitor::getInstance()->getUser());
+        $announce->setDescription($_POST['content']);
 
-        if(isset($_POST['subtitle'])) {
-            $post->getTopic()->setSubtitle($_POST['subtitle']);
-        }
+        $title = AnnounceHelper::getTopicTitleFromAnnounce($announce);
+        $subtitle = AnnounceHelper::getTopicSubtitleFromAnnoune($announce);
+        $content = AnnounceHelper::getContentPostFromAnnounec($announce);
+
+        $entityManager->persist($announce);
+    } else { // Only a post
+        $content = $_POST['content'];
+        $title = htmlspecialchars($_POST['title']);
+        $subtitle = isset($_POST['subtitle']) ? htmlspecialchars($_POST['subtitle']) : '';
+    }
+
+    // We edit the new post
+    $post->setContent($content);
+    $topic = $post->getTopic();
+    if($topic->getCreator()->getId() == Visitor::getInstance()->getUser()->getId()) {
+        $topic->setTitle($title);
+        $topic->setSubtitle($subtitle);
     }
     $entityManager->persist($post);
     $entityManager->flush();

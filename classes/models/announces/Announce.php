@@ -51,6 +51,9 @@ class Announce
     /** @Column(type="integer") */
     protected $idUser;
 
+    /** @Column(type="text") **/
+    protected $description;
+
     /**
      * Announce constructor.
      * @param $type
@@ -199,6 +202,23 @@ class Announce
     {
         $this->topic = $topic;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
 
 
 
