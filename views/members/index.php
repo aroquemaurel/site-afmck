@@ -51,7 +51,7 @@ $breadcrumb->display()?>
                     $topics[] = $topic;
                     echo '<a href="' . Visitor::getRootPage() . '/members/forums/sujets/voir.php?id=' . $topic->getId() . '">';
                     echo '<h3>' . $topic->getTitle() . ' <small>' . $topic->getSubtitle() . '</small></h3>';
-                    echo  '<p style="font-size: 8pt">Par ' . $post->getUser()->toString() . ' le ' . $topic->getDate()->format('d / m / Y à H:i') . '</p>';
+                    echo  '<p style="font-size: 8pt">Par ' . $post->getUser()->toString() . ' le ' . $topic->getDateUpdate()->format('d / m / Y à H:i') . '</p>';
                     echo '</a>';
                     ++$i;
                 }

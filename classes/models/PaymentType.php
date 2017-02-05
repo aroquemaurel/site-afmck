@@ -37,12 +37,12 @@ class PaymentType
     public function getExplainMessage(User $user) {
         switch($this->idType) {
             case 1:
-                return "Vous avez choisi de payer votre cotisation, d'un montant de<b> ".$this->user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
+                return "Vous avez choisi de payer votre cotisation, d'un montant de<b> ".$user->getValuePaid()."euros </b>par chèque : merci d'envoyer ce chèque par courrier à l'adresse ci-dessous: <br/>
                 Mme Adeline Braguier,<br/>
                 32, cours Albert Thomas<br/>
                 69008 LYON";
             case 2:
-                return "Vous avez choisi le paiement par virement, merci d'effectuer votre virement de <b>".$this->user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>".
+                return "Vous avez choisi le paiement par virement, merci d'effectuer votre virement de <b>".$user->getValuePaid()." euros </b> au compte de l'association le plus rapidement possible. <br/>".
                 "Vous trouverez un Relevé d'Identité Bancaire de l'AFMcK <a href=\"http://afmck.fr/docs/members/RIB.pdf\">ici</a><br/><br/>".
                 "Pour toute question vous pouvez envoyer un mail à <a href=\"mailto:tresorerie@afmck.fr\">tresorerie@afmck.fr</a>";
             case 3:

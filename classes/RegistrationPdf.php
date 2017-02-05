@@ -4,10 +4,12 @@ use models\User;
 class RegistrationPdf extends PdfFile {
     private $user;
     private $tresor;
+
     public function __construct(User $user, $tresor=false) {
         $this->user = $user;
         $this->tresor = $tresor;
     }
+
     public function toHtml() {
         $content = "    <p style=\"\">
         <img src=\"" . Visitor::getRootPath() . "/style/img/logo.jpg\"
@@ -46,7 +48,7 @@ class RegistrationPdf extends PdfFile {
          : tresorerie@afmck.fr
         </p>";
         
-        $content .= "<p>".$this->user->getPayment()->getExplainMessage()."</p>".
+        $content .= "<p>".$this->user->getPayment()->getExplainMessage($this->user)."</p>".
 
 "        <div style=\"height:2px;border-bottom:1px solid black;\"></div>
         ";

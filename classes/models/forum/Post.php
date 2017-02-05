@@ -233,7 +233,7 @@ class Post
 
     public static function getLastPosts($nbTopics = 5) {
         $repo = \Visitor::getEntityManager()->getRepository('models\forum\Post');
-        return $repo->findBy(array(), null, $nbTopics);
+        return $repo->findBy(array(), array("date"=>"desc"), $nbTopics);
     }
 
 

@@ -9,7 +9,8 @@ $breadcrumb->display();
     <form enctype="multipart/form-data"  role="form" method="post"
           action="<?= Visitor::getRootPage().'/members/forums/messages/modifier.php?id='.$post->getId();?>">
         <?php
-        if($post->getTopic()->getCreator()->getId() == Visitor::getInstance()->getUser()->getId()) {
+        if($post->getTopic()->getCreator()->getId() == Visitor::getInstance()->getUser()->getId() ||
+                    Visitor::getInstance()->getUser()->isModerator()) {
             if (isset($announce)) {
                 echo \viewers\AnnounceViewer::getCreateAnnouncementForm($announce);
             } else {

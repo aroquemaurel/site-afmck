@@ -1,5 +1,6 @@
 <?php
 use models\forum\Post;
+use models\announces\Announce;
 use utils\AnnounceHelper;
 use utils\Link;
 use utils\Rights;
@@ -34,13 +35,25 @@ if((Visitor::getInstance()->getUser()->getId() != $post->getUser()->getId() &&
 if($post->getTopic()->getForum()->getName() == FORUM_NAME_ANNOUNCES) {
     $announceRepo = $entityManager->getRepository('models\announces\Announce');
     $announce = $announceRepo->findOneBy(array('topic'=>$post->getTopic()));
+    if($announce == null) { // An announce post without announce object (V < 2.6)
+        $announceTypeRepo = Visitor::getEntityManager()->getRepository('models\announces\TypeAnnounce');
+        $announceType = $announceTypeRepo->findOneBy(array('id'=>1));
+       $announce = new Announce($announceType);
+        $announce->setDate(new DateTime());
+        $announce->setDescription("");
+        $announce->setTopic($post->getTopic());
+    }
     $post->setContent($announce->getDescription());
 }
+
 
 if(isset($_POST['content']) && isset($post)) {
     if(isset($announce) && isset($_POST['announcetitle']) && isset($_POST['town']) && isset($_POST['postalCode']) && isset($_POST['date'])) {
         // We edit the associate announce
-        $announce->setDate(new DateTime($_POST['date']));
+        $time = strtotime($_POST['date']);
+        
+        $announce->setDate(DateTime::createFromFormat('d/m/Y', $_POST['date']));
+        
         $announce->setDuration($_POST['duration']);
         $announce->setPostalCode($_POST['postalCode']);
         $announce->setTown($_POST['town']);
@@ -65,7 +78,8 @@ if(isset($_POST['content']) && isset($post)) {
     // We edit the new post
     $post->setContent($content);
     $topic = $post->getTopic();
-    if($topic->getCreator()->getId() == Visitor::getInstance()->getUser()->getId()) {
+    if($topic->getCreator()->getId() == Visitor::getInstance()->getUser()->getId() || 
+            Visitor::getInstance()->getUser()->isModerator()) {
         $topic->setTitle($title);
         $topic->setSubtitle($subtitle);
     }

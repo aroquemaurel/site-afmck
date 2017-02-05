@@ -61,6 +61,7 @@ foreach($topic->getAllViewers() as $user) {
 $topic->addViewer(Visitor::getInstance()->getUser(), $entityManager);
 
 $entityManager->persist($post);
+$entityManager->persist($topic);
 $entityManager->flush();
 $_SESSION['lastMessage'] = Popup::successMessage("Vous avez bien répondu au sujet.");
 header('Location: ' . (Visitor::getRootPage(). '/members/forums/sujets/voir.php?id='.$id));

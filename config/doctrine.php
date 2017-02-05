@@ -10,13 +10,13 @@ require_once \Visitor::getRootPath()."/vendor/autoload.php";
 $isDevMode = CONFIG == 'dev'||CONFIG == 'preprod' || MAINTENANCE;
 $config = Setup::createAnnotationMetadataConfiguration(array(\Visitor::getRootPath()."/classes/models"), $isDevMode);
 
-if ($isDevMode) {
+if ($isDevMode || true) {
 	$config->setAutoGenerateProxyClasses(true);
 } else {
 	$config->setAutoGenerateProxyClasses(false);
 }
 
-$config->setProxyNamespace("Test");
+//$config->setProxyNamespace("Test");
 
 // or if you prefer yaml or XML
 //$config = Setup::createXMLMetadataConfiguration(array(__DIR__."/config/xml"), $isDevMode);
