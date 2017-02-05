@@ -1,4 +1,4 @@
-<ul class="members nav navbar-nav " style="font-size: 8pt;margin-top: -10px;max-width: 250px;margin-left: 5px" xmlns:color="http://www.w3.org/1999/xhtml">
+<ul class="members nav navbar-nav user-menu" style="font-size: 8pt;margin-top: -10px;max-width: 250px;margin-left: 5px" xmlns:color="http://www.w3.org/1999/xhtml">
 <?php
 use viewers\MenuViewer;
 

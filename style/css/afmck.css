@@ -103,7 +103,7 @@ body {
     }
     .home {
         width: 300px;
-        padding-left: 0px;
+        padding-left: 0;
     }
 
     .members {
@@ -119,12 +119,13 @@ body {
 
     .forum-post .message {
         width: 100%;
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     .forum-post .message .author-inline {
     display: inline-block;
     }
+
 }
 @media ( min-width: 767px ) {
     #afmckLogo {
@@ -143,7 +144,6 @@ body {
     .members {
         background-color: #273f64;
         height: 45px;
-        margin-left: 40px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
         border-radius: 8px;
@@ -152,7 +152,6 @@ body {
     .forum-post .message {
         width: 80%;
         margin-left: 200px;
-    
     }
 
     .forum-post .message .author-inline {
@@ -274,7 +273,6 @@ h5 {
      padding: 1em;
      display: none;
  }
-
 @media(max-width: 1200px) {
     #toc {
         display:none;
@@ -284,8 +282,17 @@ h5 {
     }
 
     .main {
-        width: 95%;
+        width: 90%;
         padding-right: 5px;
+    }
+
+    .menu {
+        width: 100%;
+        margin-left: 50px;
+    }
+
+    .link-profil {
+        display: none;
     }
 
     @media(min-width: 768px) {
@@ -303,7 +310,6 @@ h5 {
             margin-top: -90px;
         }
         .dropdown-toggle {
-            max-width: 100px;
             height: 70px;
             margin-top:-10px;
         }
@@ -319,8 +325,10 @@ h5 {
         }
         .navbar-collapse {
             min-width: 800px;
+            width: 100%;
         }
     }
+
 }
 
 @media(min-width: 1000px) {
@@ -328,10 +336,21 @@ h5 {
         margin-top: 0;
     }
 }
+
 @media(min-width: 768px) {
-    @media(max-width: 1200px) {
+    @media(max-width: 1050px) {
+        .dropdown-toggle {
+            max-width: 100px;
+            padding: 0;
+        }
+        .nav > li > a {
+            padding: 8px;
+        }
+        .nav {
+            margin-left: -25px;
+        }
         .main {
-            padding-right: 150px;
+/*            padding-right: 150px;*/
         }
     }
 }

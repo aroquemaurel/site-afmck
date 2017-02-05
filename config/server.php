@@ -1,6 +1,6 @@
 <?php
 
-define('CONFIG', 'prod');
+define('CONFIG', 'dev');
 
 define('MAINTENANCE', false);
 define('AUTHORIZED_IP', array('192.168.1.25', '176.159.55.216'));

@@ -21,7 +21,7 @@ class MenuViewer
     public static function getProfilMenu(User $user) : string {
         $ret = '<li class="dropdown" style="margin-left: '.self::$OFFSET_HORIZONTAL.'px">
             <a href="" data-toggle="dropdown" class="dropdown-toggle">' .
-            '<i class="glyphicon glyphicon-user"></i>&nbsp;Profil&nbsp;<b class="caret"></b></a>';
+            '<i class="glyphicon glyphicon-user"></i>'.'<span class="link-profil">&nbsp;Profil</span>&nbsp;<b class="caret"></b></a>';
         $ret .= '<ul class="dropdown-menu" role="menu" style="margin-top: '.self::$OFFSET_VERTICAL.'px">';
         $ret .= '<li><b>Mon profil</b></li>';
         $ret .= '<li><a href="'.Visitor::getRootPage().'/members/profil/mon-profil.php">Voir mon profil</a></li>';
@@ -42,20 +42,6 @@ class MenuViewer
 
     public static function getNotificationMenu($notifications) : string {
         $nbNotif = count($notifications);
-            /*            $ret = '<li class="dropdown" style="margin-left: 0px;"><a href="#" data-toggle="dropdown" class="dropdown-toggle">';
-                        $ret .= '<i class="glyphicon glyphicon-bell"></i>&nbsp;&nbsp;';
-                        $ret .= '<span class="badge">' . count($notifications) . '</span>&nbsp;<b class="caret"></b></a>';
-                        $ret .= '<ul class="dropdown-menu" role="menu" style="margin-top: '.self::$OFFSET_VERTICAL.'px">';
-
-                        foreach($notifications as $notification) {
-                            $ret .= '<li><a href="#"><b>'.$notification->getTitle().'</b><br/><small>'.$notification->getDescription().'</small></a>';
-                        }
-                        $ret .= '</ul>';
-                        $ret .= '</li>';
-                    } else {
-                        $ret = '';
-                    }
-            */
             $ret = '<li class="dropdown yamm-fw" style="margin-left: 0px; '.($nbNotif != 0 ?'width:85px;': 'width:60px').'">';
             $ret .= '<a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">';
             //Travaux de l\'association<b class="caret"></b></a>
@@ -99,7 +85,7 @@ class MenuViewer
 
         if($accountsRights || $charteRights || $newsRights) {
             $ret .= '<li class="dropdown" style="margin-left: ' . self::$OFFSET_HORIZONTAL . 'px">';
-            $ret .= '<a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-wrench"></i>&nbsp;Admin&nbsp;<b class="caret"></b></a>';
+            $ret .= '<a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-wrench"></i>'.'<span class="link-profil">&nbsp;Admin</span>&nbsp;<b class="caret"></b></a>';
             $ret .= '<ul class="dropdown-menu" role="menu" style="width: 220px;margin-top: ' . self::$OFFSET_VERTICAL . 'px">';
 
             // Registration management

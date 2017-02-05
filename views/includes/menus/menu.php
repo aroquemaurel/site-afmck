@@ -1,10 +1,10 @@
 
 <div class="navbar yamm navbar-default navbar-fixed-top" style="height:65px;background-color: #273f64;">
-    <div class="container">
+    <div class="container menu">
         <div class="navbar-header" style="float:left;">
             <button type="button" data-toggle="collapse"
                     data-target="#navbar-collapse-1"
-                    class="navbar-toggle" style="margin-top: 30px; margin-left: -30px;">
+                    class="navbar-toggle" style="margin-top: 5px; margin-left: 0px;">
                 <img src="<?=Visitor::getRootPage() ?>/style/img/mobile-btn.png" width="30px" />
             </button>
             <a href="<?= Visitor::getInstance()->isConnected() ?

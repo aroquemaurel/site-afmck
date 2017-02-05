@@ -13,7 +13,6 @@
 
         <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Outils de travail <b class="caret"></b></a>
         <ul role="menu" class="dropdown-menu">
-            <!-- TODO -->
             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/logiciel-bilan-mdt.php">Le logiciel de bilan MDT</a></li>
             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/partenariats/materiel.php">Le materiel</a></li>
             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/partenariats/monsitekine.php">Votre site professionnel : monsitekine.com</a></li>
@@ -27,7 +26,7 @@
         <li><a href="http://www.mckenzieinstitute.org/clinicians/research-and-resources/mdt-world-press/" target="_blank"><i span class="glyphicon glyphicon-globe"></i> Institut McKenzie</a></li>
         </ul>
     </li>
-    <li class="dropdown"><a href="<?=Visitor::getRootPage();?>/members/certification.php">Certification</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" href="<?=Visitor::getRootPage();?>/members/certification.php">Certification</a></li>
 
         <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Annonces
                     <b class="caret"></b></a>
