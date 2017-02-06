@@ -1,6 +1,6 @@
 <?php
 
-define('CONFIG', 'dev');
+define('CONFIG', 'prod');
 
 define('MAINTENANCE', false);
 define('AUTHORIZED_IP', array('192.168.1.25', '176.159.55.216'));
@@ -23,7 +23,7 @@ if(CONFIG == 'dev') {
     if(MAINTENANCE) {
         ini_set('display_errors', '1');
     } else {
-        ini_set('display_errors', '0');
+        ini_set('display_errors', '1');
     }
 
     define('ROOT_PATH', '/homez.441/afmck/www/');

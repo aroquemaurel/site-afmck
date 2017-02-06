@@ -3,6 +3,7 @@ $title = 'Paramètres';
 
 include('../../begin.php');
 use utils\Link;
+use models\PaymentType;
 
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Espace membres', Visitor::getRootPage()."/members/index.php"),
     new Link('Paramètres', '#')));
@@ -24,10 +25,10 @@ if(isset($_POST['firstName'])) {
     $user->setPhoneMobile($_POST['phoneMobile']);
     $user->setPhonePro($_POST['phonePro']);
     $user->setNewsletter(!isset($_POST['newsletter']));
-    $user->setPayment($_POST['payment']);
+    $user->setPayment(new PaymentType(intval($_POST['payment'])));
     $user->setValuePaid($_POST['valuePaid']);
-    $user->setLatitude("");
-    $user->setLongitude("");
+    $user->setLatitude(0);
+    $user->setLongitude(0);
     $user->commit();
     $_SESSION['lastMessage'] = Popup::successMessage("Les informations ont été correctement modifiées");
 }

@@ -95,7 +95,7 @@ class User {
         return false;
     }
 
-    public static function passwordIsValid(int $adeliNumber, string $password) : bool {
+    public static function passwordIsValid(string $adeliNumber, string $password) : bool {
         $db = new DatabaseUser();
         $data = $db->getUser($adeliNumber);
 
@@ -510,7 +510,7 @@ class User {
     /**
      * @param mixed $adeliNumber
      */
-    public function setAdeliNumber(int $adeliNumber)
+    public function setAdeliNumber(string $adeliNumber)
     {
         $this->adeliNumber = $adeliNumber;
     }

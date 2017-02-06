@@ -154,7 +154,7 @@ class DatabaseNews extends Database {
 
             $user = new User();
             $user->setMail($data->email);
-            $user->setId($data->idUser);
+            $user->setId(intval($data->idUser));
             $user->setFirstName($data->firstname);
             $user->setLastName($data->lastname);
             $ret[] = new \models\NewsToSend($user, $news);
