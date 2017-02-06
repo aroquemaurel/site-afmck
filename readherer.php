@@ -2,6 +2,7 @@
 $title = 'Réadhésion';
 
 include('begin.php');
+use models\PaymentType;
 use utils\Link;
 
 $breadcrumb = new utils\Breadcrumb(array(new Link('home', 'index.php'), new Link('Réadhésion', '#')));
@@ -15,7 +16,7 @@ if(isset($_POST['valuePaid']) && isset($_POST['payment'])) { // We ask an new ad
     if($user == null) {
         $user = $_SESSION['userNotConnected'];
     }
-    $user->setPayment($_POST['payment']);
+    $user->setPayment(new PaymentType(intval($_POST['payment'])));
     $user->setValuePaid($_POST['valuePaid']);
     $user->setAskReadhesion(new DateTime());
     $user->commit();
