@@ -57,7 +57,7 @@ footer a, footer a:visited, footer a:hover {
 
 body {
 	background-color: #ffffff;
-    font-family: 'Lato', monospace;
+    font-family: 'Lato', 'Tahoma', Century Gothic, sans-serif, monospace;
     font-size: 12pt;
     height: 100%;
     width: 100%;
@@ -65,7 +65,7 @@ body {
 }
 
 .navbar-default {
-    font-family: 'Roboto', monospace;
+    font-family: 'Roboto', 'Tahoma', Century Gothic, sans-serif, monospace;
 	font-size: 13px;
 	border-bottom: 4px solid #F1A260;
 }
