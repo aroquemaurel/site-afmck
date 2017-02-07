@@ -68,8 +68,10 @@ class Popup {
         $msg =
         "Vous êtes maintenant inscrit sur le site.
            <br/>Afin de pouvoir vous connecter, votre compte doit être validé par un membre du CA.<br/><br/>
-           Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>
-           De plus, vous devez envoyer ce <a href=\"".Visitor::getRootPage()."/docs/members/registration/".date('Y').'_'.$user->getAdeliNumber().".pdf\">document</a> signé par mail ou par courrier.
+           Pour cela, vous devez payer votre cotisation, avec le moyen de paiement convenu.<br/>";
+        $msg .= $user->getPayment()->getExplainMessage($user);
+
+        $msg .= "<br/>De plus, vous devez envoyer ce <a href=\"".Visitor::getRootPage()."/docs/members/registration/".date('Y').'_'.$user->getAdeliNumber().".pdf\">document</a> signé par mail ou par courrier.
            ";
         return self::successMessage($msg);
     }
