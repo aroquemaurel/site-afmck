@@ -18,16 +18,12 @@ class HomeViewer
         $ret .= '<div class="bloc">';
         $ret .= '<span class="container-img img-rounded">
                     <img class=" img-news" 
-                    src="'.Visitor::getRootPage().'/docs/members/kiosque/newsletters/mini/MDT%20World%20Press%20Newsletter%20Vol.4%20N3%20Francais.jpg"
+                    src="'.Visitor::getRootPage().'/docs/members/kiosque/newsletters/traduction/mini/MDT Newsletter_Vol 5 No 1-fr_AFMcK.jpg"
                     />
                 </span>';
         $ret .= '<span class="description">
-                    <a href="'.Visitor::getRootPage().'/docs/members/kiosque/newsletters/MDT%20World%20Press%20Newsletter%20Vol.4%20N3%20Francais.pdf">
-                        Newsletter Vol3 N°4 (Français)
-                    </a>
-                    <br/>
-                    <a href="'.Visitor::getRootPage().'/docs/members/kiosque/newsletters/STartBackScreeningTool.zip">
-                        Start Back Screening Tool
+                    <a href="'.Visitor::getRootPage().'/docs/members/kiosque/newsletters/traduction/MDT Newsletter_Vol 5 No 1-fr_AFMcK.pdf">
+                        Newsletter Vol5 N°1 (Français)
                     </a>
                 </span>';
         $ret .= '</div>';
@@ -45,10 +41,10 @@ class HomeViewer
         $ret .= '<div class="bloc">';
         $ret .= '<span class="container-img img-rounded">
                     <img class="img-news"
-                        src="'.Visitor::getRootPage().'/docs/members/kiosque/newsletters/mini/MDT Newsletter_Vol 4 No 2-fr_AFMcK.jpg"/>
+                        src="'.Visitor::getRootPage().'/docs/members/chroniquesscientifiques/mini/Yellows_Flags_Définitif_V2.jpg"/>
                 </span>';
         $ret .= '<span class="description">
-                    <a href="'.Visitor::getRootPage().'/docs/members/kiosque/newsletters/MDT Newsletter_Vol 3 No 4-fr_AFMcK.pdf">MDT Newsletter volume 4</a>
+                    <a href="'.Visitor::getRootPage().'/docs/members/chroniquesscientifiques/Yellows_Flags_Définitif_V2_corrigée.pdf">Chronique N°13 — Yello flags</a>
                 </span>';
         $ret .= '</div>';
 
