@@ -7,6 +7,7 @@
  */
 
 namespace models\articles;
+use Visitor;
 
 /**
  * @Entity
@@ -21,6 +22,21 @@ class Keyword
     protected $name;
 
     /**
+     * Keyword constructor.
+     * @param $name
+     */
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+
+    public static function getRepository()
+    {
+        return Visitor::getEntityManager()->getRepository('models\articles\Keyword');
+    }
+
+    /**
      * @return mixed
      */
     public function getName()
@@ -28,10 +44,19 @@ class Keyword
         return $this->name;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
     /*
      * @OneToMany(targetEntity="KeywordArticle", mappedBy="keyword")
      *
     protected $articles;*/
+
 
 
 

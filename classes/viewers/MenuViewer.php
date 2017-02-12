@@ -109,6 +109,7 @@ class MenuViewer
             // Newsletters management
             if ($newsRights) {
                 $ret .= '<li><a href="' . Visitor::getRootPage() . '/admin/list-news.php">Gestion des newsletters</a></li>';
+                $ret .= '<li><a href="' . Visitor::getRootPage() . '/admin/mots-cles.php">Gestion des mots-clés</a></li>';
             }
 
             // All CA members

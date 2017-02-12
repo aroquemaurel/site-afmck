@@ -45,6 +45,22 @@ class KeywordArticle
         return $this->keyword;
     }
 
+    /**
+     * @param mixed $article
+     */
+    public function setArticle($article)
+    {
+        $this->article = $article;
+    }
+
+    /**
+     * @param mixed $keyword
+     */
+    public function setKeyword($keyword)
+    {
+        $this->keyword = $keyword;
+    }
+
 
 
 }
