@@ -7,6 +7,7 @@
  */
 
 namespace models\articles;
+use Visitor;
 
 /**
  * @Entity
@@ -28,6 +29,8 @@ class Article
      */
     protected $keywords;
 
+    /** @Column(type="boolean") */
+    protected $notIndexed = false;
     /**
      * Article constructor.
      * @param $title
@@ -87,8 +90,32 @@ class Article
         return $this->id;
     }
 
+    public static function getRepository() {
+        return Visitor::getEntityManager()->getRepository('models\articles\Article');
+    }
+
+    public function getStringkeywords() : string {
+        $str = '';
+        foreach($this->keywords as $keyword) {
+            $str .= $keyword->getKeyword()->getName();
+            $str .= ', ';
+        }
+
+        return rtrim($str, ', ');
+    }
 
 
+    public function addKeyword(Keyword $keyword) {
+        $ak = new KeywordArticle();
+        $ak->setArticle($this);
+        $ak->setKeyword($keyword);
+        Visitor::getEntityManager()->persist($ak);
+        Visitor::getEntityManager()->flush();
+    }
 
-
+    public function removeKeywords() {
+        foreach($this->getKeywords() as $keyword) {
+            Visitor::getEntityManager()->remove($keyword);
+        }
+    }
 }
