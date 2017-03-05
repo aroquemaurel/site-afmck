@@ -11,12 +11,14 @@
         </ul>
     </li>
 
-        <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Outils de travail <b class="caret"></b></a>
+    <li class="dropdown long-menu"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Outils de travail <b class="caret"></b></a>
         <ul role="menu" class="dropdown-menu">
             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/logiciel-bilan-mdt.php">Le logiciel de bilan MDT</a></li>
             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/partenariats/materiel.php">Le materiel</a></li>
             <li><a href="<?=Visitor::getRootPage();?>/members/outils-de-travail/partenariats/monsitekine.php">Votre site professionnel : monsitekine.com</a></li>
         </ul>
+    </li>
+
     <li class="dropdown"><a href="#"  data-toggle="dropdown" class="dropdown-toggle">Kiosque
             <b class="caret"></b></a>
         <ul role="menu" class="dropdown-menu">
