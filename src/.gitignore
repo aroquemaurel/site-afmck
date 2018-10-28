@@ -1,0 +1,11 @@
+docs/members/registration
+docs/members/billing
+docs/members/logiciels
+docs/CA
+composer.lock
+docs/members/afmckday/lille/**/*.mp3
+docs/members/news
+db/logins.php
+.htaccess
+.htpasswd
+config.php

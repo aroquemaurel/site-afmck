@@ -1,14 +1,3 @@
-.idea/*
-.htaccess
-.htpasswd
-config.php
 **/*/*.swo
 **/*/*.swp
-docs/members/registration
-docs/members/billing
-docs/members/logiciels
-docs/CA
-composer.lock
-docs/members/afmckday/lille/**/*.mp3
-docs/members/news
-db/logins.php
+src/.idea/*
